@@ -1,0 +1,680 @@
+<document xmlns="http://cnx.rice.edu/cnxml" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:md="http://cnx.rice.edu/mdml">
+  <title>NORMAL DISTRIBUTION</title>
+  <metadata><md:content-id>undefined</md:content-id><md:title/><md:uuid>d8f24bb7-8a16-40e6-98bb-c78c735c80bf</md:uuid>
+</metadata>
+  <content>
+
+<section id="sec_1">
+<title>NORMAL DISTRIBUTION</title>
+<para id="para_1">
+The normal distribution is perhaps the most important distribution in statistical applications since many measurements have (approximate) normal distributions. One explanation of this fact is the role of the normal distribution in the Central Theorem.
+</para>
+<definition id="def_1">
+<term/>
+<meaning id="idp13911232">
+The random variable <emphasis>X</emphasis> has a normal distribution if its p.d.f. is defined by
+<equation id="eq_1">
+<m:math display="block">
+ <m:semantics>
+  <m:mrow>
+   <m:mi>f</m:mi><m:mrow><m:mo>(</m:mo>
+    <m:mi>x</m:mi>
+   <m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mfrac>
+    <m:mn>1</m:mn>
+    <m:mrow>
+     <m:mi>σ</m:mi><m:msqrt>
+      <m:mrow>
+       <m:mn>2</m:mn><m:mi>π</m:mi>
+      </m:mrow>
+     </m:msqrt>
+     
+    </m:mrow>
+   </m:mfrac>
+   <m:mi>exp</m:mi><m:mo>⁡</m:mo><m:mrow><m:mo>[</m:mo> <m:mrow>
+    <m:mo>−</m:mo><m:mfrac>
+     <m:mrow>
+      <m:msup>
+       <m:mrow>
+        <m:mrow><m:mo>(</m:mo>
+         <m:mrow>
+          <m:mi>x</m:mi><m:mo>−</m:mo><m:mi>μ</m:mi>
+         </m:mrow>
+        <m:mo>)</m:mo></m:mrow>
+       </m:mrow>
+       <m:mn>2</m:mn>
+      </m:msup>
+      
+     </m:mrow>
+     <m:mrow>
+      <m:mn>2</m:mn><m:msup>
+       <m:mi>σ</m:mi>
+       <m:mn>2</m:mn>
+      </m:msup>
+      
+     </m:mrow>
+    </m:mfrac>
+    
+   </m:mrow> <m:mo>]</m:mo></m:mrow><m:mo>,</m:mo><m:mo>−</m:mo><m:mi>∞</m:mi><m:mo>&lt;</m:mo><m:mi>x</m:mi><m:mo>&lt;</m:mo><m:mi>∞</m:mi><m:mo>,</m:mo>
+  </m:mrow>
+ </m:semantics>
+</m:math>
+</equation>  
+where <m:math>
+ <m:semantics>
+  <m:mi>μ</m:mi>
+ </m:semantics>
+</m:math>
+ and <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:msup>
+    <m:mi>σ</m:mi>
+    <m:mn>2</m:mn>
+   </m:msup>
+     </m:mrow>
+ </m:semantics>
+</m:math>
+ are parameters satisfying <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mo>−</m:mo><m:mi>∞</m:mi><m:mo>&lt;</m:mo><m:mi>μ</m:mi><m:mo>&lt;</m:mo><m:mi>∞</m:mi><m:mn>,0</m:mn><m:mo>&lt;</m:mo><m:mi>σ</m:mi><m:mo>&lt;</m:mo><m:mi>∞</m:mi>
+  </m:mrow>
+ </m:semantics>
+</m:math>
+, and also where <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mi>exp</m:mi><m:mo>⁡</m:mo><m:mrow><m:mo>[</m:mo> <m:mi>v</m:mi> <m:mo>]</m:mo></m:mrow>
+  </m:mrow>
+ </m:semantics>
+</m:math>
+ means <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:msup>
+    <m:mi>e</m:mi>
+    <m:mi>v</m:mi>
+   </m:msup>
+     </m:mrow>
+ </m:semantics>
+</m:math>.
+</meaning>
+<meaning id="idp7792240">
+Briefly, we say that <emphasis>X</emphasis> is <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mi>N</m:mi><m:mrow><m:mo>(</m:mo>
+    <m:mrow>
+     <m:mi>μ</m:mi><m:mo>,</m:mo><m:msup>
+      <m:mi>σ</m:mi>
+      <m:mn>2</m:mn>
+     </m:msup>
+     
+    </m:mrow>
+   <m:mo>)</m:mo></m:mrow>
+  </m:mrow>
+ </m:semantics>
+</m:math>
+</meaning>
+</definition>
+<section id="sec_2">
+<title>Proof of the p.d.f. properties</title>
+<para id="para_2">
+Clearly, <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mi>f</m:mi><m:mrow><m:mo>(</m:mo>
+    <m:mi>x</m:mi>
+   <m:mo>)</m:mo></m:mrow><m:mo>&gt;</m:mo><m:mn>0</m:mn>
+  </m:mrow>
+ </m:semantics>
+</m:math>
+. Let now evaluate the integral: <m:math display="block">
+ <m:semantics>
+  <m:mrow>
+   <m:mi>I</m:mi><m:mo>=</m:mo><m:mstyle displaystyle="true">
+    <m:mrow><m:munderover>
+     <m:mo>∫</m:mo>
+     <m:mrow>
+      <m:mo>−</m:mo><m:mi>∞</m:mi>
+     </m:mrow>
+     <m:mi>∞</m:mi>
+    </m:munderover>
+    <m:mrow>
+     <m:mfrac>
+      <m:mn>1</m:mn>
+      <m:mrow>
+       <m:mi>σ</m:mi><m:msqrt>
+        <m:mrow>
+         <m:mn>2</m:mn><m:mi>π</m:mi>
+        </m:mrow>
+       </m:msqrt>
+       
+      </m:mrow>
+     </m:mfrac>
+     <m:mi>exp</m:mi><m:mo>⁡</m:mo><m:mrow><m:mo>[</m:mo> <m:mrow>
+      <m:mo>−</m:mo><m:mfrac>
+       <m:mrow>
+        <m:msup>
+         <m:mrow>
+          <m:mrow><m:mo>(</m:mo>
+           <m:mrow>
+            <m:mi>x</m:mi><m:mo>−</m:mo><m:mi>μ</m:mi>
+           </m:mrow>
+          <m:mo>)</m:mo></m:mrow>
+         </m:mrow>
+         <m:mn>2</m:mn>
+        </m:msup>
+        
+       </m:mrow>
+       <m:mrow>
+        <m:mn>2</m:mn><m:msup>
+         <m:mi>σ</m:mi>
+         <m:mn>2</m:mn>
+        </m:msup>
+         </m:mrow>
+      </m:mfrac>
+        </m:mrow> <m:mo>]</m:mo></m:mrow>
+    </m:mrow>
+   </m:mrow>
+     </m:mstyle><m:mi>d</m:mi><m:mi>x</m:mi><m:mo>,</m:mo>
+ </m:mrow>
+</m:semantics>
+</m:math>
+ showing that it is equal to 1.
+
+In the integral, change the variables of integration by letting  <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mi>z</m:mi><m:mo>=</m:mo><m:mrow><m:mo>(</m:mo>
+    <m:mrow>
+     <m:mi>x</m:mi><m:mo>−</m:mo><m:mi>μ</m:mi>
+    </m:mrow>
+   <m:mo>)</m:mo></m:mrow><m:mo>/</m:mo><m:mi>σ</m:mi>
+  </m:mrow>
+ </m:semantics>
+</m:math>. Then,
+ </para>
+<para id="para_3">
+<m:math display="block">
+ <m:semantics>
+  <m:mrow>
+   <m:mi>I</m:mi><m:mo>=</m:mo><m:mstyle displaystyle="true">
+    <m:mrow><m:munderover>
+     <m:mo>∫</m:mo>
+     <m:mrow>
+      <m:mo>−</m:mo><m:mi>∞</m:mi>
+     </m:mrow>
+     <m:mi>∞</m:mi>
+    </m:munderover>
+    <m:mrow>
+     <m:mfrac>
+      <m:mn>1</m:mn>
+      <m:mrow>
+       <m:msqrt>
+        <m:mrow>
+         <m:mn>2</m:mn><m:mi>π</m:mi>
+        </m:mrow>
+       </m:msqrt>
+       
+      </m:mrow>
+     </m:mfrac>
+     <m:msup>
+      <m:mi>e</m:mi>
+      <m:mrow>
+       <m:mo>−</m:mo><m:msup>
+        <m:mi>z</m:mi>
+        <m:mn>2</m:mn>
+       </m:msup>
+       <m:mo>/</m:mo><m:mn>2</m:mn>
+      </m:mrow>
+     </m:msup>
+     
+    </m:mrow>
+   </m:mrow>
+   
+  </m:mstyle><m:mi>d</m:mi><m:mi>z</m:mi><m:mo>,</m:mo>
+ </m:mrow>
+</m:semantics>
+</m:math> since <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mi>I</m:mi><m:mo>&gt;</m:mo><m:mn>0</m:mn>
+  </m:mrow>
+ </m:semantics>
+</m:math>
+, if <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:msup>
+    <m:mi>I</m:mi>
+    <m:mn>2</m:mn>
+   </m:msup>
+   <m:mo>=</m:mo><m:mn>1</m:mn>
+  </m:mrow>
+ </m:semantics>
+</m:math>
+, then <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mi>I</m:mi><m:mo>=</m:mo><m:mn>1</m:mn>
+  </m:mrow>
+ </m:semantics>
+</m:math>.
+</para>
+<para id="para_4">
+Now <m:math display="block">
+ <m:semantics>
+  <m:mrow>
+   <m:msup>
+    <m:mi>I</m:mi>
+    <m:mn>2</m:mn>
+   </m:msup>
+   <m:mo>=</m:mo><m:mfrac>
+    <m:mn>1</m:mn>
+    <m:mrow>
+     <m:mn>2</m:mn><m:mi>π</m:mi>
+    </m:mrow>
+   </m:mfrac>
+   <m:mrow><m:mo>[</m:mo> <m:mrow>
+    <m:mstyle displaystyle="true">
+     <m:mrow><m:munderover>
+      <m:mo>∫</m:mo>
+      <m:mrow>
+       <m:mo>−</m:mo><m:mi>∞</m:mi>
+      </m:mrow>
+      <m:mi>∞</m:mi>
+     </m:munderover>
+     <m:mrow>
+      <m:msup>
+       <m:mi>e</m:mi>
+       <m:mrow>
+        <m:mo>−</m:mo><m:msup>
+         <m:mi>x</m:mi>
+         <m:mn>2</m:mn>
+        </m:msup>
+        <m:mo>/</m:mo><m:mn>2</m:mn>
+       </m:mrow>
+      </m:msup>
+      
+     </m:mrow>
+    </m:mrow>
+    
+   </m:mstyle><m:mi>d</m:mi><m:mi>x</m:mi>
+  </m:mrow> <m:mo>]</m:mo></m:mrow><m:mrow><m:mo>[</m:mo> <m:mrow>
+   <m:mstyle displaystyle="true">
+    <m:mrow><m:munderover>
+     <m:mo>∫</m:mo>
+     <m:mrow>
+      <m:mo>−</m:mo><m:mi>∞</m:mi>
+     </m:mrow>
+     <m:mi>∞</m:mi>
+    </m:munderover>
+    <m:mrow>
+     <m:msup>
+      <m:mi>e</m:mi>
+      <m:mrow>
+       <m:mo>−</m:mo><m:msup>
+        <m:mi>y</m:mi>
+        <m:mn>2</m:mn>
+       </m:msup>
+       <m:mo>/</m:mo><m:mn>2</m:mn>
+      </m:mrow>
+     </m:msup>
+     
+    </m:mrow>
+   </m:mrow>
+   
+  </m:mstyle><m:mi>d</m:mi><m:mi>y</m:mi>
+ </m:mrow> <m:mo>]</m:mo></m:mrow><m:mo>,</m:mo>
+</m:mrow>
+</m:semantics>
+</m:math>
+ or equivalently,
+</para>
+<para id="para_5">
+<m:math display="block">
+ <m:semantics>
+  <m:mrow>
+   <m:msup>
+    <m:mi>I</m:mi>
+    <m:mn>2</m:mn>
+   </m:msup>
+   <m:mo>=</m:mo><m:mfrac>
+    <m:mn>1</m:mn>
+    <m:mrow>
+     <m:mn>2</m:mn><m:mi>π</m:mi>
+    </m:mrow>
+   </m:mfrac>
+   <m:mstyle displaystyle="true">
+    <m:mrow><m:munderover>
+     <m:mo>∫</m:mo>
+     <m:mrow>
+      <m:mo>−</m:mo><m:mi>∞</m:mi>
+     </m:mrow>
+     <m:mi>∞</m:mi>
+    </m:munderover>
+    <m:mrow>
+     <m:mstyle displaystyle="true">
+      <m:mrow><m:munderover>
+       <m:mo>∫</m:mo>
+       <m:mrow>
+        <m:mo>−</m:mo><m:mi>∞</m:mi>
+       </m:mrow>
+       <m:mi>∞</m:mi>
+      </m:munderover>
+      <m:mrow>
+       <m:mi>exp</m:mi><m:mo>⁡</m:mo><m:mrow><m:mo>(</m:mo>
+        <m:mrow>
+         <m:mo>−</m:mo><m:mfrac>
+          <m:mrow>
+           <m:msup>
+            <m:mi>x</m:mi>
+            <m:mn>2</m:mn>
+           </m:msup>
+           <m:mo>+</m:mo><m:msup>
+            <m:mi>y</m:mi>
+            <m:mn>2</m:mn>
+           </m:msup>
+           
+          </m:mrow>
+          <m:mn>2</m:mn>
+         </m:mfrac>
+         
+        </m:mrow>
+       <m:mo>)</m:mo></m:mrow><m:mi>d</m:mi><m:mi>x</m:mi><m:mi>d</m:mi><m:mi>y</m:mi>
+      </m:mrow>
+     </m:mrow>
+     
+    </m:mstyle>
+   </m:mrow>
+  </m:mrow>
+  
+ </m:mstyle><m:mo>.</m:mo>
+</m:mrow>
+</m:semantics>
+</m:math>
+
+</para>
+<para id="para_6">
+Letting <m:math>
+ <m:semantics>
+  <m:mrow>
+<m:mi>x</m:mi><m:mo>=</m:mo><m:mi>r</m:mi><m:mi>cos</m:mi><m:mo>⁡</m:mo><m:mi>θ</m:mi><m:mo>,</m:mo><m:mi>y</m:mi><m:mo>=</m:mo><m:mi>r</m:mi><m:mi>sin</m:mi><m:mo>⁡</m:mo><m:mi>θ</m:mi>
+  </m:mrow>
+ </m:semantics>
+</m:math>
+ (i.e., using polar coordinates), we have
+</para>
+<para id="para_7">
+<m:math display="block">
+ <m:semantics>
+  <m:mrow>
+   <m:msup>
+    <m:mi>I</m:mi>
+    <m:mn>2</m:mn>
+   </m:msup>
+   <m:mo>=</m:mo><m:mfrac>
+    <m:mn>1</m:mn>
+    <m:mrow>
+     <m:mn>2</m:mn><m:mi>π</m:mi>
+    </m:mrow>
+   </m:mfrac>
+   <m:mstyle displaystyle="true">
+    <m:mrow><m:munderover>
+     <m:mo>∫</m:mo>
+     <m:mn>0</m:mn>
+     <m:mrow>
+      <m:mn>2</m:mn><m:mi>π</m:mi>
+     </m:mrow>
+    </m:munderover>
+    <m:mrow>
+     <m:mstyle displaystyle="true">
+      <m:mrow><m:munderover>
+       <m:mo>∫</m:mo>
+       <m:mn>0</m:mn>
+       <m:mi>∞</m:mi>
+      </m:munderover>
+      <m:mrow>
+       <m:msup>
+        <m:mi>e</m:mi>
+        <m:mrow>
+         <m:mo>−</m:mo><m:msup>
+          <m:mi>r</m:mi>
+          <m:mn>2</m:mn>
+         </m:msup>
+         <m:mo>/</m:mo><m:mn>2</m:mn>
+        </m:mrow>
+       </m:msup>
+       <m:mi>r</m:mi><m:mi>d</m:mi><m:mi>r</m:mi><m:mi>d</m:mi><m:mi>θ</m:mi><m:mo>=</m:mo>
+      </m:mrow>
+     </m:mrow>
+     
+    </m:mstyle>
+   </m:mrow>
+  </m:mrow>
+  
+ </m:mstyle><m:mfrac>
+  <m:mn>1</m:mn>
+  <m:mrow>
+   <m:mn>2</m:mn><m:mi>π</m:mi>
+  </m:mrow>
+ </m:mfrac>
+ <m:mstyle displaystyle="true">
+  <m:mrow><m:munderover>
+   <m:mo>∫</m:mo>
+   <m:mn>0</m:mn>
+   <m:mrow>
+    <m:mn>2</m:mn><m:mi>π</m:mi>
+   </m:mrow>
+  </m:munderover>
+  <m:mrow>
+   <m:mi>d</m:mi><m:mi>θ</m:mi><m:mo>=</m:mo><m:mfrac>
+    <m:mn>1</m:mn>
+    <m:mrow>
+     <m:mn>2</m:mn><m:mi>π</m:mi>
+    </m:mrow>
+   </m:mfrac>
+   <m:mn>2</m:mn><m:mi>π</m:mi><m:mo>=</m:mo><m:mn>1.</m:mn>
+  </m:mrow>
+ </m:mrow>
+ </m:mstyle>
+</m:mrow>
+</m:semantics>
+</m:math>
+</para>
+</section>
+<section id="sec_3">
+<para id="para_8">
+The <term>mean</term> and the <term>variance</term> of the normal distribution is as follows:
+</para>
+<para id="para_9">
+<m:math display="block">
+ <m:semantics>
+  <m:mrow>
+   <m:mi>E</m:mi><m:mrow><m:mo>(</m:mo>
+    <m:mi>X</m:mi>
+   <m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mi>μ</m:mi>
+  </m:mrow>
+ </m:semantics>
+</m:math>
+ and <m:math display="block">
+ <m:semantics>
+  <m:mrow>
+   <m:mi>V</m:mi><m:mi>a</m:mi><m:mi>r</m:mi><m:mrow><m:mo>(</m:mo>
+    <m:mi>X</m:mi>
+   <m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:msup>
+    <m:mi>μ</m:mi>
+    <m:mn>2</m:mn>
+   </m:msup>
+   <m:mo>+</m:mo><m:msup>
+    <m:mi>σ</m:mi>
+    <m:mn>2</m:mn>
+   </m:msup>
+   <m:mo>−</m:mo><m:msup>
+    <m:mi>μ</m:mi>
+    <m:mn>2</m:mn>
+   </m:msup>
+   <m:mo>=</m:mo><m:msup>
+    <m:mi>σ</m:mi>
+    <m:mn>2</m:mn>
+   </m:msup>
+   <m:mo>.</m:mo>
+  </m:mrow>
+ </m:semantics>
+</m:math>
+
+</para>
+<para id="para_10">
+That is, the parameters <m:math>
+ <m:semantics>
+  <m:mi>μ</m:mi>
+ </m:semantics>
+</m:math>
+ and <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:msup>
+    <m:mi>σ</m:mi>
+    <m:mn>2</m:mn>
+   </m:msup>
+     </m:mrow>
+ </m:semantics>
+</m:math>
+ in the p.d.f. are the mean and the variance of <emphasis>X</emphasis>. 
+</para>
+
+	  <figure orient="horizontal" id="fig_1"><title>Normal Distribution</title>
+	<subfigure id="subfig1">
+		<media id="idp9366944" alt=""><image src="../../media/Normal_distribution_pdf_1.gif" mime-type="image/gif"/></media>
+		<caption>Probability Density Function </caption>
+	</subfigure>
+	<subfigure id="subfig2">
+		<media id="idp13623456" alt=""><image src="../../media/Normal_distribution_cdf_1.gif" mime-type="image/gif"/></media>
+		<caption>Cumulative Distribution Function </caption>
+	</subfigure>
+	<caption>p.d.f. and c.d.f graphs of the Normal Distribution</caption>
+</figure>
+<example id="ex_1">
+<para id="para_11">
+If the p.d.f. of <emphasis>X</emphasis> is 
+</para>
+<para id="para_12">
+<m:math display="block">
+ <m:semantics>
+  <m:mrow>
+   <m:mi>f</m:mi><m:mrow><m:mo>(</m:mo>
+    <m:mi>x</m:mi>
+   <m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mfrac>
+    <m:mn>1</m:mn>
+    <m:mrow>
+     <m:msqrt>
+      <m:mrow>
+       <m:mn>32</m:mn><m:mi>π</m:mi>
+      </m:mrow>
+     </m:msqrt>
+     
+    </m:mrow>
+   </m:mfrac>
+   <m:mi>exp</m:mi><m:mo>⁡</m:mo><m:mrow><m:mo>[</m:mo> <m:mrow>
+    <m:mo>−</m:mo><m:mfrac>
+     <m:mrow>
+      <m:msup>
+       <m:mrow>
+        <m:mrow><m:mo>(</m:mo>
+         <m:mrow>
+          <m:mi>x</m:mi><m:mo>+</m:mo><m:mn>7</m:mn>
+         </m:mrow>
+        <m:mo>)</m:mo></m:mrow>
+       </m:mrow>
+       <m:mn>2</m:mn>
+      </m:msup>
+      
+     </m:mrow>
+     <m:mrow>
+      <m:mn>32</m:mn>
+     </m:mrow>
+    </m:mfrac>
+    
+   </m:mrow> <m:mo>]</m:mo></m:mrow><m:mo>,</m:mo><m:mo>−</m:mo><m:mi>∞</m:mi><m:mo>&lt;</m:mo><m:mi>x</m:mi><m:mo>&lt;</m:mo><m:mi>∞</m:mi><m:mo>,</m:mo>
+  </m:mrow>
+ </m:semantics>
+</m:math>
+ then <emphasis>X</emphasis> is <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mi>N</m:mi><m:mrow><m:mo>(</m:mo>
+    <m:mrow>
+     <m:mo>−</m:mo><m:mn>7,16</m:mn>
+    </m:mrow>
+   <m:mo>)</m:mo></m:mrow>
+  </m:mrow>
+ </m:semantics>
+</m:math>
+</para>
+<para id="para_13">
+That is, <emphasis>X</emphasis> has a normal distribution with a mean <m:math>
+ <m:semantics>
+  <m:mi>μ</m:mi>
+ </m:semantics>
+</m:math> =-7, variance <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:msup>
+    <m:mi>σ</m:mi>
+    <m:mn>2</m:mn>
+   </m:msup>
+     </m:mrow>
+ </m:semantics>
+</m:math> =16, and the moment generating function 
+</para>
+<para id="para_14">
+
+<m:math display="block">
+ <m:semantics>
+  <m:mrow>
+   <m:mi>M</m:mi><m:mrow><m:mo>(</m:mo>
+    <m:mi>t</m:mi>
+   <m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mi>exp</m:mi><m:mo>⁡</m:mo><m:mrow><m:mo>(</m:mo>
+    <m:mrow>
+     <m:mo>−</m:mo><m:mn>7</m:mn><m:mi>t</m:mi><m:mo>+</m:mo><m:mn>8</m:mn><m:msup>
+      <m:mi>t</m:mi>
+      <m:mn>2</m:mn>
+     </m:msup>
+     
+    </m:mrow>
+   <m:mo>)</m:mo></m:mrow><m:mo>.</m:mo>
+  </m:mrow>
+ </m:semantics>
+</m:math>
+</para>
+</example>
+
+
+
+
+
+<para id="para_16">
+
+</para>
+<para id="para_17">
+
+</para>
+<para id="para_18">
+
+</para>
+<para id="para_19">
+
+</para>
+<para id="para_20">
+
+</para>
+
+</section>
+</section>
+    <para id="delete_me">
+       <!-- Insert module text here -->
+    </para>   
+  </content>
+  
+</document>

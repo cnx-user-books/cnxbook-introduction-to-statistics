@@ -1,0 +1,515 @@
+<document xmlns="http://cnx.rice.edu/cnxml" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:md="http://cnx.rice.edu/mdml">
+  <title>THE t DISTRIBUTION</title>
+  <metadata><md:content-id>undefined</md:content-id><md:title/><md:uuid>00292eb8-af5f-4637-b700-a97fc1e76bb5</md:uuid>
+</metadata>
+  <content>
+
+<section id="sec_1">
+<title> THE t DISTRIBUTION</title>
+<para id="para_1">
+In probability and statistics, the <term>t-distribution</term> or <term>Student's distribution</term> arises in the problem of estimating the mean of a normally distributed population when the sample size is small, as well as when (as in nearly all practical statistical work) the population standard deviation is unknown and has to be estimated from the data. 
+</para>
+	  <list id="list_1" list-type="enumerated">
+	    <title>Textbook problems treating the standard deviation as if it were known are of two kinds:</title>
+	    <item>
+those in which the sample size is so large that one may treat a data-based estimate of the variance as if it were certain, 
+            </item> 
+	    <item>	    
+those that illustrate mathematical reasoning, in which the problem of estimating the standard deviation is temporarily ignored because that is not the point that the author or instructor is then explaining.
+           </item> 
+           </list> 
+<section id="sec_2">
+<title>THE t DISTRIBUTION</title>
+<definition id="def_1">
+<term>t Distribution</term>
+<meaning id="idm10977760">
+If <emphasis>Z</emphasis> is a random variable that is <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mi>N</m:mi><m:mrow><m:mo>(</m:mo>
+    <m:mrow>
+     <m:mn>0,1</m:mn>
+    </m:mrow>
+   <m:mo>)</m:mo></m:mrow>
+  </m:mrow>
+ </m:semantics>
+</m:math>, if <emphasis>U</emphasis> is a random variable that is <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:msup>
+    <m:mi>χ</m:mi>
+    <m:mn>2</m:mn>
+   </m:msup>
+   <m:mrow><m:mo>(</m:mo>
+    <m:mi>r</m:mi>
+   <m:mo>)</m:mo></m:mrow>
+  </m:mrow>
+ </m:semantics>
+</m:math>, and if <emphasis>Z</emphasis> and <emphasis>U</emphasis> are independent, then
+<equation id="eq_1"> 
+<m:math display="block">
+ <m:semantics>
+  <m:mrow>
+   <m:mi>T</m:mi><m:mo>=</m:mo><m:mfrac>
+    <m:mi>Z</m:mi>
+    <m:mrow>
+     <m:msqrt>
+      <m:mrow>
+       <m:mi>U</m:mi><m:mo>/</m:mo><m:mi>r</m:mi>
+      </m:mrow>
+     </m:msqrt>
+     
+    </m:mrow>
+   </m:mfrac>
+   <m:mo>=</m:mo><m:mfrac>
+    <m:mrow>
+     <m:mover accent="true">
+      <m:mi>X</m:mi>
+      <m:mo>¯</m:mo>
+     </m:mover>
+     <m:mo>−</m:mo><m:mi>μ</m:mi>
+    </m:mrow>
+    <m:mrow>
+     <m:mi>S</m:mi><m:mo>/</m:mo><m:msqrt>
+      <m:mi>n</m:mi>
+     </m:msqrt>
+      </m:mrow>
+   </m:mfrac>
+     </m:mrow>
+ </m:semantics>
+</m:math>
+</equation> 
+has a <emphasis>t</emphasis> distribution with <emphasis>r</emphasis> degrees of freedom. 
+</meaning>
+</definition>
+<para id="para_2">
+Where <m:math>
+ <m:semantics>
+  <m:mi>μ</m:mi>
+ </m:semantics>
+</m:math> is the population mean, <m:math>
+ <m:semantics>
+  <m:mover accent="true">
+   <m:mi>x</m:mi>
+   <m:mo>¯</m:mo>
+  </m:mover>
+   </m:semantics>
+</m:math> is the sample mean and <emphasis>s</emphasis> is the estimator for population standard deviation (i.e., the sample variance) defined by
+</para>
+<equation id="eq_2"> 
+<m:math display="block">
+ <m:semantics>
+  <m:mrow>
+   <m:msup>
+    <m:mi>s</m:mi>
+    <m:mn>2</m:mn>
+   </m:msup>
+   <m:mo>=</m:mo><m:mfrac>
+    <m:mn>1</m:mn>
+    <m:mrow>
+     <m:mi>N</m:mi><m:mo>−</m:mo><m:mn>1</m:mn>
+    </m:mrow>
+   </m:mfrac>
+   <m:msup>
+    <m:mrow>
+     <m:mstyle displaystyle="true">
+      <m:munderover>
+       <m:mo>∑</m:mo>
+       <m:mrow>
+        <m:mi>i</m:mi><m:mo>=</m:mo><m:mn>1</m:mn>
+       </m:mrow>
+       <m:mi>N</m:mi>
+      </m:munderover>
+      <m:mrow>
+       <m:mrow><m:mo>(</m:mo>
+        <m:mrow>
+         <m:msub>
+          <m:mi>x</m:mi>
+          <m:mi>i</m:mi>
+         </m:msub>
+         <m:mo>−</m:mo><m:mover accent="true">
+          <m:mi>x</m:mi>
+          <m:mo>¯</m:mo>
+         </m:mover>
+         
+        </m:mrow>
+       <m:mo>)</m:mo></m:mrow>
+      </m:mrow>
+     </m:mstyle>
+    </m:mrow>
+    <m:mn>2</m:mn>
+   </m:msup>
+   <m:mo>.</m:mo>
+  </m:mrow>
+ </m:semantics>
+</m:math>
+</equation> 
+<section id="sec_3">
+<para id="para_3">
+If <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mi>σ</m:mi><m:mo>=</m:mo><m:mi>s</m:mi>
+  </m:mrow>
+ </m:semantics>
+</m:math>, <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mi>t</m:mi><m:mo>=</m:mo><m:mi>z</m:mi>
+  </m:mrow>
+ </m:semantics>
+</m:math>, the distribution becomes the normal distribution. As <emphasis>N</emphasis> increases, Student’s <emphasis>t</emphasis> distribution approaches 
+<link document="m13130" target-id="sec_1">the normal distribution</link>. It can be derived by transforming student’s <emphasis>z</emphasis>-distribution using <m:math display="block">
+ <m:semantics>
+  <m:mrow>
+   <m:mi>z</m:mi><m:mo>≡</m:mo><m:mfrac>
+    <m:mrow>
+     <m:mover accent="true">
+      <m:mi>x</m:mi>
+      <m:mo>¯</m:mo>
+     </m:mover>
+     <m:mo>−</m:mo><m:mi>μ</m:mi>
+    </m:mrow>
+    <m:mi>s</m:mi>
+   </m:mfrac>
+     </m:mrow>
+ </m:semantics>
+</m:math> and then defining <m:math display="block">
+ <m:semantics>
+  <m:mrow>
+   <m:mi>t</m:mi><m:mo>=</m:mo><m:mi>z</m:mi><m:msqrt>
+    <m:mrow>
+     <m:mi>n</m:mi><m:mo>−</m:mo><m:mn>1</m:mn>
+    </m:mrow>
+   </m:msqrt>
+   <m:mo>.</m:mo>
+  </m:mrow>
+ </m:semantics>
+</m:math>
+
+</para>
+<para id="para_4">
+The resulting probability and cumulative distribution functions are:
+</para>
+<equation id="eq_3"> 
+<m:math display="block">
+ <m:semantics>
+  <m:mrow>
+   <m:mi>f</m:mi><m:mrow><m:mo>(</m:mo>
+    <m:mi>t</m:mi>
+   <m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mfrac>
+    <m:mrow>
+     <m:mi>Γ</m:mi><m:mrow><m:mo>[</m:mo> <m:mrow>
+      <m:mrow><m:mo>(</m:mo>
+       <m:mrow>
+        <m:mi>r</m:mi><m:mo>+</m:mo><m:mn>1</m:mn>
+       </m:mrow>
+      <m:mo>)</m:mo></m:mrow><m:mo>/</m:mo><m:mn>2</m:mn>
+     </m:mrow> <m:mo>]</m:mo></m:mrow>
+    </m:mrow>
+    <m:mrow>
+     <m:msqrt>
+      <m:mrow>
+       <m:mi>π</m:mi><m:mi>r</m:mi>
+      </m:mrow>
+     </m:msqrt>
+     <m:mi>Γ</m:mi><m:mrow><m:mo>(</m:mo>
+      <m:mrow>
+       <m:mi>r</m:mi><m:mo>/</m:mo><m:mn>2</m:mn>
+      </m:mrow>
+     <m:mo>)</m:mo></m:mrow><m:msup>
+      <m:mrow>
+       <m:mrow><m:mo>(</m:mo>
+        <m:mrow>
+         <m:mn>1</m:mn><m:mo>+</m:mo><m:msup>
+          <m:mi>t</m:mi>
+          <m:mn>2</m:mn>
+         </m:msup>
+         <m:mo>/</m:mo><m:mi>r</m:mi>
+        </m:mrow>
+       <m:mo>)</m:mo></m:mrow>
+      </m:mrow>
+      <m:mrow>
+       <m:mrow><m:mo>(</m:mo>
+        <m:mrow>
+         <m:mi>r</m:mi><m:mo>+</m:mo><m:mn>1</m:mn>
+        </m:mrow>
+       <m:mo>)</m:mo></m:mrow><m:mo>/</m:mo><m:mn>2</m:mn>
+      </m:mrow>
+     </m:msup>
+     
+    </m:mrow>
+   </m:mfrac>
+   <m:mo>,</m:mo>
+  </m:mrow>
+ </m:semantics>
+</m:math>
+</equation> 
+<equation id="eq_4"> 
+<m:math display="block">
+ <m:semantics>
+  <m:mrow>
+   <m:mi>F</m:mi><m:mrow><m:mo>(</m:mo>
+    <m:mi>t</m:mi>
+   <m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mfrac>
+    <m:mn>1</m:mn>
+    <m:mn>2</m:mn>
+   </m:mfrac>
+   <m:mo>+</m:mo><m:mfrac>
+    <m:mn>1</m:mn>
+    <m:mn>2</m:mn>
+   </m:mfrac>
+   <m:mrow><m:mo>[</m:mo> <m:mrow>
+    <m:mi>I</m:mi><m:mrow><m:mo>(</m:mo>
+     <m:mrow>
+      <m:mn>1</m:mn><m:mo>;</m:mo><m:mfrac>
+       <m:mn>1</m:mn>
+       <m:mn>2</m:mn>
+      </m:mfrac>
+      <m:mi>r</m:mi><m:mo>,</m:mo><m:mfrac>
+       <m:mn>1</m:mn>
+       <m:mn>2</m:mn>
+      </m:mfrac>
+      
+     </m:mrow>
+    <m:mo>)</m:mo></m:mrow><m:mo>−</m:mo><m:mi>I</m:mi><m:mrow><m:mo>(</m:mo>
+     <m:mrow>
+      <m:mfrac>
+       <m:mi>r</m:mi>
+       <m:mrow>
+        <m:mi>r</m:mi><m:mo>+</m:mo><m:msup>
+         <m:mi>t</m:mi>
+         <m:mn>2</m:mn>
+        </m:msup>
+        
+       </m:mrow>
+      </m:mfrac>
+      <m:mo>,</m:mo><m:mfrac>
+       <m:mn>1</m:mn>
+       <m:mn>2</m:mn>
+      </m:mfrac>
+      <m:mi>r</m:mi><m:mo>,</m:mo><m:mfrac>
+       <m:mn>1</m:mn>
+       <m:mn>2</m:mn>
+      </m:mfrac>
+      
+     </m:mrow>
+    <m:mo>)</m:mo></m:mrow>
+   </m:mrow> <m:mo>]</m:mo></m:mrow><m:mi>sgn</m:mi><m:mo>⁡</m:mo><m:mrow><m:mo>(</m:mo>
+    <m:mi>t</m:mi>
+   <m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mfrac>
+    <m:mn>1</m:mn>
+    <m:mn>2</m:mn>
+   </m:mfrac>
+   <m:mo>−</m:mo><m:mfrac>
+    <m:mrow>
+     <m:mi>i</m:mi><m:mi>t</m:mi><m:mi>B</m:mi><m:mrow><m:mo>(</m:mo>
+      <m:mrow>
+       <m:mo>−</m:mo><m:mfrac>
+        <m:mrow>
+         <m:msup>
+          <m:mi>t</m:mi>
+          <m:mn>2</m:mn>
+         </m:msup>
+         
+        </m:mrow>
+        <m:mi>r</m:mi>
+       </m:mfrac>
+       <m:mo>;</m:mo><m:mfrac>
+        <m:mn>1</m:mn>
+        <m:mn>2</m:mn>
+       </m:mfrac>
+       <m:mo>,</m:mo><m:mfrac>
+        <m:mn>1</m:mn>
+        <m:mn>2</m:mn>
+       </m:mfrac>
+       <m:mrow><m:mo>(</m:mo>
+        <m:mrow>
+         <m:mn>1</m:mn><m:mo>−</m:mo><m:mi>r</m:mi>
+        </m:mrow>
+       <m:mo>)</m:mo></m:mrow>
+      </m:mrow>
+     <m:mo>)</m:mo></m:mrow><m:mi>Γ</m:mi><m:mrow><m:mo>(</m:mo>
+      <m:mrow>
+       <m:mfrac>
+        <m:mn>1</m:mn>
+        <m:mn>2</m:mn>
+       </m:mfrac>
+       <m:mrow><m:mo>(</m:mo>
+        <m:mrow>
+         <m:mi>r</m:mi><m:mo>+</m:mo><m:mn>1</m:mn>
+        </m:mrow>
+       <m:mo>)</m:mo></m:mrow>
+      </m:mrow>
+     <m:mo>)</m:mo></m:mrow>
+    </m:mrow>
+    <m:mrow>
+     <m:mn>2</m:mn><m:msqrt>
+      <m:mi>π</m:mi>
+     </m:msqrt>
+     <m:mrow><m:mo>|</m:mo> <m:mi>t</m:mi> <m:mo>|</m:mo></m:mrow><m:mi>Γ</m:mi><m:mrow><m:mo>(</m:mo>
+      <m:mrow>
+       <m:mfrac>
+        <m:mn>1</m:mn>
+        <m:mn>2</m:mn>
+       </m:mfrac>
+       <m:mi>r</m:mi>
+      </m:mrow>
+     <m:mo>)</m:mo></m:mrow>
+    </m:mrow>
+   </m:mfrac>
+     </m:mrow>
+ </m:semantics>
+</m:math>
+</equation> 
+<para id="para_5">
+where,
+</para>
+
+          <list id="list_2">
+
+	    <item>
+<m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mi>r</m:mi><m:mo>=</m:mo><m:mi>n</m:mi><m:mo>−</m:mo><m:mn>1</m:mn>
+  </m:mrow>
+ </m:semantics>
+</m:math> is the number of degrees of freedom,
+            </item> 
+	    <item>
+<m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mo>−</m:mo><m:mi>∞</m:mi><m:mo>&lt;</m:mo><m:mi>t</m:mi><m:mo>&lt;</m:mo><m:mi>∞</m:mi><m:mo>,</m:mo>
+  </m:mrow>
+ </m:semantics>
+</m:math>
+
+            </item> 
+	    <item>
+<m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mi>Γ</m:mi><m:mrow><m:mo>(</m:mo>
+    <m:mi>z</m:mi>
+   <m:mo>)</m:mo></m:mrow>
+  </m:mrow>
+ </m:semantics>
+</m:math> is the gamma function, 
+            </item>
+	    <item>
+<m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mi>B</m:mi><m:mrow><m:mo>(</m:mo>
+    <m:mrow>
+     <m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi>
+    </m:mrow>
+   <m:mo>)</m:mo></m:mrow>
+  </m:mrow>
+ </m:semantics>
+</m:math> is the bets function,
+            </item>
+	    <item>
+<m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mi>I</m:mi><m:mrow><m:mo>(</m:mo>
+    <m:mrow>
+     <m:mi>z</m:mi><m:mo>;</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi>
+    </m:mrow>
+   <m:mo>)</m:mo></m:mrow>
+  </m:mrow>
+ </m:semantics>
+</m:math> is the regularized beta function defined by <m:math display="block">
+ <m:semantics>
+  <m:mrow>
+   <m:mi>I</m:mi><m:mrow><m:mo>(</m:mo>
+    <m:mrow>
+     <m:mi>z</m:mi><m:mo>;</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi>
+    </m:mrow>
+   <m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mfrac>
+    <m:mrow>
+     <m:mi>B</m:mi><m:mrow><m:mo>(</m:mo>
+      <m:mrow>
+       <m:mi>z</m:mi><m:mo>;</m:mo><m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi>
+      </m:mrow>
+     <m:mo>)</m:mo></m:mrow>
+    </m:mrow>
+    <m:mrow>
+     <m:mi>B</m:mi><m:mrow><m:mo>(</m:mo>
+      <m:mrow>
+       <m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi>
+      </m:mrow>
+     <m:mo>)</m:mo></m:mrow>
+    </m:mrow>
+   </m:mfrac>
+   <m:mo>.</m:mo>
+  </m:mrow>
+ </m:semantics>
+</m:math>
+
+            </item>
+	  </list>
+</section>
+<section id="sec_4">
+<para id="para_6">
+The effect of degree of freedom on the <emphasis>t</emphasis> distribution is illustrated in the four <emphasis>t</emphasis> distributions on the <link target-id="fig_1">Figure 1</link>.  
+</para>
+
+	  <figure id="fig_1">
+	    
+  <media id="idm1607184" alt=""><image src="../../media/t_distribution.gif" mime-type="image/gif"/></media>
+	    <caption>p.d.f. of the <emphasis>t</emphasis> distribution for degrees of freedom <emphasis>r</emphasis>=3, <emphasis>r</emphasis>=6, <emphasis>r</emphasis>=<m:math>
+ <m:semantics>
+  <m:mi>∞</m:mi>
+ </m:semantics>
+</m:math>.
+</caption>
+	  </figure>
+
+
+<para id="para_7">
+In general, it is difficult to evaluate the distribution function of <emphasis>T</emphasis>. Some values are usually given in the tables. Also observe that the graph of the p.d.f. of <emphasis>T</emphasis> is symmetrical with respect to the vertical axis <emphasis>t</emphasis> =0 and is very similar to the graph of the p.d.f. of the standard normal distribution <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mi>N</m:mi><m:mrow><m:mo>(</m:mo>
+    <m:mrow>
+     <m:mn>0,1</m:mn>
+    </m:mrow>
+   <m:mo>)</m:mo></m:mrow>
+  </m:mrow>
+ </m:semantics>
+</m:math>. However the tails of the <emphasis>t</emphasis> distribution are heavier that those of a normal one; that is, there is more extreme probability in the <emphasis>t</emphasis> distribution than in the standardized normal one. 
+Because of the symmetry of the <emphasis>t</emphasis> distribution about <emphasis>t</emphasis> =0, the mean (if it exists) must be equal to zero. That is, it can be shown that <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mi>E</m:mi><m:mrow><m:mo>(</m:mo>
+    <m:mi>T</m:mi>
+   <m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>0</m:mn>
+  </m:mrow>
+ </m:semantics>
+</m:math> when <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mi>r</m:mi><m:mo>≥</m:mo><m:mn>2</m:mn>
+  </m:mrow>
+ </m:semantics>
+</m:math>. When <emphasis>r</emphasis>=1 the <emphasis>t</emphasis> distribution is the <term>Cauchy distribution</term>, and thus both the variance and mean do not exist.
+
+</para>
+<para id="para_8">
+
+</para>
+
+</section>
+</section>
+</section>
+
+    <para id="delete_me">
+       <!-- Insert module text here -->
+    </para>   
+  </content>
+  
+</document>

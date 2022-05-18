@@ -1,0 +1,1577 @@
+<document xmlns="http://cnx.rice.edu/cnxml" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:md="http://cnx.rice.edu/mdml">
+  <title>BERNOULLI TRIALS and the BINOMIAL DISTRIBUTION</title>
+  <metadata><md:content-id>undefined</md:content-id><md:title/><md:uuid>b9075b69-c7e6-4417-81f7-dcc77c2511e5</md:uuid>
+</metadata>
+  <content>
+<section id="sec_1">
+      <title>BERNOULLI TRIALS AND THE BINOMIAL DISTRIBUTION</title>
+    <para id="para_1">
+<term>A Bernoulli experiment</term> is a random experiment, the outcome of which can be classified in but one of two mutually exclusive and exhaustive ways, mainly, <term>success</term> or <term>failure</term> (e.g., female or male, life or death, nondefective or defective). 
+    </para>  
+    <para id="para_2">
+A sequence of <term>Bernoulli trials</term> occurs when a Bernoulli experiment is performed several independent times so that the probability of success, say, <emphasis>p</emphasis>, remains the same from trial to trial. That is, in such a sequence we let <emphasis>p</emphasis> denote the probability of success on each trial. In addition, frequently <m:math>
+ <m:semantics>
+  <m:mrow>
+<m:mi>q</m:mi><m:mo>=</m:mo><m:mn>1</m:mn><m:mo>−</m:mo><m:mi>p</m:mi>
+  </m:mrow>
+ </m:semantics>
+</m:math>
+ denote the probability of failure; that is, we shall use <emphasis>q</emphasis> and <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mn>1</m:mn><m:mo>−</m:mo><m:mi>p</m:mi>
+  </m:mrow>
+ </m:semantics>
+</m:math>
+ interchangeably. 
+    </para> 
+<section id="sec_2">
+<title>Bernoulli distribution</title>
+
+    <para id="para_3">
+Let <emphasis>X</emphasis> be a random variable associated with Bernoulli trial by defining it as follows:
+    </para> 
+     <para id="para_4">
+<emphasis>X</emphasis>(success)=1 and <emphasis>X</emphasis>(failure)=0.
+    </para> 
+    <para id="para_5">
+That is, the two outcomes, <term>success</term> and <term>failure</term>, are denoted by one and zero, respectively. The p.d.f. of <emphasis>X</emphasis> can be written as
+    </para> 
+<equation id="eq_1"> 
+<m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mi>f</m:mi><m:mrow><m:mo>(</m:mo>
+    <m:mi>x</m:mi>
+   <m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:msup>
+    <m:mi>p</m:mi>
+    <m:mi>x</m:mi>
+   </m:msup>
+   <m:msup>
+    <m:mrow>
+     <m:mrow><m:mo>(</m:mo>
+      <m:mrow>
+       <m:mn>1</m:mn><m:mo>−</m:mo><m:mi>p</m:mi>
+      </m:mrow>
+     <m:mo>)</m:mo></m:mrow>
+    </m:mrow>
+    <m:mrow>
+     <m:mn>1</m:mn><m:mo>−</m:mo><m:mi>x</m:mi>
+    </m:mrow>
+   </m:msup>
+   <m:mo>,</m:mo>
+  </m:mrow>
+ </m:semantics>
+</m:math>
+</equation> 
+    <para id="para_6">
+and we say that <emphasis>X</emphasis> has <term>a Bernoulli distribution</term>. The expected value of  is
+    </para> 
+<equation id="eq_2">
+<m:math display="block">
+ <m:semantics>
+  <m:mrow>
+   <m:mi>μ</m:mi><m:mo>=</m:mo><m:mi>E</m:mi><m:mrow><m:mo>(</m:mo>
+    <m:mi>X</m:mi>
+   <m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mstyle displaystyle="true">
+    <m:munderover>
+     <m:mo>∑</m:mo>
+     <m:mrow>
+      <m:mi>X</m:mi><m:mo>=</m:mo><m:mn>0</m:mn>
+     </m:mrow>
+     <m:mn>1</m:mn>
+    </m:munderover>
+    <m:mrow>
+     <m:mi>x</m:mi><m:msup>
+      <m:mi>p</m:mi>
+      <m:mi>x</m:mi>
+     </m:msup>
+     <m:msup>
+      <m:mrow>
+       <m:mrow><m:mo>(</m:mo>
+        <m:mrow>
+         <m:mn>1</m:mn><m:mo>−</m:mo><m:mi>p</m:mi>
+        </m:mrow>
+       <m:mo>)</m:mo></m:mrow>
+      </m:mrow>
+      <m:mrow>
+       <m:mn>1</m:mn><m:mo>−</m:mo><m:mi>x</m:mi>
+      </m:mrow>
+     </m:msup>
+     <m:mo>=</m:mo><m:mrow><m:mo>(</m:mo>
+      <m:mn>0</m:mn>
+     <m:mo>)</m:mo></m:mrow><m:mrow><m:mo>(</m:mo>
+      <m:mrow>
+       <m:mn>1</m:mn><m:mo>−</m:mo><m:mi>p</m:mi>
+      </m:mrow>
+     <m:mo>)</m:mo></m:mrow><m:mo>+</m:mo><m:mrow><m:mo>(</m:mo>
+      <m:mn>1</m:mn>
+     <m:mo>)</m:mo></m:mrow><m:mrow><m:mo>(</m:mo>
+      <m:mi>p</m:mi>
+     <m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mi>p</m:mi><m:mo>,</m:mo>
+    </m:mrow>
+   </m:mstyle>
+  </m:mrow>
+ </m:semantics>
+</m:math>
+</equation> 
+    <para id="para_7">
+and the variance of <emphasis>X</emphasis> is
+    </para> 
+<equation id="eq_3">
+<m:math display="block">
+ <m:semantics>
+  <m:mrow>
+   <m:msup>
+    <m:mi>σ</m:mi>
+    <m:mn>2</m:mn>
+   </m:msup>
+   <m:mo>=</m:mo><m:mi>V</m:mi><m:mi>a</m:mi><m:mi>r</m:mi><m:mrow><m:mo>(</m:mo>
+    <m:mi>X</m:mi>
+   <m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mstyle displaystyle="true">
+    <m:munderover>
+     <m:mo>∑</m:mo>
+     <m:mrow>
+      <m:mi>x</m:mi><m:mo>=</m:mo><m:mn>0</m:mn>
+     </m:mrow>
+     <m:mn>1</m:mn>
+    </m:munderover>
+    <m:mrow>
+     <m:msup>
+      <m:mrow>
+       <m:mrow><m:mo>(</m:mo>
+        <m:mrow>
+         <m:mi>x</m:mi><m:mo>−</m:mo><m:mi>p</m:mi>
+        </m:mrow>
+       <m:mo>)</m:mo></m:mrow>
+      </m:mrow>
+      <m:mn>2</m:mn>
+     </m:msup>
+     <m:msup>
+      <m:mi>p</m:mi>
+      <m:mi>x</m:mi>
+     </m:msup>
+     <m:msup>
+      <m:mrow>
+       <m:mrow><m:mo>(</m:mo>
+        <m:mrow>
+         <m:mn>1</m:mn><m:mo>−</m:mo><m:mi>p</m:mi>
+        </m:mrow>
+       <m:mo>)</m:mo></m:mrow>
+      </m:mrow>
+      <m:mrow>
+       <m:mn>1</m:mn><m:mo>−</m:mo><m:mi>x</m:mi>
+      </m:mrow>
+     </m:msup>
+     <m:mo>=</m:mo><m:msup>
+      <m:mi>p</m:mi>
+      <m:mn>2</m:mn>
+     </m:msup>
+     <m:mrow><m:mo>(</m:mo>
+      <m:mrow>
+       <m:mn>1</m:mn><m:mo>−</m:mo><m:mi>p</m:mi>
+      </m:mrow>
+     <m:mo>)</m:mo></m:mrow><m:mo>+</m:mo><m:msup>
+      <m:mrow>
+       <m:mrow><m:mo>(</m:mo>
+        <m:mrow>
+         <m:mn>1</m:mn><m:mo>−</m:mo><m:mi>p</m:mi>
+        </m:mrow>
+       <m:mo>)</m:mo></m:mrow>
+      </m:mrow>
+      <m:mn>2</m:mn>
+     </m:msup>
+     <m:mi>p</m:mi><m:mo>=</m:mo><m:mi>p</m:mi><m:mrow><m:mo>(</m:mo>
+      <m:mrow>
+       <m:mn>1</m:mn><m:mo>−</m:mo><m:mi>p</m:mi>
+      </m:mrow>
+     <m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mi>p</m:mi><m:mi>q</m:mi><m:mo>.</m:mo>
+    </m:mrow>
+   </m:mstyle>
+  </m:mrow>
+ </m:semantics>
+</m:math>
+
+</equation> 
+
+    <para id="para_8">
+It follows that the standard deviation of <emphasis>X</emphasis> is <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mi>σ</m:mi><m:mo>=</m:mo><m:msqrt>
+    <m:mrow>
+     <m:mi>p</m:mi><m:mrow><m:mo>(</m:mo>
+      <m:mrow>
+       <m:mn>1</m:mn><m:mo>−</m:mo><m:mi>p</m:mi>
+      </m:mrow>
+     <m:mo>)</m:mo></m:mrow>
+    </m:mrow>
+   </m:msqrt>
+   <m:mo>=</m:mo><m:msqrt>
+    <m:mrow>
+     <m:mi>p</m:mi><m:mi>q</m:mi>
+    </m:mrow>
+   </m:msqrt>
+   <m:mo>.</m:mo>
+  </m:mrow>
+ </m:semantics>
+</m:math>
+
+    </para> 
+    <para id="para_9">
+In a sequence of n Bernoulli trials, we shall let <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:msub>
+    <m:mi>X</m:mi>
+    <m:mi>i</m:mi>
+   </m:msub>
+     </m:mrow>
+ </m:semantics>
+</m:math>
+ denote the Bernoulli random variable associated with the <emphasis>i</emphasis>th trial. An observed sequence of <emphasis>n</emphasis> Bernoulli trials will then be an <emphasis>n</emphasis>-tuple of zeros and ones.
+    </para> 
+<section id="sec_3">
+    <para id="para_10">
+<term>Binomial Distribution</term>
+    </para> 
+    <para id="para_11">
+In a sequence of Bernoulli trials we are often interested in the total number of successes and not in the order of their occurrence. If we let the random variable <emphasis>X</emphasis> equal the number of observed successes in <emphasis>n</emphasis> Bernoulli trials, the possible values of <emphasis>X</emphasis> are 0,1,2,…,<emphasis>n</emphasis>. If <emphasis>x</emphasis> success occur, where <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mi>x</m:mi><m:mo>=</m:mo><m:mn>0,1,2,...,</m:mn><m:mi>n</m:mi>
+  </m:mrow>
+ </m:semantics>
+</m:math>
+, then <emphasis>n</emphasis>-<emphasis>x</emphasis> failures occur. The number of ways of selecting <emphasis>x</emphasis> positions for the <emphasis>x</emphasis> successes in the <emphasis>x</emphasis> trials is <m:math display="block">
+ <m:semantics>
+  <m:mrow>
+   <m:mrow><m:mo>(</m:mo>
+    <m:mtable columnalign="left">
+     <m:mtr>
+      <m:mtd>
+       <m:mi>n</m:mi>
+      </m:mtd>
+     </m:mtr>
+     <m:mtr>
+      <m:mtd>
+       <m:mi>x</m:mi>
+      </m:mtd>
+     </m:mtr>
+    </m:mtable>
+    
+   <m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mfrac>
+    <m:mrow>
+     <m:mi>n</m:mi><m:mo>!</m:mo>
+    </m:mrow>
+    <m:mrow>
+     <m:mi>x</m:mi><m:mo>!</m:mo><m:mrow><m:mo>(</m:mo>
+      <m:mrow>
+       <m:mi>n</m:mi><m:mo>−</m:mo><m:mi>x</m:mi>
+      </m:mrow>
+     <m:mo>)</m:mo></m:mrow><m:mo>!</m:mo>
+    </m:mrow>
+   </m:mfrac>
+   <m:mo>.</m:mo>
+  </m:mrow>
+ </m:semantics>
+</m:math>
+ Since the trials are independent and since the probabilities of success and failure on each trial are, respectively, <emphasis>p</emphasis> and <m:math>
+ <m:semantics>
+  <m:mrow>
+<m:mi>q</m:mi><m:mo>=</m:mo><m:mn>1</m:mn><m:mo>−</m:mo><m:mi>p</m:mi>
+  </m:mrow>
+ </m:semantics>
+</m:math>
+, the probability of each of these ways is <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:msup>
+    <m:mi>p</m:mi>
+    <m:mi>x</m:mi>
+   </m:msup>
+   <m:msup>
+    <m:mrow>
+     <m:mrow><m:mo>(</m:mo>
+      <m:mrow>
+       <m:mn>1</m:mn><m:mo>−</m:mo><m:mi>p</m:mi>
+      </m:mrow>
+     <m:mo>)</m:mo></m:mrow>
+    </m:mrow>
+    <m:mrow>
+     <m:mi>n</m:mi><m:mo>−</m:mo><m:mi>x</m:mi>
+    </m:mrow>
+   </m:msup>
+   <m:mo>.</m:mo>
+  </m:mrow>
+ </m:semantics>
+</m:math>. Thus the p.d.f. of <emphasis>X</emphasis>, say <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mi>f</m:mi><m:mrow><m:mo>(</m:mo>
+    <m:mi>x</m:mi>
+   <m:mo>)</m:mo></m:mrow>
+  </m:mrow>
+ </m:semantics>
+</m:math>
+, is the sum of the probabilities of these <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mrow><m:mo>(</m:mo>
+    <m:mtable columnalign="left">
+     <m:mtr>
+      <m:mtd>
+       <m:mi>n</m:mi>
+      </m:mtd>
+     </m:mtr>
+     <m:mtr>
+      <m:mtd>
+       <m:mi>x</m:mi>
+      </m:mtd>
+     </m:mtr>
+    </m:mtable>
+       <m:mo>)</m:mo></m:mrow>
+  </m:mrow>
+ </m:semantics>
+</m:math>
+  mutually exclusive events; that is,
+    </para> 
+    <para id="para_12">
+<m:math display="block">
+ <m:semantics>
+  <m:mrow>
+   <m:mi>f</m:mi><m:mrow><m:mo>(</m:mo>
+    <m:mi>x</m:mi>
+   <m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mrow><m:mo>(</m:mo>
+    <m:mtable columnalign="left">
+     <m:mtr>
+      <m:mtd>
+       <m:mi>n</m:mi>
+      </m:mtd>
+     </m:mtr>
+     <m:mtr>
+      <m:mtd>
+       <m:mi>x</m:mi>
+      </m:mtd>
+     </m:mtr>
+    </m:mtable>
+    
+   <m:mo>)</m:mo></m:mrow><m:msup>
+    <m:mi>p</m:mi>
+    <m:mi>x</m:mi>
+   </m:msup>
+   <m:msup>
+    <m:mrow>
+     <m:mrow><m:mo>(</m:mo>
+      <m:mrow>
+       <m:mn>1</m:mn><m:mo>−</m:mo><m:mi>p</m:mi>
+      </m:mrow>
+     <m:mo>)</m:mo></m:mrow>
+    </m:mrow>
+    <m:mrow>
+     <m:mi>n</m:mi><m:mo>−</m:mo><m:mi>x</m:mi>
+    </m:mrow>
+   </m:msup>
+   <m:mo>,</m:mo><m:mi>x</m:mi><m:mo>=</m:mo><m:mn>0</m:mn><m:mo>,</m:mo><m:mn>1</m:mn><m:mo>,</m:mo><m:mn>2</m:mn><m:mo>,</m:mo><m:mn>...</m:mn><m:mo>,</m:mo><m:mi>n</m:mi><m:mo>.</m:mo>
+  </m:mrow>
+ </m:semantics>
+</m:math>
+
+</para> 
+    <para id="para_13">
+These probabilities are called binomial probabilities, and the random variable <emphasis>X</emphasis> is said to have <term>a binomial distribution</term>. 
+    </para>  
+<list id="list_1" list-type="enumerated">
+	    <title>Summarizing, a binomial experiment satisfies the following properties:</title>
+	    <item>
+A Bernoulli (success-failure) experiment is performed <emphasis>n</emphasis> times.
+            </item> 
+	    <item>
+The trials are independent.
+            </item> 
+	    <item>
+The probability of success on each trial is a constant <emphasis>p</emphasis>; the probability of failure is <m:math>
+ <m:semantics>
+  <m:mrow>
+<m:mi>q</m:mi><m:mo>=</m:mo><m:mn>1</m:mn><m:mo>−</m:mo><m:mi>p</m:mi>
+  </m:mrow>
+ </m:semantics>
+</m:math>
+.
+          </item>
+	    <item>
+The random variable <emphasis>X</emphasis> counts the number of successes in the <emphasis>n</emphasis> trials.
+          </item>
+
+	  </list> 
+	    
+    <para id="para_14">
+A binomial distribution will be denoted by the symbol <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mi>b</m:mi><m:mrow><m:mo>(</m:mo>
+    <m:mrow>
+     <m:mi>n</m:mi><m:mo>,</m:mo><m:mi>p</m:mi>
+    </m:mrow>
+   <m:mo>)</m:mo></m:mrow>
+  </m:mrow>
+ </m:semantics>
+</m:math>
+ and we say that the distribution of <emphasis>X</emphasis> is <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mi>b</m:mi><m:mrow><m:mo>(</m:mo>
+    <m:mrow>
+     <m:mi>n</m:mi><m:mo>,</m:mo><m:mi>p</m:mi>
+    </m:mrow>
+   <m:mo>)</m:mo></m:mrow>
+  </m:mrow>
+ </m:semantics>
+</m:math>
+. The constants <emphasis>n</emphasis> and <emphasis>p</emphasis> are called <term>the parameters of the binomial distribution</term>, they correspond to the number <emphasis>n</emphasis> of independent trials and the probability <emphasis>p</emphasis> of success on each trial. Thus, if we say that the distribution of <emphasis>X</emphasis> is <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mi>b</m:mi><m:mrow><m:mo>(</m:mo>
+    <m:mrow>
+     <m:mn>12</m:mn><m:mo>,</m:mo><m:mn>14</m:mn>
+    </m:mrow>
+   <m:mo>)</m:mo></m:mrow><m:mo>,</m:mo>
+  </m:mrow>
+ </m:semantics>
+</m:math>
+ we mean that <emphasis>X</emphasis> is the number of successes in <emphasis>n</emphasis> =12 Bernoulli trials with probability <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mi>p</m:mi><m:mo>=</m:mo><m:mfrac>
+    <m:mn>1</m:mn>
+    <m:mn>4</m:mn>
+   </m:mfrac>
+     </m:mrow>
+ </m:semantics>
+</m:math> of success on each trial. 
+    </para> 
+<example id="ex_1">
+    <para id="para_15">
+In the instant lottery with 20% winning tickets, if <emphasis>X</emphasis> is equal to the number of winning tickets among <emphasis>n</emphasis> =8 that are purchased, the probability of purchasing 2 winning tickets is
+    </para> 
+    <para id="para_16">
+<m:math display="block">
+ <m:semantics>
+  <m:mrow>
+   <m:mi>f</m:mi><m:mrow><m:mo>(</m:mo>
+    <m:mn>2</m:mn>
+   <m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mi>P</m:mi><m:mrow><m:mo>(</m:mo>
+    <m:mrow>
+     <m:mi>X</m:mi><m:mo>=</m:mo><m:mn>2</m:mn>
+    </m:mrow>
+   <m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mrow><m:mo>(</m:mo>
+    <m:mtable columnalign="left">
+     <m:mtr>
+      <m:mtd>
+       <m:mn>8</m:mn>
+      </m:mtd>
+     </m:mtr>
+     <m:mtr>
+      <m:mtd>
+       <m:mn>2</m:mn>
+      </m:mtd>
+     </m:mtr>
+    </m:mtable>
+    
+   <m:mo>)</m:mo></m:mrow><m:msup>
+    <m:mrow>
+     <m:mrow><m:mo>(</m:mo>
+      <m:mrow>
+       <m:mn>0.2</m:mn>
+      </m:mrow>
+     <m:mo>)</m:mo></m:mrow>
+    </m:mrow>
+    <m:mn>2</m:mn>
+   </m:msup>
+   <m:msup>
+    <m:mrow>
+     <m:mrow><m:mo>(</m:mo>
+      <m:mrow>
+       <m:mn>0.8</m:mn>
+      </m:mrow>
+     <m:mo>)</m:mo></m:mrow>
+    </m:mrow>
+    <m:mn>6</m:mn>
+   </m:msup>
+   <m:mo>=</m:mo><m:mn>0.2936.</m:mn>
+  </m:mrow>
+ </m:semantics>
+</m:math>
+    </para> 
+    <para id="para_17">
+The distribution of the random variable <emphasis>X</emphasis> is <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mi>b</m:mi><m:mrow><m:mo>(</m:mo>
+    <m:mrow>
+     <m:mn>8,0.2</m:mn>
+    </m:mrow>
+   <m:mo>)</m:mo></m:mrow>
+  </m:mrow>
+ </m:semantics>
+</m:math>
+.
+    </para> 
+</example>
+<example id="ex_2">
+    <para id="para_18">
+Leghorn chickens are raised for lying eggs. If <emphasis>p</emphasis> =0.5 is the probability of female chick hatching, assuming independence, the probability that there are exactly 6 females out of 10 newly hatches chicks selected at random is
+    </para> 
+    <para id="para_19">
+<m:math display="block">
+ <m:semantics>
+  <m:mrow>
+   <m:mrow><m:mo>(</m:mo>
+    <m:mtable columnalign="left">
+     <m:mtr>
+      <m:mtd>
+       <m:mn>10</m:mn>
+      </m:mtd>
+     </m:mtr>
+     <m:mtr>
+      <m:mtd>
+       <m:mn>6</m:mn>
+      </m:mtd>
+     </m:mtr>
+    </m:mtable>
+    
+   <m:mo>)</m:mo></m:mrow><m:msup>
+    <m:mrow>
+     <m:mrow><m:mo>(</m:mo>
+      <m:mrow>
+       <m:mfrac>
+        <m:mn>1</m:mn>
+        <m:mn>2</m:mn>
+       </m:mfrac>
+       
+      </m:mrow>
+     <m:mo>)</m:mo></m:mrow>
+    </m:mrow>
+    <m:mn>6</m:mn>
+   </m:msup>
+   <m:msup>
+    <m:mrow>
+     <m:mrow><m:mo>(</m:mo>
+      <m:mrow>
+       <m:mfrac>
+        <m:mn>1</m:mn>
+        <m:mn>2</m:mn>
+       </m:mfrac>
+       
+      </m:mrow>
+     <m:mo>)</m:mo></m:mrow>
+    </m:mrow>
+    <m:mn>4</m:mn>
+   </m:msup>
+   <m:mo>=</m:mo><m:mi>P</m:mi><m:mrow><m:mo>(</m:mo>
+    <m:mrow>
+     <m:mi>X</m:mi><m:mo>≤</m:mo><m:mn>6</m:mn>
+    </m:mrow>
+   <m:mo>)</m:mo></m:mrow><m:mo>−</m:mo><m:mi>P</m:mi><m:mrow><m:mo>(</m:mo>
+    <m:mrow>
+     <m:mi>X</m:mi><m:mo>≤</m:mo><m:mn>5</m:mn>
+    </m:mrow>
+   <m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>0.8281</m:mn><m:mo>−</m:mo><m:mn>0.6230</m:mn><m:mo>=</m:mo><m:mn>0.2051.</m:mn>
+  </m:mrow>
+ </m:semantics>
+</m:math>
+
+    </para> 
+    <para id="para_20">
+Since <m:math display="block">
+ <m:semantics>
+  <m:mrow>
+   <m:mi>P</m:mi><m:mrow><m:mo>(</m:mo>
+    <m:mrow>
+     <m:mi>X</m:mi><m:mo>≤</m:mo><m:mn>6</m:mn>
+    </m:mrow>
+   <m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>0.8281</m:mn>
+  </m:mrow>
+ </m:semantics>
+</m:math>
+ and <m:math display="block">
+ <m:semantics>
+  <m:mrow>
+   <m:mi>P</m:mi><m:mrow><m:mo>(</m:mo>
+    <m:mrow>
+     <m:mi>X</m:mi><m:mo>≤</m:mo><m:mn>5</m:mn>
+    </m:mrow>
+   <m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>0.6230</m:mn><m:mo>,</m:mo>
+  </m:mrow>
+ </m:semantics>
+</m:math>
+ which are tabularized values, the probability of at least 6 females chicks is
+    </para> 
+    <para id="para_21">
+<m:math display="block">
+ <m:semantics>
+  <m:mrow>
+   <m:mstyle displaystyle="true">
+    <m:munderover>
+     <m:mo>∑</m:mo>
+     <m:mrow>
+      <m:mi>x</m:mi><m:mo>=</m:mo><m:mn>6</m:mn>
+     </m:mrow>
+     <m:mrow>
+      <m:mn>10</m:mn>
+     </m:mrow>
+    </m:munderover>
+    <m:mrow>
+     <m:mrow><m:mo>(</m:mo>
+      <m:mtable columnalign="left">
+       <m:mtr>
+        <m:mtd>
+         <m:mn>10</m:mn>
+        </m:mtd>
+       </m:mtr>
+       <m:mtr>
+        <m:mtd>
+         <m:mi>x</m:mi>
+        </m:mtd>
+       </m:mtr>
+      </m:mtable>
+      
+     <m:mo>)</m:mo></m:mrow><m:msup>
+      <m:mrow>
+       <m:mrow><m:mo>(</m:mo>
+        <m:mrow>
+         <m:mfrac>
+          <m:mn>1</m:mn>
+          <m:mn>2</m:mn>
+         </m:mfrac>
+         
+        </m:mrow>
+       <m:mo>)</m:mo></m:mrow>
+      </m:mrow>
+      <m:mi>x</m:mi>
+     </m:msup>
+     <m:msup>
+      <m:mrow>
+       <m:mrow><m:mo>(</m:mo>
+        <m:mrow>
+         <m:mfrac>
+          <m:mn>1</m:mn>
+          <m:mn>2</m:mn>
+         </m:mfrac>
+         
+        </m:mrow>
+       <m:mo>)</m:mo></m:mrow>
+      </m:mrow>
+      <m:mrow>
+       <m:mn>10</m:mn><m:mo>−</m:mo><m:mi>x</m:mi>
+      </m:mrow>
+     </m:msup>
+     <m:mo>=</m:mo><m:mn>1</m:mn><m:mo>−</m:mo><m:mi>P</m:mi><m:mrow><m:mo>(</m:mo>
+      <m:mrow>
+       <m:mi>X</m:mi><m:mo>≤</m:mo><m:mn>5</m:mn>
+      </m:mrow>
+     <m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>1</m:mn><m:mo>−</m:mo><m:mn>0.6230</m:mn><m:mo>=</m:mo><m:mn>0.3770</m:mn>
+    </m:mrow>
+   </m:mstyle><m:mo>.</m:mo>
+  </m:mrow>
+ </m:semantics>
+</m:math>
+  </para>  
+ </example>
+
+<example id="ex_3">
+ 
+    <para id="para_22">
+Suppose that we are in those rare times when 65% of the American public approve of the way the President of The United states is handling his job. Take a random sample of <emphasis>n</emphasis> =8 Americans and let <emphasis>Y</emphasis> equal the number who give approval. Then the distribution of <emphasis>Y</emphasis> is <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mi>b</m:mi><m:mrow><m:mo>(</m:mo>
+    <m:mrow>
+     <m:mn>8</m:mn><m:mo>,</m:mo><m:mn>0.65</m:mn>
+    </m:mrow>
+   <m:mo>)</m:mo></m:mrow><m:mo>.</m:mo>
+  </m:mrow>
+ </m:semantics>
+</m:math> To find <m:math display="block">
+ <m:semantics>
+  <m:mrow>
+   <m:mi>P</m:mi><m:mrow><m:mo>(</m:mo>
+    <m:mrow>
+     <m:mi>Y</m:mi><m:mo>≥</m:mo><m:mn>6</m:mn>
+    </m:mrow>
+   <m:mo>)</m:mo></m:mrow>
+  </m:mrow>
+ </m:semantics>
+</m:math>
+ note that
+    </para> 
+    <para id="para_23">
+<m:math display="block">
+ <m:semantics>
+  <m:mrow>
+   <m:mi>P</m:mi><m:mrow><m:mo>(</m:mo>
+    <m:mrow>
+     <m:mi>Y</m:mi><m:mo>≥</m:mo><m:mn>6</m:mn>
+    </m:mrow>
+   <m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mi>P</m:mi><m:mrow><m:mo>(</m:mo>
+    <m:mrow>
+     <m:mn>8</m:mn><m:mo>−</m:mo><m:mi>Y</m:mi><m:mo>≤</m:mo><m:mn>8</m:mn><m:mo>−</m:mo><m:mn>6</m:mn>
+    </m:mrow>
+   <m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mi>P</m:mi><m:mrow><m:mo>(</m:mo>
+    <m:mrow>
+     <m:mi>X</m:mi><m:mo>≤</m:mo><m:mn>2</m:mn>
+    </m:mrow>
+   <m:mo>)</m:mo></m:mrow><m:mo>,</m:mo>
+  </m:mrow>
+ </m:semantics>
+</m:math>
+
+    </para> 
+    <para id="para_24">
+where <m:math display="block">
+ <m:semantics>
+  <m:mrow>
+   <m:mi>X</m:mi><m:mo>=</m:mo><m:mn>8</m:mn><m:mo>−</m:mo><m:mi>Y</m:mi>
+  </m:mrow>
+ </m:semantics>
+</m:math>
+ counts the number who disapprove. Since <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mi>q</m:mi><m:mo>=</m:mo><m:mn>1</m:mn><m:mo>−</m:mo><m:mi>p</m:mi><m:mo>=</m:mo><m:mn>0.35</m:mn>
+  </m:mrow>
+ </m:semantics>
+</m:math>
+equals the probability if disapproval by each person selected, the distribution of <emphasis>X</emphasis> is <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mi>b</m:mi><m:mrow><m:mo>(</m:mo>
+    <m:mrow>
+     <m:mn>8,0.35</m:mn>
+    </m:mrow>
+   <m:mo>)</m:mo></m:mrow>
+  </m:mrow>
+ </m:semantics>
+</m:math>. From the tables, since <m:math display="block">
+ <m:semantics>
+  <m:mrow>
+   <m:mi>P</m:mi><m:mrow><m:mo>(</m:mo>
+    <m:mrow>
+     <m:mi>X</m:mi><m:mo>≤</m:mo><m:mn>2</m:mn>
+    </m:mrow>
+   <m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>0.4278</m:mn>
+  </m:mrow>
+ </m:semantics>
+</m:math>
+ it follows that <m:math display="block">
+ <m:semantics>
+  <m:mrow>
+   <m:mi>P</m:mi><m:mrow><m:mo>(</m:mo>
+    <m:mrow>
+     <m:mi>Y</m:mi><m:mo>≥</m:mo><m:mn>6</m:mn>
+    </m:mrow>
+   <m:mo>)</m:mo></m:mrow><m:mn>0.4278.</m:mn>
+  </m:mrow>
+ </m:semantics>
+</m:math> Similarly,
+
+    </para> 
+    <para id="para_25">
+<m:math display="block">
+ <m:semantics>
+  <m:mrow>
+   <m:mi>P</m:mi><m:mrow><m:mo>(</m:mo>
+    <m:mrow>
+     <m:mi>Y</m:mi><m:mo>≤</m:mo><m:mn>5</m:mn>
+    </m:mrow>
+   <m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mi>P</m:mi><m:mrow><m:mo>(</m:mo>
+    <m:mrow>
+     <m:mn>8</m:mn><m:mo>−</m:mo><m:mi>Y</m:mi><m:mo>≥</m:mo><m:mn>8</m:mn><m:mo>−</m:mo><m:mn>5</m:mn>
+    </m:mrow>
+   <m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mi>P</m:mi><m:mrow><m:mo>(</m:mo>
+    <m:mrow>
+     <m:mi>X</m:mi><m:mo>≥</m:mo><m:mn>3</m:mn>
+    </m:mrow>
+   <m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>1</m:mn><m:mo>−</m:mo><m:mi>P</m:mi><m:mrow><m:mo>(</m:mo>
+    <m:mrow>
+     <m:mi>X</m:mi><m:mo>≤</m:mo><m:mn>2</m:mn>
+    </m:mrow>
+   <m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>1</m:mn><m:mo>−</m:mo><m:mn>0.4278</m:mn><m:mo>=</m:mo><m:mn>0.5722</m:mn>
+  </m:mrow>
+ </m:semantics>
+</m:math>
+
+    </para> 
+    <para id="para_26">
+and
+    </para> 
+    <para id="para_27">
+<m:math display="block">
+ <m:semantics>
+  <m:mrow>
+   <m:mi>P</m:mi><m:mrow><m:mo>(</m:mo>
+    <m:mrow>
+     <m:mi>Y</m:mi><m:mo>=</m:mo><m:mn>5</m:mn>
+    </m:mrow>
+   <m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mi>P</m:mi><m:mrow><m:mo>(</m:mo>
+    <m:mrow>
+     <m:mn>8</m:mn><m:mo>−</m:mo><m:mi>Y</m:mi><m:mo>=</m:mo><m:mn>8</m:mn><m:mo>−</m:mo><m:mn>5</m:mn>
+    </m:mrow>
+   <m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mi>P</m:mi><m:mrow><m:mo>(</m:mo>
+    <m:mrow>
+     <m:mi>X</m:mi><m:mo>=</m:mo><m:mn>3</m:mn>
+    </m:mrow>
+   <m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mi>P</m:mi><m:mrow><m:mo>(</m:mo>
+    <m:mrow>
+     <m:mi>X</m:mi><m:mo>≤</m:mo><m:mn>3</m:mn>
+    </m:mrow>
+   <m:mo>)</m:mo></m:mrow><m:mo>−</m:mo><m:mi>P</m:mi><m:mrow><m:mo>(</m:mo>
+    <m:mrow>
+     <m:mi>X</m:mi><m:mo>≤</m:mo><m:mn>2</m:mn>
+    </m:mrow>
+   <m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>0.7064</m:mn><m:mo>−</m:mo><m:mn>0.4278</m:mn><m:mo>=</m:mo><m:mn>0.2786.</m:mn>
+  </m:mrow>
+ </m:semantics>
+</m:math>
+
+    </para> 
+ </example>
+<note type="RECALL THAT" id="idp14397408"><label>RECALL THAT</label>
+if <emphasis>n</emphasis> is a positive integer, then <m:math display="block">
+ <m:semantics>
+  <m:mrow>
+   <m:msup>
+    <m:mrow>
+     <m:mrow><m:mo>(</m:mo>
+      <m:mrow>
+       <m:mi>a</m:mi><m:mo>+</m:mo><m:mi>b</m:mi>
+      </m:mrow>
+     <m:mo>)</m:mo></m:mrow>
+    </m:mrow>
+    <m:mi>n</m:mi>
+   </m:msup>
+   <m:mo>=</m:mo><m:mstyle displaystyle="true">
+    <m:munderover>
+     <m:mo>∑</m:mo>
+     <m:mrow>
+      <m:mi>x</m:mi><m:mo>=</m:mo><m:mn>0</m:mn>
+     </m:mrow>
+     <m:mi>n</m:mi>
+    </m:munderover>
+    <m:mrow>
+     <m:mrow><m:mo>(</m:mo>
+      <m:mtable columnalign="left">
+       <m:mtr>
+        <m:mtd>
+         <m:mi>x</m:mi>
+        </m:mtd>
+       </m:mtr>
+       <m:mtr>
+        <m:mtd>
+         <m:mi>n</m:mi>
+        </m:mtd>
+       </m:mtr>
+      </m:mtable>
+      
+     <m:mo>)</m:mo></m:mrow><m:msup>
+      <m:mi>b</m:mi>
+      <m:mi>x</m:mi>
+     </m:msup>
+     <m:msup>
+      <m:mi>a</m:mi>
+      <m:mrow>
+       <m:mi>n</m:mi><m:mo>−</m:mo><m:mi>x</m:mi>
+      </m:mrow>
+     </m:msup>
+     
+    </m:mrow>
+   </m:mstyle><m:mo>.</m:mo>
+  </m:mrow>
+ </m:semantics>
+</m:math>
+ Thus the sum of the binomial probabilities, if we use the above binomial expansion with <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mi>b</m:mi><m:mo>=</m:mo><m:mi>p</m:mi>
+  </m:mrow>
+ </m:semantics>
+</m:math>
+ and <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mi>a</m:mi><m:mo>=</m:mo><m:mn>1</m:mn><m:mo>−</m:mo><m:mi>p</m:mi>
+  </m:mrow>
+ </m:semantics>
+</m:math>
+, is <m:math display="block">
+ <m:semantics>
+  <m:mrow>
+   <m:mstyle displaystyle="true">
+    <m:munderover>
+     <m:mo>∑</m:mo>
+     <m:mrow>
+      <m:mi>x</m:mi><m:mo>=</m:mo><m:mn>0</m:mn>
+     </m:mrow>
+     <m:mi>n</m:mi>
+    </m:munderover>
+    <m:mrow>
+     <m:mrow><m:mo>(</m:mo>
+      <m:mtable columnalign="left">
+       <m:mtr>
+        <m:mtd>
+         <m:mi>n</m:mi>
+        </m:mtd>
+       </m:mtr>
+       <m:mtr>
+        <m:mtd>
+         <m:mi>x</m:mi>
+        </m:mtd>
+       </m:mtr>
+      </m:mtable>
+      
+     <m:mo>)</m:mo></m:mrow><m:msup>
+      <m:mi>p</m:mi>
+      <m:mi>x</m:mi>
+     </m:msup>
+     <m:msup>
+      <m:mrow>
+       <m:mrow><m:mo>(</m:mo>
+        <m:mrow>
+         <m:mn>1</m:mn><m:mo>−</m:mo><m:mi>p</m:mi>
+        </m:mrow>
+       <m:mo>)</m:mo></m:mrow>
+      </m:mrow>
+      <m:mrow>
+       <m:mi>n</m:mi><m:mo>−</m:mo><m:mi>x</m:mi>
+      </m:mrow>
+     </m:msup>
+     
+    </m:mrow>
+   </m:mstyle><m:mo>=</m:mo><m:msup>
+    <m:mrow>
+     <m:mrow><m:mo>[</m:mo> <m:mrow>
+      <m:mrow><m:mo>(</m:mo>
+       <m:mrow>
+        <m:mn>1</m:mn><m:mo>−</m:mo><m:mi>p</m:mi>
+       </m:mrow>
+      <m:mo>)</m:mo></m:mrow><m:mo>+</m:mo><m:mi>p</m:mi>
+     </m:mrow> <m:mo>]</m:mo></m:mrow>
+    </m:mrow>
+    <m:mi>n</m:mi>
+   </m:msup>
+   <m:mo>=</m:mo><m:mn>1,</m:mn>
+  </m:mrow>
+
+ </m:semantics>
+</m:math>
+
+</note>
+<section id="sec_4">
+    <para id="para_28">
+A result that had to follow from the fact that <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mi>f</m:mi><m:mrow><m:mo>(</m:mo>
+    <m:mi>x</m:mi>
+   <m:mo>)</m:mo></m:mrow>
+  </m:mrow>
+ </m:semantics>
+</m:math>
+ is a p.d.f.
+We use the binomial expansion to find the mean and the variance of the binomial random variable <emphasis>X</emphasis> that is <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mi>b</m:mi><m:mrow><m:mo>(</m:mo>
+    <m:mrow>
+     <m:mi>n</m:mi><m:mo>,</m:mo><m:mi>p</m:mi>
+    </m:mrow>
+   <m:mo>)</m:mo></m:mrow>
+  </m:mrow>
+ </m:semantics>
+</m:math>
+. The mean is given by
+
+    </para> 
+<equation id="eq_4">
+<m:math display="block">
+ <m:semantics>
+  <m:mrow>
+   <m:mi>μ</m:mi><m:mo>=</m:mo><m:mi>E</m:mi><m:mrow><m:mo>(</m:mo>
+    <m:mi>X</m:mi>
+   <m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mstyle displaystyle="true">
+    <m:munderover>
+     <m:mo>∑</m:mo>
+     <m:mrow>
+      <m:mi>x</m:mi><m:mo>=</m:mo><m:mn>0</m:mn>
+     </m:mrow>
+     <m:mi>n</m:mi>
+    </m:munderover>
+    <m:mi>x</m:mi>
+   </m:mstyle><m:mfrac>
+    <m:mrow>
+     <m:mi>n</m:mi><m:mo>!</m:mo>
+    </m:mrow>
+    <m:mrow>
+     <m:mi>x</m:mi><m:mo>!</m:mo><m:mrow><m:mo>(</m:mo>
+      <m:mrow>
+       <m:mi>n</m:mi><m:mo>−</m:mo><m:mi>x</m:mi>
+      </m:mrow>
+     <m:mo>)</m:mo></m:mrow><m:mo>!</m:mo>
+    </m:mrow>
+   </m:mfrac>
+   <m:msup>
+    <m:mi>p</m:mi>
+    <m:mi>x</m:mi>
+   </m:msup>
+   <m:msup>
+    <m:mrow>
+     <m:mrow><m:mo>(</m:mo>
+      <m:mrow>
+       <m:mn>1</m:mn><m:mo>−</m:mo><m:mi>p</m:mi>
+      </m:mrow>
+     <m:mo>)</m:mo></m:mrow>
+    </m:mrow>
+    <m:mrow>
+     <m:mi>n</m:mi><m:mo>−</m:mo><m:mi>x</m:mi>
+    </m:mrow>
+   </m:msup>
+   <m:mo>.</m:mo>
+  </m:mrow>
+ </m:semantics>
+</m:math>
+
+</equation>  
+
+
+   <para id="para_29">
+Since the first term of this sum is equal to zero, this can be written as
+    </para> 
+<equation id="eq_5">
+<m:math display="block">
+ <m:semantics>
+  <m:mrow>
+   <m:mi>μ</m:mi><m:mo>=</m:mo><m:mstyle displaystyle="true">
+    <m:munderover>
+     <m:mo>∑</m:mo>
+     <m:mrow>
+      <m:mi>x</m:mi><m:mo>=</m:mo><m:mn>0</m:mn>
+     </m:mrow>
+     <m:mi>n</m:mi>
+    </m:munderover>
+    <m:mrow/>
+   </m:mstyle><m:mfrac>
+    <m:mrow>
+     <m:mi>n</m:mi><m:mo>!</m:mo>
+    </m:mrow>
+    <m:mrow>
+     <m:mrow><m:mo>(</m:mo>
+      <m:mrow>
+       <m:mi>x</m:mi><m:mo>−</m:mo><m:mn>1</m:mn>
+      </m:mrow>
+     <m:mo>)</m:mo></m:mrow><m:mo>!</m:mo><m:mrow><m:mo>(</m:mo>
+      <m:mrow>
+       <m:mi>n</m:mi><m:mo>−</m:mo><m:mi>x</m:mi>
+      </m:mrow>
+     <m:mo>)</m:mo></m:mrow><m:mo>!</m:mo>
+    </m:mrow>
+   </m:mfrac>
+   <m:msup>
+    <m:mi>p</m:mi>
+    <m:mi>x</m:mi>
+   </m:msup>
+   <m:msup>
+    <m:mrow>
+     <m:mrow><m:mo>(</m:mo>
+      <m:mrow>
+       <m:mn>1</m:mn><m:mo>−</m:mo><m:mi>p</m:mi>
+      </m:mrow>
+     <m:mo>)</m:mo></m:mrow>
+    </m:mrow>
+    <m:mrow>
+     <m:mi>n</m:mi><m:mo>−</m:mo><m:mi>x</m:mi>
+    </m:mrow>
+   </m:msup>
+   <m:mo>.</m:mo>
+  </m:mrow>
+ </m:semantics>
+</m:math>
+
+</equation> 
+   <para id="para_30">
+because  <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mi>x</m:mi><m:mo>/</m:mo><m:mi>x</m:mi><m:mo>!</m:mo><m:mo>=</m:mo><m:mn>1</m:mn><m:mo>/</m:mo><m:mrow><m:mo>(</m:mo>
+    <m:mrow>
+     <m:mi>x</m:mi><m:mo>−</m:mo><m:mn>1</m:mn>
+    </m:mrow>
+   <m:mo>)</m:mo></m:mrow><m:mo>!</m:mo>
+  </m:mrow>
+
+ </m:semantics>
+</m:math>
+ when <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mi>x</m:mi><m:mo>&gt;</m:mo><m:mn>0.</m:mn>
+  </m:mrow>
+ </m:semantics>
+</m:math>
+    </para> 
+</section>
+<section id="sec_5">
+   <para id="para_31">
+To find the variance, we first determine the second factorial moment <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mi>E</m:mi><m:mrow><m:mo>[</m:mo> <m:mrow>
+    <m:mi>X</m:mi><m:mrow><m:mo>(</m:mo>
+     <m:mrow>
+      <m:mi>X</m:mi><m:mo>−</m:mo><m:mn>1</m:mn>
+     </m:mrow>
+    <m:mo>)</m:mo></m:mrow>
+   </m:mrow> <m:mo>]</m:mo></m:mrow>
+  </m:mrow>
+ </m:semantics>
+</m:math>
+:
+    </para> 
+<equation id="eq_6">
+<m:math display="block">
+ <m:semantics>
+  <m:mrow>
+   <m:mi>E</m:mi><m:mrow><m:mo>[</m:mo> <m:mrow>
+    <m:mi>X</m:mi><m:mrow><m:mo>(</m:mo>
+     <m:mrow>
+      <m:mi>X</m:mi><m:mo>−</m:mo><m:mn>1</m:mn>
+     </m:mrow>
+    <m:mo>)</m:mo></m:mrow>
+   </m:mrow> <m:mo>]</m:mo></m:mrow><m:mo>=</m:mo><m:mstyle displaystyle="true">
+    <m:munderover>
+     <m:mo>∑</m:mo>
+     <m:mrow>
+      <m:mi>x</m:mi><m:mo>=</m:mo><m:mn>0</m:mn>
+     </m:mrow>
+     <m:mi>n</m:mi>
+    </m:munderover>
+    <m:mrow>
+     <m:mi>x</m:mi><m:mrow><m:mo>(</m:mo>
+      <m:mrow>
+       <m:mi>x</m:mi><m:mo>−</m:mo><m:mn>1</m:mn>
+      </m:mrow>
+     <m:mo>)</m:mo></m:mrow><m:mfrac>
+      <m:mrow>
+       <m:mi>n</m:mi><m:mo>!</m:mo>
+      </m:mrow>
+      <m:mrow>
+       <m:mi>x</m:mi><m:mo>!</m:mo><m:mrow><m:mo>(</m:mo>
+        <m:mrow>
+         <m:mi>n</m:mi><m:mo>−</m:mo><m:mi>x</m:mi>
+        </m:mrow>
+       <m:mo>)</m:mo></m:mrow><m:mo>!</m:mo>
+      </m:mrow>
+     </m:mfrac>
+     <m:msup>
+      <m:mi>p</m:mi>
+      <m:mi>x</m:mi>
+     </m:msup>
+     <m:msup>
+      <m:mrow>
+       <m:mrow><m:mo>(</m:mo>
+        <m:mrow>
+         <m:mn>1</m:mn><m:mo>−</m:mo><m:mi>p</m:mi>
+        </m:mrow>
+       <m:mo>)</m:mo></m:mrow>
+      </m:mrow>
+      <m:mrow>
+       <m:mi>n</m:mi><m:mo>−</m:mo><m:mi>x</m:mi>
+      </m:mrow>
+     </m:msup>
+     
+    </m:mrow>
+   </m:mstyle><m:mo>.</m:mo>
+  </m:mrow>
+ </m:semantics>
+</m:math>
+
+</equation> 
+   <para id="para_32">
+The first two terms in this summation equal zero; thus we find that 
+    </para> 
+   <para id="para_33">
+<m:math display="block">
+ <m:semantics>
+  <m:mrow>
+   <m:mi>E</m:mi><m:mrow><m:mo>[</m:mo> <m:mrow>
+    <m:mi>X</m:mi><m:mrow><m:mo>(</m:mo>
+     <m:mrow>
+      <m:mi>X</m:mi><m:mo>−</m:mo><m:mn>1</m:mn>
+     </m:mrow>
+    <m:mo>)</m:mo></m:mrow>
+   </m:mrow> <m:mo>]</m:mo></m:mrow><m:mo>=</m:mo><m:mstyle displaystyle="true">
+    <m:munderover>
+     <m:mo>∑</m:mo>
+     <m:mrow>
+      <m:mi>x</m:mi><m:mo>=</m:mo><m:mn>2</m:mn>
+     </m:mrow>
+     <m:mi>n</m:mi>
+    </m:munderover>
+    <m:mrow>
+     <m:mfrac>
+      <m:mrow>
+       <m:mi>n</m:mi><m:mo>!</m:mo>
+      </m:mrow>
+      <m:mrow>
+       <m:mrow><m:mo>(</m:mo>
+        <m:mrow>
+         <m:mi>x</m:mi><m:mo>−</m:mo><m:mn>2</m:mn>
+        </m:mrow>
+       <m:mo>)</m:mo></m:mrow><m:mo>!</m:mo><m:mrow><m:mo>(</m:mo>
+        <m:mrow>
+         <m:mi>n</m:mi><m:mo>−</m:mo><m:mi>x</m:mi>
+        </m:mrow>
+       <m:mo>)</m:mo></m:mrow><m:mo>!</m:mo>
+      </m:mrow>
+     </m:mfrac>
+     <m:msup>
+      <m:mi>p</m:mi>
+      <m:mi>x</m:mi>
+     </m:msup>
+     <m:msup>
+      <m:mrow>
+       <m:mrow><m:mo>(</m:mo>
+        <m:mrow>
+         <m:mn>1</m:mn><m:mo>−</m:mo><m:mi>p</m:mi>
+        </m:mrow>
+       <m:mo>)</m:mo></m:mrow>
+      </m:mrow>
+      <m:mrow>
+       <m:mi>n</m:mi><m:mo>−</m:mo><m:mi>x</m:mi>
+      </m:mrow>
+     </m:msup>
+     
+    </m:mrow>
+   </m:mstyle><m:mo>.</m:mo>
+  </m:mrow>
+ </m:semantics>
+</m:math>
+
+    </para> 
+   <para id="para_34">
+After observing that <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mi>x</m:mi><m:mrow><m:mo>(</m:mo>
+    <m:mrow>
+     <m:mi>x</m:mi><m:mo>−</m:mo><m:mn>1</m:mn>
+    </m:mrow>
+   <m:mo>)</m:mo></m:mrow><m:mo>/</m:mo><m:mi>x</m:mi><m:mo>!</m:mo><m:mo>=</m:mo><m:mn>1</m:mn><m:mo>/</m:mo><m:mrow><m:mo>(</m:mo>
+    <m:mrow>
+     <m:mi>x</m:mi><m:mo>−</m:mo><m:mn>2</m:mn>
+    </m:mrow>
+   <m:mo>)</m:mo></m:mrow><m:mo>!</m:mo>
+  </m:mrow>
+ </m:semantics>
+</m:math>
+ when <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mi>x</m:mi><m:mo>&gt;</m:mo><m:mn>1</m:mn>
+  </m:mrow>
+ </m:semantics>
+</m:math>
+. Letting <m:math>
+ <m:semantics>
+  <m:mrow>
+<m:mi>k</m:mi><m:mo>=</m:mo><m:mi>x</m:mi><m:mo>−</m:mo><m:mn>2</m:mn>
+  </m:mrow>
+ </m:semantics>
+</m:math>
+, we obtain
+    </para> 
+   <para id="para_35">
+<m:math display="block">
+ <m:semantics>
+  <m:mrow>
+   <m:mi>E</m:mi><m:mrow><m:mo>[</m:mo> <m:mrow>
+    <m:mi>X</m:mi><m:mrow><m:mo>(</m:mo>
+     <m:mrow>
+      <m:mi>X</m:mi><m:mo>−</m:mo><m:mn>1</m:mn>
+     </m:mrow>
+    <m:mo>)</m:mo></m:mrow>
+   </m:mrow> <m:mo>]</m:mo></m:mrow><m:mo>=</m:mo><m:mstyle displaystyle="true">
+    <m:munderover>
+     <m:mo>∑</m:mo>
+     <m:mrow>
+      <m:mi>x</m:mi><m:mo>=</m:mo><m:mn>0</m:mn>
+     </m:mrow>
+     <m:mrow>
+      <m:mi>n</m:mi><m:mo>−</m:mo><m:mn>2</m:mn>
+     </m:mrow>
+    </m:munderover>
+    <m:mrow>
+     <m:mfrac>
+      <m:mrow>
+       <m:mi>n</m:mi><m:mo>!</m:mo>
+      </m:mrow>
+      <m:mrow>
+       <m:mi>k</m:mi><m:mo>!</m:mo><m:mrow><m:mo>(</m:mo>
+        <m:mrow>
+         <m:mi>n</m:mi><m:mo>−</m:mo><m:mi>k</m:mi><m:mo>−</m:mo><m:mn>2</m:mn>
+        </m:mrow>
+       <m:mo>)</m:mo></m:mrow><m:mo>!</m:mo>
+      </m:mrow>
+     </m:mfrac>
+     <m:msup>
+      <m:mi>p</m:mi>
+      <m:mrow>
+       <m:mi>k</m:mi><m:mo>+</m:mo><m:mn>2</m:mn>
+      </m:mrow>
+     </m:msup>
+     <m:msup>
+      <m:mrow>
+       <m:mrow><m:mo>(</m:mo>
+        <m:mrow>
+         <m:mn>1</m:mn><m:mo>−</m:mo><m:mi>p</m:mi>
+        </m:mrow>
+       <m:mo>)</m:mo></m:mrow>
+      </m:mrow>
+      <m:mrow>
+       <m:mi>n</m:mi><m:mo>−</m:mo><m:mi>k</m:mi><m:mo>−</m:mo><m:mn>2</m:mn>
+      </m:mrow>
+     </m:msup>
+     
+    </m:mrow>
+   </m:mstyle><m:mo>.</m:mo><m:mo>=</m:mo><m:mi>n</m:mi><m:mo stretchy="false">(</m:mo><m:mi>n</m:mi><m:mo>−</m:mo><m:mn>1</m:mn><m:mo stretchy="false">)</m:mo><m:msup>
+    <m:mi>p</m:mi>
+    <m:mn>2</m:mn>
+   </m:msup>
+   <m:mstyle displaystyle="true">
+    <m:munderover>
+     <m:mo>∑</m:mo>
+     <m:mrow>
+      <m:mi>x</m:mi><m:mo>=</m:mo><m:mn>0</m:mn>
+     </m:mrow>
+     <m:mrow>
+      <m:mi>n</m:mi><m:mo>−</m:mo><m:mn>2</m:mn>
+     </m:mrow>
+    </m:munderover>
+    <m:mrow>
+     <m:mfrac>
+      <m:mrow>
+       <m:mrow><m:mo>(</m:mo>
+        <m:mrow>
+         <m:mi>n</m:mi><m:mo>−</m:mo><m:mn>2</m:mn>
+        </m:mrow>
+       <m:mo>)</m:mo></m:mrow><m:mo>!</m:mo>
+      </m:mrow>
+      <m:mrow>
+       <m:mi>k</m:mi><m:mo>!</m:mo><m:mrow><m:mo>(</m:mo>
+        <m:mrow>
+         <m:mi>n</m:mi><m:mo>−</m:mo><m:mn>2</m:mn><m:mo>−</m:mo><m:mi>k</m:mi>
+        </m:mrow>
+       <m:mo>)</m:mo></m:mrow><m:mo>!</m:mo>
+      </m:mrow>
+     </m:mfrac>
+     <m:msup>
+      <m:mi>p</m:mi>
+      <m:mi>k</m:mi>
+     </m:msup>
+     <m:msup>
+      <m:mrow>
+       <m:mrow><m:mo>(</m:mo>
+        <m:mrow>
+         <m:mn>1</m:mn><m:mo>−</m:mo><m:mi>p</m:mi>
+        </m:mrow>
+       <m:mo>)</m:mo></m:mrow>
+      </m:mrow>
+      <m:mrow>
+       <m:mi>n</m:mi><m:mo>−</m:mo><m:mn>2</m:mn><m:mo>−</m:mo><m:mi>k</m:mi>
+      </m:mrow>
+     </m:msup>
+     
+    </m:mrow>
+   </m:mstyle><m:mo>.</m:mo>
+  </m:mrow>
+
+ </m:semantics>
+</m:math>
+
+    </para> 
+
+   <para id="para_36">
+Since the last summand is that of the binomial p.d.f. <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mi>b</m:mi><m:mrow><m:mo>(</m:mo>
+    <m:mrow>
+     <m:mi>n</m:mi><m:mo>−</m:mo><m:mn>2,</m:mn><m:mi>p</m:mi>
+    </m:mrow>
+   <m:mo>)</m:mo></m:mrow>
+  </m:mrow>
+ </m:semantics>
+</m:math>
+, we obtain <m:math display="block">
+ <m:semantics>
+  <m:mrow>
+   <m:mi>E</m:mi><m:mrow><m:mo>[</m:mo> <m:mrow>
+    <m:mi>X</m:mi><m:mrow><m:mo>(</m:mo>
+     <m:mrow>
+      <m:mi>X</m:mi><m:mo>−</m:mo><m:mn>1</m:mn>
+     </m:mrow>
+    <m:mo>)</m:mo></m:mrow>
+   </m:mrow> <m:mo>]</m:mo></m:mrow><m:mo>=</m:mo><m:mi>n</m:mi><m:mrow><m:mo>(</m:mo>
+    <m:mrow>
+     <m:mi>n</m:mi><m:mo>−</m:mo><m:mn>1</m:mn>
+    </m:mrow>
+   <m:mo>)</m:mo></m:mrow><m:msup>
+    <m:mi>p</m:mi>
+    <m:mn>2</m:mn>
+   </m:msup>
+   <m:mo>.</m:mo>
+  </m:mrow>
+ </m:semantics>
+</m:math>
+
+    </para> 
+
+   <para id="para_37">
+Thus, <m:math display="block">
+ <m:semantics>
+  <m:mtable columnalign="left">
+   <m:mtr>
+    <m:mtd>
+     <m:msup>
+      <m:mi>σ</m:mi>
+      <m:mn>2</m:mn>
+     </m:msup>
+     <m:mo>=</m:mo><m:mi>V</m:mi><m:mi>a</m:mi><m:mi>r</m:mi><m:mrow><m:mo>(</m:mo>
+      <m:mi>X</m:mi>
+     <m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mi>E</m:mi><m:mrow><m:mo>(</m:mo>
+      <m:mrow>
+       <m:msup>
+        <m:mi>X</m:mi>
+        <m:mn>2</m:mn>
+       </m:msup>
+       
+      </m:mrow>
+     <m:mo>)</m:mo></m:mrow><m:mo>−</m:mo><m:msup>
+      <m:mrow><m:mo>[</m:mo> <m:mrow>
+       <m:mi>E</m:mi><m:mrow><m:mo>(</m:mo>
+        <m:mi>X</m:mi>
+       <m:mo>)</m:mo></m:mrow>
+      </m:mrow> <m:mo>]</m:mo></m:mrow>
+      <m:mn>2</m:mn>
+     </m:msup>
+     <m:mo>=</m:mo><m:mi>E</m:mi><m:mrow><m:mo>[</m:mo> <m:mrow>
+      <m:mi>X</m:mi><m:mrow><m:mo>(</m:mo>
+       <m:mrow>
+        <m:mi>X</m:mi><m:mo>−</m:mo><m:mn>1</m:mn>
+       </m:mrow>
+      <m:mo>)</m:mo></m:mrow>
+     </m:mrow> <m:mo>]</m:mo></m:mrow><m:mo>+</m:mo><m:mi>E</m:mi><m:mrow><m:mo>(</m:mo>
+      <m:mi>X</m:mi>
+     <m:mo>)</m:mo></m:mrow><m:mo>−</m:mo><m:msup>
+      <m:mrow><m:mo>[</m:mo> <m:mrow>
+       <m:mi>E</m:mi><m:mrow><m:mo>(</m:mo>
+        <m:mi>X</m:mi>
+       <m:mo>)</m:mo></m:mrow>
+      </m:mrow> <m:mo>]</m:mo></m:mrow>
+      <m:mn>2</m:mn>
+     </m:msup>
+     
+    </m:mtd>
+   </m:mtr>
+   <m:mtr>
+    <m:mtd>
+     <m:mo>=</m:mo><m:mi>n</m:mi><m:mrow><m:mo>(</m:mo>
+      <m:mrow>
+       <m:mi>n</m:mi><m:mo>−</m:mo><m:mn>1</m:mn>
+      </m:mrow>
+     <m:mo>)</m:mo></m:mrow><m:msup>
+      <m:mi>p</m:mi>
+      <m:mn>2</m:mn>
+     </m:msup>
+     <m:mo>+</m:mo><m:mi>n</m:mi><m:mi>p</m:mi><m:mo>−</m:mo><m:msup>
+      <m:mrow><m:mo>(</m:mo>
+       <m:mrow>
+        <m:mi>n</m:mi><m:mi>p</m:mi>
+       </m:mrow>
+      <m:mo>)</m:mo></m:mrow>
+      <m:mn>2</m:mn>
+     </m:msup>
+     <m:mo>=</m:mo><m:mo>−</m:mo><m:mi>n</m:mi><m:msup>
+      <m:mi>p</m:mi>
+      <m:mn>2</m:mn>
+     </m:msup>
+     <m:mo>+</m:mo><m:mi>n</m:mi><m:mi>p</m:mi><m:mo>=</m:mo><m:mi>n</m:mi><m:mi>p</m:mi><m:mrow><m:mo>(</m:mo>
+      <m:mrow>
+       <m:mn>1</m:mn><m:mo>−</m:mo><m:mi>p</m:mi>
+      </m:mrow>
+     <m:mo>)</m:mo></m:mrow><m:mo>.</m:mo>
+    </m:mtd>
+   </m:mtr>
+  </m:mtable>
+   </m:semantics>
+</m:math>
+
+    </para> 
+</section>
+<section id="sec_6">
+
+   <para id="para_38">
+<term>Summarizing</term>,
+    </para> 
+   <para id="para_39">
+if <emphasis>X</emphasis> is <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mi>b</m:mi><m:mrow><m:mo>(</m:mo>
+    <m:mrow>
+     <m:mi>n</m:mi><m:mo>,</m:mo><m:mi>p</m:mi>
+    </m:mrow>
+   <m:mo>)</m:mo></m:mrow>
+  </m:mrow>
+ </m:semantics>
+</m:math>
+, we obtain
+    </para> 
+   <para id="para_40">
+<m:math display="block">
+ <m:semantics>
+  <m:mrow>
+   <m:mi>μ</m:mi><m:mo>=</m:mo><m:mi>n</m:mi><m:mi>p</m:mi><m:mo>,</m:mo><m:msup>
+    <m:mi>σ</m:mi>
+    <m:mn>2</m:mn>
+   </m:msup>
+   <m:mo>=</m:mo><m:mi>n</m:mi><m:mi>p</m:mi><m:mrow><m:mo>(</m:mo>
+    <m:mrow>
+     <m:mn>1</m:mn><m:mo>−</m:mo><m:mi>p</m:mi>
+    </m:mrow>
+   <m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mi>n</m:mi><m:mi>p</m:mi><m:mi>q</m:mi><m:mo>,</m:mo><m:mi>σ</m:mi><m:mo>=</m:mo><m:msqrt>
+    <m:mrow>
+     <m:mi>n</m:mi><m:mi>p</m:mi><m:mrow><m:mo>(</m:mo>
+      <m:mrow>
+       <m:mn>1</m:mn><m:mo>−</m:mo><m:mi>p</m:mi>
+      </m:mrow>
+     <m:mo>)</m:mo></m:mrow>
+    </m:mrow>
+   </m:msqrt>
+   <m:mo>.</m:mo>
+  </m:mrow>
+ </m:semantics>
+</m:math>
+
+    </para> 
+
+</section>
+<note type="Note That" id="idp14689424"><label>Note That</label>
+When <emphasis>p</emphasis> is the probability of success on each trial, the expected number of successes in <emphasis>n</emphasis> trials is <emphasis>np</emphasis>, a result that agrees with most of our intuitions.
+</note>
+</section>
+</section>
+</section>
+  
+  </content>
+  
+</document>

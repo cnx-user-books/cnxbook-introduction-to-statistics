@@ -1,0 +1,664 @@
+<document xmlns="http://cnx.rice.edu/cnxml" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:md="http://cnx.rice.edu/mdml">
+  <title>SAMPLE SIZE</title>
+  <metadata><md:content-id>undefined</md:content-id><md:title/><md:uuid>75dd249b-f846-4ffe-9a74-b5408d5e0ff7</md:uuid>
+</metadata>
+  <content>
+<section id="sec_1">
+	  <title>Size Sample</title> 
+    <para id="para_1">
+Very frequently asked question in statistical consulting is, <term>how large should the sample size be to estimate a mean?</term>
+    </para> 
+
+    <para id="para_2">
+The answer will depend on the variation associated with the random variable under observation. The statistician could correctly respond, only one item is needed, provided that the standard deviation of the distribution is zero. That is, if <m:math>
+ <m:semantics>
+  <m:mi>σ</m:mi>
+</m:semantics>
+</m:math> is equal zero, then the value of that one item would necessarily equal the unknown mean of the distribution. This is the extreme case and one that is not met in practice. However, the smaller the variance, the smaller the sample size needed to achieve a given degree of accuracy.
+
+    </para> 
+<example id="ex_1"> 
+    <para id="para_3">
+A mathematics department wishes to evaluate a new method of teaching calculus that does mathematics using a computer. At the end of the course, the evaluation will be made on the basis of scores of the participating students on a standard test. Because there is an interest in estimating the mean score    <m:math>
+ <m:semantics>
+  <m:mi>μ</m:mi>
+</m:semantics>
+</m:math>, for students taking calculus using computer so there is a desire to determine the number of students, <emphasis>n</emphasis>, who are to be selected at random from a larger group. So, let find the sample size <emphasis>n</emphasis> such that we are fairly confident that <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mover accent="true">
+    <m:mi>x</m:mi>
+    <m:mo>¯</m:mo>
+   </m:mover>
+   <m:mo>±</m:mo><m:mn>1</m:mn>
+  </m:mrow>
+ </m:semantics>
+</m:math> contains the unknown test mean <m:math>
+ <m:semantics>
+  <m:mi>μ</m:mi>
+</m:semantics>
+</m:math>, from past experience it is believed that the standard deviation associated with this type of test is 15. Accordingly, using the fact that the sample mean of the test scores, <m:math>
+ <m:semantics>
+  <m:mover accent="true">
+   <m:mi>X</m:mi>
+   <m:mo>¯</m:mo>
+  </m:mover>
+  </m:semantics>
+</m:math> , is approximately <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mi>N</m:mi><m:mrow><m:mo>(</m:mo>
+    <m:mrow>
+     <m:mi>μ</m:mi><m:mo>,</m:mo><m:msup>
+      <m:mi>σ</m:mi>
+      <m:mn>2</m:mn>
+     </m:msup>
+     <m:mo>/</m:mo><m:mi>n</m:mi>
+    </m:mrow>
+   <m:mo>)</m:mo></m:mrow>
+  </m:mrow>
+ </m:semantics>
+</m:math>, it is seen that the interval given by <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mover accent="true">
+    <m:mi>x</m:mi>
+    <m:mo>¯</m:mo>
+   </m:mover>
+   <m:mo>±</m:mo><m:mn>1.96</m:mn><m:mrow><m:mo>(</m:mo>
+    <m:mrow>
+     <m:mn>15</m:mn><m:mo>/</m:mo><m:msqrt>
+      <m:mi>n</m:mi>
+     </m:msqrt>
+     
+    </m:mrow>
+   <m:mo>)</m:mo></m:mrow>
+  </m:mrow>
+ </m:semantics>
+</m:math> will serve as an approximate 95% confidence interval for <m:math>
+ <m:semantics>
+  <m:mi>μ</m:mi>
+</m:semantics>
+</m:math>. 
+</para> 
+    <para id="para_4">
+That is, <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mn>1.96</m:mn><m:mrow><m:mo>(</m:mo>
+    <m:mrow>
+     <m:mfrac>
+      <m:mrow>
+       <m:mn>15</m:mn>
+      </m:mrow>
+      <m:mrow>
+       <m:msqrt>
+        <m:mi>n</m:mi>
+       </m:msqrt>
+       
+      </m:mrow>
+     </m:mfrac>
+     
+    </m:mrow>
+   <m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>1</m:mn>
+  </m:mrow>
+ </m:semantics>
+</m:math> or equivalently <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:msqrt>
+    <m:mi>n</m:mi>
+   </m:msqrt>
+   <m:mo>=</m:mo><m:mn>29.4</m:mn>
+  </m:mrow>
+ </m:semantics>
+</m:math> and thus <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mi>n</m:mi><m:mo>≈</m:mo><m:mn>864.36</m:mn>
+  </m:mrow>
+ </m:semantics>
+</m:math> or <emphasis>n</emphasis>=865 because <emphasis>n</emphasis> must be an integer. It is quite likely that it had not been anticipated that as many as 865 students would be needed in this study. If that is the case, the statistician must discuss with those involved in the experiment whether or not the accuracy and the confidence level could be relaxed some. For illustration, rather than requiring <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mover accent="true">
+    <m:mi>x</m:mi>
+    <m:mo>¯</m:mo>
+   </m:mover>
+   <m:mo>±</m:mo><m:mn>1</m:mn>
+  </m:mrow>
+ </m:semantics>
+</m:math> to be a 95% confidence interval for <m:math>
+ <m:semantics>
+  <m:mi>μ</m:mi>
+</m:semantics>
+</m:math>, possibly <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mover accent="true">
+    <m:mi>x</m:mi>
+    <m:mo>¯</m:mo>
+   </m:mover>
+   <m:mo>±</m:mo><m:mn>2</m:mn>
+  </m:mrow>
+ </m:semantics>
+</m:math> would be satisfactory for 80% one. If this modification is acceptable, we now have <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mn>1.282</m:mn><m:mrow><m:mo>(</m:mo>
+    <m:mrow>
+     <m:mfrac>
+      <m:mrow>
+       <m:mn>15</m:mn>
+      </m:mrow>
+      <m:mrow>
+       <m:msqrt>
+        <m:mi>n</m:mi>
+       </m:msqrt>
+       
+      </m:mrow>
+     </m:mfrac>
+     
+    </m:mrow>
+   <m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>2</m:mn>
+  </m:mrow>
+ </m:semantics>
+</m:math> or equivalently, <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:msqrt>
+    <m:mi>n</m:mi>
+   </m:msqrt>
+   <m:mo>=</m:mo><m:mn>9.615</m:mn>
+  </m:mrow>
+ </m:semantics>
+</m:math> and thus <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mi>n</m:mi><m:mo>≈</m:mo><m:mn>92.4</m:mn>
+  </m:mrow>
+ </m:semantics>
+</m:math>. Since <emphasis>n</emphasis> must be an integer = 93 is used in practice. 
+</para> 
+</example> 
+<section id="sec_2">
+    <para id="para_5">
+Most likely, the person involved in this project would find this a more reasonable sample size. Of course, any sample size greater than 93 could be used. Then either the length of the confidence interval could be decreased from that of <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mover accent="true">
+    <m:mi>x</m:mi>
+    <m:mo>¯</m:mo>
+   </m:mover>
+   <m:mo>±</m:mo><m:mn>2</m:mn>
+  </m:mrow>
+ </m:semantics>
+</m:math> or the confidence coefficient could be increased from 80% or a combination of both. Also, since there might be some question of whether the standard deviation <m:math>
+ <m:semantics>
+  <m:mi>σ</m:mi>
+</m:semantics>
+</m:math> actually equals 15, the sample standard deviations would no doubt be used in the construction of the interval. 
+
+
+    </para> 
+    <para id="para_6">
+<term>For example</term>, suppose that the sample characteristics observed are <m:math display="block">
+ <m:semantics>
+  <m:mrow>
+   <m:mi>n</m:mi><m:mo>=</m:mo><m:mn>145</m:mn><m:mo>,</m:mo><m:mover accent="true">
+    <m:mi>x</m:mi>
+    <m:mo>¯</m:mo>
+   </m:mover>
+   <m:mo>=</m:mo><m:mn>77.2</m:mn><m:mo>,</m:mo><m:mi>s</m:mi><m:mo>=</m:mo><m:mn>13.2</m:mn><m:mo>;</m:mo>
+  </m:mrow>
+ </m:semantics>
+</m:math> then, <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mover accent="true">
+    <m:mi>x</m:mi>
+    <m:mo>¯</m:mo>
+   </m:mover>
+   <m:mo>±</m:mo><m:mfrac>
+    <m:mrow>
+     <m:mn>1.282</m:mn><m:mi>s</m:mi>
+    </m:mrow>
+    <m:mrow>
+     <m:msqrt>
+      <m:mi>n</m:mi>
+     </m:msqrt>
+     
+    </m:mrow>
+   </m:mfrac>
+   
+  </m:mrow>
+ </m:semantics>
+</m:math> or <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mn>77.2</m:mn><m:mo>±</m:mo><m:mn>1.41</m:mn>
+  </m:mrow>
+ </m:semantics>
+</m:math> provides an approximate 80% confidence interval for <m:math>
+ <m:semantics>
+  <m:mi>μ</m:mi>
+</m:semantics>
+</m:math>. 
+
+ </para> 
+    <para id="para_7">
+In general, if we want the <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mn>100</m:mn><m:mrow><m:mo>(</m:mo>
+    <m:mrow>
+     <m:mn>1</m:mn><m:mo>−</m:mo><m:mi>α</m:mi>
+    </m:mrow>
+   <m:mo>)</m:mo></m:mrow><m:mi>%</m:mi>
+  </m:mrow>
+</m:semantics>
+</m:math> confidence interval for <m:math>
+ <m:semantics>
+  <m:mi>μ</m:mi>
+</m:semantics>
+</m:math>, <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mover accent="true">
+    <m:mi>x</m:mi>
+    <m:mo>¯</m:mo>
+   </m:mover>
+   <m:mo>±</m:mo><m:msub>
+    <m:mi>z</m:mi>
+    <m:mrow>
+     <m:mi>α</m:mi><m:mo>/</m:mo><m:mn>2</m:mn>
+    </m:mrow>
+   </m:msub>
+   <m:mrow><m:mo>(</m:mo>
+    <m:mrow>
+     <m:mi>σ</m:mi><m:mo>/</m:mo><m:msqrt>
+      <m:mi>n</m:mi>
+     </m:msqrt>
+     
+    </m:mrow>
+   <m:mo>)</m:mo></m:mrow>
+  </m:mrow>
+ </m:semantics>
+</m:math>, to be no longer than that given by <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mover accent="true">
+    <m:mi>x</m:mi>
+    <m:mo>¯</m:mo>
+   </m:mover>
+   <m:mo>±</m:mo><m:mi>ε</m:mi>
+  </m:mrow>
+ </m:semantics>
+</m:math>, the sample size <emphasis>n</emphasis> is the solution of <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mi>ε</m:mi><m:mo>=</m:mo><m:mfrac>
+    <m:mrow>
+     <m:msub>
+      <m:mi>z</m:mi>
+      <m:mrow>
+       <m:mi>α</m:mi><m:mo>/</m:mo><m:mn>2</m:mn>
+      </m:mrow>
+     </m:msub>
+     <m:mi>σ</m:mi>
+    </m:mrow>
+    <m:mrow>
+     <m:msqrt>
+      <m:mi>n</m:mi>
+     </m:msqrt>
+     
+    </m:mrow>
+   </m:mfrac>
+   <m:mo>,</m:mo>
+  </m:mrow>
+ </m:semantics>
+</m:math> where <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mi>Φ</m:mi><m:mrow><m:mo>(</m:mo>
+    <m:mrow>
+     <m:msub>
+      <m:mi>z</m:mi>
+      <m:mrow>
+       <m:mi>α</m:mi><m:mo>/</m:mo><m:mn>2</m:mn>
+      </m:mrow>
+     </m:msub>
+     
+    </m:mrow>
+   <m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>1</m:mn><m:mo>−</m:mo><m:mfrac>
+    <m:mi>α</m:mi>
+    <m:mn>2</m:mn>
+   </m:mfrac>
+   <m:mo>.</m:mo>
+  </m:mrow>
+ </m:semantics>
+</m:math>
+
+</para> 
+    <para id="para_8">
+That is, <m:math display="block">
+ <m:semantics>
+  <m:mrow>
+   <m:mi>n</m:mi><m:mo>=</m:mo><m:mfrac>
+    <m:mrow>
+     <m:msubsup>
+      <m:mi>z</m:mi>
+      <m:mrow>
+       <m:mi>α</m:mi><m:mo>/</m:mo><m:mn>2</m:mn>
+      </m:mrow>
+      <m:mn>2</m:mn>
+     </m:msubsup>
+     <m:msup>
+      <m:mi>σ</m:mi>
+      <m:mn>2</m:mn>
+     </m:msup>
+     
+    </m:mrow>
+    <m:mrow>
+     <m:msup>
+      <m:mi>ε</m:mi>
+      <m:mn>2</m:mn>
+     </m:msup>
+     
+    </m:mrow>
+   </m:mfrac>
+   <m:mo>,</m:mo>
+  </m:mrow>
+ </m:semantics>
+</m:math> where it is assumed that <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:msup>
+    <m:mi>σ</m:mi>
+    <m:mn>2</m:mn>
+   </m:msup>
+    </m:mrow>
+</m:semantics>
+</m:math> is known. 
+
+
+    </para> 
+    <para id="para_9">
+Sometimes <m:math display="block">
+ <m:semantics>
+  <m:mrow>
+   <m:mi>ε</m:mi><m:mo>=</m:mo><m:msub>
+    <m:mi>z</m:mi>
+    <m:mrow>
+     <m:mi>α</m:mi><m:mo>/</m:mo><m:mn>2</m:mn>
+    </m:mrow>
+   </m:msub>
+   <m:mi>σ</m:mi><m:mo>/</m:mo><m:msqrt>
+    <m:mi>n</m:mi>
+   </m:msqrt>
+   
+  </m:mrow>
+ </m:semantics>
+</m:math> is called <term>the maximum error of the estimate</term>. If the experimenter has no ideas about the value of <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:msup>
+    <m:mi>σ</m:mi>
+    <m:mn>2</m:mn>
+   </m:msup>
+    </m:mrow>
+</m:semantics>
+</m:math>, it may be necessary to first take a preliminary sample to estimate <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:msup>
+    <m:mi>σ</m:mi>
+    <m:mn>2</m:mn>
+   </m:msup>
+    </m:mrow>
+</m:semantics>
+</m:math>.
+
+</para> 
+</section>
+<section id="sec_3">
+    <para id="para_10">
+
+    </para> 
+  
+</section> 
+  <para id="para_11">
+The type of statistic we see most often in newspaper and magazines is an estimate of a proportion <emphasis>p</emphasis>. We might, for example, want to know the percentage of the labor force that is unemployed or the percentage of voters favoring a certain candidate. Sometimes extremely important decisions are made on the basis of these estimates. If this is the case, we would most certainly desire short confidence intervals for <emphasis>p</emphasis> with large confidence coefficients. We recognize that these conditions will require a large sample size. On the other hand, if the fraction <emphasis>p</emphasis> being estimated is not too important, an estimate associated with a longer confidence interval with a smaller confidence coefficients is satisfactory; and thus a smaller sample size can be used. 
+    </para> 
+    <para id="para_12">
+<term>In general</term>, to find the required sample size to estimate <emphasis>p</emphasis>, recall that the point estimate of <emphasis>p</emphasis> is <m:math display="block">
+ <m:semantics>
+  <m:mrow>
+   <m:mover accent="true">
+    <m:mi>p</m:mi>
+    <m:mo>^</m:mo>
+   </m:mover>
+   <m:mo>=</m:mo><m:msub>
+    <m:mi>z</m:mi>
+    <m:mrow>
+     <m:mi>α</m:mi><m:mo>/</m:mo><m:mn>2</m:mn>
+    </m:mrow>
+   </m:msub>
+   <m:msqrt>
+    <m:mrow>
+     <m:mfrac>
+      <m:mrow>
+       <m:mover accent="true">
+        <m:mi>p</m:mi>
+        <m:mo>^</m:mo>
+       </m:mover>
+       <m:mrow><m:mo>(</m:mo>
+        <m:mrow>
+         <m:mn>1</m:mn><m:mo>−</m:mo><m:mover accent="true">
+          <m:mi>p</m:mi>
+          <m:mo>^</m:mo>
+         </m:mover>
+         
+        </m:mrow>
+       <m:mo>)</m:mo></m:mrow>
+      </m:mrow>
+      <m:mi>n</m:mi>
+     </m:mfrac>
+     
+    </m:mrow>
+   </m:msqrt>
+     <m:mo>.</m:mo>
+  </m:mrow>
+</m:semantics>
+</m:math>
+
+    </para> 
+    <para id="para_13">
+Suppose we want an estimate of <emphasis>p</emphasis> that is within <m:math>
+ <m:semantics>
+  <m:mi>ε</m:mi>
+</m:semantics>
+</m:math> of the unknown <emphasis>p</emphasis> with <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mn>100</m:mn><m:mrow><m:mo>(</m:mo>
+    <m:mrow>
+     <m:mn>1</m:mn><m:mo>−</m:mo><m:mi>α</m:mi>
+    </m:mrow>
+   <m:mo>)</m:mo></m:mrow><m:mi>%</m:mi>
+  </m:mrow>
+</m:semantics>
+</m:math> confidence where <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mi>ε</m:mi><m:mo>=</m:mo><m:msub>
+    <m:mi>z</m:mi>
+    <m:mrow>
+     <m:mi>α</m:mi><m:mo>/</m:mo><m:mn>2</m:mn>
+    </m:mrow>
+   </m:msub>
+   <m:msqrt>
+    <m:mrow>
+     <m:mover accent="true">
+      <m:mi>p</m:mi>
+      <m:mo>^</m:mo>
+     </m:mover>
+     <m:mrow><m:mo>(</m:mo>
+      <m:mrow>
+       <m:mn>1</m:mn><m:mo>−</m:mo><m:mover accent="true">
+        <m:mi>p</m:mi>
+        <m:mo>^</m:mo>
+       </m:mover>
+       
+      </m:mrow>
+     <m:mo>)</m:mo></m:mrow><m:mo>/</m:mo><m:mi>n</m:mi>
+    </m:mrow>
+   </m:msqrt>
+   
+  </m:mrow>
+
+ </m:semantics>
+</m:math> is <term>the maximum error of the point estimate</term> <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mover accent="true">
+    <m:mi>p</m:mi>
+    <m:mo>^</m:mo>
+   </m:mover>
+   <m:mo>=</m:mo><m:mi>y</m:mi><m:mo>/</m:mo><m:mi>n</m:mi>
+  </m:mrow>
+
+ </m:semantics>
+</m:math>. Since <m:math>
+ <m:semantics>
+  <m:mover accent="true">
+   <m:mi>p</m:mi>
+   <m:mo>^</m:mo>
+  </m:mover>
+  </m:semantics>
+</m:math> is unknown before the experiment is run, we cannot use the value of <m:math>
+ <m:semantics>
+  <m:mover accent="true">
+   <m:mi>p</m:mi>
+   <m:mo>^</m:mo>
+  </m:mover>
+  </m:semantics>
+</m:math> in our determination of <emphasis>n</emphasis>. However, if it is known that <emphasis>p</emphasis> is about equal to <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:msup>
+    <m:mi>p</m:mi>
+    <m:mo>*</m:mo>
+   </m:msup>
+   
+  </m:mrow>
+
+ </m:semantics>
+</m:math>, the necessary sample size <emphasis>n</emphasis> is the solution of <m:math display="block">
+ <m:semantics>
+  <m:mrow>
+   <m:mi>ε</m:mi><m:mo>=</m:mo><m:mfrac>
+    <m:mrow>
+     <m:msub>
+      <m:mi>z</m:mi>
+      <m:mrow>
+       <m:mi>α</m:mi><m:mo>/</m:mo><m:mn>2</m:mn>
+      </m:mrow>
+     </m:msub>
+     <m:msqrt>
+      <m:mrow>
+       <m:msup>
+        <m:mi>p</m:mi>
+        <m:mo>∗</m:mo>
+       </m:msup>
+       <m:mrow><m:mo>(</m:mo>
+        <m:mrow>
+         <m:mn>1</m:mn><m:mo>−</m:mo><m:msup>
+          <m:mi>p</m:mi>
+          <m:mo>∗</m:mo>
+         </m:msup>
+         
+        </m:mrow>
+       <m:mo>)</m:mo></m:mrow>
+      </m:mrow>
+     </m:msqrt>
+     
+    </m:mrow>
+    <m:mrow>
+     <m:msqrt>
+      <m:mi>n</m:mi>
+     </m:msqrt>
+     
+    </m:mrow>
+   </m:mfrac>
+   <m:mo>.</m:mo>
+  </m:mrow>
+
+ </m:semantics>
+</m:math> That is, <m:math display="block">
+ <m:semantics>
+  <m:mrow>
+   <m:mi>n</m:mi><m:mo>=</m:mo><m:mfrac>
+    <m:mrow>
+     <m:msubsup>
+      <m:mi>z</m:mi>
+      <m:mrow>
+       <m:mi>α</m:mi><m:mo>/</m:mo><m:mn>2</m:mn>
+      </m:mrow>
+      <m:mn>2</m:mn>
+     </m:msubsup>
+     <m:msup>
+      <m:mi>p</m:mi>
+      <m:mo>∗</m:mo>
+     </m:msup>
+     <m:mrow><m:mo>(</m:mo>
+      <m:mrow>
+       <m:mn>1</m:mn><m:mo>−</m:mo><m:msup>
+        <m:mi>p</m:mi>
+        <m:mo>∗</m:mo>
+       </m:msup>
+       
+      </m:mrow>
+     <m:mo>)</m:mo></m:mrow>
+    </m:mrow>
+    <m:mrow>
+     <m:msup>
+      <m:mi>ε</m:mi>
+      <m:mn>2</m:mn>
+     </m:msup>
+     
+    </m:mrow>
+   </m:mfrac>
+   <m:mo>.</m:mo>
+  </m:mrow>
+
+ </m:semantics>
+</m:math>
+
+
+
+
+
+
+
+
+
+    </para>    
+    <para id="para_14">
+
+    </para>
+     <para id="para_15">
+
+    </para>
+     <para id="para_16">
+
+    </para> 
+</section> 
+
+
+    <para id="delete_me">
+       <!-- Insert module text here -->
+    </para>   
+  </content>
+  
+</document>

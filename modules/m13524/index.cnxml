@@ -1,0 +1,750 @@
+<document xmlns="http://cnx.rice.edu/cnxml" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:md="http://cnx.rice.edu/mdml">
+  <title>Estimation</title>
+  <metadata><md:content-id>undefined</md:content-id><md:title/><md:uuid>540188da-358a-49ac-82ed-d8511e6bab19</md:uuid>
+</metadata>
+  <content>
+
+<section id="sec_1">
+<title>ESTIMATION</title>
+<para id="para_1">
+Once a model is specified with its parameters and data have been collected, one is in a position to evaluate the model’s goodness of fit, that is, how well the model fits the observed pattern of data. Finding parameter values of a model that best fits the data — <term>a procedure called parameter estimation, which assesses goodness of fit</term>.
+</para>
+<para id="para_2">
+There are two generally accepted methods of parameter estimation. They are <term>least squares estimation (LSE)</term> and <term>maximum likelihood estimation (MLE)</term>. The former is well known as linear regression, the sum of squares error, and the root means squared deviation is tied to the method. On the other hand, MLE is not widely recognized among modelers in psychology, though it is, by far, the most commonly used method of parameter estimation in the statistics community.
+LSE might be useful for obtaining a descriptive measure for the purpose of summarizing observed data, but MLE is more suitable for statistical inference such as model comparison. LSE has no basis for constructing confidence intervals or testing hypotheses whereas both are naturally built into MLE. 
+</para>
+<section id="sec_2">
+<title>Properties of Estimators</title>
+<para id="para_3">
+<term>UNBIASED AND BIASED ESTIMATORS</term>
+</para>
+<para id="para_4">
+Let consider random variables for which the functional form of the p.d.f. is know, but the distribution depends on an unknown parameter <m:math>
+ <m:semantics>
+  <m:mi>θ</m:mi>
+ </m:semantics></m:math>
+, that may have any value in a set <m:math>
+ <m:semantics>
+  <m:mi>θ</m:mi>
+ </m:semantics>
+</m:math>
+, which is called the <term>parameter space</term>. In estimation the random sample from the distribution is taken to elicit some information about the unknown parameter <m:math>
+ <m:semantics>
+  <m:mi>θ</m:mi>
+ </m:semantics></m:math>.
+ The experiment is repeated n independent times, the sample <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:msub>
+    <m:mi>X</m:mi>
+    <m:mn>1</m:mn>
+   </m:msub>
+   <m:mo>,</m:mo><m:msub>
+    <m:mi>X</m:mi>
+    <m:mn>2</m:mn>
+   </m:msub>
+   <m:mn>,...,</m:mn><m:msub>
+    <m:mi>X</m:mi>
+    <m:mi>n</m:mi>
+   </m:msub>
+     </m:mrow>
+ </m:semantics>
+</m:math>
+ is observed and one try to guess the value of <m:math>
+ <m:semantics>
+  <m:mi>θ</m:mi>
+ </m:semantics></m:math>
+ using the observations <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:msub>
+    <m:mi>x</m:mi>
+    <m:mn>1</m:mn>
+   </m:msub>
+   <m:mo>,</m:mo><m:msub>
+    <m:mi>x</m:mi>
+    <m:mn>2</m:mn>
+   </m:msub>
+   <m:mn>,...</m:mn><m:msub>
+    <m:mi>x</m:mi>
+    <m:mi>n</m:mi>
+   </m:msub>
+   <m:mo>.</m:mo>
+  </m:mrow>
+ </m:semantics>
+</m:math>
+</para>
+<para id="para_5">
+ The function of <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:msub>
+    <m:mi>X</m:mi>
+    <m:mn>1</m:mn>
+   </m:msub>
+   <m:mo>,</m:mo><m:msub>
+    <m:mi>X</m:mi>
+    <m:mn>2</m:mn>
+   </m:msub>
+   <m:mn>,...,</m:mn><m:msub>
+    <m:mi>X</m:mi>
+    <m:mi>n</m:mi>
+   </m:msub>
+     </m:mrow>
+ </m:semantics>
+</m:math>
+ used to guess <m:math>
+ <m:semantics>
+  <m:mi>θ</m:mi>
+ </m:semantics></m:math>
+ <term>is called an estimator of <m:math>
+ <m:semantics>
+  <m:mi>θ</m:mi>
+ </m:semantics></m:math></term>
+. We want it to be such that the computed estimate <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mi>u</m:mi><m:mrow><m:mo>(</m:mo>
+    <m:mrow>
+     <m:msub>
+      <m:mi>x</m:mi>
+      <m:mn>1</m:mn>
+     </m:msub>
+     <m:mo>,</m:mo><m:msub>
+      <m:mi>x</m:mi>
+      <m:mn>2</m:mn>
+     </m:msub>
+     <m:mn>,...</m:mn><m:msub>
+      <m:mi>x</m:mi>
+      <m:mi>n</m:mi>
+     </m:msub>
+     
+    </m:mrow>
+   <m:mo>)</m:mo></m:mrow>
+  </m:mrow>
+ </m:semantics>
+</m:math>
+ is usually close to <m:math>
+ <m:semantics>
+  <m:mi>θ</m:mi>
+ </m:semantics></m:math>.
+ Let <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mi>Y</m:mi><m:mo>=</m:mo><m:mi>u</m:mi><m:mrow><m:mo>(</m:mo>
+    <m:mrow>
+     <m:msub>
+      <m:mi>x</m:mi>
+      <m:mn>1</m:mn>
+     </m:msub>
+     <m:mo>,</m:mo><m:msub>
+      <m:mi>x</m:mi>
+      <m:mn>2</m:mn>
+     </m:msub>
+     <m:mn>,...</m:mn><m:msub>
+      <m:mi>x</m:mi>
+      <m:mi>n</m:mi>
+     </m:msub>
+         </m:mrow>
+   <m:mo>)</m:mo></m:mrow>
+  </m:mrow>
+ </m:semantics>
+</m:math>
+ be an estimator of <m:math>
+ <m:semantics>
+  <m:mi>θ</m:mi>
+ </m:semantics></m:math>. If Y to be a good estimator of <m:math>
+ <m:semantics>
+  <m:mi>θ</m:mi>
+ </m:semantics></m:math>
+, a very desirable property is that <term>it means be equal to <m:math>
+ <m:semantics>
+  <m:mi>θ</m:mi>
+ </m:semantics></m:math>
+</term>
+, namely 
+<m:math>
+<m:semantics>
+<m:mrow>
+<m:mi>E</m:mi><m:mrow><m:mo>(</m:mo>
+<m:mi>Y</m:mi>
+<m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mi>θ</m:mi>
+</m:mrow>
+</m:semantics>
+</m:math>
+.
+ </para>
+<para id="para_6">
+<definition id="def_1">
+<term/>
+	  <meaning id="idm3486624">
+If  <m:math>
+<m:semantics>
+<m:mrow>
+<m:mi>E</m:mi><m:mrow><m:mo>[</m:mo> <m:mrow>
+<m:mi>u</m:mi><m:mrow><m:mo>(</m:mo>
+<m:mrow>
+<m:msub>
+<m:mi>x</m:mi>
+<m:mn>1</m:mn>
+</m:msub>
+<m:mo>,</m:mo><m:msub>
+<m:mi>x</m:mi>
+<m:mn>2</m:mn>
+</m:msub>
+<m:mn>,...,</m:mn><m:msub>
+<m:mi>x</m:mi>
+<m:mi>n</m:mi>
+</m:msub>
+
+</m:mrow>
+<m:mo>)</m:mo></m:mrow>
+</m:mrow> <m:mo>]</m:mo></m:mrow><m:mo>=</m:mo><m:mi>θ</m:mi>
+</m:mrow>
+</m:semantics>
+</m:math>
+
+ is called <term>an unbiased estimator of <m:math>
+<m:semantics>
+<m:mi>θ</m:mi>
+</m:semantics>
+</m:math></term>. Otherwise, it is said to be <term>biased</term>.
+    </meaning>
+</definition>
+
+</para>
+
+<para id="para_7">
+It is required not only that an estimator has expectation equal to <m:math>
+<m:semantics>
+<m:mi>θ</m:mi>
+</m:semantics>
+</m:math>, but also the variance of the estimator should be as small as possible.
+If there are two unbiased estimators of <m:math>
+<m:semantics>
+<m:mi>θ</m:mi>
+</m:semantics>
+</m:math>, it could be probably possible to choose the one with the smaller variance. In general, with a random sample <m:math>
+<m:semantics>
+<m:mrow>
+<m:msub>
+<m:mi>X</m:mi>
+<m:mn>1</m:mn>
+</m:msub>
+<m:mo>,</m:mo><m:msub>
+<m:mi>X</m:mi>
+<m:mn>2</m:mn>
+</m:msub>
+<m:mn>,...,</m:mn><m:msub>
+<m:mi>X</m:mi>
+<m:mi>n</m:mi>
+</m:msub>
+</m:mrow> 
+</m:semantics>
+</m:math>
+ of a fixed sample size <emphasis>n</emphasis>, a statistician might like to find the estimator <m:math> <m:semantics> <m:mrow> <m:mi>Y</m:mi><m:mo>=</m:mo><m:mi>u</m:mi><m:mrow><m:mo>(</m:mo> <m:mrow> <m:msub> <m:mi>X</m:mi> <m:mn>1</m:mn> </m:msub> <m:mo>,</m:mo><m:msub> <m:mi>X</m:mi> <m:mn>2</m:mn> </m:msub> <m:mn>,...,</m:mn><m:msub> <m:mi>X</m:mi> <m:mi>n</m:mi> </m:msub> </m:mrow> <m:mo>)</m:mo></m:mrow> </m:mrow> </m:semantics></m:math> of an unknown parameter <m:math>
+<m:semantics>
+<m:mi>θ</m:mi>
+</m:semantics>
+</m:math>
+ which minimizes the mean (expected) value of the square error (difference) <m:math> <m:semantics> <m:mrow> <m:mi>Y</m:mi><m:mo>−</m:mo><m:mi>θ</m:mi> </m:mrow> </m:semantics></m:math> that is, minimizes 
+ <m:math display="block"> <m:semantics> <m:mrow> <m:mi>E</m:mi><m:mrow><m:mo>[</m:mo> <m:mrow> <m:msup> <m:mrow> <m:mrow><m:mo>(</m:mo> <m:mrow> <m:mi>Y</m:mi><m:mo>−</m:mo><m:mi>θ</m:mi> </m:mrow> <m:mo>)</m:mo></m:mrow> </m:mrow> <m:mn>2</m:mn> </m:msup> </m:mrow> <m:mo>]</m:mo></m:mrow><m:mo>=</m:mo><m:mi>E</m:mi><m:mrow><m:mo>{</m:mo> <m:mrow> <m:msup> <m:mrow> <m:mrow><m:mo>[</m:mo> <m:mrow> <m:mi>u</m:mi><m:mrow><m:mo>(</m:mo> <m:mrow> <m:msub> <m:mi>X</m:mi> <m:mn>1</m:mn> </m:msub> <m:mo>,</m:mo><m:msub> <m:mi>X</m:mi> <m:mn>2</m:mn> </m:msub> <m:mn>,...,</m:mn><m:msub> <m:mi>X</m:mi> <m:mi>n</m:mi> </m:msub> </m:mrow> <m:mo>)</m:mo></m:mrow><m:mo>−</m:mo><m:mi>θ</m:mi> </m:mrow> <m:mo>]</m:mo></m:mrow> </m:mrow> <m:mn>2</m:mn> </m:msup> </m:mrow> <m:mo>}</m:mo></m:mrow><m:mo>.</m:mo> </m:mrow> </m:semantics></m:math>
+ 
+</para>
+<para id="para_8">
+The statistic <emphasis>Y</emphasis> that minimizes <m:math>
+<m:semantics>
+<m:mrow>
+<m:mi>E</m:mi><m:mrow><m:mo>[</m:mo> <m:mrow>
+<m:msup>
+<m:mrow>
+<m:mrow><m:mo>(</m:mo>
+<m:mrow>
+<m:mi>Y</m:mi><m:mo>−</m:mo><m:mi>θ</m:mi>
+</m:mrow>
+<m:mo>)</m:mo></m:mrow>
+</m:mrow>
+<m:mn>2</m:mn>
+</m:msup>
+
+</m:mrow> <m:mo>]</m:mo></m:mrow>
+</m:mrow>
+</m:semantics>
+</m:math>
+ is the one with minimum mean square error. If we restrict our attention to unbiased estimators only, then <m:math display="block">
+ <m:semantics>
+  <m:mrow>
+   <m:mi>V</m:mi><m:mi>a</m:mi><m:mi>r</m:mi><m:mrow><m:mo>(</m:mo>
+    <m:mi>Y</m:mi>
+   <m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mi>E</m:mi><m:mrow><m:mo>[</m:mo> <m:mrow>
+    <m:msup>
+     <m:mrow>
+      <m:mrow><m:mo>(</m:mo>
+       <m:mrow>
+        <m:mi>Y</m:mi><m:mo>−</m:mo><m:mi>θ</m:mi>
+       </m:mrow>
+      <m:mo>)</m:mo></m:mrow>
+     </m:mrow>
+     <m:mn>2</m:mn>
+    </m:msup>
+    
+   </m:mrow> <m:mo>]</m:mo></m:mrow><m:mo>,</m:mo>
+  </m:mrow>
+ </m:semantics>
+</m:math> and the unbiased statistics <emphasis>Y</emphasis> that minimizes this expression is said to be <term>the unbiased minimum variance estimator of <m:math>
+<m:semantics>
+<m:mi>θ</m:mi>
+</m:semantics>
+</m:math></term>
+.
+ </para>
+</section>
+<section id="sec_3">
+<title>Method of Moments</title>
+<para id="para_9">
+One of the oldest procedures for estimating parameters is <term>the method of moments</term>. Another method for finding an estimator of an unknown parameter is called <term>the method of maximum likelihood</term>.
+In general, in the method of moments, if there are <emphasis>k</emphasis> parameters that have to be estimated, the first <emphasis>k</emphasis> sample moments are set equal to the first <emphasis>k</emphasis> population moments that are given in terms of the unknown parameters.
+</para>
+<example id="ex_1">
+<para id="para_10">
+Let the distribution of <emphasis>X</emphasis> be <m:math>
+<m:semantics>
+<m:mrow>
+<m:mi>N</m:mi><m:mrow><m:mo>(</m:mo>
+<m:mrow>
+<m:mi>μ</m:mi><m:mo>,</m:mo><m:msup>
+<m:mi>σ</m:mi>
+<m:mn>2</m:mn>
+</m:msup>
+
+</m:mrow>
+<m:mo>)</m:mo></m:mrow>
+</m:mrow>
+
+</m:semantics>
+</m:math>
+. Then <m:math>
+<m:semantics>
+<m:mrow>
+<m:mi>E</m:mi><m:mrow><m:mo>(</m:mo>
+<m:mi>X</m:mi>
+<m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mi>μ</m:mi>
+</m:mrow>
+</m:semantics>
+</m:math>
+ and <m:math> <m:semantics> <m:mrow> <m:mi>E</m:mi><m:mrow><m:mo>(</m:mo> <m:mrow> <m:msup> <m:mi>X</m:mi> <m:mn>2</m:mn> </m:msup> </m:mrow> <m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:msup> <m:mi>σ</m:mi> <m:mn>2</m:mn> </m:msup> <m:mo>+</m:mo><m:msup> <m:mi>μ</m:mi> <m:mn>2</m:mn> </m:msup> </m:mrow> </m:semantics></m:math>. Given a random sample of size <emphasis>n</emphasis>, the first two moments are given by <m:math display="block">
+<m:semantics>
+<m:mrow>
+<m:msub>
+<m:mi>m</m:mi>
+<m:mn>1</m:mn>
+</m:msub>
+<m:mo>=</m:mo><m:mfrac>
+<m:mn>1</m:mn>
+<m:mi>n</m:mi>
+</m:mfrac>
+<m:mstyle displaystyle="true">
+<m:munderover>
+<m:mo>∑</m:mo>
+<m:mrow>
+<m:mi>i</m:mi><m:mo>=</m:mo><m:mn>1</m:mn>
+</m:mrow>
+<m:mi>n</m:mi>
+</m:munderover>
+<m:mrow>
+<m:msub>
+<m:mi>x</m:mi>
+<m:mi>i</m:mi>
+</m:msub>
+
+</m:mrow>
+</m:mstyle>
+</m:mrow>
+</m:semantics>
+</m:math>
+ and <m:math display="block">
+<m:semantics>
+<m:mrow>
+<m:msub>
+<m:mi>m</m:mi>
+<m:mn>2</m:mn>
+</m:msub>
+<m:mo>=</m:mo><m:mfrac>
+<m:mn>1</m:mn>
+<m:mi>n</m:mi>
+</m:mfrac>
+<m:mstyle displaystyle="true">
+<m:munderover>
+<m:mo>∑</m:mo>
+<m:mrow>
+<m:mi>i</m:mi><m:mo>=</m:mo><m:mn>1</m:mn>
+</m:mrow>
+<m:mi>n</m:mi>
+</m:munderover>
+<m:mrow>
+<m:msub>
+<m:mi>x</m:mi>
+<m:mi>i</m:mi>
+</m:msub>
+
+</m:mrow>
+</m:mstyle><m:mo>.</m:mo>
+</m:mrow>
+</m:semantics>
+</m:math>
+</para>
+<para id="para_11">
+We set <m:math>
+<m:semantics>
+<m:mrow>
+<m:msub>
+<m:mi>m</m:mi>
+<m:mn>1</m:mn>
+</m:msub>
+<m:mo>=</m:mo><m:mi>E</m:mi><m:mrow><m:mo>(</m:mo>
+<m:mi>X</m:mi>
+<m:mo>)</m:mo></m:mrow>
+</m:mrow>
+</m:semantics>
+</m:math>
+ and <m:math>
+<m:semantics>
+<m:mrow>
+<m:msub>
+<m:mi>m</m:mi>
+<m:mn>2</m:mn>
+</m:msub>
+<m:mo>=</m:mo><m:mi>E</m:mi><m:mrow><m:mo>(</m:mo>
+<m:mrow>
+<m:msup>
+<m:mi>X</m:mi>
+<m:mn>2</m:mn>
+</m:msup>
+</m:mrow>
+<m:mo>)</m:mo></m:mrow>
+</m:mrow>
+</m:semantics>
+</m:math> and solve for <m:math>
+<m:semantics>
+<m:mi>μ</m:mi>
+</m:semantics>
+</m:math> and <m:math>
+<m:semantics>
+<m:mrow>
+<m:msup>
+<m:mi>σ</m:mi>
+<m:mn>2</m:mn>
+</m:msup>
+</m:mrow>
+</m:semantics>
+</m:math>, <m:math display="block">
+<m:semantics>
+<m:mrow>
+<m:mfrac>
+<m:mn>1</m:mn>
+<m:mi>n</m:mi>
+</m:mfrac>
+<m:mstyle displaystyle="true">
+<m:munderover>
+<m:mo>∑</m:mo>
+<m:mrow>
+<m:mi>i</m:mi><m:mo>=</m:mo><m:mn>1</m:mn>
+</m:mrow>
+<m:mi>n</m:mi>
+</m:munderover>
+<m:mrow>
+<m:msub>
+<m:mi>x</m:mi>
+<m:mi>i</m:mi>
+</m:msub>
+
+</m:mrow>
+</m:mstyle><m:mo>=</m:mo><m:mi>μ</m:mi>
+</m:mrow>
+</m:semantics>
+</m:math> and <m:math display="block">
+<m:semantics>
+<m:mrow>
+<m:mfrac>
+<m:mn>1</m:mn>
+<m:mi>n</m:mi>
+</m:mfrac>
+<m:mstyle displaystyle="true">
+<m:munderover>
+<m:mo>∑</m:mo>
+<m:mrow>
+<m:mi>i</m:mi><m:mo>=</m:mo><m:mn>1</m:mn>
+</m:mrow>
+<m:mi>n</m:mi>
+</m:munderover>
+<m:mrow>
+<m:msub>
+<m:mi>x</m:mi>
+<m:mi>i</m:mi>
+</m:msub>
+
+</m:mrow>
+</m:mstyle><m:mo>=</m:mo><m:msup>
+<m:mi>σ</m:mi>
+<m:mn>2</m:mn>
+</m:msup>
+<m:mo>+</m:mo><m:msup>
+<m:mi>μ</m:mi>
+<m:mn>2</m:mn>
+</m:msup>
+<m:mo>.</m:mo>
+</m:mrow>
+</m:semantics>
+</m:math>
+</para>
+
+
+<para id="para_12">
+The first equation yields <m:math>
+<m:semantics>
+<m:mover accent="true">
+<m:mi>x</m:mi>
+<m:mo>¯</m:mo>
+</m:mover>
+</m:semantics>
+</m:math> as the estimate of <m:math>
+<m:semantics>
+<m:mi>μ</m:mi>
+</m:semantics>
+</m:math>
+. Replacing <m:math>
+<m:semantics>
+<m:mrow>
+<m:msup>
+<m:mi>μ</m:mi>
+<m:mn>2</m:mn>
+</m:msup>
+</m:mrow>
+</m:semantics>
+</m:math>
+ with <m:math>
+<m:semantics>
+<m:mrow>
+<m:msup>
+<m:mover accent="true">
+<m:mi>x</m:mi>
+<m:mo>¯</m:mo>
+</m:mover>
+
+<m:mn>2</m:mn>
+</m:msup>
+</m:mrow>
+</m:semantics>
+</m:math> in the second equation and solving for <m:math>
+<m:semantics>
+<m:mrow>
+<m:msup>
+<m:mi>σ</m:mi>
+<m:mn>2</m:mn>
+</m:msup>
+</m:mrow>
+</m:semantics>
+</m:math>
+,
+</para>
+<para id="para_13">
+
+
+ we obtain <m:math display="block">
+<m:semantics>
+<m:mrow>
+<m:mfrac>
+<m:mn>1</m:mn>
+<m:mi>n</m:mi>
+</m:mfrac>
+<m:mstyle displaystyle="true">
+<m:munderover>
+<m:mo>∑</m:mo>
+<m:mrow>
+<m:mi>i</m:mi><m:mo>=</m:mo><m:mn>1</m:mn>
+</m:mrow>
+<m:mi>n</m:mi>
+</m:munderover>
+<m:mrow>
+<m:msub>
+<m:mi>x</m:mi>
+<m:mi>i</m:mi>
+</m:msub>
+
+</m:mrow>
+</m:mstyle><m:mo>−</m:mo><m:msup>
+<m:mover accent="true">
+<m:mi>x</m:mi>
+<m:mo>¯</m:mo>
+</m:mover>
+<m:mn>2</m:mn>
+</m:msup>
+<m:mo>=</m:mo><m:mi>v</m:mi>
+</m:mrow>
+</m:semantics>
+</m:math> for the solution of <m:math>
+<m:semantics>
+<m:mrow>
+<m:msup>
+<m:mi>σ</m:mi>
+<m:mn>2</m:mn>
+</m:msup>
+</m:mrow>
+</m:semantics>
+</m:math>
+.
+</para>
+</example>
+<para id="para_14">
+Thus the method of moment estimators for <m:math>
+<m:semantics>
+<m:mi>μ</m:mi>
+</m:semantics>
+</m:math> and <m:math>
+<m:semantics>
+<m:mrow>
+<m:msup>
+<m:mi>σ</m:mi>
+<m:mn>2</m:mn>
+</m:msup>
+</m:mrow>
+</m:semantics>
+</m:math>
+ are <m:math>
+<m:semantics>
+<m:mrow>
+<m:mover accent="true">
+<m:mi>μ</m:mi>
+<m:mo>˜</m:mo>
+</m:mover>
+<m:mo>=</m:mo><m:mover accent="true">
+<m:mi>X</m:mi>
+<m:mo>¯</m:mo>
+</m:mover>
+</m:mrow>
+</m:semantics>
+</m:math>
+ and <m:math>
+<m:semantics>
+<m:mrow>
+<m:msup>
+<m:mover accent="true">
+<m:mi>σ</m:mi>
+<m:mo>˜</m:mo>
+</m:mover>
+
+<m:mn>2</m:mn>
+</m:msup>
+<m:mo>=</m:mo><m:mi>V</m:mi><m:mo>.</m:mo>
+</m:mrow>
+</m:semantics>
+</m:math>
+ Of course, <m:math>
+<m:semantics>
+<m:mrow>
+<m:mover accent="true">
+<m:mi>μ</m:mi>
+<m:mo>˜</m:mo>
+</m:mover>
+<m:mo>=</m:mo><m:mover accent="true">
+<m:mi>X</m:mi>
+<m:mo>¯</m:mo>
+</m:mover>
+</m:mrow>
+</m:semantics>
+</m:math>
+ is unbiased whereas <m:math>
+<m:semantics>
+<m:mrow>
+<m:msup>
+<m:mover accent="true">
+<m:mi>σ</m:mi>
+<m:mo>˜</m:mo>
+</m:mover>
+
+<m:mn>2</m:mn>
+</m:msup>
+<m:mo>=</m:mo><m:mi>V</m:mi><m:mo>.</m:mo>
+</m:mrow>
+</m:semantics>
+</m:math>
+ is biased.
+</para>
+</section>
+<section id="sec_4">
+<para id="para_15">
+At this stage arises the question, which of two different estimators <m:math>
+<m:semantics>
+<m:mover accent="true">
+<m:mi>θ</m:mi>
+<m:mo>^</m:mo>
+</m:mover>
+</m:semantics>
+</m:math> and <m:math>
+<m:semantics>
+<m:mover accent="true">
+<m:mi>θ</m:mi>
+<m:mo>˜</m:mo>
+</m:mover>
+</m:semantics>
+</m:math>, for a parameter <m:math>
+<m:semantics>
+<m:mi>θ</m:mi>
+</m:semantics>
+</m:math>
+ one should use. Most statistician select he one that has the smallest mean square error, for example,<m:math display="block">
+ <m:semantics>
+  <m:mrow>
+   <m:mi>E</m:mi><m:mrow><m:mo>[</m:mo> <m:mrow>
+    <m:msup>
+     <m:mrow>
+      <m:mrow><m:mo>(</m:mo>
+       <m:mrow>
+        <m:mover accent="true">
+         <m:mi>θ</m:mi>
+         <m:mo>^</m:mo>
+        </m:mover>
+        <m:mo>−</m:mo><m:mi>θ</m:mi>
+       </m:mrow>
+      <m:mo>)</m:mo></m:mrow>
+     </m:mrow>
+     <m:mn>2</m:mn>
+    </m:msup>
+    
+   </m:mrow> <m:mo>]</m:mo></m:mrow><m:mo>&lt;</m:mo><m:mi>E</m:mi><m:mrow><m:mo>[</m:mo> <m:mrow>
+    <m:msup>
+     <m:mrow>
+      <m:mrow><m:mo>(</m:mo>
+       <m:mrow>
+        <m:mover accent="true">
+         <m:mi>θ</m:mi>
+         <m:mo>˜</m:mo>
+        </m:mover>
+        <m:mo>−</m:mo><m:mi>θ</m:mi>
+       </m:mrow>
+      <m:mo>)</m:mo></m:mrow>
+     </m:mrow>
+     <m:mn>2</m:mn>
+    </m:msup>
+    
+   </m:mrow> <m:mo>]</m:mo></m:mrow><m:mo>,</m:mo>
+  </m:mrow>
+ </m:semantics>
+</m:math> then <m:math> <m:semantics> <m:mover accent="true"> <m:mi>θ</m:mi> <m:mo>^</m:mo> </m:mover> </m:semantics></m:math> seems to be preferred. This means that if <m:math> <m:semantics> <m:mrow> <m:mi>E</m:mi><m:mrow><m:mo>(</m:mo> <m:mover accent="true"> <m:mi>θ</m:mi> <m:mo>^</m:mo> </m:mover> <m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mi>E</m:mi><m:mrow><m:mo>(</m:mo> <m:mover accent="true"> <m:mi>θ</m:mi> <m:mo>˜</m:mo> </m:mover> <m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mi>θ</m:mi> </m:mrow> </m:semantics></m:math>, then one would select the one with the smallest variance.
+</para>
+<para id="para_16">
+Next, other questions should be considered. Namely, given an estimate for a parameter, how accurate is the estimate? How confident one is about the closeness of the estimate to the unknown parameter? 
+</para>
+
+</section>
+</section>
+<note type="see" id="idm1182752"><label>See</label>
+<link document="m13494" target-id="sec_1">CONFIDENCE INTERVALS I</link> and  <link document="m13496" target-id="sec_1">CONFIDENCE INTERVALS II</link> 
+</note>
+
+    <para id="delete_me">
+       <!-- Insert module text here -->
+    </para>   
+  </content>
+  
+</document>

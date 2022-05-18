@@ -1,0 +1,2370 @@
+<document xmlns="http://cnx.rice.edu/cnxml" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:md="http://cnx.rice.edu/mdml">
+  <title>Maximum Likelihood Estimation - Examples</title>
+  <metadata><md:content-id>undefined</md:content-id><md:title/><md:uuid>8d072a60-0368-4fa4-9812-f9d92593c161</md:uuid>
+</metadata>
+  <content>
+<section id="sec_1">
+	  <title>MAXIMUM LIKELIHOOD ESTIMATION - EXAMPLES</title> 
+<section id="sec_2">
+<title>EXPONENTIAL DISTRIBUTION</title>
+    <para id="para_1">
+Let <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:msub>
+    <m:mi>X</m:mi>
+    <m:mn>1</m:mn>
+   </m:msub>
+   <m:mo>,</m:mo><m:msub>
+    <m:mi>X</m:mi>
+    <m:mn>2</m:mn>
+   </m:msub>
+   <m:mo>,</m:mo><m:mn>...</m:mn><m:mo>,</m:mo><m:msub>
+    <m:mi>X</m:mi>
+    <m:mi>n</m:mi>
+   </m:msub>
+     </m:mrow>
+</m:semantics>
+</m:math> be a random sample from the exponential distribution with p.d.f. 
+
+    </para>   
+    <para id="para_2">
+<m:math display="block">
+ <m:semantics>
+  <m:mrow>
+   <m:mi>f</m:mi><m:mrow><m:mo>(</m:mo>
+    <m:mrow>
+     <m:mi>x</m:mi><m:mo>;</m:mo><m:mi>θ</m:mi>
+    </m:mrow>
+   <m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mfrac>
+    <m:mn>1</m:mn>
+    <m:mi>θ</m:mi>
+   </m:mfrac>
+   <m:msup>
+    <m:mi>e</m:mi>
+    <m:mrow>
+     <m:mo>−</m:mo><m:mi>x</m:mi><m:mo>/</m:mo><m:mi>θ</m:mi>
+    </m:mrow>
+   </m:msup>
+   <m:mo>,</m:mo><m:mn>0</m:mn><m:mo>&lt;</m:mo><m:mi>x</m:mi><m:mo>&lt;</m:mo><m:mi>∞</m:mi><m:mo>,</m:mo><m:mi>θ</m:mi><m:mo>∈</m:mo><m:mi>Ω</m:mi><m:mo>=</m:mo><m:mrow><m:mo>{</m:mo> <m:mrow>
+    <m:mi>θ</m:mi><m:mo>;</m:mo><m:mn>0</m:mn><m:mo>&lt;</m:mo><m:mi>θ</m:mi><m:mo>&lt;</m:mo><m:mi>∞</m:mi>
+   </m:mrow> <m:mo>}</m:mo></m:mrow><m:mo>.</m:mo>
+  </m:mrow>
+ </m:semantics>
+</m:math>
+
+    </para>  
+    <para id="para_3">
+The likelihood function is given by
+    </para>  
+    <para id="para_4">
+<m:math display="block">
+ <m:semantics>
+  <m:mrow>
+   <m:mi>L</m:mi><m:mrow><m:mo>(</m:mo>
+    <m:mi>θ</m:mi>
+   <m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mi>L</m:mi><m:mrow><m:mo>(</m:mo>
+    <m:mrow>
+     <m:mi>θ</m:mi><m:mo>;</m:mo><m:msub>
+      <m:mi>x</m:mi>
+      <m:mn>1</m:mn>
+     </m:msub>
+     <m:mo>,</m:mo><m:msub>
+      <m:mi>x</m:mi>
+      <m:mn>2</m:mn>
+     </m:msub>
+     <m:mo>,</m:mo><m:mn>...</m:mn><m:mo>,</m:mo><m:msub>
+      <m:mi>x</m:mi>
+      <m:mi>n</m:mi>
+     </m:msub>
+     
+    </m:mrow>
+   <m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mrow><m:mo>(</m:mo>
+    <m:mrow>
+     <m:mfrac>
+      <m:mn>1</m:mn>
+      <m:mi>θ</m:mi>
+     </m:mfrac>
+     <m:msup>
+      <m:mi>e</m:mi>
+      <m:mrow>
+       <m:mo>−</m:mo><m:msub>
+        <m:mi>x</m:mi>
+        <m:mn>1</m:mn>
+       </m:msub>
+       <m:mo>/</m:mo><m:mi>θ</m:mi>
+      </m:mrow>
+     </m:msup>
+     
+    </m:mrow>
+   <m:mo>)</m:mo></m:mrow><m:mrow><m:mo>(</m:mo>
+    <m:mrow>
+     <m:mfrac>
+      <m:mn>1</m:mn>
+      <m:mi>θ</m:mi>
+     </m:mfrac>
+     <m:msup>
+      <m:mi>e</m:mi>
+      <m:mrow>
+       <m:mo>−</m:mo><m:msub>
+        <m:mi>x</m:mi>
+        <m:mn>2</m:mn>
+       </m:msub>
+       <m:mo>/</m:mo><m:mi>θ</m:mi>
+      </m:mrow>
+     </m:msup>
+     
+    </m:mrow>
+   <m:mo>)</m:mo></m:mrow><m:mo>·</m:mo><m:mo>·</m:mo><m:mo>·</m:mo><m:mrow><m:mo>(</m:mo>
+    <m:mrow>
+     <m:mfrac>
+      <m:mn>1</m:mn>
+      <m:mi>θ</m:mi>
+     </m:mfrac>
+     <m:msup>
+      <m:mi>e</m:mi>
+      <m:mrow>
+       <m:mo>−</m:mo><m:msub>
+        <m:mi>x</m:mi>
+        <m:mi>n</m:mi>
+       </m:msub>
+       <m:mo>/</m:mo><m:mi>θ</m:mi>
+      </m:mrow>
+     </m:msup>
+     
+    </m:mrow>
+   <m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mfrac>
+    <m:mn>1</m:mn>
+    <m:mrow>
+     <m:msup>
+      <m:mi>θ</m:mi>
+      <m:mi>n</m:mi>
+     </m:msup>
+     
+    </m:mrow>
+   </m:mfrac>
+   <m:mi>exp</m:mi><m:mo>⁡</m:mo><m:mrow><m:mo>(</m:mo>
+    <m:mrow>
+     <m:mfrac>
+      <m:mrow>
+       <m:mo>−</m:mo><m:mstyle displaystyle="true">
+        <m:munderover>
+         <m:mo>∑</m:mo>
+         <m:mrow>
+          <m:mi>i</m:mi><m:mo>=</m:mo><m:mn>1</m:mn>
+         </m:mrow>
+         <m:mi>n</m:mi>
+        </m:munderover>
+        <m:mrow>
+         <m:msub>
+          <m:mi>x</m:mi>
+          <m:mi>i</m:mi>
+         </m:msub>
+         
+        </m:mrow>
+       </m:mstyle>
+      </m:mrow>
+      <m:mi>θ</m:mi>
+     </m:mfrac>
+     
+    </m:mrow>
+   <m:mo>)</m:mo></m:mrow><m:mo>,</m:mo><m:mn>0</m:mn><m:mo>&lt;</m:mo><m:mi>θ</m:mi><m:mo>&lt;</m:mo><m:mi>∞</m:mi><m:mo>.</m:mo>
+  </m:mrow>
+ </m:semantics>
+</m:math>
+
+
+    </para>  
+    <para id="para_5">
+The natural logarithm of <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mi>L</m:mi><m:mrow><m:mo>(</m:mo>
+    <m:mi>θ</m:mi>
+   <m:mo>)</m:mo></m:mrow>
+  </m:mrow>
+</m:semantics>
+</m:math> is <m:math display="block">
+ <m:semantics>
+  <m:mrow>
+   <m:mi>ln</m:mi><m:mo>⁡</m:mo><m:mi>L</m:mi><m:mrow><m:mo>(</m:mo>
+    <m:mi>θ</m:mi>
+   <m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mo>−</m:mo><m:mrow><m:mo>(</m:mo>
+    <m:mi>n</m:mi>
+   <m:mo>)</m:mo></m:mrow><m:mi>ln</m:mi><m:mo>⁡</m:mo><m:mrow><m:mo>(</m:mo>
+    <m:mi>θ</m:mi>
+   <m:mo>)</m:mo></m:mrow><m:mo>−</m:mo><m:mfrac>
+    <m:mn>1</m:mn>
+    <m:mi>θ</m:mi>
+   </m:mfrac>
+   <m:mstyle displaystyle="true">
+    <m:munderover>
+     <m:mo>∑</m:mo>
+     <m:mrow>
+      <m:mi>i</m:mi><m:mo>=</m:mo><m:mn>1</m:mn>
+     </m:mrow>
+     <m:mi>n</m:mi>
+    </m:munderover>
+    <m:mrow>
+     <m:msub>
+      <m:mi>x</m:mi>
+      <m:mi>i</m:mi>
+     </m:msub>
+     
+    </m:mrow>
+   </m:mstyle><m:mo>,</m:mo><m:mn>0</m:mn><m:mo>&lt;</m:mo><m:mi>θ</m:mi><m:mo>&lt;</m:mo><m:mi>∞</m:mi><m:mo>.</m:mo>
+  </m:mrow>
+ </m:semantics>
+</m:math>
+
+
+    </para>  
+    <para id="para_6">
+Thus, <m:math display="block">
+ <m:semantics>
+  <m:mrow>
+   <m:mfrac>
+    <m:mrow>
+     <m:mi>d</m:mi><m:mrow><m:mo>[</m:mo> <m:mrow>
+      <m:mi>ln</m:mi><m:mo>⁡</m:mo><m:mi>L</m:mi><m:mrow><m:mo>(</m:mo>
+       <m:mi>θ</m:mi>
+      <m:mo>)</m:mo></m:mrow>
+     </m:mrow> <m:mo>]</m:mo></m:mrow>
+    </m:mrow>
+    <m:mrow>
+     <m:mi>d</m:mi><m:mi>θ</m:mi>
+    </m:mrow>
+   </m:mfrac>
+   <m:mo>=</m:mo><m:mfrac>
+    <m:mrow>
+     <m:mo>−</m:mo><m:mi>n</m:mi>
+    </m:mrow>
+    <m:mi>θ</m:mi>
+   </m:mfrac>
+   <m:mo>+</m:mo><m:mfrac>
+    <m:mrow>
+     <m:mstyle displaystyle="true">
+      <m:munderover>
+       <m:mo>∑</m:mo>
+       <m:mrow>
+        <m:mi>i</m:mi><m:mo>=</m:mo><m:mn>1</m:mn>
+       </m:mrow>
+       <m:mi>n</m:mi>
+      </m:munderover>
+      <m:mrow>
+       <m:msub>
+        <m:mi>x</m:mi>
+        <m:mi>i</m:mi>
+       </m:msub>
+       
+      </m:mrow>
+     </m:mstyle>
+    </m:mrow>
+    <m:mrow>
+     <m:msup>
+      <m:mi>θ</m:mi>
+      <m:mn>2</m:mn>
+     </m:msup>
+     
+    </m:mrow>
+   </m:mfrac>
+   <m:mo>=</m:mo><m:mn>0.</m:mn>
+  </m:mrow>
+ </m:semantics>
+</m:math> The solution of this equation for <m:math>
+ <m:semantics>
+  <m:mi>θ</m:mi>
+</m:semantics>
+</m:math> is <m:math display="block">
+ <m:semantics>
+  <m:mrow>
+   <m:mi>θ</m:mi><m:mo>=</m:mo><m:mfrac>
+    <m:mn>1</m:mn>
+    <m:mi>n</m:mi>
+   </m:mfrac>
+   <m:mstyle displaystyle="true">
+    <m:munderover>
+     <m:mo>∑</m:mo>
+     <m:mrow>
+      <m:mi>i</m:mi><m:mo>=</m:mo><m:mn>1</m:mn>
+     </m:mrow>
+     <m:mi>n</m:mi>
+    </m:munderover>
+    <m:mrow>
+     <m:msub>
+      <m:mi>x</m:mi>
+      <m:mi>i</m:mi>
+     </m:msub>
+     
+    </m:mrow>
+   </m:mstyle><m:mo>=</m:mo><m:mover accent="true">
+    <m:mi>x</m:mi>
+    <m:mo>¯</m:mo>
+   </m:mover>
+   <m:mo>.</m:mo>
+  </m:mrow>
+ </m:semantics>
+</m:math>
+
+</para>  
+    <para id="para_7">
+Note that, <m:math display="block">
+ <m:semantics>
+  <m:mrow>
+   <m:mfrac>
+    <m:mrow>
+     <m:mi>d</m:mi><m:mrow><m:mo>[</m:mo> <m:mrow>
+      <m:mi>ln</m:mi><m:mo>⁡</m:mo><m:mi>L</m:mi><m:mrow><m:mo>(</m:mo>
+       <m:mi>θ</m:mi>
+      <m:mo>)</m:mo></m:mrow>
+     </m:mrow> <m:mo>]</m:mo></m:mrow>
+    </m:mrow>
+    <m:mrow>
+     <m:mi>d</m:mi><m:mi>θ</m:mi>
+    </m:mrow>
+   </m:mfrac>
+   <m:mo>=</m:mo><m:mfrac>
+    <m:mn>1</m:mn>
+    <m:mi>θ</m:mi>
+   </m:mfrac>
+   <m:mrow><m:mo>(</m:mo>
+    <m:mrow>
+     <m:mo>−</m:mo><m:mi>n</m:mi><m:mo>+</m:mo><m:mfrac>
+      <m:mrow>
+       <m:mi>n</m:mi><m:mover accent="true">
+        <m:mi>x</m:mi>
+        <m:mo>¯</m:mo>
+       </m:mover>
+       
+      </m:mrow>
+      <m:mi>θ</m:mi>
+     </m:mfrac>
+     
+    </m:mrow>
+   <m:mo>)</m:mo></m:mrow><m:mo>&gt;</m:mo><m:mn>0</m:mn><m:mo>,</m:mo><m:mi>θ</m:mi><m:mo>&lt;</m:mo><m:mover accent="true">
+    <m:mi>x</m:mi>
+    <m:mo>¯</m:mo>
+   </m:mover>
+   <m:mo>,</m:mo>
+  </m:mrow>
+ </m:semantics>
+</m:math>
+ 
+    </para>  
+    <para id="para_8">
+<m:math display="block">
+ <m:semantics>
+  <m:mrow>
+   <m:mfrac>
+    <m:mrow>
+     <m:mi>d</m:mi><m:mrow><m:mo>[</m:mo> <m:mrow>
+      <m:mi>ln</m:mi><m:mo>⁡</m:mo><m:mi>L</m:mi><m:mrow><m:mo>(</m:mo>
+       <m:mi>θ</m:mi>
+      <m:mo>)</m:mo></m:mrow>
+     </m:mrow> <m:mo>]</m:mo></m:mrow>
+    </m:mrow>
+    <m:mrow>
+     <m:mi>d</m:mi><m:mi>θ</m:mi>
+    </m:mrow>
+   </m:mfrac>
+   <m:mo>=</m:mo><m:mfrac>
+    <m:mn>1</m:mn>
+    <m:mi>θ</m:mi>
+   </m:mfrac>
+   <m:mrow><m:mo>(</m:mo>
+    <m:mrow>
+     <m:mo>−</m:mo><m:mi>n</m:mi><m:mo>+</m:mo><m:mfrac>
+      <m:mrow>
+       <m:mi>n</m:mi><m:mover accent="true">
+        <m:mi>x</m:mi>
+        <m:mo>¯</m:mo>
+       </m:mover>
+       
+      </m:mrow>
+      <m:mi>θ</m:mi>
+     </m:mfrac>
+     
+    </m:mrow>
+   <m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>0</m:mn><m:mo>,</m:mo><m:mi>θ</m:mi><m:mo>=</m:mo><m:mover accent="true">
+    <m:mi>x</m:mi>
+    <m:mo>¯</m:mo>
+   </m:mover>
+   <m:mo>,</m:mo>
+  </m:mrow>
+ </m:semantics>
+</m:math>
+
+    </para>  
+    <para id="para_9">
+<m:math display="block">
+ <m:semantics>
+  <m:mrow>
+   <m:mfrac>
+    <m:mrow>
+     <m:mi>d</m:mi><m:mrow><m:mo>[</m:mo> <m:mrow>
+      <m:mi>ln</m:mi><m:mo>⁡</m:mo><m:mi>L</m:mi><m:mrow><m:mo>(</m:mo>
+       <m:mi>θ</m:mi>
+      <m:mo>)</m:mo></m:mrow>
+     </m:mrow> <m:mo>]</m:mo></m:mrow>
+    </m:mrow>
+    <m:mrow>
+     <m:mi>d</m:mi><m:mi>θ</m:mi>
+    </m:mrow>
+   </m:mfrac>
+   <m:mo>=</m:mo><m:mfrac>
+    <m:mn>1</m:mn>
+    <m:mi>θ</m:mi>
+   </m:mfrac>
+   <m:mrow><m:mo>(</m:mo>
+    <m:mrow>
+     <m:mo>−</m:mo><m:mi>n</m:mi><m:mo>+</m:mo><m:mfrac>
+      <m:mrow>
+       <m:mi>n</m:mi><m:mover accent="true">
+        <m:mi>x</m:mi>
+        <m:mo>¯</m:mo>
+       </m:mover>
+       
+      </m:mrow>
+      <m:mi>θ</m:mi>
+     </m:mfrac>
+     
+    </m:mrow>
+   <m:mo>)</m:mo></m:mrow><m:mo>&lt;</m:mo><m:mn>0</m:mn><m:mo>,</m:mo><m:mi>θ</m:mi><m:mo>&gt;</m:mo><m:mover accent="true">
+    <m:mi>x</m:mi>
+    <m:mo>¯</m:mo>
+   </m:mover>
+   <m:mo>,</m:mo>
+  </m:mrow>
+ </m:semantics>
+</m:math>
+
+    </para>  
+    <para id="para_10">
+Hence, <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mi>ln</m:mi><m:mo>⁡</m:mo><m:mi>L</m:mi><m:mrow><m:mo>(</m:mo>
+    <m:mi>θ</m:mi>
+   <m:mo>)</m:mo></m:mrow>
+  </m:mrow>
+</m:semantics>
+</m:math> does have a maximum at <m:math>
+ <m:semantics>
+  <m:mover accent="true">
+   <m:mi>x</m:mi>
+   <m:mo>¯</m:mo>
+  </m:mover>
+  </m:semantics>
+</m:math>, and thus the maximum likelihood estimator for <m:math>
+ <m:semantics>
+  <m:mi>θ</m:mi>
+</m:semantics>
+</m:math> is <m:math display="block">
+ <m:semantics>
+  <m:mrow>
+   <m:mover accent="true">
+    <m:mi>θ</m:mi>
+    <m:mo>^</m:mo>
+   </m:mover>
+   <m:mo>=</m:mo><m:mover accent="true">
+    <m:mi>X</m:mi>
+    <m:mo>¯</m:mo>
+   </m:mover>
+   <m:mo>=</m:mo><m:mfrac>
+    <m:mn>1</m:mn>
+    <m:mi>n</m:mi>
+   </m:mfrac>
+   <m:mstyle displaystyle="true">
+    <m:munderover>
+     <m:mo>∑</m:mo>
+     <m:mrow>
+      <m:mi>i</m:mi><m:mo>=</m:mo><m:mn>1</m:mn>
+     </m:mrow>
+     <m:mi>n</m:mi>
+    </m:munderover>
+    <m:mrow>
+     <m:msub>
+      <m:mi>X</m:mi>
+      <m:mi>i</m:mi>
+     </m:msub>
+     <m:mo>.</m:mo>
+    </m:mrow>
+   </m:mstyle>
+  </m:mrow>
+ </m:semantics>
+</m:math>
+
+
+This is both an unbiased estimator and the method of moments estimator for <m:math>
+ <m:semantics>
+  <m:mi>θ</m:mi>
+</m:semantics>
+</m:math>.
+      </para>     
+</section>
+<section id="sec_3">
+<title>GEOMETRIC DISTRIBUTION</title>
+    <para id="para_11"> 
+Let <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:msub>
+    <m:mi>X</m:mi>
+    <m:mn>1</m:mn>
+   </m:msub>
+   <m:mo>,</m:mo><m:msub>
+    <m:mi>X</m:mi>
+    <m:mn>2</m:mn>
+   </m:msub>
+   <m:mo>,</m:mo><m:mn>...</m:mn><m:mo>,</m:mo><m:msub>
+    <m:mi>X</m:mi>
+    <m:mi>n</m:mi>
+   </m:msub>
+     </m:mrow>
+</m:semantics>
+</m:math> be a random sample from the geometric distribution with p.d.f. <m:math display="block">
+ <m:semantics>
+  <m:mrow>
+   <m:mi>f</m:mi><m:mrow><m:mo>(</m:mo>
+    <m:mrow>
+     <m:mi>x</m:mi><m:mo>;</m:mo><m:mi>p</m:mi>
+    </m:mrow>
+   <m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:msup>
+    <m:mrow>
+     <m:mrow><m:mo>(</m:mo>
+      <m:mrow>
+       <m:mn>1</m:mn><m:mo>−</m:mo><m:mi>p</m:mi>
+      </m:mrow>
+     <m:mo>)</m:mo></m:mrow>
+    </m:mrow>
+    <m:mrow>
+     <m:mi>x</m:mi><m:mo>−</m:mo><m:mn>1</m:mn>
+    </m:mrow>
+   </m:msup>
+   <m:mi>p</m:mi><m:mo>,</m:mo><m:mi>x</m:mi><m:mo>=</m:mo><m:mn>1</m:mn><m:mo>,</m:mo><m:mn>2</m:mn><m:mo>,</m:mo><m:mn>3</m:mn><m:mo>,</m:mo><m:mn>....</m:mn>
+  </m:mrow>
+ </m:semantics>
+</m:math>
+
+
+
+    </para>  
+    <para id="para_12">
+The likelihood function is given by <m:math display="block">
+ <m:semantics>
+  <m:mrow>
+   <m:mi>L</m:mi><m:mrow><m:mo>(</m:mo>
+    <m:mi>p</m:mi>
+   <m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:msup>
+    <m:mrow>
+     <m:mrow><m:mo>(</m:mo>
+      <m:mrow>
+       <m:mn>1</m:mn><m:mo>−</m:mo><m:mi>p</m:mi>
+      </m:mrow>
+     <m:mo>)</m:mo></m:mrow>
+    </m:mrow>
+    <m:mrow>
+     <m:msub>
+      <m:mi>x</m:mi>
+      <m:mn>1</m:mn>
+     </m:msub>
+     <m:mo>−</m:mo><m:mn>1</m:mn>
+    </m:mrow>
+   </m:msup>
+   <m:mi>p</m:mi><m:msup>
+    <m:mrow>
+     <m:mrow><m:mo>(</m:mo>
+      <m:mrow>
+       <m:mn>1</m:mn><m:mo>−</m:mo><m:mi>p</m:mi>
+      </m:mrow>
+     <m:mo>)</m:mo></m:mrow>
+    </m:mrow>
+    <m:mrow>
+     <m:msub>
+      <m:mi>x</m:mi>
+      <m:mn>2</m:mn>
+     </m:msub>
+     <m:mo>−</m:mo><m:mn>1</m:mn>
+    </m:mrow>
+   </m:msup>
+   <m:mi>p</m:mi><m:mo>·</m:mo><m:mo>·</m:mo><m:mo>·</m:mo><m:msup>
+    <m:mrow>
+     <m:mrow><m:mo>(</m:mo>
+      <m:mrow>
+       <m:mn>1</m:mn><m:mo>−</m:mo><m:mi>p</m:mi>
+      </m:mrow>
+     <m:mo>)</m:mo></m:mrow>
+    </m:mrow>
+    <m:mrow>
+     <m:msub>
+      <m:mi>x</m:mi>
+      <m:mi>n</m:mi>
+     </m:msub>
+     <m:mo>−</m:mo><m:mn>1</m:mn>
+    </m:mrow>
+   </m:msup>
+   <m:mi>p</m:mi><m:mo>=</m:mo><m:msup>
+    <m:mi>p</m:mi>
+    <m:mi>n</m:mi>
+   </m:msup>
+   <m:msup>
+    <m:mrow>
+     <m:mrow><m:mo>(</m:mo>
+      <m:mrow>
+       <m:mn>1</m:mn><m:mo>−</m:mo><m:mi>p</m:mi>
+      </m:mrow>
+     <m:mo>)</m:mo></m:mrow>
+    </m:mrow>
+    <m:mrow>
+     <m:mstyle displaystyle="true">
+      <m:mo>∑</m:mo> <m:mrow>
+       <m:msub>
+        <m:mi>x</m:mi>
+        <m:mi>i</m:mi>
+       </m:msub>
+       <m:mo>−</m:mo><m:mi>n</m:mi>
+      </m:mrow>
+     </m:mstyle>
+    </m:mrow>
+   </m:msup>
+   <m:mo>,</m:mo><m:mn>0</m:mn><m:mo>≤</m:mo><m:mi>p</m:mi><m:mo>≤</m:mo><m:mn>1.</m:mn>
+  </m:mrow>
+ </m:semantics>
+</m:math>
+
+    </para>  
+    <para id="para_13">
+The natural logarithm of <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mi>L</m:mi><m:mrow><m:mo>(</m:mo>
+    <m:mi>θ</m:mi>
+   <m:mo>)</m:mo></m:mrow>
+  </m:mrow>
+</m:semantics>
+</m:math> is <m:math display="block">
+ <m:semantics>
+  <m:mrow>
+   <m:mi>ln</m:mi><m:mo>⁡</m:mo><m:mi>L</m:mi><m:mrow><m:mo>(</m:mo>
+    <m:mi>p</m:mi>
+   <m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mi>n</m:mi><m:mi>ln</m:mi><m:mo>⁡</m:mo><m:mi>p</m:mi><m:mo>+</m:mo><m:mrow><m:mo>(</m:mo>
+    <m:mrow>
+     <m:mstyle displaystyle="true">
+      <m:munderover>
+       <m:mo>∑</m:mo>
+       <m:mrow>
+        <m:mi>i</m:mi><m:mo>=</m:mo><m:mn>1</m:mn>
+       </m:mrow>
+       <m:mi>n</m:mi>
+      </m:munderover>
+      <m:mrow>
+       <m:msub>
+        <m:mi>x</m:mi>
+        <m:mi>i</m:mi>
+       </m:msub>
+       <m:mo>−</m:mo><m:mi>n</m:mi>
+      </m:mrow>
+     </m:mstyle>
+    </m:mrow>
+   <m:mo>)</m:mo></m:mrow><m:mi>ln</m:mi><m:mo>⁡</m:mo><m:mrow><m:mo>(</m:mo>
+    <m:mrow>
+     <m:mn>1</m:mn><m:mo>−</m:mo><m:mi>p</m:mi>
+    </m:mrow>
+   <m:mo>)</m:mo></m:mrow><m:mo>,</m:mo><m:mn>0</m:mn><m:mo>&lt;</m:mo><m:mi>p</m:mi><m:mo>&lt;</m:mo><m:mn>1.</m:mn>
+  </m:mrow>
+ </m:semantics>
+</m:math>
+    </para>  
+    <para id="para_14">
+Thus restricting <emphasis>p</emphasis> to <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mn>0</m:mn><m:mo>&lt;</m:mo><m:mi>p</m:mi><m:mo>&lt;</m:mo><m:mn>1</m:mn>
+  </m:mrow>
+ </m:semantics>
+</m:math> so as to be able to take the derivative, we have <m:math display="block">
+ <m:semantics>
+  <m:mrow>
+   <m:mfrac>
+    <m:mrow>
+     <m:mi>d</m:mi><m:mi>ln</m:mi><m:mo>⁡</m:mo><m:mi>L</m:mi><m:mrow><m:mo>(</m:mo>
+      <m:mi>p</m:mi>
+     <m:mo>)</m:mo></m:mrow>
+    </m:mrow>
+    <m:mrow>
+     <m:mi>d</m:mi><m:mi>p</m:mi>
+    </m:mrow>
+   </m:mfrac>
+   <m:mo>=</m:mo><m:mfrac>
+    <m:mi>n</m:mi>
+    <m:mi>p</m:mi>
+   </m:mfrac>
+   <m:mo>−</m:mo><m:mfrac>
+    <m:mrow>
+     <m:mstyle displaystyle="true">
+      <m:munderover>
+       <m:mo>∑</m:mo>
+       <m:mrow>
+        <m:mi>i</m:mi><m:mo>=</m:mo><m:mn>1</m:mn>
+       </m:mrow>
+       <m:mi>n</m:mi>
+      </m:munderover>
+      <m:mrow>
+       <m:msub>
+        <m:mi>x</m:mi>
+        <m:mi>i</m:mi>
+       </m:msub>
+       <m:mo>−</m:mo><m:mi>n</m:mi>
+      </m:mrow>
+     </m:mstyle>
+    </m:mrow>
+    <m:mrow>
+     <m:mn>1</m:mn><m:mo>−</m:mo><m:mi>p</m:mi>
+    </m:mrow>
+   </m:mfrac>
+   <m:mo>=</m:mo><m:mn>0.</m:mn>
+  </m:mrow>
+ </m:semantics>
+</m:math>
+    </para>  
+    <para id="para_15">
+Solving for <emphasis>p</emphasis>, we obtain <m:math display="block">
+ <m:semantics>
+  <m:mrow>
+   <m:mi>p</m:mi><m:mo>=</m:mo><m:mfrac>
+    <m:mi>n</m:mi>
+    <m:mrow>
+     <m:mstyle displaystyle="true">
+      <m:munderover>
+       <m:mo>∑</m:mo>
+       <m:mrow>
+        <m:mi>i</m:mi><m:mo>=</m:mo><m:mn>1</m:mn>
+       </m:mrow>
+       <m:mi>n</m:mi>
+      </m:munderover>
+      <m:mrow>
+       <m:msub>
+        <m:mi>x</m:mi>
+        <m:mi>i</m:mi>
+       </m:msub>
+       
+      </m:mrow>
+     </m:mstyle>
+    </m:mrow>
+   </m:mfrac>
+   <m:mo>=</m:mo><m:mfrac>
+    <m:mn>1</m:mn>
+    <m:mover accent="true">
+     <m:mi>x</m:mi>
+     <m:mo>¯</m:mo>
+    </m:mover>
+    
+   </m:mfrac>
+   <m:mo>.</m:mo>
+  </m:mrow>
+ </m:semantics>
+</m:math>
+ So the maximum likelihood estimator of <emphasis>p</emphasis> is <m:math display="block">
+ <m:semantics>
+  <m:mrow>
+   <m:mover accent="true">
+    <m:mi>p</m:mi>
+    <m:mo>^</m:mo>
+   </m:mover>
+   <m:mo>=</m:mo><m:mfrac>
+    <m:mi>n</m:mi>
+    <m:mrow>
+     <m:mstyle displaystyle="true">
+      <m:munderover>
+       <m:mo>∑</m:mo>
+       <m:mrow>
+        <m:mi>i</m:mi><m:mo>=</m:mo><m:mn>1</m:mn>
+       </m:mrow>
+       <m:mi>n</m:mi>
+      </m:munderover>
+      <m:mrow>
+       <m:msub>
+        <m:mi>X</m:mi>
+        <m:mi>i</m:mi>
+       </m:msub>
+       
+      </m:mrow>
+     </m:mstyle>
+    </m:mrow>
+   </m:mfrac>
+   <m:mo>=</m:mo><m:mfrac>
+    <m:mn>1</m:mn>
+    <m:mi>X</m:mi>
+   </m:mfrac>
+     </m:mrow>
+ </m:semantics>
+</m:math>
+
+    </para>  
+    <para id="para_16">
+Again this estimator is the method of moments estimator, and it agrees with the intuition because, in n observations of a geometric random variable, there are <emphasis>n</emphasis> successes in the <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mstyle displaystyle="true">
+    <m:munderover>
+     <m:mo>∑</m:mo>
+     <m:mrow>
+      <m:mi>i</m:mi><m:mo>=</m:mo><m:mn>1</m:mn>
+     </m:mrow>
+     <m:mi>n</m:mi>
+    </m:munderover>
+    <m:mrow>
+     <m:msub>
+      <m:mi>x</m:mi>
+      <m:mi>i</m:mi>
+     </m:msub>
+     
+    </m:mrow>
+   </m:mstyle>
+  </m:mrow>
+ </m:semantics>
+</m:math> trials. Thus the estimate of p is the number of successes divided by the total number of trials.
+
+    </para>  
+</section>
+<section id="sec_4">
+<title>NORMAL DISTRIBUTION</title>
+
+    <para id="para_17">
+Let <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:msub>
+    <m:mi>X</m:mi>
+    <m:mn>1</m:mn>
+   </m:msub>
+   <m:mo>,</m:mo><m:msub>
+    <m:mi>X</m:mi>
+    <m:mn>2</m:mn>
+   </m:msub>
+   <m:mo>,</m:mo><m:mn>...</m:mn><m:mo>,</m:mo><m:msub>
+    <m:mi>X</m:mi>
+    <m:mi>n</m:mi>
+   </m:msub>
+     </m:mrow>
+</m:semantics>
+</m:math> be a random sample from <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mi>N</m:mi><m:mrow><m:mo>(</m:mo>
+    <m:mrow>
+     <m:msub>
+      <m:mi>θ</m:mi>
+      <m:mn>1</m:mn>
+     </m:msub>
+     <m:mo>,</m:mo><m:msub>
+      <m:mi>θ</m:mi>
+      <m:mn>2</m:mn>
+     </m:msub>
+     
+    </m:mrow>
+   <m:mo>)</m:mo></m:mrow>
+  </m:mrow>
+ </m:semantics>
+</m:math>, where <m:math display="block">
+ <m:semantics>
+  <m:mrow>
+   <m:mi>Ω</m:mi><m:mo>=</m:mo><m:mrow><m:mo>(</m:mo>
+    <m:mrow>
+     <m:mrow><m:mo>(</m:mo>
+      <m:mrow>
+       <m:msub>
+        <m:mi>θ</m:mi>
+        <m:mn>1</m:mn>
+       </m:msub>
+       <m:mo>,</m:mo><m:msub>
+        <m:mi>θ</m:mi>
+        <m:mn>2</m:mn>
+       </m:msub>
+       
+      </m:mrow>
+     <m:mo>)</m:mo></m:mrow><m:mo>:</m:mo><m:mo>−</m:mo><m:mi>∞</m:mi><m:mo>&lt;</m:mo><m:msub>
+      <m:mi>θ</m:mi>
+      <m:mn>1</m:mn>
+     </m:msub>
+     <m:mo>&lt;</m:mo><m:mi>∞</m:mi><m:mo>,</m:mo><m:mn>0</m:mn><m:mo>&lt;</m:mo><m:msub>
+      <m:mi>θ</m:mi>
+      <m:mn>2</m:mn>
+     </m:msub>
+     <m:mo>&lt;</m:mo><m:mi>∞</m:mi>
+    </m:mrow>
+   <m:mo>)</m:mo></m:mrow><m:mo>.</m:mo>
+  </m:mrow>
+ </m:semantics>
+</m:math> That is, here let <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:msub>
+    <m:mi>θ</m:mi>
+    <m:mn>1</m:mn>
+   </m:msub>
+   <m:mo>=</m:mo><m:mi>μ</m:mi>
+  </m:mrow>
+ </m:semantics>
+</m:math> and <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:msub>
+    <m:mi>θ</m:mi>
+    <m:mn>2</m:mn>
+   </m:msub>
+   <m:mo>=</m:mo><m:msup>
+    <m:mi>σ</m:mi>
+    <m:mn>2</m:mn>
+   </m:msup>
+     </m:mrow>
+ </m:semantics>
+</m:math>. Then 
+ <m:math display="block">
+ <m:semantics>
+  <m:mrow>
+   <m:mi>L</m:mi><m:mrow><m:mo>(</m:mo>
+    <m:mrow>
+     <m:msub>
+      <m:mi>θ</m:mi>
+      <m:mn>1</m:mn>
+     </m:msub>
+     <m:mo>,</m:mo><m:msub>
+      <m:mi>θ</m:mi>
+      <m:mn>2</m:mn>
+     </m:msub>
+     
+    </m:mrow>
+   <m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mstyle displaystyle="true">
+    <m:munderover>
+     <m:mo>∏</m:mo>
+     <m:mrow>
+      <m:mi>i</m:mi><m:mo>−</m:mo><m:mn>1</m:mn>
+     </m:mrow>
+     <m:mi>n</m:mi>
+    </m:munderover>
+    <m:mrow>
+     <m:mrow><m:mo>(</m:mo>
+      <m:mrow>
+       <m:mfrac>
+        <m:mn>1</m:mn>
+        <m:mrow>
+         <m:msqrt>
+          <m:mrow>
+           <m:mn>2</m:mn><m:mi>π</m:mi><m:msub>
+            <m:mi>θ</m:mi>
+            <m:mn>2</m:mn>
+           </m:msub>
+           
+          </m:mrow>
+         </m:msqrt>
+         
+        </m:mrow>
+       </m:mfrac>
+       <m:mi>exp</m:mi><m:mo>⁡</m:mo><m:mrow><m:mo>[</m:mo> <m:mrow>
+        <m:mo>−</m:mo><m:mfrac>
+         <m:mrow>
+          <m:msup>
+           <m:mrow>
+            <m:mrow><m:mo>(</m:mo>
+             <m:mrow>
+              <m:msub>
+               <m:mi>x</m:mi>
+               <m:mi>i</m:mi>
+              </m:msub>
+              <m:mo>−</m:mo><m:msub>
+               <m:mi>θ</m:mi>
+               <m:mn>1</m:mn>
+              </m:msub>
+              
+             </m:mrow>
+            <m:mo>)</m:mo></m:mrow>
+           </m:mrow>
+           <m:mn>2</m:mn>
+          </m:msup>
+          
+         </m:mrow>
+         <m:mrow>
+          <m:mn>2</m:mn><m:msub>
+           <m:mi>θ</m:mi>
+           <m:mn>2</m:mn>
+          </m:msub>
+          
+         </m:mrow>
+        </m:mfrac>
+        
+       </m:mrow> <m:mo>]</m:mo></m:mrow>
+      </m:mrow>
+     <m:mo>)</m:mo></m:mrow>  <m:mo>,</m:mo>
+    </m:mrow>
+   </m:mstyle>
+  </m:mrow>
+ </m:semantics>
+</m:math> or equivalently, <m:math display="block">
+ <m:semantics>
+  <m:mrow>
+   <m:mi>L</m:mi><m:mrow><m:mo>(</m:mo>
+    <m:mrow>
+     <m:msub>
+      <m:mi>θ</m:mi>
+      <m:mn>1</m:mn>
+     </m:msub>
+     <m:mo>,</m:mo><m:msub>
+      <m:mi>θ</m:mi>
+      <m:mn>2</m:mn>
+     </m:msub>
+     
+    </m:mrow>
+   <m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:msup>
+    <m:mrow>
+     <m:mrow><m:mo>(</m:mo>
+      <m:mrow>
+       <m:mfrac>
+        <m:mn>1</m:mn>
+        <m:mrow>
+         <m:msqrt>
+          <m:mrow>
+           <m:mn>2</m:mn><m:mi>π</m:mi><m:msub>
+            <m:mi>θ</m:mi>
+            <m:mn>2</m:mn>
+           </m:msub>
+           
+          </m:mrow>
+         </m:msqrt>
+         
+        </m:mrow>
+       </m:mfrac>
+       
+      </m:mrow>
+     <m:mo>)</m:mo></m:mrow>
+    </m:mrow>
+    <m:mi>n</m:mi>
+   </m:msup>
+   <m:mi>exp</m:mi><m:mo>⁡</m:mo><m:mrow><m:mo>[</m:mo> <m:mrow>
+    <m:mo>−</m:mo><m:mfrac>
+     <m:mrow>
+      <m:mo>−</m:mo><m:mstyle displaystyle="true">
+       <m:munderover>
+        <m:mo>∑</m:mo>
+        <m:mrow>
+         <m:mi>i</m:mi><m:mo>=</m:mo><m:mn>1</m:mn>
+        </m:mrow>
+        <m:mi>n</m:mi>
+       </m:munderover>
+       <m:mrow>
+        <m:msup>
+         <m:mrow>
+          <m:mrow><m:mo>(</m:mo>
+           <m:mrow>
+            <m:msub>
+             <m:mi>x</m:mi>
+             <m:mi>i</m:mi>
+            </m:msub>
+            <m:mo>−</m:mo><m:msub>
+             <m:mi>θ</m:mi>
+             <m:mn>1</m:mn>
+            </m:msub>
+            
+           </m:mrow>
+          <m:mo>)</m:mo></m:mrow>
+         </m:mrow>
+         <m:mn>2</m:mn>
+        </m:msup>
+        
+       </m:mrow>
+      </m:mstyle>
+     </m:mrow>
+     <m:mrow>
+      <m:mn>2</m:mn><m:msub>
+       <m:mi>θ</m:mi>
+       <m:mn>2</m:mn>
+      </m:msub>
+      
+     </m:mrow>
+    </m:mfrac>
+    
+   </m:mrow> <m:mo>]</m:mo></m:mrow><m:mo>,</m:mo><m:mrow><m:mo>(</m:mo>
+    <m:mrow>
+     <m:msub>
+      <m:mi>θ</m:mi>
+      <m:mn>1</m:mn>
+     </m:msub>
+     <m:mo>,</m:mo><m:msub>
+      <m:mi>θ</m:mi>
+      <m:mn>2</m:mn>
+     </m:msub>
+     
+    </m:mrow>
+   <m:mo>)</m:mo></m:mrow><m:mo>∈</m:mo><m:mi>Ω</m:mi><m:mo>.</m:mo>
+  </m:mrow>
+
+ </m:semantics>
+</m:math>
+ The natural logarithm of the likelihood function is <m:math display="block">
+ <m:semantics>
+  <m:mrow>
+   <m:mi>ln</m:mi><m:mo>⁡</m:mo><m:mi>L</m:mi><m:mrow><m:mo>(</m:mo>
+    <m:mrow>
+     <m:msub>
+      <m:mi>θ</m:mi>
+      <m:mn>1</m:mn>
+     </m:msub>
+     <m:mo>,</m:mo><m:msub>
+      <m:mi>θ</m:mi>
+      <m:mn>2</m:mn>
+     </m:msub>
+     
+    </m:mrow>
+   <m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mo>−</m:mo><m:mfrac>
+    <m:mi>n</m:mi>
+    <m:mn>2</m:mn>
+   </m:mfrac>
+   <m:mi>ln</m:mi><m:mo>⁡</m:mo><m:mrow><m:mo>(</m:mo>
+    <m:mrow>
+     <m:mn>2</m:mn><m:mi>π</m:mi><m:msub>
+      <m:mi>θ</m:mi>
+      <m:mn>2</m:mn>
+     </m:msub>
+     
+    </m:mrow>
+   <m:mo>)</m:mo></m:mrow><m:mo>−</m:mo><m:mfrac>
+    <m:mrow>
+     <m:mo>−</m:mo><m:mstyle displaystyle="true">
+      <m:munderover>
+       <m:mo>∑</m:mo>
+       <m:mrow>
+        <m:mi>i</m:mi><m:mo>=</m:mo><m:mn>1</m:mn>
+       </m:mrow>
+       <m:mi>n</m:mi>
+      </m:munderover>
+      <m:mrow>
+       <m:msup>
+        <m:mrow>
+         <m:mrow><m:mo>(</m:mo>
+          <m:mrow>
+           <m:msub>
+            <m:mi>x</m:mi>
+            <m:mi>i</m:mi>
+           </m:msub>
+           <m:mo>−</m:mo><m:msub>
+            <m:mi>θ</m:mi>
+            <m:mn>1</m:mn>
+           </m:msub>
+           
+          </m:mrow>
+         <m:mo>)</m:mo></m:mrow>
+        </m:mrow>
+        <m:mn>2</m:mn>
+       </m:msup>
+       
+      </m:mrow>
+     </m:mstyle>
+    </m:mrow>
+    <m:mrow>
+     <m:mn>2</m:mn><m:msub>
+      <m:mi>θ</m:mi>
+      <m:mn>2</m:mn>
+     </m:msub>
+     
+    </m:mrow>
+   </m:mfrac>
+   <m:mo>.</m:mo>
+  </m:mrow>
+ </m:semantics>
+</m:math>
+
+     </para>  
+     <para id="para_19">
+The partial derivatives with respect to <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:msub>
+    <m:mi>θ</m:mi>
+    <m:mn>1</m:mn>
+   </m:msub>
+     </m:mrow>
+ </m:semantics>
+</m:math> and <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:msub>
+    <m:mi>θ</m:mi>
+    <m:mn>2</m:mn>
+   </m:msub>
+     </m:mrow>
+ </m:semantics>
+</m:math> are 
+ <m:math display="block">
+ <m:semantics>
+  <m:mrow>
+   <m:mfrac>
+    <m:mrow>
+     <m:mo>∂</m:mo><m:mrow><m:mo>(</m:mo>
+      <m:mrow>
+       <m:mi>ln</m:mi><m:mo>⁡</m:mo><m:mi>L</m:mi>
+      </m:mrow>
+     <m:mo>)</m:mo></m:mrow>
+    </m:mrow>
+    <m:mrow>
+     <m:mo>∂</m:mo><m:msub>
+      <m:mi>θ</m:mi>
+      <m:mn>1</m:mn>
+     </m:msub>
+     
+    </m:mrow>
+   </m:mfrac>
+   <m:mo>=</m:mo><m:mfrac>
+    <m:mn>1</m:mn>
+    <m:mrow>
+     <m:msub>
+      <m:mi>θ</m:mi>
+      <m:mn>2</m:mn>
+     </m:msub>
+     
+    </m:mrow>
+   </m:mfrac>
+   <m:mstyle displaystyle="true">
+    <m:munderover>
+     <m:mo>∑</m:mo>
+     <m:mrow>
+      <m:mi>i</m:mi><m:mo>=</m:mo><m:mn>1</m:mn>
+     </m:mrow>
+     <m:mi>n</m:mi>
+    </m:munderover>
+    <m:mrow>
+     <m:mrow><m:mo>(</m:mo>
+      <m:mrow>
+       <m:msub>
+        <m:mi>x</m:mi>
+        <m:mi>i</m:mi>
+       </m:msub>
+       <m:mo>−</m:mo><m:msub>
+        <m:mi>θ</m:mi>
+        <m:mn>1</m:mn>
+       </m:msub>
+       
+      </m:mrow>
+     <m:mo>)</m:mo></m:mrow>
+    </m:mrow>
+   </m:mstyle>
+  </m:mrow>
+ </m:semantics>
+</m:math> and <m:math display="block">
+ <m:semantics>
+  <m:mrow>
+   <m:mfrac>
+    <m:mrow>
+     <m:mo>∂</m:mo><m:mrow><m:mo>(</m:mo>
+      <m:mrow>
+       <m:mi>ln</m:mi><m:mo>⁡</m:mo><m:mi>L</m:mi>
+      </m:mrow>
+     <m:mo>)</m:mo></m:mrow>
+    </m:mrow>
+    <m:mrow>
+     <m:mo>∂</m:mo><m:msub>
+      <m:mi>θ</m:mi>
+      <m:mn>2</m:mn>
+     </m:msub>
+     
+    </m:mrow>
+   </m:mfrac>
+   <m:mo>=</m:mo><m:mfrac>
+    <m:mrow>
+     <m:mo>−</m:mo><m:mi>n</m:mi>
+    </m:mrow>
+    <m:mrow>
+     <m:mn>2</m:mn><m:msub>
+      <m:mi>θ</m:mi>
+      <m:mn>2</m:mn>
+     </m:msub>
+     
+    </m:mrow>
+   </m:mfrac>
+   <m:mo>+</m:mo><m:mfrac>
+    <m:mn>1</m:mn>
+    <m:mrow>
+     <m:mn>2</m:mn><m:msubsup>
+      <m:mi>θ</m:mi>
+      <m:mn>2</m:mn>
+      <m:mn>2</m:mn>
+     </m:msubsup>
+     
+    </m:mrow>
+   </m:mfrac>
+   <m:mstyle displaystyle="true">
+    <m:munderover>
+     <m:mo>∑</m:mo>
+     <m:mrow>
+      <m:mi>i</m:mi><m:mo>=</m:mo><m:mn>1</m:mn>
+     </m:mrow>
+     <m:mi>n</m:mi>
+    </m:munderover>
+    <m:mrow>
+     <m:msup>
+      <m:mrow>
+       <m:mrow><m:mo>(</m:mo>
+        <m:mrow>
+         <m:msub>
+          <m:mi>x</m:mi>
+          <m:mi>i</m:mi>
+         </m:msub>
+         <m:mo>−</m:mo><m:msub>
+          <m:mi>θ</m:mi>
+          <m:mn>1</m:mn>
+         </m:msub>
+         
+        </m:mrow>
+       <m:mo>)</m:mo></m:mrow>
+      </m:mrow>
+      <m:mn>2</m:mn>
+     </m:msup>
+         </m:mrow>
+   </m:mstyle><m:mo>.</m:mo>
+  </m:mrow>
+ </m:semantics>
+</m:math>
+     </para>  
+     <para id="para_20">
+The equation <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mfrac>
+    <m:mrow>
+     <m:mo>∂</m:mo><m:mrow><m:mo>(</m:mo>
+      <m:mrow>
+       <m:mi>ln</m:mi><m:mo>⁡</m:mo><m:mi>L</m:mi>
+      </m:mrow>
+     <m:mo>)</m:mo></m:mrow>
+    </m:mrow>
+    <m:mrow>
+     <m:mo>∂</m:mo><m:msub>
+      <m:mi>θ</m:mi>
+      <m:mn>1</m:mn>
+     </m:msub>
+         </m:mrow>
+   </m:mfrac>
+   <m:mo>=</m:mo><m:mn>0</m:mn>
+  </m:mrow>
+ </m:semantics>
+</m:math> has the solution <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:msub>
+    <m:mi>θ</m:mi>
+    <m:mn>1</m:mn>
+   </m:msub>
+   <m:mo>=</m:mo><m:mover accent="true">
+    <m:mi>x</m:mi>
+    <m:mo>¯</m:mo>
+   </m:mover>
+     </m:mrow>
+ </m:semantics>
+</m:math>. Setting <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mfrac>
+    <m:mrow>
+     <m:mo>∂</m:mo><m:mrow><m:mo>(</m:mo>
+      <m:mrow>
+       <m:mi>ln</m:mi><m:mo>⁡</m:mo><m:mi>L</m:mi>
+      </m:mrow>
+     <m:mo>)</m:mo></m:mrow>
+    </m:mrow>
+    <m:mrow>
+     <m:mo>∂</m:mo><m:msub>
+      <m:mi>θ</m:mi>
+      <m:mn>2</m:mn>
+     </m:msub>
+         </m:mrow>
+   </m:mfrac>
+   <m:mo>=</m:mo><m:mn>0</m:mn>
+  </m:mrow>
+ </m:semantics>
+</m:math> and replacing <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:msub>
+    <m:mi>θ</m:mi>
+    <m:mn>1</m:mn>
+   </m:msub>
+     </m:mrow>
+ </m:semantics>
+</m:math> by <m:math>
+ <m:semantics>
+  <m:mover accent="true">
+   <m:mi>x</m:mi>
+   <m:mo>¯</m:mo>
+  </m:mover>
+  </m:semantics>
+</m:math> yields <m:math display="block">
+ <m:semantics>
+  <m:mrow>
+   <m:msub>
+    <m:mi>θ</m:mi>
+    <m:mn>2</m:mn>
+   </m:msub>
+   <m:mo>=</m:mo><m:mfrac>
+    <m:mn>1</m:mn>
+    <m:mi>n</m:mi>
+   </m:mfrac>
+   <m:msup>
+    <m:mrow>
+     <m:mstyle displaystyle="true">
+      <m:munderover>
+       <m:mo>∑</m:mo>
+       <m:mrow>
+        <m:mi>i</m:mi><m:mo>=</m:mo><m:mn>1</m:mn>
+       </m:mrow>
+       <m:mi>n</m:mi>
+      </m:munderover>
+      <m:mrow>
+       <m:mrow><m:mo>(</m:mo>
+        <m:mrow>
+         <m:msub>
+          <m:mi>x</m:mi>
+          <m:mi>i</m:mi>
+         </m:msub>
+         <m:mo>−</m:mo><m:mover accent="true">
+          <m:mi>x</m:mi>
+          <m:mo>¯</m:mo>
+         </m:mover>
+         
+        </m:mrow>
+       <m:mo>)</m:mo></m:mrow>
+      </m:mrow>
+     </m:mstyle>
+    </m:mrow>
+    <m:mn>2</m:mn>
+   </m:msup>
+   <m:mo>.</m:mo>
+  </m:mrow>
+ </m:semantics>
+</m:math>
+
+     </para>  
+     <para id="para_21">
+By considering the usual condition on the second partial derivatives, these solutions do provide a maximum. Thus the maximum likelihood estimators <m:math display="block">
+ <m:semantics>
+  <m:mrow>
+   <m:mi>μ</m:mi><m:mo>=</m:mo><m:msub>
+    <m:mi>θ</m:mi>
+    <m:mn>1</m:mn>
+   </m:msub>
+     </m:mrow>
+ </m:semantics>
+</m:math> and <m:math display="block">
+ <m:semantics>
+  <m:mrow>
+   <m:msup>
+    <m:mi>σ</m:mi>
+    <m:mn>2</m:mn>
+   </m:msup>
+   <m:mo>=</m:mo><m:msub>
+    <m:mi>θ</m:mi>
+    <m:mn>2</m:mn>
+   </m:msub>
+     </m:mrow>
+ </m:semantics>
+</m:math> are <m:math display="block">
+ <m:semantics>
+  <m:mrow>
+   <m:msub>
+    <m:mover accent="true">
+     <m:mi>θ</m:mi>
+     <m:mo>^</m:mo>
+    </m:mover>
+    
+    <m:mn>1</m:mn>
+   </m:msub>
+   <m:mo>=</m:mo><m:mover accent="true">
+    <m:mi>X</m:mi>
+    <m:mo>¯</m:mo>
+   </m:mover>
+     </m:mrow>
+ </m:semantics>
+</m:math> and <m:math display="block">
+ <m:semantics>
+  <m:mrow>
+   <m:msub>
+    <m:mover accent="true">
+     <m:mi>θ</m:mi>
+     <m:mo>^</m:mo>
+    </m:mover>
+    
+    <m:mn>2</m:mn>
+   </m:msub>
+   <m:mo>=</m:mo><m:mfrac>
+    <m:mn>1</m:mn>
+    <m:mi>n</m:mi>
+   </m:mfrac>
+   <m:msup>
+    <m:mrow>
+     <m:mstyle displaystyle="true">
+      <m:munderover>
+       <m:mo>∑</m:mo>
+       <m:mrow>
+        <m:mi>i</m:mi><m:mo>=</m:mo><m:mn>1</m:mn>
+       </m:mrow>
+       <m:mi>n</m:mi>
+      </m:munderover>
+      <m:mrow>
+       <m:mrow><m:mo>(</m:mo>
+        <m:mrow>
+         <m:msub>
+          <m:mi>X</m:mi>
+          <m:mi>i</m:mi>
+         </m:msub>
+         <m:mo>−</m:mo><m:mover accent="true">
+          <m:mi>X</m:mi>
+          <m:mo>¯</m:mo>
+         </m:mover>
+         
+        </m:mrow>
+       <m:mo>)</m:mo></m:mrow>
+      </m:mrow>
+     </m:mstyle>
+    </m:mrow>
+    <m:mn>2</m:mn>
+   </m:msup>
+   <m:mo>.</m:mo>
+  </m:mrow>
+ </m:semantics>
+</m:math>
+
+
+    </para>  
+     <para id="para_22">
+Where we compare the above example with the introductory one, we see that the method of moments estimators and the maximum likelihood estimators for <m:math>
+ <m:semantics>
+  <m:mi>μ</m:mi>
+</m:semantics>
+</m:math>
+ and <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:msup>
+    <m:mi>σ</m:mi>
+    <m:mn>2</m:mn>
+   </m:msup>
+    </m:mrow>
+</m:semantics>
+</m:math>
+ are the same. But this is not always the case. If they are not the same, which is better? Due to the fact that the maximum likelihood estimator of <m:math>
+ <m:semantics>
+  <m:mi>θ</m:mi>
+</m:semantics>
+</m:math>
+ has an approximate normal distribution with mean <m:math>
+ <m:semantics>
+  <m:mi>θ</m:mi>
+</m:semantics>
+</m:math>
+ and a variance that is equal to a certain lower bound, thus at least approximately, it is  unbiased minimum variance estimator. Accordingly, most statisticians prefer the maximum likelihood estimators than estimators found using the method of moments.  
+     </para>  
+</section>
+<section id="sec_5">
+<title>BINOMIAL DISTRIBUTION</title>
+     <para id="para_23">
+<term>Observations:</term> <emphasis>k</emphasis> successes in <emphasis>n</emphasis> Bernoulli trials.   
+ </para>  
+     <para id="para_24">
+
+<m:math display="block">
+ <m:semantics>
+  <m:mrow>
+   <m:mi>f</m:mi><m:mrow><m:mo>(</m:mo>
+    <m:mi>x</m:mi>
+   <m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mfrac>
+    <m:mrow>
+     <m:mi>n</m:mi><m:mo>!</m:mo>
+    </m:mrow>
+    <m:mrow>
+     <m:mi>x</m:mi><m:mo>!</m:mo><m:mrow><m:mo>(</m:mo>
+      <m:mrow>
+       <m:mi>n</m:mi><m:mo>−</m:mo><m:mi>x</m:mi>
+      </m:mrow>
+     <m:mo>)</m:mo></m:mrow><m:mo>!</m:mo>
+    </m:mrow>
+   </m:mfrac>
+   <m:msup>
+    <m:mi>p</m:mi>
+    <m:mi>x</m:mi>
+   </m:msup>
+   <m:msup>
+    <m:mrow>
+     <m:mrow><m:mo>(</m:mo>
+      <m:mrow>
+       <m:mn>1</m:mn><m:mo>−</m:mo><m:mi>p</m:mi>
+      </m:mrow>
+     <m:mo>)</m:mo></m:mrow>
+    </m:mrow>
+    <m:mrow>
+     <m:mi>n</m:mi><m:mo>−</m:mo><m:mi>x</m:mi>
+    </m:mrow>
+   </m:msup>
+     </m:mrow>
+ </m:semantics>
+</m:math>
+
+  </para>  
+     <para id="para_25">
+<m:math display="block">
+ <m:semantics>
+  <m:mrow>
+   <m:mi>L</m:mi><m:mrow><m:mo>(</m:mo>
+    <m:mi>p</m:mi>
+   <m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mstyle displaystyle="true">
+    <m:munderover>
+     <m:mo>∏</m:mo>
+     <m:mrow>
+      <m:mi>i</m:mi><m:mo>=</m:mo><m:mn>1</m:mn>
+     </m:mrow>
+     <m:mi>n</m:mi>
+    </m:munderover>
+    <m:mrow>
+     <m:mi>f</m:mi><m:mrow><m:mo>(</m:mo>
+      <m:mrow>
+       <m:msub>
+        <m:mi>x</m:mi>
+        <m:mi>i</m:mi>
+       </m:msub>
+       
+      </m:mrow>
+     <m:mo>)</m:mo></m:mrow><m:mo>=</m:mo>
+    </m:mrow>
+   </m:mstyle><m:mstyle displaystyle="true">
+    <m:munderover>
+     <m:mo>∏</m:mo>
+     <m:mrow>
+      <m:mi>i</m:mi><m:mo>=</m:mo><m:mn>1</m:mn>
+     </m:mrow>
+     <m:mi>n</m:mi>
+    </m:munderover>
+    <m:mrow>
+     <m:mrow><m:mo>(</m:mo>
+      <m:mrow>
+       <m:mfrac>
+        <m:mrow>
+         <m:mi>n</m:mi><m:mo>!</m:mo>
+        </m:mrow>
+        <m:mrow>
+         <m:msub>
+          <m:mi>x</m:mi>
+          <m:mi>i</m:mi>
+         </m:msub>
+         <m:mo>!</m:mo><m:mrow><m:mo>(</m:mo>
+          <m:mrow>
+           <m:mi>n</m:mi><m:mo>−</m:mo><m:msub>
+            <m:mi>x</m:mi>
+            <m:mi>i</m:mi>
+           </m:msub>
+           
+          </m:mrow>
+         <m:mo>)</m:mo></m:mrow><m:mo>!</m:mo>
+        </m:mrow>
+       </m:mfrac>
+       <m:msup>
+        <m:mi>p</m:mi>
+        <m:mrow>
+         <m:msub>
+          <m:mi>x</m:mi>
+          <m:mi>i</m:mi>
+         </m:msub>
+         
+        </m:mrow>
+       </m:msup>
+       <m:msup>
+        <m:mrow>
+         <m:mrow><m:mo>(</m:mo>
+          <m:mrow>
+           <m:mn>1</m:mn><m:mo>−</m:mo><m:mi>p</m:mi>
+          </m:mrow>
+         <m:mo>)</m:mo></m:mrow>
+        </m:mrow>
+        <m:mrow>
+         <m:mi>n</m:mi><m:mo>−</m:mo><m:msub>
+          <m:mi>x</m:mi>
+          <m:mi>i</m:mi>
+         </m:msub>
+         
+        </m:mrow>
+       </m:msup>
+       
+      </m:mrow>
+     <m:mo>)</m:mo></m:mrow>
+    </m:mrow>
+   </m:mstyle><m:mo>=</m:mo><m:mrow><m:mo>(</m:mo>
+    <m:mrow>
+     <m:mstyle displaystyle="true">
+      <m:munderover>
+       <m:mo>∏</m:mo>
+       <m:mrow>
+        <m:mi>i</m:mi><m:mo>=</m:mo><m:mn>1</m:mn>
+       </m:mrow>
+       <m:mi>n</m:mi>
+      </m:munderover>
+      <m:mrow>
+       <m:mfrac>
+        <m:mrow>
+         <m:mi>n</m:mi><m:mo>!</m:mo>
+        </m:mrow>
+        <m:mrow>
+         <m:msub>
+          <m:mi>x</m:mi>
+          <m:mi>i</m:mi>
+         </m:msub>
+         <m:mo>!</m:mo><m:mrow><m:mo>(</m:mo>
+          <m:mrow>
+           <m:mi>n</m:mi><m:mo>−</m:mo><m:msub>
+            <m:mi>x</m:mi>
+            <m:mi>i</m:mi>
+           </m:msub>
+           
+          </m:mrow>
+         <m:mo>)</m:mo></m:mrow><m:mo>!</m:mo>
+        </m:mrow>
+       </m:mfrac>
+       
+      </m:mrow>
+     </m:mstyle>
+    </m:mrow>
+   <m:mo>)</m:mo></m:mrow><m:msup>
+    <m:mi>p</m:mi>
+    <m:mrow>
+     <m:msub>
+      <m:mi>x</m:mi>
+      <m:mi>i</m:mi>
+     </m:msub>
+     
+    </m:mrow>
+   </m:msup>
+   <m:msup>
+    <m:mrow>
+     <m:mrow><m:mo>(</m:mo>
+      <m:mrow>
+       <m:mn>1</m:mn><m:mo>−</m:mo><m:mi>p</m:mi>
+      </m:mrow>
+     <m:mo>)</m:mo></m:mrow>
+    </m:mrow>
+    <m:mrow>
+     <m:mi>n</m:mi><m:mo>−</m:mo><m:mstyle displaystyle="true">
+      <m:munderover>
+       <m:mo>∑</m:mo>
+       <m:mrow>
+        <m:mi>i</m:mi><m:mo>=</m:mo><m:mn>1</m:mn>
+       </m:mrow>
+       <m:mi>n</m:mi>
+      </m:munderover>
+      <m:mrow>
+       <m:msub>
+        <m:mi>x</m:mi>
+        <m:mi>i</m:mi>
+       </m:msub>
+       
+      </m:mrow>
+     </m:mstyle>
+    </m:mrow>
+   </m:msup>
+     </m:mrow>
+ </m:semantics>
+</m:math>
+
+  </para>  
+     <para id="para_26">
+<m:math display="block">
+ <m:semantics>
+  <m:mrow>
+   <m:mi>ln</m:mi><m:mo>⁡</m:mo><m:mi>L</m:mi><m:mrow><m:mo>(</m:mo>
+    <m:mi>p</m:mi>
+   <m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mstyle displaystyle="true">
+    <m:munderover>
+     <m:mo>∑</m:mo>
+     <m:mrow>
+      <m:mi>i</m:mi><m:mo>=</m:mo><m:mn>1</m:mn>
+     </m:mrow>
+     <m:mi>n</m:mi>
+    </m:munderover>
+    <m:mrow>
+     <m:msub>
+      <m:mi>x</m:mi>
+      <m:mi>i</m:mi>
+     </m:msub>
+     
+    </m:mrow>
+   </m:mstyle><m:mi>ln</m:mi><m:mo>⁡</m:mo><m:mi>p</m:mi><m:mo>+</m:mo><m:mrow><m:mo>(</m:mo>
+    <m:mrow>
+     <m:mi>n</m:mi><m:mo>−</m:mo><m:mstyle displaystyle="true">
+      <m:munderover>
+       <m:mo>∑</m:mo>
+       <m:mrow>
+        <m:mi>i</m:mi><m:mo>=</m:mo><m:mn>1</m:mn>
+       </m:mrow>
+       <m:mi>n</m:mi>
+      </m:munderover>
+      <m:mrow>
+       <m:msub>
+        <m:mi>x</m:mi>
+        <m:mi>i</m:mi>
+       </m:msub>
+       
+      </m:mrow>
+     </m:mstyle>
+    </m:mrow>
+   <m:mo>)</m:mo></m:mrow><m:mi>ln</m:mi><m:mo>⁡</m:mo><m:mrow><m:mo>(</m:mo>
+    <m:mrow>
+     <m:mn>1</m:mn><m:mo>−</m:mo><m:mi>p</m:mi>
+    </m:mrow>
+   <m:mo>)</m:mo></m:mrow>
+  </m:mrow>
+ </m:semantics>
+</m:math>
+    </para>  
+     <para id="para_27">
+<m:math display="block">
+ <m:semantics>
+  <m:mrow>
+   <m:mfrac>
+    <m:mrow>
+     <m:mi>d</m:mi><m:mi>ln</m:mi><m:mo>⁡</m:mo><m:mi>L</m:mi><m:mrow><m:mo>(</m:mo>
+      <m:mi>p</m:mi>
+     <m:mo>)</m:mo></m:mrow>
+    </m:mrow>
+    <m:mrow>
+     <m:mi>d</m:mi><m:mi>p</m:mi>
+    </m:mrow>
+   </m:mfrac>
+   <m:mo>=</m:mo><m:mfrac>
+    <m:mn>1</m:mn>
+    <m:mi>p</m:mi>
+   </m:mfrac>
+   <m:mstyle displaystyle="true">
+    <m:munderover>
+     <m:mo>∑</m:mo>
+     <m:mrow>
+      <m:mi>i</m:mi><m:mo>=</m:mo><m:mn>1</m:mn>
+     </m:mrow>
+     <m:mi>n</m:mi>
+    </m:munderover>
+    <m:mrow>
+     <m:msub>
+      <m:mi>x</m:mi>
+      <m:mi>i</m:mi>
+     </m:msub>
+     
+    </m:mrow>
+   </m:mstyle><m:mo>−</m:mo><m:mrow><m:mo>(</m:mo>
+    <m:mrow>
+     <m:mi>n</m:mi><m:mo>−</m:mo><m:mstyle displaystyle="true">
+      <m:munderover>
+       <m:mo>∑</m:mo>
+       <m:mrow>
+        <m:mi>i</m:mi><m:mo>=</m:mo><m:mn>1</m:mn>
+       </m:mrow>
+       <m:mi>n</m:mi>
+      </m:munderover>
+      <m:mrow>
+       <m:msub>
+        <m:mi>x</m:mi>
+        <m:mi>i</m:mi>
+       </m:msub>
+       
+      </m:mrow>
+     </m:mstyle>
+    </m:mrow>
+   <m:mo>)</m:mo></m:mrow><m:mfrac>
+    <m:mn>1</m:mn>
+    <m:mrow>
+     <m:mn>1</m:mn><m:mo>−</m:mo><m:mi>p</m:mi>
+    </m:mrow>
+   </m:mfrac>
+   <m:mo>=</m:mo><m:mn>0</m:mn>
+  </m:mrow>
+ </m:semantics>
+</m:math>
+
+    </para>  
+     <para id="para_28">
+<m:math display="block">
+ <m:semantics>
+  <m:mrow>
+   <m:mfrac>
+    <m:mrow>
+     <m:mrow><m:mo>(</m:mo>
+      <m:mrow>
+       <m:mn>1</m:mn><m:mo>−</m:mo><m:mover accent="true">
+        <m:mi>p</m:mi>
+        <m:mo>^</m:mo>
+       </m:mover>
+       
+      </m:mrow>
+     <m:mo>)</m:mo></m:mrow><m:mstyle displaystyle="true">
+      <m:munderover>
+       <m:mo>∑</m:mo>
+       <m:mrow>
+        <m:mi>i</m:mi><m:mo>=</m:mo><m:mn>1</m:mn>
+       </m:mrow>
+       <m:mi>n</m:mi>
+      </m:munderover>
+      <m:mrow>
+       <m:msub>
+        <m:mi>x</m:mi>
+        <m:mi>i</m:mi>
+       </m:msub>
+       
+      </m:mrow>
+     </m:mstyle><m:mo>−</m:mo><m:mrow><m:mo>(</m:mo>
+      <m:mrow>
+       <m:mi>n</m:mi><m:mo>−</m:mo><m:mstyle displaystyle="true">
+        <m:munderover>
+         <m:mo>∑</m:mo>
+         <m:mrow>
+          <m:mi>i</m:mi><m:mo>=</m:mo><m:mn>1</m:mn>
+         </m:mrow>
+         <m:mi>n</m:mi>
+        </m:munderover>
+        <m:mrow>
+         <m:msub>
+          <m:mi>x</m:mi>
+          <m:mi>i</m:mi>
+         </m:msub>
+         
+        </m:mrow>
+       </m:mstyle>
+      </m:mrow>
+     <m:mo>)</m:mo></m:mrow><m:mover accent="true">
+      <m:mi>p</m:mi>
+      <m:mo>^</m:mo>
+     </m:mover>
+     
+    </m:mrow>
+    <m:mrow>
+     <m:mover accent="true">
+      <m:mi>p</m:mi>
+      <m:mo>^</m:mo>
+     </m:mover>
+     <m:mrow><m:mo>(</m:mo>
+      <m:mrow>
+       <m:mn>1</m:mn><m:mo>−</m:mo><m:mover accent="true">
+        <m:mi>p</m:mi>
+        <m:mo>^</m:mo>
+       </m:mover>
+       
+      </m:mrow>
+     <m:mo>)</m:mo></m:mrow>
+    </m:mrow>
+   </m:mfrac>
+   <m:mo>=</m:mo><m:mn>0</m:mn>
+  </m:mrow>
+ </m:semantics>
+</m:math>
+    </para>  
+     <para id="para_29">
+<m:math display="block">
+ <m:semantics>
+  <m:mrow>
+   <m:mstyle displaystyle="true">
+    <m:munderover>
+     <m:mo>∑</m:mo>
+     <m:mrow>
+      <m:mi>i</m:mi><m:mo>=</m:mo><m:mn>1</m:mn>
+     </m:mrow>
+     <m:mi>n</m:mi>
+    </m:munderover>
+    <m:mrow>
+     <m:msub>
+      <m:mi>x</m:mi>
+      <m:mi>i</m:mi>
+     </m:msub>
+     
+    </m:mrow>
+   </m:mstyle><m:mo>−</m:mo><m:mover accent="true">
+    <m:mi>p</m:mi>
+    <m:mo>^</m:mo>
+   </m:mover>
+   <m:mstyle displaystyle="true">
+    <m:munderover>
+     <m:mo>∑</m:mo>
+     <m:mrow>
+      <m:mi>i</m:mi><m:mo>=</m:mo><m:mn>1</m:mn>
+     </m:mrow>
+     <m:mi>n</m:mi>
+    </m:munderover>
+    <m:mrow>
+     <m:msub>
+      <m:mi>x</m:mi>
+      <m:mi>i</m:mi>
+     </m:msub>
+     
+    </m:mrow>
+   </m:mstyle><m:mo>−</m:mo><m:mi>n</m:mi><m:mover accent="true">
+    <m:mi>p</m:mi>
+    <m:mo>^</m:mo>
+   </m:mover>
+   <m:mo>+</m:mo><m:mstyle displaystyle="true">
+    <m:munderover>
+     <m:mo>∑</m:mo>
+     <m:mrow>
+      <m:mi>i</m:mi><m:mo>=</m:mo><m:mn>1</m:mn>
+     </m:mrow>
+     <m:mi>n</m:mi>
+    </m:munderover>
+    <m:mrow>
+     <m:msub>
+      <m:mi>x</m:mi>
+      <m:mi>i</m:mi>
+     </m:msub>
+     
+    </m:mrow>
+   </m:mstyle><m:mover accent="true">
+    <m:mi>p</m:mi>
+    <m:mo>^</m:mo>
+   </m:mover>
+   <m:mo>=</m:mo><m:mn>0</m:mn>
+  </m:mrow>
+ </m:semantics>
+</m:math>
+
+    </para>  
+     <para id="para_30">
+<m:math display="block">
+ <m:semantics>
+  <m:mrow>
+   <m:mover accent="true">
+    <m:mi>p</m:mi>
+    <m:mo>^</m:mo>
+   </m:mover>
+   <m:mo>=</m:mo><m:mfrac>
+    <m:mrow>
+     <m:mstyle displaystyle="true">
+      <m:munderover>
+       <m:mo>∑</m:mo>
+       <m:mrow>
+        <m:mi>i</m:mi><m:mo>=</m:mo><m:mn>1</m:mn>
+       </m:mrow>
+       <m:mi>n</m:mi>
+      </m:munderover>
+      <m:mrow>
+       <m:msub>
+        <m:mi>x</m:mi>
+        <m:mi>i</m:mi>
+       </m:msub>
+       
+      </m:mrow>
+     </m:mstyle>
+    </m:mrow>
+    <m:mi>n</m:mi>
+   </m:mfrac>
+   <m:mo>=</m:mo><m:mfrac>
+    <m:mi>k</m:mi>
+    <m:mi>n</m:mi>
+   </m:mfrac>
+     </m:mrow>
+ </m:semantics>
+</m:math>
+
+    </para>  
+</section>
+<section id="sec_6">
+<title>POISSON DISTRIBUTION</title>
+    <para id="para_31">
+<term>Observations: </term> <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:msub>
+    <m:mi>x</m:mi>
+    <m:mn>1</m:mn>
+   </m:msub>
+   <m:mo>,</m:mo><m:msub>
+    <m:mi>x</m:mi>
+    <m:mn>2</m:mn>
+   </m:msub>
+   <m:mo>,</m:mo><m:mn>...</m:mn><m:mo>,</m:mo><m:msub>
+    <m:mi>x</m:mi>
+    <m:mi>n</m:mi>
+   </m:msub>
+   </m:mrow>
+  </m:semantics>
+</m:math>, <m:math display="block">
+ <m:semantics>
+  <m:mrow>
+   <m:mi>f</m:mi><m:mrow><m:mo>(</m:mo>
+    <m:mi>x</m:mi>
+   <m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mfrac>
+    <m:mrow>
+     <m:msup>
+      <m:mi>λ</m:mi>
+      <m:mi>x</m:mi>
+     </m:msup>
+     <m:msup>
+      <m:mi>e</m:mi>
+      <m:mrow>
+       <m:mo>−</m:mo><m:mi>λ</m:mi>
+      </m:mrow>
+     </m:msup>
+     
+    </m:mrow>
+    <m:mrow>
+     <m:mi>x</m:mi><m:mo>!</m:mo>
+    </m:mrow>
+   </m:mfrac>
+   <m:mo>,</m:mo><m:mi>x</m:mi><m:mo>=</m:mo><m:mn>0</m:mn><m:mo>,</m:mo><m:mn>1</m:mn><m:mo>,</m:mo><m:mn>2</m:mn><m:mo>,</m:mo><m:mn>...</m:mn>
+  </m:mrow>
+ </m:semantics>
+</m:math>
+</para>  
+    <para id="para_32">
+<m:math display="block">
+ <m:semantics>
+  <m:mrow>
+   <m:mi>L</m:mi><m:mrow><m:mo>(</m:mo>
+    <m:mi>λ</m:mi>
+   <m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mstyle displaystyle="true">
+    <m:munderover>
+     <m:mo>∏</m:mo>
+     <m:mrow>
+      <m:mi>i</m:mi><m:mo>=</m:mo><m:mn>1</m:mn>
+     </m:mrow>
+     <m:mi>n</m:mi>
+    </m:munderover>
+    <m:mrow>
+     <m:mrow><m:mo>(</m:mo>
+      <m:mrow>
+       <m:mfrac>
+        <m:mrow>
+         <m:msup>
+          <m:mi>λ</m:mi>
+          <m:mrow>
+           <m:msub>
+            <m:mi>x</m:mi>
+            <m:mi>i</m:mi>
+           </m:msub>
+           
+          </m:mrow>
+         </m:msup>
+         <m:msup>
+          <m:mi>e</m:mi>
+          <m:mrow>
+           <m:mo>−</m:mo><m:mi>λ</m:mi>
+          </m:mrow>
+         </m:msup>
+         
+        </m:mrow>
+        <m:mrow>
+         <m:msub>
+          <m:mi>x</m:mi>
+          <m:mi>i</m:mi>
+         </m:msub>
+         <m:mo>!</m:mo>
+        </m:mrow>
+       </m:mfrac>
+       
+      </m:mrow>
+     <m:mo>)</m:mo></m:mrow>
+    </m:mrow>
+   </m:mstyle><m:mo>=</m:mo><m:msup>
+    <m:mi>e</m:mi>
+    <m:mrow>
+     <m:mo>−</m:mo><m:mi>λ</m:mi><m:mi>n</m:mi>
+    </m:mrow>
+   </m:msup>
+   <m:mfrac>
+    <m:mrow>
+     <m:mi>λ</m:mi><m:mstyle displaystyle="true">
+      <m:munderover>
+       <m:mo>∑</m:mo>
+       <m:mrow>
+        <m:mi>i</m:mi><m:mo>=</m:mo><m:mn>1</m:mn>
+       </m:mrow>
+       <m:mi>n</m:mi>
+      </m:munderover>
+      <m:mrow>
+       <m:msub>
+        <m:mi>x</m:mi>
+        <m:mi>i</m:mi>
+       </m:msub>
+       
+      </m:mrow>
+     </m:mstyle>
+    </m:mrow>
+    <m:mrow>
+     <m:mstyle displaystyle="true">
+      <m:munderover>
+       <m:mo>∏</m:mo>
+       <m:mrow>
+        <m:mi>i</m:mi><m:mo>=</m:mo><m:mn>1</m:mn>
+       </m:mrow>
+       <m:mi>n</m:mi>
+      </m:munderover>
+      <m:mrow>
+       <m:msub>
+        <m:mi>x</m:mi>
+        <m:mi>i</m:mi>
+       </m:msub>
+       
+      </m:mrow>
+     </m:mstyle>
+    </m:mrow>
+   </m:mfrac>
+     </m:mrow>
+ </m:semantics>
+</m:math>
+
+     </para>  
+    <para id="para_33">
+<m:math display="block">
+ <m:semantics>
+  <m:mrow>
+   <m:mi>ln</m:mi><m:mo>⁡</m:mo><m:mi>L</m:mi><m:mrow><m:mo>(</m:mo>
+    <m:mi>λ</m:mi>
+   <m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mo>−</m:mo><m:mi>λ</m:mi><m:mi>n</m:mi><m:mo>+</m:mo><m:mstyle displaystyle="true">
+    <m:munderover>
+     <m:mo>∑</m:mo>
+     <m:mrow>
+      <m:mi>i</m:mi><m:mo>=</m:mo><m:mn>1</m:mn>
+     </m:mrow>
+     <m:mi>n</m:mi>
+    </m:munderover>
+    <m:mrow>
+     <m:msub>
+      <m:mi>x</m:mi>
+      <m:mi>i</m:mi>
+     </m:msub>
+     
+    </m:mrow>
+   </m:mstyle><m:mi>ln</m:mi><m:mo>⁡</m:mo><m:mi>λ</m:mi><m:mo>−</m:mo><m:mi>ln</m:mi><m:mo>⁡</m:mo><m:mrow><m:mo>(</m:mo>
+    <m:mrow>
+     <m:mstyle displaystyle="true">
+      <m:munderover>
+       <m:mo>∏</m:mo>
+       <m:mrow>
+        <m:mi>i</m:mi><m:mo>=</m:mo><m:mn>1</m:mn>
+       </m:mrow>
+       <m:mi>n</m:mi>
+      </m:munderover>
+      <m:mrow>
+       <m:msub>
+        <m:mi>x</m:mi>
+        <m:mi>i</m:mi>
+       </m:msub>
+       
+      </m:mrow>
+     </m:mstyle>
+    </m:mrow>
+   <m:mo>)</m:mo></m:mrow>
+  </m:mrow>
+ </m:semantics>
+</m:math>
+
+     </para>  
+    <para id="para_34">
+<m:math display="block">
+ <m:semantics>
+  <m:mrow>
+   <m:mfrac>
+    <m:mrow>
+     <m:mi>d</m:mi><m:mi>l</m:mi>
+    </m:mrow>
+    <m:mrow>
+     <m:mi>d</m:mi><m:mi>λ</m:mi>
+    </m:mrow>
+   </m:mfrac>
+   <m:mo>=</m:mo><m:mo>−</m:mo><m:mi>n</m:mi><m:mo>+</m:mo><m:mstyle displaystyle="true">
+    <m:munderover>
+     <m:mo>∑</m:mo>
+     <m:mrow>
+      <m:mi>i</m:mi><m:mo>=</m:mo><m:mn>1</m:mn>
+     </m:mrow>
+     <m:mi>n</m:mi>
+    </m:munderover>
+    <m:mrow>
+     <m:msub>
+      <m:mi>x</m:mi>
+      <m:mi>i</m:mi>
+     </m:msub>
+     
+    </m:mrow>
+   </m:mstyle><m:mfrac>
+    <m:mn>1</m:mn>
+    <m:mi>λ</m:mi>
+   </m:mfrac>
+     </m:mrow>
+ </m:semantics>
+</m:math>
+
+     </para>  
+    <para id="para_35">
+<m:math display="block">
+ <m:semantics>
+  <m:mrow>
+   <m:mo>−</m:mo><m:mi>n</m:mi><m:mo>+</m:mo><m:mstyle displaystyle="true">
+    <m:munderover>
+     <m:mo>∑</m:mo>
+     <m:mrow>
+      <m:mi>i</m:mi><m:mo>=</m:mo><m:mn>1</m:mn>
+     </m:mrow>
+     <m:mi>n</m:mi>
+    </m:munderover>
+    <m:mrow>
+     <m:msub>
+      <m:mi>x</m:mi>
+      <m:mi>i</m:mi>
+     </m:msub>
+     
+    </m:mrow>
+   </m:mstyle><m:mfrac>
+    <m:mn>1</m:mn>
+    <m:mi>λ</m:mi>
+   </m:mfrac>
+   <m:mo>=</m:mo><m:mn>0</m:mn>
+  </m:mrow>
+ </m:semantics>
+</m:math>
+
+     </para>  
+    <para id="para_36">
+<m:math display="block">
+ <m:semantics>
+  <m:mrow>
+   <m:mover accent="true">
+    <m:mi>λ</m:mi>
+    <m:mo>^</m:mo>
+   </m:mover>
+   <m:mo>=</m:mo><m:mfrac>
+    <m:mrow>
+     <m:mstyle displaystyle="true">
+      <m:munderover>
+       <m:mo>∑</m:mo>
+       <m:mrow>
+        <m:mi>i</m:mi><m:mo>=</m:mo><m:mn>1</m:mn>
+       </m:mrow>
+       <m:mi>n</m:mi>
+      </m:munderover>
+      <m:mrow>
+       <m:msub>
+        <m:mi>x</m:mi>
+        <m:mi>i</m:mi>
+       </m:msub>
+       
+      </m:mrow>
+     </m:mstyle>
+    </m:mrow>
+    <m:mi>n</m:mi>
+   </m:mfrac>
+     </m:mrow>
+ </m:semantics>
+</m:math>
+
+     </para>     
+ <para id="para_37">
+
+     </para>  
+</section>
+</section>
+
+
+    <para id="delete_me">
+       <!-- Insert module text here -->
+    </para>   
+  </content>
+  
+</document>

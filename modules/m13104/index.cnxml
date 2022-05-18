@@ -1,0 +1,286 @@
+<document xmlns="http://cnx.rice.edu/cnxml" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:md="http://cnx.rice.edu/mdml">
+  <title>PSEUDO-RANDOM VARIABLE GENERATORS, cont.</title>
+  <metadata><md:content-id>undefined</md:content-id><md:title/><md:uuid>d0402c5b-f0d7-4f82-8aa4-07f8dd667d0d</md:uuid>
+</metadata>
+  <content>
+<section id="sec_1">
+  <title>PSEUDO-RANDOM VARIABLE GENERATORS, cont.</title> 
+  
+<section id="sec_2">
+  <title>A Shift-Register Generator</title> 
+<para id="para_1">
+An alternative class of pseudo-numbers generators are <term>shift-register</term> or <term>Tausworthe generators</term>, which have their origins in the work of <emphasis>Golomb (1967)</emphasis>. These algorithms operate on <emphasis>n</emphasis>-bit, pseudo-random binary vectors, just as <link document="m13103" target-id="para_3">congruential generators</link> operate on pseudo-random integers. To return a uniform <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mrow><m:mo>(</m:mo>
+    <m:mrow>
+     <m:mn>0,1</m:mn>
+    </m:mrow>
+   <m:mo>)</m:mo></m:mrow>
+  </m:mrow>
+</m:semantics>
+</m:math> variate, the binary vector must be converted to an integer and divided by one plus the largest possible number, <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:msup>
+    <m:mn>2</m:mn>
+    <m:mi>n</m:mi>
+   </m:msup>
+     </m:mrow>
+</m:semantics>
+</m:math>. 
+  </para>
+         </section>
+         <section id="sec_3">
+  <title>Fibonacci Generators</title> 
+  <para id="para_2">
+The final major class of generators to be considered are <term>the lagged Fibonacci generators</term>, which take their name from the famous Fibonacci sequence <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:msub>
+    <m:mi>U</m:mi>
+    <m:mi>i</m:mi>
+   </m:msub>
+   <m:mo>=</m:mo><m:msub>
+    <m:mi>U</m:mi>
+    <m:mrow>
+     <m:mi>i</m:mi><m:mo>−</m:mo><m:mn>1</m:mn>
+    </m:mrow>
+   </m:msub>
+   <m:mo>+</m:mo><m:msub>
+    <m:mi>U</m:mi>
+    <m:mrow>
+     <m:mi>i</m:mi><m:mo>−</m:mo><m:mn>2</m:mn>
+    </m:mrow>
+   </m:msub>
+    </m:mrow>
+  </m:semantics>
+</m:math>. This recursion is reminiscent of the congruential generators, which the added feature that the current value depends on the two previous values. 
+</para>
+ <para id="para_3">
+The integer generator based directly on the Fibonacci formula 
+<equation id="eq_1">
+<m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:msup>
+    <m:mn>2</m:mn>
+    <m:mi>n</m:mi>
+   </m:msup>
+     </m:mrow>
+</m:semantics>
+</m:math>
+</equation>
+has been investigated, but not found to be satisfactory random. A more general formulation can be given by the equation:
+<equation id="eq_2">
+<m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:msub>
+    <m:mi>U</m:mi>
+    <m:mi>i</m:mi>
+   </m:msub>
+   <m:mo>=</m:mo><m:msub>
+    <m:mi>U</m:mi>
+    <m:mrow>
+     <m:mi>i</m:mi><m:mo>−</m:mo><m:mi>r</m:mi>
+    </m:mrow>
+   </m:msub>
+   <m:mo>⋅</m:mo><m:msub>
+    <m:mi>U</m:mi>
+    <m:mrow>
+     <m:mi>i</m:mi><m:mo>−</m:mo><m:mi>s</m:mi>
+    </m:mrow>
+   </m:msub>
+   <m:mo>,</m:mo><m:mi>r</m:mi><m:mo>≥</m:mo><m:mn>1,</m:mn><m:mi>s</m:mi><m:mo>≥</m:mo><m:mn>1,</m:mn><m:mi>r</m:mi><m:mo>≠</m:mo><m:mi>s</m:mi><m:mo>,</m:mo>
+  </m:mrow>
+ </m:semantics>
+</m:math>
+</equation>
+where the symbol ‘square’ represents an arbitrary mathematical operation. We can think of the <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:msub>
+    <m:mi>U</m:mi>
+    <m:mi>i</m:mi>
+   </m:msub>
+   <m:mo>=</m:mo><m:mn>0</m:mn>
+  </m:mrow>
+</m:semantics>
+</m:math> as either binary vectors, integers, or real numbers between 0 and 1, depending on the operation involved. 
+  </para>
+<list id="list_1" list-type="enumerated">
+	    <title>As examples:</title>
+	    <item>
+The <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:msub>
+    <m:mi>U</m:mi>
+    <m:mi>i</m:mi>
+   </m:msub>
+   <m:mo>=</m:mo><m:mn>0</m:mn>
+  </m:mrow>
+</m:semantics>
+</m:math>
+ are real and dot represents either mod 1 addition or subtraction.
+            </item> 
+	    <item>
+The <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:msub>
+    <m:mi>U</m:mi>
+    <m:mi>i</m:mi>
+   </m:msub>
+   <m:mo>=</m:mo><m:mn>0</m:mn>
+  </m:mrow>
+</m:semantics>
+</m:math>
+ are <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mrow><m:mo>(</m:mo>
+    <m:mrow>
+     <m:mi>n</m:mi><m:mo>−</m:mo><m:mn>1</m:mn>
+    </m:mrow>
+   <m:mo>)</m:mo></m:mrow>
+  </m:mrow>
+ </m:semantics>
+</m:math>
+–bit integers and dot represents either mod <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:msup>
+    <m:mn>2</m:mn>
+    <m:mi>n</m:mi>
+   </m:msup>
+     </m:mrow>
+</m:semantics>
+</m:math> addition, subtraction or multiplication.
+            </item> 
+	    <item>
+The <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:msub>
+    <m:mi>U</m:mi>
+    <m:mi>i</m:mi>
+   </m:msub>
+   <m:mo>=</m:mo><m:mn>0</m:mn>
+  </m:mrow>
+</m:semantics>
+</m:math> are binary vectors and dot represents any of binary addition, binary subtraction, exclusive-or addition, or multiplication. 
+            </item>
+	  </list> 
+ <para id="para_4">
+Other generators that generalize even further on the Fibonacci  idea by using a linear combination of previous random integers to generate the current random integer are discussed in <emphasis>Knuth (1981, Chap 3.2.2)</emphasis>. 
+    </para>
+        </section>
+ 
+
+         <section id="sec_4">
+  <title>Combinations of Generators (Shuffling)</title> 
+ <para id="para_5">
+Intuitively, it is tempting to believe that “combining” two sequences of pseudo-random variables will produce one sequence with better uniformity and randomness properties than either of the two originals. In fact, even though good <link document="m13103" target-id="para_3">congruential</link>, <link target-id="sec_2">Tausworthe</link>, and <link target-id="sec_3">Fibonacci</link> generators exist, combination generators may be better for a number of reasons. The individual generators with short cycle length can be combined intone with a very long cycle. This can be a great advantage, especially on computers with limited mathematical precision. These potential advantages have led to the development of a number of successful combination generators and research into many others. 
+    </para>
+ <para id="para_6">
+One of such generator, is a combination of three congruential generators, developed and tested by <emphasis>Wichmann and Hill (1982)</emphasis>. 
+    </para>
+
+ <para id="para_7">
+Another generator, <term>Super-Duper</term>, developed by G.Marsaglia, combines the binary form of the output form the multiplicative congruenatial generator with a multiplier <emphasis>a</emphasis>=69.069 and modulus <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mi>m</m:mi><m:mo>=</m:mo><m:msup>
+    <m:mn>2</m:mn>
+    <m:mrow>
+     <m:mn>32</m:mn>
+    </m:mrow>
+   </m:msup>
+     </m:mrow>
+ </m:semantics>
+</m:math> with the output of the 32-bit Tausworthe generator using a left-shift of 17 and a right shift of 15. This generator performs well, though not perfectly, and suffers from some practical drawbacks. 
+    </para>
+
+ <para id="para_8">
+A third general variation, <term>a shuffled generator</term>, randomizes the order in which a generator’s variates are output. Specifically, we consider one pseudo-random variate generator that produces the sequence <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mrow><m:mo>(</m:mo>
+    <m:mrow>
+     <m:msub>
+      <m:mi>U</m:mi>
+      <m:mn>1</m:mn>
+     </m:msub>
+     <m:mo>,</m:mo><m:msub>
+      <m:mi>U</m:mi>
+      <m:mn>2</m:mn>
+     </m:msub>
+     <m:mn>,...</m:mn>
+    </m:mrow>
+   <m:mo>)</m:mo></m:mrow>
+  </m:mrow>
+ </m:semantics>
+</m:math> of uniform (0,1) variates, and a second generator that outputs random integers , say between 1 and 16. 
+    </para>
+<list id="list_2" list-type="enumerated">
+	    <title>The algorithm for the combined, shuffled generator is as follows:</title>
+	    <item>
+Set up a “table” in memory of locations 1 through 16 and store the values <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:msub>
+    <m:mi>U</m:mi>
+    <m:mn>1</m:mn>
+   </m:msub>
+   <m:mo>,</m:mo><m:msub>
+    <m:mi>U</m:mi>
+    <m:mn>2</m:mn>
+   </m:msub>
+   <m:mn>,...,</m:mn><m:msub>
+    <m:mi>U</m:mi>
+    <m:mrow>
+     <m:mn>16</m:mn>
+    </m:mrow>
+   </m:msub>
+   </m:mrow>
+ </m:semantics>
+</m:math>
+ sequentially in the table.           
+            </item> 
+	    <item>
+Generate one value, <emphasis>V</emphasis>, between 1 and 16 from the second generator.
+            </item> 
+	    <item>
+Return the <emphasis>U</emphasis> variate from location <emphasis>V</emphasis> in the table as the desired output pseudo-random variate.
+            </item>
+	    <item>
+Generate a new <emphasis>U</emphasis> variate and store it in the location <emphasis>V</emphasis> that was just accessed. 
+            </item>
+	    <item>
+If more random variates are desired, return to Step 2. 
+            </item>
+
+	  </list> 
+<note type="Notice" id="idm5683024"><label>Notice</label>
+the size of the table can be any value, with larger tables creating more randomness but requiring more memory allocation 
+</note>
+
+
+ <para id="para_9">
+This method of shuffling by randomly accessing and filling a table  is due to <emphasis>MacLaren and Marsaglia (1965)</emphasis>. Another scheme, attributed to <emphasis>M.Gentlemanin Andrews et al. (1972)</emphasis>, is to permute the table of 128 random numbers before returning them for use. 
+The use of this type of combination of generators has also been described in the contexts of simulation problems in physics by <emphasis>Binder and Stauffer (1984)</emphasis>. 
+
+    </para>
+        </section>
+         </section>
+
+
+
+    <para id="delete_me">
+       <!-- Insert module text here -->
+    </para>   
+  </content>
+  
+</document>

@@ -1,0 +1,1736 @@
+<document xmlns="http://cnx.rice.edu/cnxml" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:md="http://cnx.rice.edu/mdml">
+  <title>THE IVERSE PROBABILITY METHOD FOR GENERATING RANDOM VARIABLES</title>
+  <metadata><md:content-id>undefined</md:content-id><md:title/><md:uuid>81ad1d60-479f-4153-9001-c923bc919b04</md:uuid>
+</metadata>
+  <content>
+
+<section id="sec_1">
+  <title>THE IVERSE PROBABILITY METHOD FOR GENERATING RANDOM VARIABLES</title> 
+  <para id="para_1">
+Once <link document="m13103" target-id="sec_1">the generation of the uniform random variable</link> is established, it can be used to generate other types of random variables.  
+
+</para>
+         <section id="sec_2">
+  <title>The Continuous Case</title> 
+  <para id="para_2">
+<term>THEOREM I</term>
+</para>
+<para id="para_3">
+Let <emphasis>X</emphasis> have a continuous distribution <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:msub>
+    <m:mi>F</m:mi>
+    <m:mi>X</m:mi>
+   </m:msub>
+   <m:mrow><m:mo>(</m:mo>
+    <m:mi>x</m:mi>
+   <m:mo>)</m:mo></m:mrow>
+  </m:mrow>
+      </m:semantics>
+</m:math>, so that <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:msubsup>
+    <m:mi>F</m:mi>
+    <m:mi>X</m:mi>
+    <m:mrow>
+     <m:mo>−</m:mo><m:mn>1</m:mn>
+    </m:mrow>
+   </m:msubsup>
+   <m:mrow><m:mo>(</m:mo>
+    <m:mi>α</m:mi>
+   <m:mo>)</m:mo></m:mrow>
+  </m:mrow>
+ </m:semantics>
+</m:math> exists for <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mn>0</m:mn><m:mo>&lt;</m:mo><m:mi>α</m:mi><m:mo>&lt;</m:mo><m:mn>1</m:mn>
+  </m:mrow>
+ </m:semantics>
+</m:math> (and is hopefully countable). Then the random variable <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:msubsup>
+    <m:mi>F</m:mi>
+    <m:mi>X</m:mi>
+    <m:mrow>
+     <m:mo>−</m:mo><m:mn>1</m:mn>
+    </m:mrow>
+   </m:msubsup>
+   <m:mrow><m:mo>(</m:mo>
+    <m:mi>U</m:mi>
+   <m:mo>)</m:mo></m:mrow>
+  </m:mrow>
+ </m:semantics>
+</m:math>
+ has distribution <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:msub>
+    <m:mi>F</m:mi>
+    <m:mi>X</m:mi>
+   </m:msub>
+   <m:mrow><m:mo>(</m:mo>
+    <m:mi>x</m:mi>
+   <m:mo>)</m:mo></m:mrow>
+  </m:mrow>
+      </m:semantics>
+</m:math>, <emphasis>U</emphasis> is uniformly distributed on (0,1).
+</para>
+
+<para id="para_4">
+<term>PROOF</term>
+</para>
+<equation id="eq_l">
+<m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mi>P</m:mi><m:mrow><m:mo>(</m:mo>
+    <m:mrow>
+     <m:msubsup>
+      <m:mi>F</m:mi>
+      <m:mi>X</m:mi>
+      <m:mrow>
+       <m:mo>−</m:mo><m:mn>1</m:mn>
+      </m:mrow>
+     </m:msubsup>
+     <m:mrow><m:mo>(</m:mo>
+      <m:mi>U</m:mi>
+     <m:mo>)</m:mo></m:mrow><m:mo>≤</m:mo><m:mi>x</m:mi>
+    </m:mrow>
+   <m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mi>P</m:mi><m:mrow><m:mo>(</m:mo>
+    <m:mrow>
+     <m:msub>
+      <m:mi>F</m:mi>
+      <m:mi>X</m:mi>
+     </m:msub>
+     <m:mrow><m:mo>(</m:mo>
+      <m:mrow>
+       <m:msubsup>
+        <m:mi>F</m:mi>
+        <m:mi>X</m:mi>
+        <m:mrow>
+         <m:mo>−</m:mo><m:mn>1</m:mn>
+        </m:mrow>
+       </m:msubsup>
+       <m:mrow><m:mo>(</m:mo>
+        <m:mi>U</m:mi>
+       <m:mo>)</m:mo></m:mrow>
+      </m:mrow>
+     <m:mo>)</m:mo></m:mrow><m:mo>≤</m:mo><m:msub>
+      <m:mi>F</m:mi>
+      <m:mi>X</m:mi>
+     </m:msub>
+     <m:mrow><m:mo>(</m:mo>
+      <m:mi>x</m:mi>
+     <m:mo>)</m:mo></m:mrow>
+    </m:mrow>
+   <m:mo>)</m:mo></m:mrow><m:mo>.</m:mo>
+  </m:mrow>
+</m:semantics>
+</m:math>
+</equation>
+
+<para id="para_5">
+Because <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:msub>
+    <m:mi>F</m:mi>
+    <m:mi>X</m:mi>
+   </m:msub>
+   <m:mrow><m:mo>(</m:mo>
+    <m:mi>x</m:mi>
+   <m:mo>)</m:mo></m:mrow>
+  </m:mrow>
+      </m:semantics>
+</m:math>
+ is monotone. Thus,
+</para>
+<equation id="eq_2">
+<m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mi>P</m:mi><m:mrow><m:mo>(</m:mo>
+    <m:mrow>
+     <m:msubsup>
+      <m:mi>F</m:mi>
+      <m:mi>X</m:mi>
+      <m:mrow>
+       <m:mo>−</m:mo><m:mn>1</m:mn>
+      </m:mrow>
+     </m:msubsup>
+     <m:mrow><m:mo>(</m:mo>
+      <m:mi>U</m:mi>
+     <m:mo>)</m:mo></m:mrow><m:mo>≤</m:mo><m:mi>x</m:mi>
+    </m:mrow>
+   <m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mi>P</m:mi><m:mrow><m:mo>(</m:mo>
+    <m:mrow>
+     <m:mi>U</m:mi><m:mo>≤</m:mo><m:msub>
+      <m:mi>F</m:mi>
+      <m:mi>X</m:mi>
+     </m:msub>
+     <m:mrow><m:mo>(</m:mo>
+      <m:mi>x</m:mi>
+     <m:mo>)</m:mo></m:mrow>
+    </m:mrow>
+   <m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:msub>
+    <m:mi>F</m:mi>
+    <m:mi>X</m:mi>
+   </m:msub>
+   <m:mrow><m:mo>(</m:mo>
+    <m:mi>x</m:mi>
+   <m:mo>)</m:mo></m:mrow><m:mo>.</m:mo>
+  </m:mrow>
+ </m:semantics>
+</m:math>
+</equation>
+<para id="para_6">
+The last step follows because <emphasis>U</emphasis> is uniformly distributed on (0,1). Diagrammatically, we have that <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mrow><m:mo>(</m:mo>
+    <m:mrow>
+     <m:mi>X</m:mi><m:mo>≤</m:mo><m:mi>x</m:mi>
+    </m:mrow>
+   <m:mo>)</m:mo></m:mrow>
+  </m:mrow>
+ </m:semantics>
+</m:math> if and only if <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mrow><m:mo>[</m:mo> <m:mrow>
+    <m:mi>U</m:mi><m:mo>≤</m:mo><m:msub>
+     <m:mi>F</m:mi>
+     <m:mi>X</m:mi>
+    </m:msub>
+    <m:mrow><m:mo>(</m:mo>
+     <m:mi>x</m:mi>
+    <m:mo>)</m:mo></m:mrow>
+   </m:mrow> <m:mo>]</m:mo></m:mrow>
+  </m:mrow>
+ </m:semantics>
+</m:math>, an event of probability <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:msub>
+    <m:mi>F</m:mi>
+    <m:mi>X</m:mi>
+   </m:msub>
+   <m:mrow><m:mo>(</m:mo>
+    <m:mi>x</m:mi>
+   <m:mo>)</m:mo></m:mrow>
+  </m:mrow>
+      </m:semantics>
+</m:math>.
+</para> 
+<para id="para_7">
+As long as we can invert the distribution function <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:msub>
+    <m:mi>F</m:mi>
+    <m:mi>X</m:mi>
+   </m:msub>
+   <m:mrow><m:mo>(</m:mo>
+    <m:mi>x</m:mi>
+   <m:mo>)</m:mo></m:mrow>
+  </m:mrow>
+      </m:semantics>
+</m:math> to get the inverse distribution function <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:msubsup>
+    <m:mi>F</m:mi>
+    <m:mi>X</m:mi>
+    <m:mrow>
+     <m:mo>−</m:mo><m:mn>1</m:mn>
+    </m:mrow>
+   </m:msubsup>
+   <m:mrow><m:mo>(</m:mo>
+    <m:mi>α</m:mi>
+   <m:mo>)</m:mo></m:mrow>
+  </m:mrow>
+ </m:semantics>
+</m:math>, the theorem assures us we can start with a pseudo-random uniform variable <emphasis>U</emphasis> and turn into a random variable <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:msubsup>
+    <m:mi>F</m:mi>
+    <m:mi>X</m:mi>
+    <m:mrow>
+     <m:mo>−</m:mo><m:mn>1</m:mn>
+    </m:mrow>
+   </m:msubsup>
+   <m:mrow><m:mo>(</m:mo>
+    <m:mi>U</m:mi>
+   <m:mo>)</m:mo></m:mrow>
+  </m:mrow>
+ </m:semantics>
+</m:math>, which has the required distribution <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:msub>
+    <m:mi>F</m:mi>
+    <m:mi>X</m:mi>
+   </m:msub>
+   <m:mrow><m:mo>(</m:mo>
+    <m:mi>x</m:mi>
+   <m:mo>)</m:mo></m:mrow>
+  </m:mrow>
+      </m:semantics>
+</m:math>. 
+</para> 
+
+  <example id="ex_1">
+
+	  <para id="para_8">
+<term>The Exponential Distribution</term>
+
+	  </para>  
+
+	  <para id="para_9">
+ Consider the exponential distribution defined as
+          </para>    
+
+ <equation id="eq_3">	
+<m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mi>α</m:mi><m:mo>=</m:mo><m:msub>
+    <m:mi>F</m:mi>
+    <m:mi>X</m:mi>
+   </m:msub>
+   <m:mrow><m:mo>(</m:mo>
+    <m:mi>x</m:mi>
+   <m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mrow><m:mo>{</m:mo> <m:mtable columnalign="left">
+    <m:mtr>
+     <m:mtd>
+      <m:mn>1</m:mn><m:mo>−</m:mo><m:msup>
+       <m:mi>e</m:mi>
+       <m:mrow>
+        <m:mo>−</m:mo><m:mi>λ</m:mi><m:mi>x</m:mi>
+       </m:mrow>
+      </m:msup>
+      <m:mo>,</m:mo><m:mi>λ</m:mi><m:mo>&gt;</m:mo><m:mn>0,</m:mn><m:mi>x</m:mi><m:mo>≥</m:mo><m:mn>0,</m:mn>
+     </m:mtd>
+    </m:mtr>
+    <m:mtr>
+     <m:mtd>
+      <m:mn>0,</m:mn><m:mi>x</m:mi><m:mo>&lt;</m:mo><m:mn>0.</m:mn>
+     </m:mtd>
+    </m:mtr>
+   </m:mtable>
+    </m:mrow>
+  </m:mrow>
+</m:semantics>
+</m:math>
+
+</equation>
+	  <para id="para_10">
+Then <emphasis>f</emphasis> or the inverse distribution function we have          
+          </para>  
+<equation id="eq_4">
+<m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mi>x</m:mi><m:mo>=</m:mo><m:mo>−</m:mo><m:mfrac>
+    <m:mn>1</m:mn>
+    <m:mi>λ</m:mi>
+   </m:mfrac>
+   <m:mi>ln</m:mi><m:mo>⁡</m:mo><m:mrow><m:mo>(</m:mo>
+    <m:mrow>
+     <m:mn>1</m:mn><m:mo>−</m:mo><m:mi>α</m:mi>
+    </m:mrow>
+   <m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:msup>
+    <m:mi>F</m:mi>
+    <m:mrow>
+     <m:mo>−</m:mo><m:mn>1</m:mn>
+    </m:mrow>
+   </m:msup>
+   <m:mrow><m:mo>(</m:mo>
+    <m:mi>α</m:mi>
+   <m:mo>)</m:mo></m:mrow><m:mo>.</m:mo>
+  </m:mrow>
+ </m:semantics>
+</m:math>
+</equation>
+<para id="para_11">
+Thus if <emphasis>U</emphasis> is uniformly distributed on 0 to 1, then <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mi>X</m:mi><m:mo>=</m:mo><m:mo>−</m:mo><m:mfrac>
+    <m:mn>1</m:mn>
+    <m:mi>λ</m:mi>
+   </m:mfrac>
+   <m:mi>ln</m:mi><m:mo>⁡</m:mo><m:mrow><m:mo>(</m:mo>
+    <m:mrow>
+     <m:mn>1</m:mn><m:mo>−</m:mo><m:mi>U</m:mi>
+    </m:mrow>
+   <m:mo>)</m:mo></m:mrow>
+  </m:mrow>
+</m:semantics>
+</m:math> has the distribution of an exponential random variable with parameter λ. We  say, for convenience, that <emphasis>X</emphasis> is exponential (λ).          
+          </para> 
+
+<note type="Note that" id="idm10277248"><label>Note that</label>
+If <emphasis>U</emphasis> is uniform (0,1), then so is (1-<emphasis>U</emphasis>), and the pair <emphasis>U</emphasis> and (1-<emphasis>U</emphasis>) are interchangeable in terms of distribution. Hence, <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mi>X</m:mi><m:mo>'</m:mo><m:mo>=</m:mo><m:mo>−</m:mo><m:mfrac>
+    <m:mn>1</m:mn>
+    <m:mi>λ</m:mi>
+   </m:mfrac>
+   <m:mi>ln</m:mi><m:mo>⁡</m:mo><m:mrow><m:mo>(</m:mo>
+    <m:mi>U</m:mi>
+   <m:mo>)</m:mo></m:mrow>
+  </m:mrow>
+ </m:semantics>
+</m:math> is exponential. However, the two variables <emphasis>X</emphasis> and <emphasis>X’</emphasis> are correlated and are known as <term>an antithetic pair</term>.
+</note>
+
+</example>
+
+  <example id="ex_2">
+
+	  <para id="para_12">
+<term>Normal and Gamma Distributions</term>
+           </para>  
+
+	  <para id="para_13">
+For both these cases there is no simple functional form for the inverse distribution <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:msubsup>
+    <m:mi>F</m:mi>
+    <m:mi>X</m:mi>
+    <m:mrow>
+     <m:mo>−</m:mo><m:mn>1</m:mn>
+    </m:mrow>
+   </m:msubsup>
+   <m:mrow><m:mo>(</m:mo>
+    <m:mi>α</m:mi>
+   <m:mo>)</m:mo></m:mrow>
+  </m:mrow>
+ </m:semantics>
+</m:math>, but because of the importance of the Normal and Gamma distribution models, a great deal of effort has been expended in deriving good approximations.
+          </para>   
+          <para id="para_14">
+
+The Normal distribution is defined through its density,
+          </para>  
+ <equation id="eq_5"> 
+ <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:msub>
+    <m:mi>f</m:mi>
+    <m:mi>X</m:mi>
+   </m:msub>
+   <m:mrow><m:mo>(</m:mo>
+    <m:mi>x</m:mi>
+   <m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mfrac>
+    <m:mn>1</m:mn>
+    <m:mrow>
+     <m:msqrt>
+      <m:mrow>
+       <m:mn>2</m:mn><m:mi>π</m:mi><m:mi>σ</m:mi>
+      </m:mrow>
+     </m:msqrt>
+     
+    </m:mrow>
+   </m:mfrac>
+   <m:mi>exp</m:mi><m:mo>⁡</m:mo><m:mrow><m:mo>[</m:mo> <m:mrow>
+    <m:mfrac>
+     <m:mrow>
+      <m:mo>−</m:mo><m:msup>
+       <m:mrow>
+        <m:mrow><m:mo>(</m:mo>
+         <m:mrow>
+          <m:mi>x</m:mi><m:mo>−</m:mo><m:mi>μ</m:mi>
+         </m:mrow>
+        <m:mo>)</m:mo></m:mrow>
+       </m:mrow>
+       <m:mn>2</m:mn>
+      </m:msup>
+      
+     </m:mrow>
+     <m:mrow>
+      <m:mn>2</m:mn><m:msup>
+       <m:mi>σ</m:mi>
+       <m:mn>2</m:mn>
+      </m:msup>
+      
+     </m:mrow>
+    </m:mfrac>
+    </m:mrow> <m:mo>]</m:mo></m:mrow><m:mo>.</m:mo>
+  </m:mrow>
+      </m:semantics>
+</m:math>
+
+
+</equation>
+
+  
+
+          <para id="para_15">
+So that, 
+         </para> 
+
+ <equation id="eq_6"> 
+ <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:msub>
+    <m:mi>F</m:mi>
+    <m:mi>X</m:mi>
+   </m:msub>
+   <m:mrow><m:mo>(</m:mo>
+    <m:mi>x</m:mi>
+   <m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mstyle displaystyle="true">
+    <m:mrow><m:munderover>
+     <m:mo>∫</m:mo>
+     <m:mrow>
+      <m:mo>−</m:mo><m:mi>∞</m:mi>
+     </m:mrow>
+     <m:mi>∞</m:mi>
+    </m:munderover>
+    <m:mrow>
+     <m:mfrac>
+      <m:mn>1</m:mn>
+      <m:mrow>
+       <m:msqrt>
+        <m:mrow>
+         <m:mn>2</m:mn><m:mi>π</m:mi><m:mi>σ</m:mi>
+        </m:mrow>
+       </m:msqrt>
+       
+      </m:mrow>
+     </m:mfrac>
+     <m:mi>exp</m:mi><m:mo>⁡</m:mo><m:mrow><m:mo>[</m:mo> <m:mrow>
+      <m:mfrac>
+       <m:mrow>
+        <m:mo>−</m:mo><m:msup>
+         <m:mrow>
+          <m:mrow><m:mo>(</m:mo>
+           <m:mrow>
+            <m:mi>x</m:mi><m:mo>−</m:mo><m:mi>u</m:mi>
+           </m:mrow>
+          <m:mo>)</m:mo></m:mrow>
+         </m:mrow>
+         <m:mn>2</m:mn>
+        </m:msup>
+        
+       </m:mrow>
+       <m:mrow>
+        <m:mn>2</m:mn><m:msup>
+         <m:mi>σ</m:mi>
+         <m:mn>2</m:mn>
+        </m:msup>
+        
+       </m:mrow>
+      </m:mfrac>
+      
+     </m:mrow> <m:mo>]</m:mo></m:mrow>
+    </m:mrow>
+   </m:mrow>
+   
+  </m:mstyle><m:mi>d</m:mi><m:mi>v</m:mi><m:mo>.</m:mo>
+ </m:mrow>
+</m:semantics>
+</m:math>
+
+</equation>
+          <para id="para_16">
+The normal distribution function <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:msub>
+    <m:mi>F</m:mi>
+    <m:mi>X</m:mi>
+   </m:msub>
+   <m:mrow><m:mo>(</m:mo>
+    <m:mi>x</m:mi>
+   <m:mo>)</m:mo></m:mrow>
+  </m:mrow>
+      </m:semantics>
+</m:math> is also often denoted <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mi>Φ</m:mi><m:mrow><m:mo>(</m:mo>
+    <m:mi>x</m:mi>
+   <m:mo>)</m:mo></m:mrow>
+  </m:mrow>
+ </m:semantics>
+</m:math>, when the parameter <emphasis>u</emphasis> and <emphasis>σ</emphasis> are set to 0 to 1, respectively. The distribution has no closed-form inverse, <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:msubsup>
+    <m:mi>F</m:mi>
+    <m:mi>X</m:mi>
+    <m:mrow>
+     <m:mo>−</m:mo><m:mn>1</m:mn>
+    </m:mrow>
+   </m:msubsup>
+   <m:mrow><m:mo>(</m:mo>
+    <m:mi>α</m:mi>
+   <m:mo>)</m:mo></m:mrow>
+  </m:mrow>
+ </m:semantics>
+</m:math>, but the inverse is needed do often that <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:msup>
+    <m:mi>Φ</m:mi>
+    <m:mrow>
+     <m:mo>−</m:mo><m:mn>1</m:mn>
+    </m:mrow>
+   </m:msup>
+   <m:mrow><m:mo>(</m:mo>
+    <m:mi>α</m:mi>
+   <m:mo>)</m:mo></m:mrow>
+  </m:mrow>
+ </m:semantics>
+</m:math>, like logarithms  or exponentials, is a system function.   
+
+</para>  
+           <para id="para_17">
+<term>The inverse of the Gamma distribution function, which is given by</term>
+           </para>
+ <equation id="eq_7"> 
+<m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:msub>
+    <m:mi>F</m:mi>
+    <m:mi>X</m:mi>
+   </m:msub>
+   <m:mrow><m:mo>(</m:mo>
+    <m:mi>x</m:mi>
+   <m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mfrac>
+    <m:mn>1</m:mn>
+    <m:mrow>
+     <m:mi>Γ</m:mi><m:mrow><m:mo>(</m:mo>
+      <m:mi>k</m:mi>
+     <m:mo>)</m:mo></m:mrow>
+    </m:mrow>
+   </m:mfrac>
+   <m:mstyle displaystyle="true">
+    <m:mrow><m:munderover>
+     <m:mo>∫</m:mo>
+     <m:mn>0</m:mn>
+     <m:mrow>
+      <m:mi>k</m:mi><m:mi>x</m:mi><m:mo>/</m:mo><m:mi>u</m:mi>
+     </m:mrow>
+    </m:munderover>
+    <m:mrow>
+     <m:msup>
+      <m:mi>v</m:mi>
+      <m:mrow>
+       <m:mi>k</m:mi><m:mo>−</m:mo><m:mn>1</m:mn>
+      </m:mrow>
+     </m:msup>
+     
+    </m:mrow>
+   </m:mrow>
+   
+  </m:mstyle><m:msup>
+   <m:mi>e</m:mi>
+   <m:mrow>
+    <m:mo>−</m:mo><m:mi>v</m:mi>
+   </m:mrow>
+  </m:msup>
+  <m:mi>d</m:mi><m:mi>v</m:mi><m:mo>,</m:mo><m:mi>x</m:mi><m:mo>≥</m:mo><m:mn>0,</m:mn><m:mi>k</m:mi><m:mo>&gt;</m:mo><m:mn>0,</m:mn><m:mi>u</m:mi><m:mo>&gt;</m:mo><m:mn>0.</m:mn>
+ </m:mrow>
+</m:semantics>
+</m:math>
+
+ </equation>
+
+          <para id="para_18">
+Is more difficult to compute because its shape changes radically with the value of <emphasis>k</emphasis>. It is however available on most computers as a numerically reliable function. 
+           </para> 
+  </example>     	  
+ <example id="ex_3">
+
+	  <para id="para_19">
+<term>The Normal and Gamma Distributions</term>
+           </para> 
+	  <para id="para_20">
+A commonly used symmetric distribution, which has a shape very much like that of the Normal distribution, is the standardized logistic distribution. 
+           </para> 
+ <equation id="eq_8"> 
+ <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:msub>
+    <m:mi>F</m:mi>
+    <m:mi>X</m:mi>
+   </m:msub>
+   <m:mrow><m:mo>(</m:mo>
+    <m:mi>x</m:mi>
+   <m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mfrac>
+    <m:mrow>
+     <m:msup>
+      <m:mi>e</m:mi>
+      <m:mi>x</m:mi>
+     </m:msup>
+     
+    </m:mrow>
+    <m:mrow>
+     <m:mn>1</m:mn><m:mo>+</m:mo><m:msup>
+      <m:mi>e</m:mi>
+      <m:mi>x</m:mi>
+     </m:msup>
+     
+    </m:mrow>
+   </m:mfrac>
+   <m:mo>=</m:mo><m:mfrac>
+    <m:mn>1</m:mn>
+    <m:mrow>
+     <m:mn>1</m:mn><m:mo>+</m:mo><m:msup>
+      <m:mi>e</m:mi>
+      <m:mrow>
+       <m:mo>−</m:mo><m:mi>x</m:mi>
+      </m:mrow>
+     </m:msup>
+     
+    </m:mrow>
+   </m:mfrac>
+   <m:mo>,</m:mo><m:mo>−</m:mo><m:mi>∞</m:mi><m:mo>&lt;</m:mo><m:mi>x</m:mi><m:mo>&lt;</m:mo><m:mi>∞</m:mi><m:mo>,</m:mo>
+  </m:mrow>
+ </m:semantics>
+</m:math>
+
+</equation>
+	  <para id="para_21">
+with probability density function
+           </para> 
+
+<equation id="eq_9"> 
+<m:math display="block">
+ <m:semantics>
+  <m:mrow>
+   <m:msub>
+    <m:mi>F</m:mi>
+    <m:mi>X</m:mi>
+   </m:msub>
+   <m:mrow><m:mo>(</m:mo>
+    <m:mi>x</m:mi>
+   <m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mfrac>
+    <m:mrow>
+     <m:msup>
+      <m:mi>e</m:mi>
+      <m:mi>x</m:mi>
+     </m:msup>
+     
+    </m:mrow>
+    <m:mrow>
+     <m:mn>1</m:mn><m:mo>+</m:mo><m:msup>
+      <m:mi>e</m:mi>
+      <m:mi>x</m:mi>
+     </m:msup>
+     
+    </m:mrow>
+   </m:mfrac>
+   <m:mo>=</m:mo><m:mfrac>
+    <m:mn>1</m:mn>
+    <m:mrow>
+     <m:mn>1</m:mn><m:mo>+</m:mo><m:msup>
+      <m:mi>e</m:mi>
+      <m:mrow>
+       <m:mo>−</m:mo><m:mi>x</m:mi>
+      </m:mrow>
+     </m:msup>
+     
+    </m:mrow>
+   </m:mfrac>
+   <m:mo>,</m:mo><m:mo>−</m:mo><m:mi>∞</m:mi><m:mo>&lt;</m:mo><m:mi>x</m:mi><m:mo>&lt;</m:mo><m:mi>∞</m:mi><m:mo>.</m:mo>
+  </m:mrow>
+ </m:semantics>
+</m:math>
+
+ 
+</equation>
+<note type="Note that" id="idm10749072"><label>Note that</label>
+<m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:msub>
+    <m:mi>F</m:mi>
+    <m:mi>X</m:mi>
+   </m:msub>
+   <m:mrow><m:mo>(</m:mo>
+    <m:mrow>
+     <m:mo>−</m:mo><m:mi>∞</m:mi>
+    </m:mrow>
+   <m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:msup>
+    <m:mi>e</m:mi>
+    <m:mrow>
+     <m:mo>−</m:mo><m:mi>∞</m:mi>
+    </m:mrow>
+   </m:msup>
+   <m:mo>/</m:mo><m:mrow><m:mo>(</m:mo>
+    <m:mrow>
+     <m:mn>1</m:mn><m:mo>+</m:mo><m:msup>
+      <m:mi>e</m:mi>
+      <m:mrow>
+       <m:mo>−</m:mo><m:mi>∞</m:mi>
+      </m:mrow>
+     </m:msup>
+     
+    </m:mrow>
+   <m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>0</m:mn>
+  </m:mrow>
+ </m:semantics>
+</m:math>
+and <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:msub>
+    <m:mi>F</m:mi>
+    <m:mi>X</m:mi>
+   </m:msub>
+   <m:mrow><m:mo>(</m:mo>
+    <m:mi>∞</m:mi>
+   <m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>1</m:mn>
+  </m:mrow>
+</m:semantics>
+</m:math> by using the second form for <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:msub>
+    <m:mi>F</m:mi>
+    <m:mi>X</m:mi>
+   </m:msub>
+   <m:mrow><m:mo>(</m:mo>
+    <m:mi>x</m:mi>
+   <m:mo>)</m:mo></m:mrow>
+  </m:mrow>
+      </m:semantics>
+</m:math>.
+</note>
+	  <para id="para_22">
+The inverse is obtained by setting <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mi>α</m:mi><m:mo>=</m:mo><m:mfrac>
+    <m:mrow>
+     <m:msup>
+      <m:mi>e</m:mi>
+      <m:mi>x</m:mi>
+     </m:msup>
+     
+    </m:mrow>
+    <m:mrow>
+     <m:mn>1</m:mn><m:mo>+</m:mo><m:msup>
+      <m:mi>e</m:mi>
+      <m:mi>x</m:mi>
+     </m:msup>
+     
+    </m:mrow>
+   </m:mfrac>
+   <m:mo>.</m:mo>
+  </m:mrow>
+ </m:semantics>
+</m:math>
+Then, <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mi>α</m:mi><m:mo>+</m:mo><m:mi>α</m:mi><m:msup>
+    <m:mi>e</m:mi>
+    <m:mi>x</m:mi>
+   </m:msup>
+   <m:mo>=</m:mo><m:msup>
+    <m:mi>e</m:mi>
+    <m:mi>x</m:mi>
+   </m:msup>
+   
+  </m:mrow>
+</m:semantics>
+</m:math>
+ or <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mi>α</m:mi><m:mo>=</m:mo><m:msup>
+    <m:mi>e</m:mi>
+    <m:mi>x</m:mi>
+   </m:msup>
+   <m:mrow><m:mo>(</m:mo>
+    <m:mrow>
+     <m:mn>1</m:mn><m:mo>−</m:mo><m:mi>α</m:mi>
+    </m:mrow>
+   <m:mo>)</m:mo></m:mrow><m:mo>.</m:mo>
+  </m:mrow>
+</m:semantics>
+</m:math>
+ 
+           </para> 
+
+	  <para id="para_24">Therefore, <m:math display="block">
+ <m:semantics>
+  <m:mrow>
+   <m:mi>x</m:mi><m:mo>=</m:mo><m:msubsup>
+    <m:mi>F</m:mi>
+    <m:mi>X</m:mi>
+    <m:mrow>
+     <m:mo>−</m:mo><m:mn>1</m:mn>
+    </m:mrow>
+   </m:msubsup>
+   <m:mrow><m:mo>(</m:mo>
+    <m:mi>α</m:mi>
+   <m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mi>ln</m:mi><m:mo>⁡</m:mo><m:mi>α</m:mi><m:mo>−</m:mo><m:mi>ln</m:mi><m:mo>⁡</m:mo><m:mrow><m:mo>(</m:mo>
+    <m:mrow>
+     <m:mn>1</m:mn><m:mo>−</m:mo><m:mi>α</m:mi>
+    </m:mrow>
+   <m:mo>)</m:mo></m:mrow><m:mo>.</m:mo>
+  </m:mrow>
+ </m:semantics>
+</m:math>
+         </para> 
+
+	  <para id="para_25">
+And the random variable is generated, using the inverse probability integral method. As follows <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mi>X</m:mi><m:mo>=</m:mo><m:mi>ln</m:mi><m:mo>⁡</m:mo><m:mi>U</m:mi><m:mo>−</m:mo><m:mi>ln</m:mi><m:mo>⁡</m:mo><m:mrow><m:mo>(</m:mo>
+    <m:mrow>
+     <m:mn>1</m:mn><m:mo>−</m:mo><m:mi>U</m:mi>
+    </m:mrow>
+   <m:mo>)</m:mo></m:mrow><m:mo>.</m:mo>
+  </m:mrow>
+ </m:semantics>
+</m:math>
+    </para> 
+  </example> 
+         </section>
+          <section id="sec_3">
+  <title>The Discrete Case</title> 
+ <para id="para_27">
+Let <emphasis>X</emphasis> have a discrete distribution <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:msub>
+    <m:mi>F</m:mi>
+    <m:mi>X</m:mi>
+   </m:msub>
+   <m:mrow><m:mo>(</m:mo>
+    <m:mi>x</m:mi>
+   <m:mo>)</m:mo></m:mrow>
+  </m:mrow>
+      </m:semantics>
+</m:math> that is, <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:msub>
+    <m:mi>F</m:mi>
+    <m:mi>X</m:mi>
+   </m:msub>
+   <m:mrow><m:mo>(</m:mo>
+    <m:mi>x</m:mi>
+   <m:mo>)</m:mo></m:mrow>
+  </m:mrow>
+      </m:semantics>
+</m:math> jumps at points <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:msub>
+    <m:mi>x</m:mi>
+    <m:mi>k</m:mi>
+   </m:msub>
+   <m:mo>=</m:mo><m:mn>0,1,2,...</m:mn>
+  </m:mrow>
+ </m:semantics>
+</m:math>
+. Usually we have  the case that <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:msub>
+    <m:mi>x</m:mi>
+    <m:mi>k</m:mi>
+   </m:msub>
+   <m:mo>=</m:mo><m:mi>k</m:mi>
+  </m:mrow>
+ </m:semantics>
+</m:math>, so that <emphasis>X</emphasis> is an integer value.
+</para>
+
+  <para id="para_28">
+Let the probability function be denoted by
+</para>
+<equation id="eq_12"> 
+<m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:msub>
+    <m:mi>p</m:mi>
+    <m:mi>k</m:mi>
+   </m:msub>
+   <m:mo>=</m:mo><m:mi>P</m:mi><m:mrow><m:mo>(</m:mo>
+    <m:mrow>
+     <m:mi>X</m:mi><m:mo>=</m:mo><m:msub>
+      <m:mi>x</m:mi>
+      <m:mi>k</m:mi>
+     </m:msub>
+     
+    </m:mrow>
+   <m:mo>)</m:mo></m:mrow><m:mo>,</m:mo><m:mi>k</m:mi><m:mo>=</m:mo><m:mn>0,1,....</m:mn>
+  </m:mrow>
+</m:semantics>
+</m:math>
+
+</equation>
+  <para id="para_29">
+The probability distribution function is then,
+</para>
+<equation id="eq_13"> 
+<m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:msub>
+    <m:mi>F</m:mi>
+    <m:mi>X</m:mi>
+   </m:msub>
+   <m:mrow><m:mo>(</m:mo>
+    <m:mrow>
+     <m:msub>
+      <m:mi>x</m:mi>
+      <m:mi>k</m:mi>
+     </m:msub>
+     
+    </m:mrow>
+   <m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mi>P</m:mi><m:mrow><m:mo>(</m:mo>
+    <m:mrow>
+     <m:mi>X</m:mi><m:mo>≤</m:mo><m:msub>
+      <m:mi>x</m:mi>
+      <m:mi>k</m:mi>
+     </m:msub>
+     
+    </m:mrow>
+   <m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mstyle displaystyle="true">
+    <m:munder>
+     <m:mo>∑</m:mo>
+     <m:mrow>
+      <m:mi>j</m:mi><m:mo>≤</m:mo><m:mi>k</m:mi>
+     </m:mrow>
+    </m:munder>
+    <m:mrow>
+     <m:msub>
+      <m:mi>p</m:mi>
+      <m:mi>j</m:mi>
+     </m:msub>
+     
+    </m:mrow>
+   </m:mstyle><m:mo>,</m:mo><m:mi>k</m:mi><m:mo>=</m:mo><m:mn>0,1,...,</m:mn>
+  </m:mrow>
+ </m:semantics>
+</m:math>
+
+</equation>
+  <para id="para_30">
+and the reliability or survivor function is
+</para>
+<equation id="eq_14">
+<m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:msub>
+    <m:mi>R</m:mi>
+    <m:mi>X</m:mi>
+   </m:msub>
+   <m:mrow><m:mo>(</m:mo>
+    <m:mrow>
+     <m:msub>
+      <m:mi>x</m:mi>
+      <m:mi>k</m:mi>
+     </m:msub>
+     
+    </m:mrow>
+   <m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>1</m:mn><m:mo>−</m:mo><m:msub>
+    <m:mi>F</m:mi>
+    <m:mi>X</m:mi>
+   </m:msub>
+   <m:mrow><m:mo>(</m:mo>
+    <m:mrow>
+     <m:msub>
+      <m:mi>x</m:mi>
+      <m:mi>k</m:mi>
+     </m:msub>
+     
+    </m:mrow>
+   <m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mi>P</m:mi><m:mrow><m:mo>(</m:mo>
+    <m:mrow>
+     <m:mi>X</m:mi><m:mo>&gt;</m:mo><m:msub>
+      <m:mi>x</m:mi>
+      <m:mi>k</m:mi>
+     </m:msub>
+     
+    </m:mrow>
+   <m:mo>)</m:mo></m:mrow><m:mo>,</m:mo><m:mi>k</m:mi><m:mo>=</m:mo><m:mn>0,1,....</m:mn>
+  </m:mrow>
+ </m:semantics>
+</m:math>
+
+</equation> 
+ <para id="para_31">
+The survivor function is sometimes easier to work with than the distribution function, and in fields such as reliability, it is habitually used. The inverse probability integral transform method of generating discrete random variables is based on the following theorem.
+</para>
+
+ <para id="para_32">
+<term>THEOREM</term>
+</para>
+<para id="para_33">
+ Let <emphasis>U</emphasis> be uniformly distributed in the interval (0,1). Set <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mi>X</m:mi><m:mo>=</m:mo><m:msub>
+    <m:mi>x</m:mi>
+    <m:mi>k</m:mi>
+   </m:msub>
+    </m:mrow>
+ </m:semantics>
+</m:math> whenever <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:msub>
+    <m:mi>F</m:mi>
+    <m:mi>X</m:mi>
+   </m:msub>
+   <m:mrow><m:mo>(</m:mo>
+    <m:mrow>
+     <m:msub>
+      <m:mi>x</m:mi>
+      <m:mrow>
+       <m:mi>k</m:mi><m:mo>−</m:mo><m:mn>1</m:mn>
+      </m:mrow>
+     </m:msub>
+     
+    </m:mrow>
+   <m:mo>)</m:mo></m:mrow><m:mo>&lt;</m:mo><m:mi>U</m:mi><m:mo>≤</m:mo><m:msub>
+    <m:mi>F</m:mi>
+    <m:mi>X</m:mi>
+   </m:msub>
+   <m:mrow><m:mo>(</m:mo>
+    <m:mrow>
+     <m:msub>
+      <m:mi>x</m:mi>
+      <m:mi>k</m:mi>
+     </m:msub>
+     
+    </m:mrow>
+   <m:mo>)</m:mo></m:mrow>
+  </m:mrow>
+ </m:semantics>
+</m:math>, for <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mi>k</m:mi><m:mo>=</m:mo><m:mn>0,1,2,...</m:mn>
+  </m:mrow>
+</m:semantics>
+</m:math> with <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:msub>
+    <m:mi>F</m:mi>
+    <m:mi>X</m:mi>
+   </m:msub>
+   <m:mrow><m:mo>(</m:mo>
+    <m:mrow>
+     <m:msub>
+      <m:mi>x</m:mi>
+      <m:mrow>
+       <m:mo>−</m:mo><m:mn>1</m:mn>
+      </m:mrow>
+     </m:msub>
+     
+    </m:mrow>
+   <m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>0</m:mn>
+  </m:mrow>
+ </m:semantics>
+</m:math>. Then <emphasis>X</emphasis> has probability function <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:msub>
+    <m:mi>p</m:mi>
+    <m:mi>k</m:mi>
+   </m:msub>
+   </m:mrow>
+ </m:semantics>
+</m:math>.
+
+</para>
+ <para id="para_34">
+<term>PROOF</term>
+</para>
+ <para id="para_35">
+By definition of the procedure,
+</para>
+ <para id="para_36">
+<m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mi>X</m:mi><m:mo>=</m:mo><m:msub>
+    <m:mi>x</m:mi>
+    <m:mi>k</m:mi>
+   </m:msub>
+    </m:mrow>
+ </m:semantics>
+</m:math>
+if and only if <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:msub>
+    <m:mi>F</m:mi>
+    <m:mi>X</m:mi>
+   </m:msub>
+   <m:mrow><m:mo>(</m:mo>
+    <m:mrow>
+     <m:msub>
+      <m:mi>x</m:mi>
+      <m:mrow>
+       <m:mi>k</m:mi><m:mo>−</m:mo><m:mn>1</m:mn>
+      </m:mrow>
+     </m:msub>
+     
+    </m:mrow>
+   <m:mo>)</m:mo></m:mrow><m:mo>&lt;</m:mo><m:mi>U</m:mi><m:mo>≤</m:mo><m:msub>
+    <m:mi>F</m:mi>
+    <m:mi>X</m:mi>
+   </m:msub>
+   <m:mrow><m:mo>(</m:mo>
+    <m:mrow>
+     <m:msub>
+      <m:mi>x</m:mi>
+      <m:mi>k</m:mi>
+     </m:msub>
+     
+    </m:mrow>
+   <m:mo>)</m:mo></m:mrow>
+  </m:mrow>
+ </m:semantics>
+</m:math>. 
+</para>
+
+ <para id="para_37">
+Therefore, 
+</para>
+<equation id="eq_15">
+<m:math display="block">
+ <m:semantics>
+  <m:mrow>
+   <m:mi>P</m:mi><m:mrow><m:mo>(</m:mo>
+    <m:mrow>
+     <m:mi>X</m:mi><m:mo>=</m:mo><m:msub>
+      <m:mi>x</m:mi>
+      <m:mi>k</m:mi>
+     </m:msub>
+     
+    </m:mrow>
+   <m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mi>P</m:mi><m:msub>
+    <m:mi>F</m:mi>
+    <m:mi>X</m:mi>
+   </m:msub>
+   <m:mrow><m:mo>(</m:mo>
+    <m:mrow>
+     <m:mrow><m:mo>(</m:mo>
+      <m:mrow>
+       <m:msub>
+        <m:mi>x</m:mi>
+        <m:mrow>
+         <m:mi>k</m:mi><m:mo>−</m:mo><m:mn>1</m:mn>
+        </m:mrow>
+       </m:msub>
+       
+      </m:mrow>
+     <m:mo>)</m:mo></m:mrow><m:mo>&lt;</m:mo><m:mi>U</m:mi><m:mo>≤</m:mo><m:msub>
+      <m:mi>F</m:mi>
+      <m:mi>X</m:mi>
+     </m:msub>
+     <m:mrow><m:mo>(</m:mo>
+      <m:mrow>
+       <m:msub>
+        <m:mi>x</m:mi>
+        <m:mi>k</m:mi>
+       </m:msub>
+       
+      </m:mrow>
+     <m:mo>)</m:mo></m:mrow>
+    </m:mrow>
+   <m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:msub>
+    <m:mi>F</m:mi>
+    <m:mi>X</m:mi>
+   </m:msub>
+   <m:mrow><m:mo>(</m:mo>
+    <m:mrow>
+     <m:msub>
+      <m:mi>x</m:mi>
+      <m:mi>k</m:mi>
+     </m:msub>
+     
+    </m:mrow>
+   <m:mo>)</m:mo></m:mrow><m:mo>−</m:mo><m:mi>F</m:mi><m:mrow><m:mo>(</m:mo>
+    <m:mrow>
+     <m:msub>
+      <m:mi>x</m:mi>
+      <m:mrow>
+       <m:mi>k</m:mi><m:mo>−</m:mo><m:mn>1</m:mn>
+      </m:mrow>
+     </m:msub>
+     
+    </m:mrow>
+   <m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:msub>
+    <m:mi>p</m:mi>
+    <m:mi>k</m:mi>
+   </m:msub>
+   <m:mo>.</m:mo>
+  </m:mrow>
+ </m:semantics>
+</m:math>
+</equation>
+ <para id="para_38">
+By the definition of the distribution function of a uniform (0,1) random variable.
+</para>
+ <para id="para_39">
+Thus the inverse probability integral transform algorithm for generating <emphasis>X</emphasis> is to find <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:msub>
+    <m:mi>x</m:mi>
+    <m:mi>k</m:mi>
+   </m:msub>
+     </m:mrow>
+ </m:semantics>
+</m:math> such that <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mi>U</m:mi><m:mo>≤</m:mo><m:msub>
+    <m:mi>F</m:mi>
+    <m:mi>X</m:mi>
+   </m:msub>
+   <m:mrow><m:mo>(</m:mo>
+    <m:mrow>
+     <m:msub>
+      <m:mi>x</m:mi>
+      <m:mi>k</m:mi>
+     </m:msub>
+      </m:mrow>
+   <m:mo>)</m:mo></m:mrow>
+  </m:mrow>
+</m:semantics>
+</m:math> and <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mi>U</m:mi><m:mo>&gt;</m:mo><m:msub>
+    <m:mi>F</m:mi>
+    <m:mi>X</m:mi>
+   </m:msub>
+   <m:mrow><m:mo>(</m:mo>
+    <m:mrow>
+     <m:msub>
+      <m:mi>x</m:mi>
+      <m:mrow>
+       <m:mi>k</m:mi><m:mo>−</m:mo><m:mn>1</m:mn>
+      </m:mrow>
+     </m:msub>
+         </m:mrow>
+   <m:mo>)</m:mo></m:mrow>
+  </m:mrow>
+ </m:semantics>
+</m:math> and then set <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mi>X</m:mi><m:mo>=</m:mo><m:msub>
+    <m:mi>x</m:mi>
+    <m:mi>k</m:mi>
+   </m:msub>
+     </m:mrow>
+</m:semantics>
+</m:math>. 
+ 
+</para>
+ <para id="para_40">
+In the discrete case, there is never any problem of numerically computing the inverse distribution function, but the search to find the values <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:msub>
+    <m:mi>F</m:mi>
+    <m:mi>X</m:mi>
+   </m:msub>
+   <m:mo>=</m:mo><m:mrow><m:mo>(</m:mo>
+    <m:mrow>
+     <m:msub>
+      <m:mi>x</m:mi>
+      <m:mi>k</m:mi>
+     </m:msub>
+         </m:mrow>
+   <m:mo>)</m:mo></m:mrow>
+  </m:mrow>
+ </m:semantics>
+</m:math> and <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:msub>
+    <m:mi>F</m:mi>
+    <m:mi>X</m:mi>
+   </m:msub>
+   <m:mrow><m:mo>(</m:mo>
+    <m:mrow>
+     <m:msub>
+      <m:mi>x</m:mi>
+      <m:mrow>
+       <m:mi>k</m:mi><m:mo>−</m:mo><m:mn>1</m:mn>
+      </m:mrow>
+     </m:msub>
+        </m:mrow>
+   <m:mo>)</m:mo></m:mrow>
+  </m:mrow>
+ </m:semantics>
+</m:math> between which <emphasis>U</emphasis> lies can be time-consuming, generally, sophisticated search procedures are required. In implementing this procedure, we try to minimize the number of times one compares <emphasis>U</emphasis> to <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:msub>
+    <m:mi>F</m:mi>
+    <m:mi>X</m:mi>
+   </m:msub>
+   <m:mo>=</m:mo><m:mrow><m:mo>(</m:mo>
+    <m:mrow>
+     <m:msub>
+      <m:mi>x</m:mi>
+      <m:mi>k</m:mi>
+     </m:msub>
+         </m:mrow>
+   <m:mo>)</m:mo></m:mrow>
+  </m:mrow>
+ </m:semantics>
+</m:math>. If we want to generate many of <emphasis>X</emphasis>, and <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:msub>
+    <m:mi>F</m:mi>
+    <m:mi>X</m:mi>
+   </m:msub>
+   <m:mo>=</m:mo><m:mrow><m:mo>(</m:mo>
+    <m:mrow>
+     <m:msub>
+      <m:mi>x</m:mi>
+      <m:mi>k</m:mi>
+     </m:msub>
+         </m:mrow>
+   <m:mo>)</m:mo></m:mrow>
+  </m:mrow>
+ </m:semantics>
+</m:math> is not easily computable, we may also want to store <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:msub>
+    <m:mi>F</m:mi>
+    <m:mi>X</m:mi>
+   </m:msub>
+   <m:mo>=</m:mo><m:mrow><m:mo>(</m:mo>
+    <m:mrow>
+     <m:msub>
+      <m:mi>x</m:mi>
+      <m:mi>k</m:mi>
+     </m:msub>
+         </m:mrow>
+   <m:mo>)</m:mo></m:mrow>
+  </m:mrow>
+ </m:semantics>
+</m:math> for all <emphasis>k</emphasis> rather than recomputed it. Then we have to worry about minimizing the total memory to store values of <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:msub>
+    <m:mi>F</m:mi>
+    <m:mi>X</m:mi>
+   </m:msub>
+   <m:mo>=</m:mo><m:mrow><m:mo>(</m:mo>
+    <m:mrow>
+     <m:msub>
+      <m:mi>x</m:mi>
+      <m:mi>k</m:mi>
+     </m:msub>
+         </m:mrow>
+   <m:mo>)</m:mo></m:mrow>
+  </m:mrow>
+ </m:semantics>
+</m:math>. 
+</para>
+
+
+  <example id="ex_4">
+ <para id="para_41">
+<term>The Binary Random Variable</term>
+</para>
+ <para id="para_42">
+To generate a binary-valued random variable <emphasis>X</emphasis> that is 1 with probability <emphasis>p</emphasis> and 0 with probability 1-<emphasis>p</emphasis>, the algorithm is:
+</para>
+          <list id="list_1">
+
+	    <item>
+If <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mi>U</m:mi><m:mo>≤</m:mo><m:mi>p</m:mi>
+  </m:mrow>
+ </m:semantics>
+</m:math>, set <emphasis>X</emphasis>=1.
+            </item> 
+
+	    <item>
+Else set <emphasis>X</emphasis>=0.
+            </item> 
+
+	  </list>
+  </example>
+  <example id="ex_5">
+<para id="para_43">
+The Discrete Uniform Random Variable
+</para>
+ <para id="para_44">
+Let <emphasis>X</emphasis> take on integer values between and including the integers <emphasis>a</emphasis> and <emphasis>b</emphasis>, where <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mi>a</m:mi><m:mo>≤</m:mo><m:mi>b</m:mi>
+  </m:mrow>
+</m:semantics>
+</m:math>, with equal probabilities. Since there are <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mrow><m:mo>(</m:mo>
+    <m:mrow>
+     <m:mi>b</m:mi><m:mo>−</m:mo><m:mi>a</m:mi><m:mo>+</m:mo><m:mn>1</m:mn>
+    </m:mrow>
+   <m:mo>)</m:mo></m:mrow>
+  </m:mrow>
+ </m:semantics>
+</m:math> distinct values for <emphasis>X</emphasis>, the probability of getting any one of these values is, by definition, <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mn>1</m:mn><m:mo>/</m:mo><m:mrow><m:mo>(</m:mo>
+    <m:mrow>
+     <m:mi>b</m:mi><m:mo>−</m:mo><m:mi>a</m:mi><m:mo>+</m:mo><m:mn>1</m:mn>
+    </m:mrow>
+   <m:mo>)</m:mo></m:mrow>
+  </m:mrow>
+ </m:semantics>
+</m:math>. If we start with a continuous uniform (0,1) random number <emphasis>U</emphasis>, then the discrete inverse probability integral transform shows that
+</para>
+ <para id="para_45">
+<emphasis>X</emphasis>= integer part of <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mrow><m:mo>[</m:mo> <m:mrow>
+    <m:mrow><m:mo>(</m:mo>
+     <m:mrow>
+      <m:mi>b</m:mi><m:mo>−</m:mo><m:mi>a</m:mi><m:mo>+</m:mo><m:mn>1</m:mn>
+     </m:mrow>
+    <m:mo>)</m:mo></m:mrow><m:mi>U</m:mi><m:mo>+</m:mo><m:mi>a</m:mi>
+   </m:mrow> <m:mo>]</m:mo></m:mrow>
+  </m:mrow>
+ </m:semantics>
+</m:math>. 
+</para>
+<note type="Note that" id="idm1161792"><label>Note that</label>
+The continuous random variable <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mrow><m:mo>[</m:mo> <m:mrow>
+    <m:mrow><m:mo>(</m:mo>
+     <m:mrow>
+      <m:mi>b</m:mi><m:mo>−</m:mo><m:mi>a</m:mi><m:mo>+</m:mo><m:mn>1</m:mn>
+     </m:mrow>
+    <m:mo>)</m:mo></m:mrow><m:mi>U</m:mi><m:mo>+</m:mo><m:mi>a</m:mi>
+   </m:mrow> <m:mo>]</m:mo></m:mrow>
+  </m:mrow>
+ </m:semantics>
+</m:math>
+ is uniformly distributed in the open interval <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mrow><m:mo>(</m:mo>
+    <m:mrow>
+     <m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi><m:mo>+</m:mo><m:mn>1</m:mn>
+    </m:mrow>
+   <m:mo>)</m:mo></m:mrow>
+  </m:mrow>
+</m:semantics>
+</m:math>
+. 
+</note>
+  </example>
+  <example id="ex_6">
+ <para id="para_46">
+<term>The Geometric Distribution</term>
+</para>
+ <para id="para_47">
+Let <emphasis>X</emphasis> take values on zero and the positive integers with a geometric distribution. Thus,
+</para>
+<equation id="eq_16">
+<m:math display="block">
+ <m:semantics>
+  <m:mrow>
+   <m:mi>P</m:mi><m:mrow><m:mo>(</m:mo>
+    <m:mrow>
+     <m:mi>X</m:mi><m:mo>=</m:mo><m:mi>k</m:mi>
+    </m:mrow>
+   <m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:msub>
+    <m:mi>p</m:mi>
+    <m:mi>k</m:mi>
+   </m:msub>
+   <m:mo>=</m:mo><m:mrow><m:mo>(</m:mo>
+    <m:mrow>
+     <m:mn>1</m:mn><m:mo>−</m:mo><m:mi>ρ</m:mi>
+    </m:mrow>
+   <m:mo>)</m:mo></m:mrow><m:msup>
+    <m:mi>ρ</m:mi>
+    <m:mi>k</m:mi>
+   </m:msup>
+   <m:mo>,</m:mo><m:mi>k</m:mi><m:mo>=</m:mo><m:mn>0</m:mn><m:mo>,</m:mo><m:mn>1</m:mn><m:mo>,</m:mo><m:mn>2</m:mn><m:mo>,</m:mo><m:mn>....</m:mn><m:mo>,</m:mo><m:mn>0</m:mn><m:mo>&lt;</m:mo><m:mi>ρ</m:mi><m:mo>&lt;</m:mo><m:mn>1</m:mn><m:mo>,</m:mo>
+  </m:mrow>
+ </m:semantics>
+</m:math>
+
+</equation>
+
+ <para id="para_48">and</para>
+<equation id="eq_17">
+<m:math display="block">
+ <m:semantics>
+  <m:mrow>
+   <m:mi>P</m:mi><m:mrow><m:mo>(</m:mo>
+    <m:mrow>
+     <m:mi>X</m:mi><m:mo>≤</m:mo><m:mi>k</m:mi>
+    </m:mrow>
+   <m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:msub>
+    <m:mi>F</m:mi>
+    <m:mi>X</m:mi>
+   </m:msub>
+   <m:mrow><m:mo>(</m:mo>
+    <m:mi>k</m:mi>
+   <m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>1</m:mn><m:mo>−</m:mo><m:msup>
+    <m:mi>ρ</m:mi>
+    <m:mrow>
+     <m:mi>k</m:mi><m:mo>+</m:mo><m:mn>1</m:mn>
+    </m:mrow>
+   </m:msup>
+   <m:mo>,</m:mo><m:mi>k</m:mi><m:mo>=</m:mo><m:mn>0</m:mn><m:mo>,</m:mo><m:mn>1</m:mn><m:mo>,</m:mo><m:mn>2</m:mn><m:mo>,</m:mo><m:mn>....</m:mn><m:mo>,</m:mo><m:mn>0</m:mn><m:mo>&lt;</m:mo><m:mi>ρ</m:mi><m:mo>&lt;</m:mo><m:mn>1.</m:mn>
+  </m:mrow>
+ </m:semantics>
+</m:math>
+
+</equation>
+
+
+ <para id="para_49">
+To generate geometrically distributed random variables then, you can proceed successively according to the following algorithm:
+</para>
+
+          <list id="list_2">
+
+	    <item>
+Compute <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:msub>
+    <m:mi>F</m:mi>
+    <m:mi>X</m:mi>
+   </m:msub>
+   <m:mrow><m:mo>(</m:mo>
+    <m:mn>0</m:mn>
+   <m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>1</m:mn><m:mo>−</m:mo><m:mi>ρ</m:mi>
+  </m:mrow>
+ </m:semantics>
+</m:math>. Generate <emphasis>U</emphasis>.
+            </item>
+
+
+
+
+	    <item>
+If <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mi>U</m:mi><m:mo>≤</m:mo><m:msub>
+    <m:mi>F</m:mi>
+    <m:mi>X</m:mi>
+   </m:msub>
+   <m:mrow><m:mo>(</m:mo>
+    <m:mn>0</m:mn>
+   <m:mo>)</m:mo></m:mrow>
+  </m:mrow>
+ </m:semantics>
+</m:math> set <emphasis>X</emphasis>=0 and exit.
+            </item>
+
+
+
+
+	    <item>
+Otherwise compute <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:msub>
+    <m:mi>F</m:mi>
+    <m:mi>X</m:mi>
+   </m:msub>
+   <m:mrow><m:mo>(</m:mo>
+    <m:mn>1</m:mn>
+   <m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>1</m:mn><m:mo>−</m:mo><m:msup>
+    <m:mi>ρ</m:mi>
+    <m:mn>2</m:mn>
+   </m:msup>
+     </m:mrow>
+ </m:semantics>
+</m:math>.
+            </item>
+
+
+
+
+	    <item>
+If <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mi>U</m:mi><m:mo>≤</m:mo><m:msub>
+    <m:mi>F</m:mi>
+    <m:mi>X</m:mi>
+   </m:msub>
+   <m:mrow><m:mo>(</m:mo>
+    <m:mn>1</m:mn>
+   <m:mo>)</m:mo></m:mrow>
+  </m:mrow>
+ </m:semantics>
+</m:math> set <emphasis>X</emphasis>=1, and exit.
+            </item>
+
+
+
+	    <item>
+Otherwise compute <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:msub>
+    <m:mi>F</m:mi>
+    <m:mi>X</m:mi>
+   </m:msub>
+   <m:mrow><m:mo>(</m:mo>
+    <m:mn>2</m:mn>
+   <m:mo>)</m:mo></m:mrow>
+  </m:mrow> </m:semantics>
+</m:math>, and so on.
+
+            </item>
+</list>
+
+  </example>
+         </section>
+
+         </section>
+    <para id="delete_me">
+       <!-- Insert module text here -->
+    </para>   
+  </content>
+  
+</document>

@@ -1,0 +1,1486 @@
+<document xmlns="http://cnx.rice.edu/cnxml" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:md="http://cnx.rice.edu/mdml">
+  <title>THE MEAN, VARIANCE, AND STANDARD DEVIATION</title>
+  <metadata><md:content-id>undefined</md:content-id><md:title/><md:uuid>25f2333c-878d-4559-9e93-d745375e32b0</md:uuid>
+</metadata>
+  <content>
+
+<section id="sec_1">
+   <title>The MEAN, VARIANCE, and STANDARD DEVIATION</title>
+<section id="sec_2">
+   <title> MEAN and VARIANCE</title>
+     <para id="para_1">
+Certain mathematical expectations are so important that they have special names. In this section we consider two of them: the mean and the variance. 
+     </para>
+<section id="sec_3">
+     <para id="para_2">
+<term>Mean Value </term>
+     </para>
+    <para id="para_3">
+If <emphasis>X</emphasis> is a random variable with p.d.f. <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mi>f</m:mi><m:mrow><m:mo>(</m:mo>
+    <m:mi>x</m:mi>
+   <m:mo>)</m:mo></m:mrow>
+  </m:mrow>
+ </m:semantics>
+</m:math> of the discrete type and space <emphasis>R</emphasis>=<m:math>
+ <m:semantics>
+  <m:mrow><m:mo>(</m:mo>
+   <m:mrow>
+    <m:msub>
+     <m:mi>b</m:mi>
+     <m:mn>1</m:mn>
+    </m:msub>
+    <m:mo>,</m:mo><m:msub>
+     <m:mi>b</m:mi>
+     <m:mn>2</m:mn>
+    </m:msub>
+    <m:mo>,</m:mo><m:msub>
+     <m:mi>b</m:mi>
+     <m:mn>3</m:mn>
+    </m:msub>
+    <m:mn>,...</m:mn>
+   </m:mrow>
+  <m:mo>)</m:mo></m:mrow>
+</m:semantics>
+</m:math>, then <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mi>E</m:mi><m:mrow><m:mo>(</m:mo>
+    <m:mi>X</m:mi>
+   <m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mstyle displaystyle="true">
+    <m:munder>
+     <m:mo>∑</m:mo>
+     <m:mi>R</m:mi>
+    </m:munder>
+    <m:mrow>
+     <m:mi>x</m:mi><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo>
+      <m:mi>x</m:mi>
+     <m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:msub>
+      <m:mi>b</m:mi>
+      <m:mn>1</m:mn>
+     </m:msub>
+     <m:mi>f</m:mi><m:mrow><m:mo>(</m:mo>
+      <m:mrow>
+       <m:msub>
+        <m:mi>b</m:mi>
+        <m:mn>1</m:mn>
+       </m:msub>
+       
+      </m:mrow>
+     <m:mo>)</m:mo></m:mrow><m:mo>+</m:mo><m:msub>
+      <m:mi>b</m:mi>
+      <m:mn>2</m:mn>
+     </m:msub>
+     <m:mi>f</m:mi><m:mrow><m:mo>(</m:mo>
+      <m:mrow>
+       <m:msub>
+        <m:mi>b</m:mi>
+        <m:mn>2</m:mn>
+       </m:msub>
+       
+      </m:mrow>
+     <m:mo>)</m:mo></m:mrow><m:mo>+</m:mo><m:msub>
+      <m:mi>b</m:mi>
+      <m:mn>3</m:mn>
+     </m:msub>
+     
+    </m:mrow>
+   </m:mstyle><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo>
+    <m:mrow>
+     <m:msub>
+      <m:mi>b</m:mi>
+      <m:mn>3</m:mn>
+     </m:msub>
+     
+    </m:mrow>
+   <m:mo>)</m:mo></m:mrow><m:mo>+</m:mo><m:mn>...</m:mn>
+  </m:mrow>
+ </m:semantics>
+</m:math> is the weighted average of the numbers belonging to <emphasis>R</emphasis>, where the weights are given by the p.d.f. <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mi>f</m:mi><m:mrow><m:mo>(</m:mo>
+    <m:mi>x</m:mi>
+   <m:mo>)</m:mo></m:mrow>
+  </m:mrow>
+ </m:semantics>
+</m:math>.      </para>
+     <para id="para_6">
+We call <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mi>E</m:mi><m:mrow><m:mo>(</m:mo>
+    <m:mi>X</m:mi>
+   <m:mo>)</m:mo></m:mrow>
+  </m:mrow>
+ </m:semantics>
+</m:math> <term>the mean</term> of <emphasis>X</emphasis> (or <term>the mean of the distribution</term>) and denote it by <m:math>
+ <m:semantics>
+  <m:mi>μ</m:mi>
+ </m:semantics>
+</m:math>. That is, <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mi>μ</m:mi><m:mo>=</m:mo><m:mi>E</m:mi><m:mrow><m:mo>(</m:mo>
+    <m:mi>X</m:mi>
+   <m:mo>)</m:mo></m:mrow>
+  </m:mrow>
+ </m:semantics>
+</m:math>.
+     </para>
+<note type="REMARK" id="idm642736"><label>REMARK</label>
+In mechanics, the weighted average of the points <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:msub>
+    <m:mi>b</m:mi>
+    <m:mn>1</m:mn>
+   </m:msub>
+   <m:mo>,</m:mo><m:msub>
+    <m:mi>b</m:mi>
+    <m:mn>2</m:mn>
+   </m:msub>
+   <m:mo>,</m:mo><m:msub>
+    <m:mi>b</m:mi>
+    <m:mn>3</m:mn>
+   </m:msub>
+   <m:mn>,...</m:mn>
+  </m:mrow>
+ </m:semantics>
+</m:math> in one-dimensional space is called the centroid of the system. Those without the mechanics background can think of the centroid as being the point of balance for the system in which the weights <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mi>f</m:mi><m:mrow><m:mo>(</m:mo>
+    <m:mrow>
+     <m:msub>
+      <m:mi>b</m:mi>
+      <m:mn>1</m:mn>
+     </m:msub>
+     
+    </m:mrow>
+   <m:mo>)</m:mo></m:mrow><m:mo>,</m:mo><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo>
+    <m:mrow>
+     <m:msub>
+      <m:mi>b</m:mi>
+      <m:mn>2</m:mn>
+     </m:msub>
+     
+    </m:mrow>
+   <m:mo>)</m:mo></m:mrow><m:mo>,</m:mo><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo>
+    <m:mrow>
+     <m:msub>
+      <m:mi>b</m:mi>
+      <m:mn>3</m:mn>
+     </m:msub>
+     
+    </m:mrow>
+   <m:mo>)</m:mo></m:mrow><m:mn>,...</m:mn>
+  </m:mrow>
+</m:semantics>
+</m:math> are places upon the points <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:msub>
+    <m:mi>b</m:mi>
+    <m:mn>1</m:mn>
+   </m:msub>
+   <m:mo>,</m:mo><m:msub>
+    <m:mi>b</m:mi>
+    <m:mn>2</m:mn>
+   </m:msub>
+   <m:mo>,</m:mo><m:msub>
+    <m:mi>b</m:mi>
+    <m:mn>3</m:mn>
+   </m:msub>
+   <m:mn>,...</m:mn>
+  </m:mrow>
+ </m:semantics>
+</m:math>.
+</note>
+<example id="ex_1">
+     <para id="para_7">
+Let <emphasis>X</emphasis> have the p.d.f.
+     </para>
+     <para id="para_8"><m:math display="block">
+		<m:semantics>
+			<m:mrow>
+				<m:mi>f</m:mi><m:mrow><m:mo>(</m:mo>
+					<m:mi>x</m:mi>
+					<m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mrow><m:mo>{</m:mo>
+					<m:mtable columnalign="left">
+						<m:mtr>
+							<m:mtd>
+								<m:mfrac>
+									<m:mn>1</m:mn>
+									<m:mn>8</m:mn>
+								</m:mfrac>
+								<m:mo>,</m:mo><m:mi>x</m:mi><m:mo>=</m:mo><m:mn>0,3,</m:mn>
+							</m:mtd>
+						</m:mtr>
+						<m:mtr>
+							<m:mtd>
+								<m:mfrac>
+									<m:mn>3</m:mn>
+									<m:mn>8</m:mn>
+								</m:mfrac>
+								<m:mo>,</m:mo><m:mi>x</m:mi><m:mo>=</m:mo><m:mn>1,2.</m:mn>
+							</m:mtd>
+						</m:mtr>
+					</m:mtable>
+				</m:mrow>
+			</m:mrow>
+		</m:semantics>
+	</m:math>
+</para>
+     <para id="para_9">
+The mean of <emphasis>X</emphasis> is
+     </para>
+     <para id="para_10"><m:math display="block">
+		<m:semantics>
+			<m:mrow>
+				<m:mi>μ</m:mi><m:mo>=</m:mo><m:mi>E</m:mi><m:mrow><m:mo>[</m:mo><m:mi>X</m:mi><m:mo/></m:mrow><m:mo>=</m:mo><m:mn>0</m:mn><m:mrow><m:mo>(</m:mo><m:mrow><m:mfrac><m:mn>1</m:mn><m:mn>8</m:mn></m:mfrac></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>+</m:mo><m:mn>1</m:mn><m:mrow><m:mo>(</m:mo><m:mrow><m:mfrac><m:mn>3</m:mn><m:mn>8</m:mn></m:mfrac></m:mrow><m:mo>)</m:mo></m:mrow><m:mo>+</m:mo><m:mn>2</m:mn><m:mrow><m:mo>(</m:mo><m:mrow><m:mfrac><m:mn>3</m:mn><m:mn>8</m:mn></m:mfrac></m:mrow>
+					<m:mo>)</m:mo></m:mrow><m:mo>+</m:mo><m:mn>3</m:mn><m:mrow><m:mo>(</m:mo>
+					<m:mrow>
+						<m:mfrac>
+							<m:mn>1</m:mn>
+							<m:mn>8</m:mn>
+						</m:mfrac>
+					</m:mrow>
+					<m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mfrac>
+					<m:mn>3</m:mn>
+					<m:mn>2</m:mn>
+				</m:mfrac>
+				<m:mo>.</m:mo>
+			</m:mrow>
+		</m:semantics>
+	</m:math>
+</para>
+</example>
+     <para id="para_11">
+The example below shows that if the outcomes of <emphasis>X</emphasis> are equally likely (i.e., each of the outcomes has the same probability), then the mean of <emphasis>X</emphasis> is the arithmetic average of these outcomes.
+     </para>
+<example id="ex_2">
+
+     <para id="para_12">
+Roll a fair die and let <emphasis>X</emphasis> denote the outcome. Thus <emphasis>X</emphasis> has the p.d.f. <m:math display="block">
+ <m:semantics>
+  <m:mrow>
+   <m:mi>f</m:mi><m:mrow><m:mo>(</m:mo>
+    <m:mi>x</m:mi>
+   <m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mfrac>
+    <m:mn>1</m:mn>
+    <m:mn>6</m:mn>
+   </m:mfrac>
+   <m:mo>,</m:mo><m:mi>x</m:mi><m:mo>=</m:mo><m:mn>1</m:mn><m:mo>,</m:mo><m:mn>2</m:mn><m:mo>,</m:mo><m:mn>3</m:mn><m:mo>,</m:mo><m:mn>4</m:mn><m:mo>,</m:mo><m:mn>5</m:mn><m:mo>,</m:mo><m:mn>6.</m:mn>
+  </m:mrow>
+  </m:semantics>
+</m:math>
+Then,
+</para>
+     <para id="para_13">
+<m:math display="block">
+ <m:semantics>
+  <m:mrow>
+   <m:mi>E</m:mi><m:mrow><m:mo>(</m:mo>
+    <m:mi>X</m:mi>
+   <m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mstyle displaystyle="true">
+    <m:munderover>
+     <m:mo>∑</m:mo>
+     <m:mrow>
+      <m:mi>x</m:mi><m:mo>=</m:mo><m:mn>1</m:mn>
+     </m:mrow>
+     <m:mn>6</m:mn>
+    </m:munderover>
+    <m:mrow>
+     <m:mi>x</m:mi><m:mrow><m:mo>(</m:mo>
+      <m:mrow>
+       <m:mfrac>
+        <m:mn>1</m:mn>
+        <m:mn>6</m:mn>
+       </m:mfrac>
+       
+      </m:mrow>
+     <m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mfrac>
+      <m:mrow>
+       <m:mn>1</m:mn><m:mo>+</m:mo><m:mn>2</m:mn><m:mo>+</m:mo><m:mn>3</m:mn><m:mo>+</m:mo><m:mn>4</m:mn><m:mo>+</m:mo><m:mn>5</m:mn><m:mo>+</m:mo><m:mn>6</m:mn>
+      </m:mrow>
+      <m:mn>6</m:mn>
+     </m:mfrac>
+     <m:mo>=</m:mo><m:mfrac>
+      <m:mn>7</m:mn>
+      <m:mn>2</m:mn>
+     </m:mfrac>
+     <m:mo>,</m:mo>
+    </m:mrow>
+   </m:mstyle>
+  </m:mrow>
+ </m:semantics>
+</m:math>
+
+     </para>
+
+     <para id="para_14">
+which is the arithmetic average of the first six positive integers. 
+     </para>
+</example>
+</section>
+<section id="sec_4">
+     <para id="para_15">
+<term>Variance</term>
+     </para>
+
+     <para id="para_16">
+It was denoted that the mean <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mi>μ</m:mi><m:mo>=</m:mo><m:mi>E</m:mi><m:mrow><m:mo>(</m:mo>
+    <m:mi>X</m:mi>
+   <m:mo>)</m:mo></m:mrow>
+  </m:mrow>
+ </m:semantics>
+</m:math> is the centroid of a system of weights of measure of the central location  of the probability distribution of <emphasis>X</emphasis>. <term>A measure of the dispersion or spread of a distribution is defined as follows:</term>
+     </para>
+     <para id="para_17">
+If <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mi>u</m:mi><m:mrow><m:mo>(</m:mo>
+    <m:mi>x</m:mi>
+   <m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:msup>
+    <m:mrow>
+     <m:mrow><m:mo>(</m:mo>
+      <m:mrow>
+       <m:mi>x</m:mi><m:mo>−</m:mo><m:mi>μ</m:mi>
+      </m:mrow>
+     <m:mo>)</m:mo></m:mrow>
+    </m:mrow>
+    <m:mn>2</m:mn>
+   </m:msup>
+     </m:mrow>
+ </m:semantics>
+</m:math> and <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mi>E</m:mi><m:mrow><m:mo>[</m:mo> <m:mrow>
+    <m:msup>
+     <m:mrow>
+      <m:mrow><m:mo>(</m:mo>
+       <m:mrow>
+        <m:mi>X</m:mi><m:mo>−</m:mo><m:mi>μ</m:mi>
+       </m:mrow>
+      <m:mo>)</m:mo></m:mrow>
+     </m:mrow>
+     <m:mn>2</m:mn>
+    </m:msup>
+       </m:mrow> <m:mo>]</m:mo></m:mrow>
+  </m:mrow>
+ </m:semantics>
+</m:math>
+ exists, <term>the variance</term>, frequently denoted by <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:msup>
+    <m:mi>σ</m:mi>
+    <m:mn>2</m:mn>
+   </m:msup>
+     </m:mrow>
+ </m:semantics>
+</m:math> or <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mi>V</m:mi><m:mi>a</m:mi><m:mi>r</m:mi><m:mrow><m:mo>(</m:mo>
+    <m:mi>X</m:mi>
+   <m:mo>)</m:mo></m:mrow>
+  </m:mrow>
+ </m:semantics>
+</m:math>, of a random variable <emphasis>X</emphasis> of the discrete type (or variance of the distribution) is defined by
+     </para>
+<equation id="eq_1">  
+
+<m:math display="block">
+ <m:semantics>
+  <m:mrow>
+   <m:msup>
+    <m:mi>σ</m:mi>
+    <m:mn>2</m:mn>
+   </m:msup>
+   <m:mo>=</m:mo><m:mi>E</m:mi><m:mrow><m:mo>[</m:mo> <m:mrow>
+    <m:msup>
+     <m:mrow>
+      <m:mrow><m:mo>(</m:mo>
+       <m:mrow>
+        <m:mi>X</m:mi><m:mo>−</m:mo><m:mi>μ</m:mi>
+       </m:mrow>
+      <m:mo>)</m:mo></m:mrow>
+     </m:mrow>
+     <m:mn>2</m:mn>
+    </m:msup>
+    
+   </m:mrow> <m:mo>]</m:mo></m:mrow><m:mo>=</m:mo><m:mstyle displaystyle="true">
+    <m:munder>
+     <m:mo>∑</m:mo>
+     <m:mi>R</m:mi>
+    </m:munder>
+    <m:mrow>
+     <m:msup>
+      <m:mrow>
+       <m:mrow><m:mo>(</m:mo>
+        <m:mrow>
+         <m:mi>x</m:mi><m:mo>−</m:mo><m:mi>μ</m:mi>
+        </m:mrow>
+       <m:mo>)</m:mo></m:mrow>
+      </m:mrow>
+      <m:mn>2</m:mn>
+     </m:msup>
+     <m:mi>f</m:mi><m:mrow><m:mo>(</m:mo>
+      <m:mi>x</m:mi>
+     <m:mo>)</m:mo></m:mrow>
+    </m:mrow>
+   </m:mstyle><m:mo>.</m:mo>
+  </m:mrow>
+ </m:semantics>
+</m:math>
+</equation> 
+     <para id="para_18"> 
+The positive square root of the variance is called <term>the standard deviation of <emphasis>X</emphasis></term> and is denoted by
+     </para>
+<equation id="eq_2">  
+<m:math display="block">
+ <m:semantics>
+  <m:mrow>
+   <m:mi>σ</m:mi><m:mo>=</m:mo><m:msqrt>
+    <m:mrow>
+     <m:mi>V</m:mi><m:mi>a</m:mi><m:mi>r</m:mi><m:mrow><m:mo>(</m:mo>
+      <m:mi>X</m:mi>
+     <m:mo>)</m:mo></m:mrow>
+    </m:mrow>
+   </m:msqrt>
+   <m:mo>=</m:mo><m:msqrt>
+    <m:mrow>
+     <m:mi>E</m:mi><m:mrow><m:mo>[</m:mo> <m:mrow>
+      <m:msup>
+       <m:mrow>
+        <m:mrow><m:mo>(</m:mo>
+         <m:mrow>
+          <m:mi>X</m:mi><m:mo>−</m:mo><m:mi>μ</m:mi>
+         </m:mrow>
+        <m:mo>)</m:mo></m:mrow>
+       </m:mrow>
+       <m:mn>2</m:mn>
+      </m:msup>
+      
+     </m:mrow> <m:mo>]</m:mo></m:mrow>
+    </m:mrow>
+   </m:msqrt>
+   <m:mo>.</m:mo>
+  </m:mrow>
+ </m:semantics>
+</m:math>
+
+</equation> 
+<example id="ex_3">
+     <para id="para_19">
+Let the p.d.f. of <emphasis>X</emphasis> by defined by <m:math display="block">
+ <m:semantics>
+  <m:mrow>
+   <m:mi>f</m:mi><m:mrow><m:mo>(</m:mo>
+    <m:mi>x</m:mi>
+   <m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mfrac>
+    <m:mi>x</m:mi>
+    <m:mn>6</m:mn>
+   </m:mfrac>
+   <m:mo>,</m:mo><m:mi>x</m:mi><m:mo>=</m:mo><m:mn>1</m:mn><m:mo>,</m:mo><m:mn>2</m:mn><m:mo>,</m:mo><m:mn>3.</m:mn>
+  </m:mrow>
+ </m:semantics>
+</m:math>
+
+     </para>
+     <para id="para_20">
+The mean of <emphasis>X</emphasis> is
+     </para>
+     <para id="para_21">
+<m:math display="block">
+ <m:semantics>
+  <m:mrow>
+   <m:mi>μ</m:mi><m:mo>=</m:mo><m:mi>E</m:mi><m:mrow><m:mo>(</m:mo>
+    <m:mi>X</m:mi>
+   <m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>1</m:mn><m:mrow><m:mo>(</m:mo>
+    <m:mrow>
+     <m:mfrac>
+      <m:mn>1</m:mn>
+      <m:mn>6</m:mn>
+     </m:mfrac>
+     
+    </m:mrow>
+   <m:mo>)</m:mo></m:mrow><m:mo>+</m:mo><m:mn>2</m:mn><m:mrow><m:mo>(</m:mo>
+    <m:mrow>
+     <m:mfrac>
+      <m:mn>2</m:mn>
+      <m:mn>6</m:mn>
+     </m:mfrac>
+     
+    </m:mrow>
+   <m:mo>)</m:mo></m:mrow><m:mo>+</m:mo><m:mn>3</m:mn><m:mrow><m:mo>(</m:mo>
+    <m:mrow>
+     <m:mfrac>
+      <m:mn>3</m:mn>
+      <m:mn>6</m:mn>
+     </m:mfrac>
+     
+    </m:mrow>
+   <m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mfrac>
+    <m:mn>7</m:mn>
+    <m:mn>3</m:mn>
+   </m:mfrac>
+   <m:mo>.</m:mo>
+  </m:mrow>
+ </m:semantics>
+</m:math>
+
+     </para>
+     <para id="para_22">
+To find the variance and standard deviation of <emphasis>X</emphasis> we first find
+     </para>
+<para id="para_23">
+<m:math display="block">
+ <m:semantics>
+  <m:mrow>
+   <m:mi>E</m:mi><m:mrow><m:mo>(</m:mo>
+    <m:mrow>
+     <m:msup>
+      <m:mi>X</m:mi>
+      <m:mn>2</m:mn>
+     </m:msup>
+     
+    </m:mrow>
+   <m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:msup>
+    <m:mn>1</m:mn>
+    <m:mn>2</m:mn>
+   </m:msup>
+   <m:mrow><m:mo>(</m:mo>
+    <m:mrow>
+     <m:mfrac>
+      <m:mn>1</m:mn>
+      <m:mn>6</m:mn>
+     </m:mfrac>
+     
+    </m:mrow>
+   <m:mo>)</m:mo></m:mrow><m:mo>+</m:mo><m:msup>
+    <m:mn>2</m:mn>
+    <m:mn>2</m:mn>
+   </m:msup>
+   <m:mrow><m:mo>(</m:mo>
+    <m:mrow>
+     <m:mfrac>
+      <m:mn>2</m:mn>
+      <m:mn>6</m:mn>
+     </m:mfrac>
+     
+    </m:mrow>
+   <m:mo>)</m:mo></m:mrow><m:mo>+</m:mo><m:msup>
+    <m:mn>3</m:mn>
+    <m:mn>2</m:mn>
+   </m:msup>
+   <m:mrow><m:mo>(</m:mo>
+    <m:mrow>
+     <m:mfrac>
+      <m:mn>3</m:mn>
+      <m:mn>6</m:mn>
+     </m:mfrac>
+     
+    </m:mrow>
+   <m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mfrac>
+    <m:mrow>
+     <m:mn>36</m:mn>
+    </m:mrow>
+    <m:mn>6</m:mn>
+   </m:mfrac>
+   <m:mo>=</m:mo><m:mn>6.</m:mn>
+  </m:mrow>
+ </m:semantics>
+</m:math>
+
+     </para>
+     <para id="para_24">
+Thus the variance of <emphasis>X</emphasis> is <m:math display="block">
+ <m:semantics>
+  <m:mrow>
+   <m:msup>
+    <m:mi>σ</m:mi>
+    <m:mn>2</m:mn>
+   </m:msup>
+   <m:mo>=</m:mo><m:mi>E</m:mi><m:mrow><m:mo>(</m:mo>
+    <m:mrow>
+     <m:msup>
+      <m:mi>X</m:mi>
+      <m:mn>2</m:mn>
+     </m:msup>
+     
+    </m:mrow>
+   <m:mo>)</m:mo></m:mrow><m:mo>−</m:mo><m:msup>
+    <m:mi>μ</m:mi>
+    <m:mn>2</m:mn>
+   </m:msup>
+   <m:mo>=</m:mo><m:mn>6</m:mn><m:mo>−</m:mo><m:msup>
+    <m:mrow>
+     <m:mrow><m:mo>(</m:mo>
+      <m:mrow>
+       <m:mfrac>
+        <m:mn>7</m:mn>
+        <m:mn>3</m:mn>
+       </m:mfrac>
+       
+      </m:mrow>
+     <m:mo>)</m:mo></m:mrow>
+    </m:mrow>
+    <m:mn>2</m:mn>
+   </m:msup>
+   <m:mo>=</m:mo><m:mfrac>
+    <m:mn>5</m:mn>
+    <m:mn>9</m:mn>
+   </m:mfrac>
+   <m:mo>,</m:mo>
+  </m:mrow>
+ </m:semantics>
+</m:math>
+
+     </para>  
+     <para id="para_26">
+and the standard deviation of <emphasis>X</emphasis> is <m:math display="block">
+ <m:semantics>
+  <m:mrow>
+   <m:mi>σ</m:mi><m:mo>=</m:mo><m:msqrt>
+    <m:mrow>
+     <m:mfrac bevelled="true">
+      <m:mn>5</m:mn>
+      <m:mn>9</m:mn>
+     </m:mfrac>
+         </m:mrow>
+   </m:msqrt>
+   <m:mo>=</m:mo><m:mn>0.745.</m:mn>
+  </m:mrow>
+ </m:semantics>
+</m:math>
+   </para>
+</example>
+<example id="ex_4">
+     <para id="para_27">
+Let <emphasis>X</emphasis> be a random variable with mean <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:msub>
+    <m:mi>μ</m:mi>
+    <m:mi>x</m:mi>
+   </m:msub>
+     </m:mrow>
+ </m:semantics>
+</m:math> and variance <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:msubsup>
+    <m:mi>σ</m:mi>
+    <m:mi>x</m:mi>
+    <m:mn>2</m:mn>
+   </m:msubsup>
+    </m:mrow>
+ </m:semantics>
+</m:math>. Of course, <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mi>Y</m:mi><m:mo>=</m:mo><m:mi>a</m:mi><m:mi>X</m:mi><m:mo>+</m:mo><m:mi>b</m:mi>
+  </m:mrow>
+ </m:semantics>
+</m:math>, where a and b are constants, is a random variable, too. The mean of <emphasis>Y</emphasis> is
+     </para>
+     <para id="para_28">
+<m:math display="block">
+ <m:semantics>
+  <m:mrow>
+   <m:msub>
+    <m:mi>μ</m:mi>
+    <m:mi>Y</m:mi>
+   </m:msub>
+   <m:mo>=</m:mo><m:mi>E</m:mi><m:mrow><m:mo>(</m:mo>
+    <m:mi>Y</m:mi>
+   <m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mi>E</m:mi><m:mrow><m:mo>(</m:mo>
+    <m:mrow>
+     <m:mi>a</m:mi><m:mi>X</m:mi><m:mo>+</m:mo><m:mi>b</m:mi>
+    </m:mrow>
+   <m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mi>a</m:mi><m:mi>E</m:mi><m:mrow><m:mo>(</m:mo>
+    <m:mi>X</m:mi>
+   <m:mo>)</m:mo></m:mrow><m:mo>+</m:mo><m:mi>b</m:mi><m:mo>=</m:mo><m:mi>a</m:mi><m:msub>
+    <m:mi>μ</m:mi>
+    <m:mi>X</m:mi>
+   </m:msub>
+   <m:mo>+</m:mo><m:mi>b</m:mi><m:mo>.</m:mo><m:mtext> </m:mtext>
+  </m:mrow>
+ </m:semantics>
+</m:math>
+
+     </para>
+     <para id="para_29">
+Moreover, the variance of <emphasis>Y</emphasis> is
+
+     </para>
+     <para id="para_30">
+<m:math display="block">
+ <m:semantics>
+  <m:mrow>
+   <m:msubsup>
+    <m:mi>σ</m:mi>
+    <m:mi>Y</m:mi>
+    <m:mn>2</m:mn>
+   </m:msubsup>
+   <m:mo>=</m:mo><m:mi>E</m:mi><m:mrow><m:mo>[</m:mo> <m:mrow>
+    <m:msup>
+     <m:mrow>
+      <m:mrow><m:mo>(</m:mo>
+       <m:mrow>
+        <m:mi>Y</m:mi><m:mo>−</m:mo><m:msub>
+         <m:mi>μ</m:mi>
+         <m:mi>Y</m:mi>
+        </m:msub>
+        
+       </m:mrow>
+      <m:mo>)</m:mo></m:mrow>
+     </m:mrow>
+     <m:mn>2</m:mn>
+    </m:msup>
+    
+   </m:mrow> <m:mo>]</m:mo></m:mrow><m:mo>=</m:mo><m:mi>E</m:mi><m:mrow><m:mo>[</m:mo> <m:mrow>
+    <m:msup>
+     <m:mrow>
+      <m:mrow><m:mo>(</m:mo>
+       <m:mrow>
+        <m:mi>a</m:mi><m:mi>X</m:mi><m:mo>+</m:mo><m:mi>b</m:mi><m:mo>−</m:mo><m:mi>a</m:mi><m:msub>
+         <m:mi>μ</m:mi>
+         <m:mi>X</m:mi>
+        </m:msub>
+        <m:mo>−</m:mo><m:mi>b</m:mi>
+       </m:mrow>
+      <m:mo>)</m:mo></m:mrow>
+     </m:mrow>
+     <m:mn>2</m:mn>
+    </m:msup>
+    
+   </m:mrow> <m:mo>]</m:mo></m:mrow><m:mo>=</m:mo><m:mi>E</m:mi><m:mrow><m:mo>[</m:mo> <m:mrow>
+    <m:msup>
+     <m:mi>a</m:mi>
+     <m:mn>2</m:mn>
+    </m:msup>
+    <m:msup>
+     <m:mrow>
+      <m:mrow><m:mo>(</m:mo>
+       <m:mrow>
+        <m:mi>X</m:mi><m:mo>−</m:mo><m:msub>
+         <m:mi>μ</m:mi>
+         <m:mi>X</m:mi>
+        </m:msub>
+        
+       </m:mrow>
+      <m:mo>)</m:mo></m:mrow>
+     </m:mrow>
+     <m:mn>2</m:mn>
+    </m:msup>
+    
+   </m:mrow> <m:mo>]</m:mo></m:mrow><m:mo>=</m:mo><m:msup>
+    <m:mi>a</m:mi>
+    <m:mn>2</m:mn>
+   </m:msup>
+   <m:msubsup>
+    <m:mi>σ</m:mi>
+    <m:mi>X</m:mi>
+    <m:mn>2</m:mn>
+   </m:msubsup>
+   <m:mo>.</m:mo>
+  </m:mrow>
+
+ </m:semantics>
+</m:math>
+
+     </para>  
+
+</example>
+</section>
+<section id="sec_5">
+
+     <para id="para_31">
+<term>Moments of the distribution </term>
+     </para>  
+
+     <para id="para_32">
+Let <emphasis>r</emphasis> be a positive integer. If <m:math display="block">
+ <m:semantics>
+  <m:mrow>
+   <m:mi>E</m:mi><m:mrow><m:mo>(</m:mo>
+    <m:mrow>
+     <m:msup>
+      <m:mi>X</m:mi>
+      <m:mi>r</m:mi>
+     </m:msup>
+     
+    </m:mrow>
+   <m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mstyle displaystyle="true">
+    <m:munder>
+     <m:mo>∑</m:mo>
+     <m:mi>R</m:mi>
+    </m:munder>
+    <m:mrow>
+     <m:msup>
+      <m:mi>x</m:mi>
+      <m:mi>r</m:mi>
+     </m:msup>
+     <m:mi>f</m:mi><m:mrow><m:mo>(</m:mo>
+      <m:mi>x</m:mi>
+     <m:mo>)</m:mo></m:mrow>
+    </m:mrow>
+   </m:mstyle>
+  </m:mrow>
+ </m:semantics>
+</m:math>
+exists, it is called <term>the <emphasis>r</emphasis>th moment of the distribution</term> about the origin. The expression moment has its origin in the study of mechanics.
+     </para> 
+     <para id="para_33">
+In addition, the expectation <m:math display="block">
+ <m:semantics>
+  <m:mrow>
+   <m:mi>E</m:mi><m:mrow><m:mo>[</m:mo> <m:mrow>
+    <m:msup>
+     <m:mrow>
+      <m:mrow><m:mo>(</m:mo>
+       <m:mrow>
+        <m:mi>X</m:mi><m:mo>−</m:mo><m:mi>b</m:mi>
+       </m:mrow>
+      <m:mo>)</m:mo></m:mrow>
+     </m:mrow>
+     <m:mi>r</m:mi>
+    </m:msup>
+    
+   </m:mrow> <m:mo>]</m:mo></m:mrow><m:mo>=</m:mo><m:mstyle displaystyle="true">
+    <m:munder>
+     <m:mo>∑</m:mo>
+     <m:mi>R</m:mi>
+    </m:munder>
+    <m:mrow>
+     <m:msup>
+      <m:mi>x</m:mi>
+      <m:mi>r</m:mi>
+     </m:msup>
+     <m:mi>f</m:mi><m:mrow><m:mo>(</m:mo>
+      <m:mi>x</m:mi>
+     <m:mo>)</m:mo></m:mrow>
+    </m:mrow>
+   </m:mstyle>
+  </m:mrow>
+ </m:semantics>
+</m:math>
+is called <term>the <emphasis>r</emphasis>th moment of the distribution about <emphasis>b</emphasis></term>. For a given positive integer r. 
+     </para>
+     <para id="para_34">
+<m:math display="block">
+ <m:semantics>
+  <m:mrow>
+   <m:mi>E</m:mi><m:mrow><m:mo>[</m:mo> <m:mrow>
+    <m:msub>
+     <m:mrow>
+      <m:mrow><m:mo>(</m:mo>
+       <m:mi>X</m:mi>
+      <m:mo>)</m:mo></m:mrow>
+     </m:mrow>
+     <m:mi>r</m:mi>
+    </m:msub>
+    
+   </m:mrow> <m:mo>]</m:mo></m:mrow><m:mo>=</m:mo><m:mi>E</m:mi><m:mrow><m:mo>[</m:mo> <m:mrow>
+    <m:mi>X</m:mi><m:mrow><m:mo>(</m:mo>
+     <m:mrow>
+      <m:mi>X</m:mi><m:mo>−</m:mo><m:mn>1</m:mn>
+     </m:mrow>
+    <m:mo>)</m:mo></m:mrow><m:mrow><m:mo>(</m:mo>
+     <m:mrow>
+      <m:mi>X</m:mi><m:mo>−</m:mo><m:mn>2</m:mn>
+     </m:mrow>
+    <m:mo>)</m:mo></m:mrow><m:mo>⋅</m:mo><m:mo>⋅</m:mo><m:mo>⋅</m:mo><m:mrow><m:mo>(</m:mo>
+     <m:mrow>
+      <m:mi>X</m:mi><m:mo>−</m:mo><m:mi>r</m:mi><m:mo>+</m:mo><m:mn>1</m:mn>
+     </m:mrow>
+    <m:mo>)</m:mo></m:mrow>
+   </m:mrow> <m:mo>]</m:mo></m:mrow>
+  </m:mrow>
+ </m:semantics>
+</m:math>
+is called <term>the <emphasis>r</emphasis>th factorial moment</term>.
+     </para>
+<note type="Note That" id="idm841808"><label>Note That</label>
+The second factorial moment is equal to the difference of the second and first moments: <m:math display="block">
+ <m:semantics>
+  <m:mrow>
+   <m:mi>E</m:mi><m:mrow><m:mo>[</m:mo> <m:mrow>
+    <m:mi>X</m:mi><m:mrow><m:mo>(</m:mo>
+     <m:mrow>
+      <m:mi>X</m:mi><m:mo>−</m:mo><m:mn>1</m:mn>
+     </m:mrow>
+    <m:mo>)</m:mo></m:mrow>
+   </m:mrow> <m:mo>]</m:mo></m:mrow><m:mo>=</m:mo><m:mi>E</m:mi><m:mrow><m:mo>(</m:mo>
+    <m:mrow>
+     <m:msup>
+      <m:mi>X</m:mi>
+      <m:mn>2</m:mn>
+     </m:msup>
+     
+    </m:mrow>
+   <m:mo>)</m:mo></m:mrow><m:mo>−</m:mo><m:mi>E</m:mi><m:mrow><m:mo>(</m:mo>
+    <m:mi>X</m:mi>
+   <m:mo>)</m:mo></m:mrow><m:mo>.</m:mo>
+  </m:mrow>
+
+ </m:semantics>
+</m:math>
+
+</note>
+     <para id="para_35">
+There is another formula that can be used for computing the variance that uses the second factorial moment and sometimes simplifies the calculations.
+     </para>
+     <para id="para_36">
+First find the values of <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mi>E</m:mi><m:mrow><m:mo>(</m:mo>
+    <m:mi>X</m:mi>
+   <m:mo>)</m:mo></m:mrow>
+  </m:mrow>
+ </m:semantics>
+</m:math>
+ and <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mi>E</m:mi><m:mrow><m:mo>[</m:mo> <m:mrow>
+    <m:mi>X</m:mi><m:mrow><m:mo>(</m:mo>
+     <m:mrow>
+      <m:mi>X</m:mi><m:mo>−</m:mo><m:mn>1</m:mn>
+     </m:mrow>
+    <m:mo>)</m:mo></m:mrow>
+   </m:mrow> <m:mo>]</m:mo></m:mrow>
+  </m:mrow>
+ </m:semantics>
+</m:math>. Then <m:math display="block">
+ <m:semantics>
+  <m:mrow>
+   <m:msup>
+    <m:mi>σ</m:mi>
+    <m:mn>2</m:mn>
+   </m:msup>
+   <m:mo>=</m:mo><m:mi>E</m:mi><m:mrow><m:mo>[</m:mo> <m:mrow>
+    <m:mi>X</m:mi><m:mrow><m:mo>(</m:mo>
+     <m:mrow>
+      <m:mi>X</m:mi><m:mo>−</m:mo><m:mn>1</m:mn>
+     </m:mrow>
+    <m:mo>)</m:mo></m:mrow>
+   </m:mrow> <m:mo>]</m:mo></m:mrow><m:mo>+</m:mo><m:mi>E</m:mi><m:mrow><m:mo>(</m:mo>
+    <m:mi>X</m:mi>
+   <m:mo>)</m:mo></m:mrow><m:mo>−</m:mo><m:msup>
+    <m:mrow>
+     <m:mrow><m:mo>[</m:mo> <m:mrow>
+      <m:mi>E</m:mi><m:mrow><m:mo>(</m:mo>
+       <m:mi>X</m:mi>
+      <m:mo>)</m:mo></m:mrow>
+     </m:mrow> <m:mo>]</m:mo></m:mrow>
+    </m:mrow>
+    <m:mn>2</m:mn>
+   </m:msup>
+   <m:mo>,</m:mo>
+  </m:mrow>
+
+ </m:semantics>
+</m:math> since using the distributive property of <emphasis>E</emphasis>, this becomes <m:math display="block">
+ <m:semantics>
+  <m:mrow>
+   <m:msup>
+    <m:mi>σ</m:mi>
+    <m:mn>2</m:mn>
+   </m:msup>
+   <m:mo>=</m:mo><m:mi>E</m:mi><m:mrow><m:mo>(</m:mo>
+    <m:mrow>
+     <m:msup>
+      <m:mi>X</m:mi>
+      <m:mn>2</m:mn>
+     </m:msup>
+     
+    </m:mrow>
+   <m:mo>)</m:mo></m:mrow><m:mo>−</m:mo><m:mi>E</m:mi><m:mrow><m:mo>(</m:mo>
+    <m:mi>X</m:mi>
+   <m:mo>)</m:mo></m:mrow><m:mo>+</m:mo><m:mi>E</m:mi><m:mrow><m:mo>(</m:mo>
+    <m:mi>X</m:mi>
+   <m:mo>)</m:mo></m:mrow><m:mo>−</m:mo><m:msup>
+    <m:mrow>
+     <m:mrow><m:mo>[</m:mo> <m:mrow>
+      <m:mi>E</m:mi><m:mrow><m:mo>(</m:mo>
+       <m:mi>X</m:mi>
+      <m:mo>)</m:mo></m:mrow>
+     </m:mrow> <m:mo>]</m:mo></m:mrow>
+    </m:mrow>
+    <m:mn>2</m:mn>
+   </m:msup>
+   <m:mo>=</m:mo><m:mi>E</m:mi><m:mrow><m:mo>(</m:mo>
+    <m:mrow>
+     <m:msup>
+      <m:mi>X</m:mi>
+      <m:mn>2</m:mn>
+     </m:msup>
+     
+    </m:mrow>
+   <m:mo>)</m:mo></m:mrow><m:mo>−</m:mo><m:msup>
+    <m:mi>μ</m:mi>
+    <m:mn>2</m:mn>
+   </m:msup>
+   <m:mo>.</m:mo>
+  </m:mrow>
+ </m:semantics>
+</m:math>
+</para>
+<example id="ex_5">
+   <para id="para_37">
+Let continue with <link target-id="ex_4">example 4</link>, it can be find that
+   </para> 
+    
+     <para id="para_38">
+<m:math display="block">
+ <m:semantics>
+  <m:mrow>
+   <m:mi>E</m:mi><m:mrow><m:mo>[</m:mo> <m:mrow>
+    <m:mi>X</m:mi><m:mrow><m:mo>(</m:mo>
+     <m:mrow>
+      <m:mi>X</m:mi><m:mo>−</m:mo><m:mn>1</m:mn>
+     </m:mrow>
+    <m:mo>)</m:mo></m:mrow>
+   </m:mrow> <m:mo>]</m:mo></m:mrow><m:mo>=</m:mo><m:mn>1</m:mn><m:mrow><m:mo>(</m:mo>
+    <m:mn>0</m:mn>
+   <m:mo>)</m:mo></m:mrow><m:mrow><m:mo>(</m:mo>
+    <m:mrow>
+     <m:mfrac>
+      <m:mn>1</m:mn>
+      <m:mn>6</m:mn>
+     </m:mfrac>
+     
+    </m:mrow>
+   <m:mo>)</m:mo></m:mrow><m:mo>+</m:mo><m:mn>2</m:mn><m:mrow><m:mo>(</m:mo>
+    <m:mn>1</m:mn>
+   <m:mo>)</m:mo></m:mrow><m:mrow><m:mo>(</m:mo>
+    <m:mrow>
+     <m:mfrac>
+      <m:mn>2</m:mn>
+      <m:mn>6</m:mn>
+     </m:mfrac>
+     
+    </m:mrow>
+   <m:mo>)</m:mo></m:mrow><m:mo>+</m:mo><m:mn>3</m:mn><m:mrow><m:mo>(</m:mo>
+    <m:mn>2</m:mn>
+   <m:mo>)</m:mo></m:mrow><m:mrow><m:mo>(</m:mo>
+    <m:mrow>
+     <m:mfrac>
+      <m:mn>3</m:mn>
+      <m:mn>6</m:mn>
+     </m:mfrac>
+     
+    </m:mrow>
+   <m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mfrac>
+    <m:mrow>
+     <m:mn>22</m:mn>
+    </m:mrow>
+    <m:mn>6</m:mn>
+   </m:mfrac>
+   <m:mo>.</m:mo>
+  </m:mrow>
+ </m:semantics>
+</m:math>
+</para>
+     <para id="para_39">
+Thus <m:math display="block">
+ <m:semantics>
+  <m:mrow>
+   <m:msup>
+    <m:mi>σ</m:mi>
+    <m:mn>2</m:mn>
+   </m:msup>
+   <m:mo>=</m:mo><m:mi>E</m:mi><m:mrow><m:mo>[</m:mo> <m:mrow>
+    <m:mi>X</m:mi><m:mrow><m:mo>(</m:mo>
+     <m:mrow>
+      <m:mi>X</m:mi><m:mo>−</m:mo><m:mn>1</m:mn>
+     </m:mrow>
+    <m:mo>)</m:mo></m:mrow>
+   </m:mrow> <m:mo>]</m:mo></m:mrow><m:mo>+</m:mo><m:mi>E</m:mi><m:mrow><m:mo>(</m:mo>
+    <m:mi>X</m:mi>
+   <m:mo>)</m:mo></m:mrow><m:mo>−</m:mo><m:msup>
+    <m:mrow>
+     <m:mrow><m:mo>[</m:mo> <m:mrow>
+      <m:mi>E</m:mi><m:mrow><m:mo>(</m:mo>
+       <m:mi>X</m:mi>
+      <m:mo>)</m:mo></m:mrow>
+     </m:mrow> <m:mo>]</m:mo></m:mrow>
+    </m:mrow>
+    <m:mn>2</m:mn>
+   </m:msup>
+   <m:mo>=</m:mo><m:mfrac>
+    <m:mrow>
+     <m:mn>22</m:mn>
+    </m:mrow>
+    <m:mn>6</m:mn>
+   </m:mfrac>
+   <m:mo>+</m:mo><m:mfrac>
+    <m:mn>7</m:mn>
+    <m:mn>3</m:mn>
+   </m:mfrac>
+   <m:mo>−</m:mo><m:msup>
+    <m:mrow>
+     <m:mrow><m:mo>(</m:mo>
+      <m:mrow>
+       <m:mfrac>
+        <m:mn>7</m:mn>
+        <m:mn>3</m:mn>
+       </m:mfrac>
+       
+      </m:mrow>
+     <m:mo>)</m:mo></m:mrow>
+    </m:mrow>
+    <m:mn>2</m:mn>
+   </m:msup>
+   <m:mo>=</m:mo><m:mfrac>
+    <m:mn>5</m:mn>
+    <m:mn>9</m:mn>
+   </m:mfrac>
+   <m:mo>.</m:mo>
+  </m:mrow>
+ </m:semantics>
+</m:math>
+
+     </para>
+
+</example>
+<note type="REMARK" id="idm1486912"><label>REMARK</label>
+Recall the empirical distribution is defined by placing the weight (probability) of 1/<emphasis>n</emphasis> on each of <emphasis>n</emphasis> observations <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:msub>
+    <m:mi>x</m:mi>
+    <m:mn>1</m:mn>
+   </m:msub>
+   <m:mo>,</m:mo><m:msub>
+    <m:mi>x</m:mi>
+    <m:mn>2</m:mn>
+   </m:msub>
+   <m:mn>,...,</m:mn><m:msub>
+    <m:mi>x</m:mi>
+    <m:mi>n</m:mi>
+   </m:msub>
+     </m:mrow>
+ </m:semantics>
+</m:math>. Then the mean of this empirical distribution is <m:math display="block">
+ <m:semantics>
+  <m:mrow>
+   <m:mstyle displaystyle="true">
+    <m:munderover>
+     <m:mo>∑</m:mo>
+     <m:mrow>
+      <m:mi>i</m:mi><m:mo>=</m:mo><m:mn>1</m:mn>
+     </m:mrow>
+     <m:mi>n</m:mi>
+    </m:munderover>
+    <m:mrow>
+     <m:msub>
+      <m:mi>x</m:mi>
+      <m:mi>i</m:mi>
+     </m:msub>
+     <m:mfrac>
+      <m:mn>1</m:mn>
+      <m:mi>n</m:mi>
+     </m:mfrac>
+     <m:mo>=</m:mo><m:mfrac>
+      <m:mrow>
+       <m:mstyle displaystyle="true">
+        <m:munderover>
+         <m:mo>∑</m:mo>
+         <m:mrow>
+          <m:mi>i</m:mi><m:mo>=</m:mo><m:mn>1</m:mn>
+         </m:mrow>
+         <m:mi>n</m:mi>
+        </m:munderover>
+        <m:mrow>
+         <m:msub>
+          <m:mi>x</m:mi>
+          <m:mi>i</m:mi>
+         </m:msub>
+         
+        </m:mrow>
+       </m:mstyle>
+      </m:mrow>
+      <m:mi>n</m:mi>
+     </m:mfrac>
+     
+    </m:mrow>
+   </m:mstyle><m:mo>=</m:mo><m:mover accent="true">
+    <m:mi>x</m:mi>
+    <m:mo>¯</m:mo>
+   </m:mover>
+   <m:mo>.</m:mo>
+  </m:mrow>
+ </m:semantics>
+</m:math>
+</note> 
+  
+     <para id="para_40">
+The symbol <m:math>
+ <m:semantics>
+  <m:mover accent="true">
+   <m:mi>x</m:mi>
+   <m:mo>¯</m:mo>
+  </m:mover>
+   </m:semantics>
+</m:math> represents <term>the mean of the empirical distribution</term>. It is seen that <m:math>
+ <m:semantics>
+  <m:mover accent="true">
+   <m:mi>x</m:mi>
+   <m:mo>¯</m:mo>
+  </m:mover>
+   </m:semantics>
+</m:math>
+is usually close in value to <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mi>μ</m:mi><m:mo>=</m:mo><m:mi>E</m:mi><m:mrow><m:mo>(</m:mo>
+    <m:mi>X</m:mi>
+   <m:mo>)</m:mo></m:mrow>
+  </m:mrow>
+ </m:semantics>
+</m:math>; thus, when <m:math>
+ <m:semantics>
+  <m:mi>μ</m:mi>
+ </m:semantics>
+</m:math>
+is unknown, <m:math>
+ <m:semantics>
+  <m:mover accent="true">
+   <m:mi>x</m:mi>
+   <m:mo>¯</m:mo>
+  </m:mover>
+   </m:semantics>
+</m:math>
+will be used to estimate <m:math>
+ <m:semantics>
+  <m:mi>μ</m:mi>
+ </m:semantics>
+</m:math>.
+     </para>
+     <para id="para_41">
+Similarly, <term>the variance of the empirical distribution</term> can be computed. Let <emphasis>v</emphasis> denote this variance so that it is equal to
+     </para>
+     <para id="para_42">
+<m:math display="block">
+ <m:semantics>
+  <m:mrow>
+   <m:mi>v</m:mi><m:mo>=</m:mo><m:msup>
+    <m:mrow>
+     <m:mstyle displaystyle="true">
+      <m:munderover>
+       <m:mo>∑</m:mo>
+       <m:mrow>
+        <m:mi>i</m:mi><m:mo>=</m:mo><m:mn>1</m:mn>
+       </m:mrow>
+       <m:mi>n</m:mi>
+      </m:munderover>
+      <m:mrow>
+       <m:mrow><m:mo>(</m:mo>
+        <m:mrow>
+         <m:msub>
+          <m:mi>x</m:mi>
+          <m:mi>i</m:mi>
+         </m:msub>
+         <m:mo>−</m:mo><m:mover accent="true">
+          <m:mi>x</m:mi>
+          <m:mo>¯</m:mo>
+         </m:mover>
+         
+        </m:mrow>
+       <m:mo>)</m:mo></m:mrow>
+      </m:mrow>
+     </m:mstyle>
+    </m:mrow>
+    <m:mn>2</m:mn>
+   </m:msup>
+   <m:mfrac>
+    <m:mn>1</m:mn>
+    <m:mi>n</m:mi>
+   </m:mfrac>
+   <m:mo>=</m:mo><m:mstyle displaystyle="true">
+    <m:munderover>
+     <m:mo>∑</m:mo>
+     <m:mrow>
+      <m:mi>i</m:mi><m:mo>=</m:mo><m:mn>1</m:mn>
+     </m:mrow>
+     <m:mi>n</m:mi>
+    </m:munderover>
+    <m:mrow>
+     <m:msubsup>
+      <m:mi>x</m:mi>
+      <m:mi>i</m:mi>
+      <m:mn>2</m:mn>
+     </m:msubsup>
+     <m:mfrac>
+      <m:mn>1</m:mn>
+      <m:mi>n</m:mi>
+     </m:mfrac>
+     <m:mo>−</m:mo><m:msup>
+      <m:mover accent="true">
+       <m:mi>x</m:mi>
+       <m:mo>¯</m:mo>
+      </m:mover>
+      
+      <m:mn>2</m:mn>
+     </m:msup>
+     
+    </m:mrow>
+   </m:mstyle><m:mo>=</m:mo><m:mfrac>
+    <m:mn>1</m:mn>
+    <m:mi>n</m:mi>
+   </m:mfrac>
+   <m:mstyle displaystyle="true">
+    <m:munderover>
+     <m:mo>∑</m:mo>
+     <m:mrow>
+      <m:mi>i</m:mi><m:mo>=</m:mo><m:mn>1</m:mn>
+     </m:mrow>
+     <m:mi>n</m:mi>
+    </m:munderover>
+    <m:mrow>
+     <m:msubsup>
+      <m:mi>x</m:mi>
+      <m:mi>i</m:mi>
+      <m:mn>2</m:mn>
+     </m:msubsup>
+     <m:mo>−</m:mo><m:msup>
+      <m:mover accent="true">
+       <m:mi>x</m:mi>
+       <m:mo>¯</m:mo>
+      </m:mover>
+      
+      <m:mn>2</m:mn>
+     </m:msup>
+     
+    </m:mrow>
+   </m:mstyle><m:mo>.</m:mo>
+  </m:mrow>
+ </m:semantics>
+</m:math>
+
+     </para>
+<para id="para_43">
+This last statement is true because, in general, <m:math display="block">
+ <m:semantics>
+  <m:mrow>
+   <m:msup>
+    <m:mi>σ</m:mi>
+    <m:mn>2</m:mn>
+   </m:msup>
+   <m:mo>=</m:mo><m:mi>E</m:mi><m:mrow><m:mo>(</m:mo>
+    <m:mrow>
+     <m:msup>
+      <m:mi>X</m:mi>
+      <m:mn>2</m:mn>
+     </m:msup>
+     
+    </m:mrow>
+   <m:mo>)</m:mo></m:mrow><m:mo>−</m:mo><m:msup>
+    <m:mi>μ</m:mi>
+    <m:mn>2</m:mn>
+   </m:msup>
+   <m:mo>.</m:mo>
+  </m:mrow>
+ </m:semantics>
+</m:math>
+</para>
+<note type="NOTE THAT" id="idm1355520"><label>NOTE THAT</label>
+There is a relationship between the sample variance <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:msup>
+    <m:mi>s</m:mi>
+    <m:mn>2</m:mn>
+   </m:msup>
+     </m:mrow>
+ </m:semantics>
+</m:math>
+and variance <emphasis>v</emphasis> of the empirical distribution, namely <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:msup>
+    <m:mi>s</m:mi>
+    <m:mn>2</m:mn>
+   </m:msup>
+   <m:mo>=</m:mo><m:mi>n</m:mi><m:mi>s</m:mi><m:mo>/</m:mo><m:mrow><m:mo>(</m:mo>
+    <m:mrow>
+     <m:mi>n</m:mi><m:mo>−</m:mo><m:mn>1</m:mn>
+    </m:mrow>
+   <m:mo>)</m:mo></m:mrow>
+  </m:mrow>
+ </m:semantics>
+</m:math>. Of course, with large <emphasis>n</emphasis>, the difference between <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:msup>
+    <m:mi>s</m:mi>
+    <m:mn>2</m:mn>
+   </m:msup>
+     </m:mrow>
+ </m:semantics>
+</m:math>
+and <emphasis>v</emphasis> is very small. Usually, we use <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:msup>
+    <m:mi>s</m:mi>
+    <m:mn>2</m:mn>
+   </m:msup>
+     </m:mrow>
+ </m:semantics>
+</m:math>
+to estimate <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:msup>
+    <m:mi>σ</m:mi>
+    <m:mn>2</m:mn>
+   </m:msup>
+     </m:mrow>
+ </m:semantics>
+</m:math>
+when <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:msup>
+    <m:mi>σ</m:mi>
+    <m:mn>2</m:mn>
+   </m:msup>
+     </m:mrow>
+ </m:semantics>
+</m:math>
+is unknown.
+</note>
+<para id="para_44">
+     </para>
+
+<para id="para_45">
+     </para>
+
+          </section>
+      </section>
+</section>
+<section id="sec_6">
+<section id="sec_7">
+<note type="SEE ALSO" id="idm4083680"><label>SEE ALSO</label>
+<link document="m13123" target-id="sec_1">BERNOULLI TRIALS and BINOMIAL DISTRIBUTION</link>
+</note>
+ </section> 
+    </section> 
+  </content>
+  
+</document>

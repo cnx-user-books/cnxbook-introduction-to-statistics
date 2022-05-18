@@ -1,0 +1,1339 @@
+<document xmlns="http://cnx.rice.edu/cnxml" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:md="http://cnx.rice.edu/mdml">
+  <title>Maximum Likelihood Estimation (MLE)</title>
+  <metadata><md:content-id>undefined</md:content-id><md:title/><md:uuid>eeeffdee-d1e0-4881-8b94-a15a54c04ff8</md:uuid>
+</metadata>
+  <content>
+<section id="sec_1">
+	  <title>MAXIMUM LIKELIHOOD ESTIMATION (MLE)</title> 
+	  
+
+<section id="sec_2">
+
+<title>Likelihood function</title> 
+	  <para id="para_1">
+From a statistical standpoint, the data vector <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mi>x</m:mi><m:mo>=</m:mo><m:mrow><m:mo>(</m:mo>
+    <m:mrow>
+     <m:msub>
+      <m:mi>x</m:mi>
+      <m:mn>1</m:mn>
+     </m:msub>
+     <m:mo>,</m:mo><m:msub>
+      <m:mi>x</m:mi>
+      <m:mn>2</m:mn>
+     </m:msub>
+     <m:mo>,</m:mo><m:mn>...</m:mn><m:mo>,</m:mo><m:msub>
+      <m:mi>x</m:mi>
+      <m:mi>n</m:mi>
+     </m:msub>
+     
+    </m:mrow>
+   <m:mo>)</m:mo></m:mrow>
+  </m:mrow>
+ </m:semantics>
+</m:math> as the outcome of an experiment is a random sample from an unknown population. <term>The goal of data analysis is to identify the population that is most likely to have generated the sample.</term> In statistics, each population is identified by a corresponding probability distribution. Associated with each probability distribution is a unique value of the model’s parameter. As the parameter changes in value, different probability distributions are generated. Formally, a model is defined as the family of probability distributions indexed by the model’s parameters.
+
+	  </para>
+	  <para id="para_2">
+Let denote the <emphasis>probability distribution function </emphasis> (PDF) by <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mi>f</m:mi><m:mrow><m:mo>(</m:mo>
+    <m:mrow>
+     <m:mi>x</m:mi><m:mtext>|</m:mtext><m:mi>θ</m:mi>
+    </m:mrow>
+   <m:mo>)</m:mo></m:mrow>
+  </m:mrow>
+ </m:semantics>
+</m:math> that specifies the probability of observing data <emphasis>y</emphasis> given the parameter <emphasis>w</emphasis>. The parameter vector <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mi>θ</m:mi><m:mo>=</m:mo><m:mrow><m:mo>(</m:mo>
+    <m:mrow>
+     <m:msub>
+      <m:mi>θ</m:mi>
+      <m:mn>1</m:mn>
+     </m:msub>
+     <m:mo>,</m:mo><m:msub>
+      <m:mi>θ</m:mi>
+      <m:mn>2</m:mn>
+     </m:msub>
+     <m:mo>,</m:mo><m:mn>...</m:mn><m:mo>,</m:mo><m:msub>
+      <m:mi>θ</m:mi>
+      <m:mi>k</m:mi>
+     </m:msub>
+     
+    </m:mrow>
+   <m:mo>)</m:mo></m:mrow>
+  </m:mrow>
+</m:semantics>
+</m:math> is a vector defined on a multi-dimensional parameter space. If individual observations, <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:msub>
+    <m:mi>x</m:mi>
+    <m:mi>i</m:mi>
+   </m:msub>
+   <m:mo>'</m:mo><m:mi>s</m:mi>
+  </m:mrow>
+ </m:semantics>
+</m:math> are statistically independent of one another, then according to the theory of probability, the PDF for the data <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mi>x</m:mi><m:mo>=</m:mo><m:mrow><m:mo>(</m:mo>
+    <m:mrow>
+     <m:msub>
+      <m:mi>x</m:mi>
+      <m:mn>1</m:mn>
+     </m:msub>
+     <m:mo>,</m:mo><m:msub>
+      <m:mi>x</m:mi>
+      <m:mn>2</m:mn>
+     </m:msub>
+     <m:mo>,</m:mo><m:mn>...</m:mn><m:mo>,</m:mo><m:msub>
+      <m:mi>x</m:mi>
+      <m:mi>n</m:mi>
+     </m:msub>
+     
+    </m:mrow>
+   <m:mo>)</m:mo></m:mrow>
+  </m:mrow>
+ </m:semantics>
+</m:math> can be expressed as a multiplication of PDFs for individual observations, 
+	  </para>
+
+	  <para id="para_3">
+
+<m:math display="block">
+ <m:semantics>
+  <m:mrow>
+   <m:mi>f</m:mi><m:mrow><m:mo>(</m:mo>
+    <m:mrow>
+     <m:mi>x</m:mi><m:mo>,</m:mo><m:mi>θ</m:mi>
+    </m:mrow>
+   <m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo>
+    <m:mrow>
+     <m:msub>
+      <m:mi>x</m:mi>
+      <m:mn>1</m:mn>
+     </m:msub>
+     <m:mo>,</m:mo><m:mi>θ</m:mi>
+    </m:mrow>
+   <m:mo>)</m:mo></m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo>
+    <m:mrow>
+     <m:msub>
+      <m:mi>x</m:mi>
+      <m:mn>2</m:mn>
+     </m:msub>
+     <m:mo>,</m:mo><m:mi>θ</m:mi>
+    </m:mrow>
+   <m:mo>)</m:mo></m:mrow><m:mo>·</m:mo><m:mo>·</m:mo><m:mo>·</m:mo><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo>
+    <m:mrow>
+     <m:msub>
+      <m:mi>x</m:mi>
+      <m:mi>n</m:mi>
+     </m:msub>
+     <m:mo>,</m:mo><m:mi>θ</m:mi>
+    </m:mrow>
+   <m:mo>)</m:mo></m:mrow><m:mo>,</m:mo>
+  </m:mrow>
+ </m:semantics>
+</m:math>
+ <m:math display="block">
+ <m:semantics>
+  <m:mrow>
+   <m:mi>L</m:mi><m:mrow><m:mo>(</m:mo>
+    <m:mi>θ</m:mi>
+   <m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mstyle displaystyle="true">
+    <m:munderover>
+     <m:mo>∏</m:mo>
+     <m:mrow>
+      <m:mi>i</m:mi><m:mo>=</m:mo><m:mn>1</m:mn>
+     </m:mrow>
+     <m:mi>n</m:mi>
+    </m:munderover>
+    <m:mrow>
+     <m:mi>f</m:mi><m:mrow><m:mo>(</m:mo>
+      <m:mrow>
+       <m:msub>
+        <m:mi>x</m:mi>
+        <m:mi>i</m:mi>
+       </m:msub>
+       <m:mo>|</m:mo><m:mi>θ</m:mi>
+      </m:mrow>
+     <m:mo>)</m:mo></m:mrow>
+    </m:mrow>
+   </m:mstyle><m:mo>.</m:mo>
+  </m:mrow>
+
+ </m:semantics>
+</m:math>
+
+</para>
+
+	  <para id="para_4">
+<term>To illustrate the idea of a PDF</term>, consider the simplest case with one observation and one parameter, that is, <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mi>n</m:mi><m:mo>=</m:mo><m:mi>k</m:mi><m:mo>=</m:mo><m:mn>1</m:mn>
+  </m:mrow>
+ </m:semantics>
+</m:math>. Suppose that the data <emphasis>x</emphasis> represents the number of successes in a sequence of 10 independent binary trials (e.g., coin tossing experiment) and that the probability of a success on any one trial, represented by the parameter, <m:math>
+ <m:semantics>
+  <m:mi>θ</m:mi>
+</m:semantics>
+</m:math> is 0.2. The PDF in this case is then given by
+</para>
+
+	  <para id="para_5">
+<m:math display="block">
+ <m:semantics>
+  <m:mrow>
+   <m:mi>f</m:mi><m:mrow><m:mo>(</m:mo>
+    <m:mrow>
+     <m:mi>x</m:mi><m:mo>|</m:mo><m:mi>θ</m:mi><m:mo>=</m:mo><m:mn>0.2</m:mn>
+    </m:mrow>
+   <m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mfrac>
+    <m:mrow>
+     <m:mn>10</m:mn><m:mo>!</m:mo>
+    </m:mrow>
+    <m:mrow>
+     <m:mi>x</m:mi><m:mo>!</m:mo><m:mrow><m:mo>(</m:mo>
+      <m:mrow>
+       <m:mn>10</m:mn><m:mo>−</m:mo><m:mi>x</m:mi>
+      </m:mrow>
+     <m:mo>)</m:mo></m:mrow><m:mo>!</m:mo>
+    </m:mrow>
+   </m:mfrac>
+   <m:msup>
+    <m:mrow>
+     <m:mrow><m:mo>(</m:mo>
+      <m:mrow>
+       <m:mn>0.2</m:mn>
+      </m:mrow>
+     <m:mo>)</m:mo></m:mrow>
+    </m:mrow>
+    <m:mi>x</m:mi>
+   </m:msup>
+   <m:msup>
+    <m:mrow>
+     <m:mrow><m:mo>(</m:mo>
+      <m:mrow>
+       <m:mn>0.8</m:mn>
+      </m:mrow>
+     <m:mo>)</m:mo></m:mrow>
+    </m:mrow>
+    <m:mrow>
+     <m:mn>10</m:mn><m:mo>−</m:mo><m:mi>x</m:mi>
+    </m:mrow>
+   </m:msup>
+   <m:mo>,</m:mo><m:mrow><m:mo>(</m:mo>
+    <m:mrow>
+     <m:mi>x</m:mi><m:mo>=</m:mo><m:mn>0.1</m:mn><m:mo>,</m:mo><m:mn>...</m:mn><m:mo>,</m:mo><m:mn>10</m:mn>
+    </m:mrow>
+   <m:mo>)</m:mo></m:mrow><m:mo>,</m:mo>
+  </m:mrow>
+ </m:semantics>
+</m:math>
+
+</para>
+
+	  <para id="para_6">
+which is known as the binomial probability distribution. The shape of this PDF is shown in the top panel of <link target-id="fig_1">Figure 1</link>. If the parameter value is changed to say <emphasis>w</emphasis> = 0.7, a new PDF is obtained as <m:math display="block">
+ <m:semantics>
+  <m:mrow>
+   <m:mi>f</m:mi><m:mrow><m:mo>(</m:mo>
+    <m:mrow>
+     <m:mi>x</m:mi><m:mo>|</m:mo><m:mi>θ</m:mi><m:mo>=</m:mo><m:mn>0.7</m:mn>
+    </m:mrow>
+   <m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mfrac>
+    <m:mrow>
+     <m:mn>10</m:mn><m:mo>!</m:mo>
+    </m:mrow>
+    <m:mrow>
+     <m:mi>x</m:mi><m:mo>!</m:mo><m:mrow><m:mo>(</m:mo>
+      <m:mrow>
+       <m:mn>10</m:mn><m:mo>−</m:mo><m:mi>x</m:mi>
+      </m:mrow>
+     <m:mo>)</m:mo></m:mrow><m:mo>!</m:mo>
+    </m:mrow>
+   </m:mfrac>
+   <m:msup>
+    <m:mrow>
+     <m:mrow><m:mo>(</m:mo>
+      <m:mrow>
+       <m:mn>0.7</m:mn>
+      </m:mrow>
+     <m:mo>)</m:mo></m:mrow>
+    </m:mrow>
+    <m:mi>x</m:mi>
+   </m:msup>
+   <m:msup>
+    <m:mrow>
+     <m:mrow><m:mo>(</m:mo>
+      <m:mrow>
+       <m:mn>0.3</m:mn>
+      </m:mrow>
+     <m:mo>)</m:mo></m:mrow>
+    </m:mrow>
+    <m:mrow>
+     <m:mn>10</m:mn><m:mo>−</m:mo><m:mi>x</m:mi>
+    </m:mrow>
+   </m:msup>
+   <m:mo>,</m:mo><m:mrow><m:mo>(</m:mo>
+    <m:mrow>
+     <m:mi>x</m:mi><m:mo>=</m:mo><m:mn>0.1</m:mn><m:mo>,</m:mo><m:mn>...</m:mn><m:mo>,</m:mo><m:mn>10</m:mn>
+    </m:mrow>
+   <m:mo>)</m:mo></m:mrow><m:mo>;</m:mo>
+  </m:mrow>
+ </m:semantics>
+</m:math> whose shape is shown in the bottom panel of <link target-id="fig_1">Figure 1</link>.  
+ <term>The following is the general expression of the binomial PDF for arbitrary values of <m:math>
+ <m:semantics>
+  <m:mi>θ</m:mi>
+</m:semantics>
+</m:math> and <emphasis>n</emphasis>:</term>
+ </para>
+
+	  <para id="para_7">
+<m:math display="block">
+ <m:semantics>
+  <m:mrow>
+   <m:mi>f</m:mi><m:mrow><m:mo>(</m:mo>
+    <m:mrow>
+     <m:mi>x</m:mi><m:mo>|</m:mo><m:mi>θ</m:mi>
+    </m:mrow>
+   <m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mfrac>
+    <m:mrow>
+     <m:mi>n</m:mi><m:mo>!</m:mo>
+    </m:mrow>
+    <m:mrow>
+     <m:mi>θ</m:mi><m:mo>!</m:mo><m:mrow><m:mo>(</m:mo>
+      <m:mrow>
+       <m:mi>n</m:mi><m:mo>−</m:mo><m:mi>x</m:mi>
+      </m:mrow>
+     <m:mo>)</m:mo></m:mrow><m:mo>!</m:mo>
+    </m:mrow>
+   </m:mfrac>
+   <m:msup>
+    <m:mi>θ</m:mi>
+    <m:mi>x</m:mi>
+   </m:msup>
+   <m:msup>
+    <m:mrow>
+     <m:mrow><m:mo>(</m:mo>
+      <m:mrow>
+       <m:mn>1</m:mn><m:mo>−</m:mo><m:mi>θ</m:mi>
+      </m:mrow>
+     <m:mo>)</m:mo></m:mrow>
+    </m:mrow>
+    <m:mrow>
+     <m:mi>n</m:mi><m:mo>−</m:mo><m:mi>x</m:mi>
+    </m:mrow>
+   </m:msup>
+   <m:mo>,</m:mo><m:mn>0</m:mn><m:mo>≤</m:mo><m:mi>θ</m:mi><m:mo>≤</m:mo><m:mn>1</m:mn><m:mo>,</m:mo><m:mi>x</m:mi><m:mo>=</m:mo><m:mn>0.1</m:mn><m:mo>,</m:mo><m:mn>...</m:mn><m:mo>,</m:mo><m:mi>n</m:mi><m:mo>;</m:mo>
+  </m:mrow>
+ </m:semantics>
+</m:math>
+
+
+</para>
+
+	  <para id="para_8">
+which as a function of <emphasis>y</emphasis> specifies the probability of data <emphasis>y</emphasis> for a given value of the parameter <m:math>
+ <m:semantics>
+  <m:mi>θ</m:mi>
+</m:semantics>
+</m:math>
+. The collection of all such PDFs generated by varying parameter across its range (0 - 1 in this case) defines a model.
+	  </para>
+	  <figure id="fig_1">
+	<media id="idp9792832" alt=""><image src="../../media/MLE.png" mime-type="image/png"/></media>
+	<caption>
+Binomial probability distributions of sample size <emphasis>n</emphasis> = 10 and probability parameter <m:math>
+			<m:semantics>
+				<m:mi>θ</m:mi>
+			</m:semantics>
+		</m:math> = 0.2 (top) and <m:math>
+			<m:semantics>
+				<m:mi>θ</m:mi>
+			</m:semantics>
+		</m:math> = 0.7 (bottom).
+
+
+            </caption>
+</figure>
+
+</section> 
+<section id="sec_3">
+
+<title>Maximum Likelihood Estimation</title> 
+
+	  <para id="para_9">
+Once data have been collected and the likelihood function of a model given the data is determined, one is in a position to make statistical inferences about the population, that is, the probability distribution that underlies the data. Given that different parameter values index different probability distributions (<link target-id="fig_1">Figure 1</link>), we are interested in finding the parameter value that corresponds to the desired PDF.
+	  </para>
+	  <para id="para_10">
+The principle of <term>maximum likelihood estimation (MLE)</term>, originally developed by R. A. Fisher in the 1920s, states that the desired probability distribution be the one that makes the observed data most likely, which is obtained by seeking the value of the parameter vector that maximizes the <link target-id="sec_1">likelihood function</link> <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mi>L</m:mi><m:mrow><m:mo>(</m:mo>
+    <m:mi>θ</m:mi>
+   <m:mo>)</m:mo></m:mrow>
+  </m:mrow>
+</m:semantics>
+</m:math>. The resulting parameter, which is sought by searching the multidimensional parameter space, is called <term>the MLE estimate</term>, denoted by 
+          </para>
+	  <para id="para_11">
+<m:math display="block">
+ <m:semantics>
+  <m:mrow>
+   <m:mi>θ</m:mi><m:mi>M</m:mi><m:mi>L</m:mi><m:mi>E</m:mi><m:mo>=</m:mo><m:mrow><m:mo>(</m:mo>
+    <m:mrow>
+     <m:msub>
+      <m:mi>θ</m:mi>
+      <m:mn>1</m:mn>
+     </m:msub>
+     <m:mi>M</m:mi><m:mi>L</m:mi><m:mi>E</m:mi><m:mo>,</m:mo><m:mn>...</m:mn><m:mo>,</m:mo><m:msub>
+      <m:mi>θ</m:mi>
+      <m:mi>k</m:mi>
+     </m:msub>
+     <m:mi>M</m:mi><m:mi>L</m:mi><m:mi>E</m:mi>
+    </m:mrow>
+   <m:mo>)</m:mo></m:mrow>  <m:mo>.</m:mo>
+  </m:mrow>
+ </m:semantics>
+</m:math>
+
+	  </para>
+<section id="sec_4">
+	  <para id="para_12">
+Let <emphasis>p</emphasis> equal the probability of success in a sequence of Bernoulli trials or the proportion of the large population with a certain characteristic. The method of moments estimate for <emphasis>p</emphasis> is relative frequency of success (having that characteristic). It will be shown below that the maximum likelihood estimate for <emphasis>p</emphasis> is also the relative frequency of success. 
+	  </para>
+	  <para id="para_13">
+Suppose that <emphasis>X</emphasis> is <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mi>b</m:mi><m:mrow><m:mo>(</m:mo>
+    <m:mrow>
+     <m:mn>1</m:mn><m:mo>,</m:mo><m:mi>p</m:mi>
+    </m:mrow>
+   <m:mo>)</m:mo></m:mrow>
+  </m:mrow>
+</m:semantics>
+</m:math> so that the p.d.f. of <emphasis>X</emphasis> is <m:math display="block">
+ <m:semantics>
+  <m:mrow>
+   <m:mi>f</m:mi><m:mrow><m:mo>(</m:mo>
+    <m:mrow>
+     <m:mi>x</m:mi><m:mo>;</m:mo><m:mi>p</m:mi>
+    </m:mrow>
+   <m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:msup>
+    <m:mi>p</m:mi>
+    <m:mi>x</m:mi>
+   </m:msup>
+   <m:msup>
+    <m:mrow>
+     <m:mrow><m:mo>(</m:mo>
+      <m:mrow>
+       <m:mn>1</m:mn><m:mo>−</m:mo><m:mi>p</m:mi>
+      </m:mrow>
+     <m:mo>)</m:mo></m:mrow>
+    </m:mrow>
+    <m:mrow>
+     <m:mn>1</m:mn><m:mo>−</m:mo><m:mi>x</m:mi>
+    </m:mrow>
+   </m:msup>
+   <m:mo>,</m:mo><m:mi>x</m:mi><m:mo>=</m:mo><m:mn>0</m:mn><m:mo>,</m:mo><m:mn>1</m:mn><m:mo>,</m:mo><m:mn>0</m:mn><m:mo>≤</m:mo><m:mi>p</m:mi><m:mo>≤</m:mo><m:mn>1.</m:mn>
+  </m:mrow>
+ </m:semantics>
+</m:math> Sometimes is written <m:math display="block">
+ <m:semantics>
+  <m:mrow>
+   <m:mi>p</m:mi><m:mo>∈</m:mo><m:mi>Ω</m:mi><m:mo>=</m:mo><m:mrow><m:mo>[</m:mo> <m:mrow>
+    <m:mi>p</m:mi><m:mo>:</m:mo><m:mn>0</m:mn><m:mo>≤</m:mo><m:mi>p</m:mi><m:mo>≤</m:mo><m:mn>1</m:mn>
+   </m:mrow> <m:mo>]</m:mo></m:mrow>  <m:mo>,</m:mo>
+  </m:mrow>
+</m:semantics>
+</m:math> where <m:math>
+ <m:semantics>
+  <m:mi>Ω</m:mi>
+</m:semantics>
+</m:math> is used to represent parameter space, that is, the space of all possible values of the parameter. 
+A random sample <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:msub>
+    <m:mi>X</m:mi>
+    <m:mn>1</m:mn>
+   </m:msub>
+   <m:mo>,</m:mo><m:msub>
+    <m:mi>X</m:mi>
+    <m:mn>2</m:mn>
+   </m:msub>
+   <m:mo>,</m:mo><m:mn>...</m:mn><m:mo>,</m:mo><m:msub>
+    <m:mi>X</m:mi>
+    <m:mi>n</m:mi>
+   </m:msub>
+     </m:mrow>
+</m:semantics>
+</m:math> is taken, and the problem is to find an estimator <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mtext>u</m:mtext><m:mrow><m:mo>(</m:mo>
+    <m:mrow>
+     <m:msub>
+      <m:mtext>X</m:mtext>
+      <m:mtext>1</m:mtext>
+     </m:msub>
+     <m:mo>,</m:mo><m:msub>
+      <m:mtext>X</m:mtext>
+      <m:mtext>2</m:mtext>
+     </m:msub>
+     <m:mo>,</m:mo><m:mn>...</m:mn><m:mo>,</m:mo><m:msub>
+      <m:mtext>X</m:mtext>
+      <m:mtext>n</m:mtext>
+     </m:msub>
+         </m:mrow>
+   <m:mo>)</m:mo></m:mrow>
+  </m:mrow>
+</m:semantics>
+</m:math> such that <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mtext>u</m:mtext><m:mrow><m:mo>(</m:mo>
+    <m:mrow>
+     <m:msub>
+      <m:mi>x</m:mi>
+      <m:mtext>1</m:mtext>
+     </m:msub>
+     <m:mo>,</m:mo><m:msub>
+      <m:mi>x</m:mi>
+      <m:mtext>2</m:mtext>
+     </m:msub>
+     <m:mo>,</m:mo><m:mn>...</m:mn><m:mo>,</m:mo><m:msub>
+      <m:mi>x</m:mi>
+      <m:mtext>n</m:mtext>
+     </m:msub>
+         </m:mrow>
+   <m:mo>)</m:mo></m:mrow>
+  </m:mrow>
+ </m:semantics>
+</m:math> is a good point estimate of <emphasis>p</emphasis>, where <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:msub>
+    <m:mi>x</m:mi>
+    <m:mtext>1</m:mtext>
+   </m:msub>
+   <m:mo>,</m:mo><m:msub>
+    <m:mi>x</m:mi>
+    <m:mtext>2</m:mtext>
+   </m:msub>
+   <m:mo>,</m:mo><m:mn>...</m:mn><m:mo>,</m:mo><m:msub>
+    <m:mi>x</m:mi>
+    <m:mtext>n</m:mtext>
+   </m:msub>
+     </m:mrow>
+ </m:semantics>
+</m:math> are the observed values of the random sample. Now the probability that <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:msub>
+    <m:mi>X</m:mi>
+    <m:mn>1</m:mn>
+   </m:msub>
+   <m:mo>,</m:mo><m:msub>
+    <m:mi>X</m:mi>
+    <m:mn>2</m:mn>
+   </m:msub>
+   <m:mo>,</m:mo><m:mn>...</m:mn><m:mo>,</m:mo><m:msub>
+    <m:mi>X</m:mi>
+    <m:mi>n</m:mi>
+   </m:msub>
+     </m:mrow>
+</m:semantics>
+</m:math> takes the particular values is
+          </para>
+	  <para id="para_14">
+<m:math display="block">
+ <m:semantics>
+  <m:mrow>
+   <m:mi>P</m:mi><m:mrow><m:mo>(</m:mo>
+    <m:mrow>
+     <m:msub>
+      <m:mi>X</m:mi>
+      <m:mn>1</m:mn>
+     </m:msub>
+     <m:mo>=</m:mo><m:msub>
+      <m:mi>x</m:mi>
+      <m:mn>1</m:mn>
+     </m:msub>
+     <m:mo>,</m:mo><m:mn>...</m:mn><m:mo>,</m:mo><m:msub>
+      <m:mi>X</m:mi>
+      <m:mi>n</m:mi>
+     </m:msub>
+     <m:mo>=</m:mo><m:msub>
+      <m:mi>x</m:mi>
+      <m:mi>n</m:mi>
+     </m:msub>
+     
+    </m:mrow>
+   <m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mstyle displaystyle="true">
+    <m:munderover>
+     <m:mo>∏</m:mo>
+     <m:mrow>
+      <m:mi>i</m:mi><m:mo>=</m:mo><m:mn>1</m:mn>
+     </m:mrow>
+     <m:mi>n</m:mi>
+    </m:munderover>
+    <m:mrow>
+     <m:msup>
+      <m:mi>p</m:mi>
+      <m:mrow>
+       <m:msub>
+        <m:mi>x</m:mi>
+        <m:mi>i</m:mi>
+       </m:msub>
+       
+      </m:mrow>
+     </m:msup>
+     <m:msup>
+      <m:mrow>
+       <m:mrow><m:mo>(</m:mo>
+        <m:mrow>
+         <m:mn>1</m:mn><m:mo>−</m:mo><m:mi>p</m:mi>
+        </m:mrow>
+       <m:mo>)</m:mo></m:mrow>
+      </m:mrow>
+      <m:mrow>
+       <m:mn>1</m:mn><m:mo>−</m:mo><m:msub>
+        <m:mi>x</m:mi>
+        <m:mi>i</m:mi>
+       </m:msub>
+       
+      </m:mrow>
+     </m:msup>
+     
+    </m:mrow>
+   </m:mstyle><m:mo>=</m:mo><m:mi>p</m:mi><m:mstyle displaystyle="true">
+    <m:mo>∑</m:mo> <m:mrow>
+     <m:msub>
+      <m:mi>x</m:mi>
+      <m:mi>i</m:mi>
+     </m:msub>
+     
+    </m:mrow>
+   </m:mstyle><m:msup>
+    <m:mrow>
+     <m:mrow><m:mo>(</m:mo>
+      <m:mrow>
+       <m:mn>1</m:mn><m:mo>−</m:mo><m:mi>p</m:mi>
+      </m:mrow>
+     <m:mo>)</m:mo></m:mrow>
+    </m:mrow>
+    <m:mrow>
+     <m:mi>n</m:mi><m:mo>−</m:mo><m:mstyle displaystyle="true">
+      <m:mo>∑</m:mo> <m:mrow>
+       <m:msub>
+        <m:mi>x</m:mi>
+        <m:mi>i</m:mi>
+       </m:msub>
+       
+      </m:mrow>
+     </m:mstyle>
+    </m:mrow>
+   </m:msup>
+   <m:mo>,</m:mo>
+  </m:mrow>
+ </m:semantics>
+</m:math>
+
+	  </para>
+	  <para id="para_15">
+which is the joint p.d.f. of <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:msub>
+    <m:mi>X</m:mi>
+    <m:mn>1</m:mn>
+   </m:msub>
+   <m:mo>,</m:mo><m:msub>
+    <m:mi>X</m:mi>
+    <m:mn>2</m:mn>
+   </m:msub>
+   <m:mo>,</m:mo><m:mn>...</m:mn><m:mo>,</m:mo><m:msub>
+    <m:mi>X</m:mi>
+    <m:mi>n</m:mi>
+   </m:msub>
+     </m:mrow>
+</m:semantics>
+</m:math> evaluated at the observed values. One reasonable way to proceed towards finding a good estimate of <emphasis>p</emphasis> is to regard this probability (or joint p.d.f.)  as a function of <emphasis>p</emphasis> and find the value of <emphasis>p</emphasis> that maximizes it. That is, find the <emphasis>p</emphasis> value most likely to have produced these sample values. The joint p.d.f., when regarded as a function of <emphasis>p</emphasis>, is frequently called <term>the likelihood function</term>. Thus here the likelihood function is:
+
+	  </para>
+	  <para id="para_16">
+<m:math display="block">
+ <m:semantics>
+  <m:mrow>
+   <m:mi>L</m:mi><m:mrow><m:mo>(</m:mo>
+    <m:mi>p</m:mi>
+   <m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mi>L</m:mi><m:mrow><m:mo>(</m:mo>
+    <m:mrow>
+     <m:mi>p</m:mi><m:mo>;</m:mo><m:msub>
+      <m:mi>x</m:mi>
+      <m:mn>1</m:mn>
+     </m:msub>
+     <m:mo>,</m:mo><m:msub>
+      <m:mi>x</m:mi>
+      <m:mn>2</m:mn>
+     </m:msub>
+     <m:mo>,</m:mo><m:mn>...</m:mn><m:mo>,</m:mo><m:msub>
+      <m:mi>x</m:mi>
+      <m:mi>n</m:mi>
+     </m:msub>
+     
+    </m:mrow>
+   <m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo>
+    <m:mrow>
+     <m:msub>
+      <m:mi>x</m:mi>
+      <m:mn>1</m:mn>
+     </m:msub>
+     <m:mo>;</m:mo><m:mi>p</m:mi>
+    </m:mrow>
+   <m:mo>)</m:mo></m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo>
+    <m:mrow>
+     <m:msub>
+      <m:mi>x</m:mi>
+      <m:mn>2</m:mn>
+     </m:msub>
+     <m:mo>;</m:mo><m:mi>p</m:mi>
+    </m:mrow>
+   <m:mo>)</m:mo></m:mrow><m:mo>·</m:mo><m:mo>·</m:mo><m:mo>·</m:mo><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo>
+    <m:mrow>
+     <m:msub>
+      <m:mi>x</m:mi>
+      <m:mi>n</m:mi>
+     </m:msub>
+     <m:mo>;</m:mo><m:mi>p</m:mi>
+    </m:mrow>
+   <m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:msup>
+    <m:mi>p</m:mi>
+    <m:mrow>
+     <m:mstyle displaystyle="true">
+      <m:mo>∑</m:mo> <m:mrow>
+       <m:msub>
+        <m:mi>x</m:mi>
+        <m:mi>i</m:mi>
+       </m:msub>
+       
+      </m:mrow>
+     </m:mstyle>
+    </m:mrow>
+   </m:msup>
+   <m:msup>
+    <m:mrow>
+     <m:mrow><m:mo>(</m:mo>
+      <m:mrow>
+       <m:mn>1</m:mn><m:mo>−</m:mo><m:mi>p</m:mi>
+      </m:mrow>
+     <m:mo>)</m:mo></m:mrow>
+    </m:mrow>
+    <m:mrow>
+     <m:mi>n</m:mi><m:mo>−</m:mo><m:mstyle displaystyle="true">
+      <m:mo>∑</m:mo> <m:mrow>
+       <m:msub>
+        <m:mi>x</m:mi>
+        <m:mi>i</m:mi>
+       </m:msub>
+       
+      </m:mrow>
+     </m:mstyle>
+    </m:mrow>
+   </m:msup>
+   <m:mo>,</m:mo><m:mn>0</m:mn><m:mo>≤</m:mo><m:mi>p</m:mi><m:mo>≤</m:mo><m:mn>1.</m:mn>
+  </m:mrow>
+ </m:semantics>
+</m:math>
+
+	  </para>
+	  <para id="para_17">
+To find the value of <emphasis>p</emphasis> that maximizes <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mi>L</m:mi><m:mrow><m:mo>(</m:mo>
+    <m:mi>p</m:mi>
+   <m:mo>)</m:mo></m:mrow>
+  </m:mrow>
+ </m:semantics>
+</m:math> first take its derivative for <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mn>0</m:mn><m:mo>&lt;</m:mo><m:mi>p</m:mi><m:mo>&lt;</m:mo><m:mn>1</m:mn><m:mo>:</m:mo>
+  </m:mrow>
+ </m:semantics>
+</m:math>
+
+
+	  </para>
+	  <para id="para_18">
+<m:math display="block">
+ <m:semantics>
+  <m:mrow>
+   <m:mfrac>
+    <m:mrow>
+     <m:mi>d</m:mi><m:mi>L</m:mi><m:mrow><m:mo>(</m:mo>
+      <m:mi>p</m:mi>
+     <m:mo>)</m:mo></m:mrow>
+    </m:mrow>
+    <m:mrow>
+     <m:mi>d</m:mi><m:mi>p</m:mi>
+    </m:mrow>
+   </m:mfrac>
+   <m:mo>=</m:mo><m:mrow><m:mo>(</m:mo>
+    <m:mrow>
+     <m:mstyle displaystyle="true">
+      <m:mo>∑</m:mo> <m:mrow>
+       <m:msub>
+        <m:mi>x</m:mi>
+        <m:mi>i</m:mi>
+       </m:msub>
+       
+      </m:mrow>
+     </m:mstyle>
+    </m:mrow>
+   <m:mo>)</m:mo></m:mrow><m:msup>
+    <m:mi>p</m:mi>
+    <m:mrow>
+     <m:mi>n</m:mi><m:mo>−</m:mo><m:mstyle displaystyle="true">
+      <m:mo>∑</m:mo> <m:mrow>
+       <m:msub>
+        <m:mi>x</m:mi>
+        <m:mi>i</m:mi>
+       </m:msub>
+       
+      </m:mrow>
+     </m:mstyle>
+    </m:mrow>
+   </m:msup>
+   <m:msup>
+    <m:mrow>
+     <m:mrow><m:mo>(</m:mo>
+      <m:mrow>
+       <m:mn>1</m:mn><m:mo>−</m:mo><m:mi>p</m:mi>
+      </m:mrow>
+     <m:mo>)</m:mo></m:mrow>
+    </m:mrow>
+    <m:mrow>
+     <m:mi>n</m:mi><m:mo>−</m:mo><m:mstyle displaystyle="true">
+      <m:mo>∑</m:mo> <m:mrow>
+       <m:msub>
+        <m:mi>x</m:mi>
+        <m:mi>i</m:mi>
+       </m:msub>
+       
+      </m:mrow>
+     </m:mstyle>
+    </m:mrow>
+   </m:msup>
+   <m:mo>−</m:mo><m:mrow><m:mo>(</m:mo>
+    <m:mrow>
+     <m:mi>n</m:mi><m:mo>−</m:mo><m:mstyle displaystyle="true">
+      <m:mo>∑</m:mo> <m:mrow>
+       <m:msub>
+        <m:mi>x</m:mi>
+        <m:mi>i</m:mi>
+       </m:msub>
+       
+      </m:mrow>
+     </m:mstyle>
+    </m:mrow>
+   <m:mo>)</m:mo></m:mrow><m:msup>
+    <m:mi>p</m:mi>
+    <m:mrow>
+     <m:mstyle displaystyle="true">
+      <m:mo>∑</m:mo> <m:mrow>
+       <m:msub>
+        <m:mi>x</m:mi>
+        <m:mi>i</m:mi>
+       </m:msub>
+       
+      </m:mrow>
+     </m:mstyle>
+    </m:mrow>
+   </m:msup>
+   <m:msup>
+    <m:mrow>
+     <m:mrow><m:mo>(</m:mo>
+      <m:mrow>
+       <m:mn>1</m:mn><m:mo>−</m:mo><m:mi>p</m:mi>
+      </m:mrow>
+     <m:mo>)</m:mo></m:mrow>
+    </m:mrow>
+    <m:mrow>
+     <m:mi>n</m:mi><m:mo>−</m:mo><m:mstyle displaystyle="true">
+      <m:mo>∑</m:mo> <m:mrow>
+       <m:msub>
+        <m:mi>x</m:mi>
+        <m:mi>i</m:mi>
+       </m:msub>
+       
+      </m:mrow>
+     </m:mstyle><m:mo>−</m:mo><m:mn>1</m:mn>
+    </m:mrow>
+   </m:msup>
+   <m:mo>.</m:mo>
+  </m:mrow>
+ </m:semantics>
+</m:math>
+
+	  </para>
+	  <para id="para_19">
+Setting this first derivative equal to zero gives <m:math display="block">
+ <m:semantics>
+  <m:mrow>
+   <m:msup>
+    <m:mi>p</m:mi>
+    <m:mrow>
+     <m:mstyle displaystyle="true">
+      <m:mo>∑</m:mo> <m:mrow>
+       <m:msub>
+        <m:mi>x</m:mi>
+        <m:mi>i</m:mi>
+       </m:msub>
+       
+      </m:mrow>
+     </m:mstyle>
+    </m:mrow>
+   </m:msup>
+   <m:msup>
+    <m:mrow>
+     <m:mrow><m:mo>(</m:mo>
+      <m:mrow>
+       <m:mn>1</m:mn><m:mo>−</m:mo><m:mi>p</m:mi>
+      </m:mrow>
+     <m:mo>)</m:mo></m:mrow>
+    </m:mrow>
+    <m:mrow>
+     <m:mi>n</m:mi><m:mo>−</m:mo><m:mstyle displaystyle="true">
+      <m:mo>∑</m:mo> <m:mrow>
+       <m:msub>
+        <m:mi>x</m:mi>
+        <m:mi>i</m:mi>
+       </m:msub>
+       
+      </m:mrow>
+     </m:mstyle>
+    </m:mrow>
+   </m:msup>
+   <m:mrow><m:mo>[</m:mo> <m:mrow>
+    <m:mfrac>
+     <m:mrow>
+      <m:mstyle displaystyle="true">
+       <m:mo>∑</m:mo> <m:mrow>
+        <m:msub>
+         <m:mi>x</m:mi>
+         <m:mi>i</m:mi>
+        </m:msub>
+        
+       </m:mrow>
+      </m:mstyle>
+     </m:mrow>
+     <m:mi>p</m:mi>
+    </m:mfrac>
+    <m:mo>−</m:mo><m:mfrac>
+     <m:mrow>
+      <m:mi>n</m:mi><m:mo>−</m:mo><m:mstyle displaystyle="true">
+       <m:mo>∑</m:mo> <m:mrow>
+        <m:msub>
+         <m:mi>x</m:mi>
+         <m:mi>i</m:mi>
+        </m:msub>
+        
+       </m:mrow>
+      </m:mstyle>
+     </m:mrow>
+     <m:mrow>
+      <m:mn>1</m:mn><m:mo>−</m:mo><m:mi>p</m:mi>
+     </m:mrow>
+    </m:mfrac>
+    
+   </m:mrow> <m:mo>]</m:mo></m:mrow><m:mo>=</m:mo><m:mn>0.</m:mn>
+  </m:mrow>
+ </m:semantics>
+</m:math>
+
+	  </para>
+	  <para id="para_20">
+Since <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mn>0</m:mn><m:mo>&lt;</m:mo><m:mi>p</m:mi><m:mo>&lt;</m:mo><m:mn>1</m:mn>
+  </m:mrow>
+ </m:semantics>
+</m:math>, this equals zero when
+ <m:math display="block">
+ <m:semantics>
+  <m:mrow>
+   <m:mfrac>
+    <m:mrow>
+     <m:mstyle displaystyle="true">
+      <m:mo>∑</m:mo> <m:mrow>
+       <m:msub>
+        <m:mi>x</m:mi>
+        <m:mi>i</m:mi>
+       </m:msub>
+       
+      </m:mrow>
+     </m:mstyle>
+    </m:mrow>
+    <m:mi>p</m:mi>
+   </m:mfrac>
+   <m:mo>−</m:mo><m:mfrac>
+    <m:mrow>
+     <m:mi>n</m:mi><m:mo>−</m:mo><m:mstyle displaystyle="true">
+      <m:mo>∑</m:mo> <m:mrow>
+       <m:msub>
+        <m:mi>x</m:mi>
+        <m:mi>i</m:mi>
+       </m:msub>
+       
+      </m:mrow>
+     </m:mstyle>
+    </m:mrow>
+    <m:mrow>
+     <m:mn>1</m:mn><m:mo>−</m:mo><m:mi>p</m:mi>
+    </m:mrow>
+   </m:mfrac>
+   <m:mo>=</m:mo><m:mn>0.</m:mn>
+  </m:mrow>
+ </m:semantics>
+</m:math>
+Or, equivalently, <m:math display="block">
+ <m:semantics>
+  <m:mrow>
+   <m:mi>p</m:mi><m:mo>=</m:mo><m:mfrac>
+    <m:mrow>
+     <m:mstyle displaystyle="true">
+      <m:mo>∑</m:mo> <m:mrow>
+       <m:msub>
+        <m:mi>x</m:mi>
+        <m:mi>i</m:mi>
+       </m:msub>
+       
+      </m:mrow>
+     </m:mstyle>
+    </m:mrow>
+    <m:mi>n</m:mi>
+   </m:mfrac>
+   <m:mo>=</m:mo><m:mover accent="true">
+    <m:mi>x</m:mi>
+    <m:mo>¯</m:mo>
+   </m:mover>
+   <m:mo>.</m:mo>
+  </m:mrow>
+ </m:semantics>
+</m:math>
+	  </para>
+	  <para id="para_21">
+The corresponding statistics, namely <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mstyle displaystyle="true">
+    <m:mo>∑</m:mo> <m:mrow>
+     <m:msub>
+      <m:mi>X</m:mi>
+      <m:mi>i</m:mi>
+     </m:msub>
+     <m:mo>/</m:mo><m:mi>n</m:mi><m:mo>=</m:mo><m:mover accent="true">
+      <m:mi>X</m:mi>
+      <m:mo>¯</m:mo>
+     </m:mover>
+     
+    </m:mrow>
+   </m:mstyle>
+  </m:mrow>
+ </m:semantics>
+</m:math>, is called <term>the maximum likelihood estimator</term> and is denoted by <m:math>
+ <m:semantics>
+  <m:mover accent="true">
+   <m:mi>p</m:mi>
+   <m:mo>^</m:mo>
+  </m:mover>
+   </m:semantics>
+</m:math>
+,that is, <m:math display="block">
+ <m:semantics>
+  <m:mrow>
+   <m:mover accent="true">
+    <m:mi>p</m:mi>
+    <m:mo>^</m:mo>
+   </m:mover>
+   <m:mo>=</m:mo><m:mfrac>
+    <m:mn>1</m:mn>
+    <m:mi>n</m:mi>
+   </m:mfrac>
+   <m:mstyle displaystyle="true">
+    <m:munderover>
+     <m:mo>∑</m:mo>
+     <m:mrow>
+      <m:mi>i</m:mi><m:mo>=</m:mo><m:mn>1</m:mn>
+     </m:mrow>
+     <m:mi>n</m:mi>
+    </m:munderover>
+    <m:mrow>
+     <m:msub>
+      <m:mi>X</m:mi>
+      <m:mi>i</m:mi>
+     </m:msub>
+     <m:mo>=</m:mo><m:mover accent="true">
+      <m:mi>X</m:mi>
+      <m:mo>¯</m:mo>
+     </m:mover>
+     
+    </m:mrow>
+   </m:mstyle><m:mo>.</m:mo>
+  </m:mrow>
+ </m:semantics>
+</m:math>
+
+           </para>
+	  <para id="para_22">
+When finding a maximum likelihood estimator, it is often easier to find the value of parameter that minimizes the natural logarithm of the likelihood function rather than the value of the parameter that minimizes the likelihood function itself. Because the natural logarithm function is an increasing function, the solution will be the same. To see this, the example which was considered above gives for <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mn>0</m:mn><m:mo>&lt;</m:mo><m:mi>p</m:mi><m:mo>&lt;</m:mo><m:mn>1</m:mn>
+  </m:mrow>
+ </m:semantics>
+</m:math>, 
+
+	  </para>
+	  <para id="para_23">
+<m:math display="block">
+ <m:semantics>
+  <m:mrow>
+   <m:mi>ln</m:mi><m:mo>⁡</m:mo><m:mi>L</m:mi><m:mrow><m:mo>(</m:mo>
+    <m:mi>p</m:mi>
+   <m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mrow><m:mo>(</m:mo>
+    <m:mrow>
+     <m:mstyle displaystyle="true">
+      <m:munderover>
+       <m:mo>∑</m:mo>
+       <m:mrow>
+        <m:mi>i</m:mi><m:mo>=</m:mo><m:mn>1</m:mn>
+       </m:mrow>
+       <m:mi>n</m:mi>
+      </m:munderover>
+      <m:mrow>
+       <m:msub>
+        <m:mi>x</m:mi>
+        <m:mi>i</m:mi>
+       </m:msub>
+       
+      </m:mrow>
+     </m:mstyle>
+    </m:mrow>
+   <m:mo>)</m:mo></m:mrow><m:mi>ln</m:mi><m:mo>⁡</m:mo><m:mi>p</m:mi><m:mo>+</m:mo><m:mrow><m:mo>(</m:mo>
+    <m:mrow>
+     <m:mi>n</m:mi><m:mo>−</m:mo><m:mstyle displaystyle="true">
+      <m:munderover>
+       <m:mo>∑</m:mo>
+       <m:mrow>
+        <m:mi>i</m:mi><m:mo>=</m:mo><m:mn>1</m:mn>
+       </m:mrow>
+       <m:mi>n</m:mi>
+      </m:munderover>
+      <m:mrow>
+       <m:msub>
+        <m:mi>x</m:mi>
+        <m:mi>i</m:mi>
+       </m:msub>
+       
+      </m:mrow>
+     </m:mstyle>
+    </m:mrow>
+   <m:mo>)</m:mo></m:mrow><m:mi>ln</m:mi><m:mo>⁡</m:mo><m:mrow><m:mo>(</m:mo>
+    <m:mrow>
+     <m:mn>1</m:mn><m:mo>−</m:mo><m:mi>p</m:mi>
+    </m:mrow>
+   <m:mo>)</m:mo></m:mrow><m:mo>.</m:mo>
+  </m:mrow>
+ </m:semantics>
+</m:math>
+
+	  </para>
+	  <para id="para_24">
+To find the maximum, set the first derivative equal to zero to obtain
+	  </para>
+	  <para id="para_25">
+<m:math display="block">
+ <m:semantics>
+  <m:mrow>
+   <m:mfrac>
+    <m:mrow>
+     <m:mi>d</m:mi><m:mrow><m:mo>[</m:mo> <m:mrow>
+      <m:mi>ln</m:mi><m:mo>⁡</m:mo><m:mi>L</m:mi><m:mrow><m:mo>(</m:mo>
+       <m:mi>p</m:mi>
+      <m:mo>)</m:mo></m:mrow>
+     </m:mrow> <m:mo>]</m:mo></m:mrow>
+    </m:mrow>
+    <m:mrow>
+     <m:mi>d</m:mi><m:mi>p</m:mi>
+    </m:mrow>
+   </m:mfrac>
+   <m:mo>=</m:mo><m:mrow><m:mo>(</m:mo>
+    <m:mrow>
+     <m:mstyle displaystyle="true">
+      <m:munderover>
+       <m:mo>∑</m:mo>
+       <m:mrow>
+        <m:mi>i</m:mi><m:mo>=</m:mo><m:mn>1</m:mn>
+       </m:mrow>
+       <m:mi>n</m:mi>
+      </m:munderover>
+      <m:mrow>
+       <m:msub>
+        <m:mi>x</m:mi>
+        <m:mi>i</m:mi>
+       </m:msub>
+       
+      </m:mrow>
+     </m:mstyle>
+    </m:mrow>
+   <m:mo>)</m:mo></m:mrow><m:mrow><m:mo>(</m:mo>
+    <m:mrow>
+     <m:mfrac>
+      <m:mn>1</m:mn>
+      <m:mi>p</m:mi>
+     </m:mfrac>
+     
+    </m:mrow>
+   <m:mo>)</m:mo></m:mrow><m:mo>+</m:mo><m:mrow><m:mo>(</m:mo>
+    <m:mrow>
+     <m:mi>n</m:mi><m:mo>−</m:mo><m:mstyle displaystyle="true">
+      <m:munderover>
+       <m:mo>∑</m:mo>
+       <m:mrow>
+        <m:mi>i</m:mi><m:mo>=</m:mo><m:mn>1</m:mn>
+       </m:mrow>
+       <m:mi>n</m:mi>
+      </m:munderover>
+      <m:mrow>
+       <m:msub>
+        <m:mi>x</m:mi>
+        <m:mi>i</m:mi>
+       </m:msub>
+       
+      </m:mrow>
+     </m:mstyle>
+    </m:mrow>
+   <m:mo>)</m:mo></m:mrow><m:mrow><m:mo>(</m:mo>
+    <m:mrow>
+     <m:mfrac>
+      <m:mrow>
+       <m:mo>−</m:mo><m:mn>1</m:mn>
+      </m:mrow>
+      <m:mrow>
+       <m:mn>1</m:mn><m:mo>−</m:mo><m:mi>p</m:mi>
+      </m:mrow>
+     </m:mfrac>
+     
+    </m:mrow>
+   <m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>0</m:mn><m:mo>,</m:mo>
+  </m:mrow>
+ </m:semantics>
+</m:math>
+
+	  </para>	
+          <para id="para_26">
+which is the same as previous equation. Thus the solution is <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mi>p</m:mi><m:mo>=</m:mo><m:mover accent="true">
+    <m:mi>x</m:mi>
+    <m:mo>¯</m:mo>
+   </m:mover>
+     </m:mrow>
+ </m:semantics>
+</m:math> and the maximum likelihood estimator for <emphasis>p</emphasis> is <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mover accent="true">
+    <m:mi>p</m:mi>
+    <m:mo>^</m:mo>
+   </m:mover>
+   <m:mo>=</m:mo><m:mover accent="true">
+    <m:mi>X</m:mi>
+    <m:mo>¯</m:mo>
+   </m:mover>
+   <m:mo>.</m:mo>
+  </m:mrow>
+ </m:semantics>
+</m:math>
+
+
+	  </para>
+	  <para id="para_27">
+Motivated by the preceding illustration, the formal definition of maximum likelihood estimators is presented. This definition is used in both the discrete and continuous cases. 
+In many practical cases, these estimators (and estimates) are unique. For many applications there is just one unknown parameter. In this case the likelihood function is given by <m:math display="block">
+ <m:semantics>
+  <m:mrow>
+   <m:mi>L</m:mi><m:mrow><m:mo>(</m:mo>
+    <m:mi>θ</m:mi>
+   <m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mstyle displaystyle="true">
+    <m:munderover>
+     <m:mo>∏</m:mo>
+     <m:mrow>
+      <m:mi>i</m:mi><m:mo>=</m:mo><m:mn>1</m:mn>
+     </m:mrow>
+     <m:mi>n</m:mi>
+    </m:munderover>
+    <m:mrow>
+     <m:mi>f</m:mi><m:mrow><m:mo>(</m:mo>
+      <m:mrow>
+       <m:msub>
+        <m:mi>x</m:mi>
+        <m:mi>i</m:mi>
+       </m:msub>
+       <m:mo>,</m:mo><m:mi>θ</m:mi>
+      </m:mrow>
+     <m:mo>)</m:mo></m:mrow>
+    </m:mrow>
+   </m:mstyle><m:mo>.</m:mo>
+  </m:mrow>
+ </m:semantics>
+</m:math>
+
+
+	  </para>
+
+	  <para id="para_28">
+
+	  </para>
+	  <para id="para_29">
+
+	  </para>
+	  <para id="para_30">
+
+	  </para>
+	  <para id="para_31">
+
+	  </para>
+	  <para id="para_32">
+
+	  </para>
+</section> 
+
+</section> 
+</section> 
+   <note type="SEE ALSO" id="idp7666176"><label>SEE ALSO</label>
+         <link document="m13500" target-id="sec_1">Maximum Likelihood Estimation - Examples </link> 
+       </note>
+
+    <para id="delete_me">
+       <!-- Insert module text here -->
+    </para>   
+  </content>
+  
+</document>

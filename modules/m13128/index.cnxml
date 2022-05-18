@@ -1,0 +1,683 @@
+<document xmlns="http://cnx.rice.edu/cnxml" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:md="http://cnx.rice.edu/mdml">
+  <title>THE UNIFORM AND EXPONENTIAL DISTRIBUTIONS</title>
+  <metadata><md:content-id>undefined</md:content-id><md:title/><md:uuid>e80efa5a-704e-460c-a7d7-bc3e2bed5d9a</md:uuid>
+</metadata>
+  <content>
+
+<section id="sec_1">
+<title>THE UNIFORM AND EXPONENTIAL DISTRIBUTIONS</title>
+<section id="sec_2">
+<title>The Uniform Distribution</title>
+<para id="para_1">
+Let the random variable <emphasis>X</emphasis> denote the outcome when a point is selected at random from the interval <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mrow><m:mo>[</m:mo> <m:mrow>
+    <m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi>
+   </m:mrow> <m:mo>]</m:mo></m:mrow>
+  </m:mrow>
+ </m:semantics>
+</m:math>, <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mo>−</m:mo><m:mi>∞</m:mi><m:mo>&lt;</m:mo><m:mi>a</m:mi><m:mo>&lt;</m:mo><m:mi>b</m:mi><m:mo>&lt;</m:mo><m:mi>∞</m:mi>
+  </m:mrow>
+ </m:semantics>
+</m:math>. If the experiment is performed in a fair manner, it is reasonable to assume that the probability that the point is selected from the interval <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mrow><m:mo>[</m:mo> <m:mrow>
+    <m:mi>a</m:mi><m:mo>,</m:mo><m:mi>x</m:mi>
+   </m:mrow> <m:mo>]</m:mo></m:mrow>
+  </m:mrow>
+ </m:semantics>
+</m:math>, <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mi>a</m:mi><m:mo>≤</m:mo><m:mi>x</m:mi><m:mo>&lt;</m:mo><m:mi>b</m:mi>
+  </m:mrow>
+ </m:semantics>
+</m:math> is <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mrow><m:mo>(</m:mo>
+    <m:mrow>
+     <m:mi>x</m:mi><m:mo>−</m:mo><m:mi>a</m:mi>
+    </m:mrow>
+   <m:mo>)</m:mo></m:mrow><m:mrow><m:mo>(</m:mo>
+    <m:mrow>
+     <m:mi>b</m:mi><m:mo>−</m:mo><m:mi>a</m:mi>
+    </m:mrow>
+   <m:mo>)</m:mo></m:mrow>
+  </m:mrow>
+ </m:semantics>
+</m:math>. That is, the probability is proportional to the length of the interval so that the distribution function of <emphasis>X</emphasis> is
+</para>
+<para id="para_2">
+<m:math display="block">
+ <m:semantics>
+  <m:mrow>
+   <m:mi>F</m:mi><m:mrow><m:mo>(</m:mo>
+    <m:mi>x</m:mi>
+   <m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mrow><m:mo>(</m:mo> <m:mtable columnalign="left">
+    <m:mtr>
+     <m:mtd>
+      <m:mn>0,</m:mn><m:mi>x</m:mi><m:mo>&lt;</m:mo><m:mi>a</m:mi><m:mo>,</m:mo>
+     </m:mtd>
+    </m:mtr>
+    <m:mtr>
+     <m:mtd>
+      <m:mfrac>
+       <m:mrow>
+        <m:mi>x</m:mi><m:mo>−</m:mo><m:mi>a</m:mi>
+       </m:mrow>
+       <m:mrow>
+        <m:mi>b</m:mi><m:mo>−</m:mo><m:mi>a</m:mi>
+       </m:mrow>
+      </m:mfrac>
+      <m:mo>,</m:mo><m:mi>a</m:mi><m:mo>≤</m:mo><m:mi>x</m:mi><m:mo>&lt;</m:mo><m:mi>b</m:mi><m:mo>,</m:mo>
+     </m:mtd>
+    </m:mtr>
+    <m:mtr>
+     <m:mtd>
+      <m:mn>1,</m:mn><m:mi>b</m:mi><m:mo>≤</m:mo><m:mi>x</m:mi><m:mo>.</m:mo>
+     </m:mtd>
+    </m:mtr>
+   </m:mtable>
+   </m:mrow>
+  </m:mrow>
+ </m:semantics>
+</m:math>
+</para>
+<para id="para_3">
+Because <emphasis>X</emphasis> is a continuous-type random variable, <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mi>F</m:mi><m:mo>'</m:mo><m:mrow><m:mo>(</m:mo>
+    <m:mi>x</m:mi>
+   <m:mo>)</m:mo></m:mrow>
+  </m:mrow>
+
+ </m:semantics>
+</m:math> is equal to the p.d.f. of <emphasis>X</emphasis> whenever <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mi>F</m:mi><m:mo>'</m:mo><m:mrow><m:mo>(</m:mo>
+    <m:mi>x</m:mi>
+   <m:mo>)</m:mo></m:mrow>
+  </m:mrow>
+
+ </m:semantics>
+</m:math>
+ exists; thus when <m:math>
+ <m:semantics>
+  <m:mrow>
+<m:mi>a</m:mi><m:mo>&lt;</m:mo><m:mi>x</m:mi><m:mo>&lt;</m:mo><m:mi>b</m:mi>
+  </m:mrow>
+ </m:semantics>
+</m:math>, we have <m:math display="block">
+ <m:semantics>
+  <m:mrow>
+   <m:mi>f</m:mi><m:mrow><m:mo>(</m:mo>
+    <m:mi>x</m:mi>
+   <m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mi>F</m:mi><m:mo>'</m:mo><m:mrow><m:mo>(</m:mo>
+    <m:mi>x</m:mi>
+   <m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>1</m:mn><m:mo>/</m:mo><m:mrow><m:mo>(</m:mo>
+    <m:mrow>
+     <m:mi>b</m:mi><m:mo>−</m:mo><m:mi>a</m:mi>
+    </m:mrow>
+   <m:mo>)</m:mo></m:mrow><m:mo>.</m:mo>
+  </m:mrow>
+ </m:semantics>
+</m:math>
+</para>
+<definition id="def_1">
+<term>DEFINITION OF UNIFORM DISTRIBUTION</term>
+<meaning id="idm1222240">
+The random variable <emphasis>X</emphasis> has <term>a uniform distribution</term> if its p.d.f. is equal to a constant on its support. In particular, if the support is the interval <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mrow><m:mo>[</m:mo> <m:mrow>
+    <m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi>
+   </m:mrow> <m:mo>]</m:mo></m:mrow>
+  </m:mrow>
+ </m:semantics>
+</m:math>, then
+<equation id="eq_1"> 
+<m:math display="block">
+ <m:semantics>
+  <m:mrow>
+   <m:mi>f</m:mi><m:mrow><m:mo>(</m:mo>
+    <m:mi>x</m:mi>
+   <m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mfrac>
+    <m:mn>1</m:mn>
+    <m:mrow>
+     <m:mi>b</m:mi><m:mo>=</m:mo><m:mi>a</m:mi>
+    </m:mrow>
+   </m:mfrac>
+   <m:mo>,</m:mo><m:mi>a</m:mi><m:mo>≤</m:mo><m:mi>x</m:mi><m:mo>≤</m:mo><m:mi>b</m:mi><m:mo>.</m:mo>
+  </m:mrow>
+ </m:semantics>
+</m:math>
+
+</equation> 
+</meaning>
+</definition>
+<section id="sec_3">
+<para id="para_4">
+Moreover, one shall say that <emphasis>X</emphasis> is <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mi>U</m:mi><m:mrow><m:mo>(</m:mo>
+    <m:mrow>
+     <m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi>
+    </m:mrow>
+   <m:mo>)</m:mo></m:mrow>
+  </m:mrow>
+ </m:semantics>
+</m:math>. This distribution is referred to as <term>rectangular</term> because the graph of <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mi>f</m:mi><m:mrow><m:mo>(</m:mo>
+    <m:mi>x</m:mi>
+   <m:mo>)</m:mo></m:mrow>
+  </m:mrow>
+ </m:semantics>
+</m:math> suggest that name. See <link target-id="fig_1">Figure1.</link> for the graph of <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mi>f</m:mi><m:mrow><m:mo>(</m:mo>
+    <m:mi>x</m:mi>
+   <m:mo>)</m:mo></m:mrow>
+  </m:mrow>
+ </m:semantics>
+</m:math>
+and the distribution function F(x). 
+</para>
+<figure id="fig_1">
+<media id="idp161888" alt=""><image src="../../media/UniformDistPlot.png" mime-type="image/png"/></media>
+<caption>
+<term>The graph of the p.d.f. of the uniform distriution</term>.
+</caption>
+</figure>
+<note type="Note that" id="idm6492800"><label>Note that</label>
+We could have taken <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mi>f</m:mi><m:mrow><m:mo>(</m:mo>
+    <m:mi>a</m:mi>
+   <m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>0</m:mn>
+  </m:mrow>
+ </m:semantics>
+</m:math> or <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mi>f</m:mi><m:mrow><m:mo>(</m:mo>
+    <m:mi>b</m:mi>
+   <m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>0</m:mn>
+  </m:mrow>
+ </m:semantics>
+</m:math>
+without alerting the probabilities, since this is a continuous type distribution, and it can be done in some cases.
+</note>
+<para id="para_5">
+The <term>mean</term> and <term>variance</term> of <emphasis>X</emphasis> are as follows:
+</para>
+<para id="para_6">
+<m:math display="block">
+ <m:semantics>
+  <m:mrow>
+   <m:mi>μ</m:mi><m:mo>=</m:mo><m:mfrac>
+    <m:mrow>
+     <m:mi>a</m:mi><m:mo>+</m:mo><m:mi>b</m:mi>
+    </m:mrow>
+    <m:mn>2</m:mn>
+   </m:mfrac>
+     </m:mrow>
+ </m:semantics>
+</m:math>
+and <m:math display="block">
+ <m:semantics>
+  <m:mrow>
+   <m:msup>
+    <m:mi>σ</m:mi>
+    <m:mn>2</m:mn>
+   </m:msup>
+   <m:mo>=</m:mo><m:mfrac>
+    <m:mrow>
+     <m:msup>
+      <m:mrow>
+       <m:mrow><m:mo>(</m:mo>
+        <m:mrow>
+         <m:mi>b</m:mi><m:mo>−</m:mo><m:mi>a</m:mi>
+        </m:mrow>
+       <m:mo>)</m:mo></m:mrow>
+      </m:mrow>
+      <m:mn>2</m:mn>
+     </m:msup>
+     
+    </m:mrow>
+    <m:mrow>
+     <m:mn>12</m:mn>
+    </m:mrow>
+   </m:mfrac>
+   <m:mo>.</m:mo>
+  </m:mrow>
+ </m:semantics>
+</m:math>
+
+</para>
+<para id="para_7">
+An important uniform distribution is that for which <emphasis>a</emphasis>=0 and <emphasis>b</emphasis> =1, namely <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mi>U</m:mi><m:mrow><m:mo>(</m:mo>
+    <m:mrow>
+     <m:mn>0,1</m:mn>
+    </m:mrow>
+   <m:mo>)</m:mo></m:mrow>
+  </m:mrow>
+ </m:semantics>
+</m:math>. If <emphasis>X</emphasis> is <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mi>U</m:mi><m:mrow><m:mo>(</m:mo>
+    <m:mrow>
+     <m:mn>0,1</m:mn>
+    </m:mrow>
+   <m:mo>)</m:mo></m:mrow>
+  </m:mrow>
+ </m:semantics>
+</m:math>, approximate values of <emphasis>X</emphasis> can be simulated on most computers using a random number generator. In fact, it should be called a pseudo-random number generator (see <link document="m13113" target-id="sec_1">the pseudo-numbers generation</link>) because the programs that produce the random numbers are usually such that if the starting number is known, all subsequent numbers in the sequence may be determined by simple arithmetical operations. 
+</para>
+</section>
+</section>
+<section id="sec_4">
+<title>An Exponential Distribution</title>
+<para id="para_8">
+Let turn to the continuous distribution that is related to <link document="m13125" target-id="sec_1">the Poisson distribution</link>. When previously observing a process of the approximate Poisson type, we counted the number of changes occurring in a given interval. This number was a discrete-type random variable with a Poisson distribution. But not only is the number of changes a random variable; <term>the waiting times</term> between successive changes are also random variables. However, the latter are of the continuous type, since each of then can assume any positive value. 
+</para>
+<para id="para_9">
+Let <emphasis>W</emphasis> denote the waiting time until the first change occurs when observing <link document="m13125" target-id="def_1">the Poisson process</link> in which the mean number of changes in the unit interval is <m:math>
+ <m:semantics>
+  <m:mi>λ</m:mi>
+ </m:semantics>
+</m:math>. Then <emphasis>W</emphasis> is a continuous-type random variable, and let proceed to find its distribution function.
+</para>
+<para id="para_10">
+Because this waiting time is nonnegative, the distribution function <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mi>F</m:mi><m:mrow><m:mo>(</m:mo>
+    <m:mi>w</m:mi>
+   <m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>0</m:mn>
+  </m:mrow>
+ </m:semantics>
+</m:math>, <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mi>w</m:mi><m:mo>&lt;</m:mo><m:mn>0</m:mn>
+  </m:mrow>
+ </m:semantics>
+</m:math>. For <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mi>w</m:mi><m:mo>≥</m:mo><m:mn>0</m:mn>
+  </m:mrow>
+ </m:semantics>
+</m:math>,
+</para>
+<para id="para_11">
+<m:math display="block">
+ <m:semantics>
+  <m:mrow>
+   <m:mi>F</m:mi><m:mrow><m:mo>(</m:mo>
+    <m:mi>w</m:mi>
+   <m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mi>P</m:mi><m:mrow><m:mo>(</m:mo>
+    <m:mrow>
+     <m:mi>W</m:mi><m:mo>≤</m:mo><m:mi>w</m:mi>
+    </m:mrow>
+   <m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>1</m:mn><m:mo>−</m:mo><m:mi>P</m:mi><m:mrow><m:mo>(</m:mo>
+    <m:mrow>
+     <m:mi>W</m:mi><m:mo>&gt;</m:mo><m:mi>w</m:mi>
+    </m:mrow>
+   <m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>1</m:mn><m:mo>−</m:mo><m:mi>P</m:mi><m:mrow><m:mo>(</m:mo>
+    <m:mrow>
+     <m:mi>n</m:mi><m:mi>o</m:mi><m:mo>_</m:mo><m:mi>c</m:mi><m:mi>h</m:mi><m:mi>a</m:mi><m:mi>n</m:mi><m:mi>g</m:mi><m:mi>e</m:mi><m:mi>s</m:mi><m:mo>_</m:mo><m:mi>i</m:mi><m:mi>n</m:mi><m:mo>_</m:mo><m:mrow><m:mo>[</m:mo> <m:mrow>
+      <m:mn>0,</m:mn><m:mi>w</m:mi>
+     </m:mrow> <m:mo>]</m:mo></m:mrow>
+    </m:mrow>
+   <m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>1</m:mn><m:mo>−</m:mo><m:msup>
+    <m:mi>e</m:mi>
+    <m:mrow>
+     <m:mo>−</m:mo><m:mi>λ</m:mi><m:mi>w</m:mi>
+    </m:mrow>
+   </m:msup>
+   <m:mo>,</m:mo>
+  </m:mrow>
+ </m:semantics>
+</m:math>
+</para>
+<para id="para_12">
+since that was previously discovered that <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:msup>
+    <m:mi>e</m:mi>
+    <m:mrow>
+     <m:mo>−</m:mo><m:mi>λ</m:mi><m:mi>w</m:mi>
+    </m:mrow>
+   </m:msup>
+     </m:mrow>
+ </m:semantics>
+</m:math>
+equals the probability of no changes in an interval of length <emphasis>w</emphasis> is proportional to <emphasis>w</emphasis>, namely, <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mi>λ</m:mi><m:mi>w</m:mi>
+  </m:mrow>
+ </m:semantics>
+</m:math>. Thus when <emphasis>w</emphasis> &gt;0, the p.d.f. of <emphasis>W</emphasis> is given by
+<m:math display="block">
+ <m:semantics>
+  <m:mrow>
+   <m:mi>F</m:mi><m:mo>'</m:mo><m:mrow><m:mo>(</m:mo>
+    <m:mi>w</m:mi>
+   <m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mi>λ</m:mi><m:msup>
+    <m:mi>e</m:mi>
+    <m:mrow>
+     <m:mo>−</m:mo><m:mi>λ</m:mi><m:mi>w</m:mi>
+    </m:mrow>
+   </m:msup>
+   <m:mo>=</m:mo><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo>
+    <m:mi>w</m:mi>
+   <m:mo>)</m:mo></m:mrow><m:mo>.</m:mo>
+  </m:mrow>
+ </m:semantics>
+</m:math>
+</para>
+<definition id="def_2">
+<term>DEFINITION OF EXPONENTIAL DISTRIBUTION</term>
+<meaning id="idp6240080">
+Let <m:math>
+ <m:semantics>
+  <m:mrow>
+<m:mi>λ</m:mi><m:mo>=</m:mo><m:mn>1</m:mn><m:mo>/</m:mo><m:mi>θ</m:mi>
+  </m:mrow>
+ </m:semantics>
+</m:math>, then the random variable <emphasis>X</emphasis> has <term>an exponential distribution</term> and its p.d.f. id defined by
+<equation id="eq_2"> 
+<m:math display="block">
+ <m:semantics>
+  <m:mrow>
+   <m:mi>f</m:mi><m:mrow><m:mo>(</m:mo>
+    <m:mi>x</m:mi>
+   <m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mfrac>
+    <m:mn>1</m:mn>
+    <m:mi>θ</m:mi>
+   </m:mfrac>
+   <m:msup>
+    <m:mi>e</m:mi>
+    <m:mrow>
+     <m:mo>−</m:mo><m:mi>x</m:mi><m:mo>/</m:mo><m:mi>θ</m:mi>
+    </m:mrow>
+   </m:msup>
+   <m:mn>,0</m:mn><m:mo>≤</m:mo><m:mi>x</m:mi><m:mo>&lt;</m:mo><m:mi>∞</m:mi><m:mo>,</m:mo>
+  </m:mrow>
+ </m:semantics>
+</m:math>
+</equation> 
+where the parameter <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mi>θ</m:mi><m:mo>&gt;</m:mo><m:mn>0</m:mn>
+  </m:mrow>
+ </m:semantics>
+</m:math>.
+</meaning>
+</definition> 
+</section>
+<section id="sec_5">
+<para id="para_13">
+Accordingly, the waiting time <emphasis>W</emphasis> until the first change in a Poisson process has an exponential distribution with <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mi>θ</m:mi><m:mo>=</m:mo><m:mn>1</m:mn><m:mo>/</m:mo><m:mi>λ</m:mi>
+  </m:mrow>
+ </m:semantics>
+</m:math>. The <term>mean</term> and <term>variance</term> for the exponential distribution are as follows:
+ <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mi>μ</m:mi><m:mo>=</m:mo><m:mi>θ</m:mi>
+  </m:mrow>
+ </m:semantics>
+</m:math>
+and <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:msup>
+    <m:mi>σ</m:mi>
+    <m:mn>2</m:mn>
+   </m:msup>
+   <m:mo>=</m:mo><m:msup>
+    <m:mi>θ</m:mi>
+    <m:mn>2</m:mn>
+   </m:msup>
+   
+  </m:mrow>
+ </m:semantics>
+</m:math>.
+</para>
+<para id="para_14">
+So if <m:math>
+ <m:semantics>
+  <m:mi>λ</m:mi>
+ </m:semantics>
+</m:math>
+ is the mean number of changes in the unit interval, then <m:math display="block">
+ <m:semantics>
+  <m:mrow>
+   <m:mi>θ</m:mi><m:mo>=</m:mo><m:mn>1</m:mn><m:mo>/</m:mo><m:mi>λ</m:mi>
+  </m:mrow>
+ </m:semantics>
+</m:math>
+is the mean waiting for the first change. Suppose that <m:math>
+ <m:semantics>
+  <m:mi>λ</m:mi>
+ </m:semantics>
+</m:math>=7 is the mean number of changes per minute; then that mean waiting time for the first change is 1/7 of a minute.
+</para>
+</section>
+
+<figure id="fig_2">
+
+<media id="idp3737904" alt=""><image src="../../media/ExpDistPlot.gif" mime-type="image/gif"/></media>
+<caption>
+<term>The graph of the p.d.f. of the exponential distriution</term>.
+</caption>
+</figure>
+
+
+<example id="ex_1">
+<para id="para_15">
+Let <emphasis>X</emphasis> have an exponential distribution with a mean of 40. The p.d.f. of <emphasis>X</emphasis> is
+</para>
+<para id="para_16">
+<m:math display="block">
+ <m:semantics>
+  <m:mrow>
+   <m:mi>f</m:mi><m:mrow><m:mo>(</m:mo>
+    <m:mi>x</m:mi>
+   <m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mfrac>
+    <m:mn>1</m:mn>
+    <m:mrow>
+     <m:mn>40</m:mn>
+    </m:mrow>
+   </m:mfrac>
+   <m:msup>
+    <m:mi>e</m:mi>
+    <m:mrow>
+     <m:mo>−</m:mo><m:mi>x</m:mi><m:mo>/</m:mo><m:mn>40</m:mn>
+    </m:mrow>
+   </m:msup>
+   <m:mn>,0</m:mn><m:mo>≤</m:mo><m:mi>x</m:mi><m:mo>&lt;</m:mo><m:mi>∞</m:mi><m:mo>.</m:mo>
+  </m:mrow>
+ </m:semantics>
+</m:math>
+</para>
+<para id="para_17">
+The probability that <emphasis>X</emphasis> is less than 36 is 
+</para>
+<para id="para_18">
+<m:math display="block">
+ <m:semantics>
+  <m:mrow>
+   <m:mi>P</m:mi><m:mrow><m:mo>(</m:mo>
+    <m:mrow>
+     <m:mi>X</m:mi><m:mo>&lt;</m:mo><m:mn>36</m:mn>
+    </m:mrow>
+   <m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mstyle displaystyle="true">
+    <m:mrow><m:munderover>
+     <m:mo>∫</m:mo>
+     <m:mn>0</m:mn>
+     <m:mrow>
+      <m:mn>36</m:mn>
+     </m:mrow>
+    </m:munderover>
+    <m:mrow>
+     <m:mfrac>
+      <m:mn>1</m:mn>
+      <m:mrow>
+       <m:mn>40</m:mn>
+      </m:mrow>
+     </m:mfrac>
+     <m:msup>
+      <m:mi>e</m:mi>
+      <m:mrow>
+       <m:mo>−</m:mo><m:mi>x</m:mi><m:mo>/</m:mo><m:mn>40</m:mn>
+      </m:mrow>
+     </m:msup>
+     
+    </m:mrow>
+   </m:mrow>
+   
+  </m:mstyle><m:mi>d</m:mi><m:mi>x</m:mi><m:mo>=</m:mo><m:mn>1</m:mn><m:mo>−</m:mo><m:msup>
+   <m:mi>e</m:mi>
+   <m:mrow>
+    <m:mo>−</m:mo><m:mn>36</m:mn><m:mo>/</m:mo><m:mn>40</m:mn>
+   </m:mrow>
+  </m:msup>
+  <m:mo>=</m:mo><m:mn>0.593.</m:mn>
+ </m:mrow>
+</m:semantics>
+</m:math>
+</para>
+</example>
+<example id="ex_2">
+<para id="para_19">
+Let <emphasis>X</emphasis> have an exponential distribution with mean <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mi>μ</m:mi><m:mo>=</m:mo><m:mi>θ</m:mi>
+  </m:mrow>
+ </m:semantics>
+</m:math>. Then the distribution function of <emphasis>X</emphasis> is
+</para>
+<para id="para_20">
+<m:math display="block">
+ <m:semantics>
+  <m:mrow>
+   <m:mi>F</m:mi><m:mrow><m:mo>(</m:mo>
+    <m:mi>x</m:mi>
+   <m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mrow><m:mo>{</m:mo> <m:mtable columnalign="left">
+    <m:mtr>
+     <m:mtd>
+      <m:mn>0,</m:mn><m:mo>−</m:mo><m:mi>∞</m:mi><m:mo>&lt;</m:mo><m:mi>x</m:mi><m:mo>&lt;</m:mo><m:mn>0,</m:mn>
+     </m:mtd>
+    </m:mtr>
+    <m:mtr>
+     <m:mtd>
+      <m:mn>1</m:mn><m:mo>−</m:mo><m:msup>
+       <m:mi>e</m:mi>
+       <m:mrow>
+        <m:mo>−</m:mo><m:mi>x</m:mi><m:mo>/</m:mo><m:mi>θ</m:mi>
+       </m:mrow>
+      </m:msup>
+      <m:mn>,0</m:mn><m:mo>≤</m:mo><m:mi>x</m:mi><m:mo>&lt;</m:mo><m:mi>∞</m:mi><m:mo>.</m:mo>
+     </m:mtd>
+    </m:mtr>
+   </m:mtable>
+    </m:mrow>
+  </m:mrow>
+ </m:semantics>
+</m:math>
+</para>
+<para id="para_21">
+The p.d.f. and distribution function are graphed in the <link target-id="fig_3">Figure 3</link> for <m:math>
+ <m:semantics>
+  <m:mi>θ</m:mi>
+ </m:semantics>
+</m:math>=5.
+</para>
+
+<figure id="fig_3">
+	<media id="idp3725664" alt=""><image src="../../media/exp_ex2.gif" mime-type="image/gif"/></media>
+	<caption>
+The p.d.f. and c.d.f. graphs of the exponential distriution with <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mi>θ</m:mi><m:mo>=</m:mo><m:mn>5</m:mn>
+  </m:mrow>
+ </m:semantics>
+</m:math>
+.
+</caption>
+</figure>
+</example>
+
+
+<section id="sec_6">
+<note type="Note That" id="idm1042960"><label>Note That</label>
+For an exponential random variable <emphasis>X</emphasis>, we have that
+<m:math display="block">
+ <m:semantics>
+  <m:mrow>
+   <m:mi>P</m:mi><m:mrow><m:mo>(</m:mo>
+    <m:mrow>
+     <m:mi>X</m:mi><m:mo>&gt;</m:mo><m:mi>x</m:mi>
+    </m:mrow>
+   <m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>1</m:mn><m:mo>−</m:mo><m:mi>F</m:mi><m:mrow><m:mo>(</m:mo>
+    <m:mi>x</m:mi>
+   <m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>1</m:mn><m:mo>−</m:mo><m:mrow><m:mo>(</m:mo>
+    <m:mrow>
+     <m:mn>1</m:mn><m:mo>−</m:mo><m:msup>
+      <m:mi>e</m:mi>
+      <m:mrow>
+       <m:mo>−</m:mo><m:mi>x</m:mi><m:mo>/</m:mo><m:mi>θ</m:mi>
+      </m:mrow>
+     </m:msup>
+     
+    </m:mrow>
+   <m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:msup>
+    <m:mi>e</m:mi>
+    <m:mrow>
+     <m:mo>−</m:mo><m:mi>x</m:mi><m:mo>/</m:mo><m:mi>θ</m:mi>
+    </m:mrow>
+   </m:msup>
+   <m:mo>.</m:mo>
+  </m:mrow>
+ </m:semantics>
+</m:math>
+</note>
+
+</section>
+</section>
+<section id="sec_7">
+    <para id="delete_me">
+       <!-- Insert module text here -->
+    </para>  
+</section> 
+  </content>
+  
+</document>

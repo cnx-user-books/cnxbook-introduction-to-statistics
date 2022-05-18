@@ -1,0 +1,890 @@
+<document xmlns="http://cnx.rice.edu/cnxml" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:md="http://cnx.rice.edu/mdml">
+  <title>PSEUDO-NUMBERS</title>
+  <metadata><md:content-id>undefined</md:content-id><md:title/><md:uuid>990daae2-90a8-4359-b8a3-7224ee0d83e2</md:uuid>
+</metadata>
+  <content>
+<section id="sec_1">
+  <title>UNIFORM PSEUDO-RANDOM VARIABLE GENERATION</title> 
+  <para id="para_1">
+ In this paragraph, our goals will be to look at, in more detail, how and whether particular types of pseudo-random variable generators work, and how, if necessary, we can implement a generator of our own choosing. Below a list of requirements is listed for our uniform random variable generator:
+  </para>
+<list id="list_1" list-type="enumerated">
+	   
+	    <item>A uniform marginal distribution,</item> 
+	    <item>Independence of the uniform variables,</item> 
+	    <item>Repeatability and portability,</item>
+            <item>Computational speed.</item>
+	  </list> 
+	<section id="sec_2">
+	  <title>CURRENT ALGORITHMS</title> 
+	  <para id="para_2">
+	 The generation of pseudo-random variates through algorithmic methods is a mature field in the sense that a great deal is known theoretically about different classes of algorithms, and in the sense that particular algorithms in each of those classes have been shown, upon testing, to have good statistical properties. In this section, let describe the main classes of generators, and then let 
+make specific recommendation about which generators should be implemented.  
+
+	  </para>
+	<section id="sec_3">
+<para id="para_3">
+<term>Congruential Generators</term>
+    </para>  
+<para id="para_4">
+The most widely used and best understood class of pseudo-random number generators are those based on the linear congruential method introduced by <emphasis>Lehmer (1951)</emphasis>. Such generators are based on the following formula: 
+    </para>  
+<equation id="eq_l">
+ <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:msub>
+    <m:mi>U</m:mi>
+    <m:mi>i</m:mi>
+   </m:msub>
+   <m:mo>=</m:mo><m:mrow><m:mo>(</m:mo>
+    <m:mrow>
+     <m:mi>a</m:mi><m:msub>
+      <m:mi>U</m:mi>
+      <m:mrow>
+       <m:mi>i</m:mi><m:mo>−</m:mo><m:mn>1</m:mn>
+      </m:mrow>
+     </m:msub>
+     <m:mo>+</m:mo><m:mi>c</m:mi>
+    </m:mrow>
+   <m:mo>)</m:mo></m:mrow><m:mi>mod</m:mi><m:mo>⁡</m:mo><m:mi>m</m:mi>  <m:mo>,</m:mo>
+  </m:mrow>
+
+ </m:semantics>
+</m:math>
+
+</equation>
+
+<para id="para_5">where <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:msub>
+    <m:mi>U</m:mi>
+    <m:mi>i</m:mi>
+   </m:msub>
+   <m:mo>,</m:mo><m:mi>i</m:mi><m:mo>=</m:mo><m:mn>1,2,...</m:mn>
+  </m:mrow>
+ </m:semantics>
+</m:math>
+are the output random integers; <m:math> <m:semantics> <m:mrow> <m:msub> <m:mi>U</m:mi> <m:mn>0</m:mn> </m:msub> </m:mrow> </m:semantics></m:math>
+is the chosen starting value for the recursion, called 
+<term>the seed</term> and <emphasis>a</emphasis>,<emphasis>c</emphasis>, and <emphasis>m</emphasis> are prechosen constants.
+</para>  
+
+   <note type="Notice That" id="idm7548000"><label>Notice That</label> to convert to uniform 
+<m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mrow><m:mo>(</m:mo>
+    <m:mrow>
+     <m:mn>0,1</m:mn>
+    </m:mrow>
+   <m:mo>)</m:mo></m:mrow>
+  </m:mrow>
+ </m:semantics>
+</m:math>
+
+variates, we need only divide by
+<term>modulus m</term>, that is, we use the sequence 
+<m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mrow><m:mo>{</m:mo> <m:mrow>
+    <m:msub>
+     <m:mi>U</m:mi>
+     <m:mi>i</m:mi>
+    </m:msub>
+    <m:mo>/</m:mo><m:mi>m</m:mi>
+   </m:mrow> <m:mo>}</m:mo></m:mrow>
+  </m:mrow>
+ </m:semantics>
+</m:math>
+.
+</note> 
+<list id="list_2" list-type="enumerated">
+	    <title>The following properties of the algorithm are worth stating explicitly:</title>
+	    <item>Because of the “mod m” operation (for background on modular operations, see <emphasis>Knuth, (1981)</emphasis>
+), the only possible values the algorithm can produce are the integers 
+<m:math>
+ <m:semantics>
+  <m:mrow>
+  <m:mn>0,1,2,...,</m:mn><m:mi>m</m:mi><m:mo>−</m:mo><m:mn>1.</m:mn>
+  </m:mrow>
+</m:semantics>
+</m:math>
+ This follows because, by definition, <emphasis>x</emphasis> mod <emphasis>m</emphasis> is the remainder after <emphasis>x</emphasis> is divided by <emphasis>m</emphasis>. </item> 
+	    
+
+
+	    <item>Because the current random integer 
+<m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:msub>
+    <m:mi>U</m:mi>
+    <m:mi>i</m:mi>
+   </m:msub>
+     </m:mrow>
+ </m:semantics>
+</m:math>
+ depends only on the previous random integer 
+<m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:msub>
+    <m:mi>U</m:mi>
+    <m:mrow>
+     <m:mi>i</m:mi><m:mo>−</m:mo><m:mn>1</m:mn>
+    </m:mrow>
+   </m:msub>
+     </m:mrow>
+ </m:semantics>
+</m:math>
+once a previous value has  been repeated, the entire sequence after it must be repeated. Such a repeating sequence is called<term> a cycle</term>, and its <term>period</term> is <term>the cycle length</term>. Clearly, <term>the maximum period</term> 
+of the congruential generator is <emphasis>m</emphasis>. For given choices of 
+<emphasis>a</emphasis>, <emphasis>c</emphasis>, and <emphasis>m</emphasis>, a generator may contain many short cycles, (see the Example 1 below), and the cycle you enter will depend on the seed you start with. Notice that the generator with many short cycles is not a good one, since the output sequence will be one of a number of short series, each of which may not be uniformly distributed or randomly dispersed on the line or the plane. Moreover, if the simulation is long enough to cause the random numbers to repeat because of the short cycle length, the outputs will not be independent. 
+
+</item>
+<item>
+If we are concern with a uniform 
+<m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mrow><m:mo>(</m:mo>
+    <m:mrow>
+     <m:mn>0,1</m:mn>
+    </m:mrow>
+   <m:mo>)</m:mo></m:mrow>
+  </m:mrow>
+ </m:semantics>
+</m:math>
+variates, the finest partition of the interval 
+<m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mrow><m:mo>(</m:mo>
+    <m:mrow>
+     <m:mn>0,1</m:mn>
+    </m:mrow>
+   <m:mo>)</m:mo></m:mrow>
+  </m:mrow>
+ </m:semantics>
+</m:math>
+that this generator can provide is 
+<m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mrow><m:mo>[</m:mo> <m:mrow>
+    <m:mn>0,1</m:mn><m:mo>/</m:mo><m:mi>m</m:mi><m:mn>,2</m:mn><m:mo>/</m:mo><m:mi>m</m:mi><m:mn>,...,</m:mn><m:mrow><m:mo>(</m:mo>
+     <m:mrow>
+      <m:mi>m</m:mi><m:mo>−</m:mo><m:mn>1</m:mn><m:mo>/</m:mo><m:mi>m</m:mi>
+     </m:mrow>
+    <m:mo>)</m:mo></m:mrow>
+   </m:mrow> <m:mo>]</m:mo></m:mrow>
+  </m:mrow>
+</m:semantics>
+</m:math>. This is, of course, not truly a uniform 
+<m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mrow><m:mo>(</m:mo>
+    <m:mrow>
+     <m:mn>0,1</m:mn>
+    </m:mrow>
+   <m:mo>)</m:mo></m:mrow>
+  </m:mrow>
+ </m:semantics>
+</m:math>
+distribution since, for any <emphasis>k</emphasis> in 
+<m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mrow><m:mo>(</m:mo>
+    <m:mrow>
+     <m:mn>0,</m:mn><m:mi>m</m:mi><m:mo>−</m:mo><m:mn>1</m:mn>
+    </m:mrow>
+   <m:mo>)</m:mo></m:mrow>
+  </m:mrow>
+</m:semantics>
+</m:math>
+
+, we have 
+<m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mi>P</m:mi><m:mrow><m:mo>[</m:mo> <m:mrow>
+    <m:mi>k</m:mi><m:mo>/</m:mo><m:mi>m</m:mi><m:mo>&lt;</m:mo><m:mi>U</m:mi><m:mo>&lt;</m:mo><m:mrow><m:mo>(</m:mo>
+     <m:mrow>
+      <m:mi>k</m:mi><m:mo>+</m:mo><m:mn>1</m:mn>
+     </m:mrow>
+    <m:mo>)</m:mo></m:mrow><m:mo>/</m:mo><m:mi>m</m:mi>
+   </m:mrow> <m:mo>]</m:mo></m:mrow><m:mo>=</m:mo><m:mn>0</m:mn>
+  </m:mrow>
+ </m:semantics>
+</m:math>, not 
+<m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mn>1</m:mn><m:mo>/</m:mo><m:mi>m</m:mi>
+  </m:mrow>
+ </m:semantics>
+</m:math> are required by theory for continuous random variables. 
+</item> 
+  <item>
+Choices of <emphasis>a</emphasis>,<emphasis>c</emphasis>, and <emphasis>m</emphasis>, will determine not only the fineness of the partition of 
+<m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mrow><m:mo>(</m:mo>
+    <m:mrow>
+     <m:mn>0,1</m:mn>
+    </m:mrow>
+   <m:mo>)</m:mo></m:mrow>
+  </m:mrow>
+ </m:semantics>
+</m:math> and the cycle length, and therefore, the uniformity of the marginal distribution, but also the independence properties of the output sequence. Properly choosing <emphasis>a</emphasis>,<emphasis>c</emphasis>, and <emphasis>m</emphasis> is a science that incorporates both theoretical results and empirical tests. The first rule is to select the modulus m to be “as large as possible”, so that there is some hope to address point 3 above and to generate uniform variates with an approximately uniform marginal distribution. However, simply having m large is not enough; one may still find that the generator has  many short cycles, or that the sequence is not approximately independent. See <link target-id="ex_1">example 1</link> below. 
+</item>
+ 	  </list> 
+
+  
+	<example id="ex_1">
+	  <para id="para_10">
+Consider
+<equation id="eq_2">
+<m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:msub>
+    <m:mi>U</m:mi>
+    <m:mi>i</m:mi>
+   </m:msub>
+   <m:mo>=</m:mo><m:mn>2</m:mn><m:msub>
+    <m:mi>U</m:mi>
+    <m:mrow>
+     <m:mi>i</m:mi><m:mo>−</m:mo><m:mn>1</m:mn>
+    </m:mrow>
+   </m:msub>
+   <m:mi>mod</m:mi><m:mo>⁡</m:mo><m:msup>
+    <m:mn>2</m:mn>
+    <m:mrow>
+     <m:mn>32</m:mn>
+    </m:mrow>
+   </m:msup>
+     </m:mrow>
+ </m:semantics>
+</m:math>
+</equation>
+Where a seed of the form 
+<m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:msup>
+    <m:mn>2</m:mn>
+    <m:mi>k</m:mi>
+   </m:msup>
+     </m:mrow>
+ </m:semantics>
+</m:math> creates a loop containing only integers that are powers of 2, or
+<equation id="eq_3">
+<m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:msub>
+    <m:mi>U</m:mi>
+    <m:mi>i</m:mi>
+   </m:msub>
+   <m:mo>=</m:mo><m:mrow><m:mo>(</m:mo>
+    <m:mrow>
+     <m:msub>
+      <m:mi>U</m:mi>
+      <m:mrow>
+       <m:mi>i</m:mi><m:mo>−</m:mo><m:mn>1</m:mn>
+      </m:mrow>
+     </m:msub>
+     <m:mo>+</m:mo><m:mn>1</m:mn>
+    </m:mrow>
+   <m:mo>)</m:mo></m:mrow><m:mi>mod</m:mi><m:mo>⁡</m:mo><m:msup>
+    <m:mn>2</m:mn>
+    <m:mrow>
+     <m:mn>32</m:mn>
+    </m:mrow>
+   </m:msup>
+    </m:mrow>
+ </m:semantics>
+</m:math>
+</equation>  
+which generates the nonrandom sequence of increasing integers. Therefore, the second equation gives a generator that has the maximum possible cycle length but is useless for simulating a random sequence.  
+	  </para>    
+	</example>
+<para id="para_11">
+Fortunately, one a value of the <emphasis>m</emphasis> has been selected; theoretical results exist that give conditions for choosing values of the multiplier a and the additive constant c such that all the possible integers, 0 through 
+<m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mi>m</m:mi><m:mo>−</m:mo><m:mn>1</m:mn>
+  </m:mrow>
+ </m:semantics>
+</m:math>, are generated before any are repeated.</para> 
+   <note type="Notice, that" id="idm6808768"><label>Notice, that</label>
+this does not eliminate the second counterexample above, which already has the maximal cycle length, but is a useless random number generator. 
+</note>  
+<section id="sec_4">
+<para id="para_12">
+<term>THEOREM I</term>
+    </para>
+
+	  
+<para id="para_13">A linear congruential generator will have maximal cycle length <emphasis>m</emphasis>, if and only if:
+    <list id="list_3">
+	    <item>
+<emphasis>c</emphasis> is nonzero and is relatively prime to <emphasis>m</emphasis> (i.e., <emphasis>c</emphasis> and <emphasis>m</emphasis> have no common prime factors).
+            </item> 
+	    <item>
+<m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mrow><m:mo>(</m:mo>
+    <m:mrow>
+     <m:mi>a</m:mi><m:mi>mod</m:mi><m:mo>⁡</m:mo><m:mi>q</m:mi>
+    </m:mrow>
+   <m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>1</m:mn>
+  </m:mrow>
+ </m:semantics>
+</m:math>
+for each prime factor <emphasis>q</emphasis> of <emphasis>m</emphasis>.
+
+            </item> 
+	    <item>
+<m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mrow><m:mo>(</m:mo>
+    <m:mrow>
+     <m:mi>a</m:mi><m:mi>mod</m:mi><m:mo>⁡</m:mo><m:mn>4</m:mn>
+    </m:mrow>
+   <m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>1</m:mn>
+  </m:mrow>
+</m:semantics>
+</m:math>
+if 4 is a factor of <emphasis>m</emphasis>.
+
+            </item>
+	    </list>
+</para>
+
+
+
+<para id="para_14">
+ <term>PROOF</term>
+ </para>
+         <note type="SEE" id="idm12320"><label>SEE</label>
+ <emphasis>Knuth (1981, p.16).</emphasis>        
+         </note>
+<para id="para_15">
+ As a mathematical note, <emphasis>c</emphasis> is called relatively prime to <emphasis>m</emphasis> if and only if <emphasis>c</emphasis> and m have no common divisor other than 1, which is equivalent to <emphasis>c</emphasis> and <emphasis>m</emphasis> having no common prime factor.
+ </para>
+
+<para id="para_16">
+ A related result concerns the case of <emphasis>c</emphasis> chosen to be 0. This case does not conform to condition in a <link target-id="para_12">Theorem I</link>, a value 
+<m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:msub>
+    <m:mi>U</m:mi>
+    <m:mi>i</m:mi>
+   </m:msub>
+    </m:mrow>
+ </m:semantics>
+</m:math> of zero must be avoided because the generator will continue to produce zero after the first occurrence of a zero. In particular, a seed of zero is not allowable. By <link target-id="para_12">Theorem I</link>, a generator with <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mi>c</m:mi><m:mo>=</m:mo><m:mn>0</m:mn>
+  </m:mrow>
+ </m:semantics>
+</m:math>, which is called 
+<term>a multiplicative congruential generator</term>, cannot have maximal cycle length <emphasis>m</emphasis>. However, By <link target-id="para_17">Theorem II</link>. It can have cycle length <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mi>m</m:mi><m:mo>−</m:mo><m:mn>1</m:mn>
+  </m:mrow>
+</m:semantics>
+</m:math>. 
+ </para>
+
+<para id="para_17">
+<term>THEOREM II</term>
+    </para>
+<para id="para_18">
+If <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mi>c</m:mi><m:mo>=</m:mo><m:mn>0</m:mn>
+  </m:mrow>
+</m:semantics>
+</m:math>
+ in a linear congruential generator, then <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:msub>
+    <m:mi>U</m:mi>
+    <m:mi>i</m:mi>
+   </m:msub>
+   <m:mo>=</m:mo><m:mn>0</m:mn>
+  </m:mrow>
+</m:semantics>
+</m:math>
+ can never be included in a cycle, since the 0 will always repeat. However, the generator will cycle through all <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mi>m</m:mi><m:mo>−</m:mo><m:mn>1</m:mn>
+  </m:mrow>
+ </m:semantics>
+</m:math> integers in the set <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mrow><m:mo>(</m:mo>
+    <m:mrow>
+     <m:mi>a</m:mi><m:mi>mod</m:mi><m:mo>⁡</m:mo><m:mi>q</m:mi>
+    </m:mrow>
+   <m:mo>)</m:mo></m:mrow>
+  </m:mrow>
+ </m:semantics>
+</m:math> if and only if:
+
+    <list id="list_4">
+	    <item>
+<emphasis>m</emphasis> is a prime integer and
+            </item> 
+
+	    <item>
+<emphasis>m</emphasis> is a primitive element modulo <emphasis>m</emphasis> .
+            </item> 
+         </list>
+ </para>
+<para id="para_19">
+ <term>PROOF</term>
+ </para>
+         <note type="SEE" id="idm14054352"><label>SEE</label>
+ <emphasis>Knuth (1981, p.19).</emphasis>        
+         </note>
+<para id="para_20">
+A formal definition or primitive elements modulo <emphasis>m</emphasis>, as well as theoretical results for finding them, are given in <emphasis>Knuth (1981)</emphasis>. In effect, when <emphasis>m</emphasis> is a prime, <emphasis>a</emphasis> is a primitive element if the cycle is of length <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mi>m</m:mi><m:mo>−</m:mo><m:mn>1</m:mn>
+  </m:mrow>
+ </m:semantics>
+</m:math>. The results of <link target-id="para_17">Theorem II</link> are not intuitively useful, but for our purposes, it is enough to note that such primitive elements exist and have veen computed by researchers, 
+<note type="SEE" id="idm1286144"><label>SEE</label>
+e.g., Table24.8 in Abramowitz and Stegun, 1965.
+                </note>
+ Hence, we now must select one of two possibilities:
+
+<list id="list_5">
+	    <item>
+Choose <emphasis>a</emphasis>, <emphasis>c</emphasis>, and <emphasis>m</emphasis> according to <link target-id="para_12">Theorem I</link> and work with a generator whose cycle length is known to be <emphasis>m</emphasis>.
+            </item> 
+<item>
+Choose <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mi>c</m:mi><m:mo>=</m:mo><m:mn>0</m:mn>
+  </m:mrow>
+ </m:semantics>
+</m:math>, take a and m according to <link target-id="para_17">Theorem II</link>, use a number other than zero as the seed, and work with a generator whose cycle length is known to be <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mi>m</m:mi><m:mo>−</m:mo><m:mn>1</m:mn>
+  </m:mrow>
+ </m:semantics>
+</m:math>. A generator satisfying these conditions is known as <term>a prime-modulus multiplicative congruential generator</term> and, because of the simpler computation, it usually has an advantage in terms of speed over the mixed congruential generator. 
+         </item>
+ 	  </list>
+</para>
+<para id="para_21">
+ Another method frequency speeding up a random number generator that has <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mi>c</m:mi><m:mo>=</m:mo><m:mn>0</m:mn>
+  </m:mrow>
+</m:semantics>
+</m:math> is to choose the modulus <emphasis>m</emphasis> to be computationally convenient. For instance, consider <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mi>m</m:mi><m:mo>=</m:mo><m:msup>
+    <m:mn>2</m:mn>
+    <m:mi>k</m:mi>
+   </m:msup>
+   <m:mo>.</m:mo>
+  </m:mrow>
+ </m:semantics>
+</m:math> This is clearly not a prime number, but on a computer the modulus operation becomes a bit-shift operation in machine code. In such cases, Theorem III gives a guise to the maximal cycle length. 
+ </para>
+<para id="para_22">
+<term>THEOREM III</term>
+    </para>
+<para id="para_23">
+If <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mi>c</m:mi><m:mo>=</m:mo><m:mn>0</m:mn>
+  </m:mrow>
+</m:semantics>
+</m:math> and <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mi>m</m:mi><m:mo>=</m:mo><m:msup>
+    <m:mn>2</m:mn>
+    <m:mi>k</m:mi>
+   </m:msup>
+   </m:mrow>
+ </m:semantics>
+</m:math> with <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mi>k</m:mi><m:mo>&gt;</m:mo><m:mn>2</m:mn>
+  </m:mrow>
+</m:semantics>
+</m:math>, then the maximal possible cycle length is <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:msup>
+    <m:mn>2</m:mn>
+    <m:mrow>
+     <m:mi>k</m:mi><m:mo>−</m:mo><m:mn>2</m:mn>
+    </m:mrow>
+   </m:msup>
+   </m:mrow>
+ </m:semantics>
+</m:math>. This is achieved if and only if two conditions hold:
+<list id="list_6">
+	    <item>
+<emphasis>a</emphasis> is a primitive element modulo <emphasis>m</emphasis>.
+            </item>
+
+	    <item>
+the seed is odd.
+            </item>
+ 	  </list>
+    </para>
+<para id="para_24">
+ <term>PROOF</term>
+ </para>
+         <note type="SEE" id="idm7276720"><label>SEE</label>
+ <emphasis>Knuth (1981, p.19).</emphasis>        
+         </note>
+<para id="para_25">
+Notice that we sacrifice some of the cycle length and, as we will se in Theorem IV, we also lose some randomness in the low-order bits of the random variates. 
+Having use any of Theorems <link target-id="para_12">I</link>, <link target-id="para_17">II</link>, or <link target-id="para_22">III</link> to select triples (<emphasis>a, c, m</emphasis>) that lead to generators with sufficiently long cycles of known length, we can ask which triple gives the most random (i.e., approximately independent ) sequence. Although some theoretical results exist for generators as a whole, these are generally too weak to eliminate any but the worst generators. <emphasis>Marsaglia (1985)</emphasis> and <emphasis>Knuth(1981, Chap. 3.3.3)</emphasis> are good sources for material on that results. 
+</para>
+
+<para id="para_26">
+<term>THEOREM IV</term>
+    </para>
+<para id="para_27">
+If
+<m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:msub>
+    <m:mi>U</m:mi>
+    <m:mi>i</m:mi>
+   </m:msub>
+   <m:mo>=</m:mo><m:mi>a</m:mi><m:msub>
+    <m:mi>U</m:mi>
+    <m:mrow>
+     <m:mi>i</m:mi><m:mo>−</m:mo><m:mn>1</m:mn>
+    </m:mrow>
+   </m:msub>
+   <m:mi>mod</m:mi><m:mo>⁡</m:mo><m:msup>
+    <m:mn>2</m:mn>
+    <m:mi>k</m:mi>
+   </m:msup>
+     </m:mrow>
+ </m:semantics>
+</m:math>, and we define
+<equation id="eq_4">
+<m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:msub>
+    <m:mi>Y</m:mi>
+    <m:mi>i</m:mi>
+   </m:msub>
+   <m:mo>=</m:mo><m:msub>
+    <m:mi>U</m:mi>
+    <m:mi>i</m:mi>
+   </m:msub>
+   <m:mi>mod</m:mi><m:mo>⁡</m:mo><m:msup>
+    <m:mn>2</m:mn>
+    <m:mi>j</m:mi>
+   </m:msup>
+   <m:mn>,0</m:mn><m:mo>&lt;</m:mo><m:mi>j</m:mi><m:mo>&lt;</m:mo><m:mi>k</m:mi>
+  </m:mrow>
+ </m:semantics>
+</m:math>
+</equation> 
+then
+<equation id="eq_5">
+<m:math display="block">
+ <m:semantics>
+  <m:mrow>
+   <m:msub>
+    <m:mi>Y</m:mi>
+    <m:mi>i</m:mi>
+   </m:msub>
+   <m:mo>=</m:mo><m:mi>a</m:mi><m:msub>
+    <m:mi>Y</m:mi>
+    <m:mrow>
+     <m:mi>i</m:mi><m:mo>−</m:mo><m:mn>1</m:mn>
+    </m:mrow>
+   </m:msub>
+   <m:mi>mod</m:mi><m:mo>⁡</m:mo><m:msup>
+    <m:mn>2</m:mn>
+    <m:mi>j</m:mi>
+   </m:msup>
+  <m:mo>.</m:mo>
+    </m:mrow>
+</m:semantics>
+</m:math>
+</equation> 
+In practical terms, this means that the sequence of j-lo-order binary bits of the <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:msub>
+    <m:mi>U</m:mi>
+    <m:mi>i</m:mi>
+   </m:msub>
+    </m:mrow>
+ </m:semantics>
+</m:math> sequence, namely <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:msub>
+    <m:mi>Y</m:mi>
+    <m:mi>i</m:mi>
+   </m:msub>
+   </m:mrow>
+</m:semantics>
+</m:math> cycle with cycle length at most <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:msup>
+    <m:mn>2</m:mn>
+    <m:mi>j</m:mi>
+   </m:msup>
+     </m:mrow>
+</m:semantics>
+</m:math>. In particular, sequence of the least significant bit (i.e., j=1) in <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mrow><m:mo>(</m:mo>
+    <m:mrow>
+     <m:msub>
+      <m:mi>U</m:mi>
+      <m:mn>1</m:mn>
+     </m:msub>
+     <m:mo>,</m:mo><m:msub>
+      <m:mi>U</m:mi>
+      <m:mn>2</m:mn>
+     </m:msub>
+     <m:mo>,</m:mo><m:msub>
+      <m:mi>U</m:mi>
+      <m:mn>3</m:mn>
+     </m:msub>
+     <m:mn>,...</m:mn>
+    </m:mrow>
+   <m:mo>)</m:mo></m:mrow>
+  </m:mrow>
+</m:semantics>
+</m:math> must behave as <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mrow><m:mo>(</m:mo>
+    <m:mrow>
+     <m:mn>0,0,0,0,...</m:mn>
+    </m:mrow>
+   <m:mo>)</m:mo></m:mrow><m:mo>,</m:mo><m:mrow><m:mo>(</m:mo>
+    <m:mrow>
+     <m:mn>1,1,1,1,...</m:mn>
+    </m:mrow>
+   <m:mo>)</m:mo></m:mrow><m:mo>,</m:mo><m:mrow><m:mo>(</m:mo>
+    <m:mrow>
+     <m:mn>0,1,0,1,...</m:mn>
+    </m:mrow>
+   <m:mo>)</m:mo></m:mrow>
+  </m:mrow>
+ </m:semantics>
+</m:math>
+or <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mrow><m:mo>(</m:mo>
+    <m:mrow>
+     <m:mn>1,0,1,0,...</m:mn>
+    </m:mrow>
+   <m:mo>)</m:mo></m:mrow>
+  </m:mrow>
+</m:semantics>
+</m:math>.  
+</para>
+<para id="para_28">
+ <term>PROOF</term>
+ </para>
+         <note type="SEE" id="idm14416400"><label>SEE</label>
+ <emphasis>Knuth (1981, pp. 12-14).</emphasis>        
+         </note>
+<para id="para_29">
+Such normal behavior in the low-order bits of a congruential generator with non-prime-modulus <emphasis>m</emphasis> is an undesirably property, which may be aggravated by techniques such as the recycling of uniform variates. It has been observed <emphasis>(Hutchinson, 1966)</emphasis> that prime-modulus multiplicative congruential generators with full cycle (i.e., when <emphasis>m</emphasis> is a positive primitive element) tend to have fairly randomly distributed low-order bits, although no theory exists to explain this.
+ </para>
+<para id="para_30">
+<term>THEOREM V</term>
+    </para>
+
+<para id="para_31">
+If our congruential generator produces the sequence <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mrow><m:mo>(</m:mo>
+    <m:mrow>
+     <m:msub>
+      <m:mi>U</m:mi>
+      <m:mn>1</m:mn>
+     </m:msub>
+     <m:mo>,</m:mo><m:msub>
+      <m:mi>U</m:mi>
+      <m:mn>2</m:mn>
+     </m:msub>
+     <m:mn>,...</m:mn>
+    </m:mrow>
+   <m:mo>)</m:mo></m:mrow>
+  </m:mrow>
+ </m:semantics>
+</m:math>, and we look at the following sequence of points in n dimensions:
+<equation id="eq_7">
+<m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mrow><m:mo>(</m:mo>
+    <m:mrow>
+     <m:msub>
+      <m:mi>U</m:mi>
+      <m:mn>1</m:mn>
+     </m:msub>
+     <m:mo>,</m:mo><m:msub>
+      <m:mi>U</m:mi>
+      <m:mn>2</m:mn>
+     </m:msub>
+     <m:mo>,</m:mo><m:msub>
+      <m:mi>U</m:mi>
+      <m:mn>3</m:mn>
+     </m:msub>
+     <m:mn>,...,</m:mn><m:msub>
+      <m:mi>U</m:mi>
+      <m:mi>n</m:mi>
+     </m:msub>
+     
+    </m:mrow>
+   <m:mo>)</m:mo></m:mrow><m:mo>,</m:mo><m:mrow><m:mo>(</m:mo>
+    <m:mrow>
+     <m:msub>
+      <m:mi>U</m:mi>
+      <m:mn>2</m:mn>
+     </m:msub>
+     <m:mo>,</m:mo><m:msub>
+      <m:mi>U</m:mi>
+      <m:mn>3</m:mn>
+     </m:msub>
+     <m:mo>,</m:mo><m:msub>
+      <m:mi>U</m:mi>
+      <m:mn>4</m:mn>
+     </m:msub>
+     <m:mn>,...,</m:mn><m:msub>
+      <m:mi>U</m:mi>
+      <m:mrow>
+       <m:mi>n</m:mi><m:mo>+</m:mo><m:mn>1</m:mn>
+      </m:mrow>
+     </m:msub>
+     
+    </m:mrow>
+   <m:mo>)</m:mo></m:mrow><m:mo>,</m:mo><m:mrow><m:mo>(</m:mo>
+    <m:mrow>
+     <m:msub>
+      <m:mi>U</m:mi>
+      <m:mn>3</m:mn>
+     </m:msub>
+     <m:mo>,</m:mo><m:msub>
+      <m:mi>U</m:mi>
+      <m:mn>4</m:mn>
+     </m:msub>
+     <m:mo>,</m:mo><m:msub>
+      <m:mi>U</m:mi>
+      <m:mn>5</m:mn>
+     </m:msub>
+     <m:mn>,...,</m:mn><m:msub>
+      <m:mi>U</m:mi>
+      <m:mrow>
+       <m:mi>n</m:mi><m:mo>+</m:mo><m:mn>2</m:mn>
+      </m:mrow>
+     </m:msub>
+        </m:mrow>
+   <m:mo>)</m:mo></m:mrow><m:mn>,...</m:mn>
+  </m:mrow>
+ </m:semantics>
+</m:math>
+</equation> 
+then the points will all lie in fewer than <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:msup>
+    <m:mrow>
+     <m:mrow><m:mo>(</m:mo>
+      <m:mrow>
+       <m:mi>n</m:mi><m:mo>|</m:mo><m:mi>m</m:mi>
+      </m:mrow>
+     <m:mo>)</m:mo></m:mrow>
+    </m:mrow>
+    <m:mrow>
+     <m:mn>1</m:mn><m:mo>/</m:mo><m:mi>n</m:mi>
+    </m:mrow>
+   </m:msup>
+     </m:mrow>
+</m:semantics>
+</m:math> parallel hyper planes.
+    </para>
+<para id="para_32">
+ <term>PROOF</term>
+ </para>
+         <note type="SEE" id="idp2885536"><label>SEE</label>
+ <emphasis>Marsaglia (1976).</emphasis>        
+         </note>
+<para id="para_33">
+Given these known limitations of congruential generator, we are still  left with the question of how to choose the “best” values for <emphasis>a</emphasis>, <emphasis>c</emphasis>, and <emphasis>m</emphasis>. To do this, researchers have followed a straightforward but time-consuming procedure:
+ <list id="list_7" list-type="enumerated">
+	    <item>
+Take values <emphasis>a</emphasis>, <emphasis>c</emphasis>, and <emphasis>m</emphasis> that give a sufficiently long, known cycle length and usa the generator to produce sequences of uniform variates.
+            </item> 
+	    <item>
+Subject the output sequences to batteries of statistical tests for independence and a uniform marginal distribution. Document the results. 
+            </item> 
+	    <item>
+Subject  the generator to theoretical tests. In particular, the spectral test of <emphasis>Coveyou and MacPherson (1967)</emphasis> is currently widely used and recognized as a very sensitive structural test for distinguishing between good and bad generators. Document the results.
+            </item>
+            <item>
+As new, more sensitive tests appear, subject to generator to those tests. Several such tests are discussed in <emphasis>Marsaglia(1985)</emphasis>.
+            </item>
+
+	 </list> 
+	  
+</para>
+                      </section>	  
+              </section>
+         </section>
+  </section>
+<note type="see also" id="idm14951488"><label>See also</label>
+<link document="m13104" target-id="sec2">Other Types of Generators</link>
+</note>
+     
+  </content>
+  
+</document>

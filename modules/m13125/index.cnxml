@@ -1,0 +1,1684 @@
+<document xmlns="http://cnx.rice.edu/cnxml" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:md="http://cnx.rice.edu/mdml">
+  <title>POISSON DISTRIBUTION</title>
+  <metadata><md:content-id>undefined</md:content-id><md:title/><md:uuid>f121c99a-5413-4248-99cd-9bb3188e8555</md:uuid>
+</metadata>
+  <content>
+
+<section id="sec_1">
+<title>POISSON DISTRIBUTION</title>
+<para id="para_1">
+Some experiments results in counting the number of times particular events occur in given times of on given physical objects. For example, we would count the number of phone calls arriving at a switch board between 9 and 10 am, the number of flaws in 100 feet of wire, the number of customers that arrive at a ticket window between 12 noon and 2 pm, or the number of defects in a 100-foot roll of aluminum screen that is 2 feet wide. Each count can be looked upon as a random variable associated with an approximate Poisson process provided the conditions in the definition below are satisfied.
+</para>
+<definition id="def_1">
+   <term>POISSON PROCCESS</term>
+   <meaning id="idp13581056">
+Let the number of changes that occur in a given continuous interval be counted. We have <term>an approximate Poisson process</term> with parameter <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mi>λ</m:mi><m:mo>&gt;</m:mo><m:mn>0</m:mn>
+  </m:mrow>
+ </m:semantics>
+</m:math>
+ if the following are satisfied:
+</meaning>
+</definition>
+	  <list id="list_1" list-type="enumerated">
+	    <item>
+The number of changes occurring in nonoverlapping intervals are independent.
+            </item> 
+	    <item>
+The probability of exactly one change in a sufficiently short interval of length <emphasis>h</emphasis> is approximately <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mi>λ</m:mi><m:mi>h</m:mi>
+  </m:mrow>
+ </m:semantics>
+</m:math>
+.
+            </item> 
+	    <item>
+The probability of two or more changes in a sufficiently short interval is essentially zero.
+          </item>
+	  </list>
+<section id="sec_2">
+<para id="para_2">
+Suppose that  an experiment satisfies the three points of an approximate Poisson process. Let <emphasis>X</emphasis>  denote the number of changes in an interval of "length 1" (where "length 1" represents one unit of the quantity under consideration). We would like to find an approximation for <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mi>P</m:mi><m:mrow><m:mo>(</m:mo>
+    <m:mrow>
+     <m:mi>X</m:mi><m:mo>=</m:mo><m:mi>x</m:mi>
+    </m:mrow>
+   <m:mo>)</m:mo></m:mrow>
+  </m:mrow>
+ </m:semantics>
+</m:math>
+, where <emphasis>x</emphasis> is a nonnegative integer. To achieve this, we partition the unit interval into <emphasis>n</emphasis> subintervals of equal length 1/<emphasis>n</emphasis>. If <emphasis>N</emphasis> is sufficiently large (i.e., much larger than <emphasis>x</emphasis>), one shall approximate the probability that <emphasis>x</emphasis> changes occur in this unit interval by finding the probability that one change occurs exactly in each of exactly <emphasis>x</emphasis> of these <emphasis>n</emphasis> subintervals. The probability of one change occurring in any one subinterval of length 1/<emphasis>n</emphasis> is approximately 
+<m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mi>λ</m:mi><m:mrow><m:mo>(</m:mo>
+    <m:mrow>
+     <m:mn>1</m:mn><m:mo>/</m:mo><m:mi>n</m:mi>
+    </m:mrow>
+   <m:mo>)</m:mo></m:mrow>
+  </m:mrow>
+ </m:semantics>
+</m:math>
+ by condition (2). The probability of two or more changes in any one subinterval is essentially zero by condition (3). So for each subinterval, exactly one change occurs with a probability of approximately <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mi>λ</m:mi><m:mrow><m:mo>(</m:mo>
+    <m:mrow>
+     <m:mn>1</m:mn><m:mo>/</m:mo><m:mi>n</m:mi>
+    </m:mrow>
+   <m:mo>)</m:mo></m:mrow>
+  </m:mrow>
+ </m:semantics>
+</m:math>
+. Consider the occurrence or nonoccurrence of a change in each subinterval as a Bernoulli trial. By condition (1) we have a sequence of <emphasis>n</emphasis> Bernoulli trials with probability <emphasis>p</emphasis> approximately equal to <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mi>λ</m:mi><m:mrow><m:mo>(</m:mo>
+    <m:mrow>
+     <m:mn>1</m:mn><m:mo>/</m:mo><m:mi>n</m:mi>
+    </m:mrow>
+   <m:mo>)</m:mo></m:mrow>
+  </m:mrow>
+ </m:semantics>
+</m:math>. Thus an approximation for <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mi>P</m:mi><m:mrow><m:mo>(</m:mo>
+    <m:mrow>
+     <m:mi>X</m:mi><m:mo>=</m:mo><m:mi>x</m:mi>
+    </m:mrow>
+   <m:mo>)</m:mo></m:mrow>
+  </m:mrow>
+ </m:semantics>
+</m:math>
+ is given by the binomial probability
+<m:math display="block">
+ <m:semantics>
+  <m:mrow>
+   <m:mfrac>
+    <m:mrow>
+     <m:mi>n</m:mi><m:mo>!</m:mo>
+    </m:mrow>
+    <m:mrow>
+     <m:mi>x</m:mi><m:mo>!</m:mo><m:mrow><m:mo>(</m:mo>
+      <m:mrow>
+       <m:mi>n</m:mi><m:mo>−</m:mo><m:mi>x</m:mi>
+      </m:mrow>
+     <m:mo>)</m:mo></m:mrow><m:mo>!</m:mo>
+    </m:mrow>
+   </m:mfrac>
+   <m:msup>
+    <m:mrow>
+     <m:mrow><m:mo>(</m:mo>
+      <m:mrow>
+       <m:mfrac>
+        <m:mi>λ</m:mi>
+        <m:mi>n</m:mi>
+       </m:mfrac>
+       
+      </m:mrow>
+     <m:mo>)</m:mo></m:mrow>
+    </m:mrow>
+    <m:mi>x</m:mi>
+   </m:msup>
+   <m:msup>
+    <m:mrow>
+     <m:mrow><m:mo>(</m:mo>
+      <m:mrow>
+       <m:mn>1</m:mn><m:mo>−</m:mo><m:mfrac>
+        <m:mi>λ</m:mi>
+        <m:mi>n</m:mi>
+       </m:mfrac>
+       
+      </m:mrow>
+     <m:mo>)</m:mo></m:mrow>
+    </m:mrow>
+    <m:mrow>
+     <m:mi>n</m:mi><m:mo>−</m:mo><m:mi>x</m:mi>
+    </m:mrow>
+   </m:msup>
+   <m:mo>.</m:mo>
+  </m:mrow>
+ </m:semantics>
+</m:math>
+</para>
+<para id="para_3">
+In order to obtain a better approximation, choose a large value for <emphasis>n</emphasis>. If <emphasis>n</emphasis> increases without bound, we have that 
+</para>
+<para id="para_4">
+<m:math display="block">
+ <m:semantics>
+  <m:mrow>
+   <m:munder>
+    <m:mrow>
+     <m:mi>lim</m:mi><m:mo>⁡</m:mo>
+    </m:mrow>
+    <m:mrow>
+     <m:mi>n</m:mi><m:mo>→</m:mo><m:mi>∞</m:mi>
+    </m:mrow>
+   </m:munder>
+   <m:mfrac>
+    <m:mrow>
+     <m:mi>n</m:mi><m:mo>!</m:mo>
+    </m:mrow>
+    <m:mrow>
+     <m:mi>x</m:mi><m:mo>!</m:mo><m:mrow><m:mo>(</m:mo>
+      <m:mrow>
+       <m:mi>n</m:mi><m:mo>−</m:mo><m:mi>x</m:mi>
+      </m:mrow>
+     <m:mo>)</m:mo></m:mrow><m:mo>!</m:mo>
+    </m:mrow>
+   </m:mfrac>
+   <m:msup>
+    <m:mrow>
+     <m:mrow><m:mo>(</m:mo>
+      <m:mrow>
+       <m:mfrac>
+        <m:mi>λ</m:mi>
+        <m:mi>n</m:mi>
+       </m:mfrac>
+       
+      </m:mrow>
+     <m:mo>)</m:mo></m:mrow>
+    </m:mrow>
+    <m:mi>x</m:mi>
+   </m:msup>
+   <m:msup>
+    <m:mrow>
+     <m:mrow><m:mo>(</m:mo>
+      <m:mrow>
+       <m:mn>1</m:mn><m:mo>−</m:mo><m:mfrac>
+        <m:mi>λ</m:mi>
+        <m:mi>n</m:mi>
+       </m:mfrac>
+       
+      </m:mrow>
+     <m:mo>)</m:mo></m:mrow>
+    </m:mrow>
+    <m:mrow>
+     <m:mi>n</m:mi><m:mo>−</m:mo><m:mi>x</m:mi>
+    </m:mrow>
+   </m:msup>
+   <m:mo>=</m:mo><m:munder>
+    <m:mrow>
+     <m:mi>lim</m:mi><m:mo>⁡</m:mo>
+    </m:mrow>
+    <m:mrow>
+     <m:mi>n</m:mi><m:mo>→</m:mo><m:mi>∞</m:mi>
+    </m:mrow>
+   </m:munder>
+   <m:mfrac>
+    <m:mrow>
+     <m:mi>n</m:mi><m:mrow><m:mo>(</m:mo>
+      <m:mrow>
+       <m:mi>n</m:mi><m:mo>−</m:mo><m:mn>1</m:mn>
+      </m:mrow>
+     <m:mo>)</m:mo></m:mrow><m:mn>...</m:mn><m:mrow><m:mo>(</m:mo>
+      <m:mrow>
+       <m:mi>n</m:mi><m:mo>−</m:mo><m:mi>x</m:mi><m:mo>+</m:mo><m:mn>1</m:mn>
+      </m:mrow>
+     <m:mo>)</m:mo></m:mrow>
+    </m:mrow>
+    <m:mrow>
+     <m:msup>
+      <m:mi>n</m:mi>
+      <m:mi>x</m:mi>
+     </m:msup>
+     
+    </m:mrow>
+   </m:mfrac>
+   <m:mfrac>
+    <m:mrow>
+     <m:msup>
+      <m:mi>λ</m:mi>
+      <m:mi>x</m:mi>
+     </m:msup>
+     
+    </m:mrow>
+    <m:mrow>
+     <m:mi>x</m:mi><m:mo>!</m:mo>
+    </m:mrow>
+   </m:mfrac>
+   <m:msup>
+    <m:mrow>
+     <m:mrow><m:mo>(</m:mo>
+      <m:mrow>
+       <m:mn>1</m:mn><m:mo>−</m:mo><m:mfrac>
+        <m:mi>λ</m:mi>
+        <m:mi>n</m:mi>
+       </m:mfrac>
+       
+      </m:mrow>
+     <m:mo>)</m:mo></m:mrow>
+    </m:mrow>
+    <m:mi>n</m:mi>
+   </m:msup>
+   <m:msup>
+    <m:mrow>
+     <m:mrow><m:mo>(</m:mo>
+      <m:mrow>
+       <m:mn>1</m:mn><m:mo>−</m:mo><m:mfrac>
+        <m:mi>λ</m:mi>
+        <m:mi>n</m:mi>
+       </m:mfrac>
+       
+      </m:mrow>
+     <m:mo>)</m:mo></m:mrow>
+    </m:mrow>
+    <m:mrow>
+     <m:mo>−</m:mo><m:mi>x</m:mi>
+    </m:mrow>
+   </m:msup>
+   <m:mo>.</m:mo>
+  </m:mrow>
+ </m:semantics>
+</m:math>
+</para>
+<para id="para_5">
+Now, for fixed <emphasis>x</emphasis>, we have  
+</para>
+<para id="para_6">
+<m:math display="block">
+ <m:semantics>
+  <m:mtable columnalign="left">
+   <m:mtr>
+    <m:mtd>
+     <m:munder>
+      <m:mrow>
+       <m:mi>lim</m:mi><m:mo>⁡</m:mo>
+      </m:mrow>
+      <m:mrow>
+       <m:mi>n</m:mi><m:mo>→</m:mo><m:mi>∞</m:mi>
+      </m:mrow>
+     </m:munder>
+     <m:mfrac>
+      <m:mrow>
+       <m:mi>n</m:mi><m:mrow><m:mo>(</m:mo>
+        <m:mrow>
+         <m:mi>n</m:mi><m:mo>−</m:mo><m:mn>1</m:mn>
+        </m:mrow>
+       <m:mo>)</m:mo></m:mrow><m:mn>...</m:mn><m:mrow><m:mo>(</m:mo>
+        <m:mrow>
+         <m:mi>n</m:mi><m:mo>−</m:mo><m:mi>x</m:mi><m:mo>+</m:mo><m:mn>1</m:mn>
+        </m:mrow>
+       <m:mo>)</m:mo></m:mrow>
+      </m:mrow>
+      <m:mrow>
+       <m:msup>
+        <m:mi>n</m:mi>
+        <m:mi>x</m:mi>
+       </m:msup>
+       
+      </m:mrow>
+     </m:mfrac>
+     <m:mo>=</m:mo><m:munder>
+      <m:mrow>
+       <m:mi>lim</m:mi><m:mo>⁡</m:mo>
+      </m:mrow>
+      <m:mrow>
+       <m:mi>n</m:mi><m:mo>→</m:mo><m:mi>∞</m:mi>
+      </m:mrow>
+     </m:munder>
+     <m:mrow><m:mo>[</m:mo> <m:mrow>
+      <m:mn>1</m:mn><m:mrow><m:mo>(</m:mo>
+       <m:mrow>
+        <m:mn>1</m:mn><m:mo>−</m:mo><m:mfrac>
+         <m:mn>1</m:mn>
+         <m:mi>n</m:mi>
+        </m:mfrac>
+        
+       </m:mrow>
+      <m:mo>)</m:mo></m:mrow><m:mn>...</m:mn><m:mrow><m:mo>(</m:mo>
+       <m:mrow>
+        <m:mn>1</m:mn><m:mo>−</m:mo><m:mfrac>
+         <m:mrow>
+          <m:mi>x</m:mi><m:mo>−</m:mo><m:mn>1</m:mn>
+         </m:mrow>
+         <m:mi>n</m:mi>
+        </m:mfrac>
+        
+       </m:mrow>
+      <m:mo>)</m:mo></m:mrow>
+     </m:mrow> <m:mo>]</m:mo></m:mrow><m:mo>=</m:mo><m:mn>1,</m:mn>
+    </m:mtd>
+   </m:mtr>
+   <m:mtr>
+    <m:mtd>
+     <m:munder>
+      <m:mrow>
+       <m:mi>lim</m:mi><m:mo>⁡</m:mo>
+      </m:mrow>
+      <m:mrow>
+       <m:mi>n</m:mi><m:mo>→</m:mo><m:mi>∞</m:mi>
+      </m:mrow>
+     </m:munder>
+     <m:msup>
+      <m:mrow><m:mo>(</m:mo>
+       <m:mrow>
+        <m:mn>1</m:mn><m:mo>−</m:mo><m:mfrac>
+         <m:mi>λ</m:mi>
+         <m:mi>n</m:mi>
+        </m:mfrac>
+        
+       </m:mrow>
+      <m:mo>)</m:mo></m:mrow>
+      <m:mi>n</m:mi>
+     </m:msup>
+     <m:mo>=</m:mo><m:msup>
+      <m:mi>e</m:mi>
+      <m:mrow>
+       <m:mo>−</m:mo><m:mi>λ</m:mi>
+      </m:mrow>
+     </m:msup>
+     <m:mo>,</m:mo>
+    </m:mtd>
+   </m:mtr>
+  </m:mtable>
+   </m:semantics>
+</m:math>
+</para>
+<para id="para_7">
+and <m:math display="block">
+ <m:semantics>
+  <m:mrow>
+   <m:munder>
+    <m:mrow>
+     <m:mi>lim</m:mi><m:mo>⁡</m:mo>
+    </m:mrow>
+    <m:mrow>
+     <m:mi>n</m:mi><m:mo>→</m:mo><m:mi>∞</m:mi>
+    </m:mrow>
+   </m:munder>
+   <m:msup>
+    <m:mrow>
+     <m:mrow><m:mo>(</m:mo>
+      <m:mrow>
+       <m:mn>1</m:mn><m:mo>−</m:mo><m:mfrac>
+        <m:mi>λ</m:mi>
+        <m:mi>n</m:mi>
+       </m:mfrac>
+       
+      </m:mrow>
+     <m:mo>)</m:mo></m:mrow>
+    </m:mrow>
+    <m:mrow>
+     <m:mo>−</m:mo><m:mi>x</m:mi>
+    </m:mrow>
+   </m:msup>
+   <m:mo>=</m:mo><m:mn>1.</m:mn>
+  </m:mrow>
+ </m:semantics>
+</m:math>
+</para>
+<para id="para_8">
+Thus, <m:math display="block">
+ <m:semantics>
+  <m:mrow>
+   <m:munder>
+    <m:mrow>
+     <m:mi>lim</m:mi><m:mo>⁡</m:mo>
+    </m:mrow>
+    <m:mrow>
+     <m:mi>n</m:mi><m:mo>→</m:mo><m:mi>∞</m:mi>
+    </m:mrow>
+   </m:munder>
+   <m:mfrac>
+    <m:mrow>
+     <m:mi>n</m:mi><m:mo>!</m:mo>
+    </m:mrow>
+    <m:mrow>
+     <m:mi>x</m:mi><m:mo>!</m:mo><m:mrow><m:mo>(</m:mo>
+      <m:mrow>
+       <m:mi>n</m:mi><m:mo>−</m:mo><m:mi>x</m:mi>
+      </m:mrow>
+     <m:mo>)</m:mo></m:mrow><m:mo>!</m:mo>
+    </m:mrow>
+   </m:mfrac>
+   <m:msup>
+    <m:mrow>
+     <m:mrow><m:mo>(</m:mo>
+      <m:mrow>
+       <m:mfrac>
+        <m:mi>λ</m:mi>
+        <m:mi>n</m:mi>
+       </m:mfrac>
+       
+      </m:mrow>
+     <m:mo>)</m:mo></m:mrow>
+    </m:mrow>
+    <m:mi>x</m:mi>
+   </m:msup>
+   <m:msup>
+    <m:mrow>
+     <m:mrow><m:mo>(</m:mo>
+      <m:mrow>
+       <m:mn>1</m:mn><m:mo>−</m:mo><m:mfrac>
+        <m:mi>λ</m:mi>
+        <m:mi>n</m:mi>
+       </m:mfrac>
+       
+      </m:mrow>
+     <m:mo>)</m:mo></m:mrow>
+    </m:mrow>
+    <m:mrow>
+     <m:mi>n</m:mi><m:mo>−</m:mo><m:mi>x</m:mi>
+    </m:mrow>
+   </m:msup>
+   <m:mo>=</m:mo><m:mfrac>
+    <m:mrow>
+     <m:msup>
+      <m:mi>λ</m:mi>
+      <m:mi>x</m:mi>
+     </m:msup>
+     <m:msup>
+      <m:mi>e</m:mi>
+      <m:mrow>
+       <m:mo>−</m:mo><m:mi>λ</m:mi>
+      </m:mrow>
+     </m:msup>
+     
+    </m:mrow>
+    <m:mrow>
+     <m:mi>x</m:mi><m:mo>!</m:mo>
+    </m:mrow>
+   </m:mfrac>
+   <m:mo>=</m:mo><m:mi>P</m:mi><m:mrow><m:mo>(</m:mo>
+    <m:mrow>
+     <m:mi>X</m:mi><m:mo>=</m:mo><m:mi>x</m:mi>
+    </m:mrow>
+   <m:mo>)</m:mo></m:mrow><m:mo>,</m:mo>
+  </m:mrow>
+ </m:semantics>
+</m:math> approximately. The distribution of probability associated with this process has a special name. 
+</para>
+<section id="sec_3">
+<definition id="def_2">
+   <term>POISSON DISTRIBUTION</term>
+   <meaning id="idp13924176">
+We say that the random variable <emphasis>X</emphasis> has <term>a  Poisson distribution</term> if its p.d.f. is of the form          <m:math display="block">
+ <m:semantics>
+  <m:mrow>
+   <m:mi>f</m:mi><m:mrow><m:mo>(</m:mo>
+    <m:mi>x</m:mi>
+   <m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mfrac>
+    <m:mrow>
+     <m:msup>
+      <m:mi>λ</m:mi>
+      <m:mi>x</m:mi>
+     </m:msup>
+     <m:msup>
+      <m:mi>e</m:mi>
+      <m:mrow>
+       <m:mo>−</m:mo><m:mi>λ</m:mi>
+      </m:mrow>
+     </m:msup>
+     
+    </m:mrow>
+    <m:mrow>
+     <m:mi>x</m:mi><m:mo>!</m:mo>
+    </m:mrow>
+   </m:mfrac>
+   <m:mo>,</m:mo><m:mi>x</m:mi><m:mo>=</m:mo><m:mn>0,1,2,...,</m:mn>
+  </m:mrow>
+ </m:semantics>
+</m:math> where <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mi>λ</m:mi><m:mo>&gt;</m:mo><m:mn>0</m:mn>
+  </m:mrow>
+ </m:semantics>
+</m:math>.
+
+   </meaning>
+</definition>
+<para id="para_9">
+It is easy to see that <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mi>f</m:mi><m:mrow><m:mo>(</m:mo>
+    <m:mi>x</m:mi>
+   <m:mo>)</m:mo></m:mrow>
+  </m:mrow>
+ </m:semantics>
+</m:math>
+ enjoys the properties pf a p.d.f. because clearly <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mi>f</m:mi><m:mrow><m:mo>(</m:mo>
+    <m:mi>x</m:mi>
+   <m:mo>)</m:mo></m:mrow><m:mo>≥</m:mo><m:mn>0</m:mn>
+  </m:mrow>
+ </m:semantics>
+</m:math>
+ and, from the Maclaurin’s series expansion of <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:msup>
+    <m:mi>e</m:mi>
+    <m:mi>λ</m:mi>
+   </m:msup>
+    </m:mrow> </m:semantics>
+</m:math>
+ , we have
+</para>
+<para id="para_10">
+<m:math display="block">
+ <m:semantics>
+  <m:mrow>
+   <m:mstyle displaystyle="true">
+    <m:munderover>
+     <m:mo>∑</m:mo>
+     <m:mrow>
+      <m:mi>x</m:mi><m:mo>=</m:mo><m:mn>0</m:mn>
+     </m:mrow>
+     <m:mi>∞</m:mi>
+    </m:munderover>
+    <m:mrow>
+     <m:mfrac>
+      <m:mrow>
+       <m:msup>
+        <m:mi>λ</m:mi>
+        <m:mi>x</m:mi>
+       </m:msup>
+       <m:msup>
+        <m:mi>e</m:mi>
+        <m:mrow>
+         <m:mo>−</m:mo><m:mi>λ</m:mi>
+        </m:mrow>
+       </m:msup>
+       
+      </m:mrow>
+      <m:mrow>
+       <m:mi>x</m:mi><m:mo>!</m:mo>
+      </m:mrow>
+     </m:mfrac>
+     
+    </m:mrow>
+   </m:mstyle><m:mo>=</m:mo><m:msup>
+    <m:mi>e</m:mi>
+    <m:mrow>
+     <m:mo>−</m:mo><m:mi>λ</m:mi>
+    </m:mrow>
+   </m:msup>
+   <m:mstyle displaystyle="true">
+    <m:munderover>
+     <m:mo>∑</m:mo>
+     <m:mrow>
+      <m:mi>x</m:mi><m:mo>=</m:mo><m:mn>0</m:mn>
+     </m:mrow>
+     <m:mi>∞</m:mi>
+    </m:munderover>
+    <m:mrow>
+     <m:mfrac>
+      <m:mrow>
+       <m:msup>
+        <m:mi>λ</m:mi>
+        <m:mi>x</m:mi>
+       </m:msup>
+       
+      </m:mrow>
+      <m:mrow>
+       <m:mi>x</m:mi><m:mo>!</m:mo>
+      </m:mrow>
+     </m:mfrac>
+     <m:mo>=</m:mo><m:msup>
+      <m:mi>e</m:mi>
+      <m:mrow>
+       <m:mo>−</m:mo><m:mi>λ</m:mi>
+      </m:mrow>
+     </m:msup>
+     <m:msup>
+      <m:mi>e</m:mi>
+      <m:mi>λ</m:mi>
+     </m:msup>
+     <m:mo>=</m:mo><m:mn>1.</m:mn>
+    </m:mrow>
+   </m:mstyle>
+  </m:mrow>
+ </m:semantics>
+</m:math>
+</para>
+<para id="para_11">
+To discover the exact role of the parameter <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mi>λ</m:mi><m:mo>&gt;</m:mo><m:mn>0</m:mn>
+  </m:mrow>
+ </m:semantics>
+</m:math>
+, let us find some of the characteristics of the Poisson distribution . 
+The mean for the Poisson distribution is given by
+</para>
+<para id="para_12">
+<m:math display="block">
+ <m:semantics>
+  <m:mrow>
+   <m:mi>E</m:mi><m:mrow><m:mo>(</m:mo>
+    <m:mi>X</m:mi>
+   <m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mstyle displaystyle="true">
+    <m:munderover>
+     <m:mo>∑</m:mo>
+     <m:mrow>
+      <m:mi>x</m:mi><m:mo>=</m:mo><m:mn>0</m:mn>
+     </m:mrow>
+     <m:mi>∞</m:mi>
+    </m:munderover>
+    <m:mrow>
+     <m:mi>x</m:mi><m:mfrac>
+      <m:mrow>
+       <m:msup>
+        <m:mi>λ</m:mi>
+        <m:mi>x</m:mi>
+       </m:msup>
+       <m:msup>
+        <m:mi>e</m:mi>
+        <m:mrow>
+         <m:mo>−</m:mo><m:mi>λ</m:mi>
+        </m:mrow>
+       </m:msup>
+       
+      </m:mrow>
+      <m:mrow>
+       <m:mi>x</m:mi><m:mo>!</m:mo>
+      </m:mrow>
+     </m:mfrac>
+     
+    </m:mrow>
+   </m:mstyle><m:mo>=</m:mo><m:msup>
+    <m:mi>e</m:mi>
+    <m:mrow>
+     <m:mo>−</m:mo><m:mi>λ</m:mi>
+    </m:mrow>
+   </m:msup>
+   <m:mstyle displaystyle="true">
+    <m:munderover>
+     <m:mo>∑</m:mo>
+     <m:mrow>
+      <m:mi>x</m:mi><m:mo>=</m:mo><m:mn>1</m:mn>
+     </m:mrow>
+     <m:mi>∞</m:mi>
+    </m:munderover>
+    <m:mrow>
+     <m:mi>x</m:mi><m:mfrac>
+      <m:mrow>
+       <m:msup>
+        <m:mi>λ</m:mi>
+        <m:mi>x</m:mi>
+       </m:msup>
+       
+      </m:mrow>
+      <m:mrow>
+       <m:mrow><m:mo>(</m:mo>
+        <m:mrow>
+         <m:mi>x</m:mi><m:mo>−</m:mo><m:mn>1</m:mn>
+        </m:mrow>
+       <m:mo>)</m:mo></m:mrow><m:mo>!</m:mo>
+      </m:mrow>
+     </m:mfrac>
+     
+    </m:mrow>
+   </m:mstyle><m:mo>,</m:mo>
+  </m:mrow>
+ </m:semantics>
+</m:math> because <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mrow><m:mo>(</m:mo>
+    <m:mn>0</m:mn>
+   <m:mo>)</m:mo></m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo>
+    <m:mn>0</m:mn>
+   <m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>0</m:mn>
+  </m:mrow>
+ </m:semantics>
+</m:math>
+ and <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mi>x</m:mi><m:mo>/</m:mo><m:mi>x</m:mi><m:mo>!</m:mo><m:mo>=</m:mo><m:mn>1</m:mn><m:mo>/</m:mo><m:mrow><m:mo>(</m:mo>
+    <m:mrow>
+     <m:mi>x</m:mi><m:mo>−</m:mo><m:mn>1</m:mn>
+    </m:mrow>
+   <m:mo>)</m:mo></m:mrow><m:mo>!</m:mo>
+  </m:mrow>
+ </m:semantics>
+</m:math>
+, when <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mi>x</m:mi><m:mo>&gt;</m:mo><m:mn>0</m:mn>
+  </m:mrow>
+ </m:semantics>
+</m:math>
+.
+</para>
+<para id="para_13">
+If we let <m:math>
+ <m:semantics>
+  <m:mrow>
+<m:mi>k</m:mi><m:mo>=</m:mo><m:mi>x</m:mi><m:mo>−</m:mo><m:mn>1</m:mn>
+  </m:mrow>
+ </m:semantics>
+</m:math>
+, then <m:math display="block">
+ <m:semantics>
+  <m:mrow>
+   <m:mi>E</m:mi><m:mrow><m:mo>(</m:mo>
+    <m:mi>X</m:mi>
+   <m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:msup>
+    <m:mi>e</m:mi>
+    <m:mrow>
+     <m:mo>−</m:mo><m:mi>λ</m:mi>
+    </m:mrow>
+   </m:msup>
+   <m:mstyle displaystyle="true">
+    <m:munderover>
+     <m:mo>∑</m:mo>
+     <m:mrow>
+      <m:mi>k</m:mi><m:mo>=</m:mo><m:mn>0</m:mn>
+     </m:mrow>
+     <m:mi>∞</m:mi>
+    </m:munderover>
+    <m:mrow>
+     <m:mfrac>
+      <m:mrow>
+       <m:msup>
+        <m:mi>λ</m:mi>
+        <m:mrow>
+         <m:mi>k</m:mi><m:mo>+</m:mo><m:mn>1</m:mn>
+        </m:mrow>
+       </m:msup>
+       
+      </m:mrow>
+      <m:mrow>
+       <m:mi>k</m:mi><m:mo>!</m:mo>
+      </m:mrow>
+     </m:mfrac>
+     <m:mo>=</m:mo>
+    </m:mrow>
+   </m:mstyle><m:mi>λ</m:mi><m:msup>
+    <m:mi>e</m:mi>
+    <m:mrow>
+     <m:mo>−</m:mo><m:mi>λ</m:mi>
+    </m:mrow>
+   </m:msup>
+   <m:mstyle displaystyle="true">
+    <m:munderover>
+     <m:mo>∑</m:mo>
+     <m:mrow>
+      <m:mi>k</m:mi><m:mo>=</m:mo><m:mn>0</m:mn>
+     </m:mrow>
+     <m:mi>∞</m:mi>
+    </m:munderover>
+    <m:mrow>
+     <m:mfrac>
+      <m:mrow>
+       <m:msup>
+        <m:mi>λ</m:mi>
+        <m:mi>k</m:mi>
+       </m:msup>
+       
+      </m:mrow>
+      <m:mrow>
+       <m:mi>k</m:mi><m:mo>!</m:mo>
+      </m:mrow>
+     </m:mfrac>
+     <m:mo>=</m:mo><m:mi>λ</m:mi><m:msup>
+      <m:mi>e</m:mi>
+      <m:mrow>
+       <m:mo>−</m:mo><m:mi>λ</m:mi>
+      </m:mrow>
+     </m:msup>
+     <m:msup>
+      <m:mi>e</m:mi>
+      <m:mi>λ</m:mi>
+     </m:msup>
+     
+    </m:mrow>
+   </m:mstyle><m:mo>=</m:mo><m:mi>λ</m:mi><m:mo>.</m:mo>
+  </m:mrow>
+ </m:semantics>
+</m:math>
+</para>
+<para id="para_14">
+That is, <term>the parameter <m:math>
+ <m:semantics>
+  <m:mi>λ</m:mi>
+ </m:semantics>
+</m:math>
+ is the mean of the Poisson distribution</term>. On the <link target-id="fig_1">Figure 1</link> is shown the p.d.f. and c.d.f. of the Poisson Distribution for <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mi>λ</m:mi><m:mo>=</m:mo><m:mn>1</m:mn><m:mo>,</m:mo><m:mi>λ</m:mi><m:mo>=</m:mo><m:mn>4</m:mn><m:mo>,</m:mo><m:mi>λ</m:mi><m:mo>=</m:mo><m:mn>10.</m:mn>
+  </m:mrow>
+ </m:semantics>
+</m:math>
+</para>
+
+<figure orient="horizontal" id="fig_1">
+<title>Poisson Distribution</title>
+	    <subfigure id="subfig1">
+	      <media id="idp9482416" alt=""><image src="../../media/Poisson_distribution_PMF_1.gif" mime-type="image/gif"/></media>
+	      <caption>The p.d.f. function.</caption>
+	    </subfigure>
+	    <subfigure id="subfig2">
+	      <media id="idp11171600" alt=""><image src="../../media/Poisson_distribution_CMF_1.gif" mime-type="image/gif"/></media>
+	      <caption>The c.d.f. function.</caption>
+	    </subfigure>
+	    <caption>
+The p.d.f. and c.d.f. of the Poisson Distribution for <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mi>λ</m:mi><m:mo>=</m:mo><m:mn>1</m:mn><m:mo>,</m:mo><m:mi>λ</m:mi><m:mo>=</m:mo><m:mn>4</m:mn><m:mo>,</m:mo><m:mi>λ</m:mi><m:mo>=</m:mo><m:mn>10.</m:mn>
+  </m:mrow>
+ </m:semantics>
+</m:math>
+	    
+</caption>
+	  </figure>
+
+
+<para id="para_55">
+
+To find the variance, we first determine the second factorial moment <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mi>E</m:mi><m:mrow><m:mo>[</m:mo> <m:mrow>
+    <m:mi>X</m:mi><m:mrow><m:mo>(</m:mo>
+     <m:mrow>
+      <m:mi>X</m:mi><m:mo>−</m:mo><m:mn>1</m:mn>
+     </m:mrow>
+    <m:mo>)</m:mo></m:mrow>
+   </m:mrow> <m:mo>]</m:mo></m:mrow>
+  </m:mrow>
+ </m:semantics>
+</m:math>. We have,
+</para>
+<para id="para_15">
+<m:math display="block">
+ <m:semantics>
+  <m:mrow>
+   <m:mi>E</m:mi><m:mrow><m:mo>[</m:mo> <m:mrow>
+    <m:mi>X</m:mi><m:mrow><m:mo>(</m:mo>
+     <m:mrow>
+      <m:mi>X</m:mi><m:mo>−</m:mo><m:mn>1</m:mn>
+     </m:mrow>
+    <m:mo>)</m:mo></m:mrow>
+   </m:mrow> <m:mo>]</m:mo></m:mrow><m:mo>=</m:mo><m:mstyle displaystyle="true">
+    <m:munderover>
+     <m:mo>∑</m:mo>
+     <m:mrow>
+      <m:mi>x</m:mi><m:mo>=</m:mo><m:mn>0</m:mn>
+     </m:mrow>
+     <m:mi>∞</m:mi>
+    </m:munderover>
+    <m:mrow>
+     <m:mi>x</m:mi><m:mrow><m:mo>(</m:mo>
+      <m:mrow>
+       <m:mi>x</m:mi><m:mo>−</m:mo><m:mn>1</m:mn>
+      </m:mrow>
+     <m:mo>)</m:mo></m:mrow><m:mfrac>
+      <m:mrow>
+       <m:msup>
+        <m:mi>λ</m:mi>
+        <m:mi>x</m:mi>
+       </m:msup>
+       <m:msup>
+        <m:mi>e</m:mi>
+        <m:mrow>
+         <m:mo>−</m:mo><m:mi>λ</m:mi>
+        </m:mrow>
+       </m:msup>
+       
+      </m:mrow>
+      <m:mrow>
+       <m:mi>x</m:mi><m:mo>!</m:mo>
+      </m:mrow>
+     </m:mfrac>
+     <m:mo>=</m:mo><m:msup>
+      <m:mi>e</m:mi>
+      <m:mrow>
+       <m:mo>−</m:mo><m:mi>λ</m:mi>
+      </m:mrow>
+     </m:msup>
+     <m:mstyle displaystyle="true">
+      <m:munderover>
+       <m:mo>∑</m:mo>
+       <m:mrow>
+        <m:mi>x</m:mi><m:mo>=</m:mo><m:mn>2</m:mn>
+       </m:mrow>
+       <m:mi>∞</m:mi>
+      </m:munderover>
+      <m:mrow>
+       <m:mfrac>
+        <m:mrow>
+         <m:msup>
+          <m:mi>λ</m:mi>
+          <m:mi>x</m:mi>
+         </m:msup>
+         
+        </m:mrow>
+        <m:mrow>
+         <m:mrow><m:mo>(</m:mo>
+          <m:mrow>
+           <m:mi>x</m:mi><m:mo>−</m:mo><m:mn>2</m:mn>
+          </m:mrow>
+         <m:mo>)</m:mo></m:mrow><m:mo>!</m:mo>
+        </m:mrow>
+       </m:mfrac>
+       
+      </m:mrow>
+     </m:mstyle>
+    </m:mrow>
+   </m:mstyle><m:mo>,</m:mo>
+  </m:mrow>
+ </m:semantics>
+</m:math> because <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mrow><m:mo>(</m:mo>
+    <m:mn>0</m:mn>
+   <m:mo>)</m:mo></m:mrow><m:mrow><m:mo>(</m:mo>
+    <m:mrow>
+     <m:mn>0</m:mn><m:mo>−</m:mo><m:mn>1</m:mn>
+    </m:mrow>
+   <m:mo>)</m:mo></m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo>
+    <m:mn>0</m:mn>
+   <m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>0,</m:mn><m:mrow><m:mo>(</m:mo>
+    <m:mn>1</m:mn>
+   <m:mo>)</m:mo></m:mrow><m:mrow><m:mo>(</m:mo>
+    <m:mrow>
+     <m:mn>1</m:mn><m:mo>−</m:mo><m:mn>1</m:mn>
+    </m:mrow>
+   <m:mo>)</m:mo></m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo>
+    <m:mn>1</m:mn>
+   <m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>0</m:mn>
+  </m:mrow>
+ </m:semantics>
+</m:math>
+, and <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mi>x</m:mi><m:mrow><m:mo>(</m:mo>
+    <m:mrow>
+     <m:mi>x</m:mi><m:mo>−</m:mo><m:mn>1</m:mn>
+    </m:mrow>
+   <m:mo>)</m:mo></m:mrow><m:mo>/</m:mo><m:mi>x</m:mi><m:mo>!</m:mo><m:mo>=</m:mo><m:mn>1</m:mn><m:mo>/</m:mo><m:mrow><m:mo>(</m:mo>
+    <m:mrow>
+     <m:mi>x</m:mi><m:mo>−</m:mo><m:mn>2</m:mn>
+    </m:mrow>
+   <m:mo>)</m:mo></m:mrow><m:mo>!</m:mo>
+  </m:mrow>
+ </m:semantics>
+</m:math>
+, when <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mi>x</m:mi><m:mo>&gt;</m:mo><m:mn>1</m:mn>
+  </m:mrow>
+ </m:semantics>
+</m:math>
+. 
+</para>
+<para id="para_16">
+If we let <m:math>
+ <m:semantics>
+  <m:mrow>
+<m:mi>k</m:mi><m:mo>=</m:mo><m:mi>x</m:mi><m:mo>−</m:mo><m:mn>2</m:mn>
+  </m:mrow>
+ </m:semantics>
+</m:math>
+, then <m:math display="block">
+ <m:semantics>
+  <m:mrow>
+   <m:mi>E</m:mi><m:mrow><m:mo>[</m:mo> <m:mrow>
+    <m:mi>X</m:mi><m:mrow><m:mo>(</m:mo>
+     <m:mrow>
+      <m:mi>X</m:mi><m:mo>−</m:mo><m:mn>1</m:mn>
+     </m:mrow>
+    <m:mo>)</m:mo></m:mrow>
+   </m:mrow> <m:mo>]</m:mo></m:mrow><m:mo>=</m:mo><m:msup>
+    <m:mi>e</m:mi>
+    <m:mrow>
+     <m:mo>−</m:mo><m:mi>λ</m:mi>
+    </m:mrow>
+   </m:msup>
+   <m:mstyle displaystyle="true">
+    <m:munderover>
+     <m:mo>∑</m:mo>
+     <m:mrow>
+      <m:mi>k</m:mi><m:mo>=</m:mo><m:mn>0</m:mn>
+     </m:mrow>
+     <m:mi>∞</m:mi>
+    </m:munderover>
+    <m:mrow>
+     <m:mfrac>
+      <m:mrow>
+       <m:msup>
+        <m:mi>λ</m:mi>
+        <m:mrow>
+         <m:mi>k</m:mi><m:mo>+</m:mo><m:mn>2</m:mn>
+        </m:mrow>
+       </m:msup>
+       
+      </m:mrow>
+      <m:mrow>
+       <m:mi>k</m:mi><m:mo>!</m:mo>
+      </m:mrow>
+     </m:mfrac>
+     <m:mo>=</m:mo><m:msup>
+      <m:mi>λ</m:mi>
+      <m:mn>2</m:mn>
+     </m:msup>
+     <m:msup>
+      <m:mi>e</m:mi>
+      <m:mrow>
+       <m:mo>−</m:mo><m:mi>λ</m:mi>
+      </m:mrow>
+     </m:msup>
+     <m:mstyle displaystyle="true">
+      <m:munderover>
+       <m:mo>∑</m:mo>
+       <m:mrow>
+        <m:mi>k</m:mi><m:mo>=</m:mo><m:mn>0</m:mn>
+       </m:mrow>
+       <m:mi>∞</m:mi>
+      </m:munderover>
+      <m:mrow>
+       <m:mfrac>
+        <m:mrow>
+         <m:msup>
+          <m:mi>λ</m:mi>
+          <m:mi>x</m:mi>
+         </m:msup>
+         
+        </m:mrow>
+        <m:mrow>
+         <m:mi>k</m:mi><m:mo>!</m:mo>
+        </m:mrow>
+       </m:mfrac>
+       <m:mo>=</m:mo><m:msup>
+        <m:mi>λ</m:mi>
+        <m:mn>2</m:mn>
+       </m:msup>
+       
+      </m:mrow>
+     </m:mstyle>
+    </m:mrow>
+   </m:mstyle><m:msup>
+    <m:mi>e</m:mi>
+    <m:mrow>
+     <m:mo>−</m:mo><m:mi>λ</m:mi>
+    </m:mrow>
+   </m:msup>
+   <m:msup>
+    <m:mi>e</m:mi>
+    <m:mi>λ</m:mi>
+   </m:msup>
+   <m:mo>=</m:mo><m:msup>
+    <m:mi>λ</m:mi>
+    <m:mn>2</m:mn>
+   </m:msup>
+   <m:mo>.</m:mo>
+  </m:mrow>
+ </m:semantics>
+</m:math>
+</para>
+<para id="para_17">
+Thus, <m:math display="block">
+ <m:semantics>
+  <m:mrow>
+   <m:mi>V</m:mi><m:mi>a</m:mi><m:mi>r</m:mi><m:mrow><m:mo>(</m:mo>
+    <m:mi>X</m:mi>
+   <m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mi>E</m:mi><m:mrow><m:mo>(</m:mo>
+    <m:mrow>
+     <m:msup>
+      <m:mi>X</m:mi>
+      <m:mn>2</m:mn>
+     </m:msup>
+     
+    </m:mrow>
+   <m:mo>)</m:mo></m:mrow><m:mo>−</m:mo><m:msup>
+    <m:mrow>
+     <m:mrow><m:mo>[</m:mo> <m:mrow>
+      <m:mi>E</m:mi><m:mrow><m:mo>(</m:mo>
+       <m:mi>X</m:mi>
+      <m:mo>)</m:mo></m:mrow>
+     </m:mrow> <m:mo>]</m:mo></m:mrow>
+    </m:mrow>
+    <m:mn>2</m:mn>
+   </m:msup>
+   <m:mo>=</m:mo><m:mi>E</m:mi><m:mrow><m:mo>[</m:mo> <m:mrow>
+    <m:mi>X</m:mi><m:mrow><m:mo>(</m:mo>
+     <m:mrow>
+      <m:mi>X</m:mi><m:mo>−</m:mo><m:mn>1</m:mn>
+     </m:mrow>
+    <m:mo>)</m:mo></m:mrow>
+   </m:mrow> <m:mo>]</m:mo></m:mrow><m:mo>+</m:mo><m:mi>E</m:mi><m:mrow><m:mo>(</m:mo>
+    <m:mi>X</m:mi>
+   <m:mo>)</m:mo></m:mrow><m:mo>−</m:mo><m:msup>
+    <m:mrow>
+     <m:mrow><m:mo>[</m:mo> <m:mrow>
+      <m:mi>E</m:mi><m:mrow><m:mo>(</m:mo>
+       <m:mi>X</m:mi>
+      <m:mo>)</m:mo></m:mrow>
+     </m:mrow> <m:mo>]</m:mo></m:mrow>
+    </m:mrow>
+    <m:mn>2</m:mn>
+   </m:msup>
+   <m:mo>=</m:mo><m:msup>
+    <m:mi>λ</m:mi>
+    <m:mn>2</m:mn>
+   </m:msup>
+   <m:mo>+</m:mo><m:mi>λ</m:mi><m:mo>−</m:mo><m:msup>
+    <m:mi>λ</m:mi>
+    <m:mn>2</m:mn>
+   </m:msup>
+   <m:mo>=</m:mo><m:mi>λ</m:mi><m:mo>.</m:mo>
+  </m:mrow>
+ </m:semantics>
+</m:math>
+</para>
+<para id="para_18">
+That is, for the Poisson distribution, <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mi>μ</m:mi><m:mo>=</m:mo><m:msup>
+    <m:mi>σ</m:mi>
+    <m:mn>2</m:mn>
+   </m:msup>
+   <m:mo>=</m:mo><m:mi>λ</m:mi>
+  </m:mrow>
+ </m:semantics>
+</m:math>
+.
+</para>
+</section>
+<section id="sec_4">
+<example id="ex_1">
+<para id="para_19">
+Let <emphasis>X</emphasis> have a Poisson distribution with a mean of <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mi>λ</m:mi><m:mo>=</m:mo><m:mn>5</m:mn>
+  </m:mrow>
+ </m:semantics>
+</m:math>
+, (it is possible to use the tabularized Poisson distribution).
+</para>
+<para id="para_20">
+<m:math display="block">
+ <m:semantics>
+  <m:mtable columnalign="left">
+   <m:mtr>
+    <m:mtd>
+     <m:mi>P</m:mi><m:mrow><m:mo>(</m:mo>
+      <m:mrow>
+       <m:mi>X</m:mi><m:mo>≤</m:mo><m:mn>6</m:mn>
+      </m:mrow>
+     <m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mstyle displaystyle="true">
+      <m:munderover>
+       <m:mo>∑</m:mo>
+       <m:mrow>
+        <m:mi>x</m:mi><m:mo>=</m:mo><m:mn>0</m:mn>
+       </m:mrow>
+       <m:mn>6</m:mn>
+      </m:munderover>
+      <m:mrow>
+       <m:mfrac>
+        <m:mrow>
+         <m:msup>
+          <m:mn>5</m:mn>
+          <m:mi>x</m:mi>
+         </m:msup>
+         <m:msup>
+          <m:mi>e</m:mi>
+          <m:mrow>
+           <m:mo>−</m:mo><m:mn>5</m:mn>
+          </m:mrow>
+         </m:msup>
+         
+        </m:mrow>
+        <m:mrow>
+         <m:mi>x</m:mi><m:mo>!</m:mo>
+        </m:mrow>
+       </m:mfrac>
+       <m:mo>=</m:mo><m:mn>0.762</m:mn>
+      </m:mrow>
+     </m:mstyle><m:mo>,</m:mo>
+    </m:mtd>
+   </m:mtr>
+   <m:mtr>
+    <m:mtd>
+     <m:mi>P</m:mi><m:mrow><m:mo>(</m:mo>
+      <m:mrow>
+       <m:mi>X</m:mi><m:mo>&gt;</m:mo><m:mn>5</m:mn>
+      </m:mrow>
+     <m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>1</m:mn><m:mo>−</m:mo><m:mi>P</m:mi><m:mrow><m:mo>(</m:mo>
+      <m:mrow>
+       <m:mi>X</m:mi><m:mo>≤</m:mo><m:mn>5</m:mn>
+      </m:mrow>
+     <m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>1</m:mn><m:mo>−</m:mo><m:mn>0.616</m:mn><m:mo>=</m:mo><m:mn>0.384,</m:mn>
+    </m:mtd>
+   </m:mtr>
+  </m:mtable>
+   </m:semantics>
+</m:math>
+</para>
+<para id="para_21">
+and <m:math display="block">
+ <m:semantics>
+  <m:mrow>
+   <m:mi>P</m:mi><m:mrow><m:mo>(</m:mo>
+    <m:mrow>
+     <m:mi>X</m:mi><m:mo>=</m:mo><m:mn>6</m:mn>
+    </m:mrow>
+   <m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mi>P</m:mi><m:mrow><m:mo>(</m:mo>
+    <m:mrow>
+     <m:mi>X</m:mi><m:mo>≤</m:mo><m:mn>6</m:mn>
+    </m:mrow>
+   <m:mo>)</m:mo></m:mrow><m:mo>−</m:mo><m:mi>P</m:mi><m:mrow><m:mo>(</m:mo>
+    <m:mrow>
+     <m:mi>X</m:mi><m:mo>≤</m:mo><m:mn>5</m:mn>
+    </m:mrow>
+   <m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>0.762</m:mn><m:mo>−</m:mo><m:mn>0.616</m:mn><m:mo>=</m:mo><m:mn>0.146.</m:mn>
+  </m:mrow>
+ </m:semantics>
+</m:math>
+</para>
+</example>
+<example id="ex_2">
+<para id="para_22">
+Telephone calls enter a college switchboard on the average of two every 3 minutes. If one assumes an approximate Poisson process, what is the probability of five or more calls arriving in a 9-minute period? Let <emphasis>X</emphasis> denotes the number of calls in a 9-minute period. We see that <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mi>E</m:mi><m:mrow><m:mo>(</m:mo>
+    <m:mi>X</m:mi>
+   <m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>6</m:mn>
+  </m:mrow>
+ </m:semantics>
+</m:math>
+; that is, on the average, sic calls will arrive during a 9-minute period. Thus using tabularized data,
+</para>
+<para id="para_23">
+<m:math display="block">
+ <m:semantics>
+  <m:mrow>
+   <m:mi>P</m:mi><m:mrow><m:mo>(</m:mo>
+    <m:mrow>
+     <m:mi>X</m:mi><m:mo>≥</m:mo><m:mn>5</m:mn>
+    </m:mrow>
+   <m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>1</m:mn><m:mo>−</m:mo><m:mi>P</m:mi><m:mrow><m:mo>(</m:mo>
+    <m:mrow>
+     <m:mi>X</m:mi><m:mo>≤</m:mo><m:mn>4</m:mn>
+    </m:mrow>
+   <m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>1</m:mn><m:mo>−</m:mo><m:mstyle displaystyle="true">
+    <m:munderover>
+     <m:mo>∑</m:mo>
+     <m:mrow>
+      <m:mi>x</m:mi><m:mo>=</m:mo><m:mn>0</m:mn>
+     </m:mrow>
+     <m:mn>4</m:mn>
+    </m:munderover>
+    <m:mrow>
+     <m:mfrac>
+      <m:mrow>
+       <m:msup>
+        <m:mn>6</m:mn>
+        <m:mi>x</m:mi>
+       </m:msup>
+       <m:msup>
+        <m:mi>e</m:mi>
+        <m:mrow>
+         <m:mo>−</m:mo><m:mn>6</m:mn>
+        </m:mrow>
+       </m:msup>
+       
+      </m:mrow>
+      <m:mrow>
+       <m:mi>x</m:mi><m:mo>!</m:mo>
+      </m:mrow>
+     </m:mfrac>
+     
+    </m:mrow>
+   </m:mstyle><m:mo>=</m:mo><m:mn>1</m:mn><m:mo>−</m:mo><m:mn>0.285</m:mn><m:mo>=</m:mo><m:mn>0.715.</m:mn>
+  </m:mrow>
+ </m:semantics>
+</m:math>
+</para>
+</example>
+</section>
+<section id="sec_5">
+<note type="Note That" id="idp13814512"><label>Note That</label>
+Not only is the Poisson distribution important in its own right, but it can also be used to approximate probabilities for a binomial distribution.
+</note>
+<para id="para_24">
+If <emphasis>X</emphasis> has a Poisson distribution with parameter <m:math>
+ <m:semantics>
+  <m:mi>λ</m:mi>
+ </m:semantics>
+</m:math>
+, we saw that with <emphasis>n</emphasis> large,
+</para>
+<para id="para_25">
+<m:math display="block">
+ <m:semantics>
+  <m:mrow>
+   <m:mi>P</m:mi><m:mrow><m:mo>(</m:mo>
+    <m:mrow>
+     <m:mi>X</m:mi><m:mo>=</m:mo><m:mi>x</m:mi>
+    </m:mrow>
+   <m:mo>)</m:mo></m:mrow><m:mo>≈</m:mo><m:mrow><m:mo>(</m:mo>
+    <m:mtable columnalign="left">
+     <m:mtr>
+      <m:mtd>
+       <m:mi>n</m:mi>
+      </m:mtd>
+     </m:mtr>
+     <m:mtr>
+      <m:mtd>
+       <m:mi>x</m:mi>
+      </m:mtd>
+     </m:mtr>
+    </m:mtable>
+    
+   <m:mo>)</m:mo></m:mrow><m:msup>
+    <m:mrow>
+     <m:mrow><m:mo>(</m:mo>
+      <m:mrow>
+       <m:mfrac>
+        <m:mi>λ</m:mi>
+        <m:mi>n</m:mi>
+       </m:mfrac>
+       
+      </m:mrow>
+     <m:mo>)</m:mo></m:mrow>
+    </m:mrow>
+    <m:mi>x</m:mi>
+   </m:msup>
+   <m:msup>
+    <m:mrow>
+     <m:mrow><m:mo>(</m:mo>
+      <m:mrow>
+       <m:mn>1</m:mn><m:mo>−</m:mo><m:mfrac>
+        <m:mi>λ</m:mi>
+        <m:mi>n</m:mi>
+       </m:mfrac>
+       
+      </m:mrow>
+     <m:mo>)</m:mo></m:mrow>
+    </m:mrow>
+    <m:mrow>
+     <m:mi>n</m:mi><m:mo>−</m:mo><m:mi>x</m:mi>
+    </m:mrow>
+   </m:msup>
+   <m:mo>,</m:mo>
+  </m:mrow>
+ </m:semantics>
+</m:math>
+ where, <m:math>
+ <m:semantics>
+  <m:mrow>
+<m:mi>p</m:mi><m:mo>=</m:mo><m:mi>λ</m:mi><m:mo>/</m:mo><m:mi>n</m:mi>
+  </m:mrow>
+ </m:semantics>
+</m:math>
+ so that <m:math>
+ <m:semantics>
+  <m:mrow>
+<m:mi>λ</m:mi><m:mo>=</m:mo><m:mi>n</m:mi><m:mi>p</m:mi>
+  </m:mrow>
+ </m:semantics>
+</m:math>
+ in the above binomial probability. That is, if <emphasis>X</emphasis> has the binomial distribution <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mi>b</m:mi><m:mrow><m:mo>(</m:mo>
+    <m:mrow>
+     <m:mi>n</m:mi><m:mo>,</m:mo><m:mi>p</m:mi>
+    </m:mrow>
+   <m:mo>)</m:mo></m:mrow>
+  </m:mrow>
+ </m:semantics>
+</m:math>
+ with large <emphasis>n</emphasis>, then 
+</para>
+<para id="para_26">
+<m:math display="block">
+ <m:semantics>
+  <m:mrow>
+   <m:mfrac>
+    <m:mrow>
+     <m:msup>
+      <m:mrow>
+       <m:mrow><m:mo>(</m:mo>
+        <m:mrow>
+         <m:mi>n</m:mi><m:mi>p</m:mi>
+        </m:mrow>
+       <m:mo>)</m:mo></m:mrow>
+      </m:mrow>
+      <m:mi>x</m:mi>
+     </m:msup>
+     <m:msup>
+      <m:mi>e</m:mi>
+      <m:mrow>
+       <m:mo>−</m:mo><m:mi>n</m:mi><m:mi>p</m:mi>
+      </m:mrow>
+     </m:msup>
+     
+    </m:mrow>
+    <m:mrow>
+     <m:mi>x</m:mi><m:mo>!</m:mo>
+    </m:mrow>
+   </m:mfrac>
+   <m:mo>=</m:mo><m:mrow><m:mo>(</m:mo>
+    <m:mtable columnalign="left">
+     <m:mtr>
+      <m:mtd>
+       <m:mi>n</m:mi>
+      </m:mtd>
+     </m:mtr>
+     <m:mtr>
+      <m:mtd>
+       <m:mi>x</m:mi>
+      </m:mtd>
+     </m:mtr>
+    </m:mtable>
+    
+   <m:mo>)</m:mo></m:mrow><m:msup>
+    <m:mi>p</m:mi>
+    <m:mi>x</m:mi>
+   </m:msup>
+   <m:msup>
+    <m:mrow>
+     <m:mrow><m:mo>(</m:mo>
+      <m:mrow>
+       <m:mn>1</m:mn><m:mo>−</m:mo><m:mi>p</m:mi>
+      </m:mrow>
+     <m:mo>)</m:mo></m:mrow>
+    </m:mrow>
+    <m:mrow>
+     <m:mi>n</m:mi><m:mo>−</m:mo><m:mi>x</m:mi>
+    </m:mrow>
+   </m:msup>
+   <m:mo>.</m:mo>
+  </m:mrow>
+ </m:semantics>
+</m:math>
+</para>
+<para id="para_27">
+This approximation is reasonably good if <emphasis>n</emphasis> is large. But since <m:math>
+ <m:semantics>
+  <m:mi>λ</m:mi>
+ </m:semantics>
+</m:math>
+ was fixed constant in that earlier argument, <emphasis>p</emphasis> should be small since <m:math>
+ <m:semantics>
+  <m:mrow>
+<m:mi>n</m:mi><m:mi>p</m:mi><m:mo>=</m:mo><m:mi>λ</m:mi>
+  </m:mrow>
+ </m:semantics>
+</m:math>
+. In particular, the approximation is quite accurate if <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mi>n</m:mi><m:mo>≥</m:mo><m:mn>20</m:mn>
+  </m:mrow>
+ </m:semantics>
+</m:math>
+ and <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mi>p</m:mi><m:mo>≤</m:mo><m:mn>0.05</m:mn>
+  </m:mrow>
+ </m:semantics>
+</m:math>
+, and it is very good if <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mi>n</m:mi><m:mo>≥</m:mo><m:mn>100</m:mn>
+  </m:mrow>
+ </m:semantics>
+</m:math>
+ and <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mi>n</m:mi><m:mi>p</m:mi><m:mo>≤</m:mo><m:mn>10</m:mn>
+  </m:mrow>
+ </m:semantics>
+</m:math>
+.
+</para>
+</section>
+<section id="sec_6">
+<example id="ex_3">
+<para id="para_28">
+
+</para>
+<para id="para_29">
+A manufacturer of Christmas tree bulbs knows that 2% of its bulbs are defective. Approximate the probability that a box of 100 of these bulbs contains at most three defective bulbs. Assuming independence, we have binomial distribution with parameters <emphasis>p</emphasis>=0.02 and <emphasis>n</emphasis>=100. The Poisson distribution with <m:math>
+<m:semantics>
+<m:mrow>
+<m:mi>λ</m:mi><m:mo>=</m:mo><m:mn>100</m:mn><m:mrow><m:mo>(</m:mo>
+<m:mrow>
+<m:mn>0.02</m:mn>
+</m:mrow>
+<m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>2</m:mn>
+</m:mrow>
+</m:semantics>
+</m:math>
+ gives
+</para>
+<para id="para_30">
+<m:math display="block">
+<m:semantics>
+<m:mrow>
+<m:mstyle displaystyle="true">
+<m:munderover>
+<m:mo>∑</m:mo>
+<m:mrow>
+<m:mi>x</m:mi><m:mo>=</m:mo><m:mn>0</m:mn>
+</m:mrow>
+<m:mn>3</m:mn>
+</m:munderover>
+<m:mrow>
+<m:mfrac>
+<m:mrow>
+<m:msup>
+<m:mn>2</m:mn>
+<m:mi>x</m:mi>
+</m:msup>
+<m:msup>
+<m:mi>e</m:mi>
+<m:mrow>
+<m:mo>−</m:mo><m:mn>2</m:mn>
+</m:mrow>
+</m:msup>
+</m:mrow>
+<m:mrow>
+<m:mi>x</m:mi><m:mo>!</m:mo>
+</m:mrow>
+</m:mfrac>
+</m:mrow>
+</m:mstyle><m:mo>=</m:mo><m:mn>0.857,</m:mn>
+</m:mrow>
+</m:semantics>
+</m:math>
+</para>
+<para id="para_33">
+using the binomial distribution, we obtain, after some tedious calculations,
+</para>
+<para id="para_34">
+<m:math display="block">
+<m:semantics>
+<m:mrow>
+<m:mstyle displaystyle="true">
+<m:munderover>
+<m:mo>∑</m:mo>
+<m:mrow>
+<m:mi>x</m:mi><m:mo>=</m:mo><m:mn>0</m:mn>
+</m:mrow>
+<m:mn>3</m:mn>
+</m:munderover>
+<m:mrow>
+<m:mrow><m:mo>(</m:mo>
+<m:mtable columnalign="left">
+<m:mtr>
+<m:mtd>
+<m:mn>100</m:mn>
+</m:mtd>
+</m:mtr>
+<m:mtr>
+<m:mtd>
+<m:mi>x</m:mi>
+</m:mtd>
+</m:mtr>
+</m:mtable>
+
+<m:mo>)</m:mo></m:mrow><m:msup>
+<m:mrow>
+<m:mrow><m:mo>(</m:mo>
+<m:mrow>
+<m:mn>0.02</m:mn>
+</m:mrow>
+<m:mo>)</m:mo></m:mrow>
+</m:mrow>
+<m:mi>x</m:mi>
+</m:msup>
+<m:msup>
+<m:mrow>
+<m:mrow><m:mo>(</m:mo>
+<m:mrow>
+<m:mn>0.98</m:mn>
+</m:mrow>
+<m:mo>)</m:mo></m:mrow>
+</m:mrow>
+<m:mrow>
+<m:mn>100</m:mn><m:mo>−</m:mo><m:mi>x</m:mi>
+</m:mrow>
+</m:msup>
+<m:mo>=</m:mo><m:mn>0.859</m:mn>
+</m:mrow>
+</m:mstyle><m:mo>.</m:mo>
+</m:mrow>
+</m:semantics>
+</m:math>
+</para>
+<para id="para_35">
+  Hence, in this case, the Poisson approximation is extremely close to the true value, but much easier to find.
+</para>
+</example>
+</section>
+
+</section>
+</section>
+
+  
+  </content>
+  
+</document>

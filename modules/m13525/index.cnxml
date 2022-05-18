@@ -1,0 +1,1807 @@
+<document xmlns="http://cnx.rice.edu/cnxml" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:md="http://cnx.rice.edu/mdml">
+  <title>TEST ABOUT PROPORTIONS</title>
+  <metadata><md:content-id>undefined</md:content-id><md:title/><md:uuid>e19176bb-64d4-46c1-8a89-0e672f00cba3</md:uuid>
+</metadata>
+  <content>
+
+
+         <section id="sec_1">
+          <title>TEST ABOUT PROPORTIONS</title> 
+
+                 <para id="para_1">
+Tests of statistical hypotheses are a very important topic, let introduce it through an illustration.                 
+                 </para>
+         <section id="sec_2">
+                 <para id="para_2">
+Suppose a manufacturer of a certain printed circuit observes that about <emphasis>p</emphasis>=0.05 of the circuits fails. An engineer and statistician working together suggest some changes that might improve the design of the product. To test this new procedure, it was agreed that <emphasis>n</emphasis>=100 circuits would be produced using the proposed method and the checked. Let <emphasis>Y</emphasis> equal the number of these 200 circuits that fail. Clearly, if the number of failures, <emphasis>Y</emphasis>, is such that <emphasis>Y</emphasis>/200 is about to 0.05, then it seems that the new procedure has not resulted in an improvement. On the other hand, If <emphasis>Y</emphasis> is small so that <emphasis>Y</emphasis>/200 is about 0.01 or 0.02, we might believe that the new method is better than the old one. On the other hand, if <emphasis>Y</emphasis>/200 is 0.08 or 0.09, the proposed method has perhaps caused a greater proportion of failures.
+What is needed is to establish a formal rule that tells when to accept the new procedure as an improvement. For example, we could accept the new procedure as an improvement if <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mi>Y</m:mi><m:mo>≤</m:mo><m:mn>5</m:mn>
+  </m:mrow>
+ </m:semantics>
+</m:math> of <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mi>Y</m:mi><m:mo>/</m:mo><m:mi>n</m:mi><m:mo>≤</m:mo><m:mn>0.025</m:mn>
+  </m:mrow>
+ </m:semantics>
+</m:math>. We do note, however, that the probability of the failure could still be about <emphasis>p</emphasis>=0.05 even with the new procedure, and yet we could observe 5 of fewer failures in <emphasis>n</emphasis>=200 trials. 
+
+                 </para>
+                 <para id="para_3">
+That is, we would accept the new method as being an improvement when, in fact, it was not. This decision is a mistake which we call a <term>Type I error</term>. On the other hand, the new procedure might actually improve the product so that <emphasis>p</emphasis> is much smaller, say <emphasis>p</emphasis>=0.02, and yet we could observe <emphasis>y</emphasis>=7 failures so that <emphasis>y</emphasis>/200=0.035. Thus we would not accept the new method as resulting in an improvement when in fact it had. This decision would also be a mistake which we call a <term>Type II error</term>. 
+                 </para>
+                 <para id="para_4">
+If it we believe these trials, using the new procedure, are independent and have about the same probability of failure on each trial, then <emphasis>Y</emphasis> is binomial <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mi>b</m:mi><m:mrow><m:mo>(</m:mo>
+    <m:mrow>
+     <m:mn>200</m:mn><m:mo>,</m:mo><m:mi>p</m:mi>
+    </m:mrow>
+   <m:mo>)</m:mo></m:mrow>
+  </m:mrow>
+ </m:semantics>
+</m:math>. We wish to make a statistical inference about <emphasis>p</emphasis> using the unbiased <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mover accent="true">
+    <m:mi>p</m:mi>
+    <m:mo>^</m:mo>
+   </m:mover>
+   <m:mo>=</m:mo><m:mi>Y</m:mi><m:mo>/</m:mo><m:mn>200</m:mn>
+  </m:mrow>
+ </m:semantics>
+</m:math>. We could also construct a confidence interval, say one that has 95% confidence, obtaining <m:math display="block">
+ <m:semantics>
+  <m:mrow>
+   <m:mover accent="true">
+    <m:mi>p</m:mi>
+    <m:mo>^</m:mo>
+   </m:mover>
+   <m:mo>±</m:mo><m:mn>1.96</m:mn><m:msqrt>
+    <m:mrow>
+     <m:mfrac>
+      <m:mrow>
+       <m:mover accent="true">
+        <m:mi>p</m:mi>
+        <m:mo>^</m:mo>
+       </m:mover>
+       <m:mrow><m:mo>(</m:mo>
+        <m:mrow>
+         <m:mn>1</m:mn><m:mo>−</m:mo><m:mover accent="true">
+          <m:mi>p</m:mi>
+          <m:mo>^</m:mo>
+         </m:mover>
+         
+        </m:mrow>
+       <m:mo>)</m:mo></m:mrow>
+      </m:mrow>
+      <m:mrow>
+       <m:mn>200</m:mn>
+      </m:mrow>
+     </m:mfrac>
+     <m:mo>.</m:mo>
+    </m:mrow>
+   </m:msqrt>
+     </m:mrow>
+ </m:semantics>
+</m:math>
+
+                               </para>
+                 <para id="para_5">
+This inference is very appropriate and many statisticians simply do this. If the limits of this confidence interval contain 0.05, they would not say the new procedure is necessarily better, al least until more data are taken. If, on the other hand, the upper limit of this confidence interval is less than 0.05, then they fell 95% confident that the true <emphasis>p</emphasis> is now less than 0.05. 
+Here, in this illustration, we are testing whether or not the probability of failure has or has not decreased from 0.05 when the new manufacturing procedure is used.    
+                 </para>
+                 <para id="para_6">
+The <emphasis>no change</emphasis> hypothesis, <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:msub>
+    <m:mi>H</m:mi>
+    <m:mn>0</m:mn>
+   </m:msub>
+   <m:mo>:</m:mo><m:mi>p</m:mi><m:mo>=</m:mo><m:mn>0.05</m:mn>
+  </m:mrow>
+</m:semantics>
+</m:math>, is called <term>the null hypothesis</term>. Since <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:msub>
+    <m:mi>H</m:mi>
+    <m:mn>0</m:mn>
+   </m:msub>
+   <m:mo>:</m:mo><m:mi>p</m:mi><m:mo>=</m:mo><m:mn>0.05</m:mn>
+  </m:mrow>
+</m:semantics>
+</m:math> completely specifies the distribution it is called <term>a simple hypothesis</term>; thus <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:msub>
+    <m:mi>H</m:mi>
+    <m:mn>0</m:mn>
+   </m:msub>
+   <m:mo>:</m:mo><m:mi>p</m:mi><m:mo>=</m:mo><m:mn>0.05</m:mn>
+  </m:mrow>
+</m:semantics>
+</m:math> is <term>a simple null hypothesis</term>.
+
+                </para>
+                 <para id="para_7">
+The research worker’s hypothesis <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:msub>
+    <m:mi>H</m:mi>
+    <m:mn>1</m:mn>
+   </m:msub>
+   <m:mo>:</m:mo><m:mi>p</m:mi><m:mo>&lt;</m:mo><m:mn>0.05</m:mn>
+  </m:mrow>
+</m:semantics>
+</m:math> is called <term>the alternative hypothesis</term>. Since <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:msub>
+    <m:mi>H</m:mi>
+    <m:mn>1</m:mn>
+   </m:msub>
+   <m:mo>:</m:mo><m:mi>p</m:mi><m:mo>&lt;</m:mo><m:mn>0.05</m:mn>
+  </m:mrow>
+</m:semantics>
+</m:math> does not completely specify the distribution, it is a composite hypothesis because it is composed of many simple hypotheses. 
+
+
+                 </para>
+                 <para id="para_8">
+ The rule of rejecting <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:msub>
+    <m:mi>H</m:mi>
+    <m:mn>0</m:mn>
+   </m:msub>
+     </m:mrow>
+</m:semantics>
+</m:math> and accepting <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:msub>
+    <m:mi>H</m:mi>
+    <m:mn>1</m:mn>
+   </m:msub>
+     </m:mrow>
+</m:semantics>
+</m:math> if <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mi>Y</m:mi><m:mo>≤</m:mo><m:mn>5</m:mn>
+  </m:mrow>
+</m:semantics>
+</m:math>, and otherwise accepting <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:msub>
+    <m:mi>H</m:mi>
+    <m:mn>0</m:mn>
+   </m:msub>
+     </m:mrow>
+</m:semantics>
+</m:math> is called <term>a test of a statistical hypothesis</term>.
+                </para>
+ <list id="list_1">
+	    <title>It is clearly seen that two types of errors can be recorded</title>
+	    <item><term>Type I error:</term> Rejecting <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:msub>
+    <m:mi>H</m:mi>
+    <m:mn>0</m:mn>
+   </m:msub>
+     </m:mrow>
+</m:semantics>
+</m:math> and accepting <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:msub>
+    <m:mi>H</m:mi>
+    <m:mn>1</m:mn>
+   </m:msub>
+     </m:mrow>
+</m:semantics>
+</m:math>, when <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:msub>
+    <m:mi>H</m:mi>
+    <m:mn>0</m:mn>
+   </m:msub>
+     </m:mrow>
+</m:semantics>
+</m:math> is true;
+
+   </item> 
+	    <item><term>Type II error:</term> Accepting <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:msub>
+    <m:mi>H</m:mi>
+    <m:mn>0</m:mn>
+   </m:msub>
+     </m:mrow>
+</m:semantics>
+</m:math> when <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:msub>
+    <m:mi>H</m:mi>
+    <m:mn>1</m:mn>
+   </m:msub>
+     </m:mrow>
+</m:semantics>
+</m:math>
+ is true, that is, when <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:msub>
+    <m:mi>H</m:mi>
+    <m:mn>0</m:mn>
+   </m:msub>
+     </m:mrow>
+</m:semantics>
+</m:math> is false.</item> 
+
+	  </list>
+
+                 <para id="para_9">
+Since, in the example above, we make a Type I error if <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mi>Y</m:mi><m:mo>≤</m:mo><m:mn>5</m:mn>
+  </m:mrow>
+</m:semantics>
+</m:math> when in fact <emphasis>p</emphasis>=0.05. we can calculate the probability of this error, which we denote by <m:math>
+ <m:semantics>
+  <m:mi>α</m:mi>
+</m:semantics>
+</m:math> and call <term>the significance level of the test</term>. Under an assumption, it is <m:math display="block">
+ <m:semantics>
+  <m:mrow>
+   <m:mi>α</m:mi><m:mo>=</m:mo><m:mi>P</m:mi><m:mrow><m:mo>(</m:mo>
+    <m:mrow>
+     <m:mi>Y</m:mi><m:mo>≤</m:mo><m:mn>5</m:mn><m:mo>;</m:mo><m:mi>p</m:mi><m:mo>=</m:mo><m:mn>0.05</m:mn>
+    </m:mrow>
+   <m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mstyle displaystyle="true">
+    <m:munderover>
+     <m:mo>∑</m:mo>
+     <m:mrow>
+      <m:mi>y</m:mi><m:mo>=</m:mo><m:mn>0</m:mn>
+     </m:mrow>
+     <m:mn>5</m:mn>
+    </m:munderover>
+    <m:mrow>
+     <m:mrow><m:mo>(</m:mo>
+      <m:mtable columnalign="left">
+       <m:mtr>
+        <m:mtd>
+         <m:mn>200</m:mn>
+        </m:mtd>
+       </m:mtr>
+       <m:mtr>
+        <m:mtd>
+         <m:mi>y</m:mi>
+        </m:mtd>
+       </m:mtr>
+      </m:mtable>
+      
+     <m:mo>)</m:mo></m:mrow><m:msup>
+      <m:mrow>
+       <m:mrow><m:mo>(</m:mo>
+        <m:mrow>
+         <m:mn>0.05</m:mn>
+        </m:mrow>
+       <m:mo>)</m:mo></m:mrow>
+      </m:mrow>
+      <m:mi>y</m:mi>
+     </m:msup>
+     <m:msup>
+      <m:mrow>
+       <m:mrow><m:mo>(</m:mo>
+        <m:mrow>
+         <m:mn>0.95</m:mn>
+        </m:mrow>
+       <m:mo>)</m:mo></m:mrow>
+      </m:mrow>
+      <m:mrow>
+       <m:mn>200</m:mn><m:mo>−</m:mo><m:mi>y</m:mi>
+      </m:mrow>
+     </m:msup>
+     
+    </m:mrow>
+   </m:mstyle><m:mo>.</m:mo>
+  </m:mrow>
+ </m:semantics>
+</m:math>. 
+                </para>
+                 <para id="para_10">
+Since <emphasis>n</emphasis> is rather large and <emphasis>p</emphasis> is small, these binomial probabilities can be approximated extremely well by Poisson probabilities with <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mi>λ</m:mi><m:mo>=</m:mo><m:mn>200</m:mn><m:mrow><m:mo>(</m:mo>
+    <m:mrow>
+     <m:mn>0.05</m:mn>
+    </m:mrow>
+   <m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>10.</m:mn>
+  </m:mrow>
+ </m:semantics>
+</m:math> That is, from the Poisson table, the probability of the Type I error is <m:math display="block">
+ <m:semantics>
+  <m:mrow>
+   <m:mi>α</m:mi><m:mo>≈</m:mo><m:mstyle displaystyle="true">
+    <m:munderover>
+     <m:mo>∑</m:mo>
+     <m:mrow>
+      <m:mi>y</m:mi><m:mo>=</m:mo><m:mn>0</m:mn>
+     </m:mrow>
+     <m:mn>5</m:mn>
+    </m:munderover>
+    <m:mrow>
+     <m:mfrac>
+      <m:mrow>
+       <m:msup>
+        <m:mrow>
+         <m:mn>10</m:mn>
+        </m:mrow>
+        <m:mi>y</m:mi>
+       </m:msup>
+       <m:msup>
+        <m:mi>e</m:mi>
+        <m:mrow>
+         <m:mo>−</m:mo><m:mn>10</m:mn>
+        </m:mrow>
+       </m:msup>
+       
+      </m:mrow>
+      <m:mrow>
+       <m:mi>y</m:mi><m:mo>!</m:mo>
+      </m:mrow>
+     </m:mfrac>
+     
+    </m:mrow>
+   </m:mstyle><m:mo>=</m:mo><m:mn>0.067.</m:mn>
+  </m:mrow>
+ </m:semantics>
+</m:math>
+                 </para>               
+                 <para id="para_11">
+Thus, the approximate significance level of this test is <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mi>α</m:mi><m:mo>=</m:mo><m:mn>0.067</m:mn>
+  </m:mrow>
+ </m:semantics>
+</m:math>. This value is reasonably small. However, what about the probability of Type II error in case <emphasis>p</emphasis> has been improved to 0.02, say? This error occurs if <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mi>Y</m:mi><m:mo>&gt;</m:mo><m:mn>5</m:mn>
+  </m:mrow>
+ </m:semantics>
+</m:math> when, in fact, <emphasis>p</emphasis>=0.02; hence its probability, denoted by <m:math>
+ <m:semantics>
+  <m:mi>β</m:mi>
+</m:semantics>
+</m:math>, is <m:math display="block">
+ <m:semantics>
+  <m:mrow>
+   <m:mi>β</m:mi><m:mo>=</m:mo><m:mi>P</m:mi><m:mrow><m:mo>(</m:mo>
+    <m:mrow>
+     <m:mi>Y</m:mi><m:mo>&gt;</m:mo><m:mn>5</m:mn><m:mo>;</m:mo><m:mi>p</m:mi><m:mo>=</m:mo><m:mn>0.02</m:mn>
+    </m:mrow>
+   <m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mstyle displaystyle="true">
+    <m:munderover>
+     <m:mo>∑</m:mo>
+     <m:mrow>
+      <m:mi>y</m:mi><m:mo>=</m:mo><m:mn>6</m:mn>
+     </m:mrow>
+     <m:mrow>
+      <m:mn>200</m:mn>
+     </m:mrow>
+    </m:munderover>
+    <m:mrow>
+     <m:mrow><m:mo>(</m:mo>
+      <m:mtable columnalign="left">
+       <m:mtr>
+        <m:mtd>
+         <m:mn>200</m:mn>
+        </m:mtd>
+       </m:mtr>
+       <m:mtr>
+        <m:mtd>
+         <m:mi>y</m:mi>
+        </m:mtd>
+       </m:mtr>
+      </m:mtable>
+      
+     <m:mo>)</m:mo></m:mrow><m:msup>
+      <m:mrow>
+       <m:mrow><m:mo>(</m:mo>
+        <m:mrow>
+         <m:mn>0.02</m:mn>
+        </m:mrow>
+       <m:mo>)</m:mo></m:mrow>
+      </m:mrow>
+      <m:mi>y</m:mi>
+     </m:msup>
+     <m:msup>
+      <m:mrow>
+       <m:mrow><m:mo>(</m:mo>
+        <m:mrow>
+         <m:mn>0.98</m:mn>
+        </m:mrow>
+       <m:mo>)</m:mo></m:mrow>
+      </m:mrow>
+      <m:mrow>
+       <m:mn>200</m:mn><m:mo>−</m:mo><m:mi>y</m:mi>
+      </m:mrow>
+     </m:msup>
+     
+    </m:mrow>
+   </m:mstyle><m:mo>.</m:mo>
+  </m:mrow>
+ </m:semantics>
+</m:math>
+                 </para>
+                 <para id="para_12">
+Again we use the Poisson approximation, here <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mi>λ</m:mi><m:mtext>=200(0</m:mtext><m:mtext>.02)=4</m:mtext>
+  </m:mrow>
+ </m:semantics>
+</m:math>, to obtain <m:math display="block">
+ <m:semantics>
+  <m:mrow>
+   <m:mi>β</m:mi><m:mo>≈</m:mo><m:mn>1</m:mn><m:mo>−</m:mo><m:mstyle displaystyle="true">
+    <m:munderover>
+     <m:mo>∑</m:mo>
+     <m:mrow>
+      <m:mi>y</m:mi><m:mo>=</m:mo><m:mn>0</m:mn>
+     </m:mrow>
+     <m:mn>5</m:mn>
+    </m:munderover>
+    <m:mrow>
+     <m:mfrac>
+      <m:mrow>
+       <m:msup>
+        <m:mn>4</m:mn>
+        <m:mi>y</m:mi>
+       </m:msup>
+       <m:msup>
+        <m:mi>e</m:mi>
+        <m:mrow>
+         <m:mo>−</m:mo><m:mn>4</m:mn>
+        </m:mrow>
+       </m:msup>
+       
+      </m:mrow>
+      <m:mrow>
+       <m:mi>y</m:mi><m:mo>!</m:mo>
+      </m:mrow>
+     </m:mfrac>
+     
+    </m:mrow>
+   </m:mstyle><m:mo>=</m:mo><m:mn>1</m:mn><m:mo>−</m:mo><m:mn>0.785</m:mn><m:mo>=</m:mo><m:mn>0.215.</m:mn>
+  </m:mrow>
+ </m:semantics>
+</m:math> 
+                </para>
+                 <para id="para_13">
+The engineers and the statisticians who created this new procedure probably are not too pleased with this answer. That is, they note that if their new procedure of manufacturing circuits has actually decreased the probability of failure to 0.02 from 0.05 (a big improvement), there is still a good chance, 0.215, that <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:msub>
+    <m:mtext>H</m:mtext>
+    <m:mtext>0</m:mtext>
+   </m:msub>
+   <m:mtext>: p=0</m:mtext><m:mtext>.05 </m:mtext>
+  </m:mrow>
+</m:semantics>
+</m:math> is accepted and their improvement rejected. Thus, this test of <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:msub>
+    <m:mtext>H</m:mtext>
+    <m:mtext>0</m:mtext>
+   </m:msub>
+   <m:mtext>: p=0</m:mtext><m:mtext>.05 </m:mtext>
+  </m:mrow>
+</m:semantics>
+</m:math> against <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:msub>
+    <m:mtext>H</m:mtext>
+    <m:mtext>1</m:mtext>
+   </m:msub>
+   <m:mtext>: p=0</m:mtext><m:mtext>.02 </m:mtext>
+  </m:mrow>
+</m:semantics>
+</m:math> is unsatisfactory. 
+Without worrying more about the probability of the Type II error, here, above was presented a frequently used procedure for testing <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:msub>
+    <m:mtext>H</m:mtext>
+    <m:mtext>0</m:mtext>
+   </m:msub>
+   <m:msub>
+    <m:mrow>
+     <m:mtext>: p=p</m:mtext>
+    </m:mrow>
+    <m:mtext>0</m:mtext>
+   </m:msub>
+     </m:mrow>
+</m:semantics>
+</m:math>, where <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:msub>
+    <m:mtext>p</m:mtext>
+    <m:mtext>0</m:mtext>
+   </m:msub>
+     </m:mrow>
+</m:semantics>
+</m:math> is some specified probability of success. This test is based upon the fact that the number of successes, <emphasis>Y</emphasis>, in <emphasis>n</emphasis> independent Bernoulli trials is such that <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mtext>Y/n</m:mtext>
+  </m:mrow>
+</m:semantics>
+</m:math> has an approximate normal distribution, <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:msub>
+    <m:mrow>
+     <m:mtext>N[p</m:mtext>
+    </m:mrow>
+    <m:mtext>0</m:mtext>
+   </m:msub>
+   <m:msub>
+    <m:mrow>
+     <m:mtext>, p</m:mtext>
+    </m:mrow>
+    <m:mtext>0</m:mtext>
+   </m:msub>
+   <m:msub>
+    <m:mrow>
+     <m:mtext>(1- p</m:mtext>
+    </m:mrow>
+    <m:mtext>0</m:mtext>
+   </m:msub>
+   <m:mtext>)/n]</m:mtext>
+  </m:mrow>
+</m:semantics>
+</m:math>, provided <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:msub>
+    <m:mtext>H</m:mtext>
+    <m:mtext>0</m:mtext>
+   </m:msub>
+   <m:msub>
+    <m:mrow>
+     <m:mtext>: p=p</m:mtext>
+    </m:mrow>
+    <m:mtext>0</m:mtext>
+   </m:msub>
+     </m:mrow>
+</m:semantics>
+</m:math> is true and <emphasis>n</emphasis> is large. 
+Suppose the alternative hypothesis is <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:msub>
+    <m:mtext>H</m:mtext>
+    <m:mtext>0</m:mtext>
+   </m:msub>
+   <m:msub>
+    <m:mrow>
+     <m:mtext>: p&gt;p</m:mtext>
+    </m:mrow>
+    <m:mtext>0</m:mtext>
+   </m:msub>
+   <m:mtext> </m:mtext>
+  </m:mrow>
+</m:semantics>
+</m:math>; that is, it has been hypothesized by a research worker that something has been done to increase the probability of success. Consider the test of <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:msub>
+    <m:mtext>H</m:mtext>
+    <m:mtext>0</m:mtext>
+   </m:msub>
+   <m:msub>
+    <m:mrow>
+     <m:mtext>: p=p</m:mtext>
+    </m:mrow>
+    <m:mtext>0</m:mtext>
+   </m:msub>
+     </m:mrow>
+</m:semantics>
+</m:math> against <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:msub>
+    <m:mtext>H</m:mtext>
+    <m:mtext>1</m:mtext>
+   </m:msub>
+   <m:msub>
+    <m:mrow>
+     <m:mtext>: p&gt; p</m:mtext>
+    </m:mrow>
+    <m:mtext>0</m:mtext>
+   </m:msub>
+    </m:mrow>
+ </m:semantics>
+</m:math> that rejects <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:msub>
+    <m:mtext>H</m:mtext>
+    <m:mtext>0</m:mtext>
+   </m:msub>
+     </m:mrow>
+</m:semantics>
+</m:math> and accepts <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:msub>
+    <m:mtext>H</m:mtext>
+    <m:mtext>1</m:mtext>
+   </m:msub>
+     </m:mrow>
+</m:semantics>
+</m:math> if and only if
+
+                 </para>
+                 <para id="para_14">
+<m:math display="block">
+ <m:semantics>
+  <m:mrow>
+   <m:mi>Z</m:mi><m:mo>=</m:mo><m:mfrac>
+    <m:mrow>
+     <m:mi>Y</m:mi><m:mo>/</m:mo><m:mi>n</m:mi><m:mo>−</m:mo><m:msub>
+      <m:mi>p</m:mi>
+      <m:mn>0</m:mn>
+     </m:msub>
+     
+    </m:mrow>
+    <m:mrow>
+     <m:msqrt>
+      <m:mrow>
+       <m:msub>
+        <m:mi>p</m:mi>
+        <m:mn>0</m:mn>
+       </m:msub>
+       <m:mrow><m:mo>(</m:mo>
+        <m:mrow>
+         <m:mn>1</m:mn><m:mo>−</m:mo><m:msub>
+          <m:mi>p</m:mi>
+          <m:mn>0</m:mn>
+         </m:msub>
+         
+        </m:mrow>
+       <m:mo>)</m:mo></m:mrow><m:mo>/</m:mo><m:mi>n</m:mi>
+      </m:mrow>
+     </m:msqrt>
+     
+    </m:mrow>
+   </m:mfrac>
+   <m:mo>≥</m:mo><m:msub>
+    <m:mi>z</m:mi>
+    <m:mi>α</m:mi>
+   </m:msub>
+   <m:mo>.</m:mo>
+  </m:mrow>
+ </m:semantics>
+</m:math>
+
+                 </para>
+                 <para id="para_15">
+That is, if <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mtext>Y/n</m:mtext>
+  </m:mrow>
+</m:semantics>
+</m:math> exceeds <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:msub>
+    <m:mtext>p</m:mtext>
+    <m:mtext>0</m:mtext>
+   </m:msub>
+     </m:mrow>
+</m:semantics>
+</m:math> by  standard deviations of <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mtext>Y/n</m:mtext>
+  </m:mrow>
+</m:semantics>
+</m:math>, we reject <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:msub>
+    <m:mtext>H</m:mtext>
+    <m:mtext>0</m:mtext>
+   </m:msub>
+     </m:mrow>
+</m:semantics>
+</m:math> and accept the hypothesis <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:msub>
+    <m:mtext>H</m:mtext>
+    <m:mtext>1</m:mtext>
+   </m:msub>
+   <m:msub>
+    <m:mrow>
+     <m:mtext>: p&gt; p</m:mtext>
+    </m:mrow>
+    <m:mtext>0</m:mtext>
+   </m:msub>
+    </m:mrow>
+ </m:semantics>
+</m:math>. Since, under <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:msub>
+    <m:mtext>H</m:mtext>
+    <m:mtext>0</m:mtext>
+   </m:msub>
+     </m:mrow>
+</m:semantics>
+</m:math> <emphasis>Z</emphasis> is approximately <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mtext>N</m:mtext><m:mrow><m:mo>(</m:mo>
+    <m:mrow>
+     <m:mtext>0,1</m:mtext>
+    </m:mrow>
+   <m:mo>)</m:mo></m:mrow>
+  </m:mrow>
+ </m:semantics>
+</m:math>, the approximate probability of this occurring when <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:msub>
+    <m:mtext>H</m:mtext>
+    <m:mtext>0</m:mtext>
+   </m:msub>
+   <m:msub>
+    <m:mrow>
+     <m:mtext>: p=p</m:mtext>
+    </m:mrow>
+    <m:mtext>0</m:mtext>
+   </m:msub>
+     </m:mrow>
+</m:semantics>
+</m:math> is true is <m:math>
+ <m:semantics>
+  <m:mi>α</m:mi>
+</m:semantics>
+</m:math>. That is the significance level of that test is approximately <m:math>
+ <m:semantics>
+  <m:mi>α</m:mi>
+</m:semantics>
+</m:math>. If the alternative is <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:msub>
+    <m:mtext>H</m:mtext>
+    <m:mtext>1</m:mtext>
+   </m:msub>
+   <m:msub>
+    <m:mrow>
+     <m:mtext>: p&lt; p</m:mtext>
+    </m:mrow>
+    <m:mtext>0</m:mtext>
+   </m:msub>
+     </m:mrow>
+</m:semantics>
+</m:math> instead of <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:msub>
+    <m:mtext>H</m:mtext>
+    <m:mtext>1</m:mtext>
+   </m:msub>
+   <m:msub>
+    <m:mrow>
+     <m:mtext>: p&gt; p</m:mtext>
+    </m:mrow>
+    <m:mtext>0</m:mtext>
+   </m:msub>
+    </m:mrow>
+ </m:semantics>
+</m:math>, then the appropriate <m:math>
+ <m:semantics>
+  <m:mi>α</m:mi>
+</m:semantics>
+</m:math>-level test is given by <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mi>Z</m:mi><m:mo>≤</m:mo><m:mo>−</m:mo><m:msub>
+    <m:mi>z</m:mi>
+    <m:mi>α</m:mi>
+   </m:msub>
+   
+  </m:mrow>
+ </m:semantics>
+</m:math>. That is, if <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mtext>Y/n</m:mtext>
+  </m:mrow>
+</m:semantics>
+</m:math> is smaller than <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:msub>
+    <m:mtext>p</m:mtext>
+    <m:mtext>0</m:mtext>
+   </m:msub>
+     </m:mrow>
+</m:semantics>
+</m:math> by  standard deviations of <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mtext>Y/n</m:mtext>
+  </m:mrow>
+</m:semantics>
+</m:math>, we accept <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:msub>
+    <m:mtext>H</m:mtext>
+    <m:mtext>1</m:mtext>
+   </m:msub>
+   <m:msub>
+    <m:mrow>
+     <m:mtext>: p&lt; p</m:mtext>
+    </m:mrow>
+    <m:mtext>0</m:mtext>
+   </m:msub>
+     </m:mrow>
+</m:semantics>
+</m:math>. 
+
+                 </para>
+                 <para id="para_16">
+In general, without changing the sample size or the type of the test of the hypothesis, a decrease in <m:math>
+ <m:semantics>
+  <m:mi>α</m:mi>
+</m:semantics>
+</m:math> causes an increase in <m:math>
+ <m:semantics>
+  <m:mi>β</m:mi>
+</m:semantics>
+</m:math>, and a decrease in <m:math>
+ <m:semantics>
+  <m:mi>β</m:mi>
+</m:semantics>
+</m:math> causes an increase in <m:math>
+ <m:semantics>
+  <m:mi>α</m:mi>
+</m:semantics>
+</m:math>. Both probabilities <m:math>
+ <m:semantics>
+  <m:mi>α</m:mi>
+</m:semantics>
+</m:math> and <m:math>
+ <m:semantics>
+  <m:mi>β</m:mi>
+</m:semantics>
+</m:math> of the two types of errors can be decreased only by increasing the sample size or, in some way, constructing a better test of the hypothesis. 
+                 </para>
+         <section id="sec_3">
+<title>EXAMPLE </title>
+                 <para id="para_17">
+If <emphasis>n</emphasis>=100 and we desire a test with significance level <m:math>
+ <m:semantics>
+  <m:mi>α</m:mi>
+</m:semantics>
+</m:math>=0.05, then <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mi>α</m:mi><m:mo>=</m:mo><m:mi>P</m:mi><m:mrow><m:mo>(</m:mo>
+    <m:mrow>
+     <m:mover accent="true">
+      <m:mi>X</m:mi>
+      <m:mo>¯</m:mo>
+     </m:mover>
+     <m:mo>≥</m:mo><m:mi>c</m:mi><m:mo>;</m:mo><m:mi>μ</m:mi><m:mo>=</m:mo><m:mn>60</m:mn>
+    </m:mrow>
+   <m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>0.05</m:mn>
+  </m:mrow>
+ </m:semantics>
+</m:math> means, since <m:math>
+ <m:semantics>
+  <m:mover accent="true">
+   <m:mi>X</m:mi>
+   <m:mo>¯</m:mo>
+  </m:mover></m:semantics>
+</m:math> is <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mtext>N(</m:mtext><m:mi>μ</m:mi><m:mtext>,100/100=1)</m:mtext>
+  </m:mrow>
+ </m:semantics>
+</m:math>,
+
+                 </para>
+                 <para id="para_18">
+ <m:math display="block">
+ <m:semantics>
+  <m:mrow>
+   <m:mi>P</m:mi><m:mrow><m:mo>(</m:mo>
+    <m:mrow>
+     <m:mfrac>
+      <m:mrow>
+       <m:mover accent="true">
+        <m:mi>X</m:mi>
+        <m:mo>¯</m:mo>
+       </m:mover>
+       <m:mo>−</m:mo><m:mn>60</m:mn>
+      </m:mrow>
+      <m:mn>1</m:mn>
+     </m:mfrac>
+     <m:mo>≥</m:mo><m:mfrac>
+      <m:mrow>
+       <m:mi>c</m:mi><m:mo>−</m:mo><m:mn>60</m:mn>
+      </m:mrow>
+      <m:mn>1</m:mn>
+     </m:mfrac>
+     <m:mo>;</m:mo><m:mi>μ</m:mi><m:mo>=</m:mo><m:mn>60</m:mn>
+    </m:mrow>
+   <m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>0.05</m:mn>
+  </m:mrow>
+ </m:semantics>
+</m:math> and <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mi>c</m:mi><m:mo>−</m:mo><m:mn>60</m:mn><m:mo>=</m:mo><m:mn>1.645</m:mn>
+  </m:mrow>
+ </m:semantics>
+</m:math>. Thus <emphasis>c</emphasis>=61.645. The power function is
+                 </para>
+                 <para id="para_19">
+<m:math display="block">
+ <m:semantics>
+  <m:mrow>
+   <m:mi>K</m:mi><m:mrow><m:mo>(</m:mo>
+    <m:mi>μ</m:mi>
+   <m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mi>P</m:mi><m:mrow><m:mo>(</m:mo>
+    <m:mrow>
+     <m:mover accent="true">
+      <m:mi>X</m:mi>
+      <m:mo>¯</m:mo>
+     </m:mover>
+     <m:mo>≥</m:mo><m:mn>61.645</m:mn><m:mo>;</m:mo><m:mi>μ</m:mi>
+    </m:mrow>
+   <m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mi>P</m:mi><m:mrow><m:mo>(</m:mo>
+    <m:mrow>
+     <m:mfrac>
+      <m:mrow>
+       <m:mover accent="true">
+        <m:mi>X</m:mi>
+        <m:mo>¯</m:mo>
+       </m:mover>
+       <m:mo>−</m:mo><m:mi>μ</m:mi>
+      </m:mrow>
+      <m:mn>1</m:mn>
+     </m:mfrac>
+     <m:mo>≥</m:mo><m:mfrac>
+      <m:mrow>
+       <m:mn>61.645</m:mn><m:mo>−</m:mo><m:mi>μ</m:mi>
+      </m:mrow>
+      <m:mn>1</m:mn>
+     </m:mfrac>
+     <m:mo>;</m:mo><m:mi>μ</m:mi>
+    </m:mrow>
+   <m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>1</m:mn><m:mo>−</m:mo><m:mi>Φ</m:mi><m:mrow><m:mo>(</m:mo>
+    <m:mrow>
+     <m:mn>61.645</m:mn><m:mo>−</m:mo><m:mi>μ</m:mi>
+    </m:mrow>
+   <m:mo>)</m:mo></m:mrow><m:mo>.</m:mo>
+  </m:mrow>
+ </m:semantics>
+</m:math>
+
+                 </para>
+                 <para id="para_20">
+In particular, this means that <m:math>
+ <m:semantics>
+  <m:mi>β</m:mi>
+</m:semantics>
+</m:math> at <m:math>
+ <m:semantics>
+  <m:mi>μ</m:mi>
+</m:semantics>
+</m:math>=65 is <m:math display="block">
+ <m:semantics>
+  <m:mrow>
+   <m:mo>=</m:mo><m:mn>1</m:mn><m:mo>−</m:mo><m:mi>K</m:mi><m:mrow><m:mo>(</m:mo>
+    <m:mi>μ</m:mi>
+   <m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mi>Φ</m:mi><m:mrow><m:mo>(</m:mo>
+    <m:mrow>
+     <m:mn>61.645</m:mn><m:mo>−</m:mo><m:mn>65</m:mn>
+    </m:mrow>
+   <m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mi>Φ</m:mi><m:mrow><m:mo>(</m:mo>
+    <m:mrow>
+     <m:mo>−</m:mo><m:mn>3.355</m:mn>
+    </m:mrow>
+   <m:mo>)</m:mo></m:mrow><m:mo>≈</m:mo><m:mn>0</m:mn><m:mo>;</m:mo>
+  </m:mrow>
+ </m:semantics>
+</m:math> so, with <emphasis>n</emphasis>=100, both <m:math>
+ <m:semantics>
+  <m:mi>α</m:mi>
+</m:semantics>
+</m:math> and <m:math>
+ <m:semantics>
+  <m:mi>β</m:mi>
+</m:semantics>
+</m:math> have decreased from their respective original values of 0.1587 and 0.0668 when <emphasis>n</emphasis>=25. Rather than guess at the value of <emphasis>n</emphasis>, an ideal power function determines the sample size. Let us use a critical region of the form <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mover accent="true">
+    <m:mi>x</m:mi>
+    <m:mo>¯</m:mo>
+   </m:mover>
+   <m:mo>≥</m:mo><m:mi>c</m:mi>
+  </m:mrow>
+ </m:semantics>
+</m:math>. Further, suppose that we want <m:math>
+ <m:semantics>
+  <m:mi>α</m:mi>
+</m:semantics>
+</m:math>=0.025 and, when <m:math>
+ <m:semantics>
+  <m:mi>μ</m:mi>
+</m:semantics>
+</m:math>=65, <m:math>
+ <m:semantics>
+  <m:mi>β</m:mi>
+</m:semantics>
+</m:math>=0.05. Thus, since <m:math>
+ <m:semantics>
+  <m:mover accent="true">
+   <m:mi>X</m:mi>
+   <m:mo>¯</m:mo>
+  </m:mover></m:semantics>
+</m:math> is <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mtext>N(</m:mtext><m:mi>μ</m:mi><m:mtext>,100/n)</m:mtext>
+  </m:mrow>
+ </m:semantics>
+</m:math>,
+                </para>
+                 <para id="para_21">
+<m:math display="block">
+ <m:semantics>
+  <m:mrow>
+   <m:mn>0.025</m:mn><m:mo>=</m:mo><m:mi>P</m:mi><m:mrow><m:mo>(</m:mo>
+    <m:mrow>
+     <m:mover accent="true">
+      <m:mi>X</m:mi>
+      <m:mo>¯</m:mo>
+     </m:mover>
+     <m:mo>≥</m:mo><m:mi>c</m:mi><m:mo>;</m:mo><m:mi>μ</m:mi><m:mo>=</m:mo><m:mn>60</m:mn>
+    </m:mrow>
+   <m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>1</m:mn><m:mo>−</m:mo><m:mi>Φ</m:mi><m:mrow><m:mo>(</m:mo>
+    <m:mrow>
+     <m:mfrac>
+      <m:mrow>
+       <m:mi>c</m:mi><m:mo>−</m:mo><m:mn>60</m:mn>
+      </m:mrow>
+      <m:mrow>
+       <m:mn>10</m:mn><m:mo>/</m:mo><m:msqrt>
+        <m:mi>n</m:mi>
+       </m:msqrt>
+       
+      </m:mrow>
+     </m:mfrac>
+     
+    </m:mrow>
+   <m:mo>)</m:mo></m:mrow>
+  </m:mrow>
+ </m:semantics>
+</m:math> and <m:math display="block">
+ <m:semantics>
+  <m:mrow>
+   <m:mn>0.05</m:mn><m:mo>=</m:mo><m:mn>1</m:mn><m:mo>−</m:mo><m:mi>P</m:mi><m:mrow><m:mo>(</m:mo>
+    <m:mrow>
+     <m:mover accent="true">
+      <m:mi>X</m:mi>
+      <m:mo>¯</m:mo>
+     </m:mover>
+     <m:mo>≥</m:mo><m:mi>c</m:mi><m:mo>;</m:mo><m:mi>μ</m:mi><m:mo>=</m:mo><m:mn>65</m:mn>
+    </m:mrow>
+   <m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mi>Φ</m:mi><m:mrow><m:mo>(</m:mo>
+    <m:mrow>
+     <m:mfrac>
+      <m:mrow>
+       <m:mi>c</m:mi><m:mo>−</m:mo><m:mn>65</m:mn>
+      </m:mrow>
+      <m:mrow>
+       <m:mn>10</m:mn><m:mo>/</m:mo><m:msqrt>
+        <m:mi>n</m:mi>
+       </m:msqrt>
+       
+      </m:mrow>
+     </m:mfrac>
+     
+    </m:mrow>
+   <m:mo>)</m:mo></m:mrow><m:mo>.</m:mo>
+  </m:mrow>
+ </m:semantics>
+</m:math> 
+
+
+                 </para>
+                 <para id="para_22">
+That is, <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mfrac>
+    <m:mrow>
+     <m:mi>c</m:mi><m:mo>−</m:mo><m:mn>60</m:mn>
+    </m:mrow>
+    <m:mrow>
+     <m:mn>10</m:mn><m:mo>/</m:mo><m:msqrt>
+      <m:mi>n</m:mi>
+     </m:msqrt>
+     
+    </m:mrow>
+   </m:mfrac>
+   <m:mo>=</m:mo><m:mn>1.96</m:mn>
+  </m:mrow>
+ </m:semantics>
+</m:math> and <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mfrac>
+    <m:mrow>
+     <m:mi>c</m:mi><m:mo>−</m:mo><m:mn>65</m:mn>
+    </m:mrow>
+    <m:mrow>
+     <m:mn>10</m:mn><m:mo>/</m:mo><m:msqrt>
+      <m:mi>n</m:mi>
+     </m:msqrt>
+     
+    </m:mrow>
+   </m:mfrac>
+   <m:mo>=</m:mo><m:mo>−</m:mo><m:mn>1.645</m:mn>
+  </m:mrow>
+ </m:semantics>
+</m:math>.
+                 </para>
+                 <para id="para_23">
+Solving these equations simultaneously for <emphasis>c</emphasis> and <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mn>10</m:mn><m:mo>/</m:mo><m:msqrt>
+    <m:mi>n</m:mi>
+   </m:msqrt>
+     </m:mrow>
+ </m:semantics>
+</m:math>, we obtain <m:math display="block">
+ <m:semantics>
+  <m:mrow>
+   <m:mi>c</m:mi><m:mo>=</m:mo><m:mn>60</m:mn><m:mo>+</m:mo><m:mn>1.96</m:mn><m:mfrac>
+    <m:mn>5</m:mn>
+    <m:mrow>
+     <m:mn>3.605</m:mn>
+    </m:mrow>
+   </m:mfrac>
+   <m:mo>=</m:mo><m:mn>62.718</m:mn><m:mo>;</m:mo>
+  </m:mrow>
+ </m:semantics>
+</m:math> <m:math display="block">
+ <m:semantics>
+  <m:mrow>
+   <m:mfrac>
+    <m:mrow>
+     <m:mn>10</m:mn>
+    </m:mrow>
+    <m:mrow>
+     <m:msqrt>
+      <m:mi>n</m:mi>
+     </m:msqrt>
+     
+    </m:mrow>
+   </m:mfrac>
+   <m:mo>=</m:mo><m:mfrac>
+    <m:mn>5</m:mn>
+    <m:mrow>
+     <m:mn>3.605</m:mn>
+    </m:mrow>
+   </m:mfrac>
+   <m:mo>.</m:mo>
+  </m:mrow>
+ </m:semantics>
+</m:math>
+                 </para>
+                 <para id="para_24">
+Thus, <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:msqrt>
+    <m:mi>n</m:mi>
+   </m:msqrt>
+   <m:mo>=</m:mo><m:mn>7.21</m:mn>
+  </m:mrow>
+ </m:semantics>
+</m:math> and <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mi>n</m:mi><m:mo>=</m:mo><m:mn>51.98</m:mn>
+  </m:mrow>
+ </m:semantics>
+</m:math>. Since <emphasis>n</emphasis> must be an integer, we would use <emphasis>n</emphasis>=52 and obtain <m:math>
+ <m:semantics>
+  <m:mi>α</m:mi>
+</m:semantics>
+</m:math>=0.025 and <m:math>
+ <m:semantics>
+  <m:mi>β</m:mi>
+</m:semantics>
+</m:math>=0.05, approximately.
+                </para>
+         </section> 
+         <section id="sec_4">
+                 <para id="para_25">
+For a number of years there has been another value associated with a statistical test, and most statistical computer programs automatically print this out; it is called <term>the probability value</term> or, for brevity, <term><emphasis>p</emphasis>-value</term>. The <emphasis>p</emphasis>-value associated with a test is the probability that we obtain the observed value of the test statistic or a value that is more extreme in the direction of the alternative hypothesis, calculated when <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:msub>
+    <m:mtext>H</m:mtext>
+    <m:mtext>0</m:mtext>
+   </m:msub>
+     </m:mrow>
+</m:semantics>
+</m:math> is true. Rather than select the critical region ahead of time, the <emphasis>p</emphasis>-value of a test can be reported and the reader then makes a decision.                   
+                 </para>
+         <section id="sec_5">
+                 <para id="para_26">
+Say we are testing <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:msub>
+    <m:mtext>H</m:mtext>
+    <m:mtext>0</m:mtext>
+   </m:msub>
+   <m:mtext>: </m:mtext><m:mi>μ</m:mi><m:mtext>=60 </m:mtext>
+  </m:mrow>
+</m:semantics>
+</m:math> against <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:msub>
+    <m:mtext>H</m:mtext>
+    <m:mtext>1</m:mtext>
+   </m:msub>
+   <m:mtext>: </m:mtext><m:mi>μ</m:mi><m:mtext>&gt;60</m:mtext>
+  </m:mrow>
+</m:semantics>
+</m:math> with a sample mean <m:math>
+ <m:semantics>
+  <m:mover accent="true">
+   <m:mi>X</m:mi>
+   <m:mo>¯</m:mo>
+  </m:mover></m:semantics>
+</m:math> based on <emphasis>n</emphasis>=52 observations. Suppose that we obtain the observed sample mean of <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mover accent="true">
+    <m:mi>x</m:mi>
+    <m:mo>¯</m:mo>
+   </m:mover>
+   <m:mo>=</m:mo><m:mn>62.75</m:mn>
+  </m:mrow>
+</m:semantics>
+</m:math>. If we compute the probability of obtaining an <m:math>
+ <m:semantics>
+  <m:mover accent="true">
+   <m:mi>x</m:mi>
+   <m:mo>¯</m:mo>
+  </m:mover>
+  </m:semantics>
+</m:math> of that value of 62.75 or greater when <m:math>
+ <m:semantics>
+  <m:mi>μ</m:mi>
+</m:semantics>
+</m:math>=60, then we obtain the <emphasis>p</emphasis>-value associated with <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mover accent="true">
+    <m:mi>x</m:mi>
+    <m:mo>¯</m:mo>
+   </m:mover>
+   <m:mo>=</m:mo><m:mn>62.75</m:mn>
+  </m:mrow>
+</m:semantics>
+</m:math>. That is,
+                 </para>
+                 <para id="para_27">
+<m:math display="block">
+ <m:semantics>
+  <m:mtable columnalign="left">
+   <m:mtr>
+    <m:mtd>
+     <m:mi>p</m:mi><m:mo>−</m:mo><m:mi>v</m:mi><m:mi>a</m:mi><m:mi>l</m:mi><m:mi>u</m:mi><m:mi>e</m:mi><m:mo>=</m:mo><m:mi>P</m:mi><m:mrow><m:mo>(</m:mo>
+      <m:mrow>
+       <m:mover accent="true">
+        <m:mi>X</m:mi>
+        <m:mo>¯</m:mo>
+       </m:mover>
+       <m:mo>≥</m:mo><m:mn>62.75</m:mn><m:mo>;</m:mo><m:mi>μ</m:mi><m:mo>=</m:mo><m:mn>60</m:mn>
+      </m:mrow>
+     <m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mi>P</m:mi><m:mrow><m:mo>(</m:mo>
+      <m:mrow>
+       <m:mfrac>
+        <m:mrow>
+         <m:mover accent="true">
+          <m:mi>X</m:mi>
+          <m:mo>¯</m:mo>
+         </m:mover>
+         <m:mo>−</m:mo><m:mn>60</m:mn>
+        </m:mrow>
+        <m:mrow>
+         <m:mn>10</m:mn><m:mo>/</m:mo><m:msqrt>
+          <m:mrow>
+           <m:mn>52</m:mn>
+          </m:mrow>
+         </m:msqrt>
+         
+        </m:mrow>
+       </m:mfrac>
+       <m:mo>≥</m:mo><m:mfrac>
+        <m:mrow>
+         <m:mn>62.75</m:mn><m:mo>−</m:mo><m:mn>60</m:mn>
+        </m:mrow>
+        <m:mrow>
+         <m:mn>10</m:mn><m:mo>/</m:mo><m:msqrt>
+          <m:mrow>
+           <m:mn>52</m:mn>
+          </m:mrow>
+         </m:msqrt>
+         
+        </m:mrow>
+       </m:mfrac>
+       <m:mo>;</m:mo><m:mi>μ</m:mi><m:mo>=</m:mo><m:mn>60</m:mn>
+      </m:mrow>
+     <m:mo>)</m:mo></m:mrow>
+    </m:mtd>
+   </m:mtr>
+   <m:mtr>
+    <m:mtd>
+     <m:mo>=</m:mo><m:mn>1</m:mn><m:mo>−</m:mo><m:mi>Φ</m:mi><m:mrow><m:mo>(</m:mo>
+      <m:mrow>
+       <m:mfrac>
+        <m:mrow>
+         <m:mn>62.75</m:mn><m:mo>−</m:mo><m:mn>60</m:mn>
+        </m:mrow>
+        <m:mrow>
+         <m:mn>10</m:mn><m:mo>/</m:mo><m:msqrt>
+          <m:mrow>
+           <m:mn>52</m:mn>
+          </m:mrow>
+         </m:msqrt>
+         
+        </m:mrow>
+       </m:mfrac>
+       
+      </m:mrow>
+     <m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>1</m:mn><m:mo>−</m:mo><m:mi>Φ</m:mi><m:mrow><m:mo>(</m:mo>
+      <m:mrow>
+       <m:mn>1.983</m:mn>
+      </m:mrow>
+     <m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>0.0237.</m:mn>
+    </m:mtd>
+   </m:mtr>
+  </m:mtable>
+   </m:semantics>
+</m:math>
+
+                 </para>                 
+                 <para id="para_28">
+If this <emphasis>p</emphasis>-value is small, we tend to reject the hypothesis <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:msub>
+    <m:mtext>H</m:mtext>
+    <m:mtext>0</m:mtext>
+   </m:msub>
+   <m:mtext>: </m:mtext><m:mi>μ</m:mi><m:mtext>=60 </m:mtext>
+  </m:mrow>
+</m:semantics>
+</m:math>. For example, rejection of <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:msub>
+    <m:mtext>H</m:mtext>
+    <m:mtext>0</m:mtext>
+   </m:msub>
+   <m:mtext>: </m:mtext><m:mi>μ</m:mi><m:mtext>=60 </m:mtext>
+  </m:mrow>
+</m:semantics>
+</m:math> if the <emphasis>p</emphasis>-value is less than or equal to 0.025 is exactly the same as rejection if <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mover accent="true">
+    <m:mi>x</m:mi>
+    <m:mo>¯</m:mo>
+   </m:mover>
+   <m:mo>=</m:mo><m:mn>62.718</m:mn>
+  </m:mrow>
+ </m:semantics>
+</m:math>.That is, <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mover accent="true">
+    <m:mi>x</m:mi>
+    <m:mo>¯</m:mo>
+   </m:mover>
+   <m:mo>=</m:mo><m:mn>62.718</m:mn>
+  </m:mrow>
+ </m:semantics>
+</m:math> has a <emphasis>p</emphasis>-value of 0.025. To help keep the definition of <emphasis>p</emphasis>-value in mind, we note that it can be thought of as that <term>tail-end probability</term>, under <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:msub>
+    <m:mtext>H</m:mtext>
+    <m:mtext>0</m:mtext>
+   </m:msub>
+     </m:mrow>
+</m:semantics>
+</m:math>, of the distribution of the statistic, here <m:math>
+ <m:semantics>
+  <m:mover accent="true">
+   <m:mi>X</m:mi>
+   <m:mo>¯</m:mo>
+  </m:mover></m:semantics>
+</m:math>, beyond the observed value of the statistic. See <link target-id="fig_1">Figure 1</link> for the <emphasis>p</emphasis>-value associated with <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mover accent="true">
+    <m:mi>x</m:mi>
+    <m:mo>¯</m:mo>
+   </m:mover>
+   <m:mo>=</m:mo><m:mn>62.75.</m:mn>
+  </m:mrow>
+ </m:semantics>
+</m:math>
+                </para>
+	  <figure id="fig_1">
+	    
+	    <media id="idp2895312" alt=""><image src="../../media/p_value.gif" mime-type="image/gif"/></media>
+	    <caption>The <emphasis>p</emphasis>-value associated with <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mover accent="true">
+    <m:mi>x</m:mi>
+    <m:mo>¯</m:mo>
+   </m:mover>
+   <m:mo>=</m:mo><m:mn>62.75.</m:mn>
+  </m:mrow>
+ </m:semantics>
+</m:math>
+</caption>
+	  </figure>
+
+         </section> 
+<example id="ex_1"> 
+                <para id="para_29">
+Suppose that in the past, a golfer’s scores have been (approximately) normally distributed with mean <m:math>
+ <m:semantics>
+  <m:mi>μ</m:mi>
+</m:semantics>
+</m:math>=90 and <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:msup>
+    <m:mi>σ</m:mi>
+    <m:mn>2</m:mn>
+   </m:msup>
+    </m:mrow>
+</m:semantics>
+</m:math>=9. After taking some lessons, the golfer has reason to believe that the mean <m:math>
+ <m:semantics>
+  <m:mi>μ</m:mi>
+</m:semantics>
+</m:math> has decreased. (We assume that <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:msup>
+    <m:mi>σ</m:mi>
+    <m:mn>2</m:mn>
+   </m:msup>
+    </m:mrow>
+</m:semantics>
+</m:math> is still about 9.) To test the null hypothesis <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:msub>
+    <m:mtext>H</m:mtext>
+    <m:mtext>0</m:mtext>
+   </m:msub>
+   <m:mtext>: </m:mtext><m:mi>μ</m:mi><m:mtext>=90 </m:mtext>
+  </m:mrow>
+ </m:semantics>
+</m:math> against the alternative hypothesis <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:msub>
+    <m:mtext>H</m:mtext>
+    <m:mtext>1</m:mtext>
+   </m:msub>
+   <m:mtext>: </m:mtext><m:mi>μ</m:mi><m:mo>&lt;</m:mo><m:mtext>90 </m:mtext>
+  </m:mrow>
+ </m:semantics>
+</m:math>, the golfer plays 16 games, computing the sample mean <m:math>
+ <m:semantics>
+  <m:mover accent="true">
+   <m:mi>x</m:mi>
+   <m:mo>¯</m:mo>
+  </m:mover>
+  </m:semantics>
+</m:math>.If <m:math>
+ <m:semantics>
+  <m:mover accent="true">
+   <m:mi>x</m:mi>
+   <m:mo>¯</m:mo>
+  </m:mover>
+  </m:semantics>
+</m:math> is small, say <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mover accent="true">
+    <m:mi>x</m:mi>
+    <m:mo>¯</m:mo>
+   </m:mover>
+   <m:mo>≤</m:mo><m:mi>c</m:mi>
+  </m:mrow>
+ </m:semantics>
+</m:math>, then <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:msub>
+    <m:mi>H</m:mi>
+    <m:mn>0</m:mn>
+   </m:msub>
+     </m:mrow>
+</m:semantics>
+</m:math> is rejected and <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:msub>
+    <m:mi>H</m:mi>
+    <m:mn>1</m:mn>
+   </m:msub>
+     </m:mrow>
+</m:semantics>
+</m:math> accepted; that is, it seems as if  the mean <m:math>
+ <m:semantics>
+  <m:mi>μ</m:mi>
+</m:semantics>
+</m:math> has actually decreased after the lessons. If <emphasis>c</emphasis>=88.5, then the power function of the test is
+                 </para>
+
+                <para id="para_30">
+<m:math display="block">
+ <m:semantics>
+  <m:mrow>
+   <m:mi>K</m:mi><m:mrow><m:mo>(</m:mo>
+    <m:mi>μ</m:mi>
+   <m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mi>P</m:mi><m:mrow><m:mo>(</m:mo>
+    <m:mrow>
+     <m:mover accent="true">
+      <m:mi>X</m:mi>
+      <m:mo>¯</m:mo>
+     </m:mover>
+     <m:mo>≤</m:mo><m:mn>88.5</m:mn><m:mo>;</m:mo><m:mi>μ</m:mi>
+    </m:mrow>
+   <m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mi>P</m:mi><m:mrow><m:mo>(</m:mo>
+    <m:mrow>
+     <m:mfrac>
+      <m:mrow>
+       <m:mover accent="true">
+        <m:mi>X</m:mi>
+        <m:mo>¯</m:mo>
+       </m:mover>
+       <m:mo>−</m:mo><m:mi>μ</m:mi>
+      </m:mrow>
+      <m:mrow>
+       <m:mn>3</m:mn><m:mo>/</m:mo><m:mn>4</m:mn>
+      </m:mrow>
+     </m:mfrac>
+     <m:mo>≤</m:mo><m:mfrac>
+      <m:mrow>
+       <m:mn>88.5</m:mn><m:mo>−</m:mo><m:mi>μ</m:mi>
+      </m:mrow>
+      <m:mrow>
+       <m:mn>3</m:mn><m:mo>/</m:mo><m:mn>4</m:mn>
+      </m:mrow>
+     </m:mfrac>
+     <m:mo>;</m:mo><m:mi>μ</m:mi>
+    </m:mrow>
+   <m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mi>Φ</m:mi><m:mrow><m:mo>(</m:mo>
+    <m:mrow>
+     <m:mfrac>
+      <m:mrow>
+       <m:mn>88.5</m:mn><m:mo>−</m:mo><m:mi>μ</m:mi>
+      </m:mrow>
+      <m:mrow>
+       <m:mn>3</m:mn><m:mo>/</m:mo><m:mn>4</m:mn>
+      </m:mrow>
+     </m:mfrac>
+     
+    </m:mrow>
+   <m:mo>)</m:mo></m:mrow><m:mo>.</m:mo>
+  </m:mrow>
+ </m:semantics>
+</m:math>
+
+                 </para>
+                <para id="para_31">
+Because 9/16 is the variance of <m:math>
+ <m:semantics>
+  <m:mover accent="true">
+   <m:mi>X</m:mi>
+   <m:mo>¯</m:mo>
+  </m:mover></m:semantics>
+</m:math>. In particular, <m:math display="block">
+ <m:semantics>
+  <m:mrow>
+   <m:mi>α</m:mi><m:mo>=</m:mo><m:mi>K</m:mi><m:mrow><m:mo>(</m:mo>
+    <m:mrow>
+     <m:mn>90</m:mn>
+    </m:mrow>
+   <m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mi>Φ</m:mi><m:mrow><m:mo>(</m:mo>
+    <m:mrow>
+     <m:mo>−</m:mo><m:mn>2</m:mn>
+    </m:mrow>
+   <m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>1</m:mn><m:mo>−</m:mo><m:mn>0.9772</m:mn><m:mo>=</m:mo><m:mn>0.0228.</m:mn>
+  </m:mrow>
+ </m:semantics>
+</m:math>
+ 
+                 </para>
+                <para id="para_32">
+If, in fact, the true mean is equal to <m:math>
+ <m:semantics>
+  <m:mi>μ</m:mi>
+</m:semantics>
+</m:math>=88 after the lessons, the power is <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mi>K</m:mi><m:mrow><m:mo>(</m:mo>
+    <m:mrow>
+     <m:mn>88</m:mn>
+    </m:mrow>
+   <m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mi>Φ</m:mi><m:mrow><m:mo>(</m:mo>
+    <m:mrow>
+     <m:mn>2</m:mn><m:mo>/</m:mo><m:mn>3</m:mn>
+    </m:mrow>
+   <m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>0.7475</m:mn>
+  </m:mrow>
+ </m:semantics>
+</m:math>. If <m:math>
+ <m:semantics>
+  <m:mi>μ</m:mi>
+</m:semantics>
+</m:math>=87, then <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mi>K</m:mi><m:mrow><m:mo>(</m:mo>
+    <m:mrow>
+     <m:mn>87</m:mn>
+    </m:mrow>
+   <m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mi>Φ</m:mi><m:mrow><m:mo>(</m:mo>
+    <m:mn>2</m:mn>
+   <m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>0.9772</m:mn>
+  </m:mrow>
+ </m:semantics>
+</m:math>.  An observed sample mean of <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mover accent="true">
+    <m:mi>x</m:mi>
+    <m:mo>¯</m:mo>
+   </m:mover>
+   <m:mo>=</m:mo><m:mn>88.25</m:mn>
+  </m:mrow>
+ </m:semantics>
+</m:math> has a
+                 </para>
+                <para id="para_33">
+<m:math display="block">
+ <m:semantics>
+  <m:mrow>
+   <m:mi>p</m:mi><m:mo>−</m:mo><m:mi>v</m:mi><m:mi>a</m:mi><m:mi>l</m:mi><m:mi>u</m:mi><m:mi>e</m:mi><m:mo>=</m:mo><m:mi>P</m:mi><m:mrow><m:mo>(</m:mo>
+    <m:mrow>
+     <m:mover accent="true">
+      <m:mi>X</m:mi>
+      <m:mo>¯</m:mo>
+     </m:mover>
+     <m:mo>≤</m:mo><m:mn>88.25</m:mn><m:mo>;</m:mo><m:mi>μ</m:mi><m:mo>=</m:mo><m:mn>90</m:mn>
+    </m:mrow>
+   <m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mi>Φ</m:mi><m:mrow><m:mo>(</m:mo>
+    <m:mrow>
+     <m:mfrac>
+      <m:mrow>
+       <m:mn>88.25</m:mn><m:mo>−</m:mo><m:mn>90</m:mn>
+      </m:mrow>
+      <m:mrow>
+       <m:mn>3</m:mn><m:mo>/</m:mo><m:mn>4</m:mn>
+      </m:mrow>
+     </m:mfrac>
+     
+    </m:mrow>
+   <m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mi>Φ</m:mi><m:mrow><m:mo>(</m:mo>
+    <m:mrow>
+     <m:mo>−</m:mo><m:mfrac>
+      <m:mn>7</m:mn>
+      <m:mn>3</m:mn>
+     </m:mfrac>
+     
+    </m:mrow>
+   <m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>0.0098</m:mn><m:mo>,</m:mo>
+  </m:mrow>
+ </m:semantics>
+</m:math>
+                  
+                 </para>
+                <para id="para_34">
+and this would lead to a rejection at <m:math>
+ <m:semantics>
+  <m:mi>α</m:mi>
+</m:semantics>
+</m:math>=0.0228 (or even <m:math>
+ <m:semantics>
+  <m:mi>α</m:mi>
+</m:semantics>
+</m:math>=0.01). 
+                 </para>
+                <para id="para_35">
+                  
+                 </para>                
+                <para id="para_36">
+                  
+                 </para>
+                <para id="para_37">
+                  
+                 </para>
+                <para id="para_38">
+                  
+                 </para>
+                <para id="para_39">
+                  
+                 </para>
+
+
+</example> 
+
+         </section> 
+         </section> 
+         </section> 
+    <para id="delete_me">
+       <!-- Insert module text here -->
+    </para>   
+  </content>
+  
+</document>

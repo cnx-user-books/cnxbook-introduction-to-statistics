@@ -1,0 +1,1439 @@
+<document xmlns="http://cnx.rice.edu/cnxml" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:md="http://cnx.rice.edu/mdml">
+  <title>CONTINUOUS DISTRIBUTION</title>
+  <metadata><md:content-id>undefined</md:content-id><md:title/><md:uuid>824b946f-d5d6-482a-a501-ce3bbac09d0b</md:uuid>
+</metadata>
+  <content>
+<section id="sec_1">
+<title>CONTINUOUS DISTRIBUTION</title>
+        <section id="sec_2">
+        <title>RANDOM VARIABLES OF THE CONTINUOUS TYPE</title>
+<para id="para_1">
+Random variables whose spaces are not composed of a countable number of points but are intervals or a union of intervals are said to be of the <term>continuous type</term>. Recall that the relative frequency histogram <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mi>h</m:mi><m:mrow><m:mo>(</m:mo>
+    <m:mi>x</m:mi>
+   <m:mo>)</m:mo></m:mrow>
+  </m:mrow>
+ </m:semantics>
+</m:math>
+ associated with <emphasis>n</emphasis> observations of a random variable of that type is a nonnegative function defined so that the total area between its graph and the x axis equals one. In addition, <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mi>h</m:mi><m:mrow><m:mo>(</m:mo>
+    <m:mi>x</m:mi>
+   <m:mo>)</m:mo></m:mrow>
+  </m:mrow>
+ </m:semantics>
+</m:math>
+ is constructed so that the integral 
+</para>
+
+<equation id="eq_1"> 
+<m:math display="block">
+ <m:semantics>
+  <m:mrow>
+   <m:mstyle displaystyle="true">
+    <m:mrow><m:munderover>
+     <m:mo>∫</m:mo>
+     <m:mi>a</m:mi>
+     <m:mi>b</m:mi>
+    </m:munderover>
+    <m:mrow>
+     <m:mi>h</m:mi><m:mo stretchy="false">(</m:mo><m:mi>x</m:mi><m:mo stretchy="false">)</m:mo><m:mi>d</m:mi><m:mi>x</m:mi>
+    </m:mrow>
+   </m:mrow>
+   
+  </m:mstyle>
+ </m:mrow>
+</m:semantics>
+</m:math>
+</equation> 
+<para id="para_2">
+is an estimate of the probability <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mi>P</m:mi><m:mrow><m:mo>(</m:mo>
+    <m:mrow>
+<m:mi>a</m:mi><m:mo>&lt;</m:mo><m:mi>X</m:mi><m:mo>&lt;</m:mo><m:mi>b</m:mi>
+    </m:mrow>
+   <m:mo>)</m:mo></m:mrow>
+  </m:mrow>
+ </m:semantics>
+</m:math>
+, where the interval <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mrow><m:mo>(</m:mo>
+    <m:mrow>
+     <m:mi>a</m:mi><m:mo>,</m:mo><m:mi>b</m:mi>
+    </m:mrow>
+   <m:mo>)</m:mo></m:mrow>
+  </m:mrow>
+ </m:semantics>
+</m:math>
+ is a subset of the space <emphasis>R</emphasis> of the random variable <emphasis>X</emphasis>.
+</para>
+<para id="para_3">
+Let now consider what happens to the function <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mi>h</m:mi><m:mrow><m:mo>(</m:mo>
+    <m:mi>x</m:mi>
+   <m:mo>)</m:mo></m:mrow>
+  </m:mrow>
+ </m:semantics>
+</m:math>
+ in the limit, as n increases without bound and as the lengths of the class intervals decrease to zero. It is to be hoped that <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mi>h</m:mi><m:mrow><m:mo>(</m:mo>
+    <m:mi>x</m:mi>
+   <m:mo>)</m:mo></m:mrow>
+  </m:mrow>
+ </m:semantics>
+</m:math>
+ will become closer and closer to some function, say <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mi>f</m:mi><m:mrow><m:mo>(</m:mo>
+    <m:mi>x</m:mi>
+   <m:mo>)</m:mo></m:mrow>
+  </m:mrow>
+ </m:semantics>
+</m:math>
+, that gives the true probabilities , such as <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mi>P</m:mi><m:mrow><m:mo>(</m:mo>
+    <m:mrow>
+<m:mi>a</m:mi><m:mo>&lt;</m:mo><m:mi>X</m:mi><m:mo>&lt;</m:mo><m:mi>b</m:mi>
+    </m:mrow>
+   <m:mo>)</m:mo></m:mrow>
+  </m:mrow>
+ </m:semantics>
+</m:math>
+, through the integral
+</para>
+<equation id="eq_2"> 
+<m:math display="block">
+ <m:semantics>
+  <m:mrow>
+   <m:mi>P</m:mi><m:mrow><m:mo>(</m:mo>
+    <m:mrow>
+     <m:mi>a</m:mi><m:mo>&lt;</m:mo><m:mi>X</m:mi><m:mo>&lt;</m:mo><m:mi>b</m:mi>
+    </m:mrow>
+   <m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mstyle displaystyle="true">
+    <m:mrow><m:munderover>
+     <m:mo>∫</m:mo>
+     <m:mi>a</m:mi>
+     <m:mi>b</m:mi>
+    </m:munderover>
+    <m:mrow>
+     <m:mi>f</m:mi><m:mo stretchy="false">(</m:mo><m:mi>x</m:mi><m:mo stretchy="false">)</m:mo><m:mi>d</m:mi><m:mi>x</m:mi><m:mo>.</m:mo>
+    </m:mrow>
+   </m:mrow>
+     </m:mstyle>
+ </m:mrow>
+</m:semantics>
+</m:math>
+</equation> 
+<definition id="def_1">
+<term>PROBABILITY DENSITY FUNCTION</term>
+<meaning id="idm10154624">
+Function f(x) is a nonnegative function such that the total area between its graph and the x axis equals one. 
+</meaning>
+<meaning id="idm2165120">
+The probability <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mi>P</m:mi><m:mrow><m:mo>(</m:mo>
+    <m:mrow>
+<m:mi>a</m:mi><m:mo>&lt;</m:mo><m:mi>X</m:mi><m:mo>&lt;</m:mo><m:mi>b</m:mi>
+    </m:mrow>
+   <m:mo>)</m:mo></m:mrow>
+  </m:mrow>
+ </m:semantics>
+</m:math>
+ is the area bounded by the graph of <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mi>f</m:mi><m:mrow><m:mo>(</m:mo>
+    <m:mi>x</m:mi>
+   <m:mo>)</m:mo></m:mrow>
+  </m:mrow>
+ </m:semantics>
+</m:math>
+, the x axis, and the lines <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mi>x</m:mi><m:mo>=</m:mo><m:mi>a</m:mi>
+  </m:mrow> </m:semantics>
+</m:math>
+ and <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mi>x</m:mi><m:mo>=</m:mo><m:mi>b</m:mi>
+  </m:mrow> </m:semantics>
+</m:math>
+. 
+</meaning>
+<meaning id="idm10786288">
+We say that <term>the probability density function (p.d.f.)</term> of the random variable <emphasis>X</emphasis> of the continuous type, with space <emphasis>R</emphasis> that is an interval or union of intervals, is an integrable function <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mi>f</m:mi><m:mrow><m:mo>(</m:mo>
+    <m:mi>x</m:mi>
+   <m:mo>)</m:mo></m:mrow>
+  </m:mrow>
+ </m:semantics>
+</m:math>
+ satisfying the following conditions:
+          <list id="list_1">
+            <item>
+<m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mi>f</m:mi><m:mrow><m:mo>(</m:mo>
+    <m:mi>x</m:mi>
+   <m:mo>)</m:mo></m:mrow><m:mo>&gt;</m:mo><m:mn>0</m:mn>
+  </m:mrow>
+ </m:semantics>
+</m:math>
+, <emphasis>x</emphasis> belongs to <emphasis>R</emphasis>,
+            </item> 
+	    <item>
+<m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mstyle displaystyle="true">
+    <m:mrow><m:munderover>
+     <m:mo>∫</m:mo>
+     <m:mi>R</m:mi>
+     <m:mrow/>
+    </m:munderover>
+    <m:mrow>
+     <m:mi>f</m:mi><m:mo stretchy="false">(</m:mo><m:mi>x</m:mi><m:mo stretchy="false">)</m:mo><m:mi>d</m:mi><m:mi>x</m:mi>
+    </m:mrow>
+   </m:mrow>
+     </m:mstyle><m:mo>=</m:mo><m:mn>1,</m:mn>
+ </m:mrow>
+</m:semantics>
+</m:math>
+
+
+            </item> 
+	    <item>
+The probability of the event <emphasis>A</emphasis> belongs to <emphasis>R</emphasis> is <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mi>P</m:mi><m:mrow><m:mo>(</m:mo>
+    <m:mi>X</m:mi>
+   <m:mo>)</m:mo></m:mrow><m:mo>∈</m:mo><m:mi>A</m:mi><m:mstyle displaystyle="true">
+    <m:mrow><m:munderover>
+     <m:mo>∫</m:mo>
+     <m:mi>A</m:mi>
+     <m:mrow/>
+    </m:munderover>
+    <m:mrow>
+     <m:mi>f</m:mi><m:mo stretchy="false">(</m:mo><m:mi>x</m:mi><m:mo stretchy="false">)</m:mo><m:mi>d</m:mi><m:mi>x</m:mi><m:mo>.</m:mo>
+    </m:mrow>
+   </m:mrow>
+     </m:mstyle>
+ </m:mrow>
+</m:semantics>
+</m:math>
+         </item>
+            </list>
+</meaning>
+</definition>
+<example id="ex_1"> 
+<para id="para_4">
+Let the random variable <emphasis>X</emphasis> be the distance in feet between bad records on a used computer tape. Suppose that a reasonable probability model for <emphasis>X</emphasis> is given by the p.d.f.
+</para>
+<para id="para_5">
+<m:math display="block">
+ <m:semantics>
+  <m:mrow>
+   <m:mi>f</m:mi><m:mrow><m:mo>(</m:mo>
+    <m:mi>x</m:mi>
+   <m:mo>)</m:mo></m:mrow><m:mfrac>
+    <m:mn>1</m:mn>
+    <m:mrow>
+     <m:mn>40</m:mn>
+    </m:mrow>
+   </m:mfrac>
+   <m:msup>
+    <m:mi>e</m:mi>
+    <m:mrow>
+     <m:mo>−</m:mo><m:mi>x</m:mi><m:mo>/</m:mo><m:mn>40</m:mn>
+    </m:mrow>
+   </m:msup>
+   <m:mn>,0</m:mn><m:mo>≤</m:mo><m:mi>x</m:mi><m:mo>&lt;</m:mo><m:mi>∞</m:mi><m:mo>.</m:mo>
+  </m:mrow>
+ </m:semantics>
+</m:math>
+</para>
+<note type="Note That" id="idm2140624"><label>Note That</label>
+<m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mi>R</m:mi><m:mo>=</m:mo><m:mrow><m:mo>(</m:mo>
+    <m:mrow>
+<m:mi>x</m:mi><m:mo>:</m:mo><m:mn>0</m:mn><m:mo>≤</m:mo><m:mi>x</m:mi><m:mo>&lt;</m:mo><m:mi>∞</m:mi>
+    </m:mrow>
+   <m:mo>)</m:mo></m:mrow>
+  </m:mrow>
+ </m:semantics>
+</m:math>
+ and <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mi>f</m:mi><m:mrow><m:mo>(</m:mo>
+    <m:mi>x</m:mi>
+   <m:mo>)</m:mo></m:mrow>
+  </m:mrow>
+ </m:semantics>
+</m:math>
+ for <emphasis>x</emphasis> belonging to <emphasis>R</emphasis>, <m:math display="block">
+ <m:semantics>
+  <m:mrow>
+   <m:mstyle displaystyle="true">
+    <m:mrow>
+     <m:msub>
+      <m:mo>∫</m:mo>
+      <m:mi>R</m:mi>
+     </m:msub>
+     <m:mrow>
+      <m:mi>f</m:mi><m:mrow><m:mo>(</m:mo>
+       <m:mi>x</m:mi>
+      <m:mo>)</m:mo></m:mrow>
+     </m:mrow>
+    </m:mrow>
+    
+   </m:mstyle><m:mi>d</m:mi><m:mi>x</m:mi><m:mo>=</m:mo><m:mstyle displaystyle="true">
+    <m:mrow><m:munderover>
+     <m:mo>∫</m:mo>
+     <m:mn>0</m:mn>
+     <m:mi>∞</m:mi>
+    </m:munderover>
+    <m:mrow>
+     <m:mfrac>
+      <m:mn>1</m:mn>
+      <m:mrow>
+       <m:mn>40</m:mn>
+      </m:mrow>
+     </m:mfrac>
+     <m:msup>
+      <m:mi>e</m:mi>
+      <m:mrow>
+       <m:mo>−</m:mo><m:mi>x</m:mi><m:mo>/</m:mo><m:mn>40</m:mn>
+      </m:mrow>
+     </m:msup>
+     <m:mi>d</m:mi><m:mi>x</m:mi><m:mo>=</m:mo><m:munder>
+      <m:mstyle mathsize="140%" displaystyle="true"><m:mrow>
+       <m:mi>lim</m:mi><m:mo>⁡</m:mo>
+      </m:mrow></m:mstyle>
+      <m:mrow>
+       <m:mi>b</m:mi><m:mo>→</m:mo><m:mi>∞</m:mi>
+      </m:mrow>
+     </m:munder>
+     
+    </m:mrow>
+   </m:mrow>
+   
+  </m:mstyle><m:msubsup>
+   <m:mrow>
+    <m:mrow><m:mo>[</m:mo> <m:mrow>
+     <m:msup>
+      <m:mi>e</m:mi>
+      <m:mrow>
+       <m:mo>−</m:mo><m:mi>x</m:mi><m:mo>/</m:mo><m:mn>40</m:mn>
+      </m:mrow>
+     </m:msup>
+     
+    </m:mrow> <m:mo>]</m:mo></m:mrow>
+   </m:mrow>
+   <m:mn>0</m:mn>
+   <m:mi>b</m:mi>
+  </m:msubsup>
+  <m:mo>=</m:mo><m:mn>1</m:mn><m:mo>−</m:mo><m:munder>
+   <m:mstyle mathsize="140%" displaystyle="true"><m:mrow>
+    <m:mi>lim</m:mi><m:mo>⁡</m:mo>
+   </m:mrow></m:mstyle>
+   <m:mrow>
+    <m:mi>b</m:mi><m:mo>→</m:mo><m:mi>∞</m:mi>
+   </m:mrow>
+  </m:munder>
+  <m:msup>
+   <m:mi>e</m:mi>
+   <m:mrow>
+    <m:mo>−</m:mo><m:mi>b</m:mi><m:mo>/</m:mo><m:mn>40</m:mn>
+   </m:mrow>
+  </m:msup>
+  <m:mo>=</m:mo><m:mn>1.</m:mn>
+ </m:mrow>
+</m:semantics>
+</m:math>
+ </note>
+<para id="para_6">
+The probability that the distance between bad records is greater than 40 feet
+is
+</para>
+<para id="para_7">
+<m:math display="block">
+ <m:semantics>
+  <m:mrow>
+   <m:mi>P</m:mi><m:mrow><m:mo>(</m:mo>
+    <m:mrow>
+     <m:mi>X</m:mi><m:mo>&gt;</m:mo><m:mn>40</m:mn>
+    </m:mrow>
+   <m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mstyle displaystyle="true">
+    <m:mrow><m:munderover>
+     <m:mo>∫</m:mo>
+     <m:mrow>
+      <m:mn>40</m:mn>
+     </m:mrow>
+     <m:mi>∞</m:mi>
+    </m:munderover>
+    <m:mrow>
+     <m:mfrac>
+      <m:mn>1</m:mn>
+      <m:mrow>
+       <m:mn>40</m:mn>
+      </m:mrow>
+     </m:mfrac>
+     <m:msup>
+      <m:mi>e</m:mi>
+      <m:mrow>
+       <m:mo>−</m:mo><m:mi>x</m:mi><m:mo>/</m:mo><m:mn>40</m:mn>
+      </m:mrow>
+     </m:msup>
+     <m:mi>d</m:mi><m:mi>x</m:mi><m:mo>=</m:mo>
+    </m:mrow>
+   </m:mrow>
+   
+  </m:mstyle><m:msup>
+   <m:mi>e</m:mi>
+   <m:mrow>
+    <m:mo>−</m:mo><m:mn>1</m:mn>
+   </m:mrow>
+  </m:msup>
+  <m:mo>=</m:mo><m:mn>0.368.</m:mn>
+ </m:mrow>
+</m:semantics>
+</m:math>
+</para>
+<para id="para_8">
+The p.d.f. and the probability of interest are depicted in <link target-id="fig_1">FIG.1</link>.
+</para>
+</example>
+
+   <figure id="fig_1">
+	<media id="idp4100832" alt=""><image src="../../media/Fig_ex1.gif" mime-type="image/gif"/></media>
+	<caption>
+The p.d.f. and the probability of interest.
+    </caption>
+</figure>
+
+
+<para id="para_9">
+We can avoid repeated references to the space <emphasis>R</emphasis> of the random variable <emphasis>X</emphasis>, one shall adopt the same convention when describing probability density function of the continuous type as was in the discrete case.
+</para>
+<para id="para_10">
+Let extend the definition of the p.d.f. <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mi>f</m:mi><m:mrow><m:mo>(</m:mo>
+    <m:mi>x</m:mi>
+   <m:mo>)</m:mo></m:mrow>
+  </m:mrow>
+ </m:semantics>
+</m:math>
+ to the entire set of real numbers by letting it equal zero when, <emphasis>x</emphasis> belongs to <emphasis>R</emphasis>. For example, 
+</para>
+<para id="para_11">
+<m:math display="block">
+ <m:semantics>
+  <m:mrow>
+   <m:mi>f</m:mi><m:mrow><m:mo>(</m:mo>
+    <m:mi>x</m:mi>
+   <m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mrow><m:mo>{</m:mo> <m:mtable columnalign="left">
+    <m:mtr>
+     <m:mtd>
+      <m:mfrac>
+       <m:mn>1</m:mn>
+       <m:mrow>
+        <m:mn>40</m:mn>
+       </m:mrow>
+      </m:mfrac>
+      <m:msup>
+       <m:mi>e</m:mi>
+       <m:mrow>
+        <m:mo>−</m:mo><m:mi>x</m:mi><m:mo>/</m:mo><m:mn>40</m:mn>
+       </m:mrow>
+      </m:msup>
+      
+     </m:mtd>
+    </m:mtr>
+    <m:mtr>
+     <m:mtd>
+      <m:mn>0,</m:mn><m:mi>e</m:mi><m:mi>l</m:mi><m:mi>s</m:mi><m:mi>e</m:mi><m:mi>w</m:mi><m:mi>h</m:mi><m:mi>e</m:mi><m:mi>r</m:mi><m:mi>e</m:mi><m:mo>,</m:mo>
+     </m:mtd>
+    </m:mtr>
+   </m:mtable>
+    </m:mrow><m:mn>,0</m:mn><m:mo>≤</m:mo><m:mi>x</m:mi><m:mo>&lt;</m:mo><m:mi>∞</m:mi><m:mo>,</m:mo>
+  </m:mrow>
+ </m:semantics>
+</m:math>
+</para>
+<para id="para_12">
+has the properties of a p.d.f. of a continuous-type random variable <emphasis>x</emphasis> having support <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mrow><m:mo>(</m:mo>
+    <m:mrow>
+     <m:mi>x</m:mi><m:mo>:</m:mo><m:mn>0</m:mn><m:mo>≤</m:mo><m:mi>x</m:mi><m:mo>&lt;</m:mo><m:mi>∞</m:mi>
+    </m:mrow>
+   <m:mo>)</m:mo></m:mrow>
+  </m:mrow>
+ </m:semantics>
+</m:math>
+. It will always be understood that <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mi>f</m:mi><m:mo stretchy="false">(</m:mo><m:mi>x</m:mi><m:mo stretchy="false">)</m:mo><m:mo>=</m:mo><m:mn>0</m:mn>
+  </m:mrow>
+ </m:semantics>
+</m:math>
+, when <emphasis>x</emphasis> belongs to <emphasis>R</emphasis>, even when this is not explicitly written out. 
+</para>
+</section>
+        <section id="sec_3">
+<definition id="def_2">
+<term>PROBABILITY DENSITY FUNCTION</term>
+<meaning id="idp5915712">
+The  distribution function of a random variable <emphasis>X</emphasis> of the continuous type, is defined in terms of the p.d.f. of <emphasis>X</emphasis>, and is given by <m:math display="block">
+ <m:semantics>
+  <m:mrow>
+   <m:mi>F</m:mi><m:mrow><m:mo>(</m:mo>
+    <m:mi>x</m:mi>
+   <m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mi>P</m:mi><m:mrow><m:mo>(</m:mo>
+    <m:mrow>
+     <m:mi>X</m:mi><m:mo>≤</m:mo><m:mi>x</m:mi>
+    </m:mrow>
+   <m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mstyle displaystyle="true">
+    <m:mrow><m:munderover>
+     <m:mo>∫</m:mo>
+     <m:mrow>
+      <m:mo>−</m:mo><m:mi>∞</m:mi>
+     </m:mrow>
+     <m:mi>x</m:mi>
+    </m:munderover>
+    <m:mrow>
+     <m:mi>f</m:mi><m:mrow><m:mo>(</m:mo>
+      <m:mi>t</m:mi>
+     <m:mo>)</m:mo></m:mrow><m:mi>d</m:mi><m:mi>t</m:mi><m:mo>.</m:mo>
+    </m:mrow>
+   </m:mrow>
+   
+  </m:mstyle>
+ </m:mrow>
+</m:semantics>
+</m:math>
+</meaning>
+<meaning id="idp9293840">
+For the fundamental theorem of calculus we have, for <emphasis>x</emphasis> values for which the derivative <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mi>F</m:mi><m:mo>'</m:mo><m:mrow><m:mo>(</m:mo>
+    <m:mi>x</m:mi>
+   <m:mo>)</m:mo></m:mrow>
+  </m:mrow>
+ </m:semantics>
+</m:math>
+ exists, that <emphasis>F</emphasis>’(<emphasis>x</emphasis>)=<emphasis>f</emphasis>(<emphasis>x</emphasis>).
+</meaning>
+</definition>
+<example id="ex_2">
+<para id="para_13">
+continuing with <link target-id="ex_1">Example 1</link>
+</para>
+<para id="para_14">
+If the p.d.f. of <emphasis>X</emphasis> is
+</para>
+<para id="para_15">
+<m:math display="block">
+ <m:semantics>
+  <m:mrow>
+   <m:mi>f</m:mi><m:mrow><m:mo>(</m:mo>
+    <m:mi>x</m:mi>
+   <m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mrow><m:mo>{</m:mo> <m:mtable columnalign="left">
+    <m:mtr>
+     <m:mtd>
+      <m:mn>0,</m:mn><m:mo>−</m:mo><m:mi>∞</m:mi><m:mo>&lt;</m:mo><m:mi>x</m:mi><m:mo>&lt;</m:mo><m:mn>0,</m:mn>
+     </m:mtd>
+    </m:mtr>
+    <m:mtr>
+     <m:mtd>
+      <m:mfrac>
+       <m:mn>1</m:mn>
+       <m:mrow>
+        <m:mn>40</m:mn>
+       </m:mrow>
+      </m:mfrac>
+      <m:msup>
+       <m:mi>e</m:mi>
+       <m:mrow>
+        <m:mo>−</m:mo><m:mi>x</m:mi><m:mo>/</m:mo><m:mn>40</m:mn>
+       </m:mrow>
+      </m:msup>
+      <m:mn>,0</m:mn><m:mo>≤</m:mo><m:mi>x</m:mi><m:mo>&lt;</m:mo><m:mi>∞</m:mi><m:mo>,</m:mo>
+     </m:mtd>
+    </m:mtr>
+   </m:mtable>
+    </m:mrow>
+  </m:mrow>
+ </m:semantics>
+</m:math>
+</para>
+<para id="para_16">
+The distribution function of <emphasis>X</emphasis> is <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mi>F</m:mi><m:mrow><m:mo>(</m:mo>
+    <m:mi>x</m:mi>
+   <m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>0</m:mn>
+  </m:mrow>
+ </m:semantics>
+</m:math>
+ for <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mi>x</m:mi><m:mo>≤</m:mo><m:mn>0</m:mn>
+  </m:mrow>
+ </m:semantics>
+</m:math>
+</para>
+<para id="para_17">
+<m:math display="block">
+ <m:semantics>
+  <m:mrow>
+   <m:mi>F</m:mi><m:mrow><m:mo>(</m:mo>
+    <m:mi>x</m:mi>
+   <m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mstyle displaystyle="true">
+    <m:mrow><m:munderover>
+     <m:mo>∫</m:mo>
+     <m:mrow>
+      <m:mo>−</m:mo><m:mi>∞</m:mi>
+     </m:mrow>
+     <m:mi>x</m:mi>
+    </m:munderover>
+    <m:mrow>
+     <m:mi>f</m:mi><m:mrow><m:mo>(</m:mo>
+      <m:mi>t</m:mi>
+     <m:mo>)</m:mo></m:mrow><m:mi>d</m:mi><m:mi>t</m:mi><m:mo>=</m:mo><m:mstyle displaystyle="true">
+      <m:mrow><m:munderover>
+       <m:mo>∫</m:mo>
+       <m:mn>0</m:mn>
+       <m:mi>x</m:mi>
+      </m:munderover>
+      <m:mrow>
+       <m:mfrac>
+        <m:mn>1</m:mn>
+        <m:mrow>
+         <m:mn>40</m:mn>
+        </m:mrow>
+       </m:mfrac>
+       <m:msup>
+        <m:mi>e</m:mi>
+        <m:mrow>
+         <m:mo>−</m:mo><m:mi>t</m:mi><m:mo>/</m:mo><m:mn>40</m:mn>
+        </m:mrow>
+       </m:msup>
+       <m:mi>d</m:mi><m:mi>t</m:mi><m:mo>=</m:mo><m:mo>−</m:mo><m:msup>
+        <m:mi>e</m:mi>
+        <m:mrow>
+         <m:mo>−</m:mo><m:mi>t</m:mi><m:mo>/</m:mo><m:mn>40</m:mn>
+        </m:mrow>
+       </m:msup>
+       <m:msubsup>
+        <m:mo>|</m:mo>
+        <m:mn>0</m:mn>
+        <m:mi>x</m:mi>
+       </m:msubsup>
+       <m:mo>=</m:mo><m:mn>1</m:mn><m:mo>−</m:mo><m:msup>
+        <m:mi>e</m:mi>
+        <m:mrow>
+         <m:mo>−</m:mo><m:mi>x</m:mi><m:mo>/</m:mo><m:mn>40</m:mn>
+        </m:mrow>
+       </m:msup>
+       
+      </m:mrow>
+     </m:mrow>
+     
+    </m:mstyle><m:mo>.</m:mo>
+   </m:mrow>
+  </m:mrow>
+  
+ </m:mstyle>
+</m:mrow>
+</m:semantics>
+</m:math>
+</para>
+
+<note type="Note That" id="idm1498576"><label>Note That</label>
+<m:math display="block">
+ <m:semantics>
+  <m:mrow>
+   <m:mi>F</m:mi><m:mrow><m:mo>(</m:mo>
+    <m:mi>x</m:mi>
+   <m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mrow><m:mo>{</m:mo> <m:mtable columnalign="left">
+    <m:mtr>
+     <m:mtd>
+      <m:mn>0,</m:mn><m:mo>−</m:mo><m:mi>∞</m:mi><m:mo>&lt;</m:mo><m:mi>x</m:mi><m:mo>&lt;</m:mo><m:mn>0,</m:mn>
+     </m:mtd>
+    </m:mtr>
+    <m:mtr>
+     <m:mtd>
+      <m:mfrac>
+       <m:mn>1</m:mn>
+       <m:mrow>
+        <m:mn>40</m:mn>
+       </m:mrow>
+      </m:mfrac>
+      <m:msup>
+       <m:mi>e</m:mi>
+       <m:mrow>
+        <m:mo>−</m:mo><m:mi>x</m:mi><m:mo>/</m:mo><m:mn>40</m:mn>
+       </m:mrow>
+      </m:msup>
+      <m:mn>,0</m:mn><m:mo>&lt;</m:mo><m:mi>x</m:mi><m:mo>&lt;</m:mo><m:mi>∞</m:mi><m:mo>.</m:mo>
+     </m:mtd>
+    </m:mtr>
+   </m:mtable>
+    </m:mrow>
+  </m:mrow>
+ </m:semantics>
+</m:math>
+</note>
+</example>
+<para id="para_18">
+Also <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mi>F</m:mi><m:mo>'</m:mo><m:mrow><m:mo>(</m:mo>
+    <m:mn>0</m:mn>
+   <m:mo>)</m:mo></m:mrow>
+  </m:mrow>
+ </m:semantics>
+</m:math>
+ does not exist. Since there are no steps or jumps in a distribution function <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mi>F</m:mi><m:mrow><m:mo>(</m:mo>
+    <m:mi>x</m:mi>
+   <m:mo>)</m:mo></m:mrow>
+  </m:mrow>
+ </m:semantics>
+</m:math>
+, of the continuous type, it must be true that  <m:math display="block">
+ <m:semantics>
+  <m:mrow>
+   <m:mi>P</m:mi><m:mrow><m:mo>(</m:mo>
+    <m:mrow>
+     <m:mi>X</m:mi><m:mo>=</m:mo><m:mi>b</m:mi>
+    </m:mrow>
+   <m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>0</m:mn>
+  </m:mrow>
+ </m:semantics>
+</m:math>
+ for all real values of <emphasis>b</emphasis>. This agrees with the fact that the integral
+</para>
+<para id="para_19">
+<m:math display="block">
+ <m:semantics>
+  <m:mrow>
+   <m:mstyle displaystyle="true">
+    <m:mrow><m:munderover>
+     <m:mo>∫</m:mo>
+     <m:mi>a</m:mi>
+     <m:mi>b</m:mi>
+    </m:munderover>
+    <m:mrow>
+     <m:mi>f</m:mi><m:mrow><m:mo>(</m:mo>
+      <m:mi>x</m:mi>
+     <m:mo>)</m:mo></m:mrow><m:mi>d</m:mi><m:mi>x</m:mi>
+    </m:mrow>
+   </m:mrow>
+     </m:mstyle>
+ </m:mrow>
+</m:semantics>
+</m:math>
+ is taken to be zero in calculus. Thus we see that <m:math display="block">
+ <m:semantics>
+  <m:mrow>
+   <m:mi>P</m:mi><m:mrow><m:mo>(</m:mo>
+    <m:mrow>
+     <m:mi>a</m:mi><m:mo>≤</m:mo><m:mi>X</m:mi><m:mo>≤</m:mo><m:mi>b</m:mi>
+    </m:mrow>
+   <m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mi>P</m:mi><m:mrow><m:mo>(</m:mo>
+    <m:mrow>
+     <m:mi>a</m:mi><m:mo>&lt;</m:mo><m:mi>X</m:mi><m:mo>&lt;</m:mo><m:mi>b</m:mi>
+    </m:mrow>
+   <m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mi>P</m:mi><m:mrow><m:mo>(</m:mo>
+    <m:mrow>
+     <m:mi>a</m:mi><m:mo>≤</m:mo><m:mi>X</m:mi><m:mo>&lt;</m:mo><m:mi>b</m:mi>
+    </m:mrow>
+   <m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mi>P</m:mi><m:mrow><m:mo>(</m:mo>
+    <m:mrow>
+     <m:mi>a</m:mi><m:mo>&lt;</m:mo><m:mi>X</m:mi><m:mo>≤</m:mo><m:mi>b</m:mi>
+    </m:mrow>
+   <m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mi>F</m:mi><m:mrow><m:mo>(</m:mo>
+    <m:mi>b</m:mi>
+   <m:mo>)</m:mo></m:mrow><m:mo>−</m:mo><m:mi>F</m:mi><m:mrow><m:mo>(</m:mo>
+    <m:mi>a</m:mi>
+   <m:mo>)</m:mo></m:mrow><m:mo>,</m:mo>
+  </m:mrow>
+ </m:semantics>
+</m:math> provided that <emphasis>X</emphasis> is a random variable of the continuous type. Moreover, we can change the definition of a p.d.f. of a random variable of the continuous type at a finite (actually countable) number of points without alerting the distribution of probability.
+</para>
+<para id="para_20">
+For illustration, <m:math display="block">
+ <m:semantics>
+  <m:mrow>
+   <m:mi>f</m:mi><m:mrow><m:mo>(</m:mo>
+    <m:mi>x</m:mi>
+   <m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mrow><m:mo>{</m:mo> <m:mtable columnalign="left">
+    <m:mtr>
+     <m:mtd>
+      <m:mn>0,</m:mn><m:mo>−</m:mo><m:mi>∞</m:mi><m:mo>&lt;</m:mo><m:mi>x</m:mi><m:mo>&lt;</m:mo><m:mn>0,</m:mn>
+     </m:mtd>
+    </m:mtr>
+    <m:mtr>
+     <m:mtd>
+      <m:mfrac>
+       <m:mn>1</m:mn>
+       <m:mrow>
+        <m:mn>40</m:mn>
+       </m:mrow>
+      </m:mfrac>
+      <m:msup>
+       <m:mi>e</m:mi>
+       <m:mrow>
+        <m:mo>−</m:mo><m:mi>x</m:mi><m:mo>/</m:mo><m:mn>40</m:mn>
+       </m:mrow>
+      </m:msup>
+      <m:mn>,0</m:mn><m:mo>≤</m:mo><m:mi>x</m:mi><m:mo>&lt;</m:mo><m:mi>∞</m:mi><m:mo>,</m:mo>
+     </m:mtd>
+    </m:mtr>
+   </m:mtable>
+    </m:mrow>
+  </m:mrow>
+ </m:semantics>
+</m:math>
+ and <m:math display="block">
+ <m:semantics>
+  <m:mrow>
+   <m:mi>f</m:mi><m:mrow><m:mo>(</m:mo>
+    <m:mi>x</m:mi>
+   <m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mrow><m:mo>{</m:mo> <m:mtable columnalign="left">
+    <m:mtr>
+     <m:mtd>
+      <m:mn>0,</m:mn><m:mo>−</m:mo><m:mi>∞</m:mi><m:mo>&lt;</m:mo><m:mi>x</m:mi><m:mo>≤</m:mo><m:mn>0,</m:mn>
+     </m:mtd>
+    </m:mtr>
+    <m:mtr>
+     <m:mtd>
+      <m:mfrac>
+       <m:mn>1</m:mn>
+       <m:mrow>
+        <m:mn>40</m:mn>
+       </m:mrow>
+      </m:mfrac>
+      <m:msup>
+       <m:mi>e</m:mi>
+       <m:mrow>
+        <m:mo>−</m:mo><m:mi>x</m:mi><m:mo>/</m:mo><m:mn>40</m:mn>
+       </m:mrow>
+      </m:msup>
+      <m:mn>,0</m:mn><m:mo>&lt;</m:mo><m:mi>x</m:mi><m:mo>&lt;</m:mo><m:mi>∞</m:mi><m:mo>,</m:mo>
+     </m:mtd>
+    </m:mtr>
+   </m:mtable>
+    </m:mrow>
+  </m:mrow>
+ </m:semantics>
+</m:math>
+</para>
+<para id="para_21">
+are equivalent in the computation of probabilities involving this random variable. 
+</para>
+<example id="ex_3">
+<para id="para_22">
+Let <emphasis>Y</emphasis> be a continuous random variable with the p.d.f. <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mi>g</m:mi><m:mrow><m:mo>(</m:mo>
+    <m:mi>y</m:mi>
+<m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>2</m:mn><m:mi>y</m:mi>
+  </m:mrow>
+ </m:semantics>
+</m:math>
+, <m:math>
+ <m:semantics>
+  <m:mrow>
+<m:mn>0</m:mn><m:mo>&lt;</m:mo><m:mi>y</m:mi><m:mo>&lt;</m:mo><m:mn>1</m:mn>
+  </m:mrow>
+ </m:semantics>
+</m:math>
+. The distribution function of <emphasis>Y</emphasis> is defined by 
+</para>
+<para id="para_24">
+<m:math display="block">
+ <m:semantics>
+  <m:mrow>
+   <m:mi>G</m:mi><m:mrow><m:mo>(</m:mo>
+    <m:mi>y</m:mi>
+   <m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mrow><m:mo>(</m:mo> <m:mtable columnalign="left">
+    <m:mtr>
+     <m:mtd>
+      <m:mn>0,</m:mn><m:mi>y</m:mi><m:mo>&lt;</m:mo><m:mn>0,</m:mn>
+     </m:mtd>
+    </m:mtr>
+    <m:mtr>
+     <m:mtd>
+      <m:mn>1,</m:mn><m:mi>y</m:mi><m:mo>≥</m:mo><m:mn>1,</m:mn>
+     </m:mtd>
+    </m:mtr>
+    <m:mtr>
+     <m:mtd>
+      <m:mstyle displaystyle="true">
+       <m:mrow><m:munderover>
+        <m:mo>∫</m:mo>
+        <m:mn>0</m:mn>
+        <m:mi>y</m:mi>
+       </m:munderover>
+       <m:mrow>
+        <m:mn>2</m:mn><m:mi>t</m:mi><m:mi>d</m:mi><m:mi>t</m:mi><m:mo>=</m:mo><m:msup>
+         <m:mi>y</m:mi>
+         <m:mn>2</m:mn>
+        </m:msup>
+        <m:mn>,0</m:mn><m:mo>≤</m:mo><m:mi>y</m:mi><m:mo>&lt;</m:mo><m:mn>1.</m:mn>
+       </m:mrow>
+      </m:mrow>
+      
+     </m:mstyle>
+    </m:mtd>
+   </m:mtr>
+  </m:mtable>
+  </m:mrow>
+ </m:mrow>
+</m:semantics>
+</m:math>
+</para>
+<para id="para_25">
+<link target-id="fig_2">Figure 2</link> gives the graph of the p.d.f. <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mi>g</m:mi><m:mrow><m:mo>(</m:mo>
+    <m:mi>y</m:mi>
+   <m:mo>)</m:mo></m:mrow>
+  </m:mrow>
+
+ </m:semantics>
+</m:math>
+ and the graph of the distribution function <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mi>G</m:mi><m:mrow><m:mo>(</m:mo>
+    <m:mi>y</m:mi>
+   <m:mo>)</m:mo></m:mrow>
+  </m:mrow>
+ </m:semantics>
+</m:math>. 
+</para>
+
+   <figure id="fig_2">
+	<media id="idp1294544" alt=""><image src="../../media/Cont_ex_3.gif" mime-type="image/gif"/></media>
+	<caption>
+The p.d.f. and the probability of interest.
+    </caption>
+</figure>
+</example>
+<section id="sec_4">
+<para id="para_26">
+For illustration of computations of probabilities, consider 
+</para>
+<para id="para_27">
+<m:math display="block">
+ <m:semantics>
+  <m:mrow>
+   <m:mi>P</m:mi><m:mrow><m:mo>(</m:mo>
+    <m:mrow>
+     <m:mfrac>
+      <m:mn>1</m:mn>
+      <m:mn>2</m:mn>
+     </m:mfrac>
+     <m:mo>&lt;</m:mo><m:mi>Y</m:mi><m:mo>≤</m:mo><m:mfrac>
+      <m:mn>3</m:mn>
+      <m:mn>4</m:mn>
+     </m:mfrac>
+     
+    </m:mrow>
+   <m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mi>G</m:mi><m:mrow><m:mo>(</m:mo>
+    <m:mrow>
+     <m:mfrac>
+      <m:mn>3</m:mn>
+      <m:mn>4</m:mn>
+     </m:mfrac>
+     
+    </m:mrow>
+   <m:mo>)</m:mo></m:mrow><m:mo>−</m:mo><m:mi>G</m:mi><m:mrow><m:mo>(</m:mo>
+    <m:mrow>
+     <m:mfrac>
+      <m:mn>1</m:mn>
+      <m:mn>2</m:mn>
+     </m:mfrac>
+     
+    </m:mrow>
+   <m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:msup>
+    <m:mrow>
+     <m:mrow><m:mo>(</m:mo>
+      <m:mrow>
+       <m:mfrac>
+        <m:mn>3</m:mn>
+        <m:mn>4</m:mn>
+       </m:mfrac>
+       
+      </m:mrow>
+     <m:mo>)</m:mo></m:mrow>
+    </m:mrow>
+    <m:mn>2</m:mn>
+   </m:msup>
+   <m:mo>−</m:mo><m:msup>
+    <m:mrow>
+     <m:mrow><m:mo>(</m:mo>
+      <m:mrow>
+       <m:mfrac>
+        <m:mn>1</m:mn>
+        <m:mn>2</m:mn>
+       </m:mfrac>
+       
+      </m:mrow>
+     <m:mo>)</m:mo></m:mrow>
+    </m:mrow>
+    <m:mn>2</m:mn>
+   </m:msup>
+   <m:mo>=</m:mo><m:mfrac>
+    <m:mn>5</m:mn>
+    <m:mrow>
+     <m:mn>16</m:mn>
+    </m:mrow>
+   </m:mfrac>
+   
+  </m:mrow>
+
+ </m:semantics>
+</m:math>
+</para>
+<para id="para_28">
+  and <m:math display="block">
+ <m:semantics>
+  <m:mrow>
+   <m:mi>P</m:mi><m:mrow><m:mo>(</m:mo>
+    <m:mrow>
+     <m:mfrac>
+      <m:mn>1</m:mn>
+      <m:mn>4</m:mn>
+     </m:mfrac>
+     <m:mo>≤</m:mo><m:mi>Y</m:mi><m:mo>&lt;</m:mo><m:mn>2</m:mn>
+    </m:mrow>
+   <m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mi>G</m:mi><m:mrow><m:mo>(</m:mo>
+    <m:mn>2</m:mn>
+   <m:mo>)</m:mo></m:mrow><m:mo>−</m:mo><m:mi>G</m:mi><m:mrow><m:mo>(</m:mo>
+    <m:mrow>
+     <m:mfrac>
+      <m:mn>1</m:mn>
+      <m:mn>4</m:mn>
+     </m:mfrac>
+     
+    </m:mrow>
+   <m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>1</m:mn><m:mo>−</m:mo><m:msup>
+    <m:mrow>
+     <m:mrow><m:mo>(</m:mo>
+      <m:mrow>
+       <m:mfrac>
+        <m:mn>1</m:mn>
+        <m:mn>4</m:mn>
+       </m:mfrac>
+       
+      </m:mrow>
+     <m:mo>)</m:mo></m:mrow>
+    </m:mrow>
+    <m:mn>2</m:mn>
+   </m:msup>
+   <m:mo>=</m:mo><m:mfrac>
+    <m:mrow>
+     <m:mn>15</m:mn>
+    </m:mrow>
+    <m:mrow>
+     <m:mn>16</m:mn>
+    </m:mrow>
+   </m:mfrac>
+   <m:mo>.</m:mo>
+  </m:mrow>
+ </m:semantics>
+</m:math>
+</para>
+<note type="Recall That" id="idp2726656"><label>Recall That</label>
+The p.d.f. <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mi>f</m:mi><m:mrow><m:mo>(</m:mo>
+    <m:mi>x</m:mi>
+   <m:mo>)</m:mo></m:mrow>
+  </m:mrow>
+ </m:semantics>
+</m:math>
+ of a random variable of the discrete type is bounded by one because <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mi>f</m:mi><m:mrow><m:mo>(</m:mo>
+    <m:mi>x</m:mi>
+   <m:mo>)</m:mo></m:mrow>
+  </m:mrow>
+ </m:semantics>
+</m:math>
+ gives a probability, namely <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mi>f</m:mi><m:mrow><m:mo>(</m:mo>
+    <m:mi>x</m:mi>
+   <m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mi>P</m:mi><m:mrow><m:mo>(</m:mo>
+    <m:mrow>
+     <m:mi>X</m:mi><m:mo>=</m:mo><m:mi>x</m:mi>
+    </m:mrow>
+   <m:mo>)</m:mo></m:mrow>
+  </m:mrow>
+ </m:semantics>
+</m:math>.
+</note>
+<para id="para_29">
+For random variables of the continuous type, the p.d.f. does not have to be bounded. The restriction is that the area between the p.d.f. and the <emphasis>x</emphasis> axis must equal one. Furthermore, it should be noted that the p.d.f. of a random variable <emphasis>X</emphasis> of the continuous type does not need to be a continuous function. 
+</para>
+<para id="para_30">
+<term>For example,</term>
+</para>
+<para id="para_31">
+<m:math display="block">
+ <m:semantics>
+  <m:mrow>
+   <m:mi>f</m:mi><m:mrow><m:mo>(</m:mo>
+    <m:mi>x</m:mi>
+   <m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mrow><m:mo>{</m:mo> <m:mtable columnalign="left">
+    <m:mtr>
+     <m:mtd>
+      <m:mfrac>
+       <m:mn>1</m:mn>
+       <m:mrow>
+        <m:mn>2,</m:mn>
+       </m:mrow>
+      </m:mfrac>
+      <m:mn>0</m:mn><m:mo>&lt;</m:mo><m:mi>x</m:mi><m:mo>&lt;</m:mo><m:mn>1</m:mn><m:mi>o</m:mi><m:mi>r</m:mi><m:mn>2</m:mn><m:mo>&lt;</m:mo><m:mi>x</m:mi><m:mo>&lt;</m:mo><m:mn>3,</m:mn>
+     </m:mtd>
+    </m:mtr>
+    <m:mtr>
+     <m:mtd>
+      <m:mn>0,</m:mn><m:mi>e</m:mi><m:mi>l</m:mi><m:mi>s</m:mi><m:mi>e</m:mi><m:mi>w</m:mi><m:mi>h</m:mi><m:mi>e</m:mi><m:mi>r</m:mi><m:mi>e</m:mi><m:mo>,</m:mo>
+     </m:mtd>
+    </m:mtr>
+   </m:mtable>
+    </m:mrow>
+  </m:mrow>
+ </m:semantics>
+</m:math>
+</para>
+<para id="para_32">
+enjoys the properties of a p.d.f. of a distribution of the continuous type, and yet <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mi>f</m:mi><m:mrow><m:mo>(</m:mo>
+    <m:mi>x</m:mi>
+   <m:mo>)</m:mo></m:mrow>
+  </m:mrow>
+ </m:semantics>
+</m:math>
+ had discontinuities at <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mi>x</m:mi><m:mo>=</m:mo><m:mn>0,1,2,</m:mn>
+  </m:mrow>
+ </m:semantics>
+</m:math>
+ and 3. However, the distribution function associates with a distribution of the continuous type is always a continuous function. For continuous type random variables, the definitions associated with mathematical expectation are the same as those in the discrete case except that integrals replace summations. 
+</para>
+</section>
+<section id="sec_5">
+<para id="para_33">
+<term>FOR ILLUSTRATION</term>, let <emphasis>X</emphasis> be a random variable with a p.d.f. <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mi>f</m:mi><m:mrow><m:mo>(</m:mo>
+    <m:mi>x</m:mi>
+   <m:mo>)</m:mo></m:mrow>
+  </m:mrow>
+ </m:semantics>
+</m:math>
+.
+The <term>expected value</term> of <emphasis>X</emphasis> or <term>mean</term> of <emphasis>X</emphasis> is
+</para>
+<para id="para_34">
+<m:math display="block">
+ <m:semantics>
+  <m:mrow>
+   <m:mi>μ</m:mi><m:mo>=</m:mo><m:mi>E</m:mi><m:mrow><m:mo>(</m:mo>
+    <m:mi>X</m:mi>
+   <m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mstyle displaystyle="true">
+    <m:mrow><m:munderover>
+     <m:mo>∫</m:mo>
+     <m:mrow>
+      <m:mo>−</m:mo><m:mi>∞</m:mi>
+     </m:mrow>
+     <m:mi>∞</m:mi>
+    </m:munderover>
+    <m:mrow>
+     <m:mi>x</m:mi><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo>
+      <m:mi>x</m:mi>
+     <m:mo>)</m:mo></m:mrow><m:mi>d</m:mi><m:mi>x</m:mi><m:mo>.</m:mo>
+    </m:mrow>
+   </m:mrow>
+   
+  </m:mstyle>
+ </m:mrow>
+</m:semantics>
+</m:math>
+ The <term>variance</term> of <emphasis>X</emphasis> is <m:math display="block">
+ <m:semantics>
+  <m:mrow>
+   <m:msup>
+    <m:mi>σ</m:mi>
+    <m:mn>2</m:mn>
+   </m:msup>
+   <m:mo>=</m:mo><m:mi>V</m:mi><m:mi>a</m:mi><m:mi>r</m:mi><m:mrow><m:mo>(</m:mo>
+    <m:mi>X</m:mi>
+   <m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mstyle displaystyle="true">
+    <m:mrow><m:munderover>
+     <m:mo>∫</m:mo>
+     <m:mrow>
+      <m:mo>−</m:mo><m:mi>∞</m:mi>
+     </m:mrow>
+     <m:mi>∞</m:mi>
+    </m:munderover>
+    <m:mrow>
+     <m:msup>
+      <m:mrow>
+       <m:mrow><m:mo>(</m:mo>
+        <m:mrow>
+         <m:mi>x</m:mi><m:mo>−</m:mo><m:mi>μ</m:mi>
+        </m:mrow>
+       <m:mo>)</m:mo></m:mrow>
+      </m:mrow>
+      <m:mn>2</m:mn>
+     </m:msup>
+     <m:mi>f</m:mi><m:mrow><m:mo>(</m:mo>
+      <m:mi>x</m:mi>
+     <m:mo>)</m:mo></m:mrow><m:mi>d</m:mi><m:mi>x</m:mi><m:mo>.</m:mo>
+    </m:mrow>
+   </m:mrow>
+     </m:mstyle>
+ </m:mrow>
+</m:semantics>
+</m:math>
+</para>
+<para id="para_35">
+The <term>standard deviation</term> of <emphasis>X</emphasis> is <m:math display="block">
+ <m:semantics>
+  <m:mrow>
+   <m:mi>σ</m:mi><m:mo>=</m:mo><m:msqrt>
+    <m:mrow>
+     <m:mi>V</m:mi><m:mi>a</m:mi><m:mi>r</m:mi><m:mrow><m:mo>(</m:mo>
+      <m:mi>X</m:mi>
+     <m:mo>)</m:mo></m:mrow>
+    </m:mrow>
+   </m:msqrt>
+   <m:mo>.</m:mo>
+  </m:mrow>
+ </m:semantics>
+</m:math>
+</para>
+<example id="ex_4">
+<para id="para_36">
+For the random variable <emphasis>Y</emphasis> in the <link target-id="ex_3">Example 3</link>.
+</para>
+<para id="para_37">
+<m:math display="block">
+ <m:semantics>
+  <m:mrow>
+   <m:mi>μ</m:mi><m:mo>=</m:mo><m:mi>E</m:mi><m:mrow><m:mo>(</m:mo>
+    <m:mi>Y</m:mi>
+   <m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mstyle displaystyle="true">
+    <m:mrow><m:munderover>
+     <m:mo>∫</m:mo>
+     <m:mn>0</m:mn>
+     <m:mn>1</m:mn>
+    </m:munderover>
+    <m:mrow>
+     <m:mi>y</m:mi><m:mrow><m:mo>(</m:mo>
+      <m:mrow>
+       <m:mn>2</m:mn><m:mi>y</m:mi>
+      </m:mrow>
+     <m:mo>)</m:mo></m:mrow><m:mi>d</m:mi><m:mi>y</m:mi><m:mo>=</m:mo><m:msubsup>
+      <m:mrow>
+       <m:mrow><m:mo>[</m:mo> <m:mrow>
+        <m:mrow><m:mo>(</m:mo>
+         <m:mrow>
+          <m:mfrac>
+           <m:mn>2</m:mn>
+           <m:mn>3</m:mn>
+          </m:mfrac>
+          <m:msup>
+           <m:mi>y</m:mi>
+           <m:mn>3</m:mn>
+          </m:msup>
+          
+         </m:mrow>
+        <m:mo>)</m:mo></m:mrow>
+       </m:mrow> <m:mo>]</m:mo></m:mrow>
+      </m:mrow>
+      <m:mn>0</m:mn>
+      <m:mn>1</m:mn>
+     </m:msubsup>
+     <m:mo>=</m:mo><m:mfrac>
+      <m:mn>2</m:mn>
+      <m:mn>3</m:mn>
+     </m:mfrac>
+      </m:mrow>
+   </m:mrow>
+     </m:mstyle>
+ </m:mrow>
+</m:semantics>
+</m:math>
+ and
+</para>
+<para id="para_38">
+<m:math display="block">
+ <m:semantics>
+  <m:mtable columnalign="left">
+   <m:mtr>
+    <m:mtd>
+     <m:msup>
+      <m:mi>σ</m:mi>
+      <m:mn>2</m:mn>
+     </m:msup>
+     <m:mo>=</m:mo><m:mi>V</m:mi><m:mi>a</m:mi><m:mi>r</m:mi><m:mrow><m:mo>(</m:mo>
+      <m:mi>Y</m:mi>
+     <m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mi>E</m:mi><m:mrow><m:mo>(</m:mo>
+      <m:mrow>
+       <m:msup>
+        <m:mi>Y</m:mi>
+        <m:mn>2</m:mn>
+       </m:msup>
+       
+      </m:mrow>
+     <m:mo>)</m:mo></m:mrow><m:mo>−</m:mo><m:msup>
+      <m:mi>μ</m:mi>
+      <m:mn>2</m:mn>
+     </m:msup>
+     
+    </m:mtd>
+   </m:mtr>
+   <m:mtr>
+    <m:mtd>
+     <m:mo>=</m:mo><m:mstyle displaystyle="true">
+      <m:mrow><m:munderover>
+       <m:mo>∫</m:mo>
+       <m:mn>0</m:mn>
+       <m:mn>1</m:mn>
+      </m:munderover>
+      <m:mrow>
+       <m:msup>
+        <m:mi>y</m:mi>
+        <m:mn>2</m:mn>
+       </m:msup>
+       <m:mrow><m:mo>(</m:mo>
+        <m:mrow>
+         <m:mn>2</m:mn><m:mi>y</m:mi>
+        </m:mrow>
+       <m:mo>)</m:mo></m:mrow><m:mi>d</m:mi><m:mi>y</m:mi><m:mo>−</m:mo><m:msup>
+        <m:mrow>
+         <m:mrow><m:mo>(</m:mo>
+          <m:mrow>
+           <m:mfrac>
+            <m:mn>2</m:mn>
+            <m:mn>3</m:mn>
+           </m:mfrac>
+           
+          </m:mrow>
+         <m:mo>)</m:mo></m:mrow>
+        </m:mrow>
+        <m:mn>2</m:mn>
+       </m:msup>
+       <m:mo>=</m:mo><m:msubsup>
+        <m:mrow>
+         <m:mrow><m:mo>[</m:mo> <m:mrow>
+          <m:mrow><m:mo>(</m:mo>
+           <m:mrow>
+            <m:mfrac>
+             <m:mn>1</m:mn>
+             <m:mn>2</m:mn>
+            </m:mfrac>
+            <m:msup>
+             <m:mi>y</m:mi>
+             <m:mn>4</m:mn>
+            </m:msup>
+            
+           </m:mrow>
+          <m:mo>)</m:mo></m:mrow>
+         </m:mrow> <m:mo>]</m:mo></m:mrow>
+        </m:mrow>
+        <m:mn>0</m:mn>
+        <m:mn>1</m:mn>
+       </m:msubsup>
+       <m:mo>−</m:mo><m:mfrac>
+        <m:mn>4</m:mn>
+        <m:mn>9</m:mn>
+       </m:mfrac>
+       <m:mo>=</m:mo><m:mfrac>
+        <m:mn>1</m:mn>
+        <m:mrow>
+         <m:mn>18</m:mn>
+        </m:mrow>
+       </m:mfrac>
+       
+      </m:mrow>
+     </m:mrow>
+     
+    </m:mstyle><m:mo>.</m:mo>
+   </m:mtd>
+  </m:mtr>
+ </m:mtable>
+ </m:semantics>
+</m:math>
+
+</para>
+
+</example>
+</section>
+
+</section>
+</section>
+<section id="sec_6">
+
+    <para id="delete_me">
+       <!-- Insert module text here -->
+    </para> 
+</section>  
+  </content>
+  
+</document>

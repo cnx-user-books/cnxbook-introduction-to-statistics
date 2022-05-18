@@ -1,0 +1,1628 @@
+<document xmlns="http://cnx.rice.edu/cnxml" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:md="http://cnx.rice.edu/mdml">
+  <title>THE GAMMA AND CHI-SQUARE DISTRIBUTIONS</title>
+  <metadata><md:content-id>undefined</md:content-id><md:title/><md:uuid>2d28fe6a-5000-454e-a2b9-6fbca9e9b56c</md:uuid>
+</metadata>
+  <content>
+<section id="sec_1">
+<title>GAMMA AND CHI-SQUARE DISTRIBUTIONS</title>
+
+<para id="para_1">
+In the (approximate) <link document="m13125" target-id="def_1">Poisson process</link> with mean <m:math>
+ <m:semantics>
+  <m:mi>λ</m:mi>
+ </m:semantics>
+</m:math>, we have seen that the waiting time until the first change has an <link document="m13128" target-id="sec_4">exponential distribution</link>. Let now <emphasis>W</emphasis> denote the waiting time until the <m:math>
+ <m:semantics>
+  <m:mi>α</m:mi>
+ </m:semantics>
+</m:math>th change occurs and let find the distribution of <emphasis>W</emphasis>. The distribution function of <emphasis>W</emphasis> ,when <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mi>w</m:mi><m:mo>≥</m:mo><m:mn>0</m:mn>
+  </m:mrow>
+ </m:semantics>
+</m:math> is given by
+</para>
+<para id="para_2">
+<m:math display="block">
+ <m:semantics>
+  <m:mtable columnalign="left">
+   <m:mtr>
+    <m:mtd>
+     <m:mi>F</m:mi><m:mrow><m:mo>(</m:mo>
+      <m:mi>w</m:mi>
+     <m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mi>P</m:mi><m:mrow><m:mo>(</m:mo>
+      <m:mrow>
+       <m:mi>W</m:mi><m:mo>≤</m:mo><m:mi>w</m:mi>
+      </m:mrow>
+     <m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>1</m:mn><m:mo>−</m:mo><m:mi>P</m:mi><m:mrow><m:mo>(</m:mo>
+      <m:mrow>
+       <m:mi>W</m:mi><m:mo>&gt;</m:mo><m:mi>w</m:mi>
+      </m:mrow>
+     <m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>1</m:mn><m:mo>−</m:mo><m:mi>P</m:mi><m:mrow><m:mo>(</m:mo>
+      <m:mrow>
+       <m:mi>f</m:mi><m:mi>e</m:mi><m:mi>w</m:mi><m:mi>e</m:mi><m:mi>r</m:mi><m:mo>_</m:mo><m:mi>t</m:mi><m:mi>h</m:mi><m:mi>a</m:mi><m:mi>n</m:mi><m:mo>_</m:mo><m:mi>α</m:mi><m:mo>_</m:mo><m:mi>c</m:mi><m:mi>h</m:mi><m:mi>a</m:mi><m:mi>n</m:mi><m:mi>g</m:mi><m:mi>e</m:mi><m:mi>s</m:mi><m:mo>_</m:mo><m:mi>o</m:mi><m:mi>c</m:mi><m:mi>c</m:mi><m:mi>u</m:mi><m:mi>r</m:mi><m:mo>_</m:mo><m:mi>i</m:mi><m:mi>n</m:mi><m:mo>_</m:mo><m:mrow><m:mo>[</m:mo> <m:mrow>
+        <m:mn>0,</m:mn><m:mi>w</m:mi>
+       </m:mrow> <m:mo>]</m:mo></m:mrow>
+      </m:mrow>
+     <m:mo>)</m:mo></m:mrow>
+    </m:mtd>
+   </m:mtr>
+   <m:mtr>
+    <m:mtd>
+     <m:mo>=</m:mo><m:mn>1</m:mn><m:mo>−</m:mo><m:mstyle displaystyle="true">
+      <m:munderover>
+       <m:mo>∑</m:mo>
+       <m:mrow>
+        <m:mi>k</m:mi><m:mo>=</m:mo><m:mn>0</m:mn>
+       </m:mrow>
+       <m:mrow>
+        <m:mi>α</m:mi><m:mo>−</m:mo><m:mn>1</m:mn>
+       </m:mrow>
+      </m:munderover>
+      <m:mrow>
+       <m:mfrac>
+        <m:mrow>
+         <m:msup>
+          <m:mrow>
+           <m:mrow><m:mo>(</m:mo>
+            <m:mrow>
+             <m:mi>λ</m:mi><m:mi>w</m:mi>
+            </m:mrow>
+           <m:mo>)</m:mo></m:mrow>
+          </m:mrow>
+          <m:mi>k</m:mi>
+         </m:msup>
+         <m:msup>
+          <m:mi>e</m:mi>
+          <m:mrow>
+           <m:mo>−</m:mo><m:mi>λ</m:mi><m:mi>w</m:mi>
+          </m:mrow>
+         </m:msup>
+         
+        </m:mrow>
+        <m:mrow>
+         <m:mi>k</m:mi><m:mo>!</m:mo>
+        </m:mrow>
+       </m:mfrac>
+       
+      </m:mrow>
+     </m:mstyle><m:mo>,</m:mo>
+    </m:mtd>
+   </m:mtr>
+  </m:mtable>
+   </m:semantics>
+</m:math>
+</para>
+<para id="para_3">
+since the number of changes in the interval <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mrow><m:mo>[</m:mo> <m:mrow>
+    <m:mn>0,</m:mn><m:mi>w</m:mi>
+   </m:mrow> <m:mo>]</m:mo></m:mrow>
+  </m:mrow>
+ </m:semantics>
+</m:math> has a Poisson distribution with mean <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mi>λ</m:mi><m:mi>w</m:mi>
+  </m:mrow>
+ </m:semantics>
+</m:math>. Because <emphasis>W</emphasis> is a continuous-type random variable, <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mi>F</m:mi><m:mo>'</m:mo><m:mrow><m:mo>(</m:mo>
+    <m:mi>w</m:mi>
+   <m:mo>)</m:mo></m:mrow>
+  </m:mrow>
+ </m:semantics>
+</m:math> is equal to the p.d.f. of <emphasis>W</emphasis> whenever this derivative exists. We have, provided <emphasis>w</emphasis>&gt;0, that
+</para>
+<para id="para_4">
+<m:math display="block">
+ <m:semantics>
+  <m:mtable columnalign="left">
+   <m:mtr>
+    <m:mtd>
+     <m:mi>F</m:mi><m:mo>'</m:mo><m:mrow><m:mo>(</m:mo>
+      <m:mi>w</m:mi>
+     <m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mi>λ</m:mi><m:msup>
+      <m:mi>e</m:mi>
+      <m:mrow>
+       <m:mo>−</m:mo><m:mi>λ</m:mi><m:mi>w</m:mi>
+      </m:mrow>
+     </m:msup>
+     <m:mo>−</m:mo><m:msup>
+      <m:mi>e</m:mi>
+      <m:mrow>
+       <m:mo>−</m:mo><m:mi>λ</m:mi><m:mi>w</m:mi>
+      </m:mrow>
+     </m:msup>
+     <m:mstyle displaystyle="true">
+      <m:munderover>
+       <m:mo>∑</m:mo>
+       <m:mrow>
+        <m:mi>k</m:mi><m:mo>=</m:mo><m:mn>1</m:mn>
+       </m:mrow>
+       <m:mrow>
+        <m:mi>α</m:mi><m:mo>−</m:mo><m:mn>1</m:mn>
+       </m:mrow>
+      </m:munderover>
+      <m:mrow>
+       <m:mrow><m:mo>[</m:mo> <m:mrow>
+        <m:mfrac>
+         <m:mrow>
+          <m:mi>k</m:mi><m:msup>
+           <m:mrow>
+            <m:mrow><m:mo>(</m:mo>
+             <m:mrow>
+              <m:mi>λ</m:mi><m:mi>w</m:mi>
+             </m:mrow>
+            <m:mo>)</m:mo></m:mrow>
+           </m:mrow>
+           <m:mrow>
+            <m:mi>k</m:mi><m:mo>−</m:mo><m:mn>1</m:mn>
+           </m:mrow>
+          </m:msup>
+          <m:mi>λ</m:mi>
+         </m:mrow>
+         <m:mrow>
+          <m:mi>k</m:mi><m:mo>!</m:mo>
+         </m:mrow>
+        </m:mfrac>
+        <m:mo>−</m:mo><m:mfrac>
+         <m:mrow>
+          <m:msup>
+           <m:mrow>
+            <m:mrow><m:mo>(</m:mo>
+             <m:mrow>
+              <m:mi>λ</m:mi><m:mi>w</m:mi>
+             </m:mrow>
+            <m:mo>)</m:mo></m:mrow>
+           </m:mrow>
+           <m:mi>k</m:mi>
+          </m:msup>
+          <m:mi>λ</m:mi>
+         </m:mrow>
+         <m:mrow>
+          <m:mi>k</m:mi><m:mo>!</m:mo>
+         </m:mrow>
+        </m:mfrac>
+        
+       </m:mrow> <m:mo>]</m:mo></m:mrow>
+      </m:mrow>
+     </m:mstyle><m:mo>=</m:mo><m:mi>λ</m:mi><m:msup>
+      <m:mi>e</m:mi>
+      <m:mrow>
+       <m:mo>−</m:mo><m:mi>λ</m:mi><m:mi>w</m:mi>
+      </m:mrow>
+     </m:msup>
+     <m:mo>−</m:mo><m:msup>
+      <m:mi>e</m:mi>
+      <m:mrow>
+       <m:mo>−</m:mo><m:mi>λ</m:mi><m:mi>w</m:mi>
+      </m:mrow>
+     </m:msup>
+     <m:mrow><m:mo>[</m:mo> <m:mrow>
+      <m:mi>λ</m:mi><m:mo>−</m:mo><m:mfrac>
+       <m:mrow>
+        <m:mi>λ</m:mi><m:msup>
+         <m:mrow>
+          <m:mrow><m:mo>(</m:mo>
+           <m:mrow>
+            <m:mi>λ</m:mi><m:mi>w</m:mi>
+           </m:mrow>
+          <m:mo>)</m:mo></m:mrow>
+         </m:mrow>
+         <m:mrow>
+          <m:mi>α</m:mi><m:mo>−</m:mo><m:mn>1</m:mn>
+         </m:mrow>
+        </m:msup>
+        
+       </m:mrow>
+       <m:mrow>
+        <m:mrow><m:mo>(</m:mo>
+         <m:mrow>
+          <m:mi>α</m:mi><m:mo>−</m:mo><m:mn>1</m:mn>
+         </m:mrow>
+        <m:mo>)</m:mo></m:mrow><m:mo>!</m:mo>
+       </m:mrow>
+      </m:mfrac>
+      
+     </m:mrow> <m:mo>]</m:mo></m:mrow>
+    </m:mtd>
+   </m:mtr>
+   <m:mtr>
+    <m:mtd>
+     <m:mo>=</m:mo><m:mfrac>
+      <m:mrow>
+       <m:mi>λ</m:mi><m:msup>
+        <m:mrow>
+         <m:mrow><m:mo>(</m:mo>
+          <m:mrow>
+           <m:mi>λ</m:mi><m:mi>w</m:mi>
+          </m:mrow>
+         <m:mo>)</m:mo></m:mrow>
+        </m:mrow>
+        <m:mrow>
+         <m:mi>α</m:mi><m:mo>−</m:mo><m:mn>1</m:mn>
+        </m:mrow>
+       </m:msup>
+       
+      </m:mrow>
+      <m:mrow>
+       <m:mrow><m:mo>(</m:mo>
+        <m:mrow>
+         <m:mi>α</m:mi><m:mo>−</m:mo><m:mn>1</m:mn>
+        </m:mrow>
+       <m:mo>)</m:mo></m:mrow><m:mo>!</m:mo>
+      </m:mrow>
+     </m:mfrac>
+     <m:msup>
+      <m:mi>e</m:mi>
+      <m:mrow>
+       <m:mo>−</m:mo><m:mi>λ</m:mi><m:mi>w</m:mi>
+      </m:mrow>
+     </m:msup>
+     <m:mo>.</m:mo>
+    </m:mtd>
+   </m:mtr>
+  </m:mtable>
+   </m:semantics>
+</m:math>
+</para>
+<section id="sec_2">
+<title>Gamma Distribution</title>
+<definition id="def_1">
+<term/>
+<meaning id="idp4442992">
+If <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mi>w</m:mi><m:mo>&lt;</m:mo><m:mn>0</m:mn>
+  </m:mrow>
+ </m:semantics>
+</m:math>, then <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mi>F</m:mi><m:mrow><m:mo>(</m:mo>
+    <m:mi>w</m:mi>
+   <m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>0</m:mn>
+  </m:mrow>
+ </m:semantics>
+</m:math> and <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mi>F</m:mi><m:mo>'</m:mo><m:mrow><m:mo>(</m:mo>
+    <m:mi>w</m:mi>
+   <m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>0</m:mn>
+  </m:mrow>
+ </m:semantics>
+</m:math>, a p.d.f. of this form is said to be one of the <term>gamma type</term>, and the random variable <emphasis>W</emphasis> is said to have <term>the gamma distribution</term>.
+</meaning>
+<meaning id="idp3249696">
+The <term>gamma function</term> is defined by <m:math display="block">
+ <m:semantics>
+  <m:mrow>
+   <m:mi>Γ</m:mi><m:mrow><m:mo>(</m:mo>
+    <m:mi>t</m:mi>
+   <m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mstyle displaystyle="true">
+    <m:mrow><m:munderover>
+     <m:mo>∫</m:mo>
+     <m:mn>0</m:mn>
+     <m:mi>∞</m:mi>
+    </m:munderover>
+    <m:mrow>
+     <m:msup>
+      <m:mi>y</m:mi>
+      <m:mrow>
+       <m:mi>t</m:mi><m:mo>−</m:mo><m:mn>1</m:mn>
+      </m:mrow>
+     </m:msup>
+     <m:msup>
+      <m:mi>e</m:mi>
+      <m:mrow>
+       <m:mo>−</m:mo><m:mi>y</m:mi>
+      </m:mrow>
+     </m:msup>
+     <m:mi>d</m:mi><m:mi>y</m:mi>
+    </m:mrow>
+   </m:mrow>
+     </m:mstyle><m:mn>,0</m:mn><m:mo>&lt;</m:mo><m:mi>t</m:mi><m:mo>.</m:mo>
+ </m:mrow>
+</m:semantics>
+</m:math>
+</meaning>
+</definition>
+<para id="para_5">
+This integral is positive for <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mn>0</m:mn><m:mo>&lt;</m:mo><m:mi>t</m:mi>
+  </m:mrow>
+ </m:semantics>
+</m:math>, because the integrand id positive. Values of it are often given in a table of integrals. If <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mi>t</m:mi><m:mo>&gt;</m:mo><m:mn>1</m:mn>
+  </m:mrow>
+ </m:semantics>
+</m:math>, integration of gamma fnction of <emphasis>t</emphasis> by parts yields
+</para>
+<para id="para_6">
+<m:math display="block">
+ <m:semantics>
+  <m:mrow>
+   <m:mi>Γ</m:mi><m:mrow><m:mo>(</m:mo>
+    <m:mi>t</m:mi>
+   <m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:msubsup>
+    <m:mrow>
+     <m:mrow><m:mo>[</m:mo> <m:mrow>
+      <m:mo>−</m:mo><m:msup>
+       <m:mi>y</m:mi>
+       <m:mrow>
+        <m:mi>t</m:mi><m:mo>−</m:mo><m:mn>1</m:mn>
+       </m:mrow>
+      </m:msup>
+      <m:msup>
+       <m:mi>e</m:mi>
+       <m:mrow>
+        <m:mo>−</m:mo><m:mi>y</m:mi>
+       </m:mrow>
+      </m:msup>
+      
+     </m:mrow> <m:mo>]</m:mo></m:mrow>
+    </m:mrow>
+    <m:mn>0</m:mn>
+    <m:mi>∞</m:mi>
+   </m:msubsup>
+   <m:mo>+</m:mo><m:mstyle displaystyle="true">
+    <m:mrow><m:munderover>
+     <m:mo>∫</m:mo>
+     <m:mn>0</m:mn>
+     <m:mi>∞</m:mi>
+    </m:munderover>
+    <m:mrow>
+     <m:mrow><m:mo>(</m:mo>
+      <m:mrow>
+       <m:mi>t</m:mi><m:mo>−</m:mo><m:mn>1</m:mn>
+      </m:mrow>
+     <m:mo>)</m:mo></m:mrow><m:msup>
+      <m:mi>y</m:mi>
+      <m:mrow>
+       <m:mi>t</m:mi><m:mo>−</m:mo><m:mn>2</m:mn>
+      </m:mrow>
+     </m:msup>
+     <m:msup>
+      <m:mi>e</m:mi>
+      <m:mrow>
+       <m:mo>−</m:mo><m:mi>y</m:mi>
+      </m:mrow>
+     </m:msup>
+     <m:mi>d</m:mi><m:mi>y</m:mi>
+    </m:mrow>
+   </m:mrow>
+   
+  </m:mstyle><m:mo>=</m:mo><m:mrow><m:mo>(</m:mo>
+   <m:mrow>
+    <m:mi>t</m:mi><m:mo>−</m:mo><m:mn>1</m:mn>
+   </m:mrow>
+  <m:mo>)</m:mo></m:mrow><m:mstyle displaystyle="true">
+   <m:mrow><m:munderover>
+    <m:mo>∫</m:mo>
+    <m:mn>0</m:mn>
+    <m:mi>∞</m:mi>
+   </m:munderover>
+   <m:mrow>
+    <m:msup>
+     <m:mi>y</m:mi>
+     <m:mrow>
+      <m:mi>t</m:mi><m:mo>−</m:mo><m:mn>2</m:mn>
+     </m:mrow>
+    </m:msup>
+    <m:msup>
+     <m:mi>e</m:mi>
+     <m:mrow>
+      <m:mo>−</m:mo><m:mi>y</m:mi>
+     </m:mrow>
+    </m:msup>
+    <m:mi>d</m:mi><m:mi>y</m:mi><m:mo>=</m:mo>
+   </m:mrow>
+  </m:mrow>
+  
+ </m:mstyle><m:mrow><m:mo>(</m:mo>
+  <m:mrow>
+   <m:mi>t</m:mi><m:mo>−</m:mo><m:mn>1</m:mn>
+  </m:mrow>
+ <m:mo>)</m:mo></m:mrow><m:mi>Γ</m:mi><m:mrow><m:mo>(</m:mo>
+  <m:mrow>
+   <m:mi>t</m:mi><m:mo>−</m:mo><m:mn>1</m:mn>
+  </m:mrow>
+ <m:mo>)</m:mo></m:mrow><m:mo>.</m:mo>
+</m:mrow>
+</m:semantics>
+</m:math>
+</para>
+<example id="ex_1">
+<para id="para_7">
+Let <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mi>Γ</m:mi><m:mrow><m:mo>(</m:mo>
+    <m:mn>6</m:mn>
+   <m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>5</m:mn><m:mi>Γ</m:mi><m:mrow><m:mo>(</m:mo>
+    <m:mn>5</m:mn>
+   <m:mo>)</m:mo></m:mrow>
+  </m:mrow>
+ </m:semantics>
+</m:math> and <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mi>Γ</m:mi><m:mrow><m:mo>(</m:mo>
+    <m:mn>3</m:mn>
+   <m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>2</m:mn><m:mi>Γ</m:mi><m:mrow><m:mo>(</m:mo>
+    <m:mn>2</m:mn>
+   <m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mrow><m:mo>(</m:mo>
+    <m:mn>2</m:mn>
+   <m:mo>)</m:mo></m:mrow><m:mrow><m:mo>(</m:mo>
+    <m:mn>1</m:mn>
+   <m:mo>)</m:mo></m:mrow><m:mi>Γ</m:mi><m:mrow><m:mo>(</m:mo>
+    <m:mn>1</m:mn>
+   <m:mo>)</m:mo></m:mrow>
+  </m:mrow>
+ </m:semantics>
+</m:math>. Whenever <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mi>t</m:mi><m:mo>=</m:mo><m:mi>n</m:mi>
+  </m:mrow>
+ </m:semantics>
+</m:math>, a positive integer, we have, be repeated application of <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mi>Γ</m:mi><m:mrow><m:mo>(</m:mo>
+    <m:mi>t</m:mi>
+   <m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mrow><m:mo>(</m:mo>
+    <m:mrow>
+     <m:mi>t</m:mi><m:mo>−</m:mo><m:mn>1</m:mn>
+    </m:mrow>
+   <m:mo>)</m:mo></m:mrow><m:mi>Γ</m:mi><m:mrow><m:mo>(</m:mo>
+    <m:mrow>
+     <m:mi>t</m:mi><m:mo>−</m:mo><m:mn>1</m:mn>
+    </m:mrow>
+   <m:mo>)</m:mo></m:mrow>
+  </m:mrow>
+ </m:semantics>
+</m:math>, that <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mi>Γ</m:mi><m:mrow><m:mo>(</m:mo>
+    <m:mi>n</m:mi>
+   <m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mrow><m:mo>(</m:mo>
+    <m:mrow>
+     <m:mi>n</m:mi><m:mo>−</m:mo><m:mn>1</m:mn>
+    </m:mrow>
+   <m:mo>)</m:mo></m:mrow><m:mi>Γ</m:mi><m:mrow><m:mo>(</m:mo>
+    <m:mrow>
+     <m:mi>n</m:mi><m:mo>−</m:mo><m:mn>1</m:mn>
+    </m:mrow>
+   <m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mrow><m:mo>(</m:mo>
+    <m:mrow>
+     <m:mi>n</m:mi><m:mo>−</m:mo><m:mn>1</m:mn>
+    </m:mrow>
+   <m:mo>)</m:mo></m:mrow><m:mrow><m:mo>(</m:mo>
+    <m:mrow>
+     <m:mi>n</m:mi><m:mo>−</m:mo><m:mn>2</m:mn>
+    </m:mrow>
+   <m:mo>)</m:mo></m:mrow><m:mn>...</m:mn><m:mrow><m:mo>(</m:mo>
+    <m:mn>2</m:mn>
+   <m:mo>)</m:mo></m:mrow><m:mrow><m:mo>(</m:mo>
+    <m:mn>1</m:mn>
+   <m:mo>)</m:mo></m:mrow><m:mi>Γ</m:mi><m:mrow><m:mo>(</m:mo>
+    <m:mn>1</m:mn>
+   <m:mo>)</m:mo></m:mrow><m:mo>.</m:mo>
+  </m:mrow>
+ </m:semantics>
+</m:math>
+</para>
+<para id="para_8">
+However, <m:math display="block">
+ <m:semantics>
+  <m:mrow>
+   <m:mi>Γ</m:mi><m:mrow><m:mo>(</m:mo>
+    <m:mn>1</m:mn>
+   <m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mstyle displaystyle="true">
+    <m:mrow><m:munderover>
+     <m:mo>∫</m:mo>
+     <m:mn>0</m:mn>
+     <m:mi>∞</m:mi>
+    </m:munderover>
+    <m:mrow>
+     <m:msup>
+      <m:mi>e</m:mi>
+      <m:mrow>
+       <m:mo>−</m:mo><m:mi>y</m:mi>
+      </m:mrow>
+     </m:msup>
+     <m:mi>d</m:mi><m:mi>y</m:mi><m:mo>=</m:mo><m:mn>1</m:mn>
+    </m:mrow>
+   </m:mrow>
+   
+  </m:mstyle><m:mo>.</m:mo>
+ </m:mrow>
+</m:semantics>
+</m:math>
+</para>
+<para id="para_9">
+Thus when <emphasis>n</emphasis> is a positive integer, we have that <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mi>Γ</m:mi><m:mrow><m:mo>(</m:mo>
+    <m:mi>n</m:mi>
+   <m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mrow><m:mo>(</m:mo>
+    <m:mrow>
+     <m:mi>n</m:mi><m:mo>−</m:mo><m:mn>1</m:mn>
+    </m:mrow>
+   <m:mo>)</m:mo></m:mrow><m:mo>!</m:mo>
+  </m:mrow>
+ </m:semantics>
+</m:math>; and, for this reason, the gamma is called <term>the generalized factorial</term>.
+</para>
+</example>
+<para id="para_10">
+Incidentally, <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mi>Γ</m:mi><m:mrow><m:mo>(</m:mo>
+    <m:mn>1</m:mn>
+   <m:mo>)</m:mo></m:mrow>
+  </m:mrow>
+ </m:semantics>
+</m:math>
+ corresponds to 0!, and we have noted that <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mi>Γ</m:mi><m:mrow><m:mo>(</m:mo>
+    <m:mn>1</m:mn>
+   <m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>1</m:mn>
+  </m:mrow>
+ </m:semantics>
+</m:math>, which is consistent with earlier discussions.
+</para>
+<section id="sec_3">
+<title>SUMMARIZING </title>
+<para id="para_11">
+The random variable <emphasis>x</emphasis> has <term>a gamma distribution</term> if its p.d.f. is defined by
+</para>
+<equation id="eq_1"> 
+<m:math display="block">
+ <m:semantics>
+  <m:mrow>
+   <m:mi>f</m:mi><m:mrow><m:mo>(</m:mo>
+    <m:mi>x</m:mi>
+   <m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mfrac>
+    <m:mn>1</m:mn>
+    <m:mrow>
+     <m:mi>Γ</m:mi><m:mrow><m:mo>(</m:mo>
+      <m:mi>α</m:mi>
+     <m:mo>)</m:mo></m:mrow><m:msup>
+      <m:mi>θ</m:mi>
+      <m:mi>α</m:mi>
+     </m:msup>
+     
+    </m:mrow>
+   </m:mfrac>
+   <m:msup>
+    <m:mi>x</m:mi>
+    <m:mrow>
+     <m:mi>α</m:mi><m:mo>−</m:mo><m:mn>1</m:mn>
+    </m:mrow>
+   </m:msup>
+   <m:msup>
+    <m:mi>e</m:mi>
+    <m:mrow>
+     <m:mo>−</m:mo><m:mi>x</m:mi><m:mo>/</m:mo><m:mi>θ</m:mi>
+    </m:mrow>
+   </m:msup>
+   <m:mn>,0</m:mn><m:mo>≤</m:mo><m:mi>x</m:mi><m:mo>&lt;</m:mo><m:mi>∞</m:mi><m:mo>.</m:mo>
+  </m:mrow>
+ </m:semantics>
+</m:math>
+</equation> 
+<para id="para_12">
+Hence, <emphasis>w</emphasis>, the waiting time until the <m:math>
+ <m:semantics>
+  <m:mi>α</m:mi>
+ </m:semantics>
+</m:math>
+th change in a Poisson process, has a gamma distribution with parameters <m:math>
+ <m:semantics>
+  <m:mi>α</m:mi>
+ </m:semantics>
+</m:math> and <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mi>θ</m:mi><m:mo>=</m:mo><m:mn>1</m:mn><m:mo>/</m:mo><m:mi>λ</m:mi>
+  </m:mrow>
+ </m:semantics>
+</m:math>. 
+</para>
+<para id="para_13">
+Function <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mi>f</m:mi><m:mrow><m:mo>(</m:mo>
+    <m:mi>x</m:mi>
+   <m:mo>)</m:mo></m:mrow>
+  </m:mrow>
+ </m:semantics>
+</m:math> actually has the properties of a p.d.f., because <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mi>f</m:mi><m:mrow><m:mo>(</m:mo>
+    <m:mi>x</m:mi>
+   <m:mo>)</m:mo></m:mrow><m:mo>≥</m:mo><m:mn>0</m:mn>
+  </m:mrow>
+ </m:semantics>
+</m:math>
+ and 
+</para>
+<para id="para_14">
+<m:math display="block">
+ <m:semantics>
+  <m:mrow>
+   <m:mstyle displaystyle="true">
+    <m:mrow><m:munderover>
+     <m:mo>∫</m:mo>
+     <m:mrow>
+      <m:mo>−</m:mo><m:mi>∞</m:mi>
+     </m:mrow>
+     <m:mi>∞</m:mi>
+    </m:munderover>
+    <m:mrow>
+     <m:mi>f</m:mi><m:mrow><m:mo>(</m:mo>
+      <m:mi>x</m:mi>
+     <m:mo>)</m:mo></m:mrow><m:mi>d</m:mi><m:mi>x</m:mi><m:mo>=</m:mo><m:mstyle displaystyle="true">
+      <m:mrow><m:munderover>
+       <m:mo>∫</m:mo>
+       <m:mn>0</m:mn>
+       <m:mi>∞</m:mi>
+      </m:munderover>
+      <m:mrow>
+       <m:mfrac>
+        <m:mrow>
+         <m:msup>
+          <m:mi>x</m:mi>
+          <m:mrow>
+           <m:mi>α</m:mi><m:mo>−</m:mo><m:mn>1</m:mn>
+          </m:mrow>
+         </m:msup>
+         <m:msup>
+          <m:mi>e</m:mi>
+          <m:mrow>
+           <m:mo>−</m:mo><m:mi>x</m:mi><m:mo>/</m:mo><m:mi>θ</m:mi>
+          </m:mrow>
+         </m:msup>
+         
+        </m:mrow>
+        <m:mrow>
+         <m:mi>Γ</m:mi><m:mrow><m:mo>(</m:mo>
+          <m:mi>α</m:mi>
+         <m:mo>)</m:mo></m:mrow><m:msup>
+          <m:mi>θ</m:mi>
+          <m:mi>α</m:mi>
+         </m:msup>
+         
+        </m:mrow>
+       </m:mfrac>
+       
+      </m:mrow>
+     </m:mrow>
+     
+    </m:mstyle>
+   </m:mrow>
+  </m:mrow>
+   </m:mstyle><m:mi>d</m:mi><m:mi>x</m:mi><m:mo>,</m:mo>
+</m:mrow>
+</m:semantics>
+</m:math> which, by the change of variables <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mi>y</m:mi><m:mo>=</m:mo><m:mi>x</m:mi><m:mo>/</m:mo><m:mi>θ</m:mi>
+  </m:mrow>
+ </m:semantics>
+</m:math> equals
+</para>
+<para id="para_15">
+<m:math display="block">
+ <m:semantics>
+  <m:mrow>
+   <m:mstyle displaystyle="true">
+    <m:mrow><m:munderover>
+     <m:mo>∫</m:mo>
+     <m:mn>0</m:mn>
+     <m:mi>∞</m:mi>
+    </m:munderover>
+    <m:mrow>
+     <m:mfrac>
+      <m:mrow>
+       <m:msup>
+        <m:mrow>
+         <m:mrow><m:mo>(</m:mo>
+          <m:mrow>
+           <m:mi>θ</m:mi><m:mi>y</m:mi>
+          </m:mrow>
+         <m:mo>)</m:mo></m:mrow>
+        </m:mrow>
+        <m:mrow>
+         <m:mi>α</m:mi><m:mo>−</m:mo><m:mn>1</m:mn>
+        </m:mrow>
+       </m:msup>
+       <m:msup>
+        <m:mi>e</m:mi>
+        <m:mrow>
+         <m:mo>−</m:mo><m:mi>y</m:mi>
+        </m:mrow>
+       </m:msup>
+       
+      </m:mrow>
+      <m:mrow>
+       <m:mi>Γ</m:mi><m:mrow><m:mo>(</m:mo>
+        <m:mi>α</m:mi>
+       <m:mo>)</m:mo></m:mrow><m:msup>
+        <m:mi>θ</m:mi>
+        <m:mi>α</m:mi>
+       </m:msup>
+       
+      </m:mrow>
+     </m:mfrac>
+     
+    </m:mrow>
+   </m:mrow>
+   
+  </m:mstyle><m:mi>θ</m:mi><m:mi>d</m:mi><m:mi>y</m:mi><m:mo>=</m:mo><m:mfrac>
+   <m:mn>1</m:mn>
+   <m:mrow>
+    <m:mi>Γ</m:mi><m:mrow><m:mo>(</m:mo>
+     <m:mi>α</m:mi>
+    <m:mo>)</m:mo></m:mrow>
+   </m:mrow>
+  </m:mfrac>
+  <m:mstyle displaystyle="true">
+   <m:mrow><m:munderover>
+    <m:mo>∫</m:mo>
+    <m:mn>0</m:mn>
+    <m:mi>∞</m:mi>
+   </m:munderover>
+   <m:mrow>
+    <m:msup>
+     <m:mi>y</m:mi>
+     <m:mrow>
+      <m:mi>α</m:mi><m:mo>−</m:mo><m:mn>1</m:mn>
+     </m:mrow>
+    </m:msup>
+    <m:msup>
+     <m:mi>e</m:mi>
+     <m:mrow>
+      <m:mo>−</m:mo><m:mi>y</m:mi>
+     </m:mrow>
+    </m:msup>
+    <m:mi>d</m:mi><m:mi>y</m:mi>
+   </m:mrow>
+  </m:mrow>
+  
+ </m:mstyle><m:mo>=</m:mo><m:mfrac>
+  <m:mrow>
+   <m:mi>Γ</m:mi><m:mrow><m:mo>(</m:mo>
+    <m:mi>α</m:mi>
+   <m:mo>)</m:mo></m:mrow>
+  </m:mrow>
+  <m:mrow>
+   <m:mi>Γ</m:mi><m:mrow><m:mo>(</m:mo>
+    <m:mi>α</m:mi>
+   <m:mo>)</m:mo></m:mrow>
+  </m:mrow>
+ </m:mfrac>
+ <m:mo>=</m:mo><m:mn>1.</m:mn>
+</m:mrow>
+</m:semantics>
+</m:math>
+</para>
+<para id="para_16">
+The mean and variance are: <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mi>μ</m:mi><m:mo>=</m:mo><m:mi>α</m:mi><m:mi>θ</m:mi>
+  </m:mrow>
+ </m:semantics>
+</m:math> and <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:msup>
+    <m:mi>σ</m:mi>
+    <m:mn>2</m:mn>
+   </m:msup>
+   <m:mo>=</m:mo><m:mi>α</m:mi><m:msup>
+    <m:mi>θ</m:mi>
+    <m:mn>2</m:mn>
+   </m:msup>
+     </m:mrow>
+ </m:semantics>
+</m:math>.
+</para>
+
+	  <figure orient="horizontal" id="fig_1"><subfigure id="subfig1">
+		<title>Gamma Distribution</title>
+		<media id="idp3317344" alt=""><image src="../../media/Gamma_pdf_1.gif" mime-type="image/gif"/></media>
+		<caption>The c.d.f. graph.</caption>
+	</subfigure>
+	<subfigure id="subfig2">
+		<media id="idp4392288" alt=""><image src="../../media/Gamma_cdf_1.gif" mime-type="image/gif"/></media>
+		<caption>The p.d.f. graph.</caption>
+	</subfigure>
+	<caption>The p.d.f. and c.d.f. graphs of the Gamma Distribution.</caption>
+</figure>
+	    
+
+</section>
+<section id="sec_4">
+<example id="ex_2">
+<para id="para_17">
+Suppose that an average of 30 customers per hour arrive at a shop in accordance with Poisson process. That is, if a minute is our unit, then <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mi>λ</m:mi><m:mo>=</m:mo><m:mn>1</m:mn><m:mo>/</m:mo><m:mn>2</m:mn>
+  </m:mrow>
+ </m:semantics>
+</m:math>. What is the probability that the shopkeeper will wait more than 5 minutes before both of the first two customers arrive? If <emphasis>X</emphasis>  denotes the waiting  time in minutes until the second customer arrives, then <emphasis>X</emphasis> has a gamma distribution with <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mi>α</m:mi><m:mo>=</m:mo><m:mn>2,</m:mn><m:mi>θ</m:mi><m:mo>=</m:mo><m:mn>1</m:mn><m:mo>/</m:mo><m:mi>λ</m:mi><m:mo>=</m:mo><m:mn>2.</m:mn>
+  </m:mrow>
+ </m:semantics>
+</m:math>
+ Hence,
+</para>
+<para id="para_18">
+<m:math display="block">
+ <m:semantics>
+  <m:mrow>
+   <m:mi>p</m:mi><m:mrow><m:mo>(</m:mo>
+    <m:mrow>
+     <m:mi>X</m:mi><m:mo>&gt;</m:mo><m:mn>5</m:mn>
+    </m:mrow>
+   <m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mstyle displaystyle="true">
+    <m:mrow><m:munderover>
+     <m:mo>∫</m:mo>
+     <m:mn>5</m:mn>
+     <m:mi>∞</m:mi>
+    </m:munderover>
+    <m:mrow>
+     <m:mfrac>
+      <m:mrow>
+       <m:msup>
+        <m:mi>x</m:mi>
+        <m:mrow>
+         <m:mn>2</m:mn><m:mo>−</m:mo><m:mn>1</m:mn>
+        </m:mrow>
+       </m:msup>
+       <m:msup>
+        <m:mi>e</m:mi>
+        <m:mrow>
+         <m:mo>−</m:mo><m:mi>x</m:mi><m:mo>/</m:mo><m:mn>2</m:mn>
+        </m:mrow>
+       </m:msup>
+       
+      </m:mrow>
+      <m:mrow>
+       <m:mi>Γ</m:mi><m:mrow><m:mo>(</m:mo>
+        <m:mn>2</m:mn>
+       <m:mo>)</m:mo></m:mrow><m:msup>
+        <m:mn>2</m:mn>
+        <m:mn>2</m:mn>
+       </m:msup>
+       
+      </m:mrow>
+     </m:mfrac>
+     <m:mi>d</m:mi><m:mi>x</m:mi><m:mo>=</m:mo>
+    </m:mrow>
+   </m:mrow>
+   
+  </m:mstyle><m:mstyle displaystyle="true">
+   <m:mrow><m:munderover>
+    <m:mo>∫</m:mo>
+    <m:mn>5</m:mn>
+    <m:mi>∞</m:mi>
+   </m:munderover>
+   <m:mrow>
+    <m:mfrac>
+     <m:mrow>
+      <m:mi>x</m:mi><m:msup>
+       <m:mi>e</m:mi>
+       <m:mrow>
+        <m:mo>−</m:mo><m:mi>x</m:mi><m:mo>/</m:mo><m:mn>2</m:mn>
+       </m:mrow>
+      </m:msup>
+      
+     </m:mrow>
+     <m:mn>4</m:mn>
+    </m:mfrac>
+    <m:mi>d</m:mi><m:mi>x</m:mi><m:mo>=</m:mo>
+   </m:mrow>
+  </m:mrow>
+  
+ </m:mstyle><m:mfrac>
+  <m:mn>1</m:mn>
+  <m:mn>4</m:mn>
+ </m:mfrac>
+ <m:msubsup>
+  <m:mrow>
+   <m:mrow><m:mo>[</m:mo> <m:mrow>
+    <m:mrow><m:mo>(</m:mo>
+     <m:mrow>
+      <m:mo>−</m:mo><m:mn>2</m:mn>
+     </m:mrow>
+    <m:mo>)</m:mo></m:mrow><m:mi>x</m:mi><m:msup>
+     <m:mi>e</m:mi>
+     <m:mrow>
+      <m:mo>−</m:mo><m:mi>x</m:mi><m:mo>/</m:mo><m:mn>2</m:mn>
+     </m:mrow>
+    </m:msup>
+    <m:mo>−</m:mo><m:mn>4</m:mn><m:msup>
+     <m:mi>e</m:mi>
+     <m:mrow>
+      <m:mo>−</m:mo><m:mi>x</m:mi><m:mo>/</m:mo><m:mn>2</m:mn>
+     </m:mrow>
+    </m:msup>
+    
+   </m:mrow> <m:mo>]</m:mo></m:mrow>
+  </m:mrow>
+  <m:mn>5</m:mn>
+  <m:mi>∞</m:mi>
+ </m:msubsup>
+ <m:mo>=</m:mo><m:mfrac>
+  <m:mn>7</m:mn>
+  <m:mn>2</m:mn>
+ </m:mfrac>
+ <m:msup>
+  <m:mi>e</m:mi>
+  <m:mrow>
+   <m:mo>−</m:mo><m:mn>5</m:mn><m:mo>/</m:mo><m:mn>2</m:mn>
+  </m:mrow>
+ </m:msup>
+ <m:mo>=</m:mo><m:mn>0.287.</m:mn>
+</m:mrow>
+</m:semantics>
+</m:math>
+</para>
+<para id="para_19">
+We could also have used equation with <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mi>λ</m:mi><m:mo>=</m:mo><m:mn>1</m:mn><m:mo>/</m:mo><m:mi>θ</m:mi>
+  </m:mrow>
+ </m:semantics>
+</m:math>, because <m:math>
+ <m:semantics>
+  <m:mi>α</m:mi>
+ </m:semantics>
+</m:math> is an integer <m:math display="block">
+ <m:semantics>
+  <m:mrow>
+   <m:mi>P</m:mi><m:mrow><m:mo>(</m:mo>
+    <m:mrow>
+     <m:mi>X</m:mi><m:mo>&gt;</m:mo><m:mi>x</m:mi>
+    </m:mrow>
+   <m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mstyle displaystyle="true">
+    <m:munderover>
+     <m:mo>∑</m:mo>
+     <m:mrow>
+      <m:mi>k</m:mi><m:mo>=</m:mo><m:mn>0</m:mn>
+     </m:mrow>
+     <m:mrow>
+      <m:mi>α</m:mi><m:mo>−</m:mo><m:mn>1</m:mn>
+     </m:mrow>
+    </m:munderover>
+    <m:mrow>
+     <m:mfrac>
+      <m:mrow>
+       <m:msup>
+        <m:mrow>
+         <m:mrow><m:mo>(</m:mo>
+          <m:mrow>
+           <m:mi>x</m:mi><m:mo>/</m:mo><m:mi>θ</m:mi>
+          </m:mrow>
+         <m:mo>)</m:mo></m:mrow>
+        </m:mrow>
+        <m:mi>k</m:mi>
+       </m:msup>
+       <m:msup>
+        <m:mi>e</m:mi>
+        <m:mrow>
+         <m:mo>−</m:mo><m:mi>x</m:mi><m:mo>/</m:mo><m:mi>θ</m:mi>
+        </m:mrow>
+       </m:msup>
+       
+      </m:mrow>
+      <m:mrow>
+       <m:mi>k</m:mi><m:mo>!</m:mo>
+      </m:mrow>
+     </m:mfrac>
+     
+    </m:mrow>
+   </m:mstyle><m:mo>.</m:mo>
+  </m:mrow>
+ </m:semantics>
+</m:math>  Thus, with <emphasis>x</emphasis>=5, <m:math>
+ <m:semantics>
+  <m:mi>α</m:mi>
+ </m:semantics>
+</m:math>=2, and <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mi>θ</m:mi><m:mo>=</m:mo><m:mn>2</m:mn>
+  </m:mrow>
+ </m:semantics>
+</m:math>, this is equal to
+</para>
+<para id="para_20">
+<m:math display="block">
+ <m:semantics>
+  <m:mrow>
+   <m:mi>P</m:mi><m:mrow><m:mo>(</m:mo>
+    <m:mrow>
+     <m:mi>X</m:mi><m:mo>&gt;</m:mo><m:mi>x</m:mi>
+    </m:mrow>
+   <m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mstyle displaystyle="true">
+    <m:munderover>
+     <m:mo>∑</m:mo>
+     <m:mrow>
+      <m:mi>k</m:mi><m:mo>=</m:mo><m:mn>0</m:mn>
+     </m:mrow>
+     <m:mrow>
+      <m:mn>2</m:mn><m:mo>−</m:mo><m:mn>1</m:mn>
+     </m:mrow>
+    </m:munderover>
+    <m:mrow>
+     <m:mfrac>
+      <m:mrow>
+       <m:msup>
+        <m:mrow>
+         <m:mrow><m:mo>(</m:mo>
+          <m:mrow>
+           <m:mn>5</m:mn><m:mo>/</m:mo><m:mn>2</m:mn>
+          </m:mrow>
+         <m:mo>)</m:mo></m:mrow>
+        </m:mrow>
+        <m:mi>k</m:mi>
+       </m:msup>
+       <m:msup>
+        <m:mi>e</m:mi>
+        <m:mrow>
+         <m:mo>−</m:mo><m:mn>5</m:mn><m:mo>/</m:mo><m:mn>2</m:mn>
+        </m:mrow>
+       </m:msup>
+       
+      </m:mrow>
+      <m:mrow>
+       <m:mi>k</m:mi><m:mo>!</m:mo>
+      </m:mrow>
+     </m:mfrac>
+     <m:mo>=</m:mo><m:msup>
+      <m:mi>e</m:mi>
+      <m:mrow>
+       <m:mo>−</m:mo><m:mn>5</m:mn><m:mo>/</m:mo><m:mn>2</m:mn>
+      </m:mrow>
+     </m:msup>
+     <m:mrow><m:mo>(</m:mo>
+      <m:mrow>
+       <m:mn>1</m:mn><m:mo>+</m:mo><m:mfrac>
+        <m:mn>5</m:mn>
+        <m:mn>2</m:mn>
+       </m:mfrac>
+       
+      </m:mrow>
+     <m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mrow><m:mo>(</m:mo>
+      <m:mrow>
+       <m:mfrac>
+        <m:mn>7</m:mn>
+        <m:mn>2</m:mn>
+       </m:mfrac>
+       
+      </m:mrow>
+     <m:mo>)</m:mo></m:mrow><m:msup>
+      <m:mi>e</m:mi>
+      <m:mrow>
+       <m:mo>−</m:mo><m:mn>5</m:mn><m:mo>/</m:mo><m:mn>2</m:mn>
+      </m:mrow>
+     </m:msup>
+         </m:mrow>
+   </m:mstyle><m:mo>.</m:mo>
+  </m:mrow>
+ </m:semantics>
+</m:math>
+</para>
+</example>
+</section>
+</section>
+<section id="sec_5">
+<title>Chi-Square Distribution</title>
+<para id="para_21">
+Let now consider the special case of the gamma distribution that plays an important role in statistics. 
+</para>
+
+<definition id="def_2">
+<term/>
+<meaning id="idp2694064">
+Let <emphasis>X</emphasis> have a gamma distribution with <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mi>θ</m:mi><m:mo>=</m:mo><m:mn>2</m:mn>
+  </m:mrow>
+ </m:semantics>
+</m:math> and <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mi>α</m:mi><m:mo>=</m:mo><m:mi>r</m:mi><m:mo>/</m:mo><m:mn>2</m:mn>
+  </m:mrow>
+ </m:semantics>
+</m:math>, where <emphasis>r</emphasis> is a positive integer. If the p.d.f. of <emphasis>X</emphasis> is 
+<equation id="eq_2"> 
+<m:math display="block">
+ <m:semantics>
+  <m:mrow>
+   <m:mi>f</m:mi><m:mrow><m:mo>(</m:mo>
+    <m:mi>x</m:mi>
+   <m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mfrac>
+    <m:mn>1</m:mn>
+    <m:mrow>
+     <m:mi>Γ</m:mi><m:mrow><m:mo>(</m:mo>
+      <m:mrow>
+       <m:mi>r</m:mi><m:mo>/</m:mo><m:mn>2</m:mn>
+      </m:mrow>
+     <m:mo>)</m:mo></m:mrow><m:msup>
+      <m:mn>2</m:mn>
+      <m:mrow>
+       <m:mi>r</m:mi><m:mo>/</m:mo><m:mn>2</m:mn>
+      </m:mrow>
+     </m:msup>
+     
+    </m:mrow>
+   </m:mfrac>
+   <m:msup>
+    <m:mi>x</m:mi>
+    <m:mrow>
+     <m:mi>r</m:mi><m:mo>/</m:mo><m:mn>2</m:mn><m:mo>−</m:mo><m:mn>1</m:mn>
+    </m:mrow>
+   </m:msup>
+   <m:msup>
+    <m:mi>e</m:mi>
+    <m:mrow>
+     <m:mo>−</m:mo><m:mi>x</m:mi><m:mo>/</m:mo><m:mn>2</m:mn>
+    </m:mrow>
+   </m:msup>
+   <m:mn>,0</m:mn><m:mo>≤</m:mo><m:mi>x</m:mi><m:mo>&lt;</m:mo><m:mi>∞</m:mi><m:mo>.</m:mo>
+  </m:mrow>
+ </m:semantics>
+</m:math>
+</equation> 
+We say that <emphasis>X</emphasis> has <term>chi-square distribution</term> with <emphasis>r</emphasis> degrees of freedom, which we abbreviate by saying  is <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:msup>
+    <m:mi>χ</m:mi>
+    <m:mn>2</m:mn>
+   </m:msup>
+   <m:mrow><m:mo>(</m:mo>
+    <m:mi>r</m:mi>
+   <m:mo>)</m:mo></m:mrow>
+  </m:mrow>
+ </m:semantics>
+</m:math>.
+</meaning>
+</definition>
+<para id="para_22">
+The <term>mean</term> and the <term>variance</term> of this chi-square distributions are
+</para>
+<para id="para_23">
+<m:math display="block">
+ <m:semantics>
+  <m:mrow>
+   <m:mi>μ</m:mi><m:mo>=</m:mo><m:mi>α</m:mi><m:mi>θ</m:mi><m:mo>=</m:mo><m:mrow><m:mo>(</m:mo>
+    <m:mrow>
+     <m:mfrac>
+      <m:mi>r</m:mi>
+      <m:mn>2</m:mn>
+     </m:mfrac>
+     
+    </m:mrow>
+   <m:mo>)</m:mo></m:mrow><m:mn>2</m:mn><m:mo>=</m:mo><m:mi>r</m:mi>
+  </m:mrow>
+ </m:semantics>
+</m:math> and <m:math display="block">
+ <m:semantics>
+  <m:mrow>
+   <m:msup>
+    <m:mi>σ</m:mi>
+    <m:mn>2</m:mn>
+   </m:msup>
+   <m:mo>=</m:mo><m:mi>α</m:mi><m:msup>
+    <m:mi>θ</m:mi>
+    <m:mn>2</m:mn>
+   </m:msup>
+   <m:mo>=</m:mo><m:mrow><m:mo>(</m:mo>
+    <m:mrow>
+     <m:mfrac>
+      <m:mi>r</m:mi>
+      <m:mn>2</m:mn>
+     </m:mfrac>
+     
+    </m:mrow>
+   <m:mo>)</m:mo></m:mrow><m:msup>
+    <m:mn>2</m:mn>
+    <m:mn>2</m:mn>
+   </m:msup>
+   <m:mo>=</m:mo><m:mn>2</m:mn><m:mi>r</m:mi><m:mo>.</m:mo>
+  </m:mrow>
+
+ </m:semantics>
+</m:math>
+</para>
+<para id="para_24">
+That is, the mean equals the number of degrees of freedom and the variance equals twice the number of degrees of freedom. 
+</para>
+<para id="para_224">
+In the <link target-id="fig_2">fugure 2</link> the graphs of chi-square p.d.f. for <emphasis>r</emphasis>=2,3,5, and 8 are given. 
+</para>
+	  <figure id="fig_2">
+	    
+	    <media id="idm1051632" alt=""><image src="../../media/chi_sq.gif" mime-type="image/gif"/></media>
+	    <caption>The p.d.f. of chi-square distribution for degrees of freedom <emphasis>r</emphasis>=2,3,5,8.</caption>
+	  </figure>
+
+<note type="Note" id="idp1144320"><label>Note</label>
+the relationship between the mean <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mi>μ</m:mi><m:mo>=</m:mo><m:mi>r</m:mi>
+  </m:mrow>
+ </m:semantics>
+</m:math>, and the point at which the p.d.f. obtains its maximum.
+</note>
+<para id="para_25">
+Because the chi-square distribution is so important in applications, tables have been prepared giving the values of the distribution function for selected value of <emphasis>r</emphasis> and <emphasis>x</emphasis>,
+</para>
+<equation id="eq_3">
+<m:math display="block">
+ <m:semantics>
+  <m:mrow>
+   <m:mi>F</m:mi><m:mrow><m:mo>(</m:mo>
+    <m:mi>x</m:mi>
+   <m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mstyle displaystyle="true">
+    <m:mrow><m:munderover>
+     <m:mo>∫</m:mo>
+     <m:mn>0</m:mn>
+     <m:mi>x</m:mi>
+    </m:munderover>
+    <m:mrow>
+     <m:mfrac>
+      <m:mn>1</m:mn>
+      <m:mrow>
+       <m:mi>Γ</m:mi><m:mrow><m:mo>(</m:mo>
+        <m:mrow>
+         <m:mi>r</m:mi><m:mo>/</m:mo><m:mn>2</m:mn>
+        </m:mrow>
+       <m:mo>)</m:mo></m:mrow><m:msup>
+        <m:mn>2</m:mn>
+        <m:mrow>
+         <m:mi>r</m:mi><m:mo>/</m:mo><m:mn>2</m:mn>
+        </m:mrow>
+       </m:msup>
+       
+      </m:mrow>
+     </m:mfrac>
+     <m:msup>
+      <m:mi>w</m:mi>
+      <m:mrow>
+       <m:mi>r</m:mi><m:mo>/</m:mo><m:mn>2</m:mn><m:mo>−</m:mo><m:mn>1</m:mn>
+      </m:mrow>
+     </m:msup>
+     <m:msup>
+      <m:mi>e</m:mi>
+      <m:mrow>
+       <m:mo>−</m:mo><m:mi>w</m:mi><m:mo>/</m:mo><m:mn>2</m:mn>
+      </m:mrow>
+     </m:msup>
+     <m:mi>d</m:mi><m:mi>w</m:mi>
+    </m:mrow>
+   </m:mrow>
+   
+  </m:mstyle><m:mo>.</m:mo>
+ </m:mrow>
+</m:semantics>
+</m:math>
+
+</equation> 
+<example id="ex_3"> 
+<para id="para_26">
+Let <emphasis>X</emphasis> have a chi-square distribution with <emphasis>r</emphasis> =5 degrees of freedom. Then, using tabularized values,
+</para>
+<para id="para_27">
+<m:math display="block">
+ <m:semantics>
+  <m:mrow>
+   <m:mi>P</m:mi><m:mrow><m:mo>(</m:mo>
+    <m:mrow>
+     <m:mn>1.145</m:mn><m:mo>≤</m:mo><m:mi>X</m:mi><m:mo>≤</m:mo><m:mn>12.83</m:mn>
+    </m:mrow>
+   <m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mi>F</m:mi><m:mrow><m:mo>(</m:mo>
+    <m:mrow>
+     <m:mn>12.83</m:mn>
+    </m:mrow>
+   <m:mo>)</m:mo></m:mrow><m:mo>−</m:mo><m:mi>F</m:mi><m:mrow><m:mo>(</m:mo>
+    <m:mrow>
+     <m:mn>1.145</m:mn>
+    </m:mrow>
+   <m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>0.975</m:mn><m:mo>−</m:mo><m:mn>0.050</m:mn><m:mo>=</m:mo><m:mn>0.925</m:mn>
+  </m:mrow>
+ </m:semantics>
+</m:math>
+</para>
+<para id="para_28">
+and <m:math display="block">
+ <m:semantics>
+  <m:mrow>
+   <m:mi>P</m:mi><m:mrow><m:mo>(</m:mo>
+    <m:mrow>
+     <m:mi>X</m:mi><m:mo>&gt;</m:mo><m:mn>15.09</m:mn>
+    </m:mrow>
+   <m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>1</m:mn><m:mo>−</m:mo><m:mi>F</m:mi><m:mrow><m:mo>(</m:mo>
+    <m:mrow>
+     <m:mn>15.09</m:mn>
+    </m:mrow>
+   <m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>1</m:mn><m:mo>−</m:mo><m:mn>0.99</m:mn><m:mo>=</m:mo><m:mn>0.01.</m:mn>
+  </m:mrow>
+ </m:semantics>
+</m:math>
+</para>
+</example>
+<example id="ex_4"> 
+<para id="para_29">
+If <emphasis>X</emphasis> is <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:msup>
+    <m:mi>χ</m:mi>
+    <m:mn>2</m:mn>
+   </m:msup>
+   <m:mrow><m:mo>(</m:mo>
+    <m:mn>7</m:mn>
+   <m:mo>)</m:mo></m:mrow>
+  </m:mrow>
+ </m:semantics>
+</m:math>, two constants, <emphasis>a</emphasis> and <emphasis>b</emphasis>, such that
+<m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mi>P</m:mi><m:mrow><m:mo>(</m:mo>
+    <m:mrow>
+     <m:mi>a</m:mi><m:mo>&lt;</m:mo><m:mi>X</m:mi><m:mo>&lt;</m:mo><m:mi>b</m:mi>
+    </m:mrow>
+   <m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>0.95</m:mn>
+  </m:mrow>
+ </m:semantics>
+</m:math>, are <emphasis>a</emphasis>=1.690 and <emphasis>b</emphasis>=16.01.
+</para>
+<para id="para_30">
+Other constants <emphasis>a</emphasis> and <emphasis>b</emphasis> can be found, this above are only restricted in choices by the limited table. 
+</para>
+</example>
+<para id="para_31">
+Probabilities like that in <link target-id="ex_4">Example 4</link> are so important in statistical applications that one uses special symbols for <emphasis>a</emphasis> and <emphasis>b</emphasis>. Let <m:math>
+ <m:semantics>
+  <m:mi>α</m:mi>
+ </m:semantics>
+</m:math>
+ be a positive probability (that is usually less than 0.5) and let <emphasis>X</emphasis> have a chi-square distribution with <emphasis>r</emphasis> degrees of freedom. Then <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:msubsup>
+    <m:mi>χ</m:mi>
+    <m:mi>α</m:mi>
+    <m:mn>2</m:mn>
+   </m:msubsup>
+   <m:mrow><m:mo>(</m:mo>
+    <m:mi>r</m:mi>
+   <m:mo>)</m:mo></m:mrow>
+  </m:mrow>
+ </m:semantics>
+</m:math> is a number such that <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mi>P</m:mi><m:mrow><m:mo>[</m:mo> <m:mrow>
+    <m:mi>X</m:mi><m:mo>≥</m:mo><m:msubsup>
+     <m:mi>χ</m:mi>
+     <m:mi>α</m:mi>
+     <m:mn>2</m:mn>
+    </m:msubsup>
+    <m:mrow><m:mo>(</m:mo>
+     <m:mi>r</m:mi>
+    <m:mo>)</m:mo></m:mrow>
+   </m:mrow> <m:mo>]</m:mo></m:mrow><m:mo>=</m:mo><m:mi>α</m:mi>
+  </m:mrow>
+ </m:semantics>
+</m:math>
+</para>
+<para id="para_32">
+That is, <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:msubsup>
+    <m:mi>χ</m:mi>
+    <m:mi>α</m:mi>
+    <m:mn>2</m:mn>
+   </m:msubsup>
+   <m:mrow><m:mo>(</m:mo>
+    <m:mi>r</m:mi>
+   <m:mo>)</m:mo></m:mrow>
+  </m:mrow>
+ </m:semantics>
+</m:math> is the 100(1-<m:math>
+ <m:semantics>
+  <m:mi>α</m:mi>
+ </m:semantics>
+</m:math>) percentile (or upper 100a percent point) of the chi-square distribution with <emphasis>r</emphasis> degrees of freedom. Then the 100<m:math>
+ <m:semantics>
+  <m:mi>α</m:mi>
+ </m:semantics>
+</m:math>
+ percentile is the number <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:msubsup>
+    <m:mi>χ</m:mi>
+    <m:mrow>
+     <m:mn>1</m:mn><m:mo>−</m:mo><m:mi>α</m:mi>
+    </m:mrow>
+    <m:mn>2</m:mn>
+   </m:msubsup>
+   <m:mrow><m:mo>(</m:mo>
+    <m:mi>r</m:mi>
+   <m:mo>)</m:mo></m:mrow>
+  </m:mrow>
+ </m:semantics>
+</m:math> such that <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mi>P</m:mi><m:mrow><m:mo>[</m:mo> <m:mrow>
+    <m:mi>X</m:mi><m:mo>≤</m:mo><m:msubsup>
+     <m:mi>χ</m:mi>
+     <m:mrow>
+      <m:mn>1</m:mn><m:mo>−</m:mo><m:mi>α</m:mi>
+     </m:mrow>
+     <m:mn>2</m:mn>
+    </m:msubsup>
+    <m:mrow><m:mo>(</m:mo>
+     <m:mi>r</m:mi>
+    <m:mo>)</m:mo></m:mrow>
+   </m:mrow> <m:mo>]</m:mo></m:mrow><m:mo>=</m:mo><m:mi>α</m:mi>
+  </m:mrow>
+ </m:semantics>
+</m:math>.
+This is, the probability to the right of <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:msubsup>
+    <m:mi>χ</m:mi>
+    <m:mrow>
+     <m:mn>1</m:mn><m:mo>−</m:mo><m:mi>α</m:mi>
+    </m:mrow>
+    <m:mn>2</m:mn>
+   </m:msubsup>
+   <m:mrow><m:mo>(</m:mo>
+    <m:mi>r</m:mi>
+   <m:mo>)</m:mo></m:mrow>
+  </m:mrow>
+ </m:semantics>
+</m:math>
+ is 1-<m:math>
+ <m:semantics>
+  <m:mi>α</m:mi>
+ </m:semantics>
+</m:math>.
+SEE <link target-id="fig_3">fugure 3</link>.
+
+</para>
+<example id="ex_5"> 
+<para id="para_33">
+Let <emphasis>X</emphasis> have a chi-square distribution with seven degrees of freedom. Then, using tabularized values, <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:msubsup>
+    <m:mi>χ</m:mi>
+    <m:mrow>
+     <m:mn>0.05</m:mn>
+    </m:mrow>
+    <m:mn>2</m:mn>
+   </m:msubsup>
+   <m:mrow><m:mo>(</m:mo>
+    <m:mn>7</m:mn>
+   <m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>14.07</m:mn>
+  </m:mrow>
+ </m:semantics>
+</m:math> and <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:msubsup>
+    <m:mi>χ</m:mi>
+    <m:mrow>
+     <m:mn>0.95</m:mn>
+    </m:mrow>
+    <m:mn>2</m:mn>
+   </m:msubsup>
+   <m:mrow><m:mo>(</m:mo>
+    <m:mn>7</m:mn>
+   <m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>2.167.</m:mn>
+  </m:mrow>
+ </m:semantics>
+</m:math> These are the points that are indicated on Figure 3.
+
+ 
+</para>
+
+	  <figure id="fig_3">
+	    
+	    <media id="idp4324352" alt=""><image src="../../media/chi_2_2.gif" mime-type="image/gif"/></media>
+	    <caption><m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:msubsup>
+    <m:mi>χ</m:mi>
+    <m:mrow>
+     <m:mn>0.05</m:mn>
+    </m:mrow>
+    <m:mn>2</m:mn>
+   </m:msubsup>
+   <m:mrow><m:mo>(</m:mo>
+    <m:mn>7</m:mn>
+   <m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>14.07</m:mn>
+  </m:mrow>
+ </m:semantics>
+</m:math> and <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:msubsup>
+    <m:mi>χ</m:mi>
+    <m:mrow>
+     <m:mn>0.95</m:mn>
+    </m:mrow>
+    <m:mn>2</m:mn>
+   </m:msubsup>
+   <m:mrow><m:mo>(</m:mo>
+    <m:mn>7</m:mn>
+   <m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>2.167.</m:mn>
+  </m:mrow>
+ </m:semantics>
+</m:math></caption>
+	  </figure>
+</example> 
+</section>
+</section>
+<section id="sec_11">
+<para id="para_34">
+
+</para>
+<para id="para_35">
+
+</para>
+<para id="para_36">
+
+</para>
+</section>
+    <para id="delete_me">
+       <!-- Insert module text here -->
+    </para>   
+  </content>
+  
+</document>

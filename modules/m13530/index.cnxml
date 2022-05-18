@@ -1,0 +1,1476 @@
+<document xmlns="http://cnx.rice.edu/cnxml" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:md="http://cnx.rice.edu/mdml">
+  <title>MATHEMATICAL EXPECTATION</title>
+  <metadata><md:content-id>undefined</md:content-id><md:title/><md:uuid>8accfbed-f635-451c-84a4-8f94f0a7de54</md:uuid>
+</metadata>
+  <content>
+
+	  <section id="sec_1">
+	    <title>MATHEMATICAL EXPECTIATION</title>
+
+
+<definition id="def_1">
+   <term>MATHEMATICAL EXPECTIATION</term>
+   <meaning id="idp12431568">
+If <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mi>f</m:mi><m:mrow><m:mo>(</m:mo>
+    <m:mi>x</m:mi>
+   <m:mo>)</m:mo></m:mrow>
+  </m:mrow>
+ </m:semantics>
+</m:math> is the p.d.f. of the random variable <emphasis>X</emphasis>
+ of the discrete type with space <emphasis>R</emphasis> and if the summation
+</meaning>
+
+</definition>	
+<equation id="eq_1">
+<m:math display="block">
+ <m:semantics>
+  <m:mrow>
+   <m:mstyle displaystyle="true">
+    <m:munder>
+     <m:mo>∑</m:mo>
+     <m:mi>R</m:mi>
+    </m:munder>
+    <m:mrow>
+     <m:mi>u</m:mi><m:mrow><m:mo>(</m:mo>
+      <m:mi>x</m:mi>
+     <m:mo>)</m:mo></m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo>
+      <m:mi>x</m:mi>
+     <m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mstyle displaystyle="true">
+      <m:munder>
+       <m:mo>∑</m:mo>
+       <m:mrow>
+        <m:mi>x</m:mi><m:mo>∈</m:mo><m:mi>R</m:mi>
+       </m:mrow>
+      </m:munder>
+      <m:mrow>
+       <m:mi>u</m:mi><m:mrow><m:mo>(</m:mo>
+        <m:mi>x</m:mi>
+       <m:mo>)</m:mo></m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo>
+        <m:mi>x</m:mi>
+       <m:mo>)</m:mo></m:mrow>
+      </m:mrow>
+     </m:mstyle>
+    </m:mrow>
+   </m:mstyle><m:mo>.</m:mo>
+  </m:mrow>
+  </m:semantics>
+</m:math>
+
+
+</equation> 
+  <para id="para_1">
+exists, then the sum is called <term>the mathematical expectation</term> or <term>the expected value</term> of the function <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mi>u</m:mi><m:mrow><m:mo>(</m:mo>
+    <m:mi>X</m:mi>
+   <m:mo>)</m:mo></m:mrow>
+  </m:mrow>
+ </m:semantics>
+</m:math>
+, and it is denoted by <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mi>E</m:mi><m:mrow><m:mo>[</m:mo> <m:mrow>
+    <m:mi>u</m:mi><m:mrow><m:mo>(</m:mo>
+     <m:mi>x</m:mi>
+    <m:mo>)</m:mo></m:mrow>
+   </m:mrow> <m:mo>]</m:mo></m:mrow>
+  </m:mrow>
+ </m:semantics>
+</m:math>
+. That is,             
+	  </para>
+<equation id="eq_2">
+<m:math display="block">
+ <m:semantics>
+  <m:mrow>
+   <m:mi>E</m:mi><m:mrow><m:mo>[</m:mo> <m:mrow>
+    <m:mi>u</m:mi><m:mrow><m:mo>(</m:mo>
+     <m:mi>X</m:mi>
+    <m:mo>)</m:mo></m:mrow>
+   </m:mrow> <m:mo>]</m:mo></m:mrow><m:mo>=</m:mo><m:mstyle displaystyle="true">
+    <m:munder>
+     <m:mo>∑</m:mo>
+     <m:mi>R</m:mi>
+    </m:munder>
+    <m:mrow>
+     <m:mi>u</m:mi><m:mrow><m:mo>(</m:mo>
+      <m:mi>x</m:mi>
+     <m:mo>)</m:mo></m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo>
+      <m:mi>x</m:mi>
+     <m:mo>)</m:mo></m:mrow>
+    </m:mrow>
+   </m:mstyle><m:mo>.</m:mo>
+  </m:mrow>
+ </m:semantics>
+</m:math>
+
+</equation> 
+
+ <para id="para_2">
+We can think of the expected value <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mi>E</m:mi><m:mrow><m:mo>[</m:mo> <m:mrow>
+    <m:mi>u</m:mi><m:mrow><m:mo>(</m:mo>
+     <m:mi>x</m:mi>
+    <m:mo>)</m:mo></m:mrow>
+   </m:mrow> <m:mo>]</m:mo></m:mrow>
+  </m:mrow>
+ </m:semantics>
+</m:math>
+ as a weighted mean of <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mi>u</m:mi><m:mo stretchy="false">(</m:mo><m:mi>x</m:mi><m:mo stretchy="false">)</m:mo>
+  </m:mrow>
+ </m:semantics>
+</m:math>
+, <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mi>x</m:mi><m:mo>∈</m:mo><m:mi>R</m:mi>
+  </m:mrow>
+</m:semantics>
+</m:math>, where the weights are the probabilities <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mi>f</m:mi><m:mrow><m:mo>(</m:mo>
+    <m:mi>x</m:mi>
+   <m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mi>P</m:mi><m:mrow><m:mo>(</m:mo>
+    <m:mrow>
+     <m:mi>X</m:mi><m:mo>=</m:mo><m:mi>x</m:mi>
+    </m:mrow>
+   <m:mo>)</m:mo></m:mrow>
+  </m:mrow>
+ </m:semantics>
+</m:math>.
+
+	  </para>
+<note type="REMARK" id="idp1025936"><label>REMARK</label>
+The usual definition of the mathematical expectation of <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mi>u</m:mi><m:mrow><m:mo>(</m:mo>
+    <m:mi>X</m:mi>
+   <m:mo>)</m:mo></m:mrow>
+  </m:mrow>
+ </m:semantics>
+</m:math>
+ requires that the sum converges absolutely; that is, <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mstyle displaystyle="true">
+    <m:munder>
+     <m:mo>∑</m:mo>
+     <m:mrow>
+      <m:mi>x</m:mi><m:mo>∈</m:mo><m:mi>R</m:mi>
+     </m:mrow>
+    </m:munder>
+    <m:mrow>
+     <m:mrow><m:mo>|</m:mo> <m:mrow>
+      <m:mi>u</m:mi><m:mrow><m:mo>(</m:mo>
+       <m:mi>x</m:mi>
+      <m:mo>)</m:mo></m:mrow>
+     </m:mrow> <m:mo>|</m:mo></m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo>
+      <m:mi>x</m:mi>
+     <m:mo>)</m:mo></m:mrow>
+    </m:mrow>
+   </m:mstyle>
+  </m:mrow>
+ </m:semantics>
+</m:math>
+ exists. 
+</note>
+
+  <para id="para_3">
+There is another important observation that must be made about consistency of this definition. Certainly, this function <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mi>u</m:mi><m:mrow><m:mo>(</m:mo>
+    <m:mi>X</m:mi>
+   <m:mo>)</m:mo></m:mrow>
+  </m:mrow>
+ </m:semantics>
+</m:math>
+ of the random variable <emphasis>X</emphasis> is itself a random variable, say <emphasis>Y</emphasis>. Suppose that we find the p.d.f. of <emphasis>Y</emphasis> to be <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mi>g</m:mi><m:mrow><m:mo>(</m:mo>
+    <m:mi>y</m:mi>
+   <m:mo>)</m:mo></m:mrow>
+  </m:mrow>
+ </m:semantics>
+</m:math>
+ on the support <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:msub>
+    <m:mi>R</m:mi>
+    <m:mn>1</m:mn>
+   </m:msub>
+     </m:mrow>
+ </m:semantics>
+</m:math>
+. Then, <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mi>E</m:mi><m:mrow><m:mo>(</m:mo>
+    <m:mi>Y</m:mi>
+   <m:mo>)</m:mo></m:mrow>
+  </m:mrow>
+ </m:semantics>
+</m:math>
+ is given by the summation <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mstyle displaystyle="true">
+    <m:munder>
+     <m:mo>∑</m:mo>
+     <m:mrow>
+      <m:mi>y</m:mi><m:mo>∈</m:mo><m:msub>
+       <m:mi>R</m:mi>
+       <m:mn>1</m:mn>
+      </m:msub>
+      
+     </m:mrow>
+    </m:munder>
+    <m:mrow>
+     <m:mi>y</m:mi><m:mi>g</m:mi><m:mrow><m:mo>(</m:mo>
+      <m:mi>y</m:mi>
+     <m:mo>)</m:mo></m:mrow>
+    </m:mrow>
+   </m:mstyle>
+  </m:mrow>
+ </m:semantics>
+</m:math>
+.
+	  </para> 
+  <para id="para_4">
+In general it is true that <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mstyle displaystyle="true">
+    <m:munder>
+     <m:mo>∑</m:mo>
+     <m:mi>R</m:mi>
+    </m:munder>
+    <m:mrow>
+     <m:mi>u</m:mi><m:mrow><m:mo>(</m:mo>
+      <m:mi>x</m:mi>
+     <m:mo>)</m:mo></m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo>
+      <m:mi>x</m:mi>
+     <m:mo>)</m:mo></m:mrow>
+    </m:mrow>
+   </m:mstyle><m:mo>=</m:mo><m:mstyle displaystyle="true">
+    <m:munder>
+     <m:mo>∑</m:mo>
+     <m:mrow>
+      <m:mi>y</m:mi><m:mo>∈</m:mo><m:msub>
+       <m:mi>R</m:mi>
+       <m:mn>1</m:mn>
+      </m:msub>
+      
+     </m:mrow>
+    </m:munder>
+    <m:mrow>
+     <m:mi>y</m:mi><m:mi>g</m:mi><m:mrow><m:mo>(</m:mo>
+      <m:mi>y</m:mi>
+     <m:mo>)</m:mo></m:mrow>
+    </m:mrow>
+   </m:mstyle>
+  </m:mrow>
+ </m:semantics>
+</m:math>.
+ 
+</para> 
+
+  <para id="para_5">
+This is, the same expectation is obtained by either method. 
+   </para>
+	  <section id="sec_2">
+<example id="ex_1">
+  <para id="para_6">
+Let <emphasis>X</emphasis> be the random variable defined by the outcome of the cast of the die. Thus the p.d.f. of <emphasis>X</emphasis> is
+   </para>
+ <para id="para_7">
+<m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mi>f</m:mi><m:mrow><m:mo>(</m:mo>
+    <m:mi>x</m:mi>
+   <m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mfrac>
+    <m:mn>1</m:mn>
+    <m:mn>6</m:mn>
+   </m:mfrac>
+     </m:mrow>
+ </m:semantics>
+</m:math>
+, <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mi>x</m:mi><m:mo>=</m:mo><m:mn>1,2,3,4,5,6.</m:mn>
+  </m:mrow>
+ </m:semantics>
+</m:math>
+
+   </para>
+  <para id="para_8">
+In terms of the observed value <emphasis>x</emphasis>, the function is as follows
+   </para>
+  <para id="para_9">
+<m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mi>u</m:mi><m:mrow><m:mo>(</m:mo>
+    <m:mi>x</m:mi>
+   <m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mrow><m:mo>{</m:mo> <m:mtable columnalign="left">
+    <m:mtr>
+     <m:mtd>
+      <m:mn>1,</m:mn><m:mi>x</m:mi><m:mo>=</m:mo><m:mn>1,2,3,</m:mn>
+     </m:mtd>
+    </m:mtr>
+    <m:mtr>
+     <m:mtd>
+      <m:mn>5,</m:mn><m:mi>x</m:mi><m:mo>=</m:mo><m:mn>4,5,</m:mn>
+     </m:mtd>
+    </m:mtr>
+    <m:mtr>
+     <m:mtd>
+      <m:mn>35,</m:mn><m:mi>x</m:mi><m:mo>=</m:mo><m:mn>6.</m:mn>
+     </m:mtd>
+    </m:mtr>
+   </m:mtable>
+    </m:mrow>
+  </m:mrow>
+ </m:semantics>
+</m:math>
+
+   </para>
+  <para id="para_10">
+The mathematical expectation is equal to
+   </para>
+
+  <para id="para_11">
+<m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mstyle displaystyle="true">
+    <m:munderover>
+     <m:mo>∑</m:mo>
+     <m:mrow>
+      <m:mi>x</m:mi><m:mo>=</m:mo><m:mn>1</m:mn>
+     </m:mrow>
+     <m:mn>6</m:mn>
+    </m:munderover>
+    <m:mrow>
+     <m:mi>u</m:mi><m:mrow><m:mo>(</m:mo>
+      <m:mi>x</m:mi>
+     <m:mo>)</m:mo></m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo>
+      <m:mi>x</m:mi>
+     <m:mo>)</m:mo></m:mrow>
+    </m:mrow>
+   </m:mstyle><m:mo>=</m:mo><m:mn>1</m:mn><m:mrow><m:mo>(</m:mo>
+    <m:mrow>
+     <m:mfrac>
+      <m:mn>1</m:mn>
+      <m:mn>6</m:mn>
+     </m:mfrac>
+     
+    </m:mrow>
+   <m:mo>)</m:mo></m:mrow><m:mo>+</m:mo><m:mn>1</m:mn><m:mrow><m:mo>(</m:mo>
+    <m:mrow>
+     <m:mfrac>
+      <m:mn>1</m:mn>
+      <m:mn>6</m:mn>
+     </m:mfrac>
+     
+    </m:mrow>
+   <m:mo>)</m:mo></m:mrow><m:mo>+</m:mo><m:mn>1</m:mn><m:mrow><m:mo>(</m:mo>
+    <m:mrow>
+     <m:mfrac>
+      <m:mn>1</m:mn>
+      <m:mn>6</m:mn>
+     </m:mfrac>
+     
+    </m:mrow>
+   <m:mo>)</m:mo></m:mrow><m:mo>+</m:mo><m:mn>5</m:mn><m:mrow><m:mo>(</m:mo>
+    <m:mrow>
+     <m:mfrac>
+      <m:mn>1</m:mn>
+      <m:mn>6</m:mn>
+     </m:mfrac>
+     
+    </m:mrow>
+   <m:mo>)</m:mo></m:mrow><m:mo>+</m:mo><m:mn>5</m:mn><m:mrow><m:mo>(</m:mo>
+    <m:mrow>
+     <m:mfrac>
+      <m:mn>1</m:mn>
+      <m:mn>6</m:mn>
+     </m:mfrac>
+     
+    </m:mrow>
+   <m:mo>)</m:mo></m:mrow><m:mo>+</m:mo><m:mn>35</m:mn><m:mrow><m:mo>(</m:mo>
+    <m:mrow>
+     <m:mfrac>
+      <m:mn>1</m:mn>
+      <m:mn>6</m:mn>
+     </m:mfrac>
+     
+    </m:mrow>
+   <m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>1</m:mn><m:mrow><m:mo>(</m:mo>
+    <m:mrow>
+     <m:mfrac>
+      <m:mn>3</m:mn>
+      <m:mn>6</m:mn>
+     </m:mfrac>
+     
+    </m:mrow>
+   <m:mo>)</m:mo></m:mrow><m:mo>+</m:mo><m:mn>5</m:mn><m:mrow><m:mo>(</m:mo>
+    <m:mrow>
+     <m:mfrac>
+      <m:mn>2</m:mn>
+      <m:mn>6</m:mn>
+     </m:mfrac>
+     
+    </m:mrow>
+   <m:mo>)</m:mo></m:mrow><m:mo>+</m:mo><m:mn>35</m:mn><m:mrow><m:mo>(</m:mo>
+    <m:mrow>
+     <m:mfrac>
+      <m:mn>1</m:mn>
+      <m:mn>6</m:mn>
+     </m:mfrac>
+     
+    </m:mrow>
+   <m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>8.</m:mn>
+  </m:mrow>
+ </m:semantics>
+</m:math>
+
+   </para>
+
+</example>
+	  </section>
+	  <section id="sec_3">
+<example id="ex_2">
+
+ <para id="para_12">
+Let the random variable <emphasis>X</emphasis> have the p.d.f.
+   </para>
+
+  <para id="para_13">
+<m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mi>f</m:mi><m:mrow><m:mo>(</m:mo>
+    <m:mi>x</m:mi>
+   <m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mfrac>
+    <m:mn>1</m:mn>
+    <m:mn>3</m:mn>
+   </m:mfrac>
+   <m:mo>,</m:mo>
+  </m:mrow>
+ </m:semantics>
+</m:math>
+ <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mi>x</m:mi><m:mo>∈</m:mo><m:mi>R</m:mi>
+  </m:mrow>
+</m:semantics>
+</m:math>,
+   </para>
+
+  <para id="para_14">
+where, <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mi>R</m:mi><m:mo>=</m:mo><m:mrow><m:mo>(</m:mo>
+    <m:mrow>
+     <m:mo>−</m:mo><m:mn>1,0,1</m:mn>
+    </m:mrow>
+   <m:mo>)</m:mo></m:mrow>
+  </m:mrow>
+ </m:semantics>
+</m:math>
+. Let <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mi>u</m:mi><m:mrow><m:mo>(</m:mo>
+    <m:mi>X</m:mi>
+   <m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:msup>
+    <m:mi>X</m:mi>
+    <m:mn>2</m:mn>
+   </m:msup>
+     </m:mrow>
+ </m:semantics>
+</m:math>
+. Then
+   </para>
+
+  <para id="para_15">
+<m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mstyle displaystyle="true">
+    <m:munder>
+     <m:mo>∑</m:mo>
+     <m:mrow>
+      <m:mi>x</m:mi><m:mo>∈</m:mo><m:mi>R</m:mi>
+     </m:mrow>
+    </m:munder>
+    <m:mrow>
+     <m:msup>
+      <m:mi>x</m:mi>
+      <m:mn>2</m:mn>
+     </m:msup>
+     <m:mi>f</m:mi><m:mrow><m:mo>(</m:mo>
+      <m:mi>x</m:mi>
+     <m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:msup>
+      <m:mrow>
+       <m:mrow><m:mo>(</m:mo>
+        <m:mrow>
+         <m:mo>−</m:mo><m:mn>1</m:mn>
+        </m:mrow>
+       <m:mo>)</m:mo></m:mrow>
+      </m:mrow>
+      <m:mn>2</m:mn>
+     </m:msup>
+     <m:mrow><m:mo>(</m:mo>
+      <m:mrow>
+       <m:mfrac>
+        <m:mn>1</m:mn>
+        <m:mn>3</m:mn>
+       </m:mfrac>
+       
+      </m:mrow>
+     <m:mo>)</m:mo></m:mrow><m:mo>+</m:mo><m:msup>
+      <m:mrow>
+       <m:mrow><m:mo>(</m:mo>
+        <m:mn>0</m:mn>
+       <m:mo>)</m:mo></m:mrow>
+      </m:mrow>
+      <m:mn>2</m:mn>
+     </m:msup>
+     <m:mrow><m:mo>(</m:mo>
+      <m:mrow>
+       <m:mfrac>
+        <m:mn>1</m:mn>
+        <m:mn>3</m:mn>
+       </m:mfrac>
+       
+      </m:mrow>
+     <m:mo>)</m:mo></m:mrow><m:mo>+</m:mo><m:msup>
+      <m:mrow>
+       <m:mrow><m:mo>(</m:mo>
+        <m:mn>1</m:mn>
+       <m:mo>)</m:mo></m:mrow>
+      </m:mrow>
+      <m:mn>2</m:mn>
+     </m:msup>
+     <m:mrow><m:mo>(</m:mo>
+      <m:mrow>
+       <m:mfrac>
+        <m:mn>1</m:mn>
+        <m:mn>3</m:mn>
+       </m:mfrac>
+       
+      </m:mrow>
+     <m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mfrac>
+      <m:mn>2</m:mn>
+      <m:mn>3</m:mn>
+     </m:mfrac>
+     <m:mo>.</m:mo>
+    </m:mrow>
+   </m:mstyle>
+  </m:mrow>
+
+ </m:semantics>
+</m:math>
+
+   </para>
+
+  <para id="para_16">
+However, the support of random variable <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mi>Y</m:mi><m:mo>=</m:mo><m:msup>
+    <m:mi>X</m:mi>
+    <m:mn>2</m:mn>
+   </m:msup>
+     </m:mrow>
+ </m:semantics>
+</m:math>
+ is <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:msub>
+    <m:mi>R</m:mi>
+    <m:mn>1</m:mn>
+   </m:msub>
+   <m:mo>=</m:mo><m:mrow><m:mo>(</m:mo>
+    <m:mrow>
+     <m:mn>0,1</m:mn>
+    </m:mrow>
+   <m:mo>)</m:mo></m:mrow>
+  </m:mrow>
+ </m:semantics>
+</m:math>
+ and 
+   </para>
+
+  <para id="para_17">
+<m:math>
+ <m:semantics>
+  <m:mtable columnalign="left">
+   <m:mtr>
+    <m:mtd>
+     <m:mi>P</m:mi><m:mrow><m:mo>(</m:mo>
+      <m:mrow>
+       <m:mi>Y</m:mi><m:mo>=</m:mo><m:mn>0</m:mn>
+      </m:mrow>
+     <m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mi>P</m:mi><m:mrow><m:mo>(</m:mo>
+      <m:mrow>
+       <m:mi>X</m:mi><m:mo>=</m:mo><m:mn>0</m:mn>
+      </m:mrow>
+     <m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mfrac>
+      <m:mn>1</m:mn>
+      <m:mn>3</m:mn>
+     </m:mfrac>
+     
+    </m:mtd>
+   </m:mtr>
+   <m:mtr>
+    <m:mtd>
+     <m:mi>P</m:mi><m:mrow><m:mo>(</m:mo>
+      <m:mrow>
+       <m:mi>Y</m:mi><m:mo>=</m:mo><m:mn>1</m:mn>
+      </m:mrow>
+     <m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mi>P</m:mi><m:mrow><m:mo>(</m:mo>
+      <m:mrow>
+       <m:mi>X</m:mi><m:mo>=</m:mo><m:mo>−</m:mo><m:mn>1</m:mn>
+      </m:mrow>
+     <m:mo>)</m:mo></m:mrow><m:mo>+</m:mo><m:mi>P</m:mi><m:mrow><m:mo>(</m:mo>
+      <m:mrow>
+       <m:mi>X</m:mi><m:mo>=</m:mo><m:mn>1</m:mn>
+      </m:mrow>
+     <m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mfrac>
+      <m:mn>1</m:mn>
+      <m:mn>3</m:mn>
+     </m:mfrac>
+     <m:mo>+</m:mo><m:mfrac>
+      <m:mn>1</m:mn>
+      <m:mn>3</m:mn>
+     </m:mfrac>
+     <m:mo>=</m:mo><m:mfrac>
+      <m:mn>2</m:mn>
+      <m:mn>3</m:mn>
+     </m:mfrac>
+     <m:mo>.</m:mo>
+    </m:mtd>
+   </m:mtr>
+   <m:mtr>
+    <m:mtd>
+     <m:mrow/>
+    </m:mtd>
+   </m:mtr>
+  </m:mtable>
+   </m:semantics>
+</m:math>
+
+   </para>
+
+  <para id="para_18">
+That is, <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mi>g</m:mi><m:mrow><m:mo>(</m:mo>
+    <m:mi>y</m:mi>
+   <m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mrow><m:mo>{</m:mo> <m:mtable columnalign="left">
+    <m:mtr>
+     <m:mtd>
+      <m:mfrac>
+       <m:mn>1</m:mn>
+       <m:mn>3</m:mn>
+      </m:mfrac>
+      <m:mo>,</m:mo><m:mi>y</m:mi><m:mo>=</m:mo><m:mn>0,</m:mn>
+     </m:mtd>
+    </m:mtr>
+    <m:mtr>
+     <m:mtd>
+      <m:mfrac>
+       <m:mn>2</m:mn>
+       <m:mn>3</m:mn>
+      </m:mfrac>
+      <m:mo>,</m:mo><m:mi>y</m:mi><m:mo>=</m:mo><m:mn>1</m:mn><m:mo>;</m:mo>
+     </m:mtd>
+    </m:mtr>
+   </m:mtable>
+    </m:mrow>
+  </m:mrow>
+ </m:semantics>
+</m:math>
+ and <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:msub>
+    <m:mi>R</m:mi>
+    <m:mn>1</m:mn>
+   </m:msub>
+   <m:mo>=</m:mo><m:mrow><m:mo>(</m:mo>
+    <m:mrow>
+     <m:mn>0,1</m:mn>
+    </m:mrow>
+   <m:mo>)</m:mo></m:mrow>
+  </m:mrow>
+ </m:semantics>
+</m:math>
+. Hence
+   </para>
+
+
+  <para id="para_19">
+<m:math display="block">
+ <m:semantics>
+  <m:mrow>
+   <m:mstyle displaystyle="true">
+    <m:munder>
+     <m:mo>∑</m:mo>
+     <m:mrow>
+      <m:mi>y</m:mi><m:mo>∈</m:mo><m:msub>
+       <m:mi>R</m:mi>
+       <m:mn>1</m:mn>
+      </m:msub>
+      
+     </m:mrow>
+    </m:munder>
+    <m:mrow>
+     <m:mi>y</m:mi><m:mi>g</m:mi><m:mrow><m:mo>(</m:mo>
+      <m:mi>y</m:mi>
+     <m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>0</m:mn><m:mrow><m:mo>(</m:mo>
+      <m:mrow>
+       <m:mfrac>
+        <m:mn>1</m:mn>
+        <m:mn>3</m:mn>
+       </m:mfrac>
+       
+      </m:mrow>
+     <m:mo>)</m:mo></m:mrow><m:mo>+</m:mo><m:mn>1</m:mn><m:mrow><m:mo>(</m:mo>
+      <m:mrow>
+       <m:mfrac>
+        <m:mn>2</m:mn>
+        <m:mn>3</m:mn>
+       </m:mfrac>
+       
+      </m:mrow>
+     <m:mo>)</m:mo></m:mrow>
+    </m:mrow>
+   </m:mstyle><m:mo>=</m:mo><m:mfrac>
+    <m:mn>2</m:mn>
+    <m:mn>3</m:mn>
+   </m:mfrac>
+   <m:mo>,</m:mo>
+  </m:mrow>
+ </m:semantics>
+</m:math>
+
+   </para>
+  <para id="para_20">
+which illustrates the preceding observation.
+   </para>
+
+</example>
+	  </section>
+	  <section id="sec_4">
+<rule type="theorem" id="ruleexcode">
+  
+   <statement id="idp8448512">
+<para id="para_26">
+When it exists, mathematical expectation <emphasis>E</emphasis> satisfies the following properties:
+</para>
+   <list id="list_4" list-type="enumerated">
+
+     <item>If <emphasis>c</emphasis> is a constant, <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mi>E</m:mi><m:mrow><m:mo>(</m:mo>
+    <m:mi>c</m:mi>
+   <m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mi>c</m:mi><m:mo>,</m:mo>
+  </m:mrow>
+ </m:semantics>
+</m:math>
+ 
+     </item>
+     <item>If <emphasis>c</emphasis> is a constant and <emphasis>u</emphasis> is a function, <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mi>E</m:mi><m:mrow><m:mo>[</m:mo> <m:mrow>
+    <m:mi>c</m:mi><m:mi>u</m:mi><m:mrow><m:mo>(</m:mo>
+     <m:mi>X</m:mi>
+    <m:mo>)</m:mo></m:mrow>
+   </m:mrow> <m:mo>]</m:mo></m:mrow><m:mo>=</m:mo><m:mi>c</m:mi><m:mi>E</m:mi><m:mrow><m:mo>[</m:mo> <m:mrow>
+    <m:mi>u</m:mi><m:mrow><m:mo>(</m:mo>
+     <m:mi>X</m:mi>
+    <m:mo>)</m:mo></m:mrow>
+   </m:mrow> <m:mo>]</m:mo></m:mrow><m:mo>,</m:mo>
+  </m:mrow>
+ </m:semantics>
+</m:math>
+
+     </item>
+     <item>If <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:msub>
+    <m:mi>c</m:mi>
+    <m:mn>1</m:mn>
+   </m:msub>
+     </m:mrow>
+ </m:semantics>
+</m:math> and <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:msub>
+    <m:mi>c</m:mi>
+    <m:mn>2</m:mn>
+   </m:msub>
+     </m:mrow>
+ </m:semantics>
+</m:math> are constants and <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:msub>
+    <m:mi>u</m:mi>
+    <m:mn>1</m:mn>
+   </m:msub>
+     </m:mrow>
+ </m:semantics>
+</m:math>
+ and <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:msub>
+    <m:mi>u</m:mi>
+    <m:mn>2</m:mn>
+   </m:msub>
+     </m:mrow>
+ </m:semantics>
+</m:math> are functions, then <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mi>E</m:mi><m:mrow><m:mo>[</m:mo> <m:mrow>
+    <m:msub>
+     <m:mi>c</m:mi>
+     <m:mn>1</m:mn>
+    </m:msub>
+    <m:msub>
+     <m:mi>u</m:mi>
+     <m:mn>1</m:mn>
+    </m:msub>
+    <m:mrow><m:mo>(</m:mo>
+     <m:mi>X</m:mi>
+    <m:mo>)</m:mo></m:mrow><m:mo>+</m:mo><m:msub>
+     <m:mi>c</m:mi>
+     <m:mn>2</m:mn>
+    </m:msub>
+    <m:msub>
+     <m:mi>u</m:mi>
+     <m:mn>2</m:mn>
+    </m:msub>
+    <m:mrow><m:mo>(</m:mo>
+     <m:mi>X</m:mi>
+    <m:mo>)</m:mo></m:mrow>
+   </m:mrow> <m:mo>]</m:mo></m:mrow><m:mo>=</m:mo><m:msub>
+    <m:mi>c</m:mi>
+    <m:mn>1</m:mn>
+   </m:msub>
+   <m:mi>E</m:mi><m:mrow><m:mo>[</m:mo> <m:mrow>
+    <m:msub>
+     <m:mi>u</m:mi>
+     <m:mn>1</m:mn>
+    </m:msub>
+    <m:mrow><m:mo>(</m:mo>
+     <m:mi>X</m:mi>
+    <m:mo>)</m:mo></m:mrow>
+   </m:mrow> <m:mo>]</m:mo></m:mrow><m:mo>+</m:mo><m:msub>
+    <m:mi>c</m:mi>
+    <m:mn>2</m:mn>
+   </m:msub>
+   <m:mi>E</m:mi><m:mrow><m:mo>[</m:mo> <m:mrow>
+    <m:msub>
+     <m:mi>u</m:mi>
+     <m:mn>2</m:mn>
+    </m:msub>
+    <m:mrow><m:mo>(</m:mo>
+     <m:mi>X</m:mi>
+    <m:mo>)</m:mo></m:mrow>
+   </m:mrow> <m:mo>]</m:mo></m:mrow><m:mo>.</m:mo>
+  </m:mrow>
+ </m:semantics>
+</m:math>
+
+     </item>
+    </list>
+   </statement>
+<proof id="idm7994496">
+	    <para id="ruleexp2">
+First, we have for the proof of (1) that <m:math display="block">
+ <m:semantics>
+  <m:mrow>
+   <m:mi>E</m:mi><m:mrow><m:mo>(</m:mo>
+    <m:mi>c</m:mi>
+   <m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mstyle displaystyle="true">
+    <m:munder>
+     <m:mo>∑</m:mo>
+     <m:mi>R</m:mi>
+    </m:munder>
+    <m:mrow>
+     <m:mi>c</m:mi><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo>
+      <m:mi>x</m:mi>
+     <m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mi>c</m:mi><m:mstyle displaystyle="true">
+      <m:munder>
+       <m:mo>∑</m:mo>
+       <m:mi>R</m:mi>
+      </m:munder>
+      <m:mrow>
+       <m:mi>f</m:mi><m:mrow><m:mo>(</m:mo>
+        <m:mi>x</m:mi>
+       <m:mo>)</m:mo></m:mrow>
+      </m:mrow>
+     </m:mstyle>
+    </m:mrow>
+   </m:mstyle><m:mo>=</m:mo><m:mi>c</m:mi><m:mo>,</m:mo>
+  </m:mrow>
+ </m:semantics>
+</m:math> because <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mstyle displaystyle="true">
+    <m:munder>
+     <m:mo>∑</m:mo>
+     <m:mi>R</m:mi>
+    </m:munder>
+    <m:mrow>
+     <m:mi>f</m:mi><m:mrow><m:mo>(</m:mo>
+      <m:mi>x</m:mi>
+     <m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>1.</m:mn>
+    </m:mrow>
+   </m:mstyle>
+  </m:mrow>
+ </m:semantics>
+</m:math>
+	    </para>
+</proof>
+<proof id="idp5132784">
+	    <para id="ruleexp22">
+Next, to prove (2), we see that <m:math display="block">
+ <m:semantics>
+  <m:mrow>
+   <m:mi>E</m:mi><m:mrow><m:mo>[</m:mo> <m:mrow>
+    <m:mi>c</m:mi><m:mi>u</m:mi><m:mrow><m:mo>(</m:mo>
+     <m:mi>X</m:mi>
+    <m:mo>)</m:mo></m:mrow>
+   </m:mrow> <m:mo>]</m:mo></m:mrow><m:mo>=</m:mo><m:mstyle displaystyle="true">
+    <m:munder>
+     <m:mo>∑</m:mo>
+     <m:mi>R</m:mi>
+    </m:munder>
+    <m:mrow>
+     <m:mi>c</m:mi><m:mi>u</m:mi><m:mrow><m:mo>(</m:mo>
+      <m:mi>x</m:mi>
+     <m:mo>)</m:mo></m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo>
+      <m:mi>x</m:mi>
+     <m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mi>c</m:mi><m:mstyle displaystyle="true">
+      <m:munder>
+       <m:mo>∑</m:mo>
+       <m:mi>R</m:mi>
+      </m:munder>
+      <m:mrow>
+       <m:mi>u</m:mi><m:mrow><m:mo>(</m:mo>
+        <m:mi>x</m:mi>
+       <m:mo>)</m:mo></m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo>
+        <m:mi>x</m:mi>
+       <m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mi>c</m:mi><m:mi>E</m:mi><m:mrow><m:mo>[</m:mo> <m:mrow>
+        <m:mi>u</m:mi><m:mrow><m:mo>(</m:mo>
+         <m:mi>X</m:mi>
+        <m:mo>)</m:mo></m:mrow>
+       </m:mrow> <m:mo>]</m:mo></m:mrow>
+      </m:mrow>
+     </m:mstyle>
+    </m:mrow>
+   </m:mstyle><m:mo>.</m:mo>
+  </m:mrow>
+ </m:semantics>
+</m:math>
+
+	    </para>
+</proof>
+<proof id="idp3106848">
+	    <para id="ruleexp222">
+Finally, the proof of (3) is given by <m:math display="block">
+ <m:semantics>
+  <m:mrow>
+   <m:mi>E</m:mi><m:mrow><m:mo>[</m:mo> <m:mrow>
+    <m:msub>
+     <m:mi>c</m:mi>
+     <m:mn>1</m:mn>
+    </m:msub>
+    <m:msub>
+     <m:mi>u</m:mi>
+     <m:mn>1</m:mn>
+    </m:msub>
+    <m:mrow><m:mo>(</m:mo>
+     <m:mi>X</m:mi>
+    <m:mo>)</m:mo></m:mrow><m:mo>+</m:mo><m:msub>
+     <m:mi>c</m:mi>
+     <m:mn>2</m:mn>
+    </m:msub>
+    <m:msub>
+     <m:mi>u</m:mi>
+     <m:mn>2</m:mn>
+    </m:msub>
+    <m:mrow><m:mo>(</m:mo>
+     <m:mi>X</m:mi>
+    <m:mo>)</m:mo></m:mrow>
+   </m:mrow> <m:mo>]</m:mo></m:mrow><m:mo>=</m:mo><m:mstyle displaystyle="true">
+    <m:munder>
+     <m:mo>∑</m:mo>
+     <m:mi>R</m:mi>
+    </m:munder>
+    <m:mrow>
+     <m:mrow><m:mo>[</m:mo> <m:mrow>
+      <m:msub>
+       <m:mi>c</m:mi>
+       <m:mn>1</m:mn>
+      </m:msub>
+      <m:msub>
+       <m:mi>u</m:mi>
+       <m:mn>1</m:mn>
+      </m:msub>
+      <m:mrow><m:mo>(</m:mo>
+       <m:mi>x</m:mi>
+      <m:mo>)</m:mo></m:mrow><m:mo>+</m:mo><m:msub>
+       <m:mi>c</m:mi>
+       <m:mn>2</m:mn>
+      </m:msub>
+      <m:msub>
+       <m:mi>u</m:mi>
+       <m:mn>2</m:mn>
+      </m:msub>
+      <m:mrow><m:mo>(</m:mo>
+       <m:mi>x</m:mi>
+      <m:mo>)</m:mo></m:mrow>
+     </m:mrow> <m:mo>]</m:mo></m:mrow>
+    </m:mrow>
+   </m:mstyle><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo>
+    <m:mi>x</m:mi>
+   <m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mstyle displaystyle="true">
+    <m:munder>
+     <m:mo>∑</m:mo>
+     <m:mi>R</m:mi>
+    </m:munder>
+    <m:mrow>
+     <m:msub>
+      <m:mi>c</m:mi>
+      <m:mn>1</m:mn>
+     </m:msub>
+     <m:msub>
+      <m:mi>u</m:mi>
+      <m:mn>1</m:mn>
+     </m:msub>
+     <m:mrow><m:mo>(</m:mo>
+      <m:mi>x</m:mi>
+     <m:mo>)</m:mo></m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo>
+      <m:mi>x</m:mi>
+     <m:mo>)</m:mo></m:mrow><m:mo>+</m:mo><m:mstyle displaystyle="true">
+      <m:munder>
+       <m:mo>∑</m:mo>
+       <m:mi>R</m:mi>
+      </m:munder>
+      <m:mrow>
+       <m:msub>
+        <m:mi>c</m:mi>
+        <m:mn>2</m:mn>
+       </m:msub>
+       <m:msub>
+        <m:mi>u</m:mi>
+        <m:mn>2</m:mn>
+       </m:msub>
+       <m:mrow><m:mo>(</m:mo>
+        <m:mi>x</m:mi>
+       <m:mo>)</m:mo></m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo>
+        <m:mi>x</m:mi>
+       <m:mo>)</m:mo></m:mrow>
+      </m:mrow>
+     </m:mstyle>
+    </m:mrow>
+   </m:mstyle><m:mo>.</m:mo>
+  </m:mrow>
+ </m:semantics>
+</m:math>
+
+	    </para>
+<para id="para_21">
+By applying (2), we obtain <m:math display="block">
+ <m:semantics>
+  <m:mrow>
+   <m:mi>E</m:mi><m:mrow><m:mo>[</m:mo> <m:mrow>
+    <m:msub>
+     <m:mi>c</m:mi>
+     <m:mn>1</m:mn>
+    </m:msub>
+    <m:msub>
+     <m:mi>u</m:mi>
+     <m:mn>1</m:mn>
+    </m:msub>
+    <m:mrow><m:mo>(</m:mo>
+     <m:mi>X</m:mi>
+    <m:mo>)</m:mo></m:mrow><m:mo>+</m:mo><m:msub>
+     <m:mi>c</m:mi>
+     <m:mn>2</m:mn>
+    </m:msub>
+    <m:msub>
+     <m:mi>u</m:mi>
+     <m:mn>2</m:mn>
+    </m:msub>
+    <m:mrow><m:mo>(</m:mo>
+     <m:mi>X</m:mi>
+    <m:mo>)</m:mo></m:mrow>
+   </m:mrow> <m:mo>]</m:mo></m:mrow><m:mo>=</m:mo><m:msub>
+    <m:mi>c</m:mi>
+    <m:mn>1</m:mn>
+   </m:msub>
+   <m:mi>E</m:mi><m:mrow><m:mo>[</m:mo> <m:mrow>
+    <m:msub>
+     <m:mi>u</m:mi>
+     <m:mn>1</m:mn>
+    </m:msub>
+    <m:mrow><m:mo>(</m:mo>
+     <m:mi>x</m:mi>
+    <m:mo>)</m:mo></m:mrow>
+   </m:mrow> <m:mo>]</m:mo></m:mrow><m:mo>+</m:mo><m:msub>
+    <m:mi>c</m:mi>
+    <m:mn>2</m:mn>
+   </m:msub>
+   <m:mi>E</m:mi><m:mrow><m:mo>[</m:mo> <m:mrow>
+    <m:msub>
+     <m:mi>u</m:mi>
+     <m:mn>2</m:mn>
+    </m:msub>
+    <m:mrow><m:mo>(</m:mo>
+     <m:mi>x</m:mi>
+    <m:mo>)</m:mo></m:mrow>
+   </m:mrow> <m:mo>]</m:mo></m:mrow><m:mo>.</m:mo>
+  </m:mrow>
+ </m:semantics>
+</m:math> 
+
+   </para>
+<para id="para_22">
+Property (3) can be extended to more than two terms by mathematical induction; that is, we have (3') <m:math display="block">
+ <m:semantics>
+  <m:mrow>
+   <m:mi>E</m:mi><m:mrow><m:mo>[</m:mo> <m:mrow>
+    <m:mstyle displaystyle="true">
+     <m:munderover>
+      <m:mo>∑</m:mo>
+      <m:mrow>
+       <m:mi>i</m:mi><m:mo>=</m:mo><m:mn>1</m:mn>
+      </m:mrow>
+      <m:mi>k</m:mi>
+     </m:munderover>
+     <m:mrow>
+      <m:msub>
+       <m:mi>c</m:mi>
+       <m:mi>i</m:mi>
+      </m:msub>
+      <m:msub>
+       <m:mi>u</m:mi>
+       <m:mi>i</m:mi>
+      </m:msub>
+      <m:mrow><m:mo>(</m:mo>
+       <m:mi>X</m:mi>
+      <m:mo>)</m:mo></m:mrow>
+     </m:mrow>
+    </m:mstyle>
+   </m:mrow> <m:mo>]</m:mo></m:mrow><m:mo>=</m:mo><m:mstyle displaystyle="true">
+    <m:munderover>
+     <m:mo>∑</m:mo>
+     <m:mrow>
+      <m:mi>i</m:mi><m:mo>=</m:mo><m:mn>1</m:mn>
+     </m:mrow>
+     <m:mi>k</m:mi>
+    </m:munderover>
+    <m:mrow>
+     <m:msub>
+      <m:mi>c</m:mi>
+      <m:mi>i</m:mi>
+     </m:msub>
+     <m:mi>E</m:mi><m:mrow><m:mo>[</m:mo> <m:mrow>
+      <m:msub>
+       <m:mi>u</m:mi>
+       <m:mi>i</m:mi>
+      </m:msub>
+      <m:mrow><m:mo>(</m:mo>
+       <m:mi>X</m:mi>
+      <m:mo>)</m:mo></m:mrow>
+     </m:mrow> <m:mo>]</m:mo></m:mrow>
+    </m:mrow>
+   </m:mstyle><m:mo>.</m:mo>
+  </m:mrow>
+ </m:semantics>
+</m:math>
+   </para>
+<para id="para_23">
+Because of property (3’), mathematical expectation <emphasis>E</emphasis> is called <term>a linear</term> or <term>distributive operator</term>. 
+   </para>
+</proof>
+</rule>
+
+	  </section>
+	  <section id="sec_5">
+<example id="ex_3"> 
+<para id="para_24">
+Let <emphasis>X</emphasis> have the p.d.f. <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mi>f</m:mi><m:mrow><m:mo>(</m:mo>
+    <m:mi>x</m:mi>
+   <m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mfrac>
+    <m:mi>x</m:mi>
+    <m:mrow>
+     <m:mn>10</m:mn>
+    </m:mrow>
+   </m:mfrac>
+   <m:mo>,</m:mo><m:mi>x</m:mi><m:mo>=</m:mo><m:mn>1</m:mn><m:mo>,</m:mo><m:mn>2</m:mn><m:mo>,</m:mo><m:mn>3</m:mn><m:mo>,</m:mo><m:mn>4</m:mn>
+  </m:mrow>
+ </m:semantics>
+</m:math>, then
+
+   </para>
+<para id="para_25">
+<m:math display="block">
+ <m:semantics>
+  <m:mrow>
+   <m:mi>E</m:mi><m:mrow><m:mo>(</m:mo>
+    <m:mi>X</m:mi>
+   <m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mstyle displaystyle="true">
+    <m:munderover>
+     <m:mo>∑</m:mo>
+     <m:mrow>
+      <m:mi>x</m:mi><m:mo>=</m:mo><m:mn>1</m:mn>
+     </m:mrow>
+     <m:mn>4</m:mn>
+    </m:munderover>
+    <m:mrow>
+     <m:mi>x</m:mi><m:mrow><m:mo>(</m:mo>
+      <m:mrow>
+       <m:mfrac>
+        <m:mi>x</m:mi>
+        <m:mrow>
+         <m:mn>10</m:mn>
+        </m:mrow>
+       </m:mfrac>
+       
+      </m:mrow>
+     <m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>1</m:mn>
+    </m:mrow>
+   </m:mstyle><m:mrow><m:mo>(</m:mo>
+    <m:mrow>
+     <m:mfrac>
+      <m:mn>1</m:mn>
+      <m:mrow>
+       <m:mn>10</m:mn>
+      </m:mrow>
+     </m:mfrac>
+     
+    </m:mrow>
+   <m:mo>)</m:mo></m:mrow><m:mo>+</m:mo><m:mn>2</m:mn><m:mrow><m:mo>(</m:mo>
+    <m:mrow>
+     <m:mfrac>
+      <m:mn>2</m:mn>
+      <m:mrow>
+       <m:mn>10</m:mn>
+      </m:mrow>
+     </m:mfrac>
+     
+    </m:mrow>
+   <m:mo>)</m:mo></m:mrow><m:mo>+</m:mo><m:mn>3</m:mn><m:mrow><m:mo>(</m:mo>
+    <m:mrow>
+     <m:mfrac>
+      <m:mn>3</m:mn>
+      <m:mrow>
+       <m:mn>10</m:mn>
+      </m:mrow>
+     </m:mfrac>
+     
+    </m:mrow>
+   <m:mo>)</m:mo></m:mrow><m:mo>+</m:mo><m:mn>4</m:mn><m:mrow><m:mo>(</m:mo>
+    <m:mrow>
+     <m:mfrac>
+      <m:mn>4</m:mn>
+      <m:mrow>
+       <m:mn>10</m:mn>
+      </m:mrow>
+     </m:mfrac>
+     
+    </m:mrow>
+   <m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>3</m:mn><m:mo>,</m:mo>
+  </m:mrow>
+ </m:semantics>
+</m:math>
+   </para>
+<para id="para_266">
+<m:math display="block">
+ <m:semantics>
+  <m:mrow>
+   <m:mi>E</m:mi><m:mrow><m:mo>(</m:mo>
+    <m:mrow>
+     <m:msup>
+      <m:mi>X</m:mi>
+      <m:mn>2</m:mn>
+     </m:msup>
+     
+    </m:mrow>
+   <m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mstyle displaystyle="true">
+    <m:munderover>
+     <m:mo>∑</m:mo>
+     <m:mrow>
+      <m:mi>x</m:mi><m:mo>=</m:mo><m:mn>1</m:mn>
+     </m:mrow>
+     <m:mn>4</m:mn>
+    </m:munderover>
+    <m:mrow>
+     <m:msup>
+      <m:mi>x</m:mi>
+      <m:mn>2</m:mn>
+     </m:msup>
+     <m:mrow><m:mo>(</m:mo>
+      <m:mrow>
+       <m:mfrac>
+        <m:mi>x</m:mi>
+        <m:mrow>
+         <m:mn>10</m:mn>
+        </m:mrow>
+       </m:mfrac>
+       
+      </m:mrow>
+     <m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:msup>
+      <m:mn>1</m:mn>
+      <m:mn>2</m:mn>
+     </m:msup>
+     
+    </m:mrow>
+   </m:mstyle><m:mrow><m:mo>(</m:mo>
+    <m:mrow>
+     <m:mfrac>
+      <m:mn>1</m:mn>
+      <m:mrow>
+       <m:mn>10</m:mn>
+      </m:mrow>
+     </m:mfrac>
+     
+    </m:mrow>
+   <m:mo>)</m:mo></m:mrow><m:mo>+</m:mo><m:msup>
+    <m:mn>2</m:mn>
+    <m:mn>2</m:mn>
+   </m:msup>
+   <m:mrow><m:mo>(</m:mo>
+    <m:mrow>
+     <m:mfrac>
+      <m:mn>2</m:mn>
+      <m:mrow>
+       <m:mn>10</m:mn>
+      </m:mrow>
+     </m:mfrac>
+     
+    </m:mrow>
+   <m:mo>)</m:mo></m:mrow><m:mo>+</m:mo><m:msup>
+    <m:mn>3</m:mn>
+    <m:mn>2</m:mn>
+   </m:msup>
+   <m:mrow><m:mo>(</m:mo>
+    <m:mrow>
+     <m:mfrac>
+      <m:mn>3</m:mn>
+      <m:mrow>
+       <m:mn>10</m:mn>
+      </m:mrow>
+     </m:mfrac>
+     
+    </m:mrow>
+   <m:mo>)</m:mo></m:mrow><m:mo>+</m:mo><m:msup>
+    <m:mn>4</m:mn>
+    <m:mn>2</m:mn>
+   </m:msup>
+   <m:mrow><m:mo>(</m:mo>
+    <m:mrow>
+     <m:mfrac>
+      <m:mn>4</m:mn>
+      <m:mrow>
+       <m:mn>10</m:mn>
+      </m:mrow>
+     </m:mfrac>
+     
+    </m:mrow>
+   <m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>10</m:mn><m:mo>,</m:mo>
+  </m:mrow>
+ </m:semantics>
+</m:math>
+   </para>
+<para id="para_27">
+and <m:math display="block">
+ <m:semantics>
+  <m:mrow>
+   <m:mi>E</m:mi><m:mrow><m:mo>[</m:mo> <m:mrow>
+    <m:mi>X</m:mi><m:mrow><m:mo>(</m:mo>
+     <m:mrow>
+      <m:mn>5</m:mn><m:mo>−</m:mo><m:mi>X</m:mi>
+     </m:mrow>
+    <m:mo>)</m:mo></m:mrow>
+   </m:mrow> <m:mo>]</m:mo></m:mrow><m:mo>=</m:mo><m:mn>5</m:mn><m:mi>E</m:mi><m:mrow><m:mo>(</m:mo>
+    <m:mi>X</m:mi>
+   <m:mo>)</m:mo></m:mrow><m:mo>−</m:mo><m:mi>E</m:mi><m:mrow><m:mo>(</m:mo>
+    <m:mrow>
+     <m:msup>
+      <m:mi>X</m:mi>
+      <m:mn>2</m:mn>
+     </m:msup>
+     
+    </m:mrow>
+   <m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mrow><m:mo>(</m:mo>
+    <m:mn>5</m:mn>
+   <m:mo>)</m:mo></m:mrow><m:mrow><m:mo>(</m:mo>
+    <m:mn>3</m:mn>
+   <m:mo>)</m:mo></m:mrow><m:mo>−</m:mo><m:mn>10</m:mn><m:mo>=</m:mo><m:mn>5.</m:mn>
+  </m:mrow>
+ </m:semantics>
+</m:math>
+
+   </para>
+</example> 
+<para id="para_28">
+
+   </para>
+<para id="para_29">
+
+   </para>
+<para id="para_30">
+
+   </para>
+<para id="para_31">
+
+   </para>
+
+	  </section>
+	  </section>
+
+
+ 
+  </content>
+  
+</document>

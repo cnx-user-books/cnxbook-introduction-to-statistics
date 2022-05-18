@@ -1,0 +1,1322 @@
+<document xmlns="http://cnx.rice.edu/cnxml" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:md="http://cnx.rice.edu/mdml">
+  <title>CONFIDENCE INTERVALS II</title>
+  <metadata><md:content-id>undefined</md:content-id><md:title/><md:uuid>5a0a48da-8b3b-42ea-92d0-31297a2d3a2d</md:uuid>
+</metadata>
+  <content>
+
+<section id="sec_1">
+<title>CONFIDENCE INTERVALS II</title>
+<section id="sec_2">
+<title>Confidence Intervals for Means</title>
+
+<para id="para_1">
+In the preceding considerations 
+ (<link document="m13494" target-id="sec_1">Confidence Intervals I</link>), the confidence interval for the mean <m:math>
+ <m:semantics>
+  <m:mi>μ</m:mi>
+</m:semantics>
+</m:math> of a normal distribution was found, assuming that the value of the standard deviation <m:math>
+ <m:semantics>
+  <m:mi>σ</m:mi>
+</m:semantics>
+</m:math> is known. However, in most applications, the value of the standard deviation <m:math>
+ <m:semantics>
+  <m:mi>σ</m:mi>
+</m:semantics>
+</m:math> is rather unknown, although in some cases one might have a very good idea about its value. 
+</para>   
+    <para id="para_2">
+Suppose that the underlying distribution is normal and that <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:msup>
+    <m:mi>σ</m:mi>
+    <m:mn>2</m:mn>
+   </m:msup>
+    </m:mrow>
+</m:semantics>
+</m:math>  is unknown. It is shown that given random sample <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:msub>
+    <m:mi>X</m:mi>
+    <m:mn>1</m:mn>
+   </m:msub>
+   <m:mo>,</m:mo><m:msub>
+    <m:mi>X</m:mi>
+    <m:mn>2</m:mn>
+   </m:msub>
+   <m:mo>,</m:mo><m:mn>...</m:mn><m:mo>,</m:mo><m:msub>
+    <m:mi>X</m:mi>
+    <m:mi>n</m:mi>
+   </m:msub>
+     </m:mrow>
+</m:semantics>
+</m:math> from a normal distribution, the statistic <m:math display="block">
+ <m:semantics>
+  <m:mrow>
+   <m:mi>T</m:mi><m:mo>=</m:mo><m:mfrac>
+    <m:mrow>
+     <m:mover accent="true">
+      <m:mi>X</m:mi>
+      <m:mo>¯</m:mo>
+     </m:mover>
+     <m:mo>−</m:mo><m:mi>μ</m:mi>
+    </m:mrow>
+    <m:mrow>
+     <m:mi>S</m:mi><m:mo>/</m:mo><m:msqrt>
+      <m:mi>n</m:mi>
+     </m:msqrt>
+      </m:mrow>
+   </m:mfrac>
+    </m:mrow>
+ </m:semantics>
+</m:math> has a <term>t distribution</term> with <m:math>
+ <m:semantics>
+  <m:mrow>
+<m:mi>r</m:mi><m:mo>=</m:mo><m:mi>n</m:mi><m:mo>−</m:mo><m:mn>1</m:mn>
+  </m:mrow>
+ </m:semantics>
+</m:math> degrees of freedom, where <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:msup>
+    <m:mi>S</m:mi>
+    <m:mn>2</m:mn>
+   </m:msup>
+     </m:mrow>
+</m:semantics>
+</m:math> is the usual unbiased estimator of <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:msup>
+    <m:mi>σ</m:mi>
+    <m:mn>2</m:mn>
+   </m:msup>
+    </m:mrow>
+</m:semantics>
+</m:math>, (see,  <link document="m13495" target-id="sec_1">t distribution</link>).
+</para>   
+    <para id="para_3">
+Select <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:msub>
+    <m:mi>t</m:mi>
+    <m:mrow>
+     <m:mi>α</m:mi><m:mo>/</m:mo><m:mn>2</m:mn>
+    </m:mrow>
+   </m:msub>
+   <m:mrow><m:mo>(</m:mo>
+    <m:mrow>
+     <m:mi>n</m:mi><m:mo>−</m:mo><m:mn>1</m:mn>
+    </m:mrow>
+   <m:mo>)</m:mo></m:mrow>
+  </m:mrow>
+ </m:semantics>
+</m:math> so that <m:math display="block">
+ <m:semantics>
+  <m:mrow>
+   <m:mi>P</m:mi><m:mrow><m:mo>[</m:mo> <m:mrow>
+    <m:mi>T</m:mi><m:mo>≥</m:mo><m:msub>
+     <m:mi>t</m:mi>
+     <m:mrow>
+      <m:mi>α</m:mi><m:mo>/</m:mo><m:mn>2</m:mn>
+     </m:mrow>
+    </m:msub>
+    <m:mrow><m:mo>(</m:mo>
+     <m:mrow>
+      <m:mi>n</m:mi><m:mo>−</m:mo><m:mn>1</m:mn>
+     </m:mrow>
+    <m:mo>)</m:mo></m:mrow>
+   </m:mrow> <m:mo>]</m:mo></m:mrow><m:mo>=</m:mo><m:mi>α</m:mi><m:mo>/</m:mo><m:mn>2.</m:mn>
+  </m:mrow>
+ </m:semantics>
+</m:math>
+Then
+
+
+    </para>   
+    <para id="para_4">
+<m:math display="block">
+ <m:semantics>
+  <m:mtable columnalign="left">
+   <m:mtr>
+    <m:mtd>
+     <m:mn>1</m:mn><m:mo>−</m:mo><m:mi>α</m:mi><m:mo>=</m:mo><m:mi>P</m:mi><m:mrow><m:mo>[</m:mo> <m:mrow>
+      <m:mo>−</m:mo><m:msub>
+       <m:mi>t</m:mi>
+       <m:mrow>
+        <m:mi>α</m:mi><m:mo>/</m:mo><m:mn>2</m:mn>
+       </m:mrow>
+      </m:msub>
+      <m:mrow><m:mo>(</m:mo>
+       <m:mrow>
+        <m:mi>n</m:mi><m:mo>−</m:mo><m:mn>1</m:mn>
+       </m:mrow>
+      <m:mo>)</m:mo></m:mrow><m:mo>≤</m:mo><m:mfrac>
+       <m:mrow>
+        <m:mover accent="true">
+         <m:mi>X</m:mi>
+         <m:mo>¯</m:mo>
+        </m:mover>
+        <m:mo>−</m:mo><m:mi>μ</m:mi>
+       </m:mrow>
+       <m:mrow>
+        <m:mi>S</m:mi><m:mo>/</m:mo><m:msqrt>
+         <m:mi>n</m:mi>
+        </m:msqrt>
+        
+       </m:mrow>
+      </m:mfrac>
+      <m:mo>≤</m:mo><m:msub>
+       <m:mi>t</m:mi>
+       <m:mrow>
+        <m:mi>α</m:mi><m:mo>/</m:mo><m:mn>2</m:mn>
+       </m:mrow>
+      </m:msub>
+      <m:mrow><m:mo>(</m:mo>
+       <m:mrow>
+        <m:mi>n</m:mi><m:mo>−</m:mo><m:mn>1</m:mn>
+       </m:mrow>
+      <m:mo>)</m:mo></m:mrow>
+     </m:mrow> <m:mo>]</m:mo></m:mrow>
+    </m:mtd>
+   </m:mtr>
+   <m:mtr>
+    <m:mtd>
+     <m:mo>=</m:mo><m:mi>P</m:mi><m:mrow><m:mo>[</m:mo> <m:mrow>
+      <m:mo>−</m:mo><m:msub>
+       <m:mi>t</m:mi>
+       <m:mrow>
+        <m:mi>α</m:mi><m:mo>/</m:mo><m:mn>2</m:mn>
+       </m:mrow>
+      </m:msub>
+      <m:mrow><m:mo>(</m:mo>
+       <m:mrow>
+        <m:mi>n</m:mi><m:mo>−</m:mo><m:mn>1</m:mn>
+       </m:mrow>
+      <m:mo>)</m:mo></m:mrow><m:mfrac>
+       <m:mi>S</m:mi>
+       <m:mrow>
+        <m:msqrt>
+         <m:mi>n</m:mi>
+        </m:msqrt>
+        
+       </m:mrow>
+      </m:mfrac>
+      <m:mo>≤</m:mo><m:mover accent="true">
+       <m:mi>X</m:mi>
+       <m:mo>¯</m:mo>
+      </m:mover>
+      <m:mo>−</m:mo><m:mi>μ</m:mi><m:mo>≤</m:mo><m:msub>
+       <m:mi>t</m:mi>
+       <m:mrow>
+        <m:mi>α</m:mi><m:mo>/</m:mo><m:mn>2</m:mn>
+       </m:mrow>
+      </m:msub>
+      <m:mrow><m:mo>(</m:mo>
+       <m:mrow>
+        <m:mi>n</m:mi><m:mo>−</m:mo><m:mn>1</m:mn>
+       </m:mrow>
+      <m:mo>)</m:mo></m:mrow><m:mfrac>
+       <m:mi>S</m:mi>
+       <m:mrow>
+        <m:msqrt>
+         <m:mi>n</m:mi>
+        </m:msqrt>
+        
+       </m:mrow>
+      </m:mfrac>
+      
+     </m:mrow> <m:mo>]</m:mo></m:mrow>
+    </m:mtd>
+   </m:mtr>
+   <m:mtr>
+    <m:mtd>
+     <m:mo>=</m:mo><m:mi>P</m:mi><m:mrow><m:mo>[</m:mo> <m:mrow>
+      <m:mo>−</m:mo><m:mover accent="true">
+       <m:mi>X</m:mi>
+       <m:mo>¯</m:mo>
+      </m:mover>
+      <m:mo>−</m:mo><m:msub>
+       <m:mi>t</m:mi>
+       <m:mrow>
+        <m:mi>α</m:mi><m:mo>/</m:mo><m:mn>2</m:mn>
+       </m:mrow>
+      </m:msub>
+      <m:mrow><m:mo>(</m:mo>
+       <m:mrow>
+        <m:mi>n</m:mi><m:mo>−</m:mo><m:mn>1</m:mn>
+       </m:mrow>
+      <m:mo>)</m:mo></m:mrow><m:mfrac>
+       <m:mi>S</m:mi>
+       <m:mrow>
+        <m:msqrt>
+         <m:mi>n</m:mi>
+        </m:msqrt>
+        
+       </m:mrow>
+      </m:mfrac>
+      <m:mo>≤</m:mo><m:mo>−</m:mo><m:mi>μ</m:mi><m:mo>≤</m:mo><m:mo>−</m:mo><m:mover accent="true">
+       <m:mi>X</m:mi>
+       <m:mo>¯</m:mo>
+      </m:mover>
+      <m:mo>+</m:mo><m:msub>
+       <m:mi>t</m:mi>
+       <m:mrow>
+        <m:mi>α</m:mi><m:mo>/</m:mo><m:mn>2</m:mn>
+       </m:mrow>
+      </m:msub>
+      <m:mrow><m:mo>(</m:mo>
+       <m:mrow>
+        <m:mi>n</m:mi><m:mo>−</m:mo><m:mn>1</m:mn>
+       </m:mrow>
+      <m:mo>)</m:mo></m:mrow><m:mfrac>
+       <m:mi>S</m:mi>
+       <m:mrow>
+        <m:msqrt>
+         <m:mi>n</m:mi>
+        </m:msqrt>
+        
+       </m:mrow>
+      </m:mfrac>
+      
+     </m:mrow> <m:mo>]</m:mo></m:mrow>
+    </m:mtd>
+   </m:mtr>
+   <m:mtr>
+    <m:mtd>
+     <m:mo>=</m:mo><m:mi>P</m:mi><m:mrow><m:mo>[</m:mo> <m:mrow>
+      <m:mover accent="true">
+       <m:mi>X</m:mi>
+       <m:mo>¯</m:mo>
+      </m:mover>
+      <m:mo>−</m:mo><m:msub>
+       <m:mi>t</m:mi>
+       <m:mrow>
+        <m:mi>α</m:mi><m:mo>/</m:mo><m:mn>2</m:mn>
+       </m:mrow>
+      </m:msub>
+      <m:mrow><m:mo>(</m:mo>
+       <m:mrow>
+        <m:mi>n</m:mi><m:mo>−</m:mo><m:mn>1</m:mn>
+       </m:mrow>
+      <m:mo>)</m:mo></m:mrow><m:mfrac>
+       <m:mi>S</m:mi>
+       <m:mrow>
+        <m:msqrt>
+         <m:mi>n</m:mi>
+        </m:msqrt>
+        
+       </m:mrow>
+      </m:mfrac>
+      <m:mo>≤</m:mo><m:mo>−</m:mo><m:mi>μ</m:mi><m:mo>≤</m:mo><m:mover accent="true">
+       <m:mi>X</m:mi>
+       <m:mo>¯</m:mo>
+      </m:mover>
+      <m:mo>+</m:mo><m:msub>
+       <m:mi>t</m:mi>
+       <m:mrow>
+        <m:mi>α</m:mi><m:mo>/</m:mo><m:mn>2</m:mn>
+       </m:mrow>
+      </m:msub>
+      <m:mrow><m:mo>(</m:mo>
+       <m:mrow>
+        <m:mi>n</m:mi><m:mo>−</m:mo><m:mn>1</m:mn>
+       </m:mrow>
+      <m:mo>)</m:mo></m:mrow><m:mfrac>
+       <m:mi>S</m:mi>
+       <m:mrow>
+        <m:msqrt>
+         <m:mi>n</m:mi>
+        </m:msqrt>
+        
+       </m:mrow>
+      </m:mfrac>
+      
+     </m:mrow> <m:mo>]</m:mo></m:mrow><m:mo>.</m:mo>
+    </m:mtd>
+   </m:mtr>
+  </m:mtable>
+   </m:semantics>
+</m:math>
+
+    </para>   
+    <para id="para_5">
+Thus the observations of a random sample provide a <m:math>
+ <m:semantics>
+  <m:mover accent="true">
+   <m:mi>x</m:mi>
+   <m:mo>¯</m:mo>
+  </m:mover>
+  </m:semantics>
+</m:math> and <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:msup>
+    <m:mtext>s</m:mtext>
+    <m:mtext>2</m:mtext>
+   </m:msup>
+     </m:mrow>
+ </m:semantics>
+</m:math> and <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mover accent="true">
+    <m:mi>x</m:mi>
+    <m:mo>¯</m:mo>
+   </m:mover>
+   <m:mo>−</m:mo><m:msub>
+    <m:mi>t</m:mi>
+    <m:mrow>
+     <m:mi>α</m:mi><m:mo>/</m:mo><m:mn>2</m:mn>
+    </m:mrow>
+   </m:msub>
+   <m:mrow><m:mo>(</m:mo>
+    <m:mrow>
+     <m:mi>n</m:mi><m:mo>−</m:mo><m:mn>1</m:mn>
+    </m:mrow>
+   <m:mo>)</m:mo></m:mrow><m:mfrac>
+    <m:mi>s</m:mi>
+    <m:mrow>
+     <m:msqrt>
+      <m:mi>n</m:mi>
+     </m:msqrt>
+     
+    </m:mrow>
+   </m:mfrac>
+   <m:mo>,</m:mo><m:mover accent="true">
+    <m:mi>x</m:mi>
+    <m:mo>¯</m:mo>
+   </m:mover>
+   <m:mo>+</m:mo><m:msub>
+    <m:mi>t</m:mi>
+    <m:mrow>
+     <m:mi>α</m:mi><m:mo>/</m:mo><m:mn>2</m:mn>
+    </m:mrow>
+   </m:msub>
+   <m:mrow><m:mo>(</m:mo>
+    <m:mrow>
+     <m:mi>n</m:mi><m:mo>−</m:mo><m:mn>1</m:mn>
+    </m:mrow>
+   <m:mo>)</m:mo></m:mrow><m:mfrac>
+    <m:mi>s</m:mi>
+    <m:mrow>
+     <m:msqrt>
+      <m:mi>n</m:mi>
+     </m:msqrt>
+      </m:mrow>
+   </m:mfrac>
+     </m:mrow>
+ </m:semantics>
+</m:math> is a <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mn>100</m:mn><m:mrow><m:mo>(</m:mo>
+    <m:mrow>
+     <m:mn>1</m:mn><m:mo>−</m:mo><m:mi>α</m:mi>
+    </m:mrow>
+   <m:mo>)</m:mo></m:mrow><m:mi>%</m:mi>
+  </m:mrow>
+
+ </m:semantics>
+</m:math> interval for <m:math>
+ <m:semantics>
+  <m:mi>μ</m:mi>
+</m:semantics>
+</m:math>.
+
+</para>   
+
+<example id="ex_1"> 
+    <para id="para_6">
+Let <emphasis>X</emphasis> equals the amount of butterfat in pound produced by a typical cow during a 305-day milk production period between her first and second claves. Assume the distribution of <emphasis>X</emphasis> is <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mi>N</m:mi><m:mrow><m:mo>(</m:mo>
+    <m:mrow>
+     <m:mi>μ</m:mi><m:mo>,</m:mo><m:msup>
+      <m:mi>σ</m:mi>
+      <m:mn>2</m:mn>
+     </m:msup>
+      </m:mrow>
+   <m:mo>)</m:mo></m:mrow>
+  </m:mrow>
+</m:semantics>
+</m:math>. To estimate <m:math>
+ <m:semantics>
+  <m:mi>μ</m:mi>
+</m:semantics>
+</m:math> a farmer measures the butterfat production for n-20 cows yielding the following data:
+</para>  
+<table frame="all" id="table_1" summary="">
+
+          <tgroup cols="7" align="left" colsep="2" rowsep="2">
+
+
+	  <tbody valign="top">
+<row>
+
+	  <entry>481</entry>
+	  <entry>537</entry>
+	  <entry>513</entry>
+	  <entry>583</entry>
+	  <entry>453</entry>
+	  <entry>510</entry>
+	  <entry>570</entry>
+</row>
+<row>
+	  <entry>500</entry>
+	  <entry>487</entry>
+	  <entry>555</entry>
+	  <entry>618</entry>
+	  <entry>327</entry>
+	  <entry>350</entry>	
+	  <entry>643</entry>	
+</row>
+ <row>
+	  <entry>499</entry>
+	  <entry>421</entry>
+	  <entry>505</entry>
+	  <entry>637</entry>
+          <entry>599</entry>
+          <entry>392</entry>
+          <entry>-</entry>
+</row>
+	</tbody>
+	</tgroup>
+	</table>  
+   <para id="para_7">
+For these data, <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mover accent="true">
+    <m:mi>x</m:mi>
+    <m:mo>¯</m:mo>
+   </m:mover>
+   <m:mo>=</m:mo><m:mn>507.50</m:mn>
+  </m:mrow>
+
+</m:semantics>
+</m:math> and <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mi>s</m:mi><m:mo>=</m:mo><m:mn>89.75</m:mn>
+  </m:mrow>
+ </m:semantics>
+</m:math>. Thus a point estimate of <m:math>
+ <m:semantics>
+  <m:mi>μ</m:mi>
+</m:semantics>
+</m:math> is <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mover accent="true">
+    <m:mi>x</m:mi>
+    <m:mo>¯</m:mo>
+   </m:mover>
+   <m:mo>=</m:mo><m:mn>507.50</m:mn>
+  </m:mrow>
+ </m:semantics>
+</m:math>. Since <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:msub>
+    <m:mi>t</m:mi>
+    <m:mrow>
+     <m:mn>0.05</m:mn>
+    </m:mrow>
+   </m:msub>
+   <m:mrow><m:mo>(</m:mo>
+    <m:mrow>
+     <m:mn>19</m:mn>
+    </m:mrow>
+   <m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>1.729</m:mn>
+  </m:mrow>
+ </m:semantics>
+</m:math> , a 90% confidence interval for <m:math>
+ <m:semantics>
+  <m:mi>μ</m:mi>
+</m:semantics>
+</m:math> is <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mn>507.50</m:mn><m:mo>±</m:mo><m:mn>1.729</m:mn><m:mrow><m:mo>(</m:mo>
+    <m:mrow>
+     <m:mfrac>
+      <m:mrow>
+       <m:mn>89.75</m:mn>
+      </m:mrow>
+      <m:mrow>
+       <m:msqrt>
+        <m:mrow>
+         <m:mn>20</m:mn>
+        </m:mrow>
+       </m:msqrt>
+       
+      </m:mrow>
+     </m:mfrac>
+     
+    </m:mrow>
+   <m:mo>)</m:mo></m:mrow>
+  </m:mrow>
+ </m:semantics>
+</m:math>, or equivalently, [472.80, 542.20].
+
+</para>   
+</example> 
+</section>
+<section id="sec_3">
+    <para id="para_8">
+Let <emphasis>T</emphasis> have a <emphasis>t</emphasis> distribution with <emphasis>n</emphasis>-1 degrees of freedom. Then, <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:msub>
+    <m:mi>t</m:mi>
+    <m:mrow>
+     <m:mi>α</m:mi><m:mo>/</m:mo><m:mn>2</m:mn>
+    </m:mrow>
+   </m:msub>
+   <m:mrow><m:mo>(</m:mo>
+    <m:mrow>
+     <m:mi>n</m:mi><m:mo>−</m:mo><m:mn>1</m:mn>
+    </m:mrow>
+   <m:mo>)</m:mo></m:mrow><m:mo>&gt;</m:mo><m:msub>
+    <m:mi>z</m:mi>
+    <m:mrow>
+     <m:mi>α</m:mi><m:mo>/</m:mo><m:mn>2</m:mn>
+    </m:mrow>
+   </m:msub>
+   
+  </m:mrow>
+</m:semantics>
+</m:math>. Consequently, the interval <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mover accent="true">
+    <m:mi>x</m:mi>
+    <m:mo>¯</m:mo>
+   </m:mover>
+   <m:mo>±</m:mo><m:msub>
+    <m:mi>z</m:mi>
+    <m:mrow>
+     <m:mi>α</m:mi><m:mo>/</m:mo><m:mn>2</m:mn>
+    </m:mrow>
+   </m:msub>
+   <m:mi>σ</m:mi><m:mo>/</m:mo><m:msqrt>
+    <m:mi>n</m:mi>
+   </m:msqrt>
+     </m:mrow>
+ </m:semantics>
+</m:math> is expected to be shorter than the interval <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mover accent="true">
+    <m:mi>x</m:mi>
+    <m:mo>¯</m:mo>
+   </m:mover>
+   <m:mo>±</m:mo><m:msub>
+    <m:mi>t</m:mi>
+    <m:mrow>
+     <m:mi>α</m:mi><m:mo>/</m:mo><m:mn>2</m:mn>
+    </m:mrow>
+   </m:msub>
+   <m:mrow><m:mo>(</m:mo>
+    <m:mrow>
+     <m:mi>n</m:mi><m:mo>−</m:mo><m:mn>1</m:mn>
+    </m:mrow>
+   <m:mo>)</m:mo></m:mrow><m:mi>s</m:mi><m:mo>/</m:mo><m:msqrt>
+    <m:mi>n</m:mi>
+   </m:msqrt>
+     </m:mrow>
+ </m:semantics>
+</m:math>. After all, there gives more information, namely the value of <m:math>
+ <m:semantics>
+  <m:mi>σ</m:mi>
+</m:semantics>
+</m:math>, in construction the first interval. However, the length of the second interval is very much dependent on the value of <emphasis>s</emphasis>. If the observed <emphasis>s</emphasis> is smaller than <m:math>
+ <m:semantics>
+  <m:mi>σ</m:mi>
+</m:semantics>
+</m:math>, a shorter confidence interval could result by the second scheme. But on the average, <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mover accent="true">
+    <m:mi>x</m:mi>
+    <m:mo>¯</m:mo>
+   </m:mover>
+   <m:mo>±</m:mo><m:msub>
+    <m:mi>z</m:mi>
+    <m:mrow>
+     <m:mi>α</m:mi><m:mo>/</m:mo><m:mn>2</m:mn>
+    </m:mrow>
+   </m:msub>
+   <m:mi>σ</m:mi><m:mo>/</m:mo><m:msqrt>
+    <m:mi>n</m:mi>
+   </m:msqrt>
+     </m:mrow>
+ </m:semantics>
+</m:math>is the shorter of the two confidence intervals. 
+
+</para>   
+    <para id="para_9">
+If it is not possible to assume that the underlying distribution is normal but <m:math>
+ <m:semantics>
+  <m:mi>μ</m:mi>
+</m:semantics>
+</m:math> and <m:math>
+ <m:semantics>
+  <m:mi>σ</m:mi>
+</m:semantics>
+</m:math> are both unknown, approximate confidence intervals for <m:math>
+ <m:semantics>
+  <m:mi>μ</m:mi>
+</m:semantics>
+</m:math> can still be constructed using <m:math display="block">
+ <m:semantics>
+  <m:mrow>
+   <m:mi>T</m:mi><m:mo>=</m:mo><m:mfrac>
+    <m:mrow>
+     <m:mover accent="true">
+      <m:mi>X</m:mi>
+      <m:mo>¯</m:mo>
+     </m:mover>
+     <m:mo>−</m:mo><m:mi>μ</m:mi>
+    </m:mrow>
+    <m:mrow>
+     <m:mi>S</m:mi><m:mo>/</m:mo><m:msqrt>
+      <m:mi>n</m:mi>
+     </m:msqrt>
+         </m:mrow>
+   </m:mfrac>
+   <m:mo>,</m:mo>
+  </m:mrow>
+ </m:semantics>
+</m:math>
+which now only has an approximate <emphasis>t</emphasis> distribution.
+
+</para> 
+    <para id="para_10">
+Generally, this approximation is quite good for many normal distributions, in particular, if the underlying distribution is symmetric, unimodal, and of the continuous type. However, if the distribution is <term>highly skewed</term>, there is a great danger using this approximation. In such a situation, it would be safer to use certain nonparametric method for finding a confidence interval for the median of the distribution. 
+    </para> 
+</section>
+<section id="sec_4">
+<title>Confidence Interval for Variances</title>
+    <para id="para_11">
+<term>The confidence interval for the variance <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:msup>
+    <m:mi>σ</m:mi>
+    <m:mn>2</m:mn>
+   </m:msup>
+    </m:mrow>
+</m:semantics>
+</m:math></term> is based on the sample variance <m:math display="block">
+ <m:semantics>
+  <m:mrow>
+   <m:msup>
+    <m:mi>S</m:mi>
+    <m:mn>2</m:mn>
+   </m:msup>
+   <m:mo>=</m:mo><m:mfrac>
+    <m:mn>1</m:mn>
+    <m:mrow>
+     <m:mi>n</m:mi><m:mo>−</m:mo><m:mn>1</m:mn>
+    </m:mrow>
+   </m:mfrac>
+   <m:msup>
+    <m:mrow>
+     <m:mstyle displaystyle="true">
+      <m:munderover>
+       <m:mo>∑</m:mo>
+       <m:mrow>
+        <m:mi>i</m:mi><m:mo>=</m:mo><m:mn>1</m:mn>
+       </m:mrow>
+       <m:mi>n</m:mi>
+      </m:munderover>
+      <m:mrow>
+       <m:mrow><m:mo>(</m:mo>
+        <m:mrow>
+         <m:msub>
+          <m:mi>X</m:mi>
+          <m:mi>i</m:mi>
+         </m:msub>
+         <m:mo>−</m:mo><m:mover accent="true">
+          <m:mi>X</m:mi>
+          <m:mo>¯</m:mo>
+         </m:mover>
+         
+        </m:mrow>
+       <m:mo>)</m:mo></m:mrow>
+      </m:mrow>
+     </m:mstyle>
+    </m:mrow>
+    <m:mn>2</m:mn>
+   </m:msup>
+   <m:mo>.</m:mo>
+  </m:mrow>
+ </m:semantics>
+</m:math>
+
+ 
+    </para> 
+    <para id="para_12">
+In order to find a confidence interval for <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:msup>
+    <m:mi>σ</m:mi>
+    <m:mn>2</m:mn>
+   </m:msup>
+    </m:mrow>
+</m:semantics>
+</m:math>, it is used that the distribution of <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mrow><m:mo>(</m:mo>
+    <m:mrow>
+     <m:mi>n</m:mi><m:mo>−</m:mo><m:mn>1</m:mn>
+    </m:mrow>
+   <m:mo>)</m:mo></m:mrow><m:msup>
+    <m:mi>S</m:mi>
+    <m:mn>2</m:mn>
+   </m:msup>
+   <m:mo>/</m:mo><m:msup>
+    <m:mi>σ</m:mi>
+    <m:mn>2</m:mn>
+   </m:msup>
+   
+  </m:mrow>
+ </m:semantics>
+</m:math> is <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:msup>
+    <m:mi>χ</m:mi>
+    <m:mn>2</m:mn>
+   </m:msup>
+   <m:mrow><m:mo>(</m:mo>
+    <m:mrow>
+     <m:mi>n</m:mi><m:mo>−</m:mo><m:mn>1</m:mn>
+    </m:mrow>
+   <m:mo>)</m:mo></m:mrow>
+  </m:mrow>
+ </m:semantics>
+</m:math>. The constants <emphasis>a</emphasis> and <emphasis>b</emphasis> should selected from tabularized  <link document="m13129" target-id="sec_5"> Chi Squared Distribution</link>  with <emphasis>n</emphasis>-1 degrees of freedom such that <m:math display="block">
+ <m:semantics>
+  <m:mrow>
+   <m:mi>P</m:mi><m:mrow><m:mo>(</m:mo>
+    <m:mrow>
+     <m:mi>a</m:mi><m:mo>≤</m:mo><m:mfrac>
+      <m:mrow>
+       <m:mrow><m:mo>(</m:mo>
+        <m:mrow>
+         <m:mi>n</m:mi><m:mo>−</m:mo><m:mn>1</m:mn>
+        </m:mrow>
+       <m:mo>)</m:mo></m:mrow><m:msup>
+        <m:mi>S</m:mi>
+        <m:mn>2</m:mn>
+       </m:msup>
+       
+      </m:mrow>
+      <m:mrow>
+       <m:msup>
+        <m:mi>σ</m:mi>
+        <m:mn>2</m:mn>
+       </m:msup>
+       
+      </m:mrow>
+     </m:mfrac>
+     <m:mo>≤</m:mo><m:mi>b</m:mi>
+    </m:mrow>
+   <m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>1</m:mn><m:mo>−</m:mo><m:mi>α</m:mi><m:mo>.</m:mo>
+  </m:mrow>
+ </m:semantics>
+</m:math>
+
+
+</para> 
+    <para id="para_13">
+That is select <emphasis>a</emphasis> and <emphasis>b</emphasis> so that the probabilities in two tails are equal: <m:math display="block">
+ <m:semantics>
+  <m:mrow>
+   <m:mi>a</m:mi><m:mo>=</m:mo><m:msubsup>
+    <m:mi>χ</m:mi>
+    <m:mrow>
+     <m:mn>1</m:mn><m:mo>−</m:mo><m:mi>α</m:mi><m:mo>/</m:mo><m:mn>2</m:mn>
+    </m:mrow>
+    <m:mn>2</m:mn>
+   </m:msubsup>
+   <m:mrow><m:mo>(</m:mo>
+    <m:mrow>
+     <m:mi>n</m:mi><m:mo>−</m:mo><m:mn>1</m:mn>
+    </m:mrow>
+   <m:mo>)</m:mo></m:mrow>
+  </m:mrow>
+ </m:semantics>
+</m:math> and <m:math display="block">
+ <m:semantics>
+  <m:mrow>
+   <m:mi>b</m:mi><m:mo>=</m:mo><m:msubsup>
+    <m:mi>χ</m:mi>
+    <m:mrow>
+     <m:mi>α</m:mi><m:mo>/</m:mo><m:mn>2</m:mn>
+    </m:mrow>
+    <m:mn>2</m:mn>
+   </m:msubsup>
+   <m:mrow><m:mo>(</m:mo>
+    <m:mrow>
+     <m:mi>n</m:mi><m:mo>−</m:mo><m:mn>1</m:mn>
+    </m:mrow>
+   <m:mo>)</m:mo></m:mrow><m:mo>.</m:mo>
+  </m:mrow>
+ </m:semantics>
+</m:math> Then, solving the inequalities, we have <m:math display="block">
+ <m:semantics>
+  <m:mrow>
+   <m:mn>1</m:mn><m:mo>−</m:mo><m:mi>α</m:mi><m:mo>=</m:mo><m:mi>P</m:mi><m:mrow><m:mo>(</m:mo>
+    <m:mrow>
+     <m:mfrac>
+      <m:mi>a</m:mi>
+      <m:mrow>
+       <m:mrow><m:mo>(</m:mo>
+        <m:mrow>
+         <m:mi>n</m:mi><m:mo>−</m:mo><m:mn>1</m:mn>
+        </m:mrow>
+       <m:mo>)</m:mo></m:mrow><m:msup>
+        <m:mi>S</m:mi>
+        <m:mn>2</m:mn>
+       </m:msup>
+       
+      </m:mrow>
+     </m:mfrac>
+     <m:mo>≤</m:mo><m:mfrac>
+      <m:mn>1</m:mn>
+      <m:mrow>
+       <m:msup>
+        <m:mi>σ</m:mi>
+        <m:mn>2</m:mn>
+       </m:msup>
+       
+      </m:mrow>
+     </m:mfrac>
+     <m:mo>≤</m:mo><m:mfrac>
+      <m:mi>b</m:mi>
+      <m:mrow>
+       <m:mrow><m:mo>(</m:mo>
+        <m:mrow>
+         <m:mi>n</m:mi><m:mo>−</m:mo><m:mn>1</m:mn>
+        </m:mrow>
+       <m:mo>)</m:mo></m:mrow><m:msup>
+        <m:mi>S</m:mi>
+        <m:mn>2</m:mn>
+       </m:msup>
+       
+      </m:mrow>
+     </m:mfrac>
+     
+    </m:mrow>
+   <m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mi>P</m:mi><m:mrow><m:mo>(</m:mo>
+    <m:mrow>
+     <m:mfrac>
+      <m:mrow>
+       <m:mrow><m:mo>(</m:mo>
+        <m:mrow>
+         <m:mi>n</m:mi><m:mo>−</m:mo><m:mn>1</m:mn>
+        </m:mrow>
+       <m:mo>)</m:mo></m:mrow><m:msup>
+        <m:mi>S</m:mi>
+        <m:mn>2</m:mn>
+       </m:msup>
+       
+      </m:mrow>
+      <m:mi>b</m:mi>
+     </m:mfrac>
+     <m:mo>≤</m:mo><m:msup>
+      <m:mi>σ</m:mi>
+      <m:mn>2</m:mn>
+     </m:msup>
+     <m:mo>≤</m:mo><m:mfrac>
+      <m:mrow>
+       <m:mrow><m:mo>(</m:mo>
+        <m:mrow>
+         <m:mi>n</m:mi><m:mo>−</m:mo><m:mn>1</m:mn>
+        </m:mrow>
+       <m:mo>)</m:mo></m:mrow><m:msup>
+        <m:mi>S</m:mi>
+        <m:mn>2</m:mn>
+       </m:msup>
+       
+      </m:mrow>
+      <m:mi>a</m:mi>
+     </m:mfrac>
+     
+    </m:mrow>
+   <m:mo>)</m:mo></m:mrow><m:mo>.</m:mo>
+  </m:mrow>
+ </m:semantics>
+</m:math>
+
+
+    </para> 
+    <para id="para_14">
+Thus the probability that the random interval <m:math display="block">
+ <m:semantics>
+  <m:mrow>
+   <m:msup>
+    <m:mrow>
+     <m:mtext> [(n-1)S</m:mtext>
+    </m:mrow>
+    <m:mtext>2</m:mtext>
+   </m:msup>
+   <m:msup>
+    <m:mrow>
+     <m:mtext>/b, (n-1)S</m:mtext>
+    </m:mrow>
+    <m:mtext>2</m:mtext>
+   </m:msup>
+   <m:mtext>/a]</m:mtext>
+  </m:mrow>
+</m:semantics>
+</m:math> contains the unknown <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:msup>
+    <m:mi>σ</m:mi>
+    <m:mn>2</m:mn>
+   </m:msup>
+    </m:mrow>
+</m:semantics>
+</m:math> is 1-<m:math>
+ <m:semantics>
+  <m:mi>α</m:mi>
+</m:semantics>
+</m:math>. Once the values of <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:msub>
+    <m:mi>X</m:mi>
+    <m:mn>1</m:mn>
+   </m:msub>
+   <m:mo>,</m:mo><m:msub>
+    <m:mi>X</m:mi>
+    <m:mn>2</m:mn>
+   </m:msub>
+   <m:mo>,</m:mo><m:mn>...</m:mn><m:mo>,</m:mo><m:msub>
+    <m:mi>X</m:mi>
+    <m:mi>n</m:mi>
+   </m:msub>
+     </m:mrow>
+</m:semantics>
+</m:math> are observed to be <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:msub>
+    <m:mi>x</m:mi>
+    <m:mn>1</m:mn>
+   </m:msub>
+   <m:mo>,</m:mo><m:msub>
+    <m:mi>x</m:mi>
+    <m:mn>2</m:mn>
+   </m:msub>
+   <m:mo>,</m:mo><m:mn>...</m:mn><m:mo>,</m:mo><m:msub>
+    <m:mi>x</m:mi>
+    <m:mi>n</m:mi>
+   </m:msub>
+   </m:mrow>
+  </m:semantics>
+</m:math> and <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:msup>
+    <m:mi>s</m:mi>
+    <m:mn>2</m:mn>
+   </m:msup>
+     </m:mrow>
+ </m:semantics>
+</m:math> computed, then the interval <m:math display="block">
+ <m:semantics>
+  <m:mrow>
+   <m:msup>
+    <m:mrow>
+     <m:mtext> [(n-1)S</m:mtext>
+    </m:mrow>
+    <m:mtext>2</m:mtext>
+   </m:msup>
+   <m:msup>
+    <m:mrow>
+     <m:mtext>/b, (n-1)S</m:mtext>
+    </m:mrow>
+    <m:mtext>2</m:mtext>
+   </m:msup>
+   <m:mtext>/a]</m:mtext>
+  </m:mrow>
+</m:semantics>
+</m:math> is a <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mn>100</m:mn><m:mrow><m:mo>(</m:mo>
+    <m:mrow>
+     <m:mn>1</m:mn><m:mo>−</m:mo><m:mi>α</m:mi>
+    </m:mrow>
+   <m:mo>)</m:mo></m:mrow><m:mi>%</m:mi>
+  </m:mrow>
+</m:semantics>
+</m:math> confidence interval for <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:msup>
+    <m:mi>σ</m:mi>
+    <m:mn>2</m:mn>
+   </m:msup>
+    </m:mrow>
+</m:semantics>
+</m:math>. 
+
+  </para> 
+    <para id="para_15">
+It follows that <m:math display="block">
+ <m:semantics>
+  <m:mrow>
+   <m:mrow><m:mo>[</m:mo> <m:mrow>
+    <m:msqrt>
+     <m:mrow>
+      <m:mrow><m:mo>(</m:mo>
+       <m:mrow>
+        <m:mi>n</m:mi><m:mo>−</m:mo><m:mn>1</m:mn>
+       </m:mrow>
+      <m:mo>)</m:mo></m:mrow><m:mo>/</m:mo><m:mi>b</m:mi><m:mi>s</m:mi>
+     </m:mrow>
+    </m:msqrt>
+    <m:mo>,</m:mo><m:msqrt>
+     <m:mrow>
+      <m:mrow><m:mo>(</m:mo>
+       <m:mrow>
+        <m:mi>n</m:mi><m:mo>−</m:mo><m:mn>1</m:mn>
+       </m:mrow>
+      <m:mo>)</m:mo></m:mrow><m:mo>/</m:mo><m:mi>a</m:mi><m:mi>s</m:mi>
+     </m:mrow>
+    </m:msqrt>
+    
+   </m:mrow> <m:mo>]</m:mo></m:mrow>
+  </m:mrow>
+ </m:semantics>
+</m:math> is a <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mn>100</m:mn><m:mrow><m:mo>(</m:mo>
+    <m:mrow>
+     <m:mn>1</m:mn><m:mo>−</m:mo><m:mi>α</m:mi>
+    </m:mrow>
+   <m:mo>)</m:mo></m:mrow><m:mi>%</m:mi>
+  </m:mrow>
+</m:semantics>
+</m:math> confidence interval for <m:math>
+ <m:semantics>
+  <m:mi>σ</m:mi>
+</m:semantics>
+</m:math>, the standard deviation.
+
+ </para> 
+
+<example id="ex_2"> 
+    <para id="para_16">
+Assume that the time in days required for maturation of seeds of a species of a flowering plant found in Mexico is <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mi>N</m:mi><m:mrow><m:mo>(</m:mo>
+    <m:mrow>
+     <m:mi>μ</m:mi><m:mo>,</m:mo><m:msup>
+      <m:mi>σ</m:mi>
+      <m:mn>2</m:mn>
+     </m:msup>
+      </m:mrow>
+   <m:mo>)</m:mo></m:mrow>
+  </m:mrow>
+</m:semantics>
+</m:math>. A random sample of <emphasis>n</emphasis>=13 seeds, both parents having narrow leaves, yielded <m:math>
+ <m:semantics>
+  <m:mover accent="true">
+   <m:mi>x</m:mi>
+   <m:mo>¯</m:mo>
+  </m:mover>
+  </m:semantics>
+</m:math>=18.97 days and <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mn>12</m:mn><m:msup>
+    <m:mi>s</m:mi>
+    <m:mn>2</m:mn>
+   </m:msup>
+   <m:mo>=</m:mo><m:mstyle displaystyle="true">
+    <m:munderover>
+     <m:mo>∑</m:mo>
+     <m:mrow>
+      <m:mi>i</m:mi><m:mo>=</m:mo><m:mn>1</m:mn>
+     </m:mrow>
+     <m:mrow>
+      <m:mn>13</m:mn>
+     </m:mrow>
+    </m:munderover>
+    <m:mrow>
+     <m:msup>
+      <m:mrow>
+       <m:mrow><m:mo>(</m:mo>
+        <m:mrow>
+         <m:msub>
+          <m:mi>x</m:mi>
+          <m:mrow/>
+         </m:msub>
+         <m:mo>−</m:mo><m:mover accent="true">
+          <m:mi>x</m:mi>
+          <m:mo>¯</m:mo>
+         </m:mover>
+         
+        </m:mrow>
+       <m:mo>)</m:mo></m:mrow>
+      </m:mrow>
+      <m:mn>2</m:mn>
+     </m:msup>
+     <m:mo>=</m:mo><m:mn>128.41</m:mn>
+    </m:mrow>
+   </m:mstyle>
+  </m:mrow>
+ </m:semantics>
+</m:math>.
+
+
+</para> 
+    <para id="para_17">
+A confidence interval for <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:msup>
+    <m:mi>σ</m:mi>
+    <m:mn>2</m:mn>
+   </m:msup>
+    </m:mrow>
+</m:semantics>
+</m:math> is <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mrow><m:mo>[</m:mo> <m:mrow>
+    <m:mfrac>
+     <m:mrow>
+      <m:mn>128.41</m:mn>
+     </m:mrow>
+     <m:mrow>
+      <m:mn>21.03</m:mn>
+     </m:mrow>
+    </m:mfrac>
+    <m:mo>,</m:mo><m:mfrac>
+     <m:mrow>
+      <m:mn>128.41</m:mn>
+     </m:mrow>
+     <m:mrow>
+      <m:mn>5.226</m:mn>
+     </m:mrow>
+    </m:mfrac>
+    
+   </m:mrow> <m:mo>]</m:mo></m:mrow><m:mo>=</m:mo><m:mrow><m:mo>[</m:mo> <m:mrow>
+    <m:mn>6.11</m:mn><m:mo>,</m:mo><m:mn>24.57</m:mn>
+   </m:mrow> <m:mo>]</m:mo></m:mrow>
+  </m:mrow>
+
+ </m:semantics>
+</m:math>, because <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mn>5.226</m:mn><m:mo>=</m:mo><m:msubsup>
+    <m:mi>χ</m:mi>
+    <m:mrow>
+     <m:mn>0.95</m:mn>
+    </m:mrow>
+    <m:mn>2</m:mn>
+   </m:msubsup>
+   <m:mrow><m:mo>(</m:mo>
+    <m:mrow>
+     <m:mn>12</m:mn>
+    </m:mrow>
+   <m:mo>)</m:mo></m:mrow>
+  </m:mrow>
+ </m:semantics>
+</m:math> and <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mn>21.03</m:mn><m:mo>=</m:mo><m:msubsup>
+    <m:mi>χ</m:mi>
+    <m:mrow>
+     <m:mn>0.055</m:mn>
+    </m:mrow>
+    <m:mn>2</m:mn>
+   </m:msubsup>
+   <m:mrow><m:mo>(</m:mo>
+    <m:mrow>
+     <m:mn>12</m:mn>
+    </m:mrow>
+   <m:mo>)</m:mo></m:mrow>
+  </m:mrow>
+ </m:semantics>
+</m:math>, what can be read from the tabularized Chi Squared Distribution. The corresponding 90% confidence interval for <m:math>
+ <m:semantics>
+  <m:mi>σ</m:mi>
+</m:semantics>
+</m:math> is <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mrow><m:mo>[</m:mo> <m:mrow>
+    <m:msqrt>
+     <m:mrow>
+      <m:mn>6.11</m:mn>
+     </m:mrow>
+    </m:msqrt>
+    <m:mo>,</m:mo><m:msqrt>
+     <m:mrow>
+      <m:mn>24.57</m:mn>
+     </m:mrow>
+    </m:msqrt>
+    
+   </m:mrow> <m:mo>]</m:mo></m:mrow><m:mo>=</m:mo><m:mrow><m:mo>[</m:mo> <m:mrow>
+    <m:mn>2.47</m:mn><m:mo>,</m:mo><m:mn>4.96</m:mn>
+   </m:mrow> <m:mo>]</m:mo></m:mrow><m:mo>.</m:mo>
+  </m:mrow>
+
+ </m:semantics>
+</m:math>
+
+</para> 
+</example>
+</section>
+<section id="sec_5">
+    <para id="para_18">
+Although <emphasis>a</emphasis> and <emphasis>b</emphasis> are generally selected so that the probabilities in the two tails are equal, the resulting <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mn>100</m:mn><m:mrow><m:mo>(</m:mo>
+    <m:mrow>
+     <m:mn>1</m:mn><m:mo>−</m:mo><m:mi>α</m:mi>
+    </m:mrow>
+   <m:mo>)</m:mo></m:mrow><m:mi>%</m:mi>
+  </m:mrow>
+</m:semantics>
+</m:math> confidence interval is not the shortest that can be formed using the available data. The tables and appendixes gives solutions for <emphasis>a</emphasis> and <emphasis>b</emphasis> that yield confidence interval of minimum length for the standard deviation.
+
+    </para> 
+    <para id="para_19">
+
+    </para> 
+    <para id="para_20">
+
+    </para> 
+
+
+</section>
+</section>
+    <para id="delete_me">
+       <!-- Insert module text here -->
+    </para>   
+  </content>
+  
+</document>

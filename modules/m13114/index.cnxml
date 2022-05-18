@@ -1,0 +1,2023 @@
+<document xmlns="http://cnx.rice.edu/cnxml" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:md="http://cnx.rice.edu/mdml">
+  <title>DISCRETE DISTRIBUTION</title>
+  <metadata><md:content-id>undefined</md:content-id><md:title/><md:uuid>51f72c68-da7a-452d-8534-1505b3859d9a</md:uuid>
+</metadata>
+  <content>
+	  
+	<section id="sec_1">
+	  <title>DISCRETE DISTRIBUTION</title>
+	    <para id="para_1">
+	    </para>
+	<section id="sec_2">
+	  <title>RANDOM VARIABLE OF DISCRETE TYPE</title>
+	    <para id="para_2">
+A <term>SAMPLE SPACE <emphasis>S</emphasis></term> may be difficult to describe if the elements of <emphasis>S</emphasis> are not numbers. Let discuss how one can use a rule by which each simple outcome of a random experiment, an element <emphasis>s</emphasis> of <emphasis>S</emphasis>, may be associated with a real number <emphasis>x</emphasis>.
+
+	    </para>
+
+	<definition id="def_1">
+	  <term>DEFINITION OF RANDOM VARIABLE</term>
+	  <meaning id="idp876832">
+Given a random experiment with a sample space <emphasis>S</emphasis>, a function <emphasis>X</emphasis> that assigns to each element <emphasis>s</emphasis> in <emphasis>S</emphasis> one and only one real number <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mi>X</m:mi><m:mrow><m:mo>(</m:mo>
+    <m:mi>s</m:mi>
+   <m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mi>x</m:mi>
+  </m:mrow>
+ </m:semantics>
+</m:math>
+ is called <term>a random variable</term>. The space of <emphasis>X</emphasis> is the set of real numbers <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mrow><m:mo>{</m:mo> <m:mrow>
+    <m:mi>x</m:mi><m:mo>:</m:mo><m:mi>x</m:mi><m:mo>=</m:mo><m:mi>X</m:mi><m:mrow><m:mo>(</m:mo>
+     <m:mi>s</m:mi>
+    <m:mo>)</m:mo></m:mrow><m:mo>,</m:mo><m:mi>s</m:mi><m:mo>∈</m:mo><m:mi>S</m:mi>
+   </m:mrow> <m:mo>}</m:mo></m:mrow><m:mo>,</m:mo>
+  </m:mrow>
+ </m:semantics>
+</m:math> where <emphasis>s</emphasis> belongs to <emphasis>S</emphasis> means the element <emphasis>s</emphasis> belongs to the set <emphasis>S</emphasis>.
+
+</meaning>
+<meaning id="idp6973856">
+It may be that the set S has elements that are themselves real numbers. In such an instance we could write <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mi>X</m:mi><m:mrow><m:mo>(</m:mo>
+    <m:mi>s</m:mi>
+   <m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mi>s</m:mi>
+  </m:mrow>
+</m:semantics>
+</m:math>
+ so that <emphasis>X</emphasis> is <term>the identity function</term> and the space of <emphasis>X</emphasis> is also <emphasis>S</emphasis>. This is illustrated in the example below. 
+</meaning>
+	</definition>
+	  <example id="ex_1">
+	    <para id="para_3">
+Let the random experiment be the cast of a die, observing the number of spots on the side facing up. The sample space associated with this experiment is <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mi>S</m:mi><m:mo>=</m:mo><m:mrow><m:mo>(</m:mo>
+    <m:mrow>
+     <m:mn>1,2,3,4,5,6</m:mn>
+    </m:mrow>
+   <m:mo>)</m:mo></m:mrow>
+  </m:mrow>
+ </m:semantics>
+</m:math>
+. For each <emphasis>s</emphasis> belongs to <emphasis>S</emphasis>, let <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mi>X</m:mi><m:mrow><m:mo>(</m:mo>
+    <m:mi>s</m:mi>
+   <m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mi>s</m:mi>
+  </m:mrow>
+</m:semantics>
+</m:math>
+. The space of the random variable <emphasis>X</emphasis> is then {1,2,3,4,5,6}.
+
+</para>
+<para id="para_4">
+If we associate a probability of 1/6 with each outcome, then, for example, <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mi>P</m:mi><m:mrow><m:mo>(</m:mo>
+    <m:mrow>
+     <m:mi>X</m:mi><m:mo>=</m:mo><m:mn>5</m:mn>
+    </m:mrow>
+   <m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>1</m:mn><m:mo>/</m:mo><m:mn>6,</m:mn><m:mi>P</m:mi><m:mrow><m:mo>(</m:mo>
+    <m:mrow>
+     <m:mn>2</m:mn><m:mo>≤</m:mo><m:mi>X</m:mi><m:mo>≤</m:mo><m:mn>5</m:mn>
+    </m:mrow>
+   <m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>4</m:mn><m:mo>/</m:mo><m:mn>6,</m:mn>
+  </m:mrow>
+ </m:semantics>
+</m:math>
+ and <emphasis>s</emphasis> belongs to <emphasis>S</emphasis> seem to be reasonable assignments, where <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mrow><m:mo>(</m:mo>
+    <m:mrow>
+     <m:mn>2</m:mn><m:mo>≤</m:mo><m:mi>X</m:mi><m:mo>≤</m:mo><m:mn>5</m:mn>
+    </m:mrow>
+   <m:mo>)</m:mo></m:mrow>
+  </m:mrow>
+ </m:semantics>
+</m:math>
+ means (<emphasis>X</emphasis> = 2,3,4 or 5) and <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mrow><m:mo>(</m:mo>
+    <m:mrow>
+     <m:mi>X</m:mi><m:mo>≤</m:mo><m:mn>2</m:mn>
+    </m:mrow>
+   <m:mo>)</m:mo></m:mrow>
+  </m:mrow>
+ </m:semantics>
+</m:math>
+ means (<emphasis>X</emphasis> = 1 or 2), in this example.
+</para>
+	  </example>
+	    	    
+	  <list id="list_1" list-type="enumerated">
+	    <title>We can recognize two major difficulties:</title>
+	    <item>
+In many practical situations the probabilities assigned to the event are unknown.
+            </item> 
+	    <item>
+Since there are many ways of defining a function <emphasis>X</emphasis> on <emphasis>S</emphasis>, which function do we want to use?
+            </item> 
+	
+	  </list> 
+	<section id="sec_3">
+<para id="para_5">	  
+Let <emphasis>X</emphasis> denotes a random variable with one-dimensional space <emphasis>R</emphasis>, a subset of the real numbers. Suppose that the space <emphasis>R</emphasis> contains a countable number of points; that is, <emphasis>R</emphasis> contains either a finite number of points or the points of <emphasis>R</emphasis> can be put into a one-to- one correspondence with the positive integers. Such set <emphasis>R</emphasis> is called <term>a set of discrete points</term> or simply <term>a discrete sample space</term>.
+</para>
+<para id="para_6">	  
+Furthermore, the random variable <emphasis>X</emphasis> is called <term>a random variable of the discrete type</term>, and <emphasis>X</emphasis> is said to have <term>a distribution of the discrete type</term>.
+For a random variable <emphasis>X</emphasis> of the discrete type, the probability <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mi>P</m:mi><m:mrow><m:mo>(</m:mo>
+    <m:mrow>
+     <m:mi>X</m:mi><m:mo>=</m:mo><m:mi>x</m:mi>
+    </m:mrow>
+   <m:mo>)</m:mo></m:mrow>
+  </m:mrow>
+</m:semantics>
+</m:math>
+ is frequently denoted by <emphasis>f(x)</emphasis>, and is called <term>the probability density function</term> and it is abbreviated <term>p.d.f.</term>. 
+
+</para>
+<para id="para_7">	  
+Let <emphasis>f(x)</emphasis> be the p.d.f. of the random variable <emphasis>X</emphasis> of the discrete type, and let <emphasis>R</emphasis> be the space of <emphasis>X</emphasis>. Since, <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mi>f</m:mi><m:mrow><m:mo>(</m:mo>
+    <m:mi>x</m:mi>
+   <m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mi>P</m:mi><m:mrow><m:mo>(</m:mo>
+    <m:mrow>
+     <m:mi>X</m:mi><m:mo>=</m:mo><m:mi>x</m:mi>
+    </m:mrow>
+   <m:mo>)</m:mo></m:mrow>
+  </m:mrow>
+ </m:semantics>
+</m:math>
+, <emphasis>x</emphasis> belongs to <emphasis>R</emphasis>, <emphasis>f(x)</emphasis> must be positive for <emphasis>x</emphasis> belongs to <emphasis>R</emphasis> and we want all these probabilities to add to 1 because each <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mi>P</m:mi><m:mrow><m:mo>(</m:mo>
+    <m:mrow>
+     <m:mi>X</m:mi><m:mo>=</m:mo><m:mi>x</m:mi>
+    </m:mrow>
+   <m:mo>)</m:mo></m:mrow>
+  </m:mrow>
+</m:semantics>
+</m:math>
+ represents the fraction of times <emphasis>x</emphasis> can be expected to occur. Moreover, to determine the probability associated with the event <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mi>A</m:mi><m:mo>⊂</m:mo><m:mi>R</m:mi>
+  </m:mrow>
+</m:semantics>
+</m:math>
+ , one would sum the probabilities of the <emphasis>x</emphasis> values in <emphasis>A</emphasis>. 
+</para>
+<list id="list_2">
+	    <title>That is, we want f(x) to satisfy the properties</title>
+	    <item>
+ <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mi>P</m:mi><m:mrow><m:mo>(</m:mo>
+    <m:mrow>
+     <m:mi>X</m:mi><m:mo>=</m:mo><m:mi>x</m:mi>
+    </m:mrow>
+   <m:mo>)</m:mo></m:mrow>
+  </m:mrow>
+</m:semantics>
+</m:math>
+,
+      
+ </item> 
+	    <item>
+<m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mstyle displaystyle="true">
+    <m:munder>
+     <m:mo>∑</m:mo>
+     <m:mrow>
+      <m:mi>x</m:mi><m:mo>∈</m:mo><m:mi>R</m:mi>
+     </m:mrow>
+    </m:munder>
+    <m:mrow>
+     <m:mi>f</m:mi><m:mrow><m:mo>(</m:mo>
+      <m:mi>x</m:mi>
+     <m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>1</m:mn><m:mo>;</m:mo>
+    </m:mrow>
+   </m:mstyle>
+  </m:mrow>
+</m:semantics>
+</m:math>
+            </item> 
+
+	    <item>
+<m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mi>P</m:mi><m:mrow><m:mo>(</m:mo>
+    <m:mrow>
+     <m:mi>X</m:mi><m:mo>∈</m:mo><m:mi>A</m:mi>
+    </m:mrow>
+   <m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mstyle displaystyle="true">
+    <m:munder>
+     <m:mo>∑</m:mo>
+     <m:mrow>
+      <m:mi>x</m:mi><m:mo>∈</m:mo><m:mi>A</m:mi>
+     </m:mrow>
+    </m:munder>
+    <m:mrow>
+     <m:mi>f</m:mi><m:mrow><m:mo>(</m:mo>
+      <m:mi>x</m:mi>
+     <m:mo>)</m:mo></m:mrow>
+    </m:mrow>
+   </m:mstyle>
+  </m:mrow>
+</m:semantics>
+</m:math>
+, where <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mi>A</m:mi><m:mo>⊂</m:mo><m:mi>R</m:mi><m:mo>.</m:mo>
+  </m:mrow>
+ </m:semantics>
+</m:math>
+           </item>
+	  </list>
+
+
+<para id="para_8">	  
+
+Usually let <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mi>f</m:mi><m:mrow><m:mo>(</m:mo>
+    <m:mi>x</m:mi>
+   <m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>0</m:mn>
+  </m:mrow>
+ </m:semantics>
+</m:math>
+  when <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mi>x</m:mi><m:mo>∉</m:mo><m:mi>R</m:mi>
+  </m:mrow>
+ </m:semantics>
+</m:math>
+ and thus the domain of <emphasis>f(x)</emphasis> is the set of real numbers. When we define the p.d.f. of <emphasis>f(x)</emphasis> and do not say zero elsewhere, then we tacitly mean that <emphasis>f(x)</emphasis> has been defined at all x’s in space <emphasis>R</emphasis>, and it is assumed that <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mi>f</m:mi><m:mrow><m:mo>(</m:mo>
+    <m:mi>x</m:mi>
+   <m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>0</m:mn>
+  </m:mrow>
+ </m:semantics>
+</m:math>
+ elsewhere, namely, <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mi>f</m:mi><m:mrow><m:mo>(</m:mo>
+    <m:mi>x</m:mi>
+   <m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>0</m:mn>
+  </m:mrow>
+ </m:semantics>
+</m:math>
+, <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mi>x</m:mi><m:mo>∉</m:mo><m:mi>R</m:mi>
+  </m:mrow>
+ </m:semantics>
+</m:math>. Since the probability <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mi>P</m:mi><m:mrow><m:mo>(</m:mo>
+    <m:mrow>
+     <m:mi>X</m:mi><m:mo>=</m:mo><m:mi>x</m:mi>
+    </m:mrow>
+   <m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo>
+    <m:mi>x</m:mi>
+   <m:mo>)</m:mo></m:mrow><m:mo>&gt;</m:mo><m:mn>0</m:mn>
+  </m:mrow>
+ </m:semantics>
+</m:math>
+ when <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mi>x</m:mi><m:mo>∈</m:mo><m:mi>R</m:mi>
+  </m:mrow>
+ </m:semantics>
+</m:math> and since <emphasis>R</emphasis> contains all the probabilities associated with <emphasis>X</emphasis>, <emphasis>R</emphasis> is sometimes referred to as <term>the support of <emphasis>X</emphasis></term> as well as the space of <emphasis>X</emphasis>. 
+</para>
+<example id="ex_2">
+<para id="para_9">	  
+Roll a four-sided die twice and let <emphasis>X</emphasis> equal the larger of the two outcomes if there are different and the common value if they are the same. The sample space for this experiment is <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mi>S</m:mi><m:mo>=</m:mo><m:mrow><m:mo>[</m:mo> <m:mrow>
+    <m:mrow><m:mo>(</m:mo>
+     <m:mrow>
+      <m:msub>
+       <m:mi>d</m:mi>
+       <m:mn>1</m:mn>
+      </m:msub>
+      <m:mo>,</m:mo><m:msub>
+       <m:mi>d</m:mi>
+       <m:mn>2</m:mn>
+      </m:msub>
+      
+     </m:mrow>
+    <m:mo>)</m:mo></m:mrow><m:mo>:</m:mo><m:msub>
+     <m:mi>d</m:mi>
+     <m:mn>1</m:mn>
+    </m:msub>
+    <m:mo>=</m:mo><m:mn>1,2,3,4</m:mn><m:mo>;</m:mo><m:msub>
+     <m:mi>d</m:mi>
+     <m:mn>2</m:mn>
+    </m:msub>
+    <m:mo>=</m:mo><m:mn>1,2,3,4</m:mn>
+   </m:mrow> <m:mo>]</m:mo></m:mrow>
+  </m:mrow>
+ </m:semantics>
+</m:math>
+, where each of this 16 points has probability 1/16. Then <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mi>P</m:mi><m:mrow><m:mo>(</m:mo>
+    <m:mrow>
+     <m:mi>X</m:mi><m:mo>=</m:mo><m:mn>1</m:mn>
+    </m:mrow>
+   <m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mi>P</m:mi><m:mrow><m:mo>[</m:mo> <m:mrow>
+    <m:mrow><m:mo>(</m:mo>
+     <m:mrow>
+      <m:mn>1,1</m:mn>
+     </m:mrow>
+    <m:mo>)</m:mo></m:mrow>
+   </m:mrow> <m:mo>]</m:mo></m:mrow><m:mo>=</m:mo><m:mn>1</m:mn><m:mo>/</m:mo><m:mn>16</m:mn>
+  </m:mrow>
+ </m:semantics>
+</m:math>
+, <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mi>P</m:mi><m:mrow><m:mo>(</m:mo>
+    <m:mrow>
+     <m:mi>X</m:mi><m:mo>=</m:mo><m:mn>2</m:mn>
+    </m:mrow>
+   <m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mi>P</m:mi><m:mrow><m:mo>[</m:mo> <m:mrow>
+    <m:mrow><m:mo>(</m:mo>
+     <m:mrow>
+      <m:mn>1,2</m:mn>
+     </m:mrow>
+    <m:mo>)</m:mo></m:mrow><m:mo>,</m:mo><m:mrow><m:mo>(</m:mo>
+     <m:mrow>
+      <m:mn>2,1</m:mn>
+     </m:mrow>
+    <m:mo>)</m:mo></m:mrow><m:mo>,</m:mo><m:mrow><m:mo>(</m:mo>
+     <m:mrow>
+      <m:mn>2,2</m:mn>
+     </m:mrow>
+    <m:mo>)</m:mo></m:mrow>
+   </m:mrow> <m:mo>]</m:mo></m:mrow><m:mo>=</m:mo><m:mn>3</m:mn><m:mo>/</m:mo><m:mn>16</m:mn>
+  </m:mrow>
+ </m:semantics>
+</m:math>
+, and similarly <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mi>P</m:mi><m:mrow><m:mo>(</m:mo>
+    <m:mrow>
+     <m:mi>X</m:mi><m:mo>=</m:mo><m:mn>3</m:mn>
+    </m:mrow>
+   <m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>5</m:mn><m:mo>/</m:mo><m:mn>16</m:mn>
+  </m:mrow>
+</m:semantics>
+</m:math>
+ and <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mi>P</m:mi><m:mrow><m:mo>(</m:mo>
+    <m:mrow>
+     <m:mi>X</m:mi><m:mo>=</m:mo><m:mn>4</m:mn>
+    </m:mrow>
+   <m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>7</m:mn><m:mo>/</m:mo><m:mn>16</m:mn>
+  </m:mrow>
+ </m:semantics>
+</m:math>
+. That is, the p. d.f. of <emphasis>X</emphasis> can be written simply as <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mi>f</m:mi><m:mrow><m:mo>(</m:mo>
+    <m:mi>x</m:mi>
+   <m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mi>P</m:mi><m:mrow><m:mo>(</m:mo>
+    <m:mrow>
+     <m:mi>X</m:mi><m:mo>=</m:mo><m:mi>x</m:mi>
+    </m:mrow>
+   <m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mfrac>
+    <m:mrow>
+     <m:mn>2</m:mn><m:mi>x</m:mi><m:mo>−</m:mo><m:mn>1</m:mn>
+    </m:mrow>
+    <m:mrow>
+     <m:mn>16</m:mn>
+    </m:mrow>
+   </m:mfrac>
+   <m:mo>,</m:mo><m:mi>x</m:mi><m:mo>=</m:mo><m:mn>1,2,3,4.</m:mn>
+  </m:mrow>
+ </m:semantics>
+</m:math>
+</para>
+<para id="para_10">	  
+We could add that <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mi>f</m:mi><m:mrow><m:mo>(</m:mo>
+    <m:mi>x</m:mi>
+   <m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>0</m:mn>
+  </m:mrow>
+ </m:semantics>
+</m:math>
+ elsewhere; but if we do not, one should take <emphasis>f(x)</emphasis> to equal zero when <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mi>x</m:mi><m:mo>∉</m:mo><m:mi>R</m:mi>
+  </m:mrow>
+ </m:semantics>
+</m:math>.
+</para>
+	</example>
+</section> 
+	<section id="sec_4">	
+<para id="para_11">
+A better understanding of a particular probability distribution can often be obtained with a graph that depicts the p.d.f. of <emphasis>X</emphasis>. 
+</para>
+<note type="Note that" id="idp9824064"><label>Note that</label>
+the graph of the p.d.f. when <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mi>f</m:mi><m:mrow><m:mo>(</m:mo>
+    <m:mi>x</m:mi>
+   <m:mo>)</m:mo></m:mrow><m:mo>&gt;</m:mo><m:mn>0</m:mn>
+  </m:mrow>
+</m:semantics>
+</m:math>
+, would be simply the set of points {<m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mrow><m:mo>[</m:mo> <m:mrow>
+    <m:mi>x</m:mi><m:mo>,</m:mo><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo>
+     <m:mi>x</m:mi>
+    <m:mo>)</m:mo></m:mrow>
+   </m:mrow> <m:mo>]</m:mo></m:mrow><m:mo>:</m:mo><m:mi>x</m:mi><m:mo>∈</m:mo><m:mi>R</m:mi>
+  </m:mrow>
+ </m:semantics>
+</m:math>
+}, where <emphasis>R</emphasis> is the space of <emphasis>X</emphasis>. 
+</note>
+
+<para id="para_12">	  
+
+Two types of graphs can be used to give a better visual appreciation of the p.d.f., namely, <term>a bar graph</term> and <term>a probability histogram</term>. A bar graph of the p.d.f. <emphasis>f(x)</emphasis> of the random variable <emphasis>X</emphasis> is a graph having a vertical line segment drawn from <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mrow><m:mo>(</m:mo>
+    <m:mrow>
+     <m:mi>x</m:mi><m:mn>,0</m:mn>
+    </m:mrow>
+   <m:mo>)</m:mo></m:mrow>
+  </m:mrow>
+ </m:semantics>
+</m:math>
+ to <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mrow><m:mo>[</m:mo> <m:mrow>
+    <m:mi>x</m:mi><m:mo>,</m:mo><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo>
+     <m:mi>x</m:mi>
+    <m:mo>)</m:mo></m:mrow>
+   </m:mrow> <m:mo>]</m:mo></m:mrow>
+  </m:mrow>
+ </m:semantics>
+</m:math>
+ at each <emphasis>x</emphasis> in <emphasis>R</emphasis>, the space of <emphasis>X</emphasis>. If <emphasis>X</emphasis> can only assume integer values, <term>a probability histogram</term> of the p.d.f. f(x) is a graphical representation that has a rectangle of height <emphasis>f(x)</emphasis> and a base of length 1, centered at <emphasis>x</emphasis>, for each <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mi>x</m:mi><m:mo>∈</m:mo><m:mi>R</m:mi>
+  </m:mrow>
+ </m:semantics>
+</m:math>, the space of <emphasis>X</emphasis>. </para>
+	<definition id="def_2">
+	  <term>CUMULATIVE DISTRIBUTION FUNCTION</term>
+	  <meaning id="idp10558336">
+Let <emphasis>X</emphasis> be a random variable of the discrete type with space <emphasis>R</emphasis> and p.d.f. <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mi>f</m:mi><m:mrow><m:mo>(</m:mo>
+    <m:mi>x</m:mi>
+   <m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mi>P</m:mi><m:mrow><m:mo>(</m:mo>
+    <m:mrow>
+     <m:mi>X</m:mi><m:mo>=</m:mo><m:mi>x</m:mi>
+    </m:mrow>
+   <m:mo>)</m:mo></m:mrow>
+  </m:mrow>
+ </m:semantics>
+</m:math>
+, <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mi>x</m:mi><m:mo>∈</m:mo><m:mi>R</m:mi>
+  </m:mrow>
+ </m:semantics>
+</m:math>. Now take <emphasis>x</emphasis> to be a real number and consider the set <emphasis>A</emphasis> of all points in <emphasis>R</emphasis> that are less than or equal to <emphasis>x</emphasis>. That is, <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mi>A</m:mi><m:mo>=</m:mo><m:mrow><m:mo>(</m:mo>
+    <m:mrow>
+     <m:mi>t</m:mi><m:mo>:</m:mo><m:mi>t</m:mi><m:mo>≤</m:mo><m:mi>x</m:mi>
+    </m:mrow>
+   <m:mo>)</m:mo></m:mrow>
+  </m:mrow>
+ </m:semantics>
+</m:math>
+ and <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mi>t</m:mi><m:mo>∈</m:mo><m:mi>R</m:mi>
+  </m:mrow>
+ </m:semantics>
+</m:math>.
+</meaning>
+<meaning id="idp10512432">
+Let define the function <emphasis>F(x)</emphasis> by
+	<equation id="eq_1">
+<m:math display="block">
+ <m:semantics>
+  <m:mrow>
+   <m:mi>F</m:mi><m:mrow><m:mo>(</m:mo>
+    <m:mi>x</m:mi>
+   <m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mi>P</m:mi><m:mrow><m:mo>(</m:mo>
+    <m:mrow>
+     <m:mi>X</m:mi><m:mo>≤</m:mo><m:mi>x</m:mi>
+    </m:mrow>
+   <m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mstyle displaystyle="true">
+    <m:munder>
+     <m:mo>∑</m:mo>
+     <m:mrow>
+      <m:mi>t</m:mi><m:mo>∈</m:mo><m:mi>A</m:mi>
+     </m:mrow>
+    </m:munder>
+    <m:mrow>
+     <m:mi>f</m:mi><m:mrow><m:mo>(</m:mo>
+      <m:mi>t</m:mi>
+     <m:mo>)</m:mo></m:mrow>
+    </m:mrow>
+   </m:mstyle><m:mo>.</m:mo>
+  </m:mrow>
+ </m:semantics>
+</m:math>
+
+	</equation>
+The function <emphasis>F(x)</emphasis> is called <term>the distribution function</term> (sometimes <term>cumulative distribution function</term>) of the discrete-type random variable <emphasis>X</emphasis>.
+
+</meaning>
+	</definition>
+<para id="para_13">	  
+Several properties of a distribution function  <emphasis>F(x)</emphasis> can be listed as a consequence of the fact that probability must be a value between 0 and 1, inclusive:
+</para>
+          <list id="list_3">
+
+	    <item>
+<m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mn>0</m:mn><m:mo>≤</m:mo><m:mi>F</m:mi><m:mo stretchy="false">(</m:mo><m:mi>x</m:mi><m:mo stretchy="false">)</m:mo><m:mo>≤</m:mo><m:mn>1</m:mn>
+  </m:mrow>
+</m:semantics>
+</m:math>
+ because <emphasis>F(x)</emphasis> is a probability,
+            </item> 
+	    <item>
+<emphasis>F(x)</emphasis> is a nondecreasing function of <emphasis>x</emphasis>,
+            </item> 
+	    <item>
+<m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mi>F</m:mi><m:mrow><m:mo>(</m:mo>
+    <m:mi>y</m:mi>
+   <m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>1</m:mn>
+  </m:mrow>
+ </m:semantics>
+</m:math>
+, where <emphasis>y</emphasis> is any value greater than or equal to the largest value in <emphasis>R</emphasis>; and <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mi>F</m:mi><m:mrow><m:mo>(</m:mo>
+    <m:mi>z</m:mi>
+   <m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>0</m:mn>
+  </m:mrow>
+ </m:semantics>
+</m:math>
+, where <emphasis>z</emphasis> is any value less than the smallest value in <emphasis>R</emphasis>;
+            </item>
+	    <item>
+If <emphasis>X</emphasis> is a random variable of the discrete type, then <emphasis>F(x)</emphasis> is a step function, and the height at a step at <emphasis>x</emphasis>, <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mi>x</m:mi><m:mo>∈</m:mo><m:mi>R</m:mi>
+  </m:mrow>
+</m:semantics>
+</m:math>, equals the probability <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mi>P</m:mi><m:mrow><m:mo>(</m:mo>
+    <m:mrow>
+     <m:mi>X</m:mi><m:mo>=</m:mo><m:mi>x</m:mi>
+    </m:mrow>
+   <m:mo>)</m:mo></m:mrow>
+  </m:mrow>
+ </m:semantics>
+</m:math>
+. 
+          </item>
+	  </list>
+<note type="Note" id="idp10910272"><label>Note</label>
+It is clear that the probability distribution associated with the random variable <emphasis>X</emphasis> can be described by either the distribution function <emphasis>F(x)</emphasis> or by the probability density function <emphasis>f(x)</emphasis>. The function used is a matter of convenience; in most instances, <emphasis>f(x)</emphasis> is easier to use than <emphasis>F(x)</emphasis>.
+</note>
+	  <figure id="fig_1"><title>
+Graphical representation of the relationship between p.d.f. and c.d.f.
+</title>
+	<media id="idp20169328" alt=""><image src="../../media/PDF_CDF.gif" mime-type="image/gif"/></media>
+	<caption>
+		<term>Area under p.d.f. curve to <emphasis>a</emphasis> equal to a value of c.d.f. curve at a point <emphasis>a</emphasis></term>.
+	    </caption>
+</figure>
+</section> 
+	<section id="sec_5">	
+	<definition id="def_4">
+	  <term>MATHEMATICAL EXPECTATION</term>
+	  <meaning id="idp21276128">
+If <emphasis>f(x)</emphasis> is the p.d.f. of the random variable <emphasis>X</emphasis> of the discrete type with space <emphasis>R</emphasis> and if the summation
+	<equation id="eq_2">
+<m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mstyle displaystyle="true">
+    <m:munder>
+     <m:mo>∑</m:mo>
+     <m:mi>R</m:mi>
+    </m:munder>
+    <m:mrow>
+     <m:mi>u</m:mi><m:mrow><m:mo>(</m:mo>
+      <m:mi>x</m:mi>
+     <m:mo>)</m:mo></m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo>
+      <m:mi>x</m:mi>
+     <m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mstyle displaystyle="true">
+      <m:munder>
+       <m:mo>∑</m:mo>
+       <m:mrow>
+        <m:mi>x</m:mi><m:mo>∈</m:mo><m:mi>R</m:mi>
+       </m:mrow>
+      </m:munder>
+      <m:mrow>
+       <m:mi>u</m:mi><m:mrow><m:mo>(</m:mo>
+        <m:mi>x</m:mi>
+       <m:mo>)</m:mo></m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo>
+        <m:mi>x</m:mi>
+       <m:mo>)</m:mo></m:mrow>
+      </m:mrow>
+     </m:mstyle>
+    </m:mrow>
+   </m:mstyle>
+  </m:mrow>
+ </m:semantics>
+</m:math>
+
+</equation>
+exists, then the sum is called <term>the mathematical expectation</term> or <term>the expected value</term> of the function <emphasis>u(X)</emphasis>, and it is denoted by <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mi>E</m:mi><m:mrow><m:mo>[</m:mo> <m:mrow>
+    <m:mi>u</m:mi><m:mrow><m:mo>(</m:mo>
+     <m:mi>X</m:mi>
+    <m:mo>)</m:mo></m:mrow>
+   </m:mrow> <m:mo>]</m:mo></m:mrow>
+  </m:mrow>
+ </m:semantics>
+</m:math>
+. That is, 
+	<equation id="eq_3">
+<m:math display="block">
+ <m:semantics>
+  <m:mrow>
+   <m:mi>E</m:mi><m:mrow><m:mo>[</m:mo> <m:mrow>
+    <m:mi>u</m:mi><m:mrow><m:mo>(</m:mo>
+     <m:mi>X</m:mi>
+    <m:mo>)</m:mo></m:mrow>
+   </m:mrow> <m:mo>]</m:mo></m:mrow><m:mo>=</m:mo><m:mstyle displaystyle="true">
+    <m:munder>
+     <m:mo>∑</m:mo>
+     <m:mi>R</m:mi>
+    </m:munder>
+    <m:mrow>
+     <m:mi>u</m:mi><m:mrow><m:mo>(</m:mo>
+      <m:mi>x</m:mi>
+     <m:mo>)</m:mo></m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo>
+      <m:mi>x</m:mi>
+     <m:mo>)</m:mo></m:mrow>
+    </m:mrow>
+   </m:mstyle><m:mo>.</m:mo>
+  </m:mrow>
+ </m:semantics>
+</m:math>
+
+</equation>
+We can think of the expected value <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mi>E</m:mi><m:mrow><m:mo>[</m:mo> <m:mrow>
+    <m:mi>u</m:mi><m:mrow><m:mo>(</m:mo>
+     <m:mi>X</m:mi>
+    <m:mo>)</m:mo></m:mrow>
+   </m:mrow> <m:mo>]</m:mo></m:mrow>
+  </m:mrow>
+ </m:semantics>
+</m:math>
+ as a weighted mean of <emphasis>u(x)</emphasis>, <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mi>x</m:mi><m:mo>∈</m:mo><m:mi>R</m:mi>
+  </m:mrow>
+</m:semantics>
+</m:math>, where the weights are the probabilities <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mi>f</m:mi><m:mrow><m:mo>(</m:mo>
+    <m:mi>x</m:mi>
+   <m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mi>P</m:mi><m:mrow><m:mo>(</m:mo>
+    <m:mrow>
+     <m:mi>X</m:mi><m:mo>=</m:mo><m:mi>x</m:mi>
+    </m:mrow>
+   <m:mo>)</m:mo></m:mrow>
+  </m:mrow>
+ </m:semantics>
+</m:math>
+.
+	  </meaning>
+	</definition>
+<note type="REMARK" id="idp8957808"><label>REMARK</label>The usual definition of the mathematical expectation of <emphasis>u(X)</emphasis> requires that the sum converges absolutely; that is, <m:math>
+		<m:semantics>
+			<m:mrow>
+				<m:mstyle displaystyle="true">
+					<m:munder>
+						<m:mo>∑</m:mo>
+						<m:mrow>
+							<m:mi>x</m:mi><m:mo>∈</m:mo><m:mi>R</m:mi>
+						</m:mrow>
+					</m:munder>
+					<m:mrow>
+						<m:mrow><m:mo>|</m:mo>
+							<m:mrow>
+								<m:mi>u</m:mi><m:mrow><m:mo>(</m:mo>
+									<m:mi>x</m:mi>
+									<m:mo>)</m:mo></m:mrow>
+							</m:mrow>
+							<m:mo>|</m:mo></m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo>
+							<m:mi>x</m:mi>
+							<m:mo>)</m:mo></m:mrow>
+					</m:mrow>
+				</m:mstyle>
+			</m:mrow>
+		</m:semantics>
+	</m:math>
+ exists. 
+</note>
+
+<para id="para_14">	  
+There is another important observation that must be made about consistency of this definition. Certainly, this function <emphasis>u(X)</emphasis> of the random variable <emphasis>X</emphasis> is itself a random variable, say <emphasis>Y</emphasis>. Suppose that we find the p.d.f. of <emphasis>Y</emphasis> to be <emphasis>g(y)</emphasis> on the support <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:msub>
+    <m:mi>R</m:mi>
+    <m:mn>1</m:mn>
+   </m:msub>
+   </m:mrow>
+</m:semantics>
+</m:math>
+. Then <emphasis>E(Y)</emphasis> is given by the summation <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mstyle displaystyle="true">
+    <m:munder>
+     <m:mo>∑</m:mo>
+     <m:mrow>
+      <m:mi>y</m:mi><m:mo>∈</m:mo><m:msub>
+       <m:mi>R</m:mi>
+       <m:mn>1</m:mn>
+      </m:msub>
+      
+     </m:mrow>
+    </m:munder>
+    <m:mrow>
+     <m:mi>y</m:mi><m:mi>g</m:mi><m:mrow><m:mo>(</m:mo>
+      <m:mi>y</m:mi>
+     <m:mo>)</m:mo></m:mrow>
+    </m:mrow>
+   </m:mstyle>
+  </m:mrow>
+ </m:semantics>
+</m:math>
+ </para>
+<para id="para_15">
+In general it is true that <m:math display="block">
+ <m:semantics>
+  <m:mrow>
+   <m:mstyle displaystyle="true">
+    <m:munder>
+     <m:mo>∑</m:mo>
+     <m:mi>R</m:mi>
+    </m:munder>
+    <m:mrow>
+     <m:mi>u</m:mi><m:mrow><m:mo>(</m:mo>
+      <m:mi>x</m:mi>
+     <m:mo>)</m:mo></m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo>
+      <m:mi>x</m:mi>
+     <m:mo>)</m:mo></m:mrow>
+    </m:mrow>
+   </m:mstyle><m:mo>=</m:mo><m:mstyle displaystyle="true">
+    <m:munder>
+     <m:mo>∑</m:mo>
+     <m:mrow>
+      <m:mi>y</m:mi><m:mo>∈</m:mo><m:msub>
+       <m:mi>R</m:mi>
+       <m:mn>1</m:mn>
+      </m:msub>
+      
+     </m:mrow>
+    </m:munder>
+    <m:mrow>
+     <m:mi>y</m:mi><m:mi>g</m:mi><m:mrow><m:mo>(</m:mo>
+      <m:mi>y</m:mi>
+     <m:mo>)</m:mo></m:mrow>
+    </m:mrow>
+   </m:mstyle><m:mo>;</m:mo>
+  </m:mrow>
+ </m:semantics>
+</m:math> that is, the same expectation is obtained by either method. 
+</para>
+	  <example id="ex_3">
+<para id="para_16">
+Let <emphasis>X</emphasis> be the random variable defined by the outcome of the cast of the die. Thus the p.d.f. of <emphasis>X</emphasis> is
+</para>
+<para id="para_17">
+<m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mi>f</m:mi><m:mrow><m:mo>(</m:mo>
+    <m:mi>x</m:mi>
+   <m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mfrac>
+    <m:mn>1</m:mn>
+    <m:mn>6</m:mn>
+   </m:mfrac>
+     </m:mrow>
+ </m:semantics>
+</m:math>, <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mi>x</m:mi><m:mo>=</m:mo><m:mn>1,2,3,4,5,6</m:mn>
+  </m:mrow>
+ </m:semantics>
+</m:math>.
+</para>
+<para id="para_18">
+In terms of the observed value <emphasis>x</emphasis>, the function is as follows
+</para>
+<para id="para_19">
+<m:math display="block">
+ <m:semantics>
+  <m:mrow>
+   <m:mi>u</m:mi><m:mrow><m:mo>(</m:mo>
+    <m:mi>x</m:mi>
+   <m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mrow><m:mo>{</m:mo> <m:mtable columnalign="left">
+    <m:mtr>
+     <m:mtd>
+      <m:mn>1,</m:mn><m:mi>x</m:mi><m:mo>=</m:mo><m:mn>1,2,3,</m:mn>
+     </m:mtd>
+    </m:mtr>
+    <m:mtr>
+     <m:mtd>
+      <m:mn>5,</m:mn><m:mi>x</m:mi><m:mo>=</m:mo><m:mn>4,5,</m:mn>
+     </m:mtd>
+    </m:mtr>
+    <m:mtr>
+     <m:mtd>
+      <m:mn>35,</m:mn><m:mi>x</m:mi><m:mo>=</m:mo><m:mn>6.</m:mn>
+     </m:mtd>
+    </m:mtr>
+   </m:mtable>
+    </m:mrow>
+  </m:mrow>
+ </m:semantics>
+</m:math>
+</para>
+<para id="para_20">
+The mathematical expectation is equal to
+</para>
+	<equation id="eq_4">
+<m:math display="block">
+ <m:semantics>
+  <m:mrow>
+   <m:mstyle displaystyle="true">
+    <m:munderover>
+     <m:mo>∑</m:mo>
+     <m:mrow>
+      <m:mi>x</m:mi><m:mo>=</m:mo><m:mn>1</m:mn>
+     </m:mrow>
+     <m:mn>6</m:mn>
+    </m:munderover>
+    <m:mrow>
+     <m:mi>u</m:mi><m:mrow><m:mo>(</m:mo>
+      <m:mi>x</m:mi>
+     <m:mo>)</m:mo></m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo>
+      <m:mi>x</m:mi>
+     <m:mo>)</m:mo></m:mrow>
+    </m:mrow>
+   </m:mstyle><m:mo>=</m:mo><m:mn>1</m:mn><m:mrow><m:mo>(</m:mo>
+    <m:mrow>
+     <m:mfrac>
+      <m:mn>1</m:mn>
+      <m:mn>6</m:mn>
+     </m:mfrac>
+     
+    </m:mrow>
+   <m:mo>)</m:mo></m:mrow><m:mo>+</m:mo><m:mn>1</m:mn><m:mrow><m:mo>(</m:mo>
+    <m:mrow>
+     <m:mfrac>
+      <m:mn>1</m:mn>
+      <m:mn>6</m:mn>
+     </m:mfrac>
+     
+    </m:mrow>
+   <m:mo>)</m:mo></m:mrow><m:mo>+</m:mo><m:mn>1</m:mn><m:mrow><m:mo>(</m:mo>
+    <m:mrow>
+     <m:mfrac>
+      <m:mn>1</m:mn>
+      <m:mn>6</m:mn>
+     </m:mfrac>
+     
+    </m:mrow>
+   <m:mo>)</m:mo></m:mrow><m:mo>+</m:mo><m:mn>5</m:mn><m:mrow><m:mo>(</m:mo>
+    <m:mrow>
+     <m:mfrac>
+      <m:mn>1</m:mn>
+      <m:mn>6</m:mn>
+     </m:mfrac>
+     
+    </m:mrow>
+   <m:mo>)</m:mo></m:mrow><m:mo>+</m:mo><m:mn>5</m:mn><m:mrow><m:mo>(</m:mo>
+    <m:mrow>
+     <m:mfrac>
+      <m:mn>1</m:mn>
+      <m:mn>6</m:mn>
+     </m:mfrac>
+     
+    </m:mrow>
+   <m:mo>)</m:mo></m:mrow><m:mo>+</m:mo><m:mn>35</m:mn><m:mrow><m:mo>(</m:mo>
+    <m:mrow>
+     <m:mfrac>
+      <m:mn>1</m:mn>
+      <m:mn>6</m:mn>
+     </m:mfrac>
+     
+    </m:mrow>
+   <m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>1</m:mn><m:mrow><m:mo>(</m:mo>
+    <m:mrow>
+     <m:mfrac>
+      <m:mn>3</m:mn>
+      <m:mn>6</m:mn>
+     </m:mfrac>
+     
+    </m:mrow>
+   <m:mo>)</m:mo></m:mrow><m:mo>+</m:mo><m:mn>5</m:mn><m:mrow><m:mo>(</m:mo>
+    <m:mrow>
+     <m:mfrac>
+      <m:mn>2</m:mn>
+      <m:mn>6</m:mn>
+     </m:mfrac>
+     
+    </m:mrow>
+   <m:mo>)</m:mo></m:mrow><m:mo>+</m:mo><m:mn>35</m:mn><m:mrow><m:mo>(</m:mo>
+    <m:mrow>
+     <m:mfrac>
+      <m:mn>1</m:mn>
+      <m:mn>6</m:mn>
+     </m:mfrac>
+     
+    </m:mrow>
+   <m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>8.</m:mn>
+  </m:mrow>
+ </m:semantics>
+</m:math>
+
+</equation>
+</example>
+
+	  <example id="ex_4">
+<para id="para_21">Let the random variable <emphasis>X</emphasis> have the p.d.f. <m:math>
+		<m:semantics>
+			<m:mrow>
+				<m:mi>f</m:mi><m:mrow><m:mo>(</m:mo>
+					<m:mi>x</m:mi>
+					<m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mfrac>
+					<m:mn>1</m:mn>
+					<m:mn>3</m:mn>
+				</m:mfrac>
+			</m:mrow>
+		</m:semantics>
+	</m:math>, <m:math>
+		<m:semantics>
+			<m:mrow>
+				<m:mi>x</m:mi><m:mo>∈</m:mo><m:mi>R</m:mi>
+			</m:mrow>
+		</m:semantics>
+	</m:math>, where <emphasis>R</emphasis> ={-1,0,1}. Let <m:math>
+		<m:semantics>
+			<m:mrow>
+				<m:mi>u</m:mi><m:mrow><m:mo>(</m:mo>
+					<m:mi>X</m:mi>
+					<m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:msup>
+					<m:mi>X</m:mi>
+					<m:mn>2</m:mn>
+				</m:msup>
+			</m:mrow>
+		</m:semantics>
+	</m:math>. Then 
+</para>
+	<equation id="eq_5">     
+<m:math display="block">
+ <m:semantics>
+  <m:mrow>
+   <m:mstyle displaystyle="true">
+    <m:munder>
+     <m:mo>∑</m:mo>
+     <m:mrow>
+      <m:mi>x</m:mi><m:mo>∈</m:mo><m:mi>R</m:mi>
+     </m:mrow>
+    </m:munder>
+    <m:mrow>
+     <m:msup>
+      <m:mi>x</m:mi>
+      <m:mn>2</m:mn>
+     </m:msup>
+     <m:mi>f</m:mi><m:mrow><m:mo>(</m:mo>
+      <m:mi>x</m:mi>
+     <m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:msup>
+      <m:mrow>
+       <m:mrow><m:mo>(</m:mo>
+        <m:mrow>
+         <m:mo>−</m:mo><m:mn>1</m:mn>
+        </m:mrow>
+       <m:mo>)</m:mo></m:mrow>
+      </m:mrow>
+      <m:mn>2</m:mn>
+     </m:msup>
+     <m:mrow><m:mo>(</m:mo>
+      <m:mrow>
+       <m:mfrac>
+        <m:mn>1</m:mn>
+        <m:mn>3</m:mn>
+       </m:mfrac>
+       
+      </m:mrow>
+     <m:mo>)</m:mo></m:mrow><m:mo>+</m:mo><m:msup>
+      <m:mrow>
+       <m:mrow><m:mo>(</m:mo>
+        <m:mn>0</m:mn>
+       <m:mo>)</m:mo></m:mrow>
+      </m:mrow>
+      <m:mn>2</m:mn>
+     </m:msup>
+     <m:mrow><m:mo>(</m:mo>
+      <m:mrow>
+       <m:mfrac>
+        <m:mn>1</m:mn>
+        <m:mn>3</m:mn>
+       </m:mfrac>
+       
+      </m:mrow>
+     <m:mo>)</m:mo></m:mrow><m:mo>+</m:mo><m:msup>
+      <m:mrow>
+       <m:mrow><m:mo>(</m:mo>
+        <m:mn>1</m:mn>
+       <m:mo>)</m:mo></m:mrow>
+      </m:mrow>
+      <m:mn>2</m:mn>
+     </m:msup>
+     <m:mrow><m:mo>(</m:mo>
+      <m:mrow>
+       <m:mfrac>
+        <m:mn>1</m:mn>
+        <m:mn>3</m:mn>
+       </m:mfrac>
+       
+      </m:mrow>
+     <m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mfrac>
+      <m:mn>2</m:mn>
+      <m:mn>3</m:mn>
+     </m:mfrac>
+     <m:mo>.</m:mo>
+    </m:mrow>
+   </m:mstyle>
+  </m:mrow>
+ </m:semantics>
+</m:math>
+</equation>    
+<para id="para_22">
+However, the support of random variable <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mi>Y</m:mi><m:mo>=</m:mo><m:msup>
+    <m:mi>X</m:mi>
+    <m:mn>2</m:mn>
+   </m:msup>
+     </m:mrow>
+ </m:semantics>
+</m:math> is <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:msub>
+    <m:mi>R</m:mi>
+    <m:mn>1</m:mn>
+   </m:msub>
+   <m:mo>=</m:mo><m:mrow><m:mo>(</m:mo>
+    <m:mrow>
+     <m:mn>0,1</m:mn>
+    </m:mrow>
+   <m:mo>)</m:mo></m:mrow>
+  </m:mrow>
+ </m:semantics>
+</m:math> and 
+</para>
+<para id="para_23">
+<m:math display="block">
+ <m:semantics>
+  <m:mtable columnalign="left">
+   <m:mtr>
+    <m:mtd>
+     <m:mi>P</m:mi><m:mrow><m:mo>(</m:mo>
+      <m:mrow>
+       <m:mi>Y</m:mi><m:mo>=</m:mo><m:mn>0</m:mn>
+      </m:mrow>
+     <m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mi>P</m:mi><m:mrow><m:mo>(</m:mo>
+      <m:mrow>
+       <m:mi>X</m:mi><m:mo>=</m:mo><m:mn>0</m:mn>
+      </m:mrow>
+     <m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mfrac>
+      <m:mn>1</m:mn>
+      <m:mn>3</m:mn>
+     </m:mfrac>
+     
+    </m:mtd>
+   </m:mtr>
+   <m:mtr>
+    <m:mtd>
+     <m:mi>P</m:mi><m:mrow><m:mo>(</m:mo>
+      <m:mrow>
+       <m:mi>Y</m:mi><m:mo>=</m:mo><m:mn>1</m:mn>
+      </m:mrow>
+     <m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mi>P</m:mi><m:mrow><m:mo>(</m:mo>
+      <m:mrow>
+       <m:mi>X</m:mi><m:mo>=</m:mo><m:mo>−</m:mo><m:mn>1</m:mn>
+      </m:mrow>
+     <m:mo>)</m:mo></m:mrow><m:mo>+</m:mo><m:mi>P</m:mi><m:mrow><m:mo>(</m:mo>
+      <m:mrow>
+       <m:mi>X</m:mi><m:mo>=</m:mo><m:mn>1</m:mn>
+      </m:mrow>
+     <m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mfrac>
+      <m:mn>1</m:mn>
+      <m:mn>3</m:mn>
+     </m:mfrac>
+     <m:mo>+</m:mo><m:mfrac>
+      <m:mn>1</m:mn>
+      <m:mn>3</m:mn>
+     </m:mfrac>
+     <m:mo>=</m:mo><m:mfrac>
+      <m:mn>2</m:mn>
+      <m:mn>3</m:mn>
+     </m:mfrac>
+     <m:mo>.</m:mo>
+    </m:mtd>
+   </m:mtr>
+  </m:mtable>
+   </m:semantics>
+</m:math>
+
+</para>
+<para id="para_24">
+That is, <m:math display="block">
+ <m:semantics>
+  <m:mrow>
+   <m:mi>g</m:mi><m:mrow><m:mo>(</m:mo>
+    <m:mi>y</m:mi>
+   <m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mrow><m:mo>{</m:mo> <m:mtable columnalign="left">
+    <m:mtr>
+     <m:mtd>
+      <m:mfrac>
+       <m:mn>1</m:mn>
+       <m:mn>3</m:mn>
+      </m:mfrac>
+      <m:mo>,</m:mo><m:mi>y</m:mi><m:mo>=</m:mo><m:mn>0,</m:mn>
+     </m:mtd>
+    </m:mtr>
+    <m:mtr>
+     <m:mtd>
+      <m:mfrac>
+       <m:mn>2</m:mn>
+       <m:mn>3</m:mn>
+      </m:mfrac>
+      <m:mo>,</m:mo><m:mi>y</m:mi><m:mo>=</m:mo><m:mn>1</m:mn><m:mo>;</m:mo>
+     </m:mtd>
+    </m:mtr>
+   </m:mtable>
+    </m:mrow>
+  </m:mrow>
+ </m:semantics>
+</m:math> and <m:math>
+ <m:semantics>
+  <m:msub>
+   <m:mi>R</m:mi>
+   <m:mn>1</m:mn>
+  </m:msub>
+  <m:mo>=</m:mo><m:mrow><m:mo>(</m:mo>
+   <m:mrow>
+    <m:mn>0,1</m:mn>
+   </m:mrow>
+  <m:mo>)</m:mo></m:mrow>
+ </m:semantics>
+</m:math>. Hence
+</para>
+<para id="para_25">
+<m:math>
+ <m:semantics>
+  <m:mstyle displaystyle="true">
+   <m:munder>
+    <m:mo>∑</m:mo>
+    <m:mrow>
+     <m:mi>y</m:mi><m:mo>∈</m:mo><m:msub>
+      <m:mi>R</m:mi>
+      <m:mn>1</m:mn>
+     </m:msub>
+     
+    </m:mrow>
+   </m:munder>
+   <m:mrow>
+    <m:mi>y</m:mi><m:mi>g</m:mi><m:mrow><m:mo>(</m:mo>
+     <m:mi>y</m:mi>
+    <m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>0</m:mn><m:mrow><m:mo>(</m:mo>
+     <m:mrow>
+      <m:mfrac>
+       <m:mn>1</m:mn>
+       <m:mn>3</m:mn>
+      </m:mfrac>
+      
+     </m:mrow>
+    <m:mo>)</m:mo></m:mrow><m:mo>+</m:mo><m:mn>1</m:mn><m:mrow><m:mo>(</m:mo>
+     <m:mrow>
+      <m:mfrac>
+       <m:mn>2</m:mn>
+       <m:mn>3</m:mn>
+      </m:mfrac>
+      
+     </m:mrow>
+    <m:mo>)</m:mo></m:mrow>
+   </m:mrow>
+  </m:mstyle><m:mo>=</m:mo><m:mfrac>
+   <m:mn>2</m:mn>
+   <m:mn>3</m:mn>
+  </m:mfrac>
+  <m:mo>,</m:mo>
+ </m:semantics>
+</m:math>, which illustrates the preceding observation.
+</para>
+</example>
+
+	<rule type="theorem" id="ruleexcode">
+	  
+	  <statement id="idp13233696">
+<para id="para_26">
+When it exists, mathematical expectation <emphasis>E</emphasis> satisfies the following properties:
+</para>
+	  <list id="list_4" list-type="enumerated">
+
+
+	    <item>
+If <emphasis>c</emphasis> is a constant, <emphasis>E</emphasis>(<emphasis>c</emphasis>)=<emphasis>c</emphasis>,
+            </item> 
+	    <item>
+If <emphasis>c</emphasis> is a constant and <emphasis>u</emphasis> is a function, <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mi>E</m:mi><m:mrow><m:mo>[</m:mo> <m:mrow>
+    <m:mi>c</m:mi><m:mi>u</m:mi><m:mrow><m:mo>(</m:mo>
+     <m:mi>X</m:mi>
+    <m:mo>)</m:mo></m:mrow>
+   </m:mrow> <m:mo>]</m:mo></m:mrow><m:mo>=</m:mo><m:mi>c</m:mi><m:mi>E</m:mi><m:mrow><m:mo>[</m:mo> <m:mrow>
+    <m:mi>u</m:mi><m:mrow><m:mo>(</m:mo>
+     <m:mi>X</m:mi>
+    <m:mo>)</m:mo></m:mrow>
+   </m:mrow> <m:mo>]</m:mo></m:mrow>
+  </m:mrow>
+ </m:semantics>
+</m:math>,
+
+            </item> 
+	    <item>
+If <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:msub>
+    <m:mi>c</m:mi>
+    <m:mn>1</m:mn>
+   </m:msub>
+     </m:mrow>
+ </m:semantics>
+</m:math> and <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:msub>
+    <m:mi>c</m:mi>
+    <m:mn>2</m:mn>
+   </m:msub>
+     </m:mrow>
+ </m:semantics>
+</m:math> are constants and <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:msub>
+    <m:mi>u</m:mi>
+    <m:mn>1</m:mn>
+   </m:msub>
+     </m:mrow>
+ </m:semantics>
+</m:math> and <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:msub>
+    <m:mi>u</m:mi>
+    <m:mn>2</m:mn>
+   </m:msub>
+     </m:mrow>
+ </m:semantics>
+</m:math> are functions, then 
+
+<m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mi>E</m:mi><m:mrow><m:mo>[</m:mo> <m:mrow>
+    <m:msub>
+     <m:mi>c</m:mi>
+     <m:mn>1</m:mn>
+    </m:msub>
+    <m:msub>
+     <m:mi>u</m:mi>
+     <m:mn>1</m:mn>
+    </m:msub>
+    <m:mrow><m:mo>(</m:mo>
+     <m:mi>X</m:mi>
+    <m:mo>)</m:mo></m:mrow><m:mo>+</m:mo><m:msub>
+     <m:mi>c</m:mi>
+     <m:mn>2</m:mn>
+    </m:msub>
+    <m:msub>
+     <m:mi>u</m:mi>
+     <m:mn>2</m:mn>
+    </m:msub>
+    <m:mrow><m:mo>(</m:mo>
+     <m:mi>X</m:mi>
+    <m:mo>)</m:mo></m:mrow>
+   </m:mrow> <m:mo>]</m:mo></m:mrow><m:mo>=</m:mo><m:msub>
+    <m:mi>c</m:mi>
+    <m:mn>1</m:mn>
+   </m:msub>
+   <m:mi>E</m:mi><m:mrow><m:mo>[</m:mo> <m:mrow>
+    <m:msub>
+     <m:mi>u</m:mi>
+     <m:mn>1</m:mn>
+    </m:msub>
+    <m:mrow><m:mo>(</m:mo>
+     <m:mi>X</m:mi>
+    <m:mo>)</m:mo></m:mrow>
+   </m:mrow> <m:mo>]</m:mo></m:mrow><m:mo>+</m:mo><m:msub>
+    <m:mi>c</m:mi>
+    <m:mn>2</m:mn>
+   </m:msub>
+   <m:mi>E</m:mi><m:mrow><m:mo>[</m:mo> <m:mrow>
+    <m:msub>
+     <m:mi>u</m:mi>
+     <m:mn>2</m:mn>
+    </m:msub>
+    <m:mrow><m:mo>(</m:mo>
+     <m:mi>X</m:mi>
+    <m:mo>)</m:mo></m:mrow>
+   </m:mrow> <m:mo>]</m:mo></m:mrow>
+  </m:mrow>
+ </m:semantics>
+</m:math>
+
+
+
+
+
+            </item>
+
+	  </list>
+
+	  </statement>
+	  <proof id="idp11468416">
+<para id="para_27">
+First, we have for the proof of (1) that
+	    </para>
+<para id="para_28">
+<m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mi>E</m:mi><m:mrow><m:mo>(</m:mo>
+    <m:mi>c</m:mi>
+   <m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mstyle displaystyle="true">
+    <m:munder>
+     <m:mo>∑</m:mo>
+     <m:mi>R</m:mi>
+    </m:munder>
+    <m:mrow>
+     <m:mi>c</m:mi><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo>
+      <m:mi>x</m:mi>
+     <m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mi>c</m:mi><m:mstyle displaystyle="true">
+      <m:munder>
+       <m:mo>∑</m:mo>
+       <m:mi>R</m:mi>
+      </m:munder>
+      <m:mrow>
+       <m:mi>f</m:mi><m:mrow><m:mo>(</m:mo>
+        <m:mi>x</m:mi>
+       <m:mo>)</m:mo></m:mrow>
+      </m:mrow>
+     </m:mstyle>
+    </m:mrow>
+   </m:mstyle><m:mo>=</m:mo><m:mi>c</m:mi>
+  </m:mrow>
+ </m:semantics>
+</m:math>
+
+</para>
+<para id="para_29">
+because <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mstyle displaystyle="true">
+    <m:munder>
+     <m:mo>∑</m:mo>
+     <m:mi>R</m:mi>
+    </m:munder>
+    <m:mrow>
+     <m:mi>f</m:mi><m:mrow><m:mo>(</m:mo>
+      <m:mi>x</m:mi>
+     <m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>1.</m:mn>
+    </m:mrow>
+   </m:mstyle>
+  </m:mrow>
+ </m:semantics>
+</m:math>
+</para>
+	  </proof>
+
+
+	  <proof id="idp12491824">
+<para id="para_30">
+Next, to prove (2), we see that 
+</para>
+<para id="para_31">
+<m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mi>E</m:mi><m:mrow><m:mo>[</m:mo> <m:mrow>
+    <m:mi>c</m:mi><m:mi>u</m:mi><m:mrow><m:mo>(</m:mo>
+     <m:mi>X</m:mi>
+    <m:mo>)</m:mo></m:mrow>
+   </m:mrow> <m:mo>]</m:mo></m:mrow><m:mo>=</m:mo><m:mstyle displaystyle="true">
+    <m:munder>
+     <m:mo>∑</m:mo>
+     <m:mi>R</m:mi>
+    </m:munder>
+    <m:mrow>
+     <m:mi>c</m:mi><m:mi>u</m:mi><m:mrow><m:mo>(</m:mo>
+      <m:mi>x</m:mi>
+     <m:mo>)</m:mo></m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo>
+      <m:mi>x</m:mi>
+     <m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mi>c</m:mi><m:mstyle displaystyle="true">
+      <m:munder>
+       <m:mo>∑</m:mo>
+       <m:mi>R</m:mi>
+      </m:munder>
+      <m:mrow>
+       <m:mi>u</m:mi><m:mrow><m:mo>(</m:mo>
+        <m:mi>x</m:mi>
+       <m:mo>)</m:mo></m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo>
+        <m:mi>x</m:mi>
+       <m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mi>c</m:mi><m:mi>E</m:mi><m:mrow><m:mo>[</m:mo> <m:mrow>
+        <m:mi>u</m:mi><m:mrow><m:mo>(</m:mo>
+         <m:mi>X</m:mi>
+        <m:mo>)</m:mo></m:mrow>
+       </m:mrow> <m:mo>]</m:mo></m:mrow>
+      </m:mrow>
+     </m:mstyle>
+    </m:mrow>
+   </m:mstyle><m:mo>.</m:mo>
+  </m:mrow>
+ </m:semantics>
+</m:math>
+
+</para>
+         </proof>
+
+	  <proof id="idp14571808">
+<para id="para_32">
+Finally, the proof of (3) is given by
+</para>
+<para id="para_33">
+<m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mi>E</m:mi><m:mrow><m:mo>[</m:mo> <m:mrow>
+    <m:msub>
+     <m:mi>c</m:mi>
+     <m:mn>1</m:mn>
+    </m:msub>
+    <m:msub>
+     <m:mi>u</m:mi>
+     <m:mn>1</m:mn>
+    </m:msub>
+    <m:mrow><m:mo>(</m:mo>
+     <m:mi>X</m:mi>
+    <m:mo>)</m:mo></m:mrow><m:mo>+</m:mo><m:msub>
+     <m:mi>c</m:mi>
+     <m:mn>2</m:mn>
+    </m:msub>
+    <m:msub>
+     <m:mi>u</m:mi>
+     <m:mn>2</m:mn>
+    </m:msub>
+    <m:mrow><m:mo>(</m:mo>
+     <m:mi>X</m:mi>
+    <m:mo>)</m:mo></m:mrow>
+   </m:mrow> <m:mo>]</m:mo></m:mrow><m:mo>=</m:mo><m:mstyle displaystyle="true">
+    <m:munder>
+     <m:mo>∑</m:mo>
+     <m:mi>R</m:mi>
+    </m:munder>
+    <m:mrow>
+     <m:mrow><m:mo>[</m:mo> <m:mrow>
+      <m:msub>
+       <m:mi>c</m:mi>
+       <m:mn>1</m:mn>
+      </m:msub>
+      <m:msub>
+       <m:mi>u</m:mi>
+       <m:mn>1</m:mn>
+      </m:msub>
+      <m:mrow><m:mo>(</m:mo>
+       <m:mi>x</m:mi>
+      <m:mo>)</m:mo></m:mrow><m:mo>+</m:mo><m:msub>
+       <m:mi>c</m:mi>
+       <m:mn>2</m:mn>
+      </m:msub>
+      <m:msub>
+       <m:mi>u</m:mi>
+       <m:mn>2</m:mn>
+      </m:msub>
+      <m:mrow><m:mo>(</m:mo>
+       <m:mi>x</m:mi>
+      <m:mo>)</m:mo></m:mrow>
+     </m:mrow> <m:mo>]</m:mo></m:mrow>
+    </m:mrow>
+   </m:mstyle><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo>
+    <m:mi>x</m:mi>
+   <m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mstyle displaystyle="true">
+    <m:munder>
+     <m:mo>∑</m:mo>
+     <m:mi>R</m:mi>
+    </m:munder>
+    <m:mrow>
+     <m:msub>
+      <m:mi>c</m:mi>
+      <m:mn>1</m:mn>
+     </m:msub>
+     <m:msub>
+      <m:mi>u</m:mi>
+      <m:mn>1</m:mn>
+     </m:msub>
+     <m:mrow><m:mo>(</m:mo>
+      <m:mi>x</m:mi>
+     <m:mo>)</m:mo></m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo>
+      <m:mi>x</m:mi>
+     <m:mo>)</m:mo></m:mrow><m:mo>+</m:mo><m:mstyle displaystyle="true">
+      <m:munder>
+       <m:mo>∑</m:mo>
+       <m:mi>R</m:mi>
+      </m:munder>
+      <m:mrow>
+       <m:msub>
+        <m:mi>c</m:mi>
+        <m:mn>2</m:mn>
+       </m:msub>
+       <m:msub>
+        <m:mi>u</m:mi>
+        <m:mn>2</m:mn>
+       </m:msub>
+       <m:mrow><m:mo>(</m:mo>
+        <m:mi>x</m:mi>
+       <m:mo>)</m:mo></m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo>
+        <m:mi>x</m:mi>
+       <m:mo>)</m:mo></m:mrow>
+      </m:mrow>
+     </m:mstyle>
+    </m:mrow>
+   </m:mstyle><m:mo>.</m:mo>
+  </m:mrow>
+ </m:semantics>
+</m:math>
+</para>
+<para id="para_34">
+By applying (2), we obtain
+</para>
+<para id="para_35">
+<m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mi>E</m:mi><m:mrow><m:mo>[</m:mo> <m:mrow>
+    <m:msub>
+     <m:mi>c</m:mi>
+     <m:mn>1</m:mn>
+    </m:msub>
+    <m:msub>
+     <m:mi>u</m:mi>
+     <m:mn>1</m:mn>
+    </m:msub>
+    <m:mrow><m:mo>(</m:mo>
+     <m:mi>X</m:mi>
+    <m:mo>)</m:mo></m:mrow><m:mo>+</m:mo><m:msub>
+     <m:mi>c</m:mi>
+     <m:mn>2</m:mn>
+    </m:msub>
+    <m:msub>
+     <m:mi>u</m:mi>
+     <m:mn>2</m:mn>
+    </m:msub>
+    <m:mrow><m:mo>(</m:mo>
+     <m:mi>X</m:mi>
+    <m:mo>)</m:mo></m:mrow>
+   </m:mrow> <m:mo>]</m:mo></m:mrow><m:mo>=</m:mo><m:msub>
+    <m:mi>c</m:mi>
+    <m:mn>1</m:mn>
+   </m:msub>
+   <m:mi>E</m:mi><m:mrow><m:mo>[</m:mo> <m:mrow>
+    <m:msub>
+     <m:mi>u</m:mi>
+     <m:mn>1</m:mn>
+    </m:msub>
+    <m:mrow><m:mo>(</m:mo>
+     <m:mi>x</m:mi>
+    <m:mo>)</m:mo></m:mrow>
+   </m:mrow> <m:mo>]</m:mo></m:mrow><m:mo>+</m:mo><m:msub>
+    <m:mi>c</m:mi>
+    <m:mn>2</m:mn>
+   </m:msub>
+   <m:mi>E</m:mi><m:mrow><m:mo>[</m:mo> <m:mrow>
+    <m:msub>
+     <m:mi>u</m:mi>
+     <m:mn>2</m:mn>
+    </m:msub>
+    <m:mrow><m:mo>(</m:mo>
+     <m:mi>x</m:mi>
+    <m:mo>)</m:mo></m:mrow>
+   </m:mrow> <m:mo>]</m:mo></m:mrow><m:mo>.</m:mo>
+  </m:mrow>
+ </m:semantics>
+</m:math>
+</para>
+<para id="para_36">
+Property (3) can be extended to more than two terms by mathematical induction;
+That is, we have
+</para>
+<para id="para_37">
+3'. <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mi>E</m:mi><m:mrow><m:mo>[</m:mo> <m:mrow>
+    <m:mstyle displaystyle="true">
+     <m:munderover>
+      <m:mo>∑</m:mo>
+      <m:mrow>
+       <m:mi>i</m:mi><m:mo>=</m:mo><m:mn>1</m:mn>
+      </m:mrow>
+      <m:mi>k</m:mi>
+     </m:munderover>
+     <m:mrow>
+      <m:msub>
+       <m:mi>c</m:mi>
+       <m:mi>i</m:mi>
+      </m:msub>
+      <m:msub>
+       <m:mi>u</m:mi>
+       <m:mi>i</m:mi>
+      </m:msub>
+      <m:mrow><m:mo>(</m:mo>
+       <m:mi>X</m:mi>
+      <m:mo>)</m:mo></m:mrow>
+     </m:mrow>
+    </m:mstyle>
+   </m:mrow> <m:mo>]</m:mo></m:mrow><m:mo>=</m:mo><m:mstyle displaystyle="true">
+    <m:munderover>
+     <m:mo>∑</m:mo>
+     <m:mrow>
+      <m:mi>i</m:mi><m:mo>=</m:mo><m:mn>1</m:mn>
+     </m:mrow>
+     <m:mi>k</m:mi>
+    </m:munderover>
+    <m:mrow>
+     <m:msub>
+      <m:mi>c</m:mi>
+      <m:mi>i</m:mi>
+     </m:msub>
+     <m:mi>E</m:mi><m:mrow><m:mo>[</m:mo> <m:mrow>
+      <m:msub>
+       <m:mi>u</m:mi>
+       <m:mi>i</m:mi>
+      </m:msub>
+      <m:mrow><m:mo>(</m:mo>
+       <m:mi>X</m:mi>
+      <m:mo>)</m:mo></m:mrow>
+     </m:mrow> <m:mo>]</m:mo></m:mrow>
+    </m:mrow>
+   </m:mstyle><m:mo>.</m:mo>
+  </m:mrow>
+ </m:semantics>
+</m:math>
+</para> 
+        </proof>
+	</rule> 
+<para id="para_38">
+Because of property (3’), mathematical expectation <emphasis>E</emphasis> is called a <term>linear</term> or <term>distributive operator</term>. 
+</para>
+	  <example id="ex_5">
+<para id="para_39">
+Let <emphasis>X</emphasis> have the p.d.f. 
+<m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mi>f</m:mi><m:mrow><m:mo>(</m:mo>
+    <m:mi>x</m:mi>
+   <m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mfrac>
+    <m:mi>x</m:mi>
+    <m:mrow>
+     <m:mn>10</m:mn>
+    </m:mrow>
+   </m:mfrac>
+   
+  </m:mrow>
+
+ </m:semantics>
+</m:math>
+ , <emphasis>x</emphasis>=1,2,3,4.</para>
+<para id="para_40">
+then
+</para>
+<para id="para_41">
+<m:math>
+ <m:semantics>
+  <m:mtable columnalign="left">
+   <m:mtr>
+    <m:mtd>
+     <m:mi>E</m:mi><m:mrow><m:mo>(</m:mo>
+      <m:mi>X</m:mi>
+     <m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mstyle displaystyle="true">
+      <m:munderover>
+       <m:mo>∑</m:mo>
+       <m:mrow>
+        <m:mi>x</m:mi><m:mo>=</m:mo><m:mn>1</m:mn>
+       </m:mrow>
+       <m:mn>4</m:mn>
+      </m:munderover>
+      <m:mrow>
+       <m:mi>x</m:mi><m:mrow><m:mo>(</m:mo>
+        <m:mrow>
+         <m:mfrac>
+          <m:mi>x</m:mi>
+          <m:mrow>
+           <m:mn>10</m:mn>
+          </m:mrow>
+         </m:mfrac>
+         
+        </m:mrow>
+       <m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>1</m:mn>
+      </m:mrow>
+     </m:mstyle><m:mrow><m:mo>(</m:mo>
+      <m:mrow>
+       <m:mfrac>
+        <m:mn>1</m:mn>
+        <m:mrow>
+         <m:mn>10</m:mn>
+        </m:mrow>
+       </m:mfrac>
+       
+      </m:mrow>
+     <m:mo>)</m:mo></m:mrow><m:mo>+</m:mo><m:mn>2</m:mn><m:mrow><m:mo>(</m:mo>
+      <m:mrow>
+       <m:mfrac>
+        <m:mn>2</m:mn>
+        <m:mrow>
+         <m:mn>10</m:mn>
+        </m:mrow>
+       </m:mfrac>
+       
+      </m:mrow>
+     <m:mo>)</m:mo></m:mrow><m:mo>+</m:mo><m:mn>3</m:mn><m:mrow><m:mo>(</m:mo>
+      <m:mrow>
+       <m:mfrac>
+        <m:mn>3</m:mn>
+        <m:mrow>
+         <m:mn>10</m:mn>
+        </m:mrow>
+       </m:mfrac>
+       
+      </m:mrow>
+     <m:mo>)</m:mo></m:mrow><m:mo>+</m:mo><m:mn>4</m:mn><m:mrow><m:mo>(</m:mo>
+      <m:mrow>
+       <m:mfrac>
+        <m:mn>4</m:mn>
+        <m:mrow>
+         <m:mn>10</m:mn>
+        </m:mrow>
+       </m:mfrac>
+       
+      </m:mrow>
+     <m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>3</m:mn>
+    </m:mtd>
+   </m:mtr>
+   <m:mtr>
+    <m:mtd>
+     <m:mi>E</m:mi><m:mrow><m:mo>(</m:mo>
+      <m:mrow>
+       <m:msup>
+        <m:mi>X</m:mi>
+        <m:mn>2</m:mn>
+       </m:msup>
+       
+      </m:mrow>
+     <m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mstyle displaystyle="true">
+      <m:munderover>
+       <m:mo>∑</m:mo>
+       <m:mrow>
+        <m:mi>x</m:mi><m:mo>=</m:mo><m:mn>1</m:mn>
+       </m:mrow>
+       <m:mn>4</m:mn>
+      </m:munderover>
+      <m:mrow>
+       <m:msup>
+        <m:mi>x</m:mi>
+        <m:mn>2</m:mn>
+       </m:msup>
+       <m:mrow><m:mo>(</m:mo>
+        <m:mrow>
+         <m:mfrac>
+          <m:mi>x</m:mi>
+          <m:mrow>
+           <m:mn>10</m:mn>
+          </m:mrow>
+         </m:mfrac>
+         
+        </m:mrow>
+       <m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:msup>
+        <m:mn>1</m:mn>
+        <m:mn>2</m:mn>
+       </m:msup>
+       
+      </m:mrow>
+     </m:mstyle><m:mrow><m:mo>(</m:mo>
+      <m:mrow>
+       <m:mfrac>
+        <m:mn>1</m:mn>
+        <m:mrow>
+         <m:mn>10</m:mn>
+        </m:mrow>
+       </m:mfrac>
+       
+      </m:mrow>
+     <m:mo>)</m:mo></m:mrow><m:mo>+</m:mo><m:msup>
+      <m:mn>2</m:mn>
+      <m:mn>2</m:mn>
+     </m:msup>
+     <m:mrow><m:mo>(</m:mo>
+      <m:mrow>
+       <m:mfrac>
+        <m:mn>2</m:mn>
+        <m:mrow>
+         <m:mn>10</m:mn>
+        </m:mrow>
+       </m:mfrac>
+       
+      </m:mrow>
+     <m:mo>)</m:mo></m:mrow><m:mo>+</m:mo><m:msup>
+      <m:mn>3</m:mn>
+      <m:mn>2</m:mn>
+     </m:msup>
+     <m:mrow><m:mo>(</m:mo>
+      <m:mrow>
+       <m:mfrac>
+        <m:mn>3</m:mn>
+        <m:mrow>
+         <m:mn>10</m:mn>
+        </m:mrow>
+       </m:mfrac>
+       
+      </m:mrow>
+     <m:mo>)</m:mo></m:mrow><m:mo>+</m:mo><m:msup>
+      <m:mn>4</m:mn>
+      <m:mn>2</m:mn>
+     </m:msup>
+     <m:mrow><m:mo>(</m:mo>
+      <m:mrow>
+       <m:mfrac>
+        <m:mn>4</m:mn>
+        <m:mrow>
+         <m:mn>10</m:mn>
+        </m:mrow>
+       </m:mfrac>
+       
+      </m:mrow>
+     <m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>10,</m:mn>
+    </m:mtd>
+   </m:mtr>
+  </m:mtable>
+   </m:semantics>
+</m:math>
+
+</para>
+<para id="para_42">
+and
+</para>
+<para id="para_43">
+<m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mi>E</m:mi><m:mrow><m:mo>[</m:mo> <m:mrow>
+    <m:mi>X</m:mi><m:mrow><m:mo>(</m:mo>
+     <m:mrow>
+      <m:mn>5</m:mn><m:mo>−</m:mo><m:mi>X</m:mi>
+     </m:mrow>
+    <m:mo>)</m:mo></m:mrow>
+   </m:mrow> <m:mo>]</m:mo></m:mrow><m:mo>=</m:mo><m:mn>5</m:mn><m:mi>E</m:mi><m:mrow><m:mo>(</m:mo>
+    <m:mi>X</m:mi>
+   <m:mo>)</m:mo></m:mrow><m:mo>−</m:mo><m:mi>E</m:mi><m:mrow><m:mo>(</m:mo>
+    <m:mrow>
+     <m:msup>
+      <m:mi>X</m:mi>
+      <m:mn>2</m:mn>
+     </m:msup>
+     
+    </m:mrow>
+   <m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mrow><m:mo>(</m:mo>
+    <m:mn>5</m:mn>
+   <m:mo>)</m:mo></m:mrow><m:mrow><m:mo>(</m:mo>
+    <m:mn>3</m:mn>
+   <m:mo>)</m:mo></m:mrow><m:mo>−</m:mo><m:mn>10</m:mn><m:mo>=</m:mo><m:mn>5.</m:mn>
+  </m:mrow>
+
+ </m:semantics>
+</m:math>
+
+</para>
+
+</example>
+</section> 
+       </section> 
+	    </section> 
+	<section id="sec_11">
+<note type="see also" id="idp10549440"><label>See also</label>
+<link document="m13122" target-id="sec_1">the MEAN, VARIANCE, and STANDARD DEVIATION</link> 
+</note>
+
+         </section> 
+  </content>
+  
+</document>

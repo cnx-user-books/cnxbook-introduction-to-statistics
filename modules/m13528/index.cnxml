@@ -1,0 +1,2186 @@
+<document xmlns="http://cnx.rice.edu/cnxml" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:md="http://cnx.rice.edu/mdml">
+  <title>BEST CRITICAL REGIONS</title>
+  <metadata><md:content-id>undefined</md:content-id><md:title/><md:uuid>79d58715-815b-4c6c-aeab-5e7e3979bbf2</md:uuid>
+</metadata>
+  <content>
+         <section id="sec_1">
+          <title> BEST CRITICAL REGIONS
+          </title> 
+
+                 <para id="para_1">
+In this paragraph, let consider the properties a satisfactory test should posses. 
+                </para>
+         <section id="sec_2">
+	<definition id="def_1">
+<term/>
+	  <meaning id="idm3186688">
+Consider the test of the sample null hypothesis <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:msub>
+    <m:mi>H</m:mi>
+    <m:mn>0</m:mn>
+   </m:msub>
+   <m:mo>:</m:mo><m:mi>θ</m:mi><m:mo>=</m:mo><m:msub>
+    <m:mi>θ</m:mi>
+    <m:mn>0</m:mn>
+   </m:msub>
+     </m:mrow>
+ </m:semantics>
+</m:math> against the simple alternative hypothesis <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:msub>
+    <m:mi>H</m:mi>
+    <m:mn>1</m:mn>
+   </m:msub>
+   <m:mo>:</m:mo><m:mi>θ</m:mi><m:mo>=</m:mo><m:msub>
+    <m:mi>θ</m:mi>
+    <m:mn>1</m:mn>
+   </m:msub>
+     </m:mrow>
+ </m:semantics>
+</m:math>.
+  </meaning>
+<meaning id="idp1230752">
+ Let <emphasis>C</emphasis> be a critical region of size <m:math>
+ <m:semantics>
+  <m:mi>α</m:mi>
+</m:semantics>
+</m:math>; that is, <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mi>α</m:mi><m:mo>=</m:mo><m:mi>P</m:mi><m:mrow><m:mo>(</m:mo>
+    <m:mrow>
+     <m:mi>C</m:mi><m:mo>;</m:mo><m:msub>
+      <m:mi>θ</m:mi>
+      <m:mn>0</m:mn>
+     </m:msub>
+     
+    </m:mrow>
+   <m:mo>)</m:mo></m:mrow>
+  </m:mrow>
+ </m:semantics>
+</m:math>. Then <emphasis>C</emphasis> is <term>a best critical region of size <m:math>
+ <m:semantics>
+  <m:mi>α</m:mi>
+</m:semantics>
+</m:math></term> if, for every other critical region <emphasis>D</emphasis> of size <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mi>α</m:mi><m:mo>=</m:mo><m:mi>P</m:mi><m:mrow><m:mo>(</m:mo>
+    <m:mrow>
+     <m:mi>D</m:mi><m:mo>;</m:mo><m:msub>
+      <m:mi>θ</m:mi>
+      <m:mn>0</m:mn>
+     </m:msub>
+     
+    </m:mrow>
+   <m:mo>)</m:mo></m:mrow>
+  </m:mrow>
+ </m:semantics>
+</m:math>, we have that <m:math display="block">
+ <m:semantics>
+  <m:mrow>
+   <m:mi>P</m:mi><m:mrow><m:mo>(</m:mo>
+    <m:mrow>
+     <m:mi>C</m:mi><m:mo>;</m:mo><m:msub>
+      <m:mi>θ</m:mi>
+      <m:mn>1</m:mn>
+     </m:msub>
+     
+    </m:mrow>
+   <m:mo>)</m:mo></m:mrow><m:mo>≥</m:mo><m:mi>P</m:mi><m:mrow><m:mo>(</m:mo>
+    <m:mrow>
+     <m:mi>D</m:mi><m:mo>;</m:mo><m:msub>
+      <m:mi>θ</m:mi>
+      <m:mn>1</m:mn>
+     </m:msub>
+     
+    </m:mrow>
+   <m:mo>)</m:mo></m:mrow><m:mo>.</m:mo>
+  </m:mrow>
+ </m:semantics>
+</m:math>
+	  </meaning>
+	  	</definition>
+
+                 <para id="para_2">
+That is, when <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:msub>
+    <m:mi>H</m:mi>
+    <m:mn>1</m:mn>
+   </m:msub>
+   <m:mo>:</m:mo><m:mi>θ</m:mi><m:mo>=</m:mo><m:msub>
+    <m:mi>θ</m:mi>
+    <m:mn>1</m:mn>
+   </m:msub>
+     </m:mrow>
+ </m:semantics>
+</m:math> is true, the probability of rejecting <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:msub>
+    <m:mi>H</m:mi>
+    <m:mn>0</m:mn>
+   </m:msub>
+   <m:mo>:</m:mo><m:mi>θ</m:mi><m:mo>=</m:mo><m:msub>
+    <m:mi>θ</m:mi>
+    <m:mn>0</m:mn>
+   </m:msub>
+     </m:mrow>
+ </m:semantics>
+</m:math>  using the critical region <emphasis>C</emphasis> is at least as great as the corresponding probability using any other critical region <emphasis>D</emphasis> of size <m:math>
+ <m:semantics>
+  <m:mi>α</m:mi>
+</m:semantics>
+</m:math>. 
+                </para>
+
+                 <para id="para_3">
+Thus a best critical region of size <m:math>
+ <m:semantics>
+  <m:mi>α</m:mi>
+</m:semantics>
+</m:math> is the critical region that has the greatest power among all critical regions for a best critical region of size <m:math>
+ <m:semantics>
+  <m:mi>α</m:mi>
+</m:semantics>
+</m:math>. <term>The Neyman-Pearson lemma</term> gives sufficient conditions for a best critical region of size <m:math>
+ <m:semantics>
+  <m:mi>α</m:mi>
+</m:semantics>
+</m:math>. 
+                </para>
+         </section>
+         <section id="sec_3">
+	<rule type="theorem" id="rule_1">
+	  <title>Neyman-Pearson Lemma</title>
+	  <statement id="idp913344">
+	    <para id="ruleexp1">
+Let <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:msub>
+    <m:mi>X</m:mi>
+    <m:mn>1</m:mn>
+   </m:msub>
+   <m:mo>,</m:mo><m:msub>
+    <m:mi>X</m:mi>
+    <m:mn>2</m:mn>
+   </m:msub>
+   <m:mo>,</m:mo><m:mn>...</m:mn><m:mo>,</m:mo><m:msub>
+    <m:mi>X</m:mi>
+    <m:mi>n</m:mi>
+   </m:msub>
+     </m:mrow>
+</m:semantics>
+</m:math> be a random sample of size <emphasis>n</emphasis> from a distribution with p.d.f. <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mi>f</m:mi><m:mrow><m:mo>(</m:mo>
+    <m:mrow>
+     <m:mi>x</m:mi><m:mo>;</m:mo><m:mi>θ</m:mi>
+    </m:mrow>
+   <m:mo>)</m:mo></m:mrow>
+  </m:mrow>
+ </m:semantics>
+</m:math>, where <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:msub>
+    <m:mi>θ</m:mi>
+    <m:mn>0</m:mn>
+   </m:msub>
+     </m:mrow>
+ </m:semantics>
+</m:math> and <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:msub>
+    <m:mi>θ</m:mi>
+    <m:mn>1</m:mn>
+   </m:msub>
+    </m:mrow>
+ </m:semantics>
+</m:math> are two possible values of <m:math>
+ <m:semantics>
+  <m:mi>θ</m:mi>
+</m:semantics>
+</m:math>.
+	    </para>
+	    <para id="ruleexp2">
+Denote the joint p.d.f. of <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:msub>
+    <m:mi>X</m:mi>
+    <m:mn>1</m:mn>
+   </m:msub>
+   <m:mo>,</m:mo><m:msub>
+    <m:mi>X</m:mi>
+    <m:mn>2</m:mn>
+   </m:msub>
+   <m:mo>,</m:mo><m:mn>...</m:mn><m:mo>,</m:mo><m:msub>
+    <m:mi>X</m:mi>
+    <m:mi>n</m:mi>
+   </m:msub>
+     </m:mrow>
+</m:semantics>
+</m:math> by the likelihood function <m:math display="block">
+ <m:semantics>
+  <m:mrow>
+   <m:mi>L</m:mi><m:mrow><m:mo>(</m:mo>
+    <m:mi>θ</m:mi>
+   <m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mi>L</m:mi><m:mrow><m:mo>(</m:mo>
+    <m:mrow>
+     <m:mi>θ</m:mi><m:mo>;</m:mo><m:msub>
+      <m:mi>x</m:mi>
+      <m:mn>1</m:mn>
+     </m:msub>
+     <m:mo>,</m:mo><m:msub>
+      <m:mi>x</m:mi>
+      <m:mn>2</m:mn>
+     </m:msub>
+     <m:mo>,</m:mo><m:mn>...</m:mn><m:mo>,</m:mo><m:msub>
+      <m:mi>x</m:mi>
+      <m:mi>n</m:mi>
+     </m:msub>
+     
+    </m:mrow>
+   <m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo>
+    <m:mrow>
+     <m:msub>
+      <m:mi>x</m:mi>
+      <m:mn>1</m:mn>
+     </m:msub>
+     <m:mo>;</m:mo><m:mi>θ</m:mi>
+    </m:mrow>
+   <m:mo>)</m:mo></m:mrow><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo>
+    <m:mrow>
+     <m:msub>
+      <m:mi>x</m:mi>
+      <m:mn>2</m:mn>
+     </m:msub>
+     <m:mo>;</m:mo><m:mi>θ</m:mi>
+    </m:mrow>
+   <m:mo>)</m:mo></m:mrow><m:mo>·</m:mo><m:mo>·</m:mo><m:mo>·</m:mo><m:mi>f</m:mi><m:mrow><m:mo>(</m:mo>
+    <m:mrow>
+     <m:msub>
+      <m:mi>x</m:mi>
+      <m:mrow>
+       <m:mi>n</m:mi><m:mo>.</m:mo>
+      </m:mrow>
+     </m:msub>
+     <m:mo>;</m:mo><m:mi>θ</m:mi>
+    </m:mrow>
+   <m:mo>)</m:mo></m:mrow><m:mo>.</m:mo>
+  </m:mrow>
+ </m:semantics>
+</m:math>
+	    </para>
+	    <para id="ruleexp3">
+If there exist a positive constant <emphasis>k</emphasis> and a subset <emphasis>C</emphasis> of the sample space such that
+ 	  <list id="list_1" list-type="enumerated">
+
+	    
+	    <item><m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mi>P</m:mi><m:mrow><m:mo>[</m:mo> <m:mrow>
+    <m:mrow><m:mo>(</m:mo>
+     <m:mrow>
+      <m:msub>
+       <m:mi>X</m:mi>
+       <m:mn>1</m:mn>
+      </m:msub>
+      <m:mo>,</m:mo><m:msub>
+       <m:mi>X</m:mi>
+       <m:mn>2</m:mn>
+      </m:msub>
+      <m:mo>,</m:mo><m:mn>...</m:mn><m:mo>,</m:mo><m:msub>
+       <m:mi>X</m:mi>
+       <m:mi>n</m:mi>
+      </m:msub>
+      
+     </m:mrow>
+    <m:mo>)</m:mo></m:mrow><m:mo>∈</m:mo><m:mi>C</m:mi><m:mo>;</m:mo><m:msub>
+     <m:mi>θ</m:mi>
+     <m:mn>0</m:mn>
+    </m:msub>
+    
+   </m:mrow> <m:mo>]</m:mo></m:mrow><m:mo>=</m:mo><m:mi>α</m:mi><m:mo>,</m:mo>
+  </m:mrow>
+ </m:semantics>
+</m:math>
+</item> 
+	    <item><m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mfrac>
+    <m:mrow>
+     <m:mi>L</m:mi><m:mrow><m:mo>(</m:mo>
+      <m:mrow>
+       <m:msub>
+        <m:mi>θ</m:mi>
+        <m:mn>0</m:mn>
+       </m:msub>
+       
+      </m:mrow>
+     <m:mo>)</m:mo></m:mrow>
+    </m:mrow>
+    <m:mrow>
+     <m:mi>L</m:mi><m:mrow><m:mo>(</m:mo>
+      <m:mrow>
+       <m:msub>
+        <m:mi>θ</m:mi>
+        <m:mn>1</m:mn>
+       </m:msub>
+       
+      </m:mrow>
+     <m:mo>)</m:mo></m:mrow>
+    </m:mrow>
+   </m:mfrac>
+   <m:mo>≤</m:mo><m:mi>k</m:mi>
+  </m:mrow>
+ </m:semantics>
+</m:math> for <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mrow><m:mo>(</m:mo>
+    <m:mrow>
+     <m:msub>
+      <m:mi>x</m:mi>
+      <m:mn>1</m:mn>
+     </m:msub>
+     <m:mo>,</m:mo><m:msub>
+      <m:mi>x</m:mi>
+      <m:mn>2</m:mn>
+     </m:msub>
+     <m:mo>,</m:mo><m:mn>...</m:mn><m:mo>,</m:mo><m:msub>
+      <m:mi>x</m:mi>
+      <m:mi>n</m:mi>
+     </m:msub>
+     
+    </m:mrow>
+   <m:mo>)</m:mo></m:mrow><m:mo>∈</m:mo><m:mi>C</m:mi><m:mo>,</m:mo>
+  </m:mrow>
+ </m:semantics>
+</m:math>
+
+</item> 
+	    <item><m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mfrac>
+    <m:mrow>
+     <m:mi>L</m:mi><m:mrow><m:mo>(</m:mo>
+      <m:mrow>
+       <m:msub>
+        <m:mi>θ</m:mi>
+        <m:mn>0</m:mn>
+       </m:msub>
+       
+      </m:mrow>
+     <m:mo>)</m:mo></m:mrow>
+    </m:mrow>
+    <m:mrow>
+     <m:mi>L</m:mi><m:mrow><m:mo>(</m:mo>
+      <m:mrow>
+       <m:msub>
+        <m:mi>θ</m:mi>
+        <m:mn>1</m:mn>
+       </m:msub>
+       
+      </m:mrow>
+     <m:mo>)</m:mo></m:mrow>
+    </m:mrow>
+   </m:mfrac>
+   <m:mo>≥</m:mo><m:mi>k</m:mi>
+  </m:mrow>
+ </m:semantics>
+</m:math> for <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mrow><m:mo>(</m:mo>
+    <m:mrow>
+     <m:msub>
+      <m:mi>x</m:mi>
+      <m:mn>1</m:mn>
+     </m:msub>
+     <m:mo>,</m:mo><m:msub>
+      <m:mi>x</m:mi>
+      <m:mn>2</m:mn>
+     </m:msub>
+     <m:mo>,</m:mo><m:mn>...</m:mn><m:mo>,</m:mo><m:msub>
+      <m:mi>x</m:mi>
+      <m:mi>n</m:mi>
+     </m:msub>
+     
+    </m:mrow>
+   <m:mo>)</m:mo></m:mrow><m:mo>∈</m:mo><m:mi>C</m:mi><m:mo>'</m:mo><m:mo>.</m:mo>
+  </m:mrow>
+ </m:semantics>
+</m:math>
+
+</item>
+	  </list> 
+
+	    </para>
+
+	    <para id="ruleexp4">
+Then <emphasis>C</emphasis> is a best critical region of size α for testing the simple null hypothesis <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:msub>
+    <m:mi>H</m:mi>
+    <m:mn>0</m:mn>
+   </m:msub>
+   <m:mo>:</m:mo><m:mi>θ</m:mi><m:mo>=</m:mo><m:msub>
+    <m:mi>θ</m:mi>
+    <m:mn>0</m:mn>
+   </m:msub>
+     </m:mrow>
+ </m:semantics>
+</m:math> against the simple alternative hypothesis <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:msub>
+    <m:mi>H</m:mi>
+    <m:mn>1</m:mn>
+   </m:msub>
+   <m:mo>:</m:mo><m:mi>θ</m:mi><m:mo>=</m:mo><m:msub>
+    <m:mi>θ</m:mi>
+    <m:mn>1</m:mn>
+   </m:msub>
+     </m:mrow>
+ </m:semantics>
+</m:math>.
+	    </para>
+	  </statement>
+
+</rule>
+         </section>
+         <section id="sec_4">
+                 <para id="para_4">
+For a realistic application of the Neyman-Pearson lemma, consider the following, in which the test is based on a random sample from a normal distribution. 
+                </para>
+<example id="ex_1"> 
+                 <para id="para_5">
+Let <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:msub>
+    <m:mi>X</m:mi>
+    <m:mn>1</m:mn>
+   </m:msub>
+   <m:mo>,</m:mo><m:msub>
+    <m:mi>X</m:mi>
+    <m:mn>2</m:mn>
+   </m:msub>
+   <m:mo>,</m:mo><m:mn>...</m:mn><m:mo>,</m:mo><m:msub>
+    <m:mi>X</m:mi>
+    <m:mi>n</m:mi>
+   </m:msub>
+     </m:mrow>
+</m:semantics>
+</m:math> be a random sample from a normal distribution <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mi>N</m:mi><m:mrow><m:mo>(</m:mo>
+    <m:mrow>
+     <m:mi>μ</m:mi><m:mo>,</m:mo><m:mn>36</m:mn>
+    </m:mrow>
+   <m:mo>)</m:mo></m:mrow>
+  </m:mrow>
+ </m:semantics>
+</m:math>. We shall find the best critical region for testing the simple hypothesis <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:msub>
+    <m:mi>H</m:mi>
+    <m:mn>0</m:mn>
+   </m:msub>
+   <m:mo>:</m:mo><m:mi>μ</m:mi><m:mo>=</m:mo><m:mn>50</m:mn>
+  </m:mrow>
+ </m:semantics>
+</m:math> against the simple alternative hypothesis <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:msub>
+    <m:mi>H</m:mi>
+    <m:mn>1</m:mn>
+   </m:msub>
+   <m:mo>:</m:mo><m:mi>μ</m:mi><m:mo>=</m:mo><m:mn>55</m:mn>
+  </m:mrow>
+ </m:semantics>
+</m:math>. Using the ratio of the likelihood functions, namely <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mi>L</m:mi><m:mrow><m:mo>(</m:mo>
+    <m:mrow>
+     <m:mn>50</m:mn>
+    </m:mrow>
+   <m:mo>)</m:mo></m:mrow><m:mo>/</m:mo><m:mi>L</m:mi><m:mrow><m:mo>(</m:mo>
+    <m:mrow>
+     <m:mn>55</m:mn>
+    </m:mrow>
+   <m:mo>)</m:mo></m:mrow>
+  </m:mrow>
+ </m:semantics>
+</m:math>, we shall find those points in the sample space for which this ratio is less than or equal to some constant <emphasis>k</emphasis>.
+              </para>
+
+                 <para id="para_6">
+That is, we shall solve the following inequality: <m:math display="block">
+ <m:semantics>
+  <m:mtable columnalign="left">
+   <m:mtr>
+    <m:mtd>
+     <m:mfrac>
+      <m:mrow>
+       <m:mi>L</m:mi><m:mrow><m:mo>(</m:mo>
+        <m:mrow>
+         <m:mn>50</m:mn>
+        </m:mrow>
+       <m:mo>)</m:mo></m:mrow>
+      </m:mrow>
+      <m:mrow>
+       <m:mi>L</m:mi><m:mrow><m:mo>(</m:mo>
+        <m:mrow>
+         <m:mn>55</m:mn>
+        </m:mrow>
+       <m:mo>)</m:mo></m:mrow>
+      </m:mrow>
+     </m:mfrac>
+     <m:mo>=</m:mo><m:mfrac>
+      <m:mrow>
+       <m:msup>
+        <m:mrow>
+         <m:mrow><m:mo>(</m:mo>
+          <m:mrow>
+           <m:mn>72</m:mn><m:mi>π</m:mi>
+          </m:mrow>
+         <m:mo>)</m:mo></m:mrow>
+        </m:mrow>
+        <m:mrow>
+         <m:mo>−</m:mo><m:mi>n</m:mi><m:mo>/</m:mo><m:mn>2</m:mn>
+        </m:mrow>
+       </m:msup>
+       <m:mi>exp</m:mi><m:mo>⁡</m:mo><m:mrow><m:mo>[</m:mo> <m:mrow>
+        <m:mo>−</m:mo><m:mrow><m:mo>(</m:mo>
+         <m:mrow>
+          <m:mfrac>
+           <m:mn>1</m:mn>
+           <m:mrow>
+            <m:mn>72</m:mn>
+           </m:mrow>
+          </m:mfrac>
+          
+         </m:mrow>
+        <m:mo>)</m:mo></m:mrow><m:mstyle displaystyle="true">
+         <m:munderover>
+          <m:mo>∑</m:mo>
+          <m:mn>1</m:mn>
+          <m:mi>n</m:mi>
+         </m:munderover>
+         <m:mrow>
+          <m:msup>
+           <m:mrow>
+            <m:mrow><m:mo>(</m:mo>
+             <m:mrow>
+              <m:msub>
+               <m:mi>x</m:mi>
+               <m:mi>i</m:mi>
+              </m:msub>
+              <m:mo>−</m:mo><m:mn>50</m:mn>
+             </m:mrow>
+            <m:mo>)</m:mo></m:mrow>
+           </m:mrow>
+           <m:mn>2</m:mn>
+          </m:msup>
+          
+         </m:mrow>
+        </m:mstyle>
+       </m:mrow> <m:mo>]</m:mo></m:mrow>
+      </m:mrow>
+      <m:mrow>
+       <m:msup>
+        <m:mrow>
+         <m:mrow><m:mo>(</m:mo>
+          <m:mrow>
+           <m:mn>72</m:mn><m:mi>π</m:mi>
+          </m:mrow>
+         <m:mo>)</m:mo></m:mrow>
+        </m:mrow>
+        <m:mrow>
+         <m:mo>−</m:mo><m:mi>n</m:mi><m:mo>/</m:mo><m:mn>2</m:mn>
+        </m:mrow>
+       </m:msup>
+       <m:mi>exp</m:mi><m:mo>⁡</m:mo><m:mrow><m:mo>[</m:mo> <m:mrow>
+        <m:mo>−</m:mo><m:mrow><m:mo>(</m:mo>
+         <m:mrow>
+          <m:mfrac>
+           <m:mn>1</m:mn>
+           <m:mrow>
+            <m:mn>72</m:mn>
+           </m:mrow>
+          </m:mfrac>
+          
+         </m:mrow>
+        <m:mo>)</m:mo></m:mrow><m:mstyle displaystyle="true">
+         <m:munderover>
+          <m:mo>∑</m:mo>
+          <m:mn>1</m:mn>
+          <m:mi>n</m:mi>
+         </m:munderover>
+         <m:mrow>
+          <m:msup>
+           <m:mrow>
+            <m:mrow><m:mo>(</m:mo>
+             <m:mrow>
+              <m:msub>
+               <m:mi>x</m:mi>
+               <m:mi>i</m:mi>
+              </m:msub>
+              <m:mo>−</m:mo><m:mn>55</m:mn>
+             </m:mrow>
+            <m:mo>)</m:mo></m:mrow>
+           </m:mrow>
+           <m:mn>2</m:mn>
+          </m:msup>
+          
+         </m:mrow>
+        </m:mstyle>
+       </m:mrow> <m:mo>]</m:mo></m:mrow>
+      </m:mrow>
+     </m:mfrac>
+     
+    </m:mtd>
+   </m:mtr>
+   <m:mtr>
+    <m:mtd>
+     <m:mo>=</m:mo><m:mi>exp</m:mi><m:mo>⁡</m:mo><m:mrow><m:mo>[</m:mo> <m:mrow>
+      <m:mo>−</m:mo><m:mrow><m:mo>(</m:mo>
+       <m:mrow>
+        <m:mfrac>
+         <m:mn>1</m:mn>
+         <m:mrow>
+          <m:mn>72</m:mn>
+         </m:mrow>
+        </m:mfrac>
+        
+       </m:mrow>
+      <m:mo>)</m:mo></m:mrow><m:mrow><m:mo>(</m:mo>
+       <m:mrow>
+        <m:mn>10</m:mn><m:mstyle displaystyle="true">
+         <m:munderover>
+          <m:mo>∑</m:mo>
+          <m:mn>1</m:mn>
+          <m:mi>n</m:mi>
+         </m:munderover>
+         <m:mrow>
+          <m:msub>
+           <m:mi>x</m:mi>
+           <m:mi>i</m:mi>
+          </m:msub>
+          
+         </m:mrow>
+        </m:mstyle><m:mo>+</m:mo><m:mi>n</m:mi><m:msup>
+         <m:mrow>
+          <m:mn>50</m:mn>
+         </m:mrow>
+         <m:mn>2</m:mn>
+        </m:msup>
+        <m:mo>−</m:mo><m:mi>n</m:mi><m:msup>
+         <m:mrow>
+          <m:mn>55</m:mn>
+         </m:mrow>
+         <m:mn>2</m:mn>
+        </m:msup>
+        
+       </m:mrow>
+      <m:mo>)</m:mo></m:mrow>
+     </m:mrow> <m:mo>]</m:mo></m:mrow><m:mo>≤</m:mo><m:mi>k</m:mi><m:mo>.</m:mo>
+    </m:mtd>
+   </m:mtr>
+  </m:mtable>
+  </m:semantics>
+</m:math>
+                </para>
+                 <para id="para_7">
+If we take the natural logarithm of each member of the inequality, we find that <m:math display="block">
+ <m:semantics>
+  <m:mrow>
+   <m:mo>−</m:mo><m:mn>10</m:mn><m:mstyle displaystyle="true">
+    <m:munderover>
+     <m:mo>∑</m:mo>
+     <m:mn>1</m:mn>
+     <m:mi>n</m:mi>
+    </m:munderover>
+    <m:mrow>
+     <m:msub>
+      <m:mi>x</m:mi>
+      <m:mi>i</m:mi>
+     </m:msub>
+     
+    </m:mrow>
+   </m:mstyle><m:mo>−</m:mo><m:mi>n</m:mi><m:msup>
+    <m:mrow>
+     <m:mn>50</m:mn>
+    </m:mrow>
+    <m:mn>2</m:mn>
+   </m:msup>
+   <m:mo>+</m:mo><m:mi>n</m:mi><m:msup>
+    <m:mrow>
+     <m:mn>55</m:mn>
+    </m:mrow>
+    <m:mn>2</m:mn>
+   </m:msup>
+   <m:mo>≤</m:mo><m:mrow><m:mo>(</m:mo>
+    <m:mrow>
+     <m:mn>72</m:mn>
+    </m:mrow>
+   <m:mo>)</m:mo></m:mrow><m:mi>ln</m:mi><m:mo>⁡</m:mo><m:mi>k</m:mi><m:mo>.</m:mo>
+  </m:mrow>
+ </m:semantics>
+</m:math> 
+                </para>
+                 <para id="para_8">
+Thus, <m:math display="block">
+ <m:semantics>
+  <m:mrow>
+   <m:mfrac>
+    <m:mn>1</m:mn>
+    <m:mi>n</m:mi>
+   </m:mfrac>
+   <m:mstyle displaystyle="true">
+    <m:munderover>
+     <m:mo>∑</m:mo>
+     <m:mn>1</m:mn>
+     <m:mi>n</m:mi>
+    </m:munderover>
+    <m:mrow>
+     <m:msub>
+      <m:mi>x</m:mi>
+      <m:mi>i</m:mi>
+     </m:msub>
+     
+    </m:mrow>
+   </m:mstyle><m:mo>≥</m:mo><m:mo>−</m:mo><m:mfrac>
+    <m:mn>1</m:mn>
+    <m:mrow>
+     <m:mn>10</m:mn><m:mi>n</m:mi>
+    </m:mrow>
+   </m:mfrac>
+   <m:mrow><m:mo>[</m:mo> <m:mrow>
+    <m:mi>n</m:mi><m:msup>
+     <m:mrow>
+      <m:mn>50</m:mn>
+     </m:mrow>
+     <m:mn>2</m:mn>
+    </m:msup>
+    <m:mo>−</m:mo><m:mi>n</m:mi><m:msup>
+     <m:mrow>
+      <m:mn>55</m:mn>
+     </m:mrow>
+     <m:mn>2</m:mn>
+    </m:msup>
+    <m:mo>+</m:mo><m:mrow><m:mo>(</m:mo>
+     <m:mrow>
+      <m:mn>72</m:mn>
+     </m:mrow>
+    <m:mo>)</m:mo></m:mrow><m:mi>ln</m:mi><m:mo>⁡</m:mo><m:mi>k</m:mi>
+   </m:mrow> <m:mo>]</m:mo></m:mrow>
+  </m:mrow>
+ </m:semantics>
+</m:math> Or equivalently, <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mover accent="true">
+    <m:mi>x</m:mi>
+    <m:mo>¯</m:mo>
+   </m:mover>
+   <m:mo>≥</m:mo><m:mi>c</m:mi><m:mo>,</m:mo>
+  </m:mrow>
+ </m:semantics>
+</m:math> where <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mi>c</m:mi><m:mo>=</m:mo><m:mo>−</m:mo><m:mfrac>
+    <m:mn>1</m:mn>
+    <m:mrow>
+     <m:mn>10</m:mn><m:mi>n</m:mi>
+    </m:mrow>
+   </m:mfrac>
+   <m:mrow><m:mo>[</m:mo> <m:mrow>
+    <m:mi>n</m:mi><m:msup>
+     <m:mrow>
+      <m:mn>50</m:mn>
+     </m:mrow>
+     <m:mn>2</m:mn>
+    </m:msup>
+    <m:mo>−</m:mo><m:mi>n</m:mi><m:msup>
+     <m:mrow>
+      <m:mn>55</m:mn>
+     </m:mrow>
+     <m:mn>2</m:mn>
+    </m:msup>
+    <m:mo>+</m:mo><m:mrow><m:mo>(</m:mo>
+     <m:mrow>
+      <m:mn>72</m:mn>
+     </m:mrow>
+    <m:mo>)</m:mo></m:mrow><m:mi>ln</m:mi><m:mo>⁡</m:mo><m:mi>k</m:mi>
+   </m:mrow> <m:mo>]</m:mo></m:mrow><m:mo>.</m:mo>
+  </m:mrow>
+ </m:semantics>
+</m:math> 
+               </para>
+
+                 <para id="para_9">
+Thus <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mi>L</m:mi><m:mrow><m:mo>(</m:mo>
+    <m:mrow>
+     <m:mn>50</m:mn>
+    </m:mrow>
+   <m:mo>)</m:mo></m:mrow><m:mo>/</m:mo><m:mi>L</m:mi><m:mrow><m:mo>(</m:mo>
+    <m:mrow>
+     <m:mn>55</m:mn>
+    </m:mrow>
+   <m:mo>)</m:mo></m:mrow><m:mo>≤</m:mo><m:mi>k</m:mi>
+  </m:mrow>
+ </m:semantics>
+</m:math> is equivalent to <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mover accent="true">
+    <m:mi>x</m:mi>
+    <m:mo>¯</m:mo>
+   </m:mover>
+   <m:mo>≥</m:mo><m:mi>c</m:mi>
+  </m:mrow>
+ </m:semantics>
+</m:math>. 
+                </para>
+
+                 <para id="para_10">
+A best critical region is, according to the Neyman-Pearson lemma, <m:math display="block">
+ <m:semantics>
+  <m:mrow>
+   <m:mi>C</m:mi><m:mo>=</m:mo><m:mrow><m:mo>{</m:mo> <m:mrow>
+    <m:mrow><m:mo>(</m:mo>
+     <m:mrow>
+      <m:msub>
+       <m:mi>x</m:mi>
+       <m:mn>1</m:mn>
+      </m:msub>
+      <m:mo>,</m:mo><m:msub>
+       <m:mi>x</m:mi>
+       <m:mn>2</m:mn>
+      </m:msub>
+      <m:mo>,</m:mo><m:mn>...</m:mn><m:mo>,</m:mo><m:msub>
+       <m:mi>x</m:mi>
+       <m:mi>n</m:mi>
+      </m:msub>
+      
+     </m:mrow>
+    <m:mo>)</m:mo></m:mrow><m:mo>:</m:mo><m:mover accent="true">
+     <m:mi>x</m:mi>
+     <m:mo>¯</m:mo>
+    </m:mover>
+    <m:mo>≥</m:mo><m:mi>c</m:mi>
+   </m:mrow> <m:mo>}</m:mo></m:mrow><m:mo>,</m:mo>
+  </m:mrow>
+ </m:semantics>
+</m:math> where <emphasis>c</emphasis> is selected so that the size of the critical region is <m:math>
+ <m:semantics>
+  <m:mi>α</m:mi>
+</m:semantics>
+</m:math>. Say <emphasis>n</emphasis>=16 and <emphasis>c</emphasis>=53. Since <m:math>
+ <m:semantics>
+  <m:mover accent="true">
+   <m:mi>X</m:mi>
+   <m:mo>¯</m:mo>
+  </m:mover>
+  </m:semantics>
+</m:math> is <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mi>N</m:mi><m:mrow><m:mo>(</m:mo>
+    <m:mrow>
+     <m:mn>50</m:mn><m:mo>,</m:mo><m:mn>36</m:mn><m:mo>/</m:mo><m:mn>16</m:mn>
+    </m:mrow>
+   <m:mo>)</m:mo></m:mrow>
+  </m:mrow>
+ </m:semantics>
+</m:math> under <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:msub>
+    <m:mtext>H</m:mtext>
+    <m:mtext>0</m:mtext>
+   </m:msub>
+     </m:mrow>
+</m:semantics>
+</m:math> we have
+                </para>
+                <para id="para_11">
+ <m:math display="block">
+ <m:semantics>
+  <m:mrow>
+   <m:mi>α</m:mi><m:mo>=</m:mo><m:mi>P</m:mi><m:mrow><m:mo>(</m:mo>
+    <m:mrow>
+     <m:mover accent="true">
+      <m:mi>X</m:mi>
+      <m:mo>¯</m:mo>
+     </m:mover>
+     <m:mo>≥</m:mo><m:mn>53</m:mn><m:mo>;</m:mo><m:mi>μ</m:mi><m:mo>=</m:mo><m:mn>50</m:mn>
+    </m:mrow>
+   <m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mi>P</m:mi><m:mrow><m:mo>[</m:mo> <m:mrow>
+    <m:mfrac>
+     <m:mrow>
+      <m:mover accent="true">
+       <m:mi>X</m:mi>
+       <m:mo>¯</m:mo>
+      </m:mover>
+      <m:mo>−</m:mo><m:mn>50</m:mn>
+     </m:mrow>
+     <m:mrow>
+      <m:mn>6</m:mn><m:mo>/</m:mo><m:mn>4</m:mn>
+     </m:mrow>
+    </m:mfrac>
+    <m:mo>≥</m:mo><m:mfrac>
+     <m:mn>3</m:mn>
+     <m:mrow>
+      <m:mn>6</m:mn><m:mo>/</m:mo><m:mn>4</m:mn>
+     </m:mrow>
+    </m:mfrac>
+    <m:mo>;</m:mo><m:mi>μ</m:mi><m:mo>=</m:mo><m:mn>50</m:mn>
+   </m:mrow> <m:mo>]</m:mo></m:mrow><m:mo>=</m:mo><m:mn>1</m:mn><m:mo>−</m:mo><m:mi>Φ</m:mi><m:mrow><m:mo>(</m:mo>
+    <m:mn>2</m:mn>
+   <m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>0.0228.</m:mn>
+  </m:mrow>
+ </m:semantics>
+</m:math>
+              </para>
+</example> 
+                 <para id="para_12">
+The example 1 illustrates what is often true, namely, that the inequality <m:math display="block">
+ <m:semantics>
+  <m:mrow>
+   <m:mfrac>
+    <m:mrow>
+     <m:mi>L</m:mi><m:mrow><m:mo>(</m:mo>
+      <m:mrow>
+       <m:msub>
+        <m:mi>θ</m:mi>
+        <m:mn>0</m:mn>
+       </m:msub>
+       
+      </m:mrow>
+     <m:mo>)</m:mo></m:mrow>
+    </m:mrow>
+    <m:mrow>
+     <m:mi>L</m:mi><m:mrow><m:mo>(</m:mo>
+      <m:mrow>
+       <m:msub>
+        <m:mi>θ</m:mi>
+        <m:mn>1</m:mn>
+       </m:msub>
+       
+      </m:mrow>
+     <m:mo>)</m:mo></m:mrow>
+    </m:mrow>
+   </m:mfrac>
+   <m:mo>≤</m:mo><m:mi>k</m:mi>
+  </m:mrow>
+ </m:semantics>
+</m:math> can be expressed in terms of a function <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mi>u</m:mi><m:mrow><m:mo>(</m:mo>
+    <m:mrow>
+     <m:msub>
+      <m:mi>x</m:mi>
+      <m:mn>1</m:mn>
+     </m:msub>
+     <m:mo>,</m:mo><m:msub>
+      <m:mi>x</m:mi>
+      <m:mn>2</m:mn>
+     </m:msub>
+     <m:mo>,</m:mo><m:mn>...</m:mn><m:mo>,</m:mo><m:msub>
+      <m:mi>x</m:mi>
+      <m:mi>n</m:mi>
+     </m:msub>
+     
+    </m:mrow>
+   <m:mo>)</m:mo></m:mrow>
+  </m:mrow>
+ </m:semantics>
+</m:math> say,
+               </para>
+                 <para id="para_13">
+<m:math display="block">
+ <m:semantics>
+  <m:mrow>
+   <m:mi>u</m:mi><m:mrow><m:mo>(</m:mo>
+    <m:mrow>
+     <m:msub>
+      <m:mi>x</m:mi>
+      <m:mn>1</m:mn>
+     </m:msub>
+     <m:mo>,</m:mo><m:msub>
+      <m:mi>x</m:mi>
+      <m:mn>2</m:mn>
+     </m:msub>
+     <m:mo>,</m:mo><m:mn>...</m:mn><m:mo>,</m:mo><m:msub>
+      <m:mi>x</m:mi>
+      <m:mi>n</m:mi>
+     </m:msub>
+     
+    </m:mrow>
+   <m:mo>)</m:mo></m:mrow><m:mo>≤</m:mo><m:msub>
+    <m:mi>c</m:mi>
+    <m:mn>1</m:mn>
+   </m:msub>
+     </m:mrow>
+ </m:semantics>
+</m:math> or <m:math display="block">
+ <m:semantics>
+  <m:mrow>
+   <m:mi>u</m:mi><m:mrow><m:mo>(</m:mo>
+    <m:mrow>
+     <m:msub>
+      <m:mi>x</m:mi>
+      <m:mn>1</m:mn>
+     </m:msub>
+     <m:mo>,</m:mo><m:msub>
+      <m:mi>x</m:mi>
+      <m:mn>2</m:mn>
+     </m:msub>
+     <m:mo>,</m:mo><m:mn>...</m:mn><m:mo>,</m:mo><m:msub>
+      <m:mi>x</m:mi>
+      <m:mi>n</m:mi>
+     </m:msub>
+     
+    </m:mrow>
+   <m:mo>)</m:mo></m:mrow><m:mo>≥</m:mo><m:msub>
+    <m:mi>c</m:mi>
+    <m:mn>2</m:mn>
+   </m:msub>
+   <m:mo>,</m:mo>
+  </m:mrow>
+ </m:semantics>
+</m:math> where <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:msub>
+    <m:mi>c</m:mi>
+    <m:mn>1</m:mn>
+   </m:msub>
+     </m:mrow>
+ </m:semantics>
+</m:math> and <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:msub>
+    <m:mi>c</m:mi>
+    <m:mn>2</m:mn>
+   </m:msub>
+     </m:mrow>
+ </m:semantics>
+</m:math>
+ is selected so that the size of the critical region is <m:math>
+ <m:semantics>
+  <m:mi>α</m:mi>
+</m:semantics>
+</m:math>
+. Thus the test can be based on the statistic <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mi>u</m:mi><m:mrow><m:mo>(</m:mo>
+    <m:mrow>
+     <m:msub>
+      <m:mi>X</m:mi>
+      <m:mn>1</m:mn>
+     </m:msub>
+     <m:mo>,</m:mo><m:mn>...</m:mn><m:mo>,</m:mo><m:msub>
+      <m:mi>X</m:mi>
+      <m:mi>n</m:mi>
+     </m:msub>
+     
+    </m:mrow>
+   <m:mo>)</m:mo></m:mrow>
+  </m:mrow>
+ </m:semantics>
+</m:math>. Also, for illustration, if we want <m:math>
+ <m:semantics>
+  <m:mi>α</m:mi>
+</m:semantics>
+</m:math> to be a given value, say 0.05, we would then choose our <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:msub>
+    <m:mi>c</m:mi>
+    <m:mn>1</m:mn>
+   </m:msub>
+     </m:mrow>
+ </m:semantics>
+</m:math> and <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:msub>
+    <m:mi>c</m:mi>
+    <m:mn>2</m:mn>
+   </m:msub>
+     </m:mrow>
+ </m:semantics>
+</m:math>. In example1, with <m:math>
+ <m:semantics>
+  <m:mi>α</m:mi>
+</m:semantics>
+</m:math>=0.05, we want <m:math display="block">
+ <m:semantics>
+  <m:mrow>
+   <m:mn>0.05</m:mn><m:mo>=</m:mo><m:mi>P</m:mi><m:mrow><m:mo>(</m:mo>
+    <m:mrow>
+     <m:mover accent="true">
+      <m:mi>X</m:mi>
+      <m:mo>¯</m:mo>
+     </m:mover>
+     <m:mo>≥</m:mo><m:mi>c</m:mi><m:mo>;</m:mo><m:mi>μ</m:mi><m:mo>=</m:mo><m:mn>50</m:mn>
+    </m:mrow>
+   <m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mi>P</m:mi><m:mrow><m:mo>(</m:mo>
+    <m:mrow>
+     <m:mfrac>
+      <m:mrow>
+       <m:mover accent="true">
+        <m:mi>X</m:mi>
+        <m:mo>¯</m:mo>
+       </m:mover>
+       <m:mo>−</m:mo><m:mn>50</m:mn>
+      </m:mrow>
+      <m:mrow>
+       <m:mn>6</m:mn><m:mo>/</m:mo><m:mn>4</m:mn>
+      </m:mrow>
+     </m:mfrac>
+     <m:mo>≥</m:mo><m:mfrac>
+      <m:mrow>
+       <m:mi>c</m:mi><m:mo>−</m:mo><m:mn>50</m:mn>
+      </m:mrow>
+      <m:mrow>
+       <m:mn>6</m:mn><m:mo>/</m:mo><m:mn>4</m:mn>
+      </m:mrow>
+     </m:mfrac>
+     <m:mo>;</m:mo><m:mi>μ</m:mi><m:mo>=</m:mo><m:mn>50</m:mn>
+    </m:mrow>
+   <m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>1</m:mn><m:mo>−</m:mo><m:mi>Φ</m:mi><m:mrow><m:mo>(</m:mo>
+    <m:mrow>
+     <m:mfrac>
+      <m:mrow>
+       <m:mi>c</m:mi><m:mo>−</m:mo><m:mn>50</m:mn>
+      </m:mrow>
+      <m:mrow>
+       <m:mn>6</m:mn><m:mo>/</m:mo><m:mn>4</m:mn>
+      </m:mrow>
+     </m:mfrac>
+     
+    </m:mrow>
+   <m:mo>)</m:mo></m:mrow><m:mo>.</m:mo>
+  </m:mrow>
+ </m:semantics>
+</m:math>
+              </para>
+
+                 <para id="para_14">
+Hence it must be true that <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mrow><m:mo>(</m:mo>
+    <m:mrow>
+     <m:mi>c</m:mi><m:mo>−</m:mo><m:mn>50</m:mn>
+    </m:mrow>
+   <m:mo>)</m:mo></m:mrow><m:mo>/</m:mo><m:mrow><m:mo>(</m:mo>
+    <m:mrow>
+     <m:mn>3</m:mn><m:mo>/</m:mo><m:mn>2</m:mn>
+    </m:mrow>
+   <m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>1.645</m:mn>
+  </m:mrow>
+ </m:semantics>
+</m:math>, or equivalently, <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mi>c</m:mi><m:mo>=</m:mo><m:mn>50</m:mn><m:mo>+</m:mo><m:mfrac>
+    <m:mn>3</m:mn>
+    <m:mn>2</m:mn>
+   </m:mfrac>
+   <m:mrow><m:mo>(</m:mo>
+    <m:mrow>
+     <m:mn>1.645</m:mn>
+    </m:mrow>
+   <m:mo>)</m:mo></m:mrow><m:mo>≈</m:mo><m:mn>52.47.</m:mn>
+  </m:mrow>
+ </m:semantics>
+</m:math>
+                </para>
+         </section>
+         <section id="sec_5">
+<example id="ex_2"> 
+                 <para id="para_15">
+Let<m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:msub>
+    <m:mi>X</m:mi>
+    <m:mn>1</m:mn>
+   </m:msub>
+   <m:mo>,</m:mo><m:msub>
+    <m:mi>X</m:mi>
+    <m:mn>2</m:mn>
+   </m:msub>
+   <m:mo>,</m:mo><m:mn>...</m:mn><m:mo>,</m:mo><m:msub>
+    <m:mi>X</m:mi>
+    <m:mi>n</m:mi>
+   </m:msub>
+     </m:mrow>
+</m:semantics>
+</m:math> denote a random sample of size <emphasis>n</emphasis> from a Poisson distribution with mean <m:math>
+ <m:semantics>
+  <m:mi>λ</m:mi>
+</m:semantics>
+</m:math>. A best critical region for testing <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:msub>
+    <m:mi>H</m:mi>
+    <m:mn>0</m:mn>
+   </m:msub>
+   <m:mo>:</m:mo><m:mi>λ</m:mi><m:mo>=</m:mo><m:mn>2</m:mn>
+  </m:mrow>
+ </m:semantics>
+</m:math> against <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:msub>
+    <m:mi>H</m:mi>
+    <m:mn>1</m:mn>
+   </m:msub>
+   <m:mo>:</m:mo><m:mi>λ</m:mi><m:mo>=</m:mo><m:mn>5</m:mn>
+  </m:mrow>
+ </m:semantics>
+</m:math> is given by <m:math display="block">
+ <m:semantics>
+  <m:mrow>
+   <m:mfrac>
+    <m:mrow>
+     <m:mi>L</m:mi><m:mrow><m:mo>(</m:mo>
+      <m:mn>2</m:mn>
+     <m:mo>)</m:mo></m:mrow>
+    </m:mrow>
+    <m:mrow>
+     <m:mi>L</m:mi><m:mrow><m:mo>(</m:mo>
+      <m:mn>5</m:mn>
+     <m:mo>)</m:mo></m:mrow>
+    </m:mrow>
+   </m:mfrac>
+   <m:mo>=</m:mo><m:mfrac>
+    <m:mrow>
+     <m:msup>
+      <m:mn>2</m:mn>
+      <m:mrow>
+       <m:mstyle displaystyle="true">
+        <m:mo>∑</m:mo> <m:mrow>
+         <m:msub>
+          <m:mi>x</m:mi>
+          <m:mi>i</m:mi>
+         </m:msub>
+         
+        </m:mrow>
+       </m:mstyle>
+      </m:mrow>
+     </m:msup>
+     <m:msup>
+      <m:mi>e</m:mi>
+      <m:mrow>
+       <m:mo>−</m:mo><m:mn>2</m:mn><m:mi>n</m:mi>
+      </m:mrow>
+     </m:msup>
+     
+    </m:mrow>
+    <m:mrow>
+     <m:msub>
+      <m:mi>x</m:mi>
+      <m:mn>1</m:mn>
+     </m:msub>
+     <m:mo>!</m:mo><m:msub>
+      <m:mi>x</m:mi>
+      <m:mn>2</m:mn>
+     </m:msub>
+     <m:mo>!</m:mo><m:mo>·</m:mo><m:mo>·</m:mo><m:mo>·</m:mo><m:msub>
+      <m:mi>x</m:mi>
+      <m:mi>n</m:mi>
+     </m:msub>
+     <m:mo>!</m:mo>
+    </m:mrow>
+   </m:mfrac>
+   <m:mfrac>
+    <m:mrow>
+     <m:msub>
+      <m:mi>x</m:mi>
+      <m:mn>1</m:mn>
+     </m:msub>
+     <m:mo>!</m:mo><m:msub>
+      <m:mi>x</m:mi>
+      <m:mn>2</m:mn>
+     </m:msub>
+     <m:mo>!</m:mo><m:mo>·</m:mo><m:mo>·</m:mo><m:mo>·</m:mo><m:msub>
+      <m:mi>x</m:mi>
+      <m:mi>n</m:mi>
+     </m:msub>
+     <m:mo>!</m:mo>
+    </m:mrow>
+    <m:mrow>
+     <m:msup>
+      <m:mn>5</m:mn>
+      <m:mrow>
+       <m:mstyle displaystyle="true">
+        <m:mo>∑</m:mo> <m:mrow>
+         <m:msub>
+          <m:mi>x</m:mi>
+          <m:mi>i</m:mi>
+         </m:msub>
+         
+        </m:mrow>
+       </m:mstyle>
+      </m:mrow>
+     </m:msup>
+     <m:msup>
+      <m:mi>e</m:mi>
+      <m:mrow>
+       <m:mo>−</m:mo><m:mn>5</m:mn><m:mi>n</m:mi>
+      </m:mrow>
+     </m:msup>
+     
+    </m:mrow>
+   </m:mfrac>
+   <m:mo>≤</m:mo><m:mi>k</m:mi><m:mo>.</m:mo>
+  </m:mrow>
+ </m:semantics>
+</m:math>
+               </para>
+                 <para id="para_16">
+The inequality is equivalent to <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:msup>
+    <m:mrow>
+     <m:mrow><m:mo>(</m:mo>
+      <m:mrow>
+       <m:mfrac>
+        <m:mn>2</m:mn>
+        <m:mn>5</m:mn>
+       </m:mfrac>
+       
+      </m:mrow>
+     <m:mo>)</m:mo></m:mrow>
+    </m:mrow>
+    <m:mrow>
+     <m:mstyle displaystyle="true">
+      <m:mo>∑</m:mo> <m:mrow>
+       <m:msub>
+        <m:mi>x</m:mi>
+        <m:mi>i</m:mi>
+       </m:msub>
+       
+      </m:mrow>
+     </m:mstyle>
+    </m:mrow>
+   </m:msup>
+   <m:msup>
+    <m:mi>e</m:mi>
+    <m:mrow>
+     <m:mn>3</m:mn><m:mi>n</m:mi>
+    </m:mrow>
+   </m:msup>
+   <m:mo>≤</m:mo><m:mi>k</m:mi>
+  </m:mrow>
+ </m:semantics>
+</m:math> and <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mrow><m:mo>(</m:mo>
+    <m:mrow>
+     <m:mstyle displaystyle="true">
+      <m:mo>∑</m:mo> <m:mrow>
+       <m:msub>
+        <m:mi>x</m:mi>
+        <m:mi>i</m:mi>
+       </m:msub>
+       
+      </m:mrow>
+     </m:mstyle>
+    </m:mrow>
+   <m:mo>)</m:mo></m:mrow><m:mi>ln</m:mi><m:mo>⁡</m:mo><m:mrow><m:mo>(</m:mo>
+    <m:mrow>
+     <m:mfrac>
+      <m:mn>2</m:mn>
+      <m:mn>5</m:mn>
+     </m:mfrac>
+     
+    </m:mrow>
+   <m:mo>)</m:mo></m:mrow><m:mo>+</m:mo><m:mn>3</m:mn><m:mi>n</m:mi><m:mo>≤</m:mo><m:mi>ln</m:mi><m:mo>⁡</m:mo><m:mi>k</m:mi><m:mo>.</m:mo>
+  </m:mrow>
+ </m:semantics>
+</m:math>
+               </para>
+                 <para id="para_17">
+Since <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mi>ln</m:mi><m:mo>⁡</m:mo><m:mrow><m:mo>(</m:mo>
+    <m:mrow>
+     <m:mn>2</m:mn><m:mo>/</m:mo><m:mn>5</m:mn>
+    </m:mrow>
+   <m:mo>)</m:mo></m:mrow><m:mo>&lt;</m:mo><m:mn>0</m:mn>
+  </m:mrow>
+ </m:semantics>
+</m:math>, this is the same as <m:math display="block">
+ <m:semantics>
+  <m:mrow>
+   <m:mstyle displaystyle="true">
+    <m:munderover>
+     <m:mo>∑</m:mo>
+     <m:mrow>
+      <m:mi>i</m:mi><m:mo>=</m:mo><m:mn>1</m:mn>
+     </m:mrow>
+     <m:mi>n</m:mi>
+    </m:munderover>
+    <m:mrow>
+     <m:msub>
+      <m:mi>x</m:mi>
+      <m:mi>i</m:mi>
+     </m:msub>
+     <m:mo>≥</m:mo><m:mfrac>
+      <m:mrow>
+       <m:mi>ln</m:mi><m:mo>⁡</m:mo><m:mi>k</m:mi><m:mo>−</m:mo><m:mn>3</m:mn><m:mi>n</m:mi>
+      </m:mrow>
+      <m:mrow>
+       <m:mi>ln</m:mi><m:mo>⁡</m:mo><m:mrow><m:mo>(</m:mo>
+        <m:mrow>
+         <m:mn>2</m:mn><m:mo>/</m:mo><m:mn>5</m:mn>
+        </m:mrow>
+       <m:mo>)</m:mo></m:mrow>
+      </m:mrow>
+     </m:mfrac>
+     <m:mo>=</m:mo><m:mi>c</m:mi><m:mo>.</m:mo>
+    </m:mrow>
+   </m:mstyle>
+  </m:mrow>
+ </m:semantics>
+</m:math>
+                </para>
+                 <para id="para_18">
+If <emphasis>n</emphasis>=4 and <emphasis>c</emphasis>=13, then <m:math display="block">
+ <m:semantics>
+  <m:mrow>
+   <m:mi>α</m:mi><m:mo>=</m:mo><m:mi>P</m:mi><m:mrow><m:mo>(</m:mo>
+    <m:mrow>
+     <m:mstyle displaystyle="true">
+      <m:munderover>
+       <m:mo>∑</m:mo>
+       <m:mrow>
+        <m:mi>i</m:mi><m:mo>=</m:mo><m:mn>1</m:mn>
+       </m:mrow>
+       <m:mn>4</m:mn>
+      </m:munderover>
+      <m:mrow>
+       <m:msub>
+        <m:mi>X</m:mi>
+        <m:mi>i</m:mi>
+       </m:msub>
+       <m:mo>≥</m:mo><m:mn>13</m:mn><m:mo>;</m:mo><m:mi>λ</m:mi><m:mo>=</m:mo><m:mn>2</m:mn>
+      </m:mrow>
+     </m:mstyle>
+    </m:mrow>
+   <m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mn>1</m:mn><m:mo>−</m:mo><m:mn>0.936</m:mn><m:mo>=</m:mo><m:mn>0.064</m:mn><m:mo>,</m:mo>
+  </m:mrow>
+ </m:semantics>
+</m:math> from the tables, since <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mstyle displaystyle="true">
+    <m:munderover>
+     <m:mo>∑</m:mo>
+     <m:mrow>
+      <m:mi>i</m:mi><m:mo>=</m:mo><m:mn>1</m:mn>
+     </m:mrow>
+     <m:mn>4</m:mn>
+    </m:munderover>
+    <m:mrow>
+     <m:msub>
+      <m:mi>X</m:mi>
+      <m:mi>i</m:mi>
+     </m:msub>
+     
+    </m:mrow>
+   </m:mstyle>
+  </m:mrow>
+ </m:semantics>
+</m:math> has a Poisson distribution with mean 8 when <m:math>
+ <m:semantics>
+  <m:mi>λ</m:mi>
+</m:semantics>
+</m:math>=2. 
+               </para>
+</example> 
+                 <para id="para_19">
+When <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:msub>
+    <m:mi>H</m:mi>
+    <m:mn>0</m:mn>
+   </m:msub>
+   <m:mo>:</m:mo><m:mi>θ</m:mi><m:mo>=</m:mo><m:msub>
+    <m:mi>θ</m:mi>
+    <m:mn>0</m:mn>
+   </m:msub>
+     </m:mrow>
+ </m:semantics>
+</m:math> and <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:msub>
+    <m:mi>H</m:mi>
+    <m:mn>1</m:mn>
+   </m:msub>
+   <m:mo>:</m:mo><m:mi>θ</m:mi><m:mo>=</m:mo><m:msub>
+    <m:mi>θ</m:mi>
+    <m:mn>1</m:mn>
+   </m:msub>
+     </m:mrow>
+ </m:semantics>
+</m:math> are both simple hypotheses, a critical region of size <m:math>
+ <m:semantics>
+  <m:mi>α</m:mi>
+</m:semantics>
+</m:math> is a best critical region if the probability of rejecting <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:msub>
+    <m:mtext>H</m:mtext>
+    <m:mtext>0</m:mtext>
+   </m:msub>
+     </m:mrow>
+</m:semantics>
+</m:math> when <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:msub>
+    <m:mtext>H</m:mtext>
+    <m:mtext>1</m:mtext>
+   </m:msub>
+     </m:mrow>
+</m:semantics>
+</m:math> is true is a maximum when compared with all other critical regions of size <m:math>
+ <m:semantics>
+  <m:mi>α</m:mi>
+</m:semantics>
+</m:math>. The test using the best critical region is called <term>a most powerful test</term> because it has the greatest value of the power function at <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mi>θ</m:mi><m:mo>=</m:mo><m:msub>
+    <m:mi>θ</m:mi>
+    <m:mn>1</m:mn>
+   </m:msub>
+     </m:mrow>
+ </m:semantics>
+</m:math>
+ when compared with that of other tests of significance level <m:math>
+ <m:semantics>
+  <m:mi>α</m:mi>
+</m:semantics>
+</m:math>. If <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:msub>
+    <m:mtext>H</m:mtext>
+    <m:mtext>1</m:mtext>
+   </m:msub>
+     </m:mrow>
+</m:semantics>
+</m:math> is a composite hypothesis, the power of a test depends on each simple alternative in <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:msub>
+    <m:mtext>H</m:mtext>
+    <m:mtext>1</m:mtext>
+   </m:msub>
+     </m:mrow>
+</m:semantics>
+</m:math>
+.
+               </para>
+
+         <section id="sec_6">
+	<definition id="def_2">
+<term/>
+	  <meaning id="idm1657904">
+A test, defined by a critical region <emphasis>C</emphasis> of size <m:math>
+ <m:semantics>
+  <m:mi>α</m:mi>
+</m:semantics>
+</m:math>, is <term>a uniformly most powerful test</term> if it is a most powerful test against each simple alternative in <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:msub>
+    <m:mtext>H</m:mtext>
+    <m:mtext>1</m:mtext>
+   </m:msub>
+     </m:mrow>
+</m:semantics>
+</m:math>. The critical region <emphasis>C</emphasis> is called <term>a uniformly most powerful critical region of size <m:math>
+ <m:semantics>
+  <m:mi>α</m:mi>
+</m:semantics>
+</m:math></term>.
+	  </meaning>
+	</definition>
+         </section>
+
+                 <para id="para_20">
+Let now consider the example when the alternative is composite.
+                </para>
+<example id="ex_3"> 
+                 <para id="para_21">
+Let <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:msub>
+    <m:mi>X</m:mi>
+    <m:mn>1</m:mn>
+   </m:msub>
+   <m:mo>,</m:mo><m:msub>
+    <m:mi>X</m:mi>
+    <m:mn>2</m:mn>
+   </m:msub>
+   <m:mo>,</m:mo><m:mn>...</m:mn><m:mo>,</m:mo><m:msub>
+    <m:mi>X</m:mi>
+    <m:mi>n</m:mi>
+   </m:msub>
+     </m:mrow>
+</m:semantics>
+</m:math> be a random sample from <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mi>N</m:mi><m:mrow><m:mo>(</m:mo>
+    <m:mrow>
+     <m:mi>μ</m:mi><m:mo>,</m:mo><m:mn>36</m:mn>
+    </m:mrow>
+   <m:mo>)</m:mo></m:mrow>
+  </m:mrow>
+ </m:semantics>
+</m:math>. We have seen that when testing <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:msub>
+    <m:mi>H</m:mi>
+    <m:mn>0</m:mn>
+   </m:msub>
+   <m:mo>:</m:mo><m:mi>μ</m:mi><m:mo>=</m:mo><m:mn>50</m:mn>
+  </m:mrow>
+ </m:semantics>
+</m:math> against <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:msub>
+    <m:mi>H</m:mi>
+    <m:mn>1</m:mn>
+   </m:msub>
+   <m:mo>:</m:mo><m:mi>μ</m:mi><m:mo>=</m:mo><m:mn>55</m:mn>
+  </m:mrow>
+ </m:semantics>
+</m:math>, a best critical region <emphasis>C</emphasis> is defined by <m:math display="block">
+ <m:semantics>
+  <m:mrow>
+   <m:mi>C</m:mi><m:mo>=</m:mo><m:mrow><m:mo>{</m:mo> <m:mrow>
+    <m:mrow><m:mo>(</m:mo>
+     <m:mrow>
+      <m:msub>
+       <m:mi>x</m:mi>
+       <m:mn>1</m:mn>
+      </m:msub>
+      <m:mo>,</m:mo><m:msub>
+       <m:mi>x</m:mi>
+       <m:mn>2</m:mn>
+      </m:msub>
+      <m:mo>,</m:mo><m:mn>...</m:mn><m:mo>,</m:mo><m:msub>
+       <m:mi>x</m:mi>
+       <m:mi>n</m:mi>
+      </m:msub>
+      
+     </m:mrow>
+    <m:mo>)</m:mo></m:mrow><m:mo>:</m:mo><m:mover accent="true">
+     <m:mi>x</m:mi>
+     <m:mo>¯</m:mo>
+    </m:mover>
+    <m:mo>≥</m:mo><m:mi>c</m:mi>
+   </m:mrow> <m:mo>}</m:mo></m:mrow><m:mo>,</m:mo>
+  </m:mrow>
+ </m:semantics>
+</m:math> where <emphasis>c</emphasis> is selected so that the significance level is <m:math>
+ <m:semantics>
+  <m:mi>α</m:mi>
+</m:semantics>
+</m:math>. Now consider testing <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:msub>
+    <m:mi>H</m:mi>
+    <m:mn>0</m:mn>
+   </m:msub>
+   <m:mo>:</m:mo><m:mi>μ</m:mi><m:mo>=</m:mo><m:mn>50</m:mn>
+  </m:mrow>
+ </m:semantics>
+</m:math> against the one-sided composite alternative hypothesis <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:msub>
+    <m:mi>H</m:mi>
+    <m:mn>1</m:mn>
+   </m:msub>
+   <m:mo>:</m:mo><m:mi>μ</m:mi><m:mo>&gt;</m:mo><m:mn>50</m:mn>
+  </m:mrow>
+ </m:semantics>
+</m:math>. For each simple hypothesis in <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:msub>
+    <m:mi>H</m:mi>
+    <m:mn>1</m:mn>
+   </m:msub>
+     </m:mrow>
+</m:semantics>
+</m:math>, say <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mi>μ</m:mi><m:mo>=</m:mo><m:msub>
+    <m:mi>μ</m:mi>
+    <m:mn>1</m:mn>
+   </m:msub>
+     </m:mrow>
+ </m:semantics>
+</m:math> the quotient of the likelihood functions is
+               </para>
+                 <para id="para_22">
+<m:math display="block">
+ <m:semantics>
+  <m:mtable columnalign="left">
+   <m:mtr>
+    <m:mtd>
+     <m:mfrac>
+      <m:mrow>
+       <m:mi>L</m:mi><m:mrow><m:mo>(</m:mo>
+        <m:mrow>
+         <m:mn>50</m:mn>
+        </m:mrow>
+       <m:mo>)</m:mo></m:mrow>
+      </m:mrow>
+      <m:mrow>
+       <m:mi>L</m:mi><m:mrow><m:mo>(</m:mo>
+        <m:mrow>
+         <m:msub>
+          <m:mi>μ</m:mi>
+          <m:mn>1</m:mn>
+         </m:msub>
+         
+        </m:mrow>
+       <m:mo>)</m:mo></m:mrow>
+      </m:mrow>
+     </m:mfrac>
+     <m:mo>=</m:mo><m:mfrac>
+      <m:mrow>
+       <m:msup>
+        <m:mrow>
+         <m:mrow><m:mo>(</m:mo>
+          <m:mrow>
+           <m:mn>72</m:mn><m:mi>π</m:mi>
+          </m:mrow>
+         <m:mo>)</m:mo></m:mrow>
+        </m:mrow>
+        <m:mrow>
+         <m:mo>−</m:mo><m:mi>n</m:mi><m:mo>/</m:mo><m:mn>2</m:mn>
+        </m:mrow>
+       </m:msup>
+       <m:mi>exp</m:mi><m:mo>⁡</m:mo><m:mrow><m:mo>[</m:mo> <m:mrow>
+        <m:mo>−</m:mo><m:mrow><m:mo>(</m:mo>
+         <m:mrow>
+          <m:mfrac>
+           <m:mn>1</m:mn>
+           <m:mrow>
+            <m:mn>72</m:mn>
+           </m:mrow>
+          </m:mfrac>
+          
+         </m:mrow>
+        <m:mo>)</m:mo></m:mrow><m:mstyle displaystyle="true">
+         <m:munderover>
+          <m:mo>∑</m:mo>
+          <m:mn>1</m:mn>
+          <m:mi>n</m:mi>
+         </m:munderover>
+         <m:mrow>
+          <m:msup>
+           <m:mrow>
+            <m:mrow><m:mo>(</m:mo>
+             <m:mrow>
+              <m:msub>
+               <m:mi>x</m:mi>
+               <m:mi>i</m:mi>
+              </m:msub>
+              <m:mo>−</m:mo><m:mn>50</m:mn>
+             </m:mrow>
+            <m:mo>)</m:mo></m:mrow>
+           </m:mrow>
+           <m:mn>2</m:mn>
+          </m:msup>
+          
+         </m:mrow>
+        </m:mstyle>
+       </m:mrow> <m:mo>]</m:mo></m:mrow>
+      </m:mrow>
+      <m:mrow>
+       <m:msup>
+        <m:mrow>
+         <m:mrow><m:mo>(</m:mo>
+          <m:mrow>
+           <m:mn>72</m:mn><m:mi>π</m:mi>
+          </m:mrow>
+         <m:mo>)</m:mo></m:mrow>
+        </m:mrow>
+        <m:mrow>
+         <m:mo>−</m:mo><m:mi>n</m:mi><m:mo>/</m:mo><m:mn>2</m:mn>
+        </m:mrow>
+       </m:msup>
+       <m:mi>exp</m:mi><m:mo>⁡</m:mo><m:mrow><m:mo>[</m:mo> <m:mrow>
+        <m:mo>−</m:mo><m:mrow><m:mo>(</m:mo>
+         <m:mrow>
+          <m:mfrac>
+           <m:mn>1</m:mn>
+           <m:mrow>
+            <m:mn>72</m:mn>
+           </m:mrow>
+          </m:mfrac>
+          
+         </m:mrow>
+        <m:mo>)</m:mo></m:mrow><m:mstyle displaystyle="true">
+         <m:munderover>
+          <m:mo>∑</m:mo>
+          <m:mn>1</m:mn>
+          <m:mi>n</m:mi>
+         </m:munderover>
+         <m:mrow>
+          <m:msup>
+           <m:mrow>
+            <m:mrow><m:mo>(</m:mo>
+             <m:mrow>
+              <m:msub>
+               <m:mi>x</m:mi>
+               <m:mi>i</m:mi>
+              </m:msub>
+              <m:mo>−</m:mo><m:msub>
+               <m:mi>μ</m:mi>
+               <m:mn>1</m:mn>
+              </m:msub>
+              
+             </m:mrow>
+            <m:mo>)</m:mo></m:mrow>
+           </m:mrow>
+           <m:mn>2</m:mn>
+          </m:msup>
+          
+         </m:mrow>
+        </m:mstyle>
+       </m:mrow> <m:mo>]</m:mo></m:mrow>
+      </m:mrow>
+     </m:mfrac>
+     
+    </m:mtd>
+   </m:mtr>
+   <m:mtr>
+    <m:mtd>
+     <m:mo>=</m:mo><m:mi>exp</m:mi><m:mo>⁡</m:mo><m:mrow><m:mo>[</m:mo> <m:mrow>
+      <m:mo>−</m:mo><m:mrow><m:mo>(</m:mo>
+       <m:mrow>
+        <m:mfrac>
+         <m:mn>1</m:mn>
+         <m:mrow>
+          <m:mn>72</m:mn>
+         </m:mrow>
+        </m:mfrac>
+        
+       </m:mrow>
+      <m:mo>)</m:mo></m:mrow><m:mrow><m:mo>{</m:mo> <m:mrow>
+       <m:mn>2</m:mn><m:mrow><m:mo>(</m:mo>
+        <m:mrow>
+         <m:msub>
+          <m:mi>μ</m:mi>
+          <m:mn>1</m:mn>
+         </m:msub>
+         <m:mo>−</m:mo><m:mn>50</m:mn>
+        </m:mrow>
+       <m:mo>)</m:mo></m:mrow><m:mstyle displaystyle="true">
+        <m:munderover>
+         <m:mo>∑</m:mo>
+         <m:mn>1</m:mn>
+         <m:mi>n</m:mi>
+        </m:munderover>
+        <m:mrow>
+         <m:msub>
+          <m:mi>x</m:mi>
+          <m:mi>i</m:mi>
+         </m:msub>
+         
+        </m:mrow>
+       </m:mstyle><m:mo>+</m:mo><m:mi>n</m:mi><m:mrow><m:mo>(</m:mo>
+        <m:mrow>
+         <m:msup>
+          <m:mrow>
+           <m:mn>50</m:mn>
+          </m:mrow>
+          <m:mn>2</m:mn>
+         </m:msup>
+         <m:mo>−</m:mo><m:msubsup>
+          <m:mi>μ</m:mi>
+          <m:mn>1</m:mn>
+          <m:mn>2</m:mn>
+         </m:msubsup>
+         
+        </m:mrow>
+       <m:mo>)</m:mo></m:mrow>
+      </m:mrow> <m:mo>}</m:mo></m:mrow>
+     </m:mrow> <m:mo>]</m:mo></m:mrow><m:mo>.</m:mo>
+    </m:mtd>
+   </m:mtr>
+  </m:mtable>
+  </m:semantics>
+</m:math>
+                </para>
+
+                 <para id="para_23">
+Now <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mi>L</m:mi><m:mrow><m:mo>(</m:mo>
+    <m:mrow>
+     <m:mn>50</m:mn>
+    </m:mrow>
+   <m:mo>)</m:mo></m:mrow><m:mo>/</m:mo><m:mi>L</m:mi><m:mrow><m:mo>(</m:mo>
+    <m:mrow>
+     <m:msub>
+      <m:mi>μ</m:mi>
+      <m:mn>1</m:mn>
+     </m:msub>
+     
+    </m:mrow>
+   <m:mo>)</m:mo></m:mrow><m:mo>≤</m:mo><m:mi>k</m:mi>
+  </m:mrow>
+ </m:semantics>
+</m:math> if and only if <m:math display="block">
+ <m:semantics>
+  <m:mrow>
+   <m:mover accent="true">
+    <m:mi>x</m:mi>
+    <m:mo>¯</m:mo>
+   </m:mover>
+   <m:mo>≥</m:mo><m:mfrac>
+    <m:mrow>
+     <m:mrow><m:mo>(</m:mo>
+      <m:mrow>
+       <m:mo>−</m:mo><m:mn>72</m:mn>
+      </m:mrow>
+     <m:mo>)</m:mo></m:mrow><m:mi>ln</m:mi><m:mo>⁡</m:mo><m:mrow><m:mo>(</m:mo>
+      <m:mi>k</m:mi>
+     <m:mo>)</m:mo></m:mrow>
+    </m:mrow>
+    <m:mrow>
+     <m:mn>2</m:mn><m:mi>n</m:mi><m:mrow><m:mo>(</m:mo>
+      <m:mrow>
+       <m:msub>
+        <m:mi>μ</m:mi>
+        <m:mn>1</m:mn>
+       </m:msub>
+       <m:mo>−</m:mo><m:mn>50</m:mn>
+      </m:mrow>
+     <m:mo>)</m:mo></m:mrow>
+    </m:mrow>
+   </m:mfrac>
+   <m:mo>+</m:mo><m:mfrac>
+    <m:mrow>
+     <m:mn>50</m:mn><m:mo>+</m:mo><m:msub>
+      <m:mi>μ</m:mi>
+      <m:mn>1</m:mn>
+     </m:msub>
+     
+    </m:mrow>
+    <m:mn>2</m:mn>
+   </m:mfrac>
+   <m:mo>=</m:mo><m:mi>c</m:mi><m:mo>.</m:mo>
+  </m:mrow>
+ </m:semantics>
+</m:math>
+             </para>
+                 <para id="para_24">
+Thus the best critical region of size <m:math>
+ <m:semantics>
+  <m:mi>α</m:mi>
+</m:semantics>
+</m:math> for testing <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:msub>
+    <m:mi>H</m:mi>
+    <m:mn>0</m:mn>
+   </m:msub>
+   <m:mo>:</m:mo><m:mi>μ</m:mi><m:mo>=</m:mo><m:mn>50</m:mn>
+  </m:mrow>
+ </m:semantics>
+</m:math> against <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:msub>
+    <m:mi>H</m:mi>
+    <m:mn>1</m:mn>
+   </m:msub>
+   <m:mo>:</m:mo><m:mi>μ</m:mi><m:mo>=</m:mo><m:msub>
+    <m:mi>μ</m:mi>
+    <m:mn>1</m:mn>
+   </m:msub>
+     </m:mrow>
+ </m:semantics>
+</m:math>, where <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:msub>
+    <m:mi>μ</m:mi>
+    <m:mn>1</m:mn>
+   </m:msub>
+   <m:mo>&gt;</m:mo><m:mn>50</m:mn>
+  </m:mrow>
+ </m:semantics>
+</m:math>, is given by  
+                </para>
+                 <para id="para_25">
+<m:math display="block">
+ <m:semantics>
+  <m:mrow>
+   <m:mi>C</m:mi><m:mo>=</m:mo><m:mrow><m:mo>{</m:mo> <m:mrow>
+    <m:mrow><m:mo>(</m:mo>
+     <m:mrow>
+      <m:msub>
+       <m:mi>x</m:mi>
+       <m:mn>1</m:mn>
+      </m:msub>
+      <m:mo>,</m:mo><m:msub>
+       <m:mi>x</m:mi>
+       <m:mn>2</m:mn>
+      </m:msub>
+      <m:mo>,</m:mo><m:mn>...</m:mn><m:mo>,</m:mo><m:msub>
+       <m:mi>x</m:mi>
+       <m:mi>n</m:mi>
+      </m:msub>
+      
+     </m:mrow>
+    <m:mo>)</m:mo></m:mrow><m:mo>:</m:mo><m:mover accent="true">
+     <m:mi>x</m:mi>
+     <m:mo>¯</m:mo>
+    </m:mover>
+    <m:mo>≥</m:mo><m:mi>c</m:mi>
+   </m:mrow> <m:mo>}</m:mo></m:mrow><m:mo>,</m:mo>
+  </m:mrow>
+ </m:semantics>
+</m:math> where <emphasis/> is selected such that <m:math display="block">
+ <m:semantics>
+  <m:mrow>
+   <m:mi>P</m:mi><m:mrow><m:mo>(</m:mo>
+    <m:mrow>
+     <m:mover accent="true">
+      <m:mi>X</m:mi>
+      <m:mo>¯</m:mo>
+     </m:mover>
+     <m:mo>≥</m:mo><m:mi>c</m:mi><m:mo>;</m:mo><m:msub>
+      <m:mi>H</m:mi>
+      <m:mn>0</m:mn>
+     </m:msub>
+     <m:mo>:</m:mo><m:mi>μ</m:mi><m:mo>=</m:mo><m:mn>50</m:mn>
+    </m:mrow>
+   <m:mo>)</m:mo></m:mrow><m:mo>=</m:mo><m:mi>α</m:mi><m:mo>.</m:mo>
+  </m:mrow>
+ </m:semantics>
+</m:math>
+              </para>
+</example> 
+         </section>
+         </section>
+         <section id="sec_7">
+   <note type="Note That" id="idp4339024"><label>Note That</label>
+the same value of <emphasis>c</emphasis> can be used for each <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:msub>
+    <m:mi>μ</m:mi>
+    <m:mn>1</m:mn>
+   </m:msub>
+   <m:mo>&gt;</m:mo><m:mn>50</m:mn>
+  </m:mrow>
+ </m:semantics>
+</m:math>
+, but of course <emphasis>k</emphasis> does not remain the same. Since the critical region <emphasis>C</emphasis> defines a test that is most powerful against each simple alternative <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:msub>
+    <m:mi>μ</m:mi>
+    <m:mn>1</m:mn>
+   </m:msub>
+   <m:mo>&gt;</m:mo><m:mn>50</m:mn>
+  </m:mrow>
+ </m:semantics>
+</m:math>, this is a uniformly most powerful test, and <emphasis>C</emphasis> is a uniformly most powerful critical region if size <m:math>
+ <m:semantics>
+  <m:mi>α</m:mi>
+</m:semantics>
+</m:math>. Again if <m:math>
+ <m:semantics>
+  <m:mi>α</m:mi>
+</m:semantics>
+</m:math>=0.05, then <m:math>
+ <m:semantics>
+  <m:mrow>
+   <m:mi>c</m:mi><m:mo>≈</m:mo><m:mn>52.47</m:mn>
+  </m:mrow>
+ </m:semantics>
+</m:math>. 
+   </note>
+                 <para id="para_26">
+
+                </para>
+
+                 <para id="para_27">
+
+                </para>
+
+
+
+
+         </section>
+
+    <para id="delete_me">
+       <!-- Insert module text here -->
+    </para>   
+  </content>
+  
+</document>
